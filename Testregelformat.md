@@ -28,6 +28,6 @@ Spørsmål / Instruksjon forklarar kva testaren skal svare på eller gjere.
 
 ### Hjelpetekst
 ```
- "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt.",
+ "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt."
  ```
 
