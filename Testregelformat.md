@@ -29,5 +29,17 @@ Spørsmål / Instruksjon forklarar kva testaren skal svare på eller gjere.
 ### Hjelpetekst
 ```
  "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt."
- ```
+```
+Hjelpetekst er søtte eller innheld oppklarande informasjon til Spørsmål / Instruksjon på eit steg
+
+### Type 
+```
+"type": "jaNei"
+```
+Type steg. Et steg kan vere av desse typane :
+- jaNei 
+- avslutt
+- ikkjeForekomst
+- radio
+- tekst
 
