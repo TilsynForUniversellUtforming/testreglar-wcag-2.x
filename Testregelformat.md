@@ -18,3 +18,16 @@ Dei ulike typane er forklart under.
 "stegnr": "3.1"
 ```
 Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må være unik innanfor same testregel og skal vere på formatetet «tall.tall»
+
+### Spørsmål / Instruksjon
+
+```
+"spm": "Inneheld feilmeldinga tekst som identifiserer kvar feilen har oppstått?"
+```
+Spørsmål / Instruksjon forklarar kva testaren skal svare på eller gjere.
+
+### Hjelpetekst
+```
+ "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt.",
+ ```
+
