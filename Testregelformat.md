@@ -7,3 +7,11 @@ Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire undereleme
 - Ht - Hjelpetekst
 - Type - Type steg
 - Ruting
+
+Dei ulike typane er forklart under.
+
+### Stegnr
+```
+"stegnr": "3.1"
+```
+Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må være unik innanfor same testregel og skal vere på formatetet «tall.tall»
