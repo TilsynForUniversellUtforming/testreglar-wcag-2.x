@@ -1,3 +1,6 @@
+Under arbeid (!)  Innhaldet i dette dokumentet er under arbeid og kan endre seg uten forvarsel.
+
+
 # Testregelformat
 ## Innhald i formatet
 ## Steg
