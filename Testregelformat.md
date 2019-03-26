@@ -19,8 +19,8 @@ Id er ein unik indetifikator for kvar testregel.
 "type": "web"
 ```
 Type er kategori av testregel. Dei aktuelle typane er:
-- Web
-- Mobilapplikasjonar
+- web
+- mobilapplikasjon
 #### Eksempel
 
 ## Steg
