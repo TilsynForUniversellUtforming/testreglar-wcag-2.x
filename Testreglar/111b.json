@@ -1,0 +1,515 @@
+{
+    "id": "1.1.1b",
+    "type": "web",
+    "versjon": "1.0",
+    "sistOppdatertAvDifi": "05.02.2019",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.3"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.5"
+        },
+        {
+            "title": "3.6"
+        },
+        {
+            "title": "3.7"
+        },
+        {
+            "title": "3.8"
+        },
+        {
+            "title": "3.9"
+        },
+        {
+            "title": "3.10"
+        },
+        {
+            "title": "3.11"
+        },
+        {
+            "title": "3.12"
+        },
+        {
+            "title": "3.13"
+        },
+        {
+            "title": "3.14"
+        },
+        {
+            "title": "3.15"
+        },
+        {
+            "title": "3.16"
+        },
+        {
+            "title": "3.17"
+        },
+        {
+            "title": "3.18"
+        },
+        {
+            "title": "3.19"
+        },
+        {
+            "title": "3.20"
+        }
+
+    ],
+
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi url eller side-ID",
+            "type": "tekst",
+            "label": "Url/Side:",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            } 
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Finst det lenka bilete på nettsida?",
+            "ht": "<p>Du kan finne lenker ved å:</p> <ul> <li>Føre musepeikaren over ulike bilete og sjå om markøren syner at bilete er klikkbart (hånd).</li> <li>Alternativt kan du bruke WAT (Internet Explorer) sin \"show other element(s)\" og søke etter a-elementet i HTML.</li> </ul> <p>Du skal ikkje teste</p> <ul> <li>Lenker som berre inneheld tekst.</li> <li>Bilete som ikkje ligg inne i lenker, <code>&#x3C;a&#x3E;</code>-element.</li> <li>Knappar som er koda som <code>&#x3C;input&#x3E;</code> og <code>&#x3C;button&#x3E;</code>.</li><li>Lenka biletet som er del av Captcha.</li> </ul> <p>Du skal teste lenker, <code>&#x3C;a&#x3E;</code>-elementet, som:</p> <ul> <li>Berre er eit bilete.</li> <li>Inneheld både bilete og tekst.</li> <li>Inneheld ikon.</li> </ul> <p>Lenka sin plassering er utan betydning, og kan for eksempel ligge i ein meny, liste, tabell osb.</p>",
+            "type": "jaNei",
+            "kilde": ["H30"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.1",
+            "spm": "Beskriv det lenka biletet",
+            "ht": "Du kan for eksempel beskrive motiv, plassering på sida, element som er i nærleiken.",
+            "type": "tekst",
+            "label": "Bilete:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            } 
+        }
+        ,
+        {
+            "stegnr": "3.2",
+            "spm": "Aktiver/opne lenka i ny fane og skriv inn url",
+            "ht": "Du skal opne lenka for å finne informasjon om lenkemålet. Denne skal du seinare bruke får å vurdere om lenketeksten er god nok.",
+            "type": "tekst",
+            "label": "URL",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                }
+            } 
+        }
+        ,
+        {
+            "stegnr": "3.3",
+            "spm": "Har lenkeelementet (&#x3C;a&#x3E;) attributtet \"aria-label\" ?",
+            "ht": "<p>Merk: Du skal berre teste bilete som ligg inne i eller p&#xE5; lenker (<code>&#x3C;a&#x3E;</code>-element). Du skal ikkje teste knappar som er koda som <code>&#x3C;input&#x3E;</code> og <code>&#x3C;button&#x3E;</code>.</p> <p>Merk: Du skal ikkje vurdere kvaliteten p&#xE5; teksten.</p>",
+            "type": "jaNei",
+            "kilde": ["ARIA8"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.4",
+            "spm": "Har lenkeelementet(&#x3C;a&#x3E;) attributtet \"aria-labelledby\" ?",
+            "ht": "<p>Merk at ein <code>aria-labelledby</code> kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p><p>Merk: Du skal ikkje vurdere kvaliteten p&#xE5; teksten.</#p> ",
+            "type": "jaNei",
+            "kilde": ["ARIA7"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.5",
+            "spm": "Er aria-labelledby attributtet kopla til annan tekst på sida (lenkekontekst)?",
+            "ht": "Gjer eit søk i koden på id i aria-labelledby. Dersom det finst fleire id-ar skal du undersøke alle. Id-ane vil då vere skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>.)",
+            "type": "jaNei",
+            "kilde": ["ARIA7"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.6",
+            "spm": "Er innhaldet i aria-attributta beskrivande for formålet med lenka?",
+            "ht": "<p>Viss aria-attributta <code>aria-label</code> eller <code>aria-labelledby</code> finst og er rett koda, blir innhaldet i desse attributta lest opp, og ikkje lenketeksten eller eventuelle tekstalternativ på biletet.</p> <p>Viss aria-labelledby visar til dupliserte id-ar, skal du vurdere innhaldet til id-en som står først i koden.</#p>",
+            "type": "jaNei",
+            "kilde": ["ARIA7","ARIA8"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Lenka bilde har beskrivande tekstalternativ."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Lenka bilde har tekstalternativ som ikkje er beskrivande."
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.7",
+            "spm": "Har lenka ein lenketekst?",
+            "ht": "<p>Merk at teksten kan vere koda inn i andre element som for eksempel <code>&#x3C;h&#x3E;</code>, <code>&#x3C;span&#x3E;</code> men m&#xE5; ligge inne i <code>&#x3C;a&#x3E;</code> elementet.</p> <p>Merk at det kan vere naudsynt &#xE5; felle ut underordna element i koden for &#xE5; finne teksten.</p> <p>Du skal ikkje vurdere innhaldet i <code>&#x3C;img&#x3E;</code>-elementet.</p>",
+            "type": "jaNei",
+            "kilde": ["H30","H39"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.9"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.8",
+            "spm": "Er lenketeksten misvisande for formålet med lenka?",
+            "ht": "<p>Lenketeksten er misvisande dersom den kan føre til at brukaren misforstår formålet med lenka.</#p> <p>Vis lenketeksten er intetseiande, er den ikkje nødendigvis misvisande.</p>",
+            "type": "jaNei",
+            "kilde": ["H30","H39"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Lenka bilde har lenketekst som ikkje er beskrivande."
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.9"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.9",
+            "spm": "Ligg det eit bilete som er koda som &#x3C;img&#x3E; eller &#x3C;svg&#x3E; inne i lenka?",
+            "ht": "<p>Sj&#xE5; i koden og finn det aktuelle <code>&#x3C;a&#x3E;</code>-elementet. Biletet skal ligge i eit <code>&#x3C;img&#x3E;</code> eller <code>&#x3C;svg&#x3E;</code>-element inne i <code>&#x3C;a&#x3E;</code>-elementet.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.10"
+                },
+                "nei": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "3.7",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Lenka bilde manglar tekstalternativ."
+                            }
+                        },
+                        "2": {
+                            "sjekk": "3.7",
+                            "type": "lik",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.18"  
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.10",
+            "spm": "Har biletet, som ligg i lenka, attributtet \"aria-label\" ?",
+            "ht": "<p>MERK: Du skal ikkje vurdere kvaliteten på teksten.</p><p>Sjå i koden og finn det aktuelle elementet.</p>",
+            "type": "jaNei",
+            "kilde": ["ARIA6","F65"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.18"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.11"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.11",
+            "spm": "Har biletet, som ligg i lenka, attributtet \"aria-labelledby\"?",
+            "ht": "<p>MERK: Du skal ikkje vurdere kvaliteten på teksten.</p><p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p>",
+            "type": "jaNei",
+            "kilde": ["ARIA10","F65"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.12"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.13"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.12",
+            "spm": "Er aria-labelledby/aria-describedby attributtet kopla til annan tekst på sida?",
+            "ht": "Gjer eit søk i koden på id i aria-labelledby. Dersom det finst fleire id-ar skal du undersøke alle. Id-ane vil då vere skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)",
+            "type": "jaNei",
+            "kilde": ["ARIA10","F65"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.18"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.13"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.13",
+            "spm": "Er biletet koda som &#x3C;img&#x3E;?",
+            "ht": "Sjå i koden for å sjekke dette.",
+            "type": "jaNei",
+            "kilde": ["H37"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.14"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.16"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.14",
+            "spm": "Har biletet eit alt-attributt?",
+            "ht": "Du kan nytte kodeverkt&#xF8;yet i nettlesaren til &#xE5; sjekke dette. Sj&#xE5; p&#xE5; koden og finn <code>&#x3C;img&#x3E;</code>-elementet. Unders&#xF8;k om biletet har eit alt-attributt.",
+            "type": "jaNei",
+            "kilde": ["H30","H37", "F65"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.15"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Lenka bilde manglar alt-attributt."
+                }
+            }
+        }
+        ,
+
+        {
+            "stegnr": "3.15",
+            "spm": "Er det innhold i alt-attributtet?",
+            "ht": "Sjå i koden om alt-attributtet har innhald.",
+            "type": "jaNei",
+            "kilde": ["H30","H37"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.18"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.16"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.16",
+            "spm": "Har biletet eit title-attributt?",
+            "ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+            "type": "jaNei",
+            "kilde": ["F65"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.17"
+                },
+                "nei": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "3.7",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Lenka bilde manglar tekstalternativ."
+                            }
+                        },
+                        "2": {
+                            "sjekk": "3.7",
+                            "type": "lik",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.18"  
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.17",
+            "spm": "Er det innhald i title-attributtet?",
+            "ht": "Sjå i koden om title-attributtet har innhald.Eit tomt title-attributt er koda på formen <code>title=\"\"</code> eller berre <code>title</code>.",
+            "type": "jaNei",
+            "kilde": ["F65"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.18"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Lenka bilde manglar tekstalternativ."
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.18",
+            "spm": "Ligg det fleire bilete inne i same lenke?",
+            "ht": "Sjå om det finst fleire bilete som ligg inne i same lenke som biletet du nettopp har testa.",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.19"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.20"
+                }
+            }
+        }, 
+        {
+            "stegnr": "3.19",
+            "spm": "Har dei andre bileta, som ligg i same lenke, eit tekstalternativ?",
+            "ht": "<p>Tekstalternativ kan ligge i eit av følgjande attributt</p> <ul> <li>aria-label</li> <li>aria-labelledby</li> <li>alt</li> <li>title</li> </ul>",
+            "type": "jaNei",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.20"
+                }
+            }
+        },
+        {
+            "stegnr": "3.20",
+            "spm": "Er den samla informasjonen i lenketeksten og/eller tekstalternativ beskrivande for formålet med lenka? ",
+            "ht": "<p>Gjer ei skjønnsmessig vurdering av om informasjonen i lenka (lenketekst og/eller tekstalternativ til bilete) gir tilstrekkeleg informasjon om kva som er lenkemålet.</p> <p>Viss det ligg fleire bilete i same lenke-element, skal du vurdere tekstalternativa samla.</p> <p>Viss aria-labelledby visar til dupliserte id-ar, skal du vurdere innhaldet til id-en som står først i koden.</p> <p>Merk: Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
+            "type": "jaNei",
+            "kilde": ["G82","G94","F30", "F89"],
+            "svar": null,
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Lenka bilde har beskrivande tekstalternativ."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Lenka bilde har tekstalternativ som ikkje er beskrivande."
+                }
+            }
+        }
+    ]
+}
