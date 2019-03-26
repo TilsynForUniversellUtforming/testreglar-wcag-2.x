@@ -105,7 +105,7 @@ Kilde er kva dokumentasjon eit steg bygger på. Eit steg kan bygge på fleire kr
                 }
             }
 ```
-Ruting er logikk for hva som skjer etter svar. Ruting har flere underetyper.
+Ruting er logikk for kva som skjer etter svar. Ruting har flere underetyper.
 
 ### Ruting til
 Ruting til er det øverste nivået i en ruting. Den vanlige alternativene er 
