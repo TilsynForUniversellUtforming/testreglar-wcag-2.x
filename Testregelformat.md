@@ -10,9 +10,10 @@ Under arbeid (!)  Innhaldet i dette dokumentet er under arbeid og kan endre seg 
 "id": "1.4.2a"
 ```
 Id er ein unik indetifikator for kvar testregel.  
-
-**Type:** Tekst  
-**Valfri:** Nei  
+<table>
+<tr><td><strong>Type</strong></td><td> Tekst</td> </tr> 
+<tr><td><strong>Valfri</strong></td><td> Nei</td></tr> 
+</table>
 
 ### Type
 ```
@@ -22,8 +23,10 @@ Type er kategori av testregel. Dei aktuelle typane er:
 - web
 - mobilapplikasjon
 
-**Type:** Tekst  
-**Valfri:** Nei 
+<table>
+<tr><td><strong>Type</strong></td><td> Tekst</td> </tr> 
+<tr><td><strong>Valfri</strong></td><td> Nei</td></tr> 
+</table>
 
 ## Steg
 Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire underelement:
