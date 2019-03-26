@@ -19,10 +19,10 @@ Generell info om testreglar
 -   SistOppdatertAvDifi 
 
 ## Id
-
--   "id": "1.4.2a"
-
-    Id er ein unik identifikator for kvar testregel.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"id": "1.4.2a"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Id er ein unik identifikator for kvar testregel.
 
 ### Type
 
