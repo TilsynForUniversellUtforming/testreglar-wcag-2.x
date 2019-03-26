@@ -59,8 +59,6 @@ Hjelpetekst er søtte eller innheld oppklarande informasjon til Spørsmål / Ins
 ```
 Type steg. Et steg kan vere av desse typane :
 - jaNei 
-- avslutt
-- ikkjeForekomst
 - radio
 - tekst
 
