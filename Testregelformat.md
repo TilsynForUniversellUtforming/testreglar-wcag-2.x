@@ -11,12 +11,9 @@ Generell info om testreglar
 ---------------------------
 
 - Id
-
--   Type
-
--   Versjon
-
--   SistOppdatertAvDifi 
+-  Type
+-  Versjon
+-  SistOppdatertAvDifi 
 
 ## Id
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -30,14 +27,23 @@ Id er ein unik identifikator for kvar testregel.
 "type": "web"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Type er kategori av testregel. Dei aktuelle typane er: - web - mobilapplikasjon
+Type er kategori av testregel. Dei aktuelle typane er: 
+- web 
+- mobilapplikasjon
 
 Steg
 ----
 
 Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire
-underelement: - stegnr - Identifikator for steget - spm - Spørsmål / Instruksjon
-- Ht - Hjelpetekst - Type - Type steg - Ruting
+underelement: 
+- stegnr
+- Identifikator for steget
+- spm 
+- Spørsmål / Instruksjon
+- Ht - Hjelpetekst
+- Type 
+- Type steg 
+- Ruting
 
 Dei ulike typane er forklart under.
 
