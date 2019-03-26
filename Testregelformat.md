@@ -3,6 +3,27 @@ Under arbeid (!)  Innhaldet i dette dokumentet er under arbeid og kan endre seg 
 
 # Testregelformat
 ## Innhald i formatet
+
+## Generell info om testreglar
+- Id
+- Type
+- Versjon
+- SistOppdatertAvDifi
+### Id
+```
+"id": "1.4.2a"
+```
+Id er ein unik indetifikator for kvar testregel.  
+
+
+### Type
+```
+"type": "web"
+```
+Type er kategori av testregel. Dei aktuelle typane er:
+- web
+- mobilapplikasjon
+
 ## Steg
 Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire underelement:
 - stegnr - Identifikator for steget
@@ -38,7 +59,7 @@ Eksempel på steg
 ```
 "stegnr": "3.1"
 ```
-Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må være unik innanfor same testregel og skal vere på formatetet «tall.tall»
+Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må være unik innanfor same testregel og skal vere på formatet «tall.tall»
 
 ### Spørsmål / Instruksjon
 
@@ -51,7 +72,7 @@ Spørsmål / Instruksjon forklarar kva testaren skal svare på eller gjere.
 ```
  "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt."
 ```
-Hjelpetekst er søtte eller innheld oppklarande informasjon til Spørsmål / Instruksjon på eit steg
+Hjelpetekst er støtte eller innheld oppklarande informasjon til Spørsmål / Instruksjon på eit steg
 
 ### Type 
 ```
@@ -69,3 +90,27 @@ Type steg. Et steg kan vere av desse typane :
 Type: Array
 
 Kilde er kva dokumentasjon eit steg bygger på. Eit steg kan bygge på fleire krav.
+
+## Ruting
+```
+"ruting": {
+              "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+               "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }
+```
+Ruting er logikk for kva som skjer etter svar. Ruting har flere underetyper.
+
+### Ruting til
+Ruting til er det øverste nivået i en ruting. Den vanlige alternativene er 
+- Alle (Ruting unansett svar)
+- Ja 
+- Nei
+- [Alternativ fra radioboks]
+
+
