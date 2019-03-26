@@ -73,7 +73,7 @@ Spørsmål / Instruksjon forklarar kva testaren skal svare på eller gjere.
 ```
  "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt."
 ```
-Hjelpetekst er søtte eller innheld oppklarande informasjon til Spørsmål / Instruksjon på eit steg
+Hjelpetekst er støtte eller innheld oppklarande informasjon til Spørsmål / Instruksjon på eit steg
 
 ### Type 
 ```
