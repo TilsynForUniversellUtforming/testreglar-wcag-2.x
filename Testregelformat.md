@@ -38,7 +38,7 @@ Eksempel på steg
 ```
 "stegnr": "3.1"
 ```
-Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må være unik innanfor same testregel og skal vere på formatetet «tall.tall»
+Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må være unik innanfor same testregel og skal vere på formatet «tall.tall»
 
 ### Spørsmål / Instruksjon
 
