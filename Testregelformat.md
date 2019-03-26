@@ -64,3 +64,8 @@ Type steg. Et steg kan vere av desse typane :
 - radio
 - tekst
 
+### Kilde
+```
+"kilde": ["G131", "G167", "H44"]
+```
+
