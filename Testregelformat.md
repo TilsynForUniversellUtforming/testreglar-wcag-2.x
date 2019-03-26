@@ -68,4 +68,5 @@ Type steg. Et steg kan vere av desse typane :
 ```
 "kilde": ["G131", "G167", "H44"]
 ```
-
+Type: Array
+Kilde er kva dokumentasjon eit steg bygger på. Eit steg kan bygge på fleire krav.
