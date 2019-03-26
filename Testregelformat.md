@@ -1,41 +1,49 @@
-Under arbeid (!)  Innhaldet i dette dokumentet er under arbeid og kan endre seg uten forvarsel.
+Under arbeid (!) Innhaldet i dette dokumentet er under arbeid og kan endre seg
+uten forvarsel.
 
+Testregelformat
+===============
 
-# Testregelformat
-## Innhald i formatet
+Innhald i formatet
+------------------
 
-## Generell info om testreglar
+Generell info om testreglar
+---------------------------
+
 - Id
-- Type
-- Versjon
-- SistOppdatertAvDifi
-### Id
-```
-"id": "1.4.2a"
-```
-Id er ein unik indetifikator for kvar testregel.  
 
+-   Type
+
+-   Versjon
+
+-   SistOppdatertAvDifi 
+
+## Id
+
+-   "id": "1.4.2a"
+
+    Id er ein unik identifikator for kvar testregel.
 
 ### Type
-```
-"type": "web"
-```
-Type er kategori av testregel. Dei aktuelle typane er:
-- web
-- mobilapplikasjon
 
-## Steg
-Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire underelement:
-- stegnr - Identifikator for steget
-- spm - Spørsmål / Instruksjon
-- Ht - Hjelpetekst
-- Type - Type steg
-- Ruting
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"type": "web"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Type er kategori av testregel. Dei aktuelle typane er: - web - mobilapplikasjon
+
+Steg
+----
+
+Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire
+underelement: - stegnr - Identifikator for steget - spm - Spørsmål / Instruksjon
+- Ht - Hjelpetekst - Type - Type steg - Ruting
 
 Dei ulike typane er forklart under.
 
 Eksempel på steg
-```
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {
   "stegnr": "3.2",
   "spm": "Har skjemaelementet ein tekstleg identifikasjon i form av ledetekst, tekst på knapp eller instruksjon?",
@@ -53,46 +61,57 @@ Eksempel på steg
                 }
             }
 }
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### Stegnr
-```
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "stegnr": "3.1"
-```
-Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må være unik innanfor same testregel og skal vere på formatet «tall.tall»
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må
+være unik innanfor same testregel og skal vere på formatet «tal.tal»
 
 ### Spørsmål / Instruksjon
 
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "spm": "Inneheld feilmeldinga tekst som identifiserer kvar feilen har oppstått?"
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Spørsmål / Instruksjon forklarar kva testaren skal svare på eller gjere.
 
 ### Hjelpetekst
-```
- "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt."
-```
-Hjelpetekst er støtte eller innheld oppklarande informasjon til Spørsmål / Instruksjon på eit steg
 
-### Type 
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt."
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Hjelpetekst er støtte eller inneheld oppklarande informasjon til Spørsmål /
+Instruksjon på eit steg
+
+### Type
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "type": "jaNei"
-```
-Type steg. Et steg kan vere av desse typane :
-- jaNei 
-- radio
-- tekst
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Type steg. Et steg kan vere av desse typane : - jaNei - radio - tekst
 
 ### Kilde
-```
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "kilde": ["G131", "G167", "H44"]
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Type: Array
 
-Kilde er kva dokumentasjon eit steg bygger på. Eit steg kan bygge på fleire krav.
+Kilde er kva dokumentasjon eit steg bygger på. Eit steg kan bygge på fleire
+krav.
 
-## Ruting
-```
+Ruting
+------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "ruting": {
               "ja": {
                     "type": "gaaTil",
@@ -103,14 +122,11 @@ Kilde er kva dokumentasjon eit steg bygger på. Eit steg kan bygge på fleire kr
                     "steg": "3.6"
                 }
             }
-```
-Ruting er logikk for kva som skjer etter svar. Ruting har flere underetyper.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Ruting til
-Ruting til er det øverste nivået i en ruting. Den vanlige alternativene er 
-- Alle (Ruting unansett svar)
-- Ja 
-- Nei
-- [Alternativ fra radioboks]
+Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar.
 
+### Ruting
 
+Ruting til er det øverste nivået i en ruting. Den vanlege alternativa er - Alle
+(Ruting uansett svar) - Ja - Nei - [Alternativ frå radioboks]
