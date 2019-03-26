@@ -21,7 +21,9 @@ Id er ein unik indetifikator for kvar testregel.
 Type er kategori av testregel. Dei aktuelle typane er:
 - web
 - mobilapplikasjon
-#### Eksempel
+
+**Type:** Tekst  
+**Valfri:** Nei 
 
 ## Steg
 Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire underelement:
