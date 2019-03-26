@@ -69,3 +69,27 @@ Type steg. Et steg kan vere av desse typane :
 Type: Array
 
 Kilde er kva dokumentasjon eit steg bygger på. Eit steg kan bygge på fleire krav.
+
+## Ruting
+```
+"ruting": {
+              "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+               "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }
+```
+Ruting er logikk for hva som skjer etter svar. Ruting har flere underetyper.
+
+### Ruting til
+Ruting til er det øverste nivået i en ruting. Den vanlige alternativene er 
+- Alle (Ruting unansett svar)
+- Ja 
+- Nei
+- [Alternativ fra radioboks]
+
+
