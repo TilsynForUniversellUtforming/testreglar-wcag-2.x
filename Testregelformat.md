@@ -5,6 +5,10 @@ Under arbeid (!)  Innhaldet i dette dokumentet er under arbeid og kan endre seg 
 ## Innhald i formatet
 
 ## Generell info om testreglar
+- Id
+- Type
+- Versjon
+- SistOppdatertAvDifi
 ### Id
 ```
 "id": "1.4.2a"
