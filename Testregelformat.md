@@ -3,6 +3,19 @@ Under arbeid (!)  Innhaldet i dette dokumentet er under arbeid og kan endre seg 
 
 # Testregelformat
 ## Innhald i formatet
+
+## Generell info om testreglar
+### Id
+Id er ein unik indetifikator for kvar testregel.  
+
+**Type:** Tekst  
+**Valfri:** Nei  
+#### Eksempel:
+```
+"id": "1.4.2a"
+```
+
+
 ## Steg
 Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire underelement:
 - stegnr - Identifikator for steget
