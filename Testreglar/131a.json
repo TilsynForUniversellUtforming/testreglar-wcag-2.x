@@ -1,0 +1,183 @@
+{
+    "id": "1.3.1a",
+    "type": "web",
+    "versjon": "1.0",
+    "sistOppdatertAvDifi": "05.02.2019",
+    "side" : "2.1",
+    "element" : "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.3"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.5"
+        },
+        {
+            "title": "3.6"
+        },
+        {
+            "title": "3.7"
+        }
+    ],
+
+    "steg": [
+          {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi url eller side-ID.",
+            "type": "tekst",
+            "label": "Url/Side:",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            } 
+        },
+
+        {
+            "stegnr": "2.2",
+            "spm": "Har nettsida visuelle overskrifter?",
+            "ht": "Ei overskrift skil seg visuelt frå teksten som kjem under, med for eksempel større skrift, feit eller kursiv markering",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst"
+                }
+            }
+        },
+        
+         
+
+        {
+            "stegnr": "3.1",
+            "spm": "Beskriv overskrifta som skal vurderast.",
+            "ht": "Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast. Overskrifter gir struktur og meining til nettsida og innhaldet ved å gje namn til dei ulike delane av innhaldet. Ei overskrift skil seg visuelt frå teksten som kjem under, med for eksempel større skrift, feit eller kursiv markering.",
+            "type": "tekst",
+            "label": "Overskrift",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Er den visuelle overskrifta koda som overskrift med H-elementet i HTML?",
+            "ht": "Du kan bruke kodeverkt&#xF8;yet i nettlesaren til &#xE5; sjekke dette. Du kan ogs&#xE5; bruke testverkt&#xF8;y som for eksempel Web Accessibility Toolbar eller WAVE. I standard HTML: Overskriftene er koda med elementa &#x3C;h1&#x3E; til &#x3C;h6&#x3E;.",
+            "type": "jaNei",
+            "kilde":["H42", "F2"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.3",
+            "spm": "Er den visuelle overskrifta koda med attributtet role=\"heading\"?",
+            "ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+            "type": "jaNei",
+            "kilde":["ARIA12", "F2"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Er den visuelle overskrifta koda med noko anna som ivaretek den visuelle presentasjonen?",
+            "ht": "<p>Eksempel p&#xE5; koding er:</p><ul><li>Unummerert liste, koda med &#x3C;ul&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>Nummerert liste, koda med &#x3C;ol&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>Deskriptiv liste, koda med &#x3C;dl&#x3E;, &#x3C;dd&#x3E; og &#x3C;dt&#x3E;</li><li>Ledetekst koda som &#x3C;label&#x3E;</ul>",
+            "type": "jaNei",
+            "kilde":["G115", "F2"],
+            "ruting": {
+                "ja": {
+                    "type": "ikkjeForekomst"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Visuell overskrift er ikkje koda som overskrift."
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Inngår den visuelle overskrifta i eit tydeleg overskriftshierarki?",
+            "ht": "Dersom det er tydeleg at deler av innhaldet er presentert gjennom eit hierarki av visuelle overskrifter, skal dette vere ivareteke i koden. Eksempel på dette er hovudinnhaldet i ein artikkel. Merk: Du skal ikkje vurdere hierarkiet på overskriftene for heile nettsida samla, men berre på delane av sida som er delt opp med eit visuelt overskriftshierarki.",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Visuell overskrift er koda som overskrift."
+                }
+            }
+        },
+       {
+            "stegnr": "3.6",
+            "spm": "Kva er nivået på overskrifta visuelt sett?",
+            "ht": "Samanlign nivået på den visuelle overskrifta med dei føregåande overskriftene. Start på toppen av overskriftshierarkiet og tel deg nedover.Hugs at det kan vere fleire overskrifter på same nivå etter kvarandre. Merk: Nivået på overskrifta er bestemt av fleire ulike ting i tillegg til storleiken på teksten, for eksempel innhaldet i teksten, plassering, tegnsetting og gruppering.",
+            "type": "radio",
+            "svarArray": ["Nivå 1", "Nivå 2", "Nivå 3", "Nivå 4", "Nivå 5", "Nivå 6", "Nivå 7" , "Nivå 8"],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                }
+            }
+        },
+        {
+            "stegnr": "3.7",
+            "spm": "Er nivået i koden det same som det visuelle nivået?",
+            "ht": "<p>Du kan bruke kodeverkt&#xF8;yet i nettlesaren til &#xE5; sjekke dette. Overskriftene skal vere koda med rett niv&#xE5;:</p><ul><li>I standard HTML er overskriftene er koda med elementa &#x3C;h1&#x3E; til &#x3C;h6&#x3E;.</li><li>Med WAI-ARIA er overskriftene er koda med attributtet aria-level=\"1\" til aria-level=\"7\".</li></ul>",
+            "type": "jaNei",
+            "kilde":["G115"],
+            "ruting": {
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Visuelt overskriftsnivå samsvarar ikkje med koda overskriftsnivå."
+                },
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Visuell overskrift er koda som overskrift. Visuelt overskriftsnivå samsvarar med koda overskriftsnivå."
+                }
+            }
+        }
+    ]
+}

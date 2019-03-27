@@ -1,0 +1,298 @@
+{
+    "id": "1.3.1c",
+    "type": "web",
+    "versjon": "1.1",
+    "sistOppdatertAvDifi": "05.02.2019",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.3"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.5"
+        },
+        {
+            "title": "3.6"
+        },
+        {
+            "title": "3.7"
+        },
+        {
+            "title": "3.8"
+        },
+        {
+            "title": "3.9"
+        },
+        {
+            "title": "3.10"
+        },
+        {
+            "title": "3.11"
+        }
+    ],
+
+    "steg": [
+
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi url eller side-ID",
+            "type": "tekst",
+            "label": "Url/Side:",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            } 
+        },
+
+        {
+            "stegnr": "2.2",
+            "spm": "Har nettsida visuelle lister?",
+            "ht": "Sjå etter innhald som ser ut som lister. Lister er informasjon som er gruppert og som ikkje er løpande tekst. Lister kan vere markert med for eksempel kulepunkt eller tal.",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.1",
+            "spm": "Beskriv lista som skal vurderast.",
+            "ht": "Legg inn overskrift, eller andre stikkord som er slik at lista du testar kan identifiserast.",
+            "type": "tekst",
+            "label": "Liste",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.2",
+            "spm": "Er lista ei nummerert liste?",
+            "ht": "<p>Lista kan vere nummerert med for eksempel tal eller bokstavar.</p><p>Merk at lister kan vere nøsta. Dette er ok.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                }
+            }
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Er lista koda med &#x3C;ol&#x3E;-elementet i HTML?",
+            "ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p><p>Sjekk at det ligg eit <code>&#x3C;ol&#x3E;</code>-element i koden før første punkt i lista.</p>",
+            "type": "jaNei",
+            "kilde": ["H48"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Er kvart punkt i lista koda med &#x3C;li&#x3E;-elementet?",
+            "ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p>",
+            "type": "jaNei",
+            "kilde": ["H48"],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Visuell nummerert liste er koda med &#x3C;ol&#x3E;, og punkta i lista er koda med &#x3C;li&#x3E;."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Visuell nummerert liste er koda med &#x3C;ol&#x3E;, og punkta i lista er ikkje koda med &#x3C;li&#x3E;."
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Er lista ei unummerert liste?",
+            "ht": "<p>Lista kan vere organisert med kulepunkt, strekpunkt eller lignande.</p><p>Merk at lister kan vere nøsta. Dette er ok.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                },
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }
+        },
+        {
+            "stegnr": "3.6",
+            "spm": "Er lista koda med &#x3C;ul&#x3E;-elementet i HTML?",
+            "ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p><p>Sjekk at det ligg eit <code>&#x3C;ul&#x3E;</code>-element i koden før første punkt i lista.</p>",
+            "type": "jaNei",
+            "kilde": ["H48"],
+            "ruting": {
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                },
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                }
+            }
+        },
+        {
+            "stegnr": "3.7",
+            "spm": "Er kvart punkt i lista koda med &#x3C;li&#x3E;-elementet?",
+            "ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p><p>Sjekk at alle punkta i lista er koda med <code>&#x3C;li&#x3E;</code>-element i koden.</p>",
+            "type": "jaNei",
+            "kilde": ["H48"],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Visuell unummerert liste er koda med &#x3C;ul&#x3E;, og punkta i lista er koda med &#x3C;li&#x3E;."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Visuell unummerert liste er koda med &#x3C;ul&#x3E;, og punkta i lista er ikkje koda med &#x3C;li&#x3E;."
+                }
+            }
+        },
+        {
+            "stegnr": "3.8",
+            "spm": "Er lista ei beskrivande liste?",
+            "ht": "<p>Beskrivande lister (description lists) blir brukt for å gruppere ulike termar/namn med skildringar eller definisjonar. Lista har to nivå og gir utdypande forklaringar på termar, ord eller uttrykk. Lista kan vere organisert alfabetisk.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "nei": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "3.3",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Visuell nummerert liste er ikkje koda med &#x3C;ol&#x3E;."
+                            }
+                        },
+                        "2": {
+                            "sjekk": "3.6",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Visuell unummerert liste er ikkje koda med &#x3C;ul&#x3E;."
+                            }
+                        },
+                        "3": {
+                            "sjekk": "3.5",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "ikkjeForekomst"
+                            }
+                        }
+                    }
+                },
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.9"
+                }
+            }
+        },
+        {
+            "stegnr": "3.9",
+            "spm": "Er lista koda med &#x3C;dl&#x3E;-elementet i HTML?",
+            "ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p><p>Sjekk at det ligg eit <code>&#x3C;dl&#x3E;</code>-element i koden før første term i lista.</p>",
+            "type": "jaNei",
+            "kilde": ["H40", "H48"],
+            "ruting": {
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Visuell beskrivande liste er ikkje koda med &#x3C;dl&#x3E;, &#x3C;dt&#x3E; og &#x3C;dd&#x3E;."
+                },
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.10"
+                }
+            }
+        },
+        {
+            "stegnr": "3.10",
+            "spm": "Er alle termane i lista koda med &#x3C;dt&#x3E;-elementet?",
+            "ht": "<p>Termane er for eksempel orda skal forklarast.</p>",
+            "type": "jaNei",
+            "kilde": ["H40", "H48"],
+            "ruting": {
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Visuell beskrivande liste er ikkje koda med &#x3C;dl&#x3E;, &#x3C;dt&#x3E; og &#x3C;dd&#x3E;."
+                },
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.11"
+                }
+            }
+        },
+        {
+            "stegnr": "3.11",
+            "spm": "Er alle forklaringane i lista koda med &#x3C;dd&#x3E;-elementet?",
+            "ht": "Forklaringane gir ei beskriving/definisjon på termane i lista. Forklaringane kan ligge med eit innrykk under termane i lista.",
+            "type": "jaNei",
+            "kilde": ["H40", "H48"],
+            "ruting": {
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Visuell beskrivande liste er ikkje koda med &#x3C;dl&#x3E;, &#x3C;dt&#x3E; og &#x3C;dd&#x3E;."
+                },
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Visuell beskrivande liste er koda med &#x3C;dl&#x3E;, &#x3C;dt&#x3E; og &#x3C;dd&#x3E;."
+                }
+            }
+        }
+    ]
+}
