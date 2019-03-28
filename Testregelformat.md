@@ -16,16 +16,16 @@ Generell info om testreglar
 -  SistOppdatertAvDifi 
 
 ## Id
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
 "id": "1.4.2a"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 Id er ein unik identifikator for kvar testregel.
 
 ### Type
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
 "type": "web"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Type er kategori av testregel. Dei aktuelle typane er: 
 - web 
@@ -49,7 +49,7 @@ Dei ulike typane er forklart under.
 
 Eksempel på steg
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
 {
   "stegnr": "3.2",
   "spm": "Har skjemaelementet ein tekstleg identifikasjon i form av ledetekst, tekst på knapp eller instruksjon?",
@@ -67,7 +67,7 @@ Eksempel på steg
                 }
             }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ### Stegnr
 
