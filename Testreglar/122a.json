@@ -343,7 +343,12 @@
                 },
                 "nei": {
                     "type": "gaaTil",
-                    "steg": "3.13"
+                    "steg": "3.13",
+                    "delutfall": {
+                        "nr": 1,
+                        "tekst": "Videoklipp har tekstalternativ som ikkje formidlar same bodskap som lyd og bilde.",
+                        "fasit": "Nei"
+                    }
                 }
             }
         },
@@ -389,12 +394,12 @@
             "ruting": {
                 "ja": {
                     "type": "gaaTil",
-                    "steg": "3.18"
+                    "steg": "3.16"
                 },
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Videoklippet er utan teksting, utan tekstalternativ nær klippet og tekstalternativ via ein mekanisme som ikkje er koda som tekst."
+                    "utfall": "#delutfall(0,Nei) #delutfall(1,Nei) Videoklipp har tekstalternativ via ein mekanisme som ikkje er koda som tekst."
                 }
             }
         },
@@ -414,7 +419,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Videoklippet er utan teksting, utan tekstalternativ nær klippet og tekstalternativ via ein mekanisme som ikkje gir same bodskap." 
+                    "utfall": "#delutfall(0,Nei) #delutfall(1,Nei) Videoklipp har tekstalternativ via ein mekanisme som ikkje gir same bodskap." 
                 }
             }
         }
