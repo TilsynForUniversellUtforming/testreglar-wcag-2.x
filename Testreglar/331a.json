@@ -134,7 +134,7 @@
             "ruting": {
                 "ja": {
                     "type": "gaaTil",
-                    "steg": "3.5"
+                    "steg": "3.4"
                 },
                 "nei": {
                     "type": "avslutt",
@@ -152,14 +152,13 @@
             "kilde": ["G83"],
             "ruting": {
                 "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                },
+                "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
                     "utfall": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje identifiserer kvar feilen er oppstått."  
-                },
-                "nei": {
-
-                    "type": "gaaTil",
-                    "steg": "3.5"
                 }
             }
         },
