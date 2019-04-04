@@ -2,7 +2,7 @@
     "id": "2.2.2a",
     "type": "web",
     "versjon": "1.0",
-    "sistOppdatertAvDifi": "02.04.2019",
+    "sistOppdatertAvDifi": "04.04.2019",
     "spraak": "no",
     "side": "2.1",
     "element": "3.1",
@@ -330,13 +330,13 @@
             "ruting": {
                 "ja": {
                     "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Det er mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
+                    "fasit": "Nei",
+                    "utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
                 },
                 "nei": {
                     "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
+                    "fasit": "Ja",
+                    "utfall": "Det er mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
                 }
             }
         }
