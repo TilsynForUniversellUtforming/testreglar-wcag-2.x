@@ -414,7 +414,7 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Videoklippet har eit tekstalternativ som kan nåast, koda som tekst og som gir same bodskap som videoklippet. "
+                    "utfall": "Videoklipp har tekstalternativ som formidlar same bodskap som lyd og bilde."
                 },
                 "nei": {
                     "type": "avslutt",
