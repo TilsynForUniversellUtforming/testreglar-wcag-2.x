@@ -399,7 +399,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "#delutfall(0,Nei) #delutfall(1,Nei) Videoklipp har tekstalternativ via ein mekanisme som ikkje er koda som tekst."
+                    "utfall": "#delutfall(0,Nei) #delutfall(1,Nei) Videoklipp har tekstalternativ via ein mekanisme. Tekstalternativ er ikkje koda som tekst."
                 }
             }
         },
@@ -419,7 +419,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "#delutfall(0,Nei) #delutfall(1,Nei) Videoklipp har tekstalternativ via ein mekanisme som ikkje gir same bodskap." 
+                    "utfall": "#delutfall(0,Nei) #delutfall(1,Nei) Videoklipp har tekstalternativ via ein mekanisme. Tekstalternativ formidlar ikkje same bodskap som lyd og bilde." 
                 }
             }
         }

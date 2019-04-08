@@ -157,7 +157,12 @@
                 },
                 "nei": {
                     "type": "gaaTil",
-                    "steg": "3.5"
+                    "steg": "3.5",
+                    "delutfall": {
+                        "nr": 0,
+                        "tekst": "",
+                        "fasit": "Nei"
+                    }
                 }
             }
         },
@@ -216,7 +221,7 @@
                             "handling": {
                                 "type": "avslutt",
                                 "fasit": "Ja",
-                                "utfall": "Skjemaelement med identifikasjon i form av tekst. Skjema har tekstleg informasjon om at element er obligatoriske."
+                                "utfall": "Skjemaelement med identifikasjon i form av tekst. Skjema har tekstleg informasjon om at alle skjemaelement er obligatoriske."
                             }
                         }
                     }   
@@ -337,7 +342,7 @@
                             "handling": {
                                 "type": "avslutt",
                                 "fasit": "Ja",
-                                "utfall": "Skjemaelement med identifikasjon i form av ikon/symbol/bilete. Skjema har tekstleg informasjon om at element er obligatoriske."
+                                "utfall": "Skjemaelement med identifikasjon i form av ikon/symbol/bilete. Skjema har tekstleg informasjon om at alle skjemaelement er obligatoriske."
                             }
                         }
                     }
@@ -400,7 +405,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Skjema manglar informasjon om at felt er obligatoriske."
+                    "utfall": "Skjema manglar informasjon om at skjemaelement er obligatoriske."
                 }
             }
         },
