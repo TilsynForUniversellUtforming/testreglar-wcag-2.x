@@ -405,7 +405,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Skjema manglar informasjon om at felt er obligatoriske."
+                    "utfall": "Skjema manglar informasjon om at skjemaelement er obligatoriske."
                 }
             }
         },
