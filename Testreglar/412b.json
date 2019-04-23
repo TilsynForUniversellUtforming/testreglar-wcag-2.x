@@ -368,12 +368,12 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Knapp er kopla til ein ledetekst i koden.Ledeteksten identifiserer knappen."
+                    "utfall": "Knapp er kopla til ein ledetekst i koden. Ledeteksten identifiserer knappen."
                 },
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Knapp er kopla til ein ledetekst i koden.Ledeteksten identifiserer ikkje knappen."
+                    "utfall": "Knapp er kopla til ein ledetekst i koden. Ledeteksten identifiserer ikkje knappen."
                 }
             }
         }

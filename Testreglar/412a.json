@@ -239,7 +239,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Skjemaelement som ikkje er kopla til ein ledetekst i koden."
+                    "utfall": "Skjemaelement er ikkje er kopla til ein ledetekst i koden."
                 }
             }
         },
@@ -258,7 +258,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Skjemaelement som er kopla til ein ledetekst i koden som ikkje identifiserer skjemaelementet."
+                    "utfall": "Skjemaelement er kopla til ein ledetekst i koden. Ledeteksten identifiserer ikkje skjemaelementet."
                 }
             }
         },
@@ -275,7 +275,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Skjemaelement som er kopla til ein ledetekst i koden og som åleine identifiserer skjemaelementet."
+                    "utfall": "Skjemaelement er kopla til ein ledetekst i koden. Ledeteksten identifiserer skjemaelementet."
                 }
             }
         },
@@ -341,7 +341,7 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Skjemaelement som er kopla til ein ledetekst i koden og som ved hjelp av innhaldet i &#x3C;legend&#x3E; saman med skjemaelementet sin ledetekst identifiserer skjemaelementet."
+                    "utfall": "Skjemaelement er kopla til ein ledetekst i koden. Skjemaelement er plassert i ei gruppe i koden. Ledetekst identifiserer skjemaelementet."
                 },
                 "nei": {
                     "type": "gaaTil",
@@ -363,7 +363,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Skjemaelement som er kopla til ein ledetekst i koden og som er plassert i ei gruppe som ikkje er kopla i koden."
+                    "utfall": "Skjemaelement er kopla til ein ledetekst i koden. Skjemaelement er plassert i ei gruppe som ikkje er identifisert i koden."
                 }
             }
         },
@@ -398,7 +398,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Skjemaelement som er kopla til ein ledetekst i koden og som er plassert i ei gruppe som ikkje er identifisert i koden."
+                    "utfall": "Skjemaelement er kopla til ein ledetekst i koden. Skjemaelement er plassert i ei gruppe som ikkje er identifisert i koden."
                 }
             }
         },
@@ -416,7 +416,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Skjemaelement som er kopla til ein ledetekst i koden og som er plassert i ei gruppe som ikkje er identifisert i koden."
+                    "utfall": "Skjemaelement er kopla til ein ledetekst i koden. Skjemaelement er plassert i ei gruppe som ikkje er identifisert i koden."
                 }
             }
         },
@@ -430,12 +430,12 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Skjemaelementet som blir identifisert av innhaldet i aria-attributtet på gruppeelementet saman med skjemaelementet sin ledetekst."
+                    "utfall": "Skjemaelement er kopla til ein ledetekst i koden. Skjemaelement er plassert i ei gruppe i koden. Ledetekst identifiserer skjemaelementet."
                 },
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Skjemaelementet som ikkje blir identifisert av innhaldet i aria-attributtet på gruppeelementet saman med skjemaelementet sin ledetekst."
+                    "utfall": "Skjemaelement er kopla til ein ledetekst i koden. Skjemaelement er plassert i ei gruppe som ikkje er identifisert i koden."
                 }
             }
         }
