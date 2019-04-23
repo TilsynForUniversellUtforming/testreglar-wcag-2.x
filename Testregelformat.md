@@ -132,14 +132,10 @@ Ruting
 
 Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar.
 
-### Ruting til
-
-Ruting til er det øverste nivået i en ruting. Den vanlege alternativa er - Alle
-(Ruting uansett svar) - Ja - Nei - [Alternativ frå radioboks]
 
 ### Typar Ruting
 
-Ruting til er det øverste nivået i en ruting. Den vanlege alternativa er  
+"Ruting til" er det øverste nivået i en ruting. Den vanlege alternativa er  
 -   Alle (Ruting uansett svar)
 -   Ja
 -   Nei
@@ -160,11 +156,11 @@ Ruting alle betyr at den valte rutinga skal nyttast ved alle svar.
 ### Ruting Ja og nei
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "ruting": {
-              "Ja": {
+              "ja": {
                     "type": "gaaTil",
                     "steg": "3.3"
                 },
-                "Nei": {
+                "nei": {
                     "type": "gaaTil",
                     "steg": "3.8"
                 }
