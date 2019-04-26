@@ -394,7 +394,7 @@
         {
             "stegnr": "3.11",
             "spm": "Inneheld ledeteksten eit symbol/ikon som indikerer at skjemaelementet er obligatorisk?",
-            "ht": "<p>Eksempel på symbol/ikon er stjerne (*)</p><p>Informasjon i form av symbol/ikone som dukkar opp etter at eit obligatorisk skjemaelement er fylt ut, er ikkje tilstrekkeleg. </p>",
+            "ht": "<p>Eksempel på symbol/ikon er stjerne (*)</p><p>Informasjon i form av symbol/ikon som dukkar opp etter at eit obligatorisk skjemaelement er fylt ut, er ikkje tilstrekkeleg. </p>",
             "type": "jaNei",
             "kilde": ["H90"],
             "ruting": {
