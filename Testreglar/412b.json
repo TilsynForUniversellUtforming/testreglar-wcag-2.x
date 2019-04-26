@@ -77,7 +77,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida knappar?",
-            "ht": "<p>Sjekk om nettsida har knappar. Knappar blir brukt for eksempel til å aktivere ein funksjon eller sende inn skjema.</p>Husk at knappar som består av eit bilete og knappar som er koda som lenker skal også testast her.</p>Merk: Du skal teste funksjonalitet som ser ut som knapp. Indikatoren er ikkje avgrensa til å berre teste knappar som er koda som <code>&#x3C;button&#x3E; </code>eller <code>&#x3C;input&#x3E;</code>.</p>",
+            "ht": "<p>Sjekk om nettsida har knappar. Knappar blir brukt for eksempel til å aktivere ein funksjon eller sende inn skjema.</p>Husk at knappar som består av eit bilde og knappar som er koda som lenker skal også testast her.</p><strong>Merk:</strong> Du skal teste funksjonalitet som ser ut som knapp. Indikatoren er ikkje avgrensa til å berre teste knappar som er koda som <code>&#x3C;button&#x3E; </code>eller <code>&#x3C;input&#x3E;</code>.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -152,7 +152,7 @@
         {
             "stegnr": "3.5",
             "spm": "Har knappen attributtet \"aria-label\"?",
-            "ht": "<p>Sjå i koden og finn knappen.</p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
+            "ht": "<p>Sjå i koden og finn knappen.</p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
             "type": "jaNei",
             "kilde":["ARIA14", "F68"],
             "ruting": {
@@ -169,7 +169,7 @@
         {
             "stegnr": "3.6",
             "spm": "Har knappen attributtet \"aria-labelledby\" ?",
-            "ht": "<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten. </p>",
+            "ht": "<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten. </p>",
             "type": "jaNei",
             "kilde":["ARIA16", "F68"],
             "ruting": {
@@ -361,7 +361,7 @@
         {
             "stegnr": "3.17",
             "spm": "Identifiserer ledeteksten funksjonen til knappen?",
-            "ht": "<p>Ta utgangspunktet i ledeteksten du fann i førre steg. Det er tilstrekkeleg at ledeteksten som identifiserer knappen eller er lik teksten på knappen. Vi krever uansett ikkje meir identifikasjon enn den synlege informasjonen på knappen.</p>Knappar som er koda med berre eit type-element som er anten type=\"submit\" eller type=\"reset\", skal du vurdere den visuelle teksten på knappen.</p>Merk: Ledeteksten skal vere på same språk som skjemaet. </p>",
+            "ht": "<p>Ta utgangspunktet i ledeteksten du fann i førre steg.</p><p>Det er tilstrekkeleg at ledeteksten identifiserer knappen eller er lik teksten på knappen. Vi krever uansett ikkje meir identifikasjon enn den synlege informasjonen på knappen.</p>Knappar som er koda med berre eit type-element som er anten type=\"submit\" eller type=\"reset\", skal du vurdere den visuelle teksten på knappen.</p><strong>Merk:</strong>: Ledeteksten skal vere på same språk som skjemaet. </p>",
             "type": "jaNei",
             "kilde": ["G108"],
             "ruting": {

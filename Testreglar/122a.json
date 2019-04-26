@@ -61,7 +61,7 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID",
+            "ht": "Oppgi url eller side-ID.",
             "type": "tekst",
             "label": "Url/Side:",
             "oblig": true,
@@ -125,7 +125,7 @@
 
         {
             "stegnr": "3.3",
-            "spm": "Er videoen forhåndsinnspelt?",
+            "spm": "Er videoen førehandsinnspelt?",
             "ht": "<p>Aktuelle metodar for å finne ut dette er:</p> <ul> <li>Prøv å starte videoklippet og sjå om avspelinga startar frå byrjinga av fila og om det finst informasjon om varigheiten på klippet.</li> <li>Sjå etter informasjon om når klippet er publisert.</li> <li>Sjå etter informasjon som tilseier at klippet er live/direkte.</li> </ul> <p>Dette kan for eksempel vere: Rødt felt med teksten \"live\" eller at det ikkje er mogeleg å spole i klippet.</p>",
             "type": "jaNei",
             "ruting": {
@@ -142,7 +142,7 @@
         {
             "stegnr": "3.4",
             "spm": "Er videoen eit mediealternativ til tekst og tydeleg merka som det?",
-            "ht": "<p>Undersøk om det i tilknytning til videoen finst ein tekst som visuelt står fram som hovudformatet for formidling av informasjonen.</p> <p>Indikasjonar på at videoen er eit mediealternativ til tekst kan vere:</p> <ul> <li>Ikon (for eksempel filmkameraikon) som indikerar at det er et alternativ til ein nærliggande tekst.</li> <li>Lenke med lenketekst der det går fram at det er eit videoklipp (til dømes \"sjå opptak\", \"animasjon\").</li> <li>Eit mediealternativ til tekst er tydeleg merka når det er presentert i direkte nærleik til ein tekst og det ikkje er tvil om at det er et alternativ til den aktuelle teksten.</li> </ul>",
+            "ht": "<p>Undersøk om det i tilknytning til videoen finst ein tekst som visuelt står fram som hovudformatet for formidling av informasjonen.</p> <p>Indikasjonar på at videoen er eit mediealternativ til tekst kan vere:</p> <ul> <li>Ikon (for eksempel filmkameraikon) som indikerar at det er eit alternativ til ein nærliggande tekst.</li> <li>Lenke med lenketekst der det går fram at det er eit videoklipp (til dømes \"sjå opptak\", \"animasjon\").</li> <li>Eit mediealternativ til tekst er tydeleg merka når det er presentert i direkte nærleik til ein tekst og det ikkje er tvil om at det er et alternativ til den aktuelle teksten.</li> </ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -203,7 +203,7 @@
         {
             "stegnr": "3.7",
             "spm": "Er tekstinga lesbar/visuelt synleg?",
-            "ht": "<p>Gjer ein visuell inspeksjon av teksten. </p> <p>Vurder om teksten er tilstrekkeleg synleg/lesbar. </p> <p>Du skal her vurder teksting mot bakgrunn, altså videoen. Døme på lite lesbar tekst er:</p> <ul> <li>Teksting som ligg oppå annan tekst.</li> <li>teksting som har tilnærma same farge som bakgrunnen/videoen.</li> </ul>",
+            "ht": "<p>Gjer ein visuell inspeksjon av teksten. </p> <p>Vurder om teksten er tilstrekkeleg synleg/lesbar. </p> <p>Du skal her vurder teksting mot bakgrunn, altså videoen. Døme på lite lesbar tekst er:</p> <ul> <li>Teksting som ligg oppå annan tekst.</li> <li>Teksting som har tilnærma same farge som bakgrunnen/videoen.</li> </ul>",
             "type": "jaNei",
             "kilde":["G87", "G93"],
             "ruting": {
@@ -230,8 +230,8 @@
 
         {
             "stegnr": "3.8",
-            "spm": "Er informasjonen/innhaldet som blir formidla i tekstinga samsvar med informasjon som blir formidla i via lyd og bilete i videoen?",
-            "ht": "<p>Sjå gjennom dei første minuttane av videoklippet og samanlikn innhaldet i videoklippet med det som vert formidla i tekstinga. </p> <p>Merk at teksting og bilete tilsaman skal formidle informasjon som vert gitt via bilete og lyd i videoen.</p> <p><strong>MERK:</strong> Vi krev ikkje at tekstinga eksakt formidlar innhaldet i lyd og bilete, men at følgjande element er dekka: </p> <ul> <li>Tale og dialog med markering av kven som snakkar (dersom du kan forstå kven som snakkar ut frå den visuelle infomasjonen i videoen, treng ikkje teksten å formidle dette).</li> <li>Viktige lydeffektar</li> </ul>",
+            "spm": "Er informasjonen/innhaldet som blir formidla i tekstinga i samsvar med informasjon som blir formidla via lyd og bilde i videoen?",
+            "ht": "<p>Sjå gjennom dei første minuttane av videoklippet og samanlikn innhaldet i videoklippet med det som vert formidla i tekstinga. </p> <p>Merk at teksting og bilde tilsaman skal formidle informasjon som vert gitt via bilde og lyd i videoen.</p> <p><strong>MERK:</strong> Vi krev ikkje at tekstinga eksakt formidlar innhaldet i lyd og bilde, men at følgjande element er dekka: </p> <ul> <li>Tale og dialog med markering av kven som snakkar (dersom du kan forstå kven som snakkar ut frå den visuelle infomasjonen i videoen, treng ikkje teksten å formidle dette).</li> <li>Viktige lydeffektar.</li> </ul>",
             "type": "jaNei",
             "kilde":["G87", "G93", "F75", "F8"],
             "ruting": {
@@ -389,7 +389,7 @@
         {
             "stegnr": "3.15",
             "spm": "Er tekstalternativet koda som tekst?",
-            "ht": "<p>Dette kan undersøkast på fleire måtar:</p> <p>Alternativ 1:</p> <ul> <li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilete av tekst.</li> </ul> <p>Alternativ 2:</p> <ul> <li>Opne kodeverktøyet i nettlesaren.</li> <li>Bruk \"select\" funksjonen i verktøyet og markere et område i tekstalternativet.</li> <li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li> </ul>",
+            "ht": "<p>Dette kan undersøkast på fleire måtar:</p> <p>Alternativ 1:</p> <ul> <li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilde av tekst.</li> </ul> <p>Alternativ 2:</p> <ul> <li>Opne kodeverktøyet i nettlesaren.</li> <li>Bruk \"select\" funksjonen i verktøyet og markere et område i tekstalternativet.</li> <li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li> </ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -407,7 +407,7 @@
         {
             "stegnr": "3.16",
             "spm": "Er informasjonen/innhaldet som blir formidla i videoklippet i samsvar med informasjon som blir formidla i teksten?",
-            "ht": "<p>Samanlikn tekstalternativet med innhaldet i videoklippet:</p><p>Gå gjennom for eksempel dei første 5 minuttane av videoklippet og vurder om videoklippet og tekstalternativet formidlar det same hovudinnhaldet i lik rekkefølge og sjekk at følgande elemenet er dekka:</#p> <ul><li>Tale og dialog.</li> <li>Viktige lydeffektar.</li> <li>Markering av kven som snakkar.</li> </ul> <p><Strong>MERK:</Strong> Vi krev ikkje eksakt attgjevinng av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge</p> <p>Dersom du allereie i starten av videoklippet avdekkar at det ikkje er samsvar mellom videoklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
+            "ht": "<p>Samanlikn tekstalternativet med innhaldet i videoklippet:</p><p>Gå gjennom for eksempel dei første 5 minuttane av videoklippet og vurder om videoklippet og tekstalternativet formidlar det same hovudinnhaldet i lik rekkefølge og sjekk at følgande elemenet er dekka:</#p> <ul><li>Tale og dialog.</li> <li>Viktige lydeffektar.</li> <li>Markering av kven som snakkar.</li> </ul> <p><Strong>MERK:</Strong> Vi krev ikkje eksakt attgjeving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge</p> <p>Dersom du allereie i starten av videoklippet avdekkar at det ikkje er samsvar mellom videoklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
             "type": "jaNei",
             "kilde":["F75"],
             "ruting": {

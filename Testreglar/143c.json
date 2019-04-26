@@ -34,7 +34,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida innhald i form av tekst?",
-            "ht": "<p>Desse innhaldstypane skal testast:</p><ul><li>Tekst mot bakgrunn.</li><li>Tekst i illustrasjonar og diagram (som ikkje er bilete).</li><li>Tekst i skjema.</li></ul><p>Desse innhaldstypane skal ikkje testast:</#p><ul><li>Bilete av tekst (Blir testa i 1.4.3b).</li><li>Logoar og varemerke.</li><li>Ikkje-informativ tekst som er til pynt, dvs tekst som kan erstattast av annan tekst, utan at meiningsinnhaldet vert endra.</li><li>Tekst i bilete der teksten ikkje er vesentleg for å formidle meiningsinnhaldet.</li><li>Deaktiverte skjemaelement.</li><li>Tekst som ikkje er synleg for nokon.</li><li>Grafiske element i for eksempel diagram og grafar, som støttelinjer, søyler m.m.</li></ul>",
+            "ht": "<p>Desse innhaldstypane skal testast:</p><ul><li>Tekst mot bakgrunn.</li><li>Tekst i illustrasjonar og diagram (som ikkje er bilde).</li><li>Tekst i skjema.</li></ul><p>Desse innhaldstypane skal ikkje testast:</#p><ul><li>Bilde av tekst (Blir testa i 1.4.3b).</li><li>Logoar og varemerke.</li><li>Ikkje-informativ tekst som er til pynt, dvs. tekst som kan erstattast av annan tekst, utan at meiningsinnhaldet vert endra.</li><li>Tekst i bilde der teksten ikkje er vesentleg for å formidle meiningsinnhaldet.</li><li>Deaktiverte skjemaelement.</li><li>Tekst som ikkje er synleg for nokon.</li><li>Grafiske element i for eksempel diagram og grafar, som støttelinjer, søyler m.m.</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -50,7 +50,7 @@
         {
             "stegnr": "3.1",
             "spm": "Kor mange element feilar på kontrast?",
-            "ht": "<p><a class=\"aUnderLine\" target=\"_blank\" href=\"https://chrome.google.com/webstore/detail/siteimprove-accessibility/efcfolpjihicnikpmhnmphjhhpiclljc\">Bruk nettlesartillegget Siteimprove Accessibility Checker i Chrome</a> (Du kan last ned dette frå Chrome Store).</p> <p>Skriv av verdien du får i feltet Contrast(Minimum) under overskrifta Distingushable. Dersom feltet Contrast(Minimum) ikkje kjem opp er sida uten feil og du skal registere 0.</p>",
+            "ht": "<p><a class=\"aUnderLine\" target=\"_blank\" href=\"https://chrome.google.com/webstore/detail/siteimprove-accessibility/efcfolpjihicnikpmhnmphjhhpiclljc\">Bruk nettlesartillegget Siteimprove Accessibility Checker i Chrome</a> (Du kan last ned dette frå Chrome Store).</p> <p>Skriv av verdien du får i feltet Contrast (Minimum) under overskrifta Distingushable. Dersom feltet Contrast (Minimum) ikkje kjem opp er sida uten feil og du skal registere 0.</p>",
             "image": {
                 "href": "/bilete/143c-01.png",
                 "alt": ""
