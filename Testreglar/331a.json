@@ -110,7 +110,7 @@
         {
             "stegnr": "3.2",
             "spm": "Får du ei tekstleg feilmelding?",
-            "ht": "Meldinga kan visast for eksempel <ol><li> i eit modalvindauge,</li><li>i ledeteksten til skjemaelementa,</li><li>eller ein eller annan stad i skjemaet/sida, for eksempel på toppen</li></ol> Merk: Feilmeldinga må vere synleg utan at brukaren må gjere ekstra handlingar, som for eksempel å navigere til skjemaelementet. Det er ikkje nok å identifisere feilen med for eksempel berre eit symbol i ledeteksten, berre med å endre farge eller berre visuell plassering av feilmeldinga.",
+            "ht": "Meldinga kan visast for eksempel <ol><li> i eit modalvindauge,</li><li>i ledeteksten til skjemaelementa,</li><li>eller ein eller annan stad i skjemaet/sida, for eksempel på toppen</li></ol> <strong>Merk:</strong> Feilmeldinga må vere synleg utan at brukaren må gjere ekstra handlingar, som for eksempel å navigere til skjemaelementet. Det er ikkje nok å identifisere feilen med for eksempel berre eit symbol i ledeteksten, berre med å endre farge eller berre visuell plassering av feilmeldinga.",
             "type": "jaNei",
             "kilde": ["G83"],
             "ruting": {
@@ -129,7 +129,7 @@
         {
             "stegnr": "3.3",
             "spm": "Er feilmeldinga koda som tekst?",
-            "ht": "<p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilete av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Opne kodeverktøyet i nettlesaren.</li><li>Bruk \"select\" funksjonen i verktøyet og marker teksten.</li><li>Sjekk at teksten er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul><p>Alternativ 3:</p><ul><li>Dersom skjemaelementet har attributtet \"required\" eller aria-required=\"true\", kjem det fram ei melding i nettlesaren. Denne meldinga er koda som tekst.</li></ul>",
+            "ht": "<p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Opne kodeverktøyet i nettlesaren.</li><li>Bruk \"select\" funksjonen i verktøyet og marker teksten.</li><li>Sjekk at teksten er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul><p>Alternativ 3:</p><ul><li>Dersom skjemaelementet har attributtet \"required\" eller aria-required=\"true\", kjem det fram ei melding i nettlesaren. Denne meldinga er koda som tekst.</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
