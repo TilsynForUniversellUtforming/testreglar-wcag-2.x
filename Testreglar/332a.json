@@ -239,8 +239,8 @@
         },
         {
             "stegnr": "3.5",
-            "spm": "Har skjemaelementet ein visuell identifikasjon i form av ikon, symbol, bilete eller liknande?",
-            "ht": "<p>Du skal vurdere om ikonet/symbilet/biletet gir tilstrekkeleg identifikasjon.</p><p>Identifikasjon i form av ikon/symbol/bilete kan vere ikon som er allment brukt og kjente symbol for bestemt type informasjon, for eksempel eit forstørringsglas for å starte søk.</p>",
+            "spm": "Har skjemaelementet ein visuell identifikasjon i form av ikon, symbol, bilde eller liknande?",
+            "ht": "<p>Du skal vurdere om ikonet/symbilet/bilde gir tilstrekkeleg identifikasjon.</p><p>Identifikasjon i form av ikon/symbol/bilde kan vere ikon som er allment brukt og kjente symbol for bestemt type informasjon, for eksempel eit forstørringsglas for å starte søk.</p>",
             "type": "jaNei",
             "kilde": ["G131", "H44"],
             "ruting": {
@@ -277,7 +277,7 @@
         },
         {
             "stegnr": "3.6",
-            "spm": "Er ikonet/symbolet/biletet visuelt plassert i eller rett ved skjemaelementet?",
+            "spm": "Er ikonet/symbolet/bilde visuelt plassert i eller rett ved skjemaelementet?",
             "ht": "Plasseringa kan for eksempel vere rett over eller rett ved sida av skjemaelementet.",
             "type": "jaNei",
             "kilde": ["G162"],
@@ -295,7 +295,7 @@
         },
         {
             "stegnr": "3.7",
-            "spm": "Er ikonet/symbolet/biletet alltid synleg når skjemaelementet er i fokus?",
+            "spm": "Er ikonet/symbolet/bilde alltid synleg når skjemaelementet er i fokus?",
             "ht": "Klikk i skjemaelementet, men ikkje skriv inn innhald eller velg alternativ.",
             "type": "jaNei",
             "kilde": ["H44"],
@@ -313,8 +313,8 @@
         },
         {
             "stegnr": "3.8",
-            "spm": "Vurder ikonet/symbolet/biletet i koden. Finst det informasjon i koden som set brukaren i stand til å identifisere skjemaelementet?",
-            "ht": "<p>Vurder om ikonet/symbolet/biletet er identifisert i koden i denne prioriterte rekkefølgja:</p><ol><li>aria-label</li><li>aria-labelledby</li><li>alt (finst helst på &#x3C;img&#x3E;, men kan og brukast på andre)</li><li>value (finst helst på skjemaelement)</li><li>tekst i ikon/symbol-elementet (for eksempel &#x3C;button&#x3E;Søk&#x3C;/button&#x3E;)</li><li>title</li></ol><p>Du skal vurdere om innhaldet i attributta set brukaren i stand til å identifisere skjemaelementet.</p>",
+            "spm": "Vurder ikonet/symbolet/bilde i koden. Finst det informasjon i koden som set brukaren i stand til å identifisere skjemaelementet?",
+            "ht": "<p>Vurder om ikonet/symbolet/bilde er identifisert i koden i denne prioriterte rekkefølgja:</p><ol><li>aria-label</li><li>aria-labelledby</li><li>alt (finst helst på &#x3C;img&#x3E;, men kan og brukast på andre)</li><li>value (finst helst på skjemaelement)</li><li>tekst i ikon/symbol-elementet (for eksempel &#x3C;button&#x3E;Søk&#x3C;/button&#x3E;)</li><li>title</li></ol><p>Du skal vurdere om innhaldet i attributta set brukaren i stand til å identifisere skjemaelementet.</p>",
             "type": "jaNei",
             "kilde": [],
             "ruting": {
@@ -394,7 +394,7 @@
         {
             "stegnr": "3.11",
             "spm": "Inneheld ledeteksten eit symbol/ikon som indikerer at skjemaelementet er obligatorisk?",
-            "ht": "<p>Eksempel på symbol/ikon er stjerne(*)</p><p>Informasjon i form av symbol/ikone som dukkar opp etter at eit obligatorisk skjemaelement er fylt ut, er ikkje tilstrekkeleg. </p>",
+            "ht": "<p>Eksempel på symbol/ikon er stjerne (*)</p><p>Informasjon i form av symbol/ikone som dukkar opp etter at eit obligatorisk skjemaelement er fylt ut, er ikkje tilstrekkeleg. </p>",
             "type": "jaNei",
             "kilde": ["H90"],
             "ruting": {
