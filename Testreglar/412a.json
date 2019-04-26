@@ -87,7 +87,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida skjemaelement?",
-            "ht": "<p>Sjekk om nettsida har skjemaelement av type avkryssingsboks, radioknapp, tekstfelt eller nedtrekksliste.</p><p>Du skal teste både <strong>aktive</strong> og <strong>inaktive</strong> skjemaelement.</p><p>Merk: Du skal ikkje teste knappar. Knappar blir brukt for eksempel til å aktivere ein funksjon eller sende inn skjema.</p>",
+            "ht": "<p>Sjekk om nettsida har skjemaelement av type avkryssingsboks, radioknapp, tekstfelt eller nedtrekksliste.</p><p>Du skal teste både <strong>aktive</strong> og <strong>inaktive</strong> skjemaelement.</p><p><strong>Merk:</strong> Du skal ikkje teste knappar. Knappar blir brukt for eksempel til å aktivere ein funksjon eller sende inn skjema.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
