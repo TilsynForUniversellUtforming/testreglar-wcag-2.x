@@ -141,7 +141,7 @@
         {
             "stegnr": "3.4",
             "spm": "Har skjemaelementet attributtet \"aria-label\" ?",
-            "ht": "<p>Sjå i koden og finn skjemaelementet.</p><p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
+            "ht": "<p>Sjå i koden og finn skjemaelementet.</p><p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
             "type": "jaNei",
             "kilde":["ARIA14"],
             "ruting": {
@@ -158,7 +158,7 @@
         {
             "stegnr": "3.5",
             "spm": "Har skjemaelementet attributtet \"aria-labelledby\" ?",
-            "ht": "<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten. ",
+            "ht": "<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten. ",
             "type": "jaNei",
             "kilde":["ARIA16"],
             "ruting": {
@@ -265,7 +265,7 @@
         {
             "stegnr": "3.11",
             "spm": "Må skjemaelementet vere kopla til ein annan ledetekst/spørsmål for å gi meining?",
-            "ht": "<p>Eksempel på dette er grupper av radioknappar eller avkryssingsboksar som må lesast i samanheng med eit overordna spørsmål.</p><p>En tommelfingerregel er at når en gruppe med skjemaelement krever en egen overskrift, er det riktig å bruke fieldset og legend.</p> ",
+            "ht": "<p>Eksempel på dette er grupper av radioknappar eller avkryssingsboksar som må lesast i samanheng med eit overordna spørsmål.</p><p>Ein tommelfingerregel er at når ei gruppe med skjemaelement krever ei egen overskrift, er det riktig å bruke fieldset og legend.</p> ",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -370,7 +370,7 @@
         {
             "stegnr": "3.17",
             "spm": "Har dette elementet attributtet \"aria-label\" ?",
-            "ht": "<p>Sjå i koden og finn skjemaelementet.</p><p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten. </p>",
+            "ht": "<p>Sjå i koden og finn skjemaelementet.</p><p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten. </p>",
             "type": "jaNei",
             "kilde": ["ARIA17"],
             "ruting": {
@@ -387,7 +387,7 @@
         {
             "stegnr": "3.18",
             "spm": "Har dette elementet attributtet \"aria-labelledby\" ?",
-            "ht": "<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p><p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten. </p>",
+            "ht": "<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p><p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten. </p>",
             "type": "jaNei",
             "kilde": ["ARIA17"],
             "ruting": {
