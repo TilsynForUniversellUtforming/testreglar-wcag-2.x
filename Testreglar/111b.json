@@ -107,7 +107,7 @@
             "spm": "Beskriv det lenka bilde",
             "ht": "Du kan for eksempel beskrive motiv, plassering på sida, element som er i nærleiken.",
             "type": "tekst",
-            "label": "Bilete:",
+            "label": "Bilde:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
