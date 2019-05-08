@@ -103,7 +103,7 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Lenka har ein lenketekst som åleine er beskrivande for formålet med lenka."
+                    "utfall": "Lenketekst er beskrivande for formålet med lenka."
                 },
                 "nei": {
                     "type": "gaaTil",
@@ -177,7 +177,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Lenke som har ein lenketekst som åleine ikkje er beskrivande for formålet med lenka og som ikkje har ein programmeringsmessig kopla kontekst."
+                    "utfall": "Lenketekst er ikkje er beskrivande for formålet med lenka. Lenke har ikkje programmeringsmessig kopla kontekst."
                 }
             }
         },
@@ -191,12 +191,12 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Lenke med lenketekst som saman med programmeringsmessig kopla lenketekst er beskrivande for formålet med lenka."
+                    "utfall": "Lenketekst saman med programmeringsmessig kopla kontekst, er beskrivande for formålet med lenka."
                 },
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Lenke med lenketekst som saman med programmeringsmessig kopla lenketekst ikkje er beskrivande for formålet med lenka."
+                    "utfall": "Lenketekst saman med programmeringsmessig kopla kontekst, er ikkje beskrivande for formålet med lenka."
                 }
             }
         }
