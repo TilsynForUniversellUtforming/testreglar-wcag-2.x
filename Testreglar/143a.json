@@ -6,6 +6,9 @@
     "element": "3.1",
     "kolonner": [
         {
+            "title": "2.2"
+        },
+        {
             "title": "3.2"
         },
         {
@@ -37,7 +40,35 @@
         },
         {
             "title": "3.12"
+        },
+        {
+            "title": "3.13"
+        },
+        {
+            "title": "3.14"
+        },
+        {
+            "title": "3.15"
+        },
+        {
+            "title": "3.16"
+        },
+        {
+            "title": "3.17"
+        },
+        {
+            "title": "3.18"
+        },
+        {
+            "title": "3.19"
+        },
+        {
+            "title": "3.20"
         }
+
+
+
+
 
     ],
 
@@ -72,8 +103,6 @@
                 }
             }
         },
-
-        
 
         {
             "stegnr": "3.1",
@@ -111,7 +140,7 @@
             "type": "tekst",
             "filter": "tal",
             "label": "Målt kontrast (Format 4.48):",
-            "kilde": ["G18","G145","F83"],
+            "kilde": ["G18", "G145", "F83"],
             "ruting": {
                 "alle": {
                     "type": "regler",
@@ -288,19 +317,19 @@
                 },
                 "nei": {
                     "type": "gaaTil",
-                    "steg": "3.17"
+                    "steg": "3.16"
                 }
             }
         },
 
-    {
+        {
             "stegnr": "3.11",
             "spm": "Mål og registrer kontrast mellom farge på tekst i mekanismen og farge på bakgrunn.",
             "ht": "<p>Kontrast skal registerast med desimal tall (For eksempel 4,5).</#p> <h4 class=\"h5\">Tips:</h4> <ul> <li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten. </li> </ul> <h4 class=\"h5\">Retningslinjer for test:</h4> <ul> <li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li> <li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li> <li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li> </ul>",
             "type": "tekst",
             "filter": "tal",
             "label": "Målt kontrast (Format 4.48):",
-            "kilde": ["G18","G145","F83"],
+            "kilde": ["G18", "G145", "F83"],
             "ruting": {
                 "alle": {
                     "type": "regler",
@@ -311,13 +340,9 @@
                             "verdi": 0,
                             "verdi2": 2.99,
                             "handling": {
-                                "type": "gaaTil",
-                                "steg": "3.8",
-                                "delutfall": {
-                                    "nr": 0,
-                                    "tekst": "Tekst har kontrast på mindre enn 3,0:1.",
-                                    "fasit": "Nei"
-                                }
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "#delutfall(0) Tekst på mekanisme for aktivering av høgkontrastversjon, har kontrast på mindre enn 3,0:1."
                             }
                         },
                         "2": {
@@ -336,7 +361,7 @@
                             "verdi": 4.5,
                             "verdi2": 200,
                             "handling": {
-                                 "type": "gaaTil",
+                                "type": "gaaTil",
                                 "steg": "3.16"
                             }
                         }
@@ -344,7 +369,6 @@
                 }
             }
         },
-        
 
         {
             "stegnr": "3.12",
@@ -389,17 +413,18 @@
             "kilde": ["G145"],
             "ruting": {
                 "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.15"
-                },
-                "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Meiningsberande bilete utan tekstalternativ."
+                    "utfall": "#delutfall(0) Mekanisme for aktivering av høgkontrastversjon, har liten tekst med kontrast på mindre enn 4,5:1."
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.15"
+                    
                 }
             }
         },
-         {
+        {
             "stegnr": "3.15",
             "spm": "Er teksten utheva/bold/feit skrift?",
             "ht": "Her er det tilstrekkeleg å gjere ein visuell inspeksjon og ta stilling til om teksten framstår som utheva.",
@@ -413,11 +438,10 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Meiningsberande bilete utan tekstalternativ."
+                    "utfall": "#delutfall(0) Mekanisme for aktivering av høgkontrastversjon, har liten tekst med kontrast på mindre enn 4,5:1."
                 }
             }
         },
-        
 
         {
             "stegnr": "3.16",
@@ -432,7 +456,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Meiningsberande bilete utan tekstalternativ."
+                    "utfall": "#delutfall(0)"
                 }
             }
         },
@@ -444,53 +468,47 @@
             "type": "tekst",
             "filter": "tal",
             "label": "Målt kontrast (Format 4.48):",
-            "kilde": ["G18","G145","G174","F83"],
+            "kilde": ["G18", "G145", "G174", "F83"],
             "ruting": {
                 "alle": {
                     "type": "regler",
                     "regler": {
                         "1": {
-                            "sjekk": "3.11",
+                            "sjekk": "3.17",
                             "type": "mellom",
                             "verdi": 0,
                             "verdi2": 2.99,
                             "handling": {
-                                "type": "gaaTil",
-                                "steg": "3.8",
-                                "delutfall": {
-                                    "nr": 0,
-                                    "tekst": "Tekst har kontrast på mindre enn 3,0:1.",
-                                    "fasit": "Nei"
-                                }
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "#delutfall(0) Tekst har kontrast på mindre enn 3,0:1, målt i høgkontrastversjon."
                             }
                         },
                         "2": {
-                            "sjekk": "3.11",
+                            "sjekk": "3.17",
                             "type": "mellom",
                             "verdi": 3,
                             "verdi2": 4.49,
                             "handling": {
                                 "type": "gaaTil",
-                                "steg": "3.12"
+                                "steg": "3.18"
                             }
                         },
                         "3": {
-                            "sjekk": "3.11",
+                            "sjekk": "3.17",
                             "type": "mellom",
                             "verdi": 4.5,
                             "verdi2": 200,
                             "handling": {
-                                 "type": "gaaTil",
-                                "steg": "3.19"
+                                "type": "avslutt",
+                                "fasit": "Ja",
+                                "utfall": "Tekst har kontrast på meir enn 4,5:1, målt i høgkontrastversjon."
                             }
                         }
                     }
                 }
             }
         },
-        
-
-      
 
         {
             "stegnr": "3.18",
@@ -500,8 +518,9 @@
             "kilde": ["G145"],
             "ruting": {
                 "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.18"
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Stor tekst har kontrast på meir enn 3,0:1, målt i høgkontrastversjon."
                 },
                 "nei": {
                     "type": "gaaTil",
@@ -513,22 +532,22 @@
         {
             "stegnr": "3.19",
             "spm": "Er skriftstørrelsen mindre enn 19 px ?",
-            "ht": "",
+            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer</li><li>Deaktiver WhatFont etter at du har målt tekststørrelse.</li></ul>",
             "type": "jaNei",
             "kilde": ["G145"],
             "ruting": {
                 "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.15"
-                },
-                "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Meiningsberande bilete utan tekstalternativ."
+                    "utfall": "#delutfall(0) Tekst har kontrast på mindre enn 3,0:1, målt i høgkontrastversjon."
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.20"
                 }
             }
         },
-         {
+        {
             "stegnr": "3.20",
             "spm": "Er teksten utheva/bold/feit skrift?",
             "ht": "Her er det tilstrekkeleg å gjere ein visuell inspeksjon og ta stilling til om teksten framstår som utheva.",
@@ -537,13 +556,13 @@
             "ruting": {
                 "ja": {
                     "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Meiningsberande bilete utan tekstalternativ."
+                    "fasit": "Ja",
+                    "utfall": "Stor tekst har kontrast på meir enn 3,0:1, målt i høgkontrastversjon."
                 },
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Meiningsberande bilete utan tekstalternativ."
+                    "utfall": "#delutfall(0) Tekst har kontrast på mindre enn 3,0:1, målt i høgkontrastversjon."
                 }
             }
         }

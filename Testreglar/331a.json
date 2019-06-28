@@ -84,7 +84,8 @@
             "type": "jaNei",
             "ruting": {
                 "ja": {
-                    "type": "ikkjeForekomst"
+                    "type": "ikkjeForekomst",
+                    "element": "2.3"
                 },
                 "nei": {
                     "type": "gaaTil",
@@ -173,7 +174,7 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som:</br>- tekstleg beskriv feilen</br>- identifiserer kvar feilen er oppstått</br>- er koda som tekst"
+                    "utfall": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som:<br/>- tekstleg beskriv feilen<br/>- identifiserer kvar feilen er oppstått<br/>- er koda som tekst"
                 },
                 "nei": {
                     "type": "avslutt",
