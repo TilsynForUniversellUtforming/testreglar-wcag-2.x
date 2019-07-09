@@ -101,7 +101,11 @@ Instruksjon på eit steg
 "type": "jaNei"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Type steg. Et steg kan vere av desse typane : - jaNei - radio - tekst
+Type steg. Et steg kan vere av desse typane : 
+- jaNei 
+- radio 
+- tekst 
+- instruksjon
 
 ### Kilde
 
