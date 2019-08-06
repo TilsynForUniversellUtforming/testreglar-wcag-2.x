@@ -1,0 +1,48 @@
+{
+    "id": "",
+    "type": "",
+    "versjon": "",
+    "sistOppdatertAvDifi": "",
+    "spraak" : "no",
+    "side": "",
+    "element": "",
+    "kolonner": [
+        {
+            "title": ""
+        } 
+        
+    ],
+
+    "steg": [
+        {
+            "stegnr": "",
+            "spm": "",
+            "ht": "",
+            "type": "tekst",
+            "label": "",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "ga",
+                    "steg": "2.2"
+                }
+            } 
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "",
+            "ht": "",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst"
+                }
+            }
+        }
+
+    ]
+}
