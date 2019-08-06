@@ -481,8 +481,8 @@
                                             "type": "avslutt",
                                             "fasit": "sjekkDelutfall",
                                             "utfall": {
-                                                "Nei": "#delutfall(0)#delutfall(1)",
-                                                "Ja": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
+                                                "nei": "#delutfall(0)#delutfall(1)",
+                                                "ja": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
                                             }
                                         }
                                     }
@@ -521,8 +521,8 @@
                     "type": "avslutt",
                     "fasit": "sjekkDelutfall",
                     "utfall": {
-                        "Nei": "#delutfall(0)#delutfall(1)",
-                        "Ja": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
+                        "nei": "#delutfall(0)#delutfall(1)",
+                        "ja": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
                     }
                 },
                 "nei": {
@@ -558,13 +558,11 @@
             "kilde": ["ARIA6", "ARIA10", "G143", "H37", "F30", "F38", "F65"],
             "ruting": {
                 "ja": {
-                    "ja": {
-                        "type": "avslutt",
-                        "fasit": "sjekkDelutfall",
-                        "utfall": {
-                            "Nei": "#delutfall(0)#delutfall(1)",
-                            "Ja": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
-                        }
+                    "type": "avslutt",
+                    "fasit": "sjekkDelutfall",
+                    "utfall": {
+                        "nei": "#delutfall(0)#delutfall(1)",
+                        "ja": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
                     }
                 },
                 "nei": {

@@ -273,8 +273,8 @@
                     "type": "avslutt",
                     "fasit": "sjekkDelutfall",
                     "utfall": {
-                        "Nei": "Testside med syntaksfeil av typen #delutfall(0)#delutfall(1)#delutfall(2)#delutfall(3).",
-                        "Ja":  "Testsida har ikkje syntaksfeil."
+                        "nei": "Testside med syntaksfeil av typen #delutfall(0)#delutfall(1)#delutfall(2)#delutfall(3).",
+                        "ja":  "Testsida har ikkje syntaksfeil."
                     }
                 }
             }
