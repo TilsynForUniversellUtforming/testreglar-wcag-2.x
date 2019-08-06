@@ -84,7 +84,7 @@
                 },
                 "nei": {
                     "type": "ikkjeForekomst",
-                    "utfall" : "Testsida har ikkje video."
+                    "utfall" : "Testside har ikkje video."
                 }
             }
         },

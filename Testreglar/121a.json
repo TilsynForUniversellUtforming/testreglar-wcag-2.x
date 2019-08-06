@@ -66,7 +66,7 @@
                 },
                 "nei": {
                     "type": "ikkjeForekomst",
-                    "utfall": "Testsida har ikkje video."
+                    "utfall": "Testside har ikkje lydklipp."
                 }
             }
         },
@@ -132,7 +132,13 @@
                 },
                 "nei": {
                     "type": "gaaTil",
-                    "steg": "3.7"
+                    "steg": "3.7",
+                    "delutfall": 
+                            {
+                                "nr": 0,
+                                "fasit": "Nei",
+                                "tekst": "Lydklipp manglar tekstalternativ nær lydklippet/avspelaren."
+                            }
                 }
             }
         },
@@ -171,9 +177,8 @@
                     "type": "avslutt",
                     "fasit": "Ja",
                     "utfall": "Lydklippet har tekstalternativ som kan nåast, er koda som tekst og formidlar same bodskap som lydklippet."
-                    
-                    }
-                },
+                }
+                ,
                 "nei": {
                     "type": "gaaTil",
                     "steg": "3.7",
@@ -183,7 +188,7 @@
                         "fasit": "Nei"
                     }
                 }
-            
+            }
         },
         {
             "stegnr": "3.7",
@@ -194,20 +199,31 @@
             "ruting": {
                 "ja": {
                     "type": "gaaTil",
-                    "steg": "3.8",
-                    "delutfall": {
-                        "nr": 0,
-                        "tekst": "Videoklipp har teksting som er mogleg å lese.",
-                        "fasit": "Ja"
-                    }
+                    "steg": "3.8"   
                 },
                 "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.10",
-                    "delutfall": {
-                        "nr": 0,
-                        "tekst": "Videoklipp har teksting som ikkje er mogleg å lese.",
-                        "fasit": "Nei"
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "3.4",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Lydklipp manglar tekstalternativ."
+                            }
+                        },
+                        "2": {
+                            "sjekk": "3.4",
+                            "type": "lik",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "#delutfall(0)"
+                            }
+                        }
                     }
                 }
             }
@@ -236,16 +252,12 @@
             "ruting": {
                 "ja": {
                     "type": "gaaTil",
-                    "steg": "3.12"
+                    "steg": "3.10"
                 },
                 "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.13",
-                    "delutfall": {
-                        "nr": 1,
-                        "tekst": "Videoklipp har tekstalternativ som ikkje er koda som tekst.",
-                        "fasit": "Nei"
-                    }
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "#delutfall(0) Lydklipp har tekstalternativ via mekanisme som ikkje er koda som tekst."
                 }
             }
         },
@@ -261,21 +273,17 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Videoklipp har tekstalternativ som formidlar same bodskap som lyd og bilde. Tekstalternativ kan nåast og er koda som tekst."
+                    "utfall": "Lydklippet har tekstalternativ som kan nåast, er koda som tekst og formidlar same bodskap som lydklippet."
                 },
                 "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.13",
-                    "delutfall": {
-                        "nr": 1,
-                        "tekst": "Videoklipp har tekstalternativ som ikkje formidlar same bodskap som lyd og bilde.",
-                        "fasit": "Nei"
-                    }
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "#delutfall(0) Lydklipp har tekstalternativ via mekanisme som ikkje formidlar same bodskap som lydklippet."
                 }
             }
-        },
-        
-        {"stegnr":"4","spm":"Er biletet til pynt/dekor eller brukt som bakgrunn eller til formattering?","ht":"<p>Eksempel på slike bilete er usynlige bilete, gjennomsiktige bilete, pyntebilder og bord.</p>","type":"jaNei","kilde":["ARIA18"]}
+        }
+
+
 
 
     ]

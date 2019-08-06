@@ -1,0 +1,415 @@
+{
+    "id": "1.4.4a",
+    "type": "web",
+    "versjon": "1.0",
+    "sistOppdatertAvDifi": "10.07.2019",
+    "spraak": "no",
+    "side": "2.1",
+    "element": "Side",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+         {
+            "title": "2.3"
+        },
+        {
+            "title": "3.1"
+        },
+        {
+            "title": "3.3"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.5"
+        },
+        {
+            "title": "3.6"
+        },
+        {
+            "title": "3.7"
+        },
+        {
+            "title": "3.9"
+        },
+        {
+            "title": "3.10"
+        },
+        {
+            "title": "3.11"
+        },
+        {
+            "title": "3.12"
+        },
+        {
+            "title": "3.14"
+        },
+        {
+            "title": "3.16"
+        },
+        {
+            "title": "3.17"
+        }
+
+    ],
+
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi url eller side-ID.",
+            "type": "tekst",
+            "label": "Url/Side:",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            } 
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har nettsida tekst?",
+            "ht": "<p>Følgjande reknast ikkje som tekst:</p><ul><li>Teksting i video.</li><li>Bilete av tekst.</li></ul><p>Merk: Du skal ikkje teste vidare på nettsider som ikkje inneheld tekst.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "2.3"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje tekst."
+                }
+            }
+        },
+
+        {
+            "stegnr": "2.3",
+            "spm": "Inneheld nettsida skjemaelement?",
+            "ht": "Skjemaelement finst for eksempel i søkefelt, innlogging og andre interaktive skjema som brukraren skal sende inn.",
+            "type": "jaNei",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.4"
+                }
+            }
+        },
+
+        {
+            "stegnr": "2.4",
+            "spm": "Sett oppløysinga på skjermen du testar på til 1366*768.",
+            "ht": "<p>Dette gjer du ved å endre innstillingane på skjermen i ditt operativsystem.</p><p>Denne oppløysinga byggjer på statistikk over dei mest brukte skjermoppløysingane per 2017.</p>",
+            "type": "instruksjon",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                }
+            } 
+        },
+
+        {
+            "stegnr": "3.1",
+            "spm": "Har nettlesaren ein funksjon for å zoome til minst 200 %?",
+            "ht": "Merk at her snakkar vi om funksjonalitet som zoomar alt innhaldet på nettsida, og som ikkje berre forstørrer teksten.",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }
+        }
+        ,
+        {
+            "stegnr": "3.2",
+            "spm": "Zoom teksten til 200 % ved hjelp av zoom-funksjonen i nettlesaren.",
+            "ht": "Bruk zoomfunksjonen i nettlesaren og velg eller skriv inn verdien 200 %. Du kan zoome i dei fleste nettlesarar ved å trykke Ctrl og + på tastaturet.",
+            "type": "instruksjon",
+            "kilde": ["G142"],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Inneheld nettsida same tekstleg innhald og funksjonalitet i 200 % visning, som i 100 % visning? ",
+            "ht": "<p>Du kan samanlikne nettsida i vanleg visning og innzooma visning for å gjere det lettare å vurdere.</p><p>Det er ok om vi får tilgang til innhald/funksjonalitet ved å måtte scrolle horisontalt og/eller vertikalt.</p><p>Merk at ei og same side kan sjå ulik ut i ordinær og forminska visning, t.d. kan meny i forminska visning vere ein knapp, medan du i ordinær visning får sjå heile menyen.</p><p>Det er ikkje ok at innhald blir dekka over av anna innhald i innzooma visning, eller at innhald forsvinn frå sida.</p>",
+            "type": "jaNei",
+            "kilde": ["G142", "G146"],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Tekst kan forstørrast til minst 200 %, utan tap av innhald eller funksjonalitet."
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.4",
+            "spm": "Kva innhald og funksjonalitet fikk du ikkje tilgang til?",
+            "ht": "Registrer med stikkord.",
+            "type": "tekst",
+            "kilde": [],
+            "label": "Innhald og funksjonalitet:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                }
+            } 
+        },
+
+        {
+            "stegnr": "3.5",
+            "spm": "Låg noko av innhaldet og funksjonaliteten du ikkje fikk tilgang til i skjema?",
+            "ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.6",
+            "spm": "Har nettsida ein innebygd mekanisme som let brukaren forstørre teksten?",
+            "ht": "Mekanismen kan vere lenker, knappar eller lenka bilete med alternativ tekst.",
+            "type": "jaNei",
+            "kilde": ["G178"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.7",
+            "spm": "Er mekanismen lett å finne på sida?",
+            "ht": "<p>Mekanismen skal vere lett å finne og vere mogleg å finne på sida utan at brukaren må scrolle.</p><p>Mekanismen kan for eksempel vere markert med større skrift, høg kontrast eller liknande.</p>",
+            "type": "jaNei",
+            "kilde": ["G178"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.8",
+            "spm": "Aktiver mekanismen for å forstørre teksten på nettsida.",
+            "ht": "Viss mekanismen har fleire innstillingar, skal du velgje den høgaste innstillinga.",
+            "type": "instruksjon",
+            "kilde": [""],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.9"
+                }
+            } 
+        },
+
+        {
+            "stegnr": "3.9",
+            "spm": "Er det mogleg å bruke mekanismen for å forstørre all teksten på nettsida?",
+            "ht": "All teksten på nettsida må forstørrast.",
+            "type": "jaNei",
+            "kilde": ["G178"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.10"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.10",
+            "spm": "Får du tilgang til alt tekstleg innhald og funksjonalitet?",
+            "ht": "<p>Du kan samanlikne nettsida i vanleg visning og innzooma visning for å gjere det lettare å vurdere.</p><p>Tilgang til innhald og funksjonalitet ved å måtte scrolle horisontalt og/eller vertikalt er ok.</p><p>Det er ikkje ok at innhald blir dekka over av anna innhald i innzooma visning.</p><p>Merk at ei og same side kan sjå ulik ut i ordinær og forminska visning, t.d. kan meny i forminska visning vere ein knapp, medan du i ordinær visning får sjå heile menyen.</p>",
+            "type": "jaNei",
+            "kilde": ["G178"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.13"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.11"
+                }
+            }
+        },
+        {
+            "stegnr": "3.11",
+            "spm": "Kva innhald og funksjonalitet fikk du ikkje tilgang til?",
+            "ht": "Registrer med stikkord.",
+            "type": "tekst",
+            "kilde": [],
+            "label": "Innhald og funksjonalitet:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.12"
+                }
+            } 
+        },
+
+        {
+            "stegnr": "3.12",
+            "spm": "Låg noko av innhaldet og funksjonaliteten du ikkje fikk tilgang til i skjema?",
+            "ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.13",
+            "spm": "Velg ein tilfeldig tekst på sida og sjå på teksten i koden.",
+            "ht": "<p>Inspiser teksten med kodeverktøyet i nettlesaren.</p><p><strong>Merk:</strong> Du må sette skriftstorleiken tilbake til vanleg visning før du måler.</p>",
+            "type": "instruksjon",
+            "kilde": [""],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.14"
+                }
+            } 
+        },
+
+        {
+            "stegnr": "3.14",
+            "spm": "Kva er skriftstorleiken målt i pikslar?",
+            "ht": "<p>Still inn zoomnivået til 100 % i nettlesaren. Du skal finne verdien på font-size blant dei berekna (computed) verdiane i stilarket.</p><p>Skriv inn verdien i font-size som desimaltal med komma, og ikkje ta med bokstavene \"px\".</p>",
+            "type": "tekst",
+            "filter": "tal",
+            "label": "Målt skriftstorleik (Format 4.48):",
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.15"
+                }
+            }
+        },
+        {
+            "stegnr": "3.15",
+            "spm": "Aktiver mekanismen for å forstørre teksten på nettsida.",
+            "ht": "Viss mekanismen har fleire innstillingar, skal du velgje den høgaste innstillinga.",
+            "type": "instruksjon",
+            "kilde": [""],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.16"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.16",
+            "spm": "Kva er skriftstorleiken målt i pikslar?",
+            "ht": "<p>Finne verdien på font-size blant dei berekna (computed) verdiane i stilarket for same tekst du testa i 3.9.</p><p>Skriv inn verdien i font-size som desimaltal med komma, og ikkje ta med bokstavene \"px\".</p>",
+            "type": "tekst",
+            "filter": "tal",
+            "label": "Målt skriftstorleik (Format 4.48):",
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.17"
+                }
+            }
+        } ,
+        
+        {
+            "stegnr": "3.17",
+            "spm": "Kva ble teksten skalert opp til?",
+            "ht": "Vert fyllt ut automatisk",
+            "type": "tekst",
+            "verdi": "(#steg(3.16) / #steg(3.14))*100",
+            "filter": "tal",
+            "label": "Forstørring (i %)",
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "3.17",
+                            "type": "mellom",
+                            "verdi": 0,
+                            "verdi2": 199,
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Nettside manglar/har mangelfull mekanisme for zoom/forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                            }
+                        },
+                        "2": {
+                            "sjekk": "3.17",
+                            "type": "mellom",
+                            "verdi": 200,
+                            "verdi2": 1000,
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Ja",
+                                "utfall": "Nettside har mekanisme for forstørring til 200%, utan utan tap av innhald eller funksjonalitet."
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+
+    ]
+}
