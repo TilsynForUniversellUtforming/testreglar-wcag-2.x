@@ -1,0 +1,62 @@
+[
+    {
+        "stegnr": 1,
+        "spm": "Kva nettlesar testar du i?",
+        "ht": "Vel i lista under",
+        "type": "radio",
+        "svarArray": ["Chrome", "Firefox", "Safari", "Internet Explorer", "Edge", "Anna"],
+        "ruting": {
+            "alle": {
+                "type": "gaaTil",
+                "steg": 2
+            }
+        }
+    },
+    {
+        "stegnr": 2,
+        "spm": "Registrer kva versjon av nettlesaren du testar i.",
+        "ht": "Denne finn du ofte under \"om\" eller i innstillingar for nettlesaren.",
+        "type": "tekst",
+        "label": "Versjon:",
+        "oblig": true,
+        "ruting": {
+            "alle": {
+                "type": "gaaTil",
+                "steg": 3
+            }
+        }
+    }
+    ,
+
+    {
+        "stegnr": 3,
+        "spm": "Vel kva måling du testar på",
+        "ht": "Vel måling",
+        "type": "maaling",
+        "svarArray": null,
+        "verdier" : ["S 2018:01","T 2018:04", "TEST 2018"] ,
+        "verdier2" : [],
+        "ruting": {
+            "alle": {
+                "type": "gaaTil",
+                "steg": 4
+            }
+        }
+    }
+    ,
+
+    {
+        "stegnr": 4,
+        "spm": "Namn på verksemd",
+        "ht": "Søk opp verksemda du skal teste i lista under",
+        "type": "verksemd",
+        "label": "Verksemd:",
+        "oblig": true,
+        "ruting": {
+            "alle": {
+                "type": "gaaTil",
+                "steg": "2.1"
+            }
+        }
+    }
+]

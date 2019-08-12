@@ -157,15 +157,9 @@
                 },
                 "nei": {
                     "type": "gaaTil",
-                    "steg": "3.5",
-                    "delutfall": {
-                        "nr": 0,
-                        "tekst": "",
-                        "fasit": "Nei"
-                    }
-                }
-            }
-        },
+                    "steg": "3.5"
+            
+        }}},
 
         {
             "stegnr": "3.3",
@@ -208,7 +202,7 @@
                                 "type": "gaaTil",
                                 "steg": "3.9",
                                 "delutfall": {
-                                    "nr": 0,
+                                    "nr": 1,
                                     "tekst": "identifikasjon i form av tekst",
                                     "fasit": "Ja"
                                 }
@@ -329,7 +323,7 @@
                                 "type": "gaaTil",
                                 "steg": "3.9",
                                 "delutfall": {
-                                    "nr": 0,
+                                    "nr": 1,
                                     "tekst": "identifikasjon i form av ikon/symbol/bilde",
                                     "fasit": "Ja"
                                 }
@@ -368,7 +362,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Skjemaelement med #delutfall(0,Ja)."
+                    "utfall": "Skjemaelement med #delutfall(1,Ja)."
                 }
             }
         },
@@ -378,12 +372,12 @@
             "spm": "Inneheld ledeteksten tekstleg informasjon om at skjemaelementet er obligatorisk? ",
             "ht": "<p>Eksempel på tekstleg informasjon er </p><ul><li>obligatorisk</li><li>påkravd</li></ul><p>Du skal ikkje måtte scrolle bort frå skjemaelementet for å finne informasjonen.</p><p>Informasjon i eventuell feilmelding som dukkar opp etter at eit obligatorisk skjemaelement er fylt ut, er ikkje tilstrekkeleg. </p>",
             "type": "jaNei",
-            "kilde": ["G83"],
+            "kilde": ["G83","H90"],
             "ruting": {
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Skjemaelement med #delutfall(0,Ja). Informasjon om obligatoriske skjemaelement er i form av tekst."
+                    "utfall": "Skjemaelement med #delutfall(1,Ja). Informasjon om obligatoriske skjemaelement er i form av tekst."
                 },
                 "nei": {
                     "type": "gaaTil",
@@ -439,7 +433,7 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Skjemaelement med #delutfall(0,Ja). Informasjon om obligatoriske skjemaelement er i form av ikon/symbol/bilde. Forklaring av ikon/symbol/bilde er plassert før skjemaelementet"
+                    "utfall": "Skjemaelement med #delutfall(1,Ja). Informasjon om obligatoriske skjemaelement er i form av ikon/symbol/bilde. Forklaring av ikon/symbol/bilde er plassert før skjemaelementet"
                 },
                 "nei": {
                     "type": "avslutt",
