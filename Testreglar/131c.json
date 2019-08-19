@@ -69,7 +69,8 @@
                     "steg": "3.1"
                 },
                 "nei": {
-                    "type": "ikkjeForekomst"
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje visuelle lister."
                 }
             }
         },

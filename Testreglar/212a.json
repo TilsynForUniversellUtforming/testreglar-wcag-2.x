@@ -47,7 +47,8 @@
                     "steg": "2.3"
                 },
                 "nei": {
-                    "type": "ikkjeForekomst"
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje innhald/funksjonalitet som er mogleg å nå/betene med tastatur."
                 }
             }
         },

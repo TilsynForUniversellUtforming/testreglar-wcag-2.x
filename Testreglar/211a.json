@@ -101,7 +101,8 @@
                     "steg": "3.3"
                 },
                 "ja": {
-                    "type": "ikkjeForekomst"
+                    "type": "ikkjeForekomst",
+                    "utfall": "Innhald som ikkje er føremålsteneleg å betene med tastatur."
                 }
             }
         },

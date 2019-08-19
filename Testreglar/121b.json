@@ -126,7 +126,7 @@
             "ruting": {
                 "ja": {
                     "type": "ikkjeForekomst",
-                    "utfall": "Videoklipp med lyd er direkte/live (ikkje førehandsinnspelte)."
+                    "utfall": "Videoklipp er direkte/live (ikkje førehandsinnspelte)."
                 },
                 "nei": {
                     "type": "gaaTil",
@@ -143,7 +143,7 @@
             "ruting": {
                 "ja": {
                     "type": "ikkjeForekomst",
-                    "utfall": "Videoklipp med lyd er mediealternativ til tekst/lyd."
+                    "utfall": "Videoklipp er mediealternativ til tekst/lyd"
                 },
                 "nei": {
                     "type": "gaaTil",

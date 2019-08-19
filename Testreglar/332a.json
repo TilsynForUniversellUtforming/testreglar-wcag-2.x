@@ -83,7 +83,8 @@
                     "steg": "2.3"
                 },
                 "nei": {
-                    "type": "ikkjeForekomst"
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje skjema."
                 }
             }
         },

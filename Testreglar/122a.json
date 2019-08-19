@@ -118,7 +118,7 @@
                 },
                 "nei": {
                     "type": "ikkjeForekomst",
-                    "utfall" : "Video utan lyd."
+                    "utfall" : "Videoklipp utan lyd."
                 }
             }
         },
@@ -134,7 +134,8 @@
                     "steg": "3.4" 
                 },
                 "nei": {
-                    "type": "ikkjeForekomst"  
+                    "type": "ikkjeForekomst" ,
+                    "utfall" : "Videoklipp er direkte/live (ikkje førehandsinnspelte)."
                 }
             }
         },
@@ -146,7 +147,8 @@
             "type": "jaNei",
             "ruting": {
                 "ja": {
-                    "type": "ikkjeForekomst"  
+                    "type": "ikkjeForekomst"  ,
+                    "utfall": "Videoklipp er mediealternativ til tekst/lyd."
                 },
                 "nei": {
                     "type": "gaaTil",

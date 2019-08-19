@@ -57,7 +57,8 @@
                     "steg": "2.3"
                 },
                 "nei": {
-                    "type": "ikkjeForekomst"
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje lyd som startar automatisk."
                 }
             }
         },
@@ -69,7 +70,8 @@
             "type": "jaNei",
             "ruting": {
                 "ja": {
-                    "type": "ikkjeForekomst"
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har lyd som startar automatisk og stoppar innan 3 sekund."
                 },
                 "nei": {
                     "type": "gaaTil",

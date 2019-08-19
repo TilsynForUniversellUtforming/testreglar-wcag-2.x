@@ -99,7 +99,8 @@
                     "steg": "3.3"
                 },
                 "nei": {
-                    "type": "ikkjeForekomst"
+                    "type": "ikkjeForekomst",
+                    "utfall": "Lydklipp er direkte/live (ikkje førehandsinnspelt)."
                 }
             }
         },
@@ -111,7 +112,8 @@
             "type": "jaNei",
             "ruting": {
                 "ja": {
-                    "type": "ikkjeForekomst"    
+                    "type": "ikkjeForekomst",
+                    "utfall": "Lydklipp er mediealternativ til tekst."
                 },
                 "nei": {
                     "type": "gaaTil",
