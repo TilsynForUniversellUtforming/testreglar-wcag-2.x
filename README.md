@@ -1,1 +1,1 @@
-Forslag til nye testreglar - Tilsyn for universell utforming
+# Webtestreglar - Tilsyn for universell utforming DIFI
