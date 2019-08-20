@@ -30,6 +30,7 @@ Id er ein unik identifikator for kvar testregel.
 Type er kategori av testregel. Dei aktuelle typane er: 
 - web 
 - mobilapplikasjon
+- automat
 
 Steg
 ----
@@ -82,7 +83,7 @@ være unik innanfor same testregel og skal vere på formatet «tal.tal»
 "spm": "Inneheld feilmeldinga tekst som identifiserer kvar feilen har oppstått?"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Spørsmål / Instruksjon forklarar kva testaren skal svare på eller gjere.
+Spørsmål / instruksjon forklarar kva testaren skal svare på eller gjere.
 
 ### Hjelpetekst
 
@@ -90,8 +91,8 @@ Spørsmål / Instruksjon forklarar kva testaren skal svare på eller gjere.
  "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt."
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Hjelpetekst er støtte eller inneheld oppklarande informasjon til Spørsmål /
-Instruksjon på eit steg
+Hjelpetekst er støtte eller inneheld oppklarande informasjon til spørsmål /
+instruksjon på eit steg.
 
 ### Type
 
@@ -113,8 +114,8 @@ Type steg. Et steg kan vere av desse typane :
 
 Type: Array
 
-Kilde er kva dokumentasjon eit steg bygger på. Eit steg kan bygge på fleire
-krav.
+Kilde er kva kjelder eit steg bygger på. Eit steg kan bygge på fleire
+kjelder.
 
 Ruting
 ------
@@ -132,7 +133,7 @@ Ruting
             }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar.
+Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar. Merk at det 
 
 
 ### Typar Ruting
