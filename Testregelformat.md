@@ -39,10 +39,15 @@ Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire
 underelement: 
 - stegnr
 - spm 
-- Spørsmål / Instruksjon
 - ht - Hjelpetekst
 - type 
 - ruting
+
+I tilegg finnes desse spesialfelta:
+- label
+- image
+- svararray
+
 
 Dei ulike typane er forklart under.
 
