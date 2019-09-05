@@ -144,7 +144,7 @@
             "spm": "Skil skjemaelementet/feilmeldinga/instruksjonen seg ut med meir enn berre farge?",
             "ht": "<p>Eksempel på markering:</p><ul><li>Forklarande tekst</li><li>Ikon eller symbol, for eksempel stjerne</li><li>Skrifttype</li><li>Skriftstørrelse</li><li>Understreking</li><li>Utheva/feit/bold/kursiv skrift.</li><li>Ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst. </li></ul>",
             "type": "jaNei",
-            "kilde": [],
+            "kilde": ["G14","G182","G205","F81"],
             "ruting": {
                 "ja": {
                     "type": "avslutt",

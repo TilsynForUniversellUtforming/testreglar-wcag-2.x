@@ -41,7 +41,7 @@
 
         {
             "stegnr": "2.2",
-            "spm": "Finst det innhald på nettsida kor meiningsinnhaldet blir påvirka av rekkefølgjen som innhaldet blir presentert i",
+            "spm": "Finst det innhald på nettsida kor meiningsinnhaldet blir påvirka av rekkefølgjen som innhaldet blir presentert i?",
             "ht": "<p>Ei rekkefølgje er meiningsfull dersom rekkefølga på innhaldet ikkje kan endrast utan å endre meiningsinnhaldet. </p><p>Eksempel på innhald som står i ei meiningsfylt rekkefølgje er tekst, tabellar og nummererte lister.</p><p>Unummererte lister er ikkje i ei meiningsfylt rekkefølgje.</p>",
             "type": "jaNei",
             "kilde": [],
