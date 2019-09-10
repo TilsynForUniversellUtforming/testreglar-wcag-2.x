@@ -102,7 +102,7 @@
                                 "steg": "3.3",
                                 "delutfall": {
                                     "nr": 0,
-                                    "tekst": "<br/>- Element som ikkje er nøsta korrekt",
+                                    "tekst": "<br>- Element som ikkje er nøsta korrekt",
                                     "fasit": "Nei"
                                 }
                             }
@@ -150,7 +150,7 @@
                                 "steg": "3.4",
                                 "delutfall": {
                                     "nr": 1,
-                                    "tekst": "<br/>- Element som ikkje er avslutta korrekt",
+                                    "tekst": "<br>- Element som ikkje er avslutta korrekt",
                                     "fasit": "Nei"
                                 }
                             }
@@ -198,7 +198,7 @@
                                 "steg": "3.5",
                                 "delutfall": {
                                     "nr": 2,
-                                    "tekst": "<br/>- Element som har same attributt fleire gonger",
+                                    "tekst": "<br>- Element som har same attributt fleire gonger",
                                     "fasit": "Nei"
                                 }
                             }
@@ -247,7 +247,7 @@
                                 "steg": "3.6",
                                 "delutfall": {
                                     "nr": 3,
-                                    "tekst": "<br/>- Element som har ID-ar som ikkje er unike",
+                                    "tekst": "<br>- Element som har ID-ar som ikkje er unike",
                                     "fasit": "Nei"
                                 }
                             }

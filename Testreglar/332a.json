@@ -159,8 +159,9 @@
                 "nei": {
                     "type": "gaaTil",
                     "steg": "3.5"
-            
-        }}},
+                }
+            }
+        },
 
         {
             "stegnr": "3.3",
@@ -178,7 +179,7 @@
                     "steg": "3.5",
                     "delutfall": {
                         "nr": 0,
-                        "tekst": "<br/>- tekst, som ikkje er plassert i/ved skjemaelementet",
+                        "tekst": "<br>- tekst, som ikkje er plassert i/ved skjemaelementet",
                         "fasit": "Nei"
                     }
                 }
@@ -226,7 +227,7 @@
                     "steg": "3.5",
                     "delutfall": {
                         "nr": 0,
-                        "tekst": "<br/>- tekst, som ikkje alltid er synleg når elementet er i fokus",
+                        "tekst": "<br>- tekst, som ikkje alltid er synleg når elementet er i fokus",
                         "fasit": "Nei"
                     }
                 }
@@ -263,7 +264,7 @@
                             "handling": {
                                 "type": "avslutt",
                                 "fasit": "Nei",
-                                "utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei).</br> Skjemaelement har ikkje identifikasjon i form av ikon/symbol/bilde. "
+                                "utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei).<br> Skjemaelement har ikkje identifikasjon i form av ikon/symbol/bilde. "
                             }
                         }
                     }
@@ -284,7 +285,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei)</br>- ikon/symbol/bilde, som ikkje er plassert i/ved skjemaelementet"
+                    "utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei)<br>- ikon/symbol/bilde, som ikkje er plassert i/ved skjemaelementet"
                 }
             }
         },
@@ -300,9 +301,29 @@
                     "steg": "3.8"
                 },
                 "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei)</br>- ikon/symbol/bilde, som ikkje alltid er synlege når elementet er i fokus."
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "3.4",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Skjemaelement med identifikasjon i form av tekst eller ikon/symbol/bilde som ikkje alltid er synleg når elementet er i fokus."
+                            }
+                        },
+                        "2": {
+                            "sjekk": "3.4",
+                            "type": "ulik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei)<br>- ikon/symbol/bilde, som ikkje alltid er synlege når elementet er i fokus."
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -345,7 +366,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei)</br>- ikon/symbol/bilde, som ikkje er rett identifisert i koden."
+                    "utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei)<br>- ikon/symbol/bilde, som ikkje er rett identifisert i koden."
                 }
             }
         },
@@ -373,7 +394,7 @@
             "spm": "Inneheld ledeteksten tekstleg informasjon om at skjemaelementet er obligatorisk? ",
             "ht": "<p>Eksempel på tekstleg informasjon er </p><ul><li>obligatorisk</li><li>påkravd</li></ul><p>Du skal ikkje måtte scrolle bort frå skjemaelementet for å finne informasjonen.</p><p>Informasjon i eventuell feilmelding som dukkar opp etter at eit obligatorisk skjemaelement er fylt ut, er ikkje tilstrekkeleg. </p>",
             "type": "jaNei",
-            "kilde": ["G83","H90"],
+            "kilde": ["G83", "H90"],
             "ruting": {
                 "ja": {
                     "type": "avslutt",
