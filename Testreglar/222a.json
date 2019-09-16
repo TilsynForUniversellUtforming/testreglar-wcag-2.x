@@ -111,7 +111,8 @@
                     "steg": "3.3"
                 },
                 "nei": {
-                    "type": "ikkjeForekomst"
+                    "type": "ikkjeForekomst",
+                    "utfall": "Innhald som bevegar seg/blinkar/rullar i mindre enn 5 sekund."
                 }
             }
         },
@@ -127,7 +128,8 @@
                     "steg": "3.4"
                 },
                 "nei": {
-                    "type": "ikkjeForekomst"
+                    "type": "ikkjeForekomst",
+                    "utfall": "Innhald som bevegar seg/blinkar/rullar, utan å bli vist samtidig med anna innhald."
                 }
             }
         },
@@ -139,7 +141,8 @@
             "kilde": [],
             "ruting": {
                 "ja": {
-                    "type": "ikkjeForekomst"
+                    "type": "ikkjeForekomst",
+                    "utfall": "Innhald som bevegar seg/blinkar/rullar, som er del av ei handling der det er nødvendig."
                 },
                 "nei": {
                     "type": "gaaTil",
