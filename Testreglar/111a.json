@@ -151,7 +151,7 @@
         ,
         {
             "stegnr": "3.2",
-            "spm": "Er bilde til pynt/dekor eller brukt som bakgrunn eller til formattering?",
+            "spm": "Er bilde til pynt/dekor eller brukt som bakgrunn eller til formatering?",
             "ht": "Eksempel på slike bilde er usynlige bilde, gjennomsiktige bilde, pyntebilde og bord.",
             "type": "jaNei",
             "ruting": {
@@ -175,7 +175,7 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formattering, er koda med attributta aria-label eller aria-labelledby."
+                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formatering, er koda med attributta aria-label eller aria-labelledby."
                 },
                 "nei": {
                     "type": "gaaTil",
@@ -194,7 +194,8 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formattering, har tomt tekstalternativ."
+                    "utfall": "Bilde som er pynt/dekor/bakgrunn/format
+                    ering, har tomt tekstalternativ."
                 },
                 "nei": {
                     "type": "gaaTil",
@@ -237,7 +238,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formattering, manglar alt-attributt."
+                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formatering, manglar alt-attributt."
                 }
             }
         },
@@ -256,7 +257,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formattering, har ikkje tomt alt-attributt."
+                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formatering, har ikkje tomt alt-attributt."
                 }
             }
         },
@@ -275,7 +276,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formattering, har tomt tekstalternativ."
+                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formatering, har tomt tekstalternativ."
                 }
             }
         },
@@ -290,12 +291,12 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formattering, har tomt tekstalternativ."
+                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formatering, har tomt tekstalternativ."
                 },
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formattering, har ikkje tomt title-attributt."
+                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formatering, har ikkje tomt title-attributt."
                 }
             }
         },
@@ -414,7 +415,7 @@
         {
             "stegnr": "3.16",
             "spm": "Er det innhald i alt-attributtet?",
-            "ht": "Sjå i koden om alt-attributtet har innhald.Eit tomt alt-attributt er koda på formen alt=\"\" eller berre alt.",
+            "ht": "Sjå i koden om alt-attributtet har innhald. Eit tomt alt-attributt er koda på formen alt=\"\" eller berre alt.",
             "type": "jaNei",
             "kilde":["H37"],
             "ruting": {
@@ -451,7 +452,7 @@
         {
             "stegnr": "3.18",
             "spm": "Er det innhald i title-attributtet?",
-            "ht": "Sjå i koden om title-attributtet har innhald.Eit tomt title-attributt er koda på formen title=\"\" eller berre title.",
+            "ht": "Sjå i koden om title-attributtet har innhald. Eit tomt title-attributt er koda på formen title=\"\" eller berre title.",
             "type": "jaNei",
             "kilde":["F65"],
             "ruting": {
@@ -673,7 +674,7 @@
         {
             "stegnr": "3.29",
             "spm": "Er tekstalternativet koda som tekst?",
-            "ht": "<p>Teksten kan vere løpande tekst, tabell eller lignande. Dette kan undersøkast på fleire måtar: Alternativ 1: - Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilde av tekst. Alternativ 2: - Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</p>",
+            "ht": "<p>Teksten kan vere løpande tekst, tabell eller lignande. Dette kan undersøkast på fleire måtar: Alternativ 1: - Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst. Alternativ 2: - Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
