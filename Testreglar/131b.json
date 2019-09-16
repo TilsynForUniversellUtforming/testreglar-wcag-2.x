@@ -59,7 +59,7 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID",
+            "ht": "Oppgi URL eller side-ID",
             "type": "tekst",
             "label": "Url/Side:",
             "oblig": true,
@@ -107,7 +107,7 @@
         {
             "stegnr": "3.2",
             "spm": "Er tabellen koda med &#x3C;table&#x3E;-elementet?",
-            "ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p><p>Sjekk om tabellen er koda med<code>&#x3C;table&#x3E;</code>-elementet.</p>",
+            "ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p><p>Sjekk om tabellen er koda med <code>&#x3C;table&#x3E;</code>-elementet.</p>",
             "kilde": ["G115", "H51", "F34", "F48"],
             "type": "jaNei",
             "ruting": {
@@ -168,7 +168,7 @@
         },
         {
             "stegnr": "3.5",
-            "spm": "Har tabellen overskriftsceller i meir enn berre første rad eller bare første kolonne?",
+            "spm": "Har tabellen overskriftsceller i meir enn berre første rad eller berre første kolonne?",
             "ht": "Fleire nivå betyr at det kan ligge overskriftsceller i fleire rader, fleire kolonner eller både i rad og kolonne.",
             "kilde": ["H63"],
             "type": "jaNei",
