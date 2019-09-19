@@ -34,7 +34,7 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID",
+            "ht": "Oppgi URL eller side-ID",
             "type": "tekst",
             "label": "Url/Side:",
             "oblig": true,
@@ -102,7 +102,7 @@
             "spm": "Beskriv lenka du testar",
             "ht": "<p>Merk at du ikkje nødvendigvis skal teste alle lenkene på sida, men dei du har identifisert som aktuelle testobjekt etter visuell inspeksjon. Dette gjeld lenker som ligg i løpande tekst og som er merka med farge.</p>Legg inn lenketekst, plassering eller andre stikkord som er slik at lenka kan identifiserast. </p>",
             "type": "tekst",
-            "label": "Lenke",
+            "label": "Lenke:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
@@ -134,7 +134,7 @@
         {
             "stegnr": "3.3",
             "spm": "Mål og registrer kontrast mellom farge på tekst i lenka og farge på omkringliggande ikkje-lenka tekst.",
-            "ht": "<p>Kontrast skal registerast med desimaltall (For eksempel 4.5).<p/><p>Tips</p> <ul> <li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten. Bruk for eksempel Colour Contrast Analyser.</li> <li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er represenativ for hovudfargen på teksten.</li> <li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li> <li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.e tekst</li> </ul>",
+            "ht": "<p>Kontrast skal registerast med desimaltall (For eksempel 4.5).<p/><p>Tips:</p> <ul> <li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten. Bruk for eksempel Colour Contrast Analyser.</li> <li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er represenativ for hovudfargen på teksten.</li> <li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li> <li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li> </ul>",
             "type": "tekst",
             "kilde":["G183"],
             "label": "Målt kontrast:",
