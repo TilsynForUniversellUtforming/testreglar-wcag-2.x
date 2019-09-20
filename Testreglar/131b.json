@@ -59,7 +59,7 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi URL eller side-ID",
+            "ht": "Oppgi url eller side-ID",
             "type": "tekst",
             "label": "Url/Side:",
             "oblig": true,
@@ -107,7 +107,7 @@
         {
             "stegnr": "3.2",
             "spm": "Er tabellen koda med &#x3C;table&#x3E;-elementet?",
-            "ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p><p>Sjekk om tabellen er koda med <code>&#x3C;table&#x3E;</code>-elementet.</p>",
+            "ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p><p>Sjekk om tabellen er koda med<code>&#x3C;table&#x3E;</code>-elementet.</p>",
             "kilde": ["G115", "H51", "F34", "F48"],
             "type": "jaNei",
             "ruting": {

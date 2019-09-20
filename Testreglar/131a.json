@@ -33,7 +33,7 @@
           {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi URL eller side-ID.",
+            "ht": "Oppgi url eller side-ID.",
             "type": "tekst",
             "label": "Url/Side:",
             "oblig": true,
@@ -117,7 +117,7 @@
         {
             "stegnr": "3.4",
             "spm": "Er den visuelle overskrifta koda med noko anna som ivaretek den visuelle presentasjonen?",
-            "ht": "<p>Eksempel p&#xE5; koding er:</p><ul><li>unummerert liste, koda med &#x3C;ul&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>nummerert liste, koda med &#x3C;ol&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>deskriptiv liste, koda med &#x3C;dl&#x3E;, &#x3C;dd&#x3E; og &#x3C;dt&#x3E;</li><li>ledetekst koda som &#x3C;label&#x3E;</ul>",
+            "ht": "<p>Eksempel p&#xE5; koding er:</p><ul><li>unummerert liste, koda med &#x3C;ul&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>nummerert liste, koda med &#x3C;ol&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>deskriptiv liste, koda med &#x3C;dl&#x3E;, &#x3C;dd&#x3E; og &#x3C;dt&#x3E;</li><li>Ledetekst koda som &#x3C;label&#x3E;</ul>",
             "type": "jaNei",
             "kilde":["G115", "F2"],
             "ruting": {

@@ -194,8 +194,7 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Bilde som er pynt/dekor/bakgrunn/format
-                    ering, har tomt tekstalternativ."
+                    "utfall": "Bilde som er pynt/dekor/bakgrunn/formatering, har tomt tekstalternativ."
                 },
                 "nei": {
                     "type": "gaaTil",
