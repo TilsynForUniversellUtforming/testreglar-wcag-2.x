@@ -2,7 +2,6 @@
     "id": "1.4.3a",
     "type": "web",
     "versjon": "1.0",
-    "sistOppdatertAvDifi": "20.09.2019",
     "side": "2.1",
     "element": "3.1",
     "kolonner": [
@@ -91,7 +90,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida innhald i form av tekst?",
-            "ht": "<p>Desse innhaldstypane skal testast:</p><ul><li>tekst mot bakgrunn</li><li>tekst i illustrasjonar og diagram (som ikkje er bilete)</li><li>tekst i skjema</li></ul><p>Desse innhaldstypane skal ikkje testast:</#p><ul><li>Bilete av tekst (Blir testa i 1.4.3b)</li><li>Logoar og varemerke</li><li>Ikkje-informativ tekst som er til pynt, dvs tekst som kan erstattast av annan tekst, utan at meiningsinnhaldet vert endra.</li><li>Tekst i bilete der teksten ikkje er vesentleg for å formidle meiningsinnhaldet.</li><li>Deaktiverte skjemaelement</li><li>Tekst som ikkje er synleg for nokon- Grafiske element i for eksempel diagram og grafar, som støttelinjer, søyler m.m.</li></ul>",
+            "ht": "<p>Desse innhaldstypane skal testast:</p><ul><li>Tekst mot bakgrunn</li><li>Tekst i illustrasjonar og diagram (som ikkje er bilete)</li><li>Tekst i skjema</li></ul><p>Desse innhaldstypane skal ikkje testast:</#p><ul><li>Bilete av tekst (Blir testa i 1.4.3b)</li><li>Logoar og varemerke</li><li>Ikkje-informativ tekst som er til pynt, dvs tekst som kan erstattast av annan tekst, utan at meiningsinnhaldet vert endra</li><li>Tekst i bilete der teksten ikkje er vesentleg for å formidle meiningsinnhaldet</li><li>Deaktiverte skjemaelement</li><li>Tekst som ikkje er synleg for nokon</li><li>Grafiske element i for eksempel diagram og grafar, som støttelinjer, søyler m.m.</li></ul>",
             "type": "jaNei",
 
             "ruting": {
@@ -108,8 +107,8 @@
 
         {
             "stegnr": "3.1",
-            "spm": "Beskriv elementet du testar",
-            "ht": "Scrolle ned sida og sjå etter innhaldselement (tekst i form av overskrifter, lenker og annan tekst, tekst i illustrasjonar og diagram) med svak kontrast mellom tekst og bakgrunn. I skjema kan det hende at du må framprovosere eventuelle feilmeldingar og rettleiingstekstar. Formålet er at ein skal kunne finne att elementet på sida som ligg til grunn for kontrastmålinga. For eksempel plassering, kjenneteikn, kva som i står i teksten (treng ikkje gje att heile).",
+            "spm": "Beskriv elementet du testar.",
+            "ht": "Scroll nedover sida og sjå etter innhaldselement (tekst i form av overskrifter, lenker og annan tekst, tekst i illustrasjonar og diagram) med svak kontrast mellom tekst og bakgrunn. I skjema kan det hende at du må framprovosere eventuelle feilmeldingar og rettleiingstekstar. Formålet er at ein skal kunne finne att elementet på sida som ligg til grunn for kontrastmålinga. For eksempel plassering, kjenneteikn, kva som i står i teksten (treng ikkje gje att heile).",
             "type": "tekst",
             "multilinje": true,
             "label": "Beskrivelse av element:",
@@ -124,7 +123,7 @@
         ,
         {
             "stegnr": "3.2",
-            "spm": "Kva type funksjonalitet er elementet en del av??",
+            "spm": "Kva type funksjonalitet er elementet en del av?",
             "ht": "",
             "type": "radio",
             "svarArray": ["Skjema", "Mediaspelar", "Meny", "Modalvindauge", "Lenker", "Løpande tekst", "Anna"],
@@ -191,7 +190,7 @@
         {
             "stegnr": "3.4",
             "spm": "Er skriftstørrelsen 24 px eller større?",
-            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer</li><li>Deaktiver WhatFont etter at du har målt tekststørrelse.</li></ul>",
+            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -209,7 +208,7 @@
         {
             "stegnr": "3.5",
             "spm": "Er skriftstørrelsen mindre enn 19 px ?",
-            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer</li><li>Deaktiver WhatFont etter at du har målt tekststørrelse.</li></ul>",
+            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer.</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
             "type": "jaNei",
             "krav:": "G145",
             "ruting": {
@@ -255,8 +254,8 @@
 
         {
             "stegnr": "3.7",
-            "spm": "Finnes det ein mekanisme for å aktivere ein høgkontrastversjon?",
-            "ht": "<p>Dersom sida har innhold med for svak kontrast, skal vi teste om det finst tilgang til ein høgkontrastversjon. Mekanisme for høgkontrastversjon kan vere:</p> <ul><li> Knapp med kontrastsymbol som for eksempel halvmåne, eller knapp med bokstavar med høgkontrast</li> <li>knapp eller lenke med teksten \"høgkontrast\" eller tilsvarande</li></ul>",
+            "spm": "Finst det ein mekanisme for å aktivere ein høgkontrastversjon?",
+            "ht": "<p>Dersom sida har innhold med for svak kontrast, skal vi teste om det finst tilgang til ein høgkontrastversjon. Mekanisme for høgkontrastversjon kan vere:</p> <ul><li> knapp med kontrastsymbol som for eksempel halvmåne, eller knapp med bokstavar med høgkontrast</li> <li>knapp eller lenke med teksten \"høgkontrast\" eller tilsvarande</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -292,7 +291,7 @@
         {
             "stegnr": "3.9",
             "spm": "Er mekanismen for høgkontrastvisning visuelt markert?",
-            "ht": "<p>Visuell markering er for eksempel</p><ul><li> ein tekst som seier høgkontrast, kontrast eller liknande</li><li>eit ikon som viser t.d. bokstavar, halvmåne, eller andre symbol for kontrast/lysstyrke</li><#/ul>",
+            "ht": "<p>Visuell markering er for eksempel:</p><ul><li> ein tekst som seier høgkontrast, kontrast eller liknande</li><li>eit ikon som viser f.eks. bokstavar, halvmåne, eller andre symbol for kontrast/lysstyrke</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -327,7 +326,7 @@
         {
             "stegnr": "3.11",
             "spm": "Mål og registrer kontrast mellom farge på tekst i mekanismen og farge på bakgrunn.",
-            "ht": "<p>Kontrast skal registerast med desimal tall (For eksempel 4,5).</#p> <h4 class=\"h5\">Tips:</h4> <ul> <li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten. </li> </ul> <h4 class=\"h5\">Retningslinjer for test:</h4> <ul> <li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li> <li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li> <li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li> </ul>",
+            "ht": "<p>Kontrast skal registrerast med desimaltall (For eksempel 4,5).</#p> <h4 class=\"h5\">Tips:</h4> <ul> <li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten. </li> </ul> <h4 class=\"h5\">Retningslinjer for test:</h4> <ul> <li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li> <li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li> <li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li> </ul>",
             "type": "tekst",
             "filter": "tal",
             "label": "Målt kontrast (Format 4.48):",
@@ -375,7 +374,7 @@
         {
             "stegnr": "3.12",
             "spm": "Er mekanismen tekst?",
-            "ht": "<p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilete av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Opne kodeverktøyet i nettlesaren.</li><li>Bruk \"select\" funksjonen i verktøyet og markere et område i tekstalternativet.</li><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul>",
+            "ht": "<p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Opne kodeverktøyet i nettlesaren.</li><li>Bruk \"select\" funksjonen i verktøyet og marker eit område i tekstalternativet.</li><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -392,7 +391,7 @@
         {
             "stegnr": "3.13",
             "spm": "Er skriftstørrelsen 24 px eller større?",
-            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>aktiver WhatFont</li><li>trykk på teksten du skal måle størrelsen på</li><li>les av verdien FontSize og registrer</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse</p>",
+            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont</li><li>Trykk på teksten du skal måle størrelsen på</li><li>Les av verdien FontSize og registrer</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse</p>",
             "type": "jaNei",
             "kilde": ["G145"],
             "ruting": {
@@ -515,7 +514,7 @@
         {
             "stegnr": "3.18",
             "spm": "Er skriftstørrelsen 24 px eller større?",
-            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>aktiver WhatFont</li><li>trykk på teksten du skal måle størrelsen på</li><li>les av verdien FontSize og registrer</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse</p>",
+            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont</li><li>Trykk på teksten du skal måle størrelsen på</li><li>Les av verdien FontSize og registrer</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse</p>",
             "type": "jaNei",
             "kilde": ["G145"],
             "ruting": {
@@ -534,7 +533,7 @@
         {
             "stegnr": "3.19",
             "spm": "Er skriftstørrelsen mindre enn 19 px ?",
-            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer</li><li>Deaktiver WhatFont etter at du har målt tekststørrelse.</li></ul>",
+            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
             "type": "jaNei",
             "kilde": ["G145"],
             "ruting": {
