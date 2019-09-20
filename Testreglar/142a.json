@@ -84,7 +84,7 @@
         {
             "stegnr": "3.1",
             "spm": "Finst det ein mekanisme for å styre lyden på nettsida?",
-            "ht": "<p>Eksempel på mekanisme for styring av lyd kan vere:</p><ul><li>play/pause knapp</li><li>stopp/play knapp</li><li>volumkontroll i avspelaren som kan ta volumet til null</li><li>muteknapp som tek volumet til null</li></ul><p>MERK: Du skal ikkje ta omsyn til eller nytte volumkontroll i operativsystemet, som for eksempel volumkontrollen på pcen.</p>",
+            "ht": "<p>Eksempel på mekanisme for styring av lyd kan vere:</p><ul><li>play/pauseknapp</li><li>stopp/playknapp</li><li>volumkontroll i avspelaren som kan ta volumet til null</li><li>muteknapp som tek volumet til null</li></ul><p>MERK: Du skal ikkje ta omsyn til eller nytte volumkontroll i operativsystemet, som for eksempel volumkontrollen på pcen.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -137,8 +137,8 @@
         },
         {
             "stegnr": "3.4",
-            "spm": "Kor mange tab-steg treng du for å nå mekanismen (lenka/knappen eller liknande) frå lydklippet?",
-            "ht": "Start på toppen av sida og verifiser kor mange tab-steg ein må gjennom for å aktivere mekanismen som stoppar/skrur av lyden. Registrer ved hjelp av svaralternativa kor mange tabsteg du treng. Stopp om du treng meir enn 10 tab-steg, ref. svaralternativa.",
+            "spm": "Kor mange tabsteg treng du for å nå mekanismen (lenka/knappen eller liknande) frå lydklippet?",
+            "ht": "Start på toppen av sida og verifiser kor mange tabsteg ein må gjennom for å aktivere mekanismen som stoppar/skrur av lyden. Registrer ved hjelp av svaralternativa kor mange tabsteg du treng. Stopp om du treng meir enn 10 tabsteg, ref. svaralternativa.",
             "type": "radio",
             "kilde":["G170"],
             "svarArray": ["1-5 tabsteg", "6-10 tabsteg", "Fleire enn 10 tabsteg", "Når ikkje mekanisme med tastatur"],
