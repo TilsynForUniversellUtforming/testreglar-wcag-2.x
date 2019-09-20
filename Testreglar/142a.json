@@ -34,7 +34,7 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID",
+            "ht": "Oppgi URL eller side-ID",
             "type": "tekst",
             "label": "Url/Side:",
             "oblig": true,
@@ -49,7 +49,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida lyd som startar automatisk?",
-            "ht": "Med automatisk starta lyd meinar vi lyden startar utan at brukaren aktivt aktiverer avspeling av lyd. Merk at du kanskje må prøve i fleire nettlesarar for å sjekke om lyd startar automatisk.",
+            "ht": "Med automatisk starta lyd meinar vi at lyden startar utan at brukaren aktivt aktiverer avspeling av lyd. Merk at du kanskje må prøve i fleire nettlesarar for å sjekke om lyd startar automatisk.",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -84,7 +84,7 @@
         {
             "stegnr": "3.1",
             "spm": "Finst det ein mekanisme for å styre lyden på nettsida?",
-            "ht": "<p>Eksempel på mekanisme for styring av lyd kan vere:</p><ul><li>Play/pause knapp</li><li>Stopp/Play knapp</li><li>Volumkontroll i avspelaren som kan ta volumet til null</li><li>Muteknapp som tek volumet til null</li></ul><p>MERK: Du skal ikkje ta omsyn til eller nytte volumkontroll i operativsystemet, som for eksempel volumkontrollen på pcen</p>",
+            "ht": "<p>Eksempel på mekanisme for styring av lyd kan vere:</p><ul><li>play/pauseknapp</li><li>stopp/playknapp</li><li>volumkontroll i avspelaren som kan ta volumet til null</li><li>muteknapp som tek volumet til null</li></ul><p>MERK: Du skal ikkje ta omsyn til eller nytte volumkontroll i operativsystemet, som for eksempel volumkontrollen på pcen.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -101,7 +101,7 @@
 
         {
             "stegnr": "3.2",
-            "spm": "Er mekanismen visuelt plassert nær starten av sida ?",
+            "spm": "Er mekanismen visuelt plassert nær starten av sida?",
             "ht": "Gjer ein visuell inspeksjon og vurder om mekanismen er plassert nær starten av sida. Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen for styring av lyd.",
             "type": "jaNei",
             "kilde":["G170", "F23"],
@@ -119,8 +119,8 @@
         },
         {
             "stegnr": "3.3",
-            "spm": "Er mekanismen for styring av lyd visuelt markert ?",
-            "ht": "<p>Visuell markering er for eksempel</p><ul><li>ein tekst som seier \"Pause, Stopp, Slå av lyden, sett filmen på pause…\" og / eller </li><li>eit ikon for volum eller \"stopp\" symbol</li></ul>",
+            "spm": "Er mekanismen for styring av lyd visuelt markert?",
+            "ht": "<p>Visuell markering er for eksempel</p><ul><li>ein tekst som seier \"Pause, Stopp, Slå av lyden, Sett filmen på pause…\", og / eller </li><li>eit ikon for volum eller \"stopp\" symbol.</li></ul>",
             "type": "jaNei",
             "kilde":["G170"],
             "ruting": {
@@ -137,8 +137,8 @@
         },
         {
             "stegnr": "3.4",
-            "spm": "Kor mange tab-steg treng du for å nå mekanismen (lenka/knappen eller liknande) frå lydklippet?",
-            "ht": "Start på toppen av sida og verifiser kor mange tab-steg ein må gjennom for å aktivere mekanismen som stoppar/skrur av lyden. Registrer ved hjelp av svaralternativa kor mange tabsteg du treng. Stopp om du treng meir enn 10 tab-steg, ref. svaralternativa.",
+            "spm": "Kor mange tabsteg treng du for å nå mekanismen (lenka/knappen eller liknande) frå lydklippet?",
+            "ht": "Start på toppen av sida og verifiser kor mange tabsteg ein må gjennom for å aktivere mekanismen som stoppar/skrur av lyden. Registrer ved hjelp av svaralternativa kor mange tabsteg du treng. Stopp om du treng meir enn 10 tabsteg, ref. svaralternativa.",
             "type": "radio",
             "kilde":["G170"],
             "svarArray": ["1-5 tabsteg", "6-10 tabsteg", "Fleire enn 10 tabsteg", "Når ikkje mekanisme med tastatur"],
@@ -167,7 +167,7 @@
         {
             "stegnr": "3.5",
             "spm": "Er det mogleg å slå av lyd eller regulere lydstyrke til null ved hjelp av tastatur?",
-            "ht": "Ved tastaturnavigasjon kan du bruke enter, piltastar, eller mellomromtast for å aktivere mekanismen for å skru av eller regulere volumet.",
+            "ht": "Ved tastaturnavigasjon kan du bruke entertast, piltastar, eller mellomromtast for å aktivere mekanismen for å skru av eller regulere volumet.",
             "type": "jaNei",
             "kilde":["G170"],
             "ruting": {
