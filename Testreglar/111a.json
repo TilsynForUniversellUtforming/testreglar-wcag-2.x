@@ -119,7 +119,7 @@
         {
             "stegnr": "2.2",
             "spm": "Finst det ikkje-lenka bilde på nettsida?",
-            "ht": "<p>Du skal teste alle bilde som ikkje er lenka. Bilde kan vere for eksempel </p><ul><li>illustrasjonar</li><li>pyntebilde og dekor</li><li>grafar og diagram</li><li>ikon og symbol</li></ul><p>Bilde kan vere koda inni andre HTML-element, som for eksempel <Code>&#x3C;figure&#x3E;</code>.</p>",
+            "ht": "<p>Du skal teste alle bilde som ikkje er lenka. Bilde kan for eksempel vere</p><ul><li>illustrasjonar</li><li>pyntebilde og dekor</li><li>grafar og diagram</li><li>ikon og symbol</li></ul><p>Bilde kan vere koda inni andre HTML-element, som for eksempel <Code>&#x3C;figure&#x3E;</code>.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
