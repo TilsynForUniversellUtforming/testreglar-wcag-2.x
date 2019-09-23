@@ -24,7 +24,7 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
             "label": "Url/Side:",
             "oblig": true,
@@ -56,7 +56,7 @@
         {
             "stegnr": "2.3",
             "spm": "Finst det tastaturfeller på nettsida?",
-            "ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Kontroller at du scroller siden helt ned og at du kommer tilbake til starten av nettsida.Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plug-ins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle tastaturfeller i all funksjonalitet.",
+            "ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Kontroller at du scroller siden helt ned og at du kommer tilbake til starten av nettsida. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle tastaturfeller i all funksjonalitet.",
             "type": "jaNei",
             "kilde": ["G21"],
             "ruting": {
@@ -77,7 +77,7 @@
             "spm": "Beskriv elementet kor du fann tastaturfella.",
             "ht": "",
             "type": "tekst",
-            "label": "Element med tastaturfelle",
+            "label": "Element med tastaturfelle:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
