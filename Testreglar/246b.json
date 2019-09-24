@@ -28,9 +28,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -61,7 +61,7 @@
             "spm": "Beskriv skjemaet/prosessen.",
             "ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
             "type": "tekst",
-            "label": "Skjema",
+            "label": "Skjema:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
@@ -74,7 +74,7 @@
         {
             "stegnr": "2.4",
             "spm": "Inneheld skjemaet ledetekstar?",
-            "ht": "Ledetekster omfatter all synlig tekst eller annen komponent med tekst som blir brukt til å identifisere skjemaelement.",
+            "ht": "Ledetekster omfatter all synlig tekst eller anna komponent med tekst som blir brukt til å identifisere skjemaelement.",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -93,7 +93,7 @@
             "spm": "Referer ledeteksten/ledetekstane til skjemaelementet som skal vurderast.",
             "ht": "<p>Merk at eit og same skjemaelement kan ha fleire ledetekstar som til saman skal gi informasjon om emne eller føremål.</p><p>Merk at vi her ser vekk frå kravet om at obligatoriske skjemafelt skal vere merka. Dette vert ivareteke under SK 3.3.2</p>",
             "type": "tekst",
-            "label": "Ledetekst",
+            "label": "Ledetekst:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
@@ -108,7 +108,7 @@
             "spm": "Beskriv skjemaelementet som ledeteksten høyrer til.",
             "ht": "Kortfatta, stikkord",
             "type": "tekst",
-            "label": "Skjemaelement",
+            "label": "Skjemaelement:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
@@ -120,7 +120,7 @@
         },
         {
             "stegnr": "3.3",
-            "spm": "Er ledeteksten beskrivande for emne eller fomål med skjemaelementet?",
+            "spm": "Er ledeteksten beskrivande for emne eller formål med skjemaelementet?",
             "ht": "",
             "type": "jaNei",
             "kilde": ["G131"],
