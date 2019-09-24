@@ -46,9 +46,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -183,7 +183,7 @@
         {
             "stegnr": "3.8",
             "spm": "Kva er språkkoden?",
-            "ht": "<p>Skriv inn språkkoden som ligg i lang-attributtet. Viss språkkoden har ein sekundær språkkode , for eksempel på formen no-nb, skal du berre skrive inn koden som ligg før bindestreken.</p><p><strong>Merk:</strong> Bruk små bokstavar.</p>",
+            "ht": "<p>Skriv inn språkkoden som ligg i lang-attributtet. Viss språkkoden har ein sekundær språkkode, for eksempel på formen no-nb, skal du berre skrive inn koden som ligg før bindestreken.</p><p><strong>Merk:</strong> Bruk små bokstavar.</p>",
             "type": "tekst",
             "label": "Språkkode:",
             "kilde": [],
@@ -246,7 +246,7 @@
         {
             "stegnr": "3.11",
             "spm": "Samsvarer språkkoden med hovudspråket på nettsida?",
-            "ht": "<p>Samanlikn språket på sida med språkkoden du fann(Steg 3.8).</p><p>Språkkoden skal stemme over ens med hovudspråket på sida. Bruk av generell språkkode er tilstrekkeleg:</p><ul><li>no for både bokmål og nynorsk</li><li>smi for både nordsamisk, sørsamisk og lulesamisk</li><li>en for både britisk og amerikansk engelsk</li></ul><p>Bruk av for eksempel nynorsk språkkode på ei nettside med bokmål som hovudspråk, er ikkje tilstrekkeleg.</p>",
+            "ht": "<p>Samanlikn språket på sida med språkkoden du fann (Steg 3.8).</p><p>Språkkoden skal stemme over ens med hovudspråket på sida. Bruk av generell språkkode er tilstrekkeleg:</p><ul><li>no for både bokmål og nynorsk</li><li>smi for både nordsamisk, sørsamisk og lulesamisk</li><li>en for både britisk og amerikansk engelsk</li></ul><p>Bruk av for eksempel nynorsk språkkode på ei nettside med bokmål som hovudspråk, er ikkje tilstrekkeleg.</p>",
             "type": "jaNei",
             "kilde": ["H57"],
             "ruting": {
