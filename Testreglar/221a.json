@@ -54,9 +54,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -123,7 +123,7 @@
             "spm": "Beskriv innhaldet som har tidsavgrensing.",
             "ht": "Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.",
             "type": "tekst",
-            "label": "Innhald som har tidsavgrensing",
+            "label": "Innhald som har tidsavgrensing:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
