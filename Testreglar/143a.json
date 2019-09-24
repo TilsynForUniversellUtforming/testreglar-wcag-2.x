@@ -78,7 +78,7 @@
             "spm": "Kva side testar du på?",
             "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -90,7 +90,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida innhald i form av tekst?",
-            "ht": "<p>Desse innhaldstypane skal testast:</p><ul><li>Tekst mot bakgrunn</li><li>Tekst i illustrasjonar og diagram (som ikkje er bilete)</li><li>Tekst i skjema</li></ul><p>Desse innhaldstypane skal ikkje testast:</#p><ul><li>Bilete av tekst (Blir testa i 1.4.3b)</li><li>Logoar og varemerke</li><li>Ikkje-informativ tekst som er til pynt, dvs tekst som kan erstattast av annan tekst, utan at meiningsinnhaldet vert endra</li><li>Tekst i bilete der teksten ikkje er vesentleg for å formidle meiningsinnhaldet</li><li>Deaktiverte skjemaelement</li><li>Tekst som ikkje er synleg for nokon</li><li>Grafiske element i for eksempel diagram og grafar, som støttelinjer, søyler m.m.</li></ul>",
+            "ht": "<p>Desse innhaldstypane skal testast</p><ul><li>tekst mot bakgrunn</li><li>tekst i illustrasjonar og diagram (som ikkje er bilde)</li><li>tekst i skjema</li></ul><p>Desse innhaldstypane skal ikkje testast</#p><ul><li>bilde av tekst (blir testa i 1.4.3b)</li><li>logoar og varemerke</li><li>ikkje-informativ tekst som er til pynt, dvs tekst som kan erstattast av annan tekst, utan at meiningsinnhaldet vert endra</li><li>tekst i bilde der teksten ikkje er vesentleg for å formidle meiningsinnhaldet</li><li>deaktiverte skjemaelement</li><li>tekst som ikkje er synleg for nokon</li><li>grafiske element i for eksempel diagram og grafar, som støttelinjer, søyler m.m.</li></ul>",
             "type": "jaNei",
 
             "ruting": {
@@ -190,7 +190,7 @@
         {
             "stegnr": "3.4",
             "spm": "Er skriftstørrelsen 24 px eller større?",
-            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
+            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer.</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -291,7 +291,7 @@
         {
             "stegnr": "3.9",
             "spm": "Er mekanismen for høgkontrastvisning visuelt markert?",
-            "ht": "<p>Visuell markering er for eksempel:</p><ul><li> ein tekst som seier høgkontrast, kontrast eller liknande</li><li>eit ikon som viser f.eks. bokstavar, halvmåne, eller andre symbol for kontrast/lysstyrke</li></ul>",
+            "ht": "<p>Visuell markering er for eksempel</p><ul><li> ein tekst som seier høgkontrast, kontrast eller liknande</li><li>eit ikon som viser f.eks. bokstavar, halvmåne, eller andre symbol for kontrast/lysstyrke</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -391,7 +391,7 @@
         {
             "stegnr": "3.13",
             "spm": "Er skriftstørrelsen 24 px eller større?",
-            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont</li><li>Trykk på teksten du skal måle størrelsen på</li><li>Les av verdien FontSize og registrer</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse</p>",
+            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer.</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
             "type": "jaNei",
             "kilde": ["G145"],
             "ruting": {
@@ -514,7 +514,7 @@
         {
             "stegnr": "3.18",
             "spm": "Er skriftstørrelsen 24 px eller større?",
-            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont</li><li>Trykk på teksten du skal måle størrelsen på</li><li>Les av verdien FontSize og registrer</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse</p>",
+            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer.</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
             "type": "jaNei",
             "kilde": ["G145"],
             "ruting": {
@@ -533,7 +533,7 @@
         {
             "stegnr": "3.19",
             "spm": "Er skriftstørrelsen mindre enn 19 px ?",
-            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
+            "ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer.</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
             "type": "jaNei",
             "kilde": ["G145"],
             "ruting": {
