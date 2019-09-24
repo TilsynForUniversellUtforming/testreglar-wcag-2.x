@@ -27,9 +27,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -73,7 +73,7 @@
         {
             "stegnr": "2.4",
             "spm": "Er det lik rekkefølgje på innhaldselementa i dei to visningane?",
-            "ht": "<p>Gjer ein visuell sjekk. Ta utgangspunkt i vanleg visning og sjå om innhaldet kjem i same rekkefølgje i visninga med CSS slått av.</p><p>Les nettsida frå toppen og nedover, frå venstre mot høgre. Dette gjeld også der innhald er delt opp i blokkar. Då skal blokkane også lesast frå toppen og ned, frå venstre mot høgre.</p><p>Det kan hende at du eventuelt må felle ut menyar og opne modalvindauge for å teste alt innhald på nettsida.</p><p>I visninga med CSS slått av, kan det dukke opp innhald som er skjult i vanleg visning. Dette er ikkje eit brot på kravet og du kan sjå bort frå dette innhaldet. Eksempel på slikt innhald er:</p><ul><li>Snarveglenker som blir synleg ved fokus</li><li>Skjulte menypunkt</li><li>Skjulte overskrifter</li></ul>",
+            "ht": "<p>Gjer ein visuell sjekk. Ta utgangspunkt i vanleg visning og sjå om innhaldet kjem i same rekkefølgje i visninga med CSS slått av.</p><p>Les nettsida frå toppen og nedover, frå venstre mot høgre. Dette gjeld også der innhald er delt opp i blokkar. Då skal blokkane også lesast frå toppen og ned, frå venstre mot høgre.</p><p>Det kan hende at du eventuelt må felle ut menyar og opne modalvindauge for å teste alt innhald på nettsida.</p><p>I visninga med CSS slått av, kan det dukke opp innhald som er skjult i vanleg visning. Dette er ikkje eit brot på kravet og du kan sjå bort frå dette innhaldet. Eksempel på slikt innhald er</p><ul><li>snarveglenker som blir synleg ved fokus</li><li>skjulte menypunkt</li><li>skjulte overskrifter</li></ul>",
             "type": "jaNei",
             "kilde": ["C27"],
             "ruting": {
@@ -94,7 +94,7 @@
             "spm": "Beskriv innhaldet kor rekkefølgja er ulik.",
             "ht": "<p>Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.</p><p>Du skal registrere og legge til data for kvar enkelt observasjon av element der rekkefølgja er ulik.</p>",
             "type": "tekst",
-            "label": "Element",
+            "label": "Element:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
@@ -107,7 +107,7 @@
 
         {
             "stegnr": "3.2",
-            "spm": "Kva type funksjonalitet er elementet en del av?",
+            "spm": "Kva type funksjonalitet er elementet ein del av?",
             "ht": "Velg frå alternativa under.",
             "type": "radio",
             "svarArray": ["Skjema", "Mediaspelar", "Meny", "Modalvindauge", "Anna"],
