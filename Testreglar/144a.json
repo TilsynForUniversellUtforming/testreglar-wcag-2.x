@@ -61,7 +61,7 @@
             "spm": "Kva side testar du på?",
             "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -207,7 +207,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200 % utan at innhald eller funksjonalitet går tapt."
                 }
             }
         },
@@ -226,7 +226,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200 % utan at innhald eller funksjonalitet går tapt."
                 }
             }
         },
@@ -259,7 +259,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200 % utan at innhald eller funksjonalitet går tapt."
                 }
             }
         },
@@ -308,7 +308,7 @@
                 "alle": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200 % utan at innhald eller funksjonalitet går tapt."
                 }
             }
         },
@@ -392,7 +392,7 @@
                             "handling": {
                                 "type": "avslutt",
                                 "fasit": "Nei",
-                                "utfall": "Nettside manglar/har mangelfull mekanisme for zoom/forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                                "utfall": "Nettside manglar/har mangelfull mekanisme for zoom/forstørring. Tekst kan ikkje forstørrast til minst 200 % utan at innhald eller funksjonalitet går tapt."
                             }
                         },
                         "2": {
@@ -403,7 +403,7 @@
                             "handling": {
                                 "type": "avslutt",
                                 "fasit": "Ja",
-                                "utfall": "Nettside har mekanisme for forstørring til 200%, utan tap av innhald eller funksjonalitet."
+                                "utfall": "Nettside har mekanisme for forstørring til 200 %, utan tap av innhald eller funksjonalitet."
                             }
                         }
                     }
