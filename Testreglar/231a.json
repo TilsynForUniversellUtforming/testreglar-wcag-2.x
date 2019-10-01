@@ -45,7 +45,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida innhald som blinkar/gimtar?",
-            "ht": "<p>Sørg for at nettsida har lasta inn fullstendig før du går i gang med testen.</p><p>Blinking på grunn av skjerm eller innlasting av nettsida skal ikkje testast. Blinking er veksling mellom to visuelle tilstandar for å vekke merksemd. Glimt er motsatte parvise skift i relativ lysstyrke som kan forårsake (epileptiske) anfall.</p><p>Du skal vurdere alt innhald på nettsida. Dette omfattar også alle bilde, animasjonar og alle videoklipp. I videoklipp er det nok å teste første </p><p><strong>Merk:</strong> Du skal ikkje teste videoklipp i fullskjermsvisning.</p>",
+            "ht": "<p>Sørg for at nettsida har lasta inn fullstendig før du går i gang med testen.</p><p>Blinking på grunn av skjerm eller innlasting av nettsida skal ikkje testast. Blinking er veksling mellom to visuelle tilstandar for å vekke merksemd. Glimt er motsatte parvise skift i relativ lysstyrke som kan forårsake (epileptiske) anfall.</p><p>Du skal vurdere alt innhald på nettsida. Dette omfattar også alle bilde, animasjonar og alle videoklipp. I videoklipp er det nok å teste dei første 5 minuttane av klippet.</p><p><strong>Merk:</strong> Du skal ikkje teste videoklipp i fullskjermsvisning.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
