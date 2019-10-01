@@ -33,9 +33,9 @@
           {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -117,7 +117,7 @@
         {
             "stegnr": "3.4",
             "spm": "Er den visuelle overskrifta koda med noko anna som ivaretek den visuelle presentasjonen?",
-            "ht": "<p>Eksempel p&#xE5; koding er:</p><ul><li>Unummerert liste, koda med &#x3C;ul&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>Nummerert liste, koda med &#x3C;ol&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>Deskriptiv liste, koda med &#x3C;dl&#x3E;, &#x3C;dd&#x3E; og &#x3C;dt&#x3E;</li><li>Ledetekst koda som &#x3C;label&#x3E;</ul>",
+            "ht": "<p>Eksempel p&#xE5; koding er:</p><ul><li>unummerert liste, koda med &#x3C;ul&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>nummerert liste, koda med &#x3C;ol&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>deskriptiv liste, koda med &#x3C;dl&#x3E;, &#x3C;dd&#x3E; og &#x3C;dt&#x3E;</li><li>Ledetekst koda som &#x3C;label&#x3E;</ul>",
             "type": "jaNei",
             "kilde":["G115", "F2"],
             "ruting": {
@@ -151,7 +151,7 @@
        {
             "stegnr": "3.6",
             "spm": "Kva er nivået på overskrifta visuelt sett?",
-            "ht": "Samanlign nivået på den visuelle overskrifta med dei føregåande overskriftene. Start på toppen av overskriftshierarkiet og tel deg nedover.Hugs at det kan vere fleire overskrifter på same nivå etter kvarandre. Merk: Nivået på overskrifta er bestemt av fleire ulike ting i tillegg til storleiken på teksten, for eksempel innhaldet i teksten, plassering, tegnsetting og gruppering.",
+            "ht": "Samanlign nivået på den visuelle overskrifta med dei føregåande overskriftene. Start på toppen av overskriftshierarkiet og tel deg nedover. Hugs at det kan vere fleire overskrifter på same nivå etter kvarandre. Merk: Nivået på overskrifta er bestemt av fleire ulike ting i tillegg til storleiken på teksten, for eksempel innhaldet i teksten, plassering, tegnsetting og gruppering.",
             "type": "radio",
             "svarArray": ["Nivå 1", "Nivå 2", "Nivå 3", "Nivå 4", "Nivå 5", "Nivå 6", "Nivå 7" , "Nivå 8"],
             "ruting": {

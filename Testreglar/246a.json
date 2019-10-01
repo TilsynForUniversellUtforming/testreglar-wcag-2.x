@@ -21,9 +21,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -36,7 +36,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida innhald som framstår som overskrift(er)?",
-            "ht": "<p>Merk at det ikkje er krav om at nettsider har overskrifter. <a class=\"aUnderLine\" href=\"https://uu.difi.no/krav-og-regelverk/wcag-20-standarden/246-overskrifter-og-ledetekster-niva-aa\" target=\"_blank\">I dette SK</a> skal det heller ikkje vurderast om overskrifter er koda som overskrifter.</p><p>Overkrifter kan ligge i hovudinnhald, meny, topptekst, botntekst, skjema, tabell og bilete.</p>",
+            "ht": "<p>Merk at det ikkje er krav om at nettsider har overskrifter. <a class=\"aUnderLine\" href=\"https://uu.difi.no/krav-og-regelverk/wcag-20-standarden/246-overskrifter-og-ledetekster-niva-aa\" target=\"_blank\">I dette SK</a> skal det heller ikkje vurderast om overskrifter er koda som overskrifter.</p><p>Overkrifter kan ligge i hovudinnhald, meny, topptekst, botntekst, skjema, tabell og bilde.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -54,7 +54,7 @@
             "spm": "Referer overskrifta som er aktuell for test.",
             "ht": "Du kan for eksempel kopiere inn overskrifta frå nettsida.",
             "type": "tekst",
-            "label": "Element",
+            "label": "Element:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
@@ -69,7 +69,7 @@
             "spm": "Gi ei stikkordsmessig beskriving av emne eller føremål med innhaldet som høyrer til den aktuelle overskrifta.",
             "ht": "Legg vekt på å beskrive innhaldet med få ord. Merk at denne testen ikkje legg opp til inspeksjon av kode.",
             "type": "tekst",
-            "label": "Emne eller føremål med innhaldet",
+            "label": "Emne eller føremål med innhaldet:",
             "multilinje": true,
             "oblig": true,
             "ruting": {

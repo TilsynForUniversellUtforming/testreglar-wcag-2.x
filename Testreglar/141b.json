@@ -28,9 +28,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID",
+            "ht": "Oppgi URL eller side-ID",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -80,7 +80,7 @@
             "spm": "Beskriv illustrasjonen",
             "ht": "<p>Legg inn overskrift, plassering eller andre stikkord som er slik at illustrasjonen kan identifiserast.</p>",
             "type": "tekst",
-            "label": "Illustrasjon",
+            "label": "Illustrasjon:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
@@ -94,7 +94,7 @@
         {
             "stegnr": "3.2",
             "spm": "Gir forklarande tekst eller andre visuelle verkemiddel den same informasjonen som er formidla gjennom bruk av farge?  ",
-            "ht": "<p>Merk  at det her skal gjerast kun visuell inspeksjon.</p><p>Eksempel på visuelle verkemiddel i tillegg til farge:</p><ul><li>mønster</li><li>form, som for eksempel stjerne, diamant, firkant og liknande</li><li>direkte kopling mellom del av illustrasjon der farge er brukt og forklarande informasjon </li></ul>",
+            "ht": "<p>Merk  at det her skal gjerast kun visuell inspeksjon.</p><p>Eksempel på visuelle verkemiddel i tillegg til farge</p><ul><li>mønster</li><li>form, som for eksempel stjerne, diamant, firkant og liknande</li><li>direkte kopling mellom del av illustrasjon der farge er brukt og forklarande informasjon </li></ul>",
             "type": "jaNei",
             "kilde": ["G14", "G111", "F13"],
             "ruting": {

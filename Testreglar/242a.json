@@ -24,9 +24,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -38,7 +38,7 @@
         {
             "stegnr": "3.1",
             "spm": "Har sida ein sidetittel?",
-            "ht": "<p>Undersøk i koden om sidetittelen står i &#x3C;title&#x3E;-elementet, som er nøsta i &#x3C;head&#x3E;-elementet på starten av HTML-koden.</p><p>Merk at &#x3C;title&#x3E;-elementet ikkje er det same som title-attributt. &#x3C;title&#x3E;-elementet er obligatorisk og finst berre ein gong pr nettside.</p>",
+            "ht": "<p>Undersøk i koden om sidetittelen står i &#x3C;title&#x3E;-elementet, som er nøsta i &#x3C;head&#x3E;-elementet på starten av HTML-koden.</p><p>Merk at &#x3C;title&#x3E;-elementet ikkje er det same som title-attributt. &#x3C;title&#x3E;-elementet er obligatorisk og finst berre ein gong per nettside.</p>",
             "type": "jaNei",
             "kilde": ["H25"],
             "ruting": {
@@ -71,10 +71,10 @@
         },
         {
             "stegnr": "3.3",
-            "spm": "Gi ei stikkordsmessig beskriving av innhaldet på sida.",
+            "spm": "Gje ei stikkordsmessig beskriving av innhaldet på sida.",
             "ht": "Legg vekt på å beskrive sida med få ord, gjerne hovudoverskrift og litt utfyllande informasjon.",
             "type": "tekst",
-            "label": "Beskriving av innhaldet",
+            "label": "Beskriving av innhaldet:",
             "kilde": [],
             "multilinje": true,
             "ruting": {

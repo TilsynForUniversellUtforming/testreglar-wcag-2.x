@@ -24,9 +24,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -74,7 +74,7 @@
         {
             "stegnr": "2.4",
             "spm": "Får du synleg fokusmarkering på alle element det er mogleg å betene med tastaturet?",
-            "ht": "<p>Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Det kan hende at du eventuelt må felle ut menyar og opne modalvindauge for å teste alt innhald på nettsida.</p> <p>Det skal ikkje vere anstrengande å sjå fokusmarkeringa og brukaren skal enkelt kunne sjå kva element som er i fokus.</p> <p>Eksempel på synleg fokusmarkering på element er:</p> <ul> <li>Ramme, linje eller understreking</li> <li>Endra farge på bakgrunn eller tekst</li> <li>Skyggelegging</li> <li>Tekstmarkør (loddrett strek) eller markering av tekst i skjemafelt.</li> <li>Anna form for visuell forandring.</li> </ul>",
+            "ht": "<p>Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Det kan hende at du eventuelt må felle ut menyar og opne modalvindauge for å teste alt innhald på nettsida.</p> <p>Det skal ikkje vere anstrengande å sjå fokusmarkeringa og brukaren skal enkelt kunne sjå kva element som er i fokus.</p> <p>Eksempel på synleg fokusmarkering på element er</p> <ul> <li>ramme, linje eller understreking</li> <li>endra farge på bakgrunn eller tekst</li> <li>skyggelegging</li> <li>tekstmarkør (loddrett strek) eller markering av tekst i skjemafelt</li> <li>anna form for visuell forandring</li> </ul>",
             "type": "jaNei",
             "kilde" :["G149","F78"],
             "ruting": {
@@ -94,7 +94,7 @@
             "spm": "Beskriv elementet kor du ikkje fikk synleg fokusmarkering.",
             "ht": "",
             "type": "tekst",
-            "label": "Element",
+            "label": "Element:",
             "multilinje": true,
             "oblig": true,
             "ruting": {

@@ -57,9 +57,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -71,7 +71,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettstaden videoklipp?",
-            "ht": "<p>Aktuelle metodar kan vere:</p><ul><li>Sjå på sidene om det finst ein playknapp eller liknande </li><li>Bruk internt søk på nettstaden</li><li>Bruk Google (Du kan bruke \"site:urlnettstad søkeord\" for å berre søke på ein bestemt nettstad).</li></ul><p>Aktuelle søkeomgrep kan være: \"Video\", \"Animasjon\", \"YouTube\", \"Viemo\", \"opptak\", \"H264\", \"mpeg4\". Merk at søkeomgrepa over er best tilpassa for søk interent på ein netts</p>",
+            "ht": "<p>Aktuelle metodar kan vere:</p><ul><li>Sjå på sidene om det finst ein playknapp eller liknande. </li><li>Bruk internt søk på nettstaden.</li><li>Bruk Google (Du kan bruke \"site:urlnettstad søkeord\" for å berre søke på ein bestemt nettstad).</li></ul><p>Aktuelle søkeomgrep kan være: \"Video\", \"Animasjon\", \"YouTube\", \"Viemo\", \"opptak\", \"H264\", \"mpeg4\". Merk at søkeomgrepa over er best tilpassa for søk interent på ein netts</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -120,8 +120,8 @@
         },
         {
             "stegnr": "3.3",
-            "spm": "Er videoen forhåndsinnspelt?",
-            "ht": "<p>Aktuelle metodar for å finne ut dette er:</p><ul><li>Prøv å starte videoklippet og sjå om avspelinga startar frå byrjinga av fila og om det finst informasjon om varigheiten på klippet.</li><li> Sjå etter informasjon om når klippet er publisert.</li><li>Sjå etter informasjon som tilseier at klippet er live/direkte. Dette kan for eksempel vere: Rødt felt med teksten \"live\" eller at det ikkje er mogeleg å spole i klippet.</li></ul>",
+            "spm": "Er videoen førehandsinnspelt?",
+            "ht": "<p>Aktuelle metodar for å finne ut dette er:</p><ul><li>Prøv å starte videoklippet og sjå om avspelinga startar frå byrjinga av fila og om det finst informasjon om varigheiten på klippet.</li><li> Sjå etter informasjon om når klippet er publisert.</li><li>Sjå etter informasjon som tilseier at klippet er live/direkte. Dette kan for eksempel vere: Rødt felt med teksten \"live\" eller at det ikkje er mogleg å spole i klippet.</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -177,7 +177,7 @@
         {
             "stegnr": "3.6",
             "spm": "Er tekstalternativet koda som tekst?",
-            "ht": "<p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilete av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Opne kodeverktøyet i nettlesaren.</li><li>Bruk \"select\" funksjonen i verktøyet og markere et område i tekstalternativet.</li><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul>",
+            "ht": "<p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Opne kodeverktøyet i nettlesaren.</li><li>Bruk \"select\" funksjonen i verktøyet og markere eit område i tekstalternativet.</li><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul>",
             "type": "jaNei",
             "kilde": ["G159"],
             "ruting": {
@@ -261,7 +261,7 @@
         {
             "stegnr": "3.10",
             "spm": "Er tekstalternativet koda som tekst?",
-            "ht": "<p>Dette kan undersøkast på fleire måtar:</p> <p>Alternativ 1:</p> <ul> <li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilete av tekst.</li> </ul> <p>Alternativ 2:</p> <ul> <li>Opne kodeverktøyet i nettlesaren.</li> <li>Bruk \"select\" funksjonen i verktøyet og markere et område i tekstalternativet.</li> <li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li> </ul>",
+            "ht": "<p>Dette kan undersøkast på fleire måtar:</p> <p>Alternativ 1:</p> <ul> <li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilde av tekst.</li> </ul> <p>Alternativ 2:</p> <ul> <li>Opne kodeverktøyet i nettlesaren.</li> <li>Bruk \"select\" funksjonen i verktøyet og markere eit område i tekstalternativet.</li> <li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li> </ul>",
             "type": "jaNei",
             "kilde": ["G158"],
             "ruting": {
@@ -285,7 +285,7 @@
             "stegnr": "3.11",
 
             "spm": "Er informasjonen/innhaldet som blir formidla i lydklippet i samsvar med informasjon som blir formidla i teksten?",
-            "ht": "<p>Samanlikn tekstalternativet med innhaldet i lydklippet:</p><ul><li>Gå gjennom dei første minuttane av lydklippet.</li><li>Vurder om lydklipp og tekstalternativ formidlar det same hovudinnhaldet i lik rekkefølge. </li><li>MERK: Vi krev ikkje eksakt attgjevinng av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</li></ul><p>Dersom du allereie i starten av lydklippet avdekkar at det ikkje er samsvar mellom lydklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
+            "ht": "<p>Samanlikn tekstalternativet med innhaldet i lydklippet:</p><ul><li>Gå gjennom dei første minuttane av lydklippet.</li><li>Vurder om lydklipp og tekstalternativ formidlar det same hovudinnhaldet i lik rekkefølge. </li></ul><p><strong>Merk:</strong> Vi krev ikkje eksakt attgjevinng av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p><p>Dersom du allereie i starten av lydklippet avdekkar at det ikkje er samsvar mellom lydklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
             "type": "jaNei",
             "kilde": ["G158", "F30", "F67"],
             "ruting": {
@@ -309,7 +309,7 @@
         {
             "stegnr": "3.12",
             "spm": "Finst det ein mekanisme (lenke, knapp eller liknande) nær videoen som tilseier at du vert leia til eit mediealternativ (lydklipp/lydfil) til videoen?",
-            "ht": "<p>Merk: Du skal ikkje teste lytt til teksten-funksjonalitet. Du skal teste lyd som refererer til video.</p><p>Eit lydklipp kan vere kjenneteikna ved: </p><ul><li>Eit høgtalarikon</li><li>Ein playknapp</li><li>Ei lenke med ein lenketekst som for eksempel \"lydklipp\", \"lydalternativ\"</li></ul><p>Du skal ikkje måtte scrolle vekk frå videoklippet for å sjå at det finst eit mediealternativ.</p>",
+            "ht": "<p><strong>Merk:</strong> Du skal ikkje teste lytt til teksten-funksjonalitet. Du skal teste lyd som refererer til video.</p><p>Eit lydklipp kan vere kjenneteikna ved </p><ul><li>eit høgtalarikon</li><li>ein playknapp</li><li>ei lenke med ein lenketekst som for eksempel \"lydklipp\", \"lydalternativ\"</li></ul><p>Du skal ikkje måtte scrolle vekk frå videoklippet for å sjå at det finst eit mediealternativ.</p>",
             "type": "jaNei",
             "kilde": [],
             "ruting": {
@@ -400,7 +400,7 @@
         {
             "stegnr": "3.15",
             "spm": "Er informasjonen/innhaldet som blir formidla i videoen i samsvar med informasjon som blir formidla i lydklippet? ",
-            "ht": "<p>Samanlikn lydklippet med innhaldet i videoen:</p><ul><li>Gå gjennom for eksempel dei første 5 minuttane av videoen. </li><li>Vurder om video og lydfil formidlar det same hovudinnhaldet i lik rekkefølge. </li></ul><p>Merk: Vi krev ikkje eksakt attgjeving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p><p>Dersom du allereie i starten av videoen avdekkar at det ikkje er samsvar mellom video og lydfil, kan du stoppe gjennomgangen.</p>",
+            "ht": "<p>Samanlikn lydklippet med innhaldet i videoen:</p><ul><li>Gå gjennom for eksempel dei første 5 minuttane av videoen. </li><li>Vurder om video og lydfil formidlar det same hovudinnhaldet i lik rekkefølge. </li></ul><p><strong>Merk:</strong> Vi krev ikkje eksakt attgjeving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p><p>Dersom du allereie i starten av videoen avdekkar at det ikkje er samsvar mellom video og lydfil, kan du stoppe gjennomgangen.</p>",
             "type": "jaNei",
             "kilde": ["G166"],
             "ruting": {

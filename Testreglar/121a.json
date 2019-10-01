@@ -43,9 +43,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -57,7 +57,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida lydklipp?",
-            "ht": "<p>Aktuelle metodar kan vere:</p><ul><li>Sjå på sidene om det finst ein playknapp eller liknande </li><li>Bruk internt søk på nettstaden</li><li>Bruk Google (Du kan bruke \"site:urlnettstad søkeord\" for å berre søke på ein bestemt nettstad).</li></ul><p>Aktuelle søkeomgrep kan være: \"Podcast\"/\"Podkast\", \"Lydklipp\", \"Lyd*\", \"Lydfil\", \"opptak\", \"Hør her\", \"Høyr her\", \"Lytt\",\"mp3\"</p>",
+            "ht": "<p>Aktuelle metodar kan vere:</p><ul><li>Sjå på sidene om det finst ein playknapp eller liknande. </li><li>Bruk internt søk på nettstaden.</li><li>Bruk Google (Du kan bruke \"site:urlnettstad søkeord\" for å berre søke på ein bestemt nettstad).</li></ul><p>Aktuelle søkeomgrep kan være: \"Podcast\"/\"Podkast\", \"Lydklipp\", \"Lyd*\", \"Lydfil\", \"opptak\", \"Hør her\", \"Høyr her\", \"Lytt\",\"mp3\"</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -90,7 +90,7 @@
 
         {
             "stegnr": "3.2",
-            "spm": "Er lydklippet forhåndsinnspelt?",
+            "spm": "Er lydklippet førehandsinnspelt?",
             "ht": "<p>Aktuelle metodar for å finne ut dette er:</p><ul><li>Prøv å starte lydklippet og sjå om avspelinga startar frå byrjinga av fila og om det finst informasjon om varigheiten på klippet.</li><li> Sjå etter informasjon om når klippet er publisert.</li><li>Sjå etter informasjon som tilseier at klippet er live/direkte. </li></ul><p>Dette kan for eksempel vere: Rødt felt med teksten \"live\" eller at det ikkje er mogeleg å spole i klippet.</p>",
             "type": "jaNei",
             "ruting": {
@@ -171,7 +171,7 @@
         {
             "stegnr": "3.6",
             "spm": "Er informasjonen/innhaldet som blir formidla i lydklippet i samsvar med informasjon som blir formidla i teksten?  ",
-            "ht": "<p>Samanlikn tekstalternativet med innhaldet i lydklippet:</p><ul><li>Gå gjennom dei første minuttane av lydklippet.</li><li>Vurder om lydklipp og tekstalternativ formidlar det same hovudinnhaldet i lik rekkefølge. </li><li>MERK: Vi krev ikkje eksakt attgjevinng av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</li></ul><p>Dersom du allereie i starten av lydklippet avdekkar at det ikkje er samsvar mellom lydklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
+            "ht": "<p>Samanlikn tekstalternativet med innhaldet i lydklippet:</p><ul><li>Gå gjennom dei første minuttane av lydklippet.</li><li>Vurder om lydklipp og tekstalternativ formidlar det same hovudinnhaldet i lik rekkefølge.</li></ul><p><strong>MERK:</strong> Vi krev ikkje eksakt attgjevinng av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p><p>Dersom du allereie i starten av lydklippet avdekkar at det ikkje er samsvar mellom lydklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
             "type": "jaNei",
             "kilde": ["G158", "F30", "F67"],
             "ruting": {
@@ -268,7 +268,7 @@
             "stegnr": "3.10",
 
             "spm": "Er informasjonen/innhaldet som blir formidla i lydklippet i samsvar med informasjon som blir formidla i teksten?",
-            "ht": "<p>Samanlikn tekstalternativet med innhaldet i lydklippet:</p><ul><li>Gå gjennom dei første minuttane av lydklippet.</li><li>Vurder om lydklipp og tekstalternativ formidlar det same hovudinnhaldet i lik rekkefølge. </li><li>MERK: Vi krev ikkje eksakt attgjevinng av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</li></ul><p>Dersom du allereie i starten av lydklippet avdekkar at det ikkje er samsvar mellom lydklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
+            "ht": "<p>Samanlikn tekstalternativet med innhaldet i lydklippet:</p><ul><li>Gå gjennom dei første minuttane av lydklippet.</li><li>Vurder om lydklipp og tekstalternativ formidlar det same hovudinnhaldet i lik rekkefølge. </li></ul><p><strong>MERK:</strong> Vi krev ikkje eksakt attgjevinng av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p><p>Dersom du allereie i starten av lydklippet avdekkar at det ikkje er samsvar mellom lydklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
             "type": "jaNei",
             "kilde": ["G158", "F30", "F67"],
             "ruting": {

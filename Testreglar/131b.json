@@ -59,9 +59,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID",
+            "ht": "Oppgi URL eller side-ID",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -168,7 +168,7 @@
         },
         {
             "stegnr": "3.5",
-            "spm": "Har tabellen overskriftsceller i meir enn berre første rad eller bare første kolonne?",
+            "spm": "Har tabellen overskriftsceller i meir enn berre første rad eller berre første kolonne?",
             "ht": "Fleire nivå betyr at det kan ligge overskriftsceller i fleire rader, fleire kolonner eller både i rad og kolonne.",
             "kilde": ["H63"],
             "type": "jaNei",

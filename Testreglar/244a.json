@@ -37,9 +37,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -52,7 +52,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida lenker som inneheld tekst?",
-            "ht": "<p>Sjå på sida og leit etter lenker. Lenka sin plassering er utan betydning, og kan for eksempel ligge i ein meny, liste, tabell osb…</p><p><strong>Merk: </strong>Du skal ikkje skal teste knappar og lenker som inneheld bilete, desse blir testa i eigne testreglar.</p>",
+            "ht": "<p>Sjå på sida og leit etter lenker. Lenka sin plassering er utan betydning, og kan for eksempel ligge i ein meny, liste, tabell osv.</p><p><strong>Merk: </strong>Du skal ikkje skal teste knappar og lenker som inneheld bilde, desse blir testa i eigne testreglar.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -61,16 +61,16 @@
                 },
                 "nei": {
                     "type": "ikkjeForekomst",
-                    "utfall": "Testside har ikkje lenker som berre består av tekst"
+                    "utfall": "Testside har ikkje lenker som berre består av tekst."
                 }
             }
         },
         {
             "stegnr": "3.1",
             "spm": "Referer lenka som er aktuell for test.",
-            "ht": "Du kan for eksempel beskrive lenketekst, plassering på side, element som er i nærleiken osb...",
+            "ht": "Du kan for eksempel beskrive lenketekst, plassering på side, element som er i nærleiken osv.",
             "type": "tekst",
-            "label": "Lenke",
+            "label": "Lenke:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
@@ -82,10 +82,10 @@
         },
         {
             "stegnr": "3.2",
-            "spm": "Aktiver/opne lenka og skriv inn url",
-            "ht": "Du kan opne lenka i nytt vindauge / fane for å gjere det lettare å vurdere på neste steg.",
+            "spm": "Aktiver/opne lenka og skriv inn URL",
+            "ht": "Du kan opne lenka i nytt vindauge/fane for å gjere det lettare å vurdere på neste steg.",
             "type": "tekst",
-            "label": "URL",
+            "label": "URL:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
@@ -116,7 +116,7 @@
 
         {
             "stegnr": "3.4",
-            "spm": "Har lenkeelementet attributtet \"aria-label\" ?",
+            "spm": "Har lenkeelementet attributtet \"aria-label\"?",
             "ht": "<p>Sjå i koden og finn lenkeelementet, <code>&#x3C;a&#x3E;</code>-elementet.</p><p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
             "type": "jaNei",
             "kilde":["ARIA8"],
@@ -133,7 +133,7 @@
         },
         {
             "stegnr": "3.5",
-            "spm": "Har lenkeelementet(&#x3C;a&#x3E;) attributtet \"aria-labelledby\" ?",
+            "spm": "Har lenkeelementet (&#x3C;a&#x3E;) attributtet \"aria-labelledby\"?",
             "ht": "<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p><p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten. </p>",
             "type": "jaNei",
             "kilde":["ARIA7"],
@@ -168,7 +168,7 @@
         {
             "stegnr": "3.7",
             "spm": "Er lenka kopla til kontekst i koden?",
-            "ht": "<p>Kontekst er tekst som ligg:</p><ul><li>I same avsnitt (<code>&#x3C;p&#x3E;</code>).</li><li>I same liste (<code>&#x3C;li&#x3E;</code> eller føregåande <code>&#x3C;li&#x3E;</code> i nøsta liste).</li><li>I same tabell (tekst i same <code>&#x3C;td&#x3E;</code> og/eller tekst som ligg i tilknytta <code>&#x3C;th&#x3E;</code>).</li><li>i overskrifta (<code>&#x3C;h&#x3E;</code>) som ligg før lenka.</li></ul><p>Merk at vi her ikkje godkjenner koding av annan type som for eksempel <code>&#x3C;div&#x3E;</code> eller <code>&#x3C;span&#x3E;</code>.</p><p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
+            "ht": "<p>Kontekst er tekst som ligg:</p><ul><li>I same avsnitt (<code>&#x3C;p&#x3E;</code>).</li><li>I same liste (<code>&#x3C;li&#x3E;</code> eller føregåande <code>&#x3C;li&#x3E;</code> i nøsta liste).</li><li>I same tabell (tekst i same <code>&#x3C;td&#x3E;</code> og/eller tekst som ligg i tilknytta <code>&#x3C;th&#x3E;</code>).</li><li>I overskrifta (<code>&#x3C;h&#x3E;</code>) som ligg før lenka.</li></ul><p>Merk at vi her ikkje godkjenner koding av annan type som for eksempel <code>&#x3C;div&#x3E;</code> eller <code>&#x3C;span&#x3E;</code>.</p><p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
             "type": "jaNei",
             "kilde":["G53","H77","H78","H79","H81","F63"],
             "ruting": {

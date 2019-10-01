@@ -34,9 +34,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID",
+            "ht": "Oppgi URL eller side-ID",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -66,7 +66,7 @@
         {
             "stegnr": "2.3",
             "spm": "Har nettsida lenker i løpande tekst?",
-            "ht": "<p>Lenker i løpande tekst er lenker som visuelt og kontekstuelt er knytt til ikkje-lenka tekst, plassert før eller etter lenka. Merk at dette også kan gjelde lenka overskrifter</p><b>Merk at vi ikkje skal teste følgjande:</b><ul><li>Lenker i meny.</li><li>Lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka innhald.</li></ul>",
+            "ht": "<p>Lenker i løpande tekst er lenker som visuelt og kontekstuelt er knytt til ikkje-lenka tekst, plassert før eller etter lenka. Merk at dette også kan gjelde lenka overskrifter</p><b>Merk at vi ikkje skal teste følgjande:</b><ul><li>lenker i meny</li><li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka innhald</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -102,7 +102,7 @@
             "spm": "Beskriv lenka du testar",
             "ht": "<p>Merk at du ikkje nødvendigvis skal teste alle lenkene på sida, men dei du har identifisert som aktuelle testobjekt etter visuell inspeksjon. Dette gjeld lenker som ligg i løpande tekst og som er merka med farge.</p>Legg inn lenketekst, plassering eller andre stikkord som er slik at lenka kan identifiserast. </p>",
             "type": "tekst",
-            "label": "Lenke",
+            "label": "Lenke:",
             "multilinje": true,
             "oblig": true,
             "ruting": {
@@ -116,7 +116,7 @@
         {
             "stegnr": "3.2",
             "spm": "Skil lenka seg visuelt frå ikkje-lenka tekst med andre verkemiddel enn berre farge?",
-            "ht": "<p>Føremålet er å identifisere lenker som skil seg frå anna innhald berre med farge.</p>Lenker som er markerte med meir/anna enn berre farge, kan for eksempel vere markerte slik: <p><ul><li>Endra skrifttype.</li><li>Endra skriftstørrelse.</li><li>Understreking.</li><li>Utheva/feit/bold/kursiv skrift.</li><li>Ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka.</li><li>Ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst.</li></ul><p><b>Merk:</b> Du skal teste all tekst som ligg visuelt og kontekstuelt knytt til lenka. Teksten kan vere plassert før eller etter lenka. </p>",
+            "ht": "<p>Føremålet er å identifisere lenker som skil seg frå anna innhald berre med farge.</p>Lenker som er markerte med meir/anna enn berre farge, kan for eksempel vere markerte slik <p><ul><li>endra skrifttype</li><li>endra skriftstørrelse</li><li>understreking</li><li>utheva/feit/bold/kursiv skrift</li><li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka</li><li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst</li></ul><p><b>Merk:</b> Du skal teste all tekst som ligg visuelt og kontekstuelt knytt til lenka. Teksten kan vere plassert før eller etter lenka. </p>",
             "type": "jaNei",
             "kilde":["G182", "F73"],
             "ruting": {
@@ -134,7 +134,7 @@
         {
             "stegnr": "3.3",
             "spm": "Mål og registrer kontrast mellom farge på tekst i lenka og farge på omkringliggande ikkje-lenka tekst.",
-            "ht": "<p>Kontrast skal registerast med desimaltall (For eksempel 4.5).<p/><p>Tips</p> <ul> <li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten. Bruk for eksempel Colour Contrast Analyser.</li> <li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er represenativ for hovudfargen på teksten.</li> <li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li> <li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.e tekst</li> </ul>",
+            "ht": "<p>Kontrast skal registerast med desimaltall (For eksempel 4.5).<p/><p>Tips:</p> <ul> <li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten. Bruk for eksempel Colour Contrast Analyser.</li> <li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er represenativ for hovudfargen på teksten.</li> <li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li> <li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li> </ul>",
             "type": "tekst",
             "kilde":["G183"],
             "label": "Målt kontrast:",
@@ -171,7 +171,7 @@
         {
             "stegnr": "3.4",
             "spm": "Vert lenka markert med meir enn berre farge når du navigerer med mus?",
-            "ht": "<p>Før musepeikaren over lenka og sjekk at det er ein effekt som gjer at lenka vert markerte.</p> <p>Eksempel på markering som er tilstrekkeleg:</p> <ul> <li>Endra skrifttype</li> <li>Endra skriftstørrelse</li> <li>Understreking.</li> <li>Utheva/feit/bold/kursiv skrift.</li> <li>Ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka.</li> <li>Ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst</li> </ul> <p><b>Merk</b> at endring av musepeikarikonet aleine ikkje er tilstrekkeleg. Endring av fargen på lenka er heller ikkje tilstrekkeleg.</p>",
+            "ht": "<p>Før musepeikaren over lenka og sjekk at det er ein effekt som gjer at lenka vert markerte.</p> <p>Eksempel på markering som er tilstrekkeleg</p> <ul> <li>endra skrifttype</li> <li>endra skriftstørrelse</li> <li>understreking.</li> <li>utheva/feit/bold/kursiv skrift.</li> <li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka.</li> <li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst</li> </ul> <p><b>Merk</b> at endring av musepeikarikonet aleine ikkje er tilstrekkeleg. Endring av fargen på lenka er heller ikkje tilstrekkeleg.</p>",
             "type": "jaNei",
             "kilde":["G183"],
             "ruting": {
@@ -189,7 +189,7 @@
         {
             "stegnr": "3.5",
             "spm": "Vert lenka markert med meir enn berre farge når du navigerer med tastatur?",
-            "ht": "<p>Bruk tabulatortasten og naviger til lenka ved hjelp av tastaturet. Sjekk at det er ein effekt som gjer at lenka vert markert.</p> <p>Eksempel på markering som er tilstrekkeleg:</p> <ul> <li>Endra skrifttype</li> <li>Endra skriftstørrelse</li> <li>Understreking.</li> <li>Utheva/feit/bold/kursiv skrift.</li> <li>Ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka.</li> <li>Ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst. </li> </ul> <p>Merk at standard fokusmarkering er tilstrekkeleg. Endring av fargen på lenka er heller ikkje tilstrekkeleg.</p>",
+            "ht": "<p>Bruk tabulatortasten og naviger til lenka ved hjelp av tastaturet. Sjekk at det er ein effekt som gjer at lenka vert markert.</p> <p>Eksempel på markering som er tilstrekkeleg</p> <ul> <li>endra skrifttype</li> <li>endra skriftstørrelse</li> <li>understreking.</li> <li>utheva/feit/bold/kursiv skrift.</li> <li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka.</li> <li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst. </li> </ul> <p>Merk at standard fokusmarkering er tilstrekkeleg. Endring av fargen på lenka er heller ikkje tilstrekkeleg.</p>",
             "type": "jaNei",
             "kilde":["G183"],
             "ruting": {

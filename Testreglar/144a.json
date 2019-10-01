@@ -59,9 +59,9 @@
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
-            "ht": "Oppgi url eller side-ID.",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "Url/Side:",
+            "label": "URL/Side:",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -73,7 +73,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida tekst?",
-            "ht": "<p>Følgjande reknast ikkje som tekst:</p><ul><li>Teksting i video.</li><li>Bilete av tekst.</li></ul><p>Merk: Du skal ikkje teste vidare på nettsider som ikkje inneheld tekst.</p>",
+            "ht": "<p>Følgjande reknast ikkje som tekst</p><ul><li>teksting i video</li><li>bilde av tekst</li></ul><p>Merk: Du skal ikkje teste vidare på nettsider som ikkje inneheld tekst.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -90,7 +90,7 @@
         {
             "stegnr": "2.3",
             "spm": "Inneheld nettsida skjemaelement?",
-            "ht": "Skjemaelement finst for eksempel i søkefelt, innlogging og andre interaktive skjema som brukraren skal sende inn.",
+            "ht": "Skjemaelement finst for eksempel i søkefelt, innlogging og andre interaktive skjema som brukaren skal sende inn.",
             "type": "jaNei",
             "ruting": {
                 "alle": {
@@ -146,7 +146,7 @@
         {
             "stegnr": "3.3",
             "spm": "Inneheld nettsida same tekstleg innhald og funksjonalitet i 200 % visning, som i 100 % visning? ",
-            "ht": "<p>Du kan samanlikne nettsida i vanleg visning og innzooma visning for å gjere det lettare å vurdere.</p><p>Det er ok om vi får tilgang til innhald/funksjonalitet ved å måtte scrolle horisontalt og/eller vertikalt.</p><p>Merk at ei og same side kan sjå ulik ut i ordinær og forminska visning, t.d. kan meny i forminska visning vere ein knapp, medan du i ordinær visning får sjå heile menyen.</p><p>Det er ikkje ok at innhald blir dekka over av anna innhald i innzooma visning, eller at innhald forsvinn frå sida.</p>",
+            "ht": "<p>Du kan samanlikne nettsida i vanleg visning og innzooma visning for å gjere det lettare å vurdere.</p><p>Det er ok om vi får tilgang til innhald/funksjonalitet ved å måtte scrolle horisontalt og/eller vertikalt.</p><p>Merk at ei og same side kan sjå ulik ut i ordinær og forminska visning, f.eks. kan meny i forminska visning vere ein knapp, medan du i ordinær visning får sjå heile menyen.</p><p>Det er ikkje ok at innhald blir dekka over av anna innhald i innzooma visning, eller at innhald forsvinn frå sida.</p>",
             "type": "jaNei",
             "kilde": ["G142", "G146"],
             "ruting": {
@@ -196,7 +196,7 @@
         {
             "stegnr": "3.6",
             "spm": "Har nettsida ein innebygd mekanisme som let brukaren forstørre teksten?",
-            "ht": "Mekanismen kan vere lenker, knappar eller lenka bilete med alternativ tekst.",
+            "ht": "Mekanismen kan vere lenker, knappar eller lenka bilde med alternativ tekst.",
             "type": "jaNei",
             "kilde": ["G178"],
             "ruting": {
@@ -207,7 +207,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200 % utan at innhald eller funksjonalitet går tapt."
                 }
             }
         },
@@ -226,7 +226,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200 % utan at innhald eller funksjonalitet går tapt."
                 }
             }
         },
@@ -259,7 +259,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200 % utan at innhald eller funksjonalitet går tapt."
                 }
             }
         },
@@ -308,7 +308,7 @@
                 "alle": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                    "utfall": "Nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200 % utan at innhald eller funksjonalitet går tapt."
                 }
             }
         },
@@ -392,7 +392,7 @@
                             "handling": {
                                 "type": "avslutt",
                                 "fasit": "Nei",
-                                "utfall": "Nettside manglar/har mangelfull mekanisme for zoom/forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt."
+                                "utfall": "Nettside manglar/har mangelfull mekanisme for zoom/forstørring. Tekst kan ikkje forstørrast til minst 200 % utan at innhald eller funksjonalitet går tapt."
                             }
                         },
                         "2": {
@@ -403,7 +403,7 @@
                             "handling": {
                                 "type": "avslutt",
                                 "fasit": "Ja",
-                                "utfall": "Nettside har mekanisme for forstørring til 200%, utan utan tap av innhald eller funksjonalitet."
+                                "utfall": "Nettside har mekanisme for forstørring til 200 %, utan tap av innhald eller funksjonalitet."
                             }
                         }
                     }

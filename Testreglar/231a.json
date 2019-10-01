@@ -1,0 +1,236 @@
+{
+    "id": "2.3.1a",
+    "type": "web",
+    "versjon": "1.0",
+    "sistOppdatertAvDifi": "17.09.2019",
+    "spraak": "no",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.5"
+        },
+        {
+            "title": "3.6"
+        },
+        {
+            "title": "3.9"
+        }
+    ],
+
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi URL eller side-ID.",
+            "type": "tekst",
+            "label": "URL/Side:",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            } 
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har nettsida innhald som blinkar/gimtar?",
+            "ht": "<p>Sørg for at nettsida har lasta inn fullstendig før du går i gang med testen.</p><p>Blinking på grunn av skjerm eller innlasting av nettsida skal ikkje testast. Blinking er veksling mellom to visuelle tilstandar for å vekke merksemd. Glimt er motsatte parvise skift i relativ lysstyrke som kan forårsake (epileptiske) anfall.</p><p>Du skal vurdere alt innhald på nettsida. Dette omfattar også alle bilde, animasjonar og alle videoklipp. I videoklipp er det nok å teste dei første 5 minuttane av klippet.</p><p><strong>Merk:</strong> Du skal ikkje teste videoklipp i fullskjermsvisning.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "2.3"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Testside har ikkje innhald som glimtar."
+                }
+            }
+        },
+
+        {
+            "stegnr": "2.3",
+            "spm": "Sett oppløysinga på skjermen du testar på til 1024*768.",
+            "ht": "Dette gjer du ved å endre innstillingane på skjermen i ditt operativsystem.",
+            "type": "instruksjon",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                }
+            } 
+        },
+
+        {
+            "stegnr": "3.1",
+            "spm": "Beskriv innhaldet som blinkar",
+            "ht": "<p>Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.</p><p>Viss blinkinga skjer i ein video, skal du også skrive inn tidspunktet blinkinga skjer i videoen.</p>",
+            "type": "tekst",
+            "multilinje": true,
+            "label": "Innhald som blinkar:",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        }
+        ,
+        {
+            "stegnr": "3.2",
+            "spm": "Kva type innhald er det som blinkar?",
+            "ht": "",
+            "type": "radio",
+            "svarArray": ["Video", "Bilde", "Anna"],
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Mål størrelse på innhaldet som blinkar på nettsida. ",
+            "ht": "<p>Du kan bruke eit verktøy for å ta skjermbilete, som for eksempel Snagit. Verktøyet må vise kor mange pikslar skjermutklippet er.</p><p>Viss det finst fleire førekomstar av innhald som blinkar innafor same skjermhøgde på nettsida, skal du måle opp eit område om inneheld desse.</p>",
+            "type": "instruksjon",
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Kva er breidda på området i pikslar?",
+            "ht": "Registrer breidda i pikslar",
+            "type": "tekst",
+            "filter": "tal",
+            "label": "Breidda på området:",
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Kva er høgda på området i pikslar?",
+            "ht": "Registrer høgda i pikslar",
+            "type": "tekst",
+            "filter": "tal",
+            "label": "Høgda på området:",
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.6",
+            "spm": "Størrelsen på området i kvadratpikslar.",
+            "ht": "Blir rekna ut automatisk.",
+            "type": "tekst",
+            "verdi": "#steg(3.4) * #steg(3.5)",
+            "filter": "tal",
+            "label": "Størrelsen på området i kvadratpikslar:",
+            "kilde": ["G167"],
+            "ruting": {
+                "alle": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "3.6",
+                            "type": "mellom",
+                            "verdi": 0,
+                            "verdi2": 21824,
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Ja",
+                                "utfall": "Testside har innhald som blinkar. Innhald som blinkar dekker mindre enn 21 824 kvadratpikslar."  
+                            }
+                        },
+                        "2": {
+                            "sjekk": "3.6",
+                            "type": "mellom",
+                            "verdi": 21825,
+                            "verdi2": 99999999999,
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.7"  
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.7",
+            "spm": "Ta eit opptak av blinkinga og lagre opptaket.",
+            "ht": "Du kan bruke eit verktøy for å ta opptak, som for eksempel Snagit. Ta eit skjermopptak av blinkinga.",
+            "type": "instruksjon",
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                }
+            }
+        },
+
+        {
+            "stegnr": "3.8",
+            "spm": "Opne skjermopptaket og spel av opptaket med låg avspelingshastigheit.",
+            "ht": "<p>Still inn avspelingsfart til lågaste nivå i videospelaren.</p><p>Du kan for eksempel bruke avspelaren VLC. I VLC gjer du følgjande:</p><ul><li>Vis statuslinja, for å få tilgang til mekanismen for å stille inn avspelingshastigheit.</li><li>Velg lågaste avspelingshastigheit i avspelaren.</li></ul>",
+            "type": "instruksjon",
+            "kilde": [""],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.9"
+                }
+            } 
+        },
+
+        {
+            "stegnr": "3.9",
+            "spm": "Finst det blinking med frekvens på meir enn tre blink i sekundet?",
+            "ht": "Registrer med stikkord.",
+            "type": "jaNei",
+            "kilde": ["G19"],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Testside har innhald som blinkar. Det er fleire enn tre glimt i sekundet."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Testside har innhald som blinkar. Det er færre enn tre glimt i sekundet."
+                }
+            } 
+        }
+    ]
+}
