@@ -107,7 +107,7 @@
         },
         {
             "stegnr": "3.2",
-            "spm": "Kva type funksjonalitet er elementet en del av?",
+            "spm": "Kva type funksjonalitet er elementet ein del av?",
             "ht": "Velg frå alternativa under.",
             "type": "radio",
             "svarArray": ["Skjema", "Mediaspelar", "Meny", "Modalvindauge", "Anna"],
