@@ -46,8 +46,8 @@
     "steg": [
         {
             "stegnr": "2.1",
-            "spm": "Registrer url til nettstaden",
-            "ht": "Skriv inn url til nettstaden.",
+            "spm": "Registrer URL til nettstaden",
+            "ht": "Skriv inn URL til nettstaden.",
             "type": "tekst",
             "label": "Nettstad:",
             "oblig": true,
@@ -61,7 +61,7 @@
         {
             "stegnr": "2.2",
             "spm": "Består nettstaden av berre ei nettside?",
-            "ht": "Merk at nettstader som berre består av ei side, er unnateke kravet, jamfør formulering i SK.",
+            "ht": "Merk at nettstader som berre består av ei side, er unnateke kravet, jamfør formulering i suksesskriteriet.",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -77,7 +77,7 @@
         {
             "stegnr": "2.3",
             "spm": "Finst det ei liste med lenker til innhaldet på nettstaden?",
-            "ht": "<p>Ei slik liste med lenker kan vere i form av: </p><ul><li>ein meny</li><li>innhaldsliste</li></ul>",
+            "ht": "<p>Ei slik liste med lenker kan vere i form av </p><ul><li>ein meny</li><li>innhaldsliste</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "alle": {
@@ -89,7 +89,7 @@
         {
             "stegnr": "2.4",
             "spm": "Har nettstaden søkefunksjon?",
-            "ht": "<p>Søkefelt på same side eller lenke til søk.</p><p>Merk at søkefunksjonen skal ligge på den aktuelle nettstaden og ikkje på ein annan nettstad, som for eksempel google eller kvasir. Nettstaden kan bruke eksterne søk, men søkefunksjonen skal uansett ligge på nettstaden.</p>",
+            "ht": "<p>Søkefelt på same side eller lenke til søk.</p><p>Merk at søkefunksjonen skal ligge på den aktuelle nettstaden og ikkje på ein annan nettstad, som for eksempel Google eller Kvasir. Nettstaden kan bruke eksterne søk, men søkefunksjonen skal uansett ligge på nettstaden.</p>",
             "type": "jaNei",
             "ruting": {
                 "alle": {
@@ -113,7 +113,7 @@
         {
             "stegnr": "2.6",
             "spm": "Har nettstaden andre måtar å navigere på, for eksempel ein alfabetisk sideoversikt?",
-            "ht": "<p>Søkefelt på same side eller lenke til søk.</p><p>Merk at søkefunksjonen skal ligge på den aktuelle nettstaden og ikkje på ein annan nettstad, som for eksempel google eller kvasir. Nettstaden kan bruke eksterne søk, men søkefunksjonen skal uansett ligge på nettstaden.</p>",
+            "ht": "<p>Søkefelt på same side eller lenke til søk.</p><p>Merk at søkefunksjonen skal ligge på den aktuelle nettstaden og ikkje på ein annan nettstad, som for eksempel Google eller Kvasir. Nettstaden kan bruke eksterne søk, men søkefunksjonen skal uansett ligge på nettstaden.</p>",
             "type": "jaNei",
             "ruting": {
                 "alle": {
@@ -148,7 +148,7 @@
         },
         {
             "stegnr": "3.1",
-            "spm": "Oppgi url til nettsida som skal testast.",
+            "spm": "Oppgi URL til nettsida som skal testast.",
             "ht": "Skriv inn URL/Side-ID.",
             "type": "tekst",
             "label": "Element",
@@ -163,7 +163,7 @@
         {
             "stegnr": "3.2",
             "spm": "Er nettsida du har opna ein del av ein prosess, der kvar enkelt handling er nødvendig for å gjennomføre ein aktivitet? ",
-            "ht": "<p>Merk at nettsider som er ein del av eller resultat av ein prosess, er unnateke kravet.</p><p>Eksempel på slike prosessar:</p><ul><li>kjøpsprosess i nettbutikk, frå ein søker opp ei vare, til vara er kjøpt og betalt</li><li>bruk av nettbank</li><li>søk og andre skjema</li></ul>",
+            "ht": "<p>Merk at nettsider som er ein del av eller resultat av ein prosess, er unnateke kravet.</p><p>Eksempel på slike prosessar</p><ul><li>kjøpsprosess i nettbutikk, frå ein søker opp ei vare, til vara er kjøpt og betalt</li><li>bruk av nettbank</li><li>søk og andre skjema</li></ul>",
             "type": "jaNei",
             "kilde": [],
             "ruting": {
@@ -237,7 +237,7 @@
         {
             "stegnr": "3.3",
             "spm": "Prøv å finne aktuell testside ved å navigere i meny/lenkesamling.",
-            "ht": "Merk at nettstader som berre består av ei side, er unnateke kravet, jamfør formulering i SK.",
+            "ht": "Merk at nettstader som berre består av ei side, er unnateke kravet, jamfør formulering i suksesskriteriet.",
             "type": "instruksjon",
             "kilde": ["G125", "G126"],
             "ruting": {
@@ -250,7 +250,7 @@
         {
             "stegnr": "3.4",
             "spm": "Kom du til forventa side ved å navigere i meny/lenkesamling?",
-            "ht": "Merk at nettstader som berre består av ei side, er unnateke kravet, jamfør formulering i SK.",
+            "ht": "Merk at nettstader som berre består av ei side, er unnateke kravet, jamfør formulering i suksesskriteriet.",
             "type": "jaNei",
             "kilde": ["G125", "G126"],
             "ruting": {
@@ -532,7 +532,7 @@
         {
             "stegnr": "3.9",
             "spm": "Finn du testsida eller området på nettstaden som testsida tilhøyrer, ved hjelp av nettstadkartet?",
-            "ht": "<p>Ein eventuell brødsmulesti kan i informasjon om kva område testsida høyrer til under.</p><p>Du kan også søke etter aktuell testside eller område ved å bruke ctrl+F.</p>",
+            "ht": "<p>Ein eventuell brødsmulesti kan i informasjon om kva område testsida høyrer til under.</p><p>Du kan også søke etter aktuell testside eller område ved å bruke Ctrl+F.</p>",
             "type": "jaNei",
             "kilde": ["G63"],
             "ruting": { 
@@ -589,7 +589,7 @@
         {
             "stegnr": "3.10",
             "spm": "Finn du testsida eller området på nettstaden som testsida tilhøyrer, i for eksempel ein alfabetisk sideoversikt?",
-            "ht": "<p>Ein eventuell brødsmulesti kan i informasjon om kva område testsida høyrer til under.</p><p>Du kan også søke etter aktuell testside eller område ved å bruke ctrl+F.</p>",
+            "ht": "<p>Ein eventuell brødsmulesti kan gje informasjon om kva område testsida høyrer til under.</p><p>Du kan også søke etter aktuell testside eller område ved å bruke Ctrl+F.</p>",
             "type": "jaNei",
             "kilde": [],
             "ruting": {
