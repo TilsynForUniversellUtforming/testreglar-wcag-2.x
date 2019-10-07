@@ -1,0 +1,274 @@
+{
+    "id": "3.2.4a",
+    "type": "web",
+    "versjon": "1.0",
+    "sistOppdatertAvDifi": "07.10.2019",
+    "spraak": "no",
+    "side": "2.1",
+    "element": "Side",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.3"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.5"
+        },
+        {
+            "title": "3.6"
+        },
+        {
+            "title": "3.8"
+        },
+        {
+            "title": "3.9"
+        },
+        {
+            "title": "3.10"
+        },
+        {
+            "title": "3.11"
+        },
+        {
+            "title": "3.12"
+        }
+    ],
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi URL eller side-ID.",
+            "type": "tekst",
+            "label": "URL/Side:",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            } 
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har nettstaden ein global søkefunksjon?",
+            "ht": "<p>Gjer ein visuell inspeksjon. Ein global søkefunksjon har eit søkefelt kor brukaren kan skrive inn søkebegrep for å søke i alle sidene på nettstaden.</p><p>For å gjere det lettare å teste, kan du opne startsida på ein skjerm for å samanlikne med andre nettsider på ein annan skjerm.</p><p>Bruk menyen, søk og andre formar for navigasjon på nettstaden for å opne fleire sider. Du skal finne ut om søkefunksjonen blir gjenteke på fleire av sidene du opna/navigerte til.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje  global søkefunksjon."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Opne ei anna nettside på nettstaden, som har også har søkefunksjonen.",
+            "ht": "",
+            "type": "instruksjon",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Oppgi URL for den andre nettsida der du identifiserte søkefunksjonen.",
+            "ht": "Skriv inn URL på ei slik form at vi kan nå aktuell nettside ved å klikke på lenka.",
+            "type": "tekst",
+            "label": "URL:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Ser søkefunksjonen lik ut på begge nettsidene?",
+            "ht": "<p>Gjer ein visuell inspeksjon og samanlikn nettsidene.</p><p>Søkefunksjonen skal vere bygd opp av dei same komponentane, feks eit skjemafelt og ein knapp. Det skal ikkje vere tydelege visuelle forskjellar på søkefunksjonen på nettsidene</p>",
+            "type": "jaNei",
+            "kilde": ["G197", "F31"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Global søkefunksjonen har ikkje konsekvent visuell utforming."
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Har søkefeltet den same identfikasjonen i koden på begge nettsidene?",
+            "ht": "<p>Sjå i koden. Du kan bruke kodeverktøyet i nettlesaren.</p><p>Søkefeltet kan vere identifisert på følgjande måte:</p><ul><li>Attributta aria-label eller aria-labelledby</li><li>Kopling til eit &#x3C;label&#x3E;-element</li><li>Innebygging i eit &#x3C;label&#x3E;-element</li><li>title-attributtet.</li></ul><p>Merk at kodinga ikkje treng å vere den same, så lenge identifikasjonen/teksten er identisk. Merk at mangel på identifikasjon er også godkjent viss det er likt i begge tilfelle.</p><p>For meir informasjon om identifikasjon av skjemaelement, sjå testregel 4.1.2a.</p>",
+            "type": "jaNei",
+            "kilde": ["G197", "F31"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Global søkefunksjon har ikkje konsekvent identifikasjon i koden."
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Har søkefunksjonen ein mekanisme for å starte søket?",
+            "ht": "Dette kan for eksempel vere ein søkeknapp, lenka bilete eller ikon. Mekanismen kan ligge visuelt inne i søkefeltet.",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                }
+            }
+        },
+        {
+            "stegnr": "3.6",
+            "spm": "Har mekanismen for å starte søket den same identfikasjonen i koden på begge nettsidene?",
+            "ht": "<p>Sjå i koden. Du kan bruke kodeverktøyet i nettlesaren.</p><p>Søkeknappen kan vere identifisert på følgjande måte:</p><ul><li>Attributta aria-label eller aria-labelledby</li><li>Tekst i &#x3C;button&#x3E;-elementet</li><li>Attributta alt eller value på &#x3C;input&#x3E;-element</li><li>Kopling til eit &#x3C;label&#x3E;-element</li><li>Innebygging i eit &#x3C;label&#x3E;-element</li><li>title-attributtet</li></ul><p>Merk at kodinga ikkje treng å vere den same, så lenge identifikasjonen/teksten er identisk. Merk at mangel på identifikasjon er også godkjent viss det er likt i begge tilfelle.</p><p>For meir informasjon om identifikasjon av knappar, sjå testregel 4.1.2b.</p>",
+            "type": "jaNei",
+            "kilde": ["G197", "F31"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Global søkefunksjon har ikkje konsekvent identifikasjon i koden."
+                }
+            }
+        },
+        {
+            "stegnr": "3.7",
+            "spm": "Opne ei tredje nettside på nettstaden, som har også har søkefunksjonen.",
+            "ht": "",
+            "type": "instruksjon",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.8",
+            "spm": "Oppgi URL for den tredje der du identifiserte søkefunksjonen.",
+            "ht": "Skriv inn URL på ei slik form at vi kan nå aktuell nettside ved å klikke på lenka.",
+            "type": "tekst",
+            "label": "URL:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.9"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.9",
+            "spm": "Ser søkefunksjonen lik ut på begge nettsidene?",
+            "ht": "<p>Gjer ein visuell inspeksjon og samanlikn nettsidene.</p><p>Søkefunksjonen skal vere bygd opp av dei same komponentane, feks eit skjemafelt og ein knapp. Det skal ikkje vere tydelege visuelle forskjellar på søkefunksjonen på nettsidene</p>",
+            "type": "jaNei",
+            "kilde": ["G197", "F31"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.10"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Global søkefunksjonen har ikkje konsekvent visuell utforming."
+                }
+            }
+        },
+        {
+            "stegnr": "3.10",
+            "spm": "Har søkefeltet den same identfikasjonen i koden på begge nettsidene?",
+            "ht": "<p>Sjå i koden. Du kan bruke kodeverktøyet i nettlesaren.</p><p>Søkefeltet kan vere identifisert på følgjande måte:</p><ul><li>Attributta aria-label eller aria-labelledby</li><li>Kopling til eit &#x3C;label&#x3E;-element</li><li>Innebygging i eit &#x3C;label&#x3E;-element</li><li>title-attributtet.</li></ul><p>Merk at kodinga ikkje treng å vere den same, så lenge identifikasjonen/teksten er identisk. Merk at mangel på identifikasjon er også godkjent viss det er likt i begge tilfelle.</p><p>For meir informasjon om identifikasjon av skjemaelement, sjå testregel 4.1.2a.</p>",
+            "type": "jaNei",
+            "kilde": ["G197", "F31"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.11"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Global søkefunksjon har ikkje konsekvent identifikasjon i koden."
+                }
+            }
+        },
+        {
+            "stegnr": "3.11",
+            "spm": "Har søkefunksjonen ein mekanisme for å starte søket?",
+            "ht": "Dette kan for eksempel vere ein søkeknapp, lenka bilete eller ikon. Mekanismen kan ligge visuelt inne i søkefeltet.",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.12"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Global søkefunksjon har konsekvent visuell utforming og identifikasjon i koden."
+                }
+            }
+        },
+        {
+            "stegnr": "3.12",
+            "spm": "Har mekanismen for å starte søket den same identfikasjonen i koden på begge nettsidene?",
+            "ht": "<p>Sjå i koden. Du kan bruke kodeverktøyet i nettlesaren.</p><p>Søkeknappen kan vere identifisert på følgjande måte:</p><ul><li>Attributta aria-label eller aria-labelledby</li><li>Tekst i &#x3C;button&#x3E;-elementet</li><li>Attributta alt eller value på &#x3C;input&#x3E;-element</li><li>Kopling til eit &#x3C;label&#x3E;-element</li><li>Innebygging i eit &#x3C;label&#x3E;-element</li><li>title-attributtet</li></ul><p>Merk at kodinga ikkje treng å vere den same, så lenge identifikasjonen/teksten er identisk. Merk at mangel på identifikasjon er også godkjent viss det er likt i begge tilfelle.</p><p>For meir informasjon om identifikasjon av knappar, sjå testregel 4.1.2b.</p>",
+            "type": "jaNei",
+            "kilde": ["G197", "F31"],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Global søkefunksjon har konsekvent visuell utforming og identifikasjon i koden."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Global søkefunksjon har ikkje konsekvent identifikasjon i koden."
+                }
+            }
+        }
+    ]
+}
