@@ -151,7 +151,7 @@
                 "alle": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Skjemaelement får kontekstendring ved tastaturnavigasjon, utan at det på er varsla på førehand."
+                    "utfall": "Skjemaelement får kontekstendring ved tastaturnavigasjon, utan at det er varsla på førehand."
                 }
             }
         }
