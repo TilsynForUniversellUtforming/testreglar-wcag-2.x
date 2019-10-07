@@ -145,8 +145,7 @@ Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar. Me
 
 "Ruting til" er det øverste nivået i en ruting. Den vanlege alternativa er  
 -   Alle (Ruting uansett svar)
--   Ja
--   Nei
+-   Ja/Nei
 -   [Alternativ frå radioboks]
 
 ### Ruting Alle
