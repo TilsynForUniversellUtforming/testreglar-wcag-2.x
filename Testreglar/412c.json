@@ -152,12 +152,12 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Iframe er kopla til ein ledetekst i koden. Ledeteksten identifiserer innhaldet i iframe."
+                    "utfall": "Iframe er kopla til ein ledetekst i koden. Ledeteksten identifiserar innhaldet i iframe."
                 },
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Ledeteksten identifiserer ikkje innhaldet i iframe."
+                    "utfall": "Ledeteksten identifiserar ikkje innhaldet i iframe."
                 }
             }
         }
