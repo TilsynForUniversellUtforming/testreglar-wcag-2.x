@@ -65,7 +65,7 @@
         },
         {
             "stegnr": "2.3",
-            "spm": "Beskriv skjemaet/prosessen",
+            "spm": "Beskriv skjemaet/prosessen.",
             "ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
             "type": "tekst",
             "label": "Skjema/prosess:",
@@ -81,7 +81,7 @@
         {
             "stegnr": "2.4",
             "spm": "Får du sende inn eit skjema der du har fyllt inn data i feil format eller verdi?",
-            "ht": "<p>Legg inn feil inndata i alle skjemaelement. Fullfør eller send inn skjemaet.</p><p>Eksempel på datafeil er</p><ul><li>Postnummer som inneheld bokstavar</li><li>Namn som inneheld tal eller spesialteikn</li><li>Ugyldig e-postformat</li><li>Ugyldig datoformat</li><li>Data utanfor grenseverdi, for eksempel månad 14 i ein dato</li></ul>",
+            "ht": "<p>Legg inn feil inndata i alle skjemaelement. Fullfør eller send inn skjemaet.</p><p>Eksempel på datafeil er:</p><ul><li>Postnummer som inneheld bokstavar.</li><li>Namn som inneheld tal eller spesialteikn.</li><li>Ugyldig e-postformat.</li><li>Ugyldig datoformat.</li><li>Data utanfor grenseverdi, for eksempel månad 14 i ein dato.</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -113,7 +113,7 @@
         {
             "stegnr": "3.2",
             "spm": "Er informasjonen du har fylt inn fortsatt i skjemaelementet?",
-            "ht": "<p>Sensitiv informasjon treng ikkje å fortsatt ligge i skjemaet etter innsendt skjema.</p><p>Det er ok at inndata blir korrigert automatisk.</p>",
+            "ht": "<p>Sensitiv informasjon treng ikkje å fortsatt ligge i skjemaet etter innsendt skjema.</p><p>Det er OK at inndata blir korrigert automatisk.</p>",
             "type": "jaNei",
             "kilde": ["G84", "G85"],
             "ruting": {
