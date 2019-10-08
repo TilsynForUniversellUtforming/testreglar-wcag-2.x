@@ -144,15 +144,15 @@
         },
         {
             "stegnr": "3.6",
-            "spm": "Identifiserer ledeteksten innhaldet som ligg i &#x3C;iframe&#x3E;?",
-            "ht": "<p>Ta utgangspunktet i ledeteksten du fann i førre steg. Det er tilstrekkeleg at ledeteksten identifiserer innhaldet. Ledeteksten treng ikkje gi ei utfyllande skildring av innhaldet.</p><p>For reklame er det tilstrekkeleg at ledeteksten seier at det handlar om reklame.</p><p><strong>Merk:</strong> Ledeteksten skal vere på same språk som nettsida.</p>",
+            "spm": "Identifiserar ledeteksten innhaldet som ligg i &#x3C;iframe&#x3E;?",
+            "ht": "<p>Ta utgangspunktet i ledeteksten du fann i førre steg. Det er tilstrekkeleg at ledeteksten identifiserar innhaldet. Ledeteksten treng ikkje gi ei utfyllande skildring av innhaldet.</p><p>For reklame er det tilstrekkeleg at ledeteksten seier at det handlar om reklame.</p><p><strong>Merk:</strong> Ledeteksten skal vere på same språk som nettsida.</p>",
             "type": "jaNei",
             "kilde": ["G108"],
             "ruting": {
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Iframe er kopla til ein ledetekst i koden.Ledeteksten identifiserer innhaldet i iframe."
+                    "utfall": "Iframe er kopla til ein ledetekst i koden. Ledeteksten identifiserer innhaldet i iframe."
                 },
                 "nei": {
                     "type": "avslutt",
