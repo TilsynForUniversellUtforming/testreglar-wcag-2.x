@@ -1,0 +1,278 @@
+{
+    "id": "2.4.1a",
+    "type": "web",
+    "versjon": "1.0",
+    "sistOppdatertAvDifi": "09.10.2019",
+    "spraak": "no",
+    "side": "2.1",
+    "element": "Side",
+    "kolonner": [
+        {
+            "title": "3.1"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.3"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.5"
+        },
+        {
+            "title": "3.6"
+        },
+        {
+            "title": "3.8"
+        },
+        {
+            "title": "3.10"
+        }
+    ],
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi URL eller side-ID.",
+            "type": "tekst",
+            "label": "URL/Side:",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Har nettsida ei blokk med innhald, før du kjem til hovudinnhaldet, som blir gjenteke på fleire sider på nettstaden?",
+            "ht": "<p>Gjer ein visuell inspeksjon. Ta stikkprøve av to andre enkeltsider på nettstaden for å finne ut om innhaldet blir gjenteke på fleire sider.</p><p>Nettstader som består av berre ei nettside, vil aldri ha innhald som blir gjenteke på fleire sider.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje ei blokk med innhald som blir gjenteke på fleire sider på nettstaden, og som ligg før hovudinnhaldet."
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Har nettsida ein mekanisme som let brukaren hoppe til hovudinnhaldet som blant dei tre første tab-stega i tastaturnavigasjonen?",
+            "ht": "<p>Start tastatusnavigeringa fra starten av sida. Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet.</p><p>Ein slik mekanisme kan vere for eksempel ei lenke eller ein knapp. Den må ligge før blokka, og vanlegvis på første tab-steg.</p><p>Hvis mekanismen ikkje blir synleg ved fokus, sjå i statuslinja i nettlesaren for å følgje med på navigasjonen.</p><p>Det kan vere fleire slike mekanismar blant dei første tab-stega på nettstaden. Du skal teste mekanismen som hoppar til hovudinnhaldet.</p>",
+            "type": "jaNei",
+            "kilde": ["G1", "G123"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                }
+            }
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Må du navigere meir enn 5 tab-steg for å komme til hovudinnhaldet på nettsida?",
+            "ht": "Brukaren skal raskt kunne nå hovudinnhaldet på nettsida. Dersom brukaren må navigere gjennom meir enn 5 tab-steg, er ikkje navigasjonen rask.",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Det finst ikkje snarveglenke for å hoppe til hovudinnhaldet. Testside har ei blokk med innhald som blir gjenteken på fleire sider. Det trengst meir enn 5 tab-steg for å komme til hovudinnhaldet."
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har færre enn 5 tab-steg for å komme til hovudinnhaldet."
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Ligg mekanismen før blokka med innhald?",
+            "ht": "Sjekk at mekanismen ligg før blokka med innhald som blir gjenteke. Trykk på tab-tasten og Shift+Tab for å sjå kor mekanismen ligg i tastaturnavigeringa.",
+            "type": "jaNei",
+            "kilde": ["G1", "G123"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.5",
+                    "delutfall": {
+                        "nr": 0,
+                        "fasit": "Ja",
+                        "tekst": ""
+                    }
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.5",
+                    "delutfall": {
+                        "nr": 0,
+                        "fasit": "Nei",
+                        "tekst": "-mekanismen ligg ikkje før blokka med innhald<br>"
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Blir mekanismen synleg ved fokus?",
+            "ht": "Mekanismen kan anten bli synleg når den får tastaturfokus, eller den kan alltid vere synleg.",
+            "type": "jaNei",
+            "kilde": ["G1", "G123"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.6",
+                    "delutfall": {
+                        "nr": 1,
+                        "fasit": "Ja",
+                        "tekst": ""
+                    }
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.6",
+                    "delutfall": {
+                        "nr": 1,
+                        "fasit": "Nei",
+                        "tekst": "-mekanismen blir ikkje synleg ved fokus<br>"
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.6",
+            "spm": "Er teksten på mekanismen beskrivande?",
+            "ht": "Teksten kan for eksempel vere \"Hopp til hovudinnhald\", \"Hopp over menyen\" eller lignande, som seier at brukaren kan hoppe til hovudinnhaldet på nettsida.",
+            "type": "jaNei",
+            "kilde": ["G1", "G123"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.7",
+                    "delutfall": {
+                        "nr": 2,
+                        "fasit": "Ja",
+                        "tekst": ""
+                    }
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.7",
+                    "delutfall": {
+                        "nr": 2,
+                        "fasit": "Nei",
+                        "tekst": "-mekanismen har ikkje tekst som er beskrivande<br>"
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.7",
+            "spm": "Aktiver mekanismen.",
+            "ht": "",
+            "type": "instruksjon",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                }
+            }
+        },
+        {
+            "stegnr": "3.8",
+            "spm": "Blir visuelt fokus flytta til hovudinnhaldet på nettsida?",
+            "ht": "Nettsida skal rulle til hovudinnhaldet, slik at starten på hovudinnhaldet ligg øvst i nettlesaren.",
+            "type": "jaNei",
+            "kilde": ["G1", "G123"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.9",
+                    "delutfall": {
+                        "nr": 3,
+                        "fasit": "Ja",
+                        "tekst": ""
+                    }
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.9",
+                    "delutfall": {
+                        "nr": 3,
+                        "fasit": "Nei",
+                        "tekst": "-mekanismen flyttar ikkje visuelt fokus til hovudinnhaldet ved aktivering<br>"
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.9",
+            "spm": "Aktiver mekanismen.",
+            "ht": "",
+            "type": "instruksjon",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.10"
+                }
+            }
+        },
+        {
+            "stegnr": "3.10",
+            "spm": "Blir tastaturfokus flytta til det første aktive elementet i hovudinnhaldet?",
+            "ht": "<p>Eksempel på aktive element er skjemafelt, lenker, knappar og lignande.</p><p>Eit eksempel på ein vanleg feil, er at tastaturnavigeringa fortsetter frå toppen av nettsida.</p>",
+            "type": "jaNei",
+            "kilde": ["G1", "G123"],
+            "ruting": {
+                "ja": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "type": "talDersom",
+                            "sjekk": ["3.4", "3.5", "3.6", "3.8", "3.10"],
+                            "verdi": "Ja",
+                            "mellom1": 0,
+                            "mellom2": 4,
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Det finst ein mekanisme for å hoppe til hovudinnhaldet der noko av det følgande er avdekka:<br>#delutfall(0)#delutfall(1)#delutfall(2)#delutfall(3)"  
+                            }
+                        },
+                        "2": {
+                            "type": "talDersom",
+                            "sjekk": ["3.4", "3.5", "3.6", "3.8", "3.10"],
+                            "verdi": "Ja",
+                            "mellom1": 5,
+                            "mellom2": 5,
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Ja",
+                                "utfall": "Testside har snarveglenke for å hoppe til hovudinnhaldet."  
+                            }
+                        }
+                    }
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Det finst ein mekanisme for å hoppe til hovudinnhaldet der noko av det følgande er avdekka:<br>#delutfall(0)#delutfall(1)#delutfall(2)#delutfall(3)-mekanismen flyttar ikkje tastaturfokus til det første aktive elementet i hovudinnhaldet ved aktivering"
+                }
+            }
+        }
+
+    ]
+}
