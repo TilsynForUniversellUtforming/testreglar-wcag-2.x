@@ -68,7 +68,7 @@
         },
         {
             "stegnr": "3.1",
-            "spm": "Beskriv skjemaet/prosessen",
+            "spm": "Beskriv skjemaet/prosessen.",
             "ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
             "type": "tekst",
             "label": "Skjema/prosess:",
@@ -95,8 +95,8 @@
         },
         {
             "stegnr": "3.3",
-            "spm": "Får du ein oppfordring om å gjennomgå inndata i skjemaet før innsending?",
-            "ht": "<p>Ei oppfordring kan vere for eksempel på formen:</p><ul><li>Ei formulering som \"Hugs å lese gjennom all informasjon før du sender inn\" eller \"Gjennomgå og bekreft at informasjonen er korrekt\".</li><li>At du får presentert all innskreve informasjon i skjemaet før innsending.</li><li>At inndatafeil blir oppdaga automatisk og og brukaren får beskjed.</li></ul>",
+            "spm": "Får du ei oppfordring om å gjennomgå inndata i skjemaet før innsending?",
+            "ht": "<p>Ei oppfordring kan vere for eksempel på formen:</p><ul><li>Ei formulering som \"Hugs å lese gjennom all informasjon før du sender inn\" eller \"Gjennomgå og bekreft at informasjonen er korrekt\".</li><li>At du får presentert all innskreve informasjon i skjemaet før innsending.</li><li>At inndatafeil blir oppdaga automatisk og brukaren får beskjed.</li></ul>",
             "type": "jaNei",
             "kilde": ["G98"],
             "ruting": {
@@ -118,7 +118,7 @@
         {
             "stegnr": "3.4",
             "spm": "Kan du gjennomgå all inndata i skjemaet før innsending?",
-            "ht": "<p>Skjemaet kan vere på ei side eller ligge over fleire sider. </p><p>Du kan gjennomgå inndata i skjemaet på ulike måtar</p><ul><li>Skjemaet går berre over ei side.</li><li>Det er mogeleg å bla mellom sidene i skjemaet. Viss skjemaet ligg over fleire sider, skal inndata fortsatt ligge i skjemaet når du navigerer fram og tilbake i skjemaet.</li><li>Du får ei oppsummering av all inndata i skjemaet dersom skjemaet går over fleire sider.</li></ul>",
+            "ht": "<p>Skjemaet kan vere på ei side eller ligge over fleire sider. </p><p>Du kan gjennomgå inndata i skjemaet på ulike måtar:</p><ul><li>Skjemaet går berre over ei side.</li><li>Det er mogleg å bla mellom sidene i skjemaet. Viss skjemaet ligg over fleire sider, skal inndata fortsatt ligge i skjemaet når du navigerer fram og tilbake i skjemaet.</li><li>Du får ei oppsummering av all inndata i skjemaet dersom skjemaet går over fleire sider.</li></ul>",
             "type": "jaNei",
             "kilde": ["G98"],
             "ruting": {
@@ -164,7 +164,7 @@
         {
             "stegnr": "3.6",
             "spm": "Finst det ein egen mekanisme for å bekrefte at du har lest gjennom informasjonen du skreiv inn og er klar til å sende inn skjemaet?",
-            "ht": "<p>Mekanismen kan vere for eksempel ein avkryssingsboks eller lignande eller ein eigen knapp for å fortsette innsending.</p><p>Ledeteksten til mekanismen kan for eksempel vere</p><ul><li>\"Eg bekreftar at informasjonen er korrekt\"</li><li>\"Eg forstår betingelsene\"</li><li>\"Fortsett\"</li></ul>",
+            "ht": "<p>Mekanismen kan vere for eksempel ein avkryssingsboks eller lignande, eller ein eigen knapp for å fortsette innsending.</p><p>Ledeteksten til mekanismen kan for eksempel vere:</p><ul><li>\"Eg bekreftar at informasjonen er korrekt\"</li><li>\"Eg forstår betingelsene\"</li><li>\"Fortsett\"</li></ul>",
             "type": "jaNei",
             "kilde": ["G155", "G168"],
             "ruting": {
@@ -187,7 +187,7 @@
         {
             "stegnr": "3.7",
             "spm": "Er mekanismen separat frå knappen for å sende inn skjemaet?",
-            "ht": "<p>Mekanismen og knappen for å sende inn skal vere to separate element. Det er ikkje mogeleg å kombinere desse to, og ein knapp med teksten for eksempel «Godkjenn og send inn» er ikkje tilstrekkeleg.</p>",
+            "ht": "<p>Mekanismen og knappen for å sende inn skal vere to separate element. Det er ikkje mogleg å kombinere desse to, og ein knapp med teksten for eksempel «Godkjenn og send inn» er ikkje tilstrekkeleg.</p>",
             "type": "jaNei",
             "kilde": ["G155"],
             "ruting": {
@@ -210,7 +210,7 @@
         {
             "stegnr": "3.8",
             "spm": "Får du til å sende inn skjemaet utan å krysse av/velje mekanismen?",
-            "ht": "Viss du ikkje får til å sende inn skjemaet uten å krysse av betyr det at mekianismen fungerar.",
+            "ht": "Viss du ikkje får til å sende inn skjemaet uten å krysse av betyr det at mekanismen fungerar.",
             "type": "jaNei",
             "kilde": ["G155"],
             "ruting": {
