@@ -43,7 +43,7 @@
         },
         {
             "stegnr": "2.2",
-            "spm": "Har nettsida  fuksjonalitet for sletting av brukarstyrt data?",
+            "spm": "Har nettsida fuksjonalitet for sletting av brukarstyrt data?",
             "ht": "<p>Testsida skal innehalde funksjonalitet for å slette brukarstyrte data.",
             "type": "jaNei",
             "ruting": {
@@ -74,7 +74,7 @@
         },
         {
             "stegnr": "3.2",
-            "spm": "Prøv å slette lagra informasjon",
+            "spm": "Prøv å slette lagra informasjon.",
             "ht": "Prøv å slette lagra informasjon fra skjemaet/området.",
             "type": "instruksjon",
             "ruting": {
@@ -86,8 +86,8 @@
         },
         {
             "stegnr": "3.3",
-            "spm": "Finst det en egen mekanisme for å bekrefte at du har til hensikt å slette informasjonen?",
-            "ht": "<p>Forespørselen om å bekrefte skal informere brukaren om kva handling dei er i ferd med å gjennomføre og kva konsekvensar det vil få. </p><p>Mekanismen kan vere for eksempel ein avkryssingsboks eller lignande eller ein eigen knapp for å fortsette sletting.</p><p>Ledeteksten til mekanismen kan for eksempel vere</p><ul><li>\"Eg bekreftar sletting\"</li><li>\"Eg ønskjer å slette informasjonen\"</li><li>\"Fortsett\"</li></ul>",
+            "spm": "Finst det ein eigen mekanisme for å bekrefte at du har til hensikt å slette informasjonen?",
+            "ht": "<p>Førespurnaden om å bekrefte skal informere brukaren om kva handling dei er i ferd med å gjennomføre og kva konsekvensar det vil få. </p><p>Mekanismen kan vere for eksempel ein avkryssingsboks eller lignande eller ein eigen knapp for å fortsette sletting.</p><p>Ledeteksten til mekanismen kan for eksempel vere</p><ul><li>\"Eg bekreftar sletting\"</li><li>\"Eg ønskjer å slette informasjonen\"</li><li>\"Fortsett\"</li></ul>",
             "type": "jaNei",
             "kilde": ["G155", "G168"],
             "ruting": {
@@ -109,7 +109,7 @@
         {
             "stegnr": "3.4",
             "spm": "Er mekanismen separat frå knappen for å gjennomføre sletting?",
-            "ht": "Mekanismen og knappen for å slette skal vere to separate element. Det er ikkje mogeleg å kombinere desse to, og ein knapp med teksten for eksempel «bekreft og slett» er ikkje tilstrekkeleg. ",
+            "ht": "Mekanismen og knappen for å slette skal vere to separate element. Det er ikkje mogleg å kombinere desse to, og ein knapp med teksten for eksempel «bekreft og slett» er ikkje tilstrekkeleg. ",
             "type": "jaNei",
             "kilde": ["G155"],
             "ruting": {
@@ -124,7 +124,7 @@
                     "delutfall": {
                         "nr": 1,
                         "fasit": "Nei",
-                        "tekst": "Skjema/område har ein mekanisme for å bekrefte sletting av informasjon, som ikkje  er skilt frå mekanismen for å gjennomføre sletting."
+                        "tekst": "Skjema/område har ein mekanisme for å bekrefte sletting av informasjon, som ikkje er skilt frå mekanismen for å gjennomføre sletting."
                     }
                 }
             }
