@@ -1,0 +1,296 @@
+{
+    "id": "3.3.4a",
+    "type": "web",
+    "versjon": "1.0",
+    "sistOppdatertAvDifi": "09.10.2019",
+    "spraak": "no",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "3.3"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.5"
+        },
+        {
+            "title": "3.6"
+        },
+        {
+            "title": "3.7"
+        },
+        {
+            "title": "3.8"
+        },
+        {
+            "title": "3.10"
+        },
+        {
+            "title": "3.12"
+        }
+    ],
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi URL eller side-ID.",
+            "type": "tekst",
+            "label": "URL/Side:",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            } 
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har nettsida digitale/interaktive skjema/skjemaelement?",
+            "ht": "<strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt.",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje skjema."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Beskriv skjemaet/prosessen",
+            "ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
+            "type": "tekst",
+            "label": "Skjema/prosess:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Fyll ut skjemaet med reelle testdata.",
+            "ht": "<p>Fyll ut skjema eller gjennomfør kjøpsprosess heilt til du kjem til steget for å sende inn.</p><p>Opplys gjerne at det handlar om testformål, dersom skjemaet blir sendt inn.</p>",
+            "type": "instruksjon",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Får du ein oppfordring om å gjennomgå inndata i skjemaet før innsending?",
+            "ht": "<p>Ei oppfordring kan vere for eksempel på formen:</p><ul><li>Ei formulering som \"Hugs å lese gjennom all informasjon før du sender inn\" eller \"Gjennomgå og bekreft at informasjonen er korrekt\".</li><li>At du får presentert all innskreve informasjon i skjemaet før innsending.</li><li>At inndatafeil blir oppdaga automatisk og og brukaren får beskjed.</li></ul>",
+            "type": "jaNei",
+            "kilde": ["G98"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.9",
+                    "delutfall": {
+                        "nr": 1,
+                        "fasit": "Nei",
+                        "tekst": "Skjema oppfordrar ikkje brukar om å gjennomgå og bekrefte informasjon lagt inn i skjema, før innsending."
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Kan du gjennomgå all inndata i skjemaet før innsending?",
+            "ht": "<p>Skjemaet kan vere på ei side eller ligge over fleire sider. </p><p>Du kan gjennomgå inndata i skjemaet på ulike måtar</p><ul><li>Skjemaet går berre over ei side.</li><li>Det er mogeleg å bla mellom sidene i skjemaet. Viss skjemaet ligg over fleire sider, skal inndata fortsatt ligge i skjemaet når du navigerer fram og tilbake i skjemaet.</li><li>Du får ei oppsummering av all inndata i skjemaet dersom skjemaet går over fleire sider.</li></ul>",
+            "type": "jaNei",
+            "kilde": ["G98"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.9",
+                    "nr": 1,
+                    "delutfall": {
+                        "nr": 1,
+                        "fasit": "Nei",
+                        "tekst": "Det er ikkje mogleg å gjennomgå informasjon lagt inn i skjema, før innsending."
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Kan du endre all inndata i skjemaet før innsending?",
+            "ht": "Det skal vere mogleg å oppdatere/endre all informasjonen som er lagt inn i dei ulike skjemafelta.",
+            "type": "jaNei",
+            "kilde": ["SK"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.9",
+                    "nr": 1,
+                    "delutfall": {
+                        "nr": 1,
+                        "fasit": "Nei",
+                        "tekst": "Det er ikkje mogleg å endre informasjon lagt inn i skjema."
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.6",
+            "spm": "Finst det ein egen mekanisme for å bekrefte at du har lest gjennom informasjonen du skreiv inn og er klar til å sende inn skjemaet?",
+            "ht": "<p>Mekanismen kan vere for eksempel ein avkryssingsboks eller lignande eller ein eigen knapp for å fortsette innsending.</p><p>Ledeteksten til mekanismen kan for eksempel vere</p><ul><li>\"Eg bekreftar at informasjonen er korrekt\"</li><li>\"Eg forstår betingelsene\"</li><li>\"Fortsett\"</li></ul>",
+            "type": "jaNei",
+            "kilde": ["G155", "G168"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.9",
+                    "nr": 1,
+                    "delutfall": {
+                        "nr": 1,
+                        "fasit": "Nei",
+                        "tekst": "Skjema har ingen mekanisme for å bekrefte informasjon før innsending."
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.7",
+            "spm": "Er mekanismen separat frå knappen for å sende inn skjemaet?",
+            "ht": "<p>Mekanismen og knappen for å sende inn skal vere to separate element. Det er ikkje mogeleg å kombinere desse to, og ein knapp med teksten for eksempel «Godkjenn og send inn» er ikkje tilstrekkeleg.</p>",
+            "type": "jaNei",
+            "kilde": ["G155"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.9",
+                    "nr": 1,
+                    "delutfall": {
+                        "nr": 1,
+                        "fasit": "Nei",
+                        "tekst": "Skjema har mekanisme for å bekrefte informasjon før innsending, som ikkje er skilt frå innsendingsknappen."
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.8",
+            "spm": "Får du til å sende inn skjemaet utan å krysse av/velje mekanismen?",
+            "ht": "Viss du ikkje får til å sende inn skjemaet uten å krysse av betyr det at mekianismen fungerar.",
+            "type": "jaNei",
+            "kilde": ["G155"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.9",
+                    "nr": 1,
+                    "delutfall": {
+                        "nr": 1,
+                        "fasit": "Nei",
+                        "tekst": "Skjema har mekanisme for å bekrefte informasjon før innsending. Skjema kan sendast inn utan å krysse av/velje innsending."
+                    }
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Skjema oppfordrar brukar om å gjennomgå og bekrefte informasjon lagt inn i skjema, før innsending. Det er mogleg å endre all informasjon lagt inn i skjema. Brukaren må bekrefte informasjonen før innsending av skjemaet."
+                }
+            }
+        },
+        {
+            "stegnr": "3.9",
+            "spm": "Send inn skjemaet",
+            "ht": "Fyll ut skjemaet med korrekt informasjon og send inn.",
+            "type": "instruksjon",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.10"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.10",
+            "spm": "Får du beskjed om korleis du kan endre eller angre innsendinga?",
+            "ht": "<p>Beskjeden kan vere ein eigen tekst med utfyllande informasjon, eller ein mekanisme/knapp som seier for eksempel</p><ul><li>\"Avbestill\"</li><li>\"Kanseller\"</li><li>\"Endre bestilling\"</li><li>\"Angre\"</li><li>\"Ring oss for å avbestille\"</li></ul><p>Beskjeden finnast eller vere lenka til på nettsida, og det er ikkje tilstrekkeleg at det blir tilsendt i ein e-post.</p>",
+            "type": "jaNei",
+            "kilde": ["G164"],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.11"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "#delutfall(1) Det er ingen informasjon om korleis informasjon kan endrast eller innsending angrast."
+                }
+            }
+        },
+        {
+            "stegnr": "3.11",
+            "spm": "Angre innsending av skjemaet.",
+            "ht": "Bruk mekanismen, eller følg ei eventuell rutine for å angre innsendinga.",
+            "type": "instruksjon",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.12"
+                }
+            } 
+        },
+        {
+            "stegnr": "3.12",
+            "spm": "Fikk du til å angre innsendinga?",
+            "ht": "Sjekk om det let seg gjere å angre innsendinga.",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Skjema har informasjon om korleis innsending av skjema kan avbrytast. Det er mogleg å angre innsending av skjema."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "#delutfall(1) Det er ikkje mogleg å angre innsending av skjema."
+                }
+            }
+        }
+    ]
+}
