@@ -65,7 +65,7 @@
         },
         {
             "stegnr": "2.3",
-            "spm": "Beskriv skjemaet/prosessen",
+            "spm": "Beskriv skjemaet/prosessen.",
             "ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
             "type": "tekst",
             "label": "Skjema/prosess:",
@@ -81,7 +81,7 @@
         {
             "stegnr": "2.4",
             "spm": "Får du sende inn eit skjema der du har fyllt inn data i feil format eller verdi?",
-            "ht": "<p>Legg inn feil inndata i alle skjemaelement. Fullfør eller send inn skjemaet.</p><p>Eksempel på datafeil er</p><ul><li>Postnummer som inneheld bokstavar</li><li>Namn som inneheld tal eller spesialteikn</li><li>Ugyldig e-postformat</li><li>Ugyldig datoformat</li><li>Data utanfor grenseverdi, for eksempel månad 14 i ein dato</li></ul>",
+            "ht": "<p>Legg inn feil inndata i alle skjemaelement. Fullfør eller send inn skjemaet.</p><p>Eksempel på datafeil er:</p><ul><li>Postnummer som inneheld bokstavar.</li><li>Namn som inneheld tal eller spesialteikn.</li><li>Ugyldig e-postformat.</li><li>Ugyldig datoformat.</li><li>Data utanfor grenseverdi, for eksempel månad 14 i ein dato.</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -131,7 +131,7 @@
         {
             "stegnr": "3.2",
             "spm": "Er informasjonen du har fylt inn fortsatt i skjemaelementet?",
-            "ht": "<p>Sensitiv informasjon treng ikkje å fortsatt ligge i skjemaet etter innsendt skjema.</p><p>Det er ok at inndata blir korrigert automatisk.</p>",
+            "ht": "<p>Sensitiv informasjon treng ikkje å fortsatt ligge i skjemaet etter innsendt skjema.</p><p>Det er OK at inndata blir korrigert automatisk.</p>",
             "type": "jaNei",
             "kilde": ["G83", "G84", "G85"],
             "ruting": {
@@ -149,7 +149,7 @@
         {
             "stegnr": "3.3",
             "spm": "Får du eit forslag til korleis feilen kan rettast?",
-            "ht": "<p>Forslag til retting av feil kan</p><ul><li>stå i direkte tilknytning til skjemaelementet, for eksempel i ledeteksten eller feilmeldinga til skjemaelementet</li><li>stå ein eller annan stad på nettsida</li><li>vere lenka til på ei anna nettside. Slike lenker skal stå i nærleiken av skjemaelementet der feilen har oppstått.</li></ul><p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på forslaget.</p>",
+            "ht": "<p>Forslag til retting av feil kan:</p><ul><li>Stå i direkte tilknytning til skjemaelementet, for eksempel i ledeteksten eller feilmeldinga til skjemaelementet.</li><li>Stå ein eller annan stad på nettsida.</li><li>Vere lenka til på ei anna nettside. Slike lenker skal stå i nærleiken av skjemaelementet der feilen har oppstått.</li></ul><p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på forslaget.</p>",
             "type": "jaNei",
             "kilde": ["G83", "G84", "G85", "G177"],
             "ruting": {
@@ -166,7 +166,7 @@
         {
             "stegnr": "3.4",
             "spm": "Gir forslaget tilstrekkeleg informasjon om korleis du kan rette feilen?",
-            "ht": "<p>Dersom skjemaelementet krev inndata i eit spesifikt format, skal alle elementa som inngår i formatet, stå i meldinga. Når det gjeld for eksempel epost, er det ikkje tilstrekkeleg å berre oppgi at formatet krev @, når formatet er på forma a@b.no.</p><p>Forslag til retting av feil kan for eksempel vere</p><ul><li>forslag om rett stavemåte</li><li>forslag om tilsvarande tekst eller omgrep.</li><li>beskriving av kva som er rett inndata</li><li>ei liste med kva som er rett inndata</li><li>eit spørsmål på formen «meinte du …?» eller tilsvarande </li></ul>",
+            "ht": "<p>Dersom skjemaelementet krev inndata i eit spesifikt format, skal alle elementa som inngår i formatet, stå i meldinga. Når det gjeld for eksempel epost, er det ikkje tilstrekkeleg å berre oppgi at formatet krev @, når formatet er på forma a@b.no.</p><p>Forslag til retting av feil kan for eksempel vere</p><ul><li>forslag om rett stavemåte</li><li>forslag om tilsvarande tekst eller omgrep</li><li>beskriving av kva som er rett inndata</li><li>ei liste med kva som er rett inndata</li><li>eit spørsmål på formen «meinte du …?» eller tilsvarande</li></ul>",
             "type": "jaNei",
             "kilde": ["G177"],
             "ruting": {
@@ -184,7 +184,7 @@
         {
             "stegnr": "3.5",
             "spm": "Finst det kjente forslag til korleis feilen kan rettast?",
-            "ht": "<p>Kjente forslag er for eksempel:</p><ul><li>forslag om rett stavemåte</li><li>forslag om tilsvarande tekst eller omgrep.</li><li>beskriving av kva som er rett inndata</li><li>ei liste med kva som er rett inndata</li><li>eit spørsmål på formen «meinte du …?» eller tilsvarande</li></ul><p>Det finst for eksempel kjente forslag for følgjande:</p><ul><li>E-post, postnummer, fødselsdato, telefonnummer osb.</li></ul><p>Det er ikkje nødvendig å gi forslag til retting av feil dersom:</p><ul><li>det gjeld skjemaelement knytta til sikkerhet, for eksempel passord</li><li>forslag til retting undergrev formålet, for eksempel svar i en quiz</li></ul>",
+            "ht": "<p>Kjente forslag er for eksempel</p><ul><li>forslag om rett stavemåte</li><li>forslag om tilsvarande tekst eller omgrep</li><li>beskriving av kva som er rett inndata</li><li>ei liste med kva som er rett inndata</li><li>eit spørsmål på formen «meinte du …?» eller tilsvarande</li></ul><p>Det finst for eksempel kjente forslag for følgjande</p><ul><li>e-post, postnummer, fødselsdato, telefonnummer osv.</li></ul><p>Det er ikkje nødvendig å gi forslag til retting av feil dersom</p><ul><li>det gjeld skjemaelement knytta til sikkerhet, for eksempel passord</li><li>forslag til retting undergrev formålet, for eksempel svar i en quiz</li></ul>",
             "type": "jaNei",
             "kilde": [],
             "ruting": {
