@@ -65,8 +65,8 @@
         },
         {
             "stegnr": "3.2",
-            "spm": "Har nettsida ein mekanisme som let brukaren hoppe til hovudinnhaldet som blant dei tre første tab-stega i tastaturnavigasjonen?",
-            "ht": "<p>Start tastatusnavigeringa fra starten av sida. Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet.</p><p>Ein slik mekanisme kan vere for eksempel ei lenke eller ein knapp. Den må ligge før blokka, og vanlegvis på første tab-steg.</p><p>Hvis mekanismen ikkje blir synleg ved fokus, sjå i statuslinja i nettlesaren for å følgje med på navigasjonen.</p><p>Det kan vere fleire slike mekanismar blant dei første tab-stega på nettstaden. Du skal teste mekanismen som hoppar til hovudinnhaldet.</p>",
+            "spm": "Har nettsida ein mekanisme som let brukaren hoppe til hovudinnhaldet blant dei tre første tab-stega i tastaturnavigasjonen?",
+            "ht": "<p>Start tastatusnavigeringa fra starten av sida. Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet.</p><p>Ein slik mekanisme kan vere for eksempel ei lenke eller ein knapp. Den må ligge før blokka, og er vanlegvis på første tab-steg.</p><p>Hvis mekanismen ikkje blir synleg ved fokus, sjå i statuslinja i nettlesaren for å følgje med på navigasjonen.</p><p>Det kan vere fleire slike mekanismar blant dei første tab-stega på nettstaden. Du skal teste mekanismen som hoppar til hovudinnhaldet.</p>",
             "type": "jaNei",
             "kilde": ["G1", "G123"],
             "ruting": {
