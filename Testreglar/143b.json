@@ -43,7 +43,6 @@
             "title": "3.12"
         }
     ],
-
     "steg": [
         {
             "stegnr": "2.1",
@@ -62,9 +61,8 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida bilde av tekst?",
-            "ht": "<p><strong>Merk</strong> at tekst som er tekst og lenker, som ikkje er bilete av tekst, (1.4.3a) og tekst som er relevant for betening av skjema (1.4.3b)  skal testast i eigne indikatorar. </li><li>tekst i illustrasjonar og diagram (som ikkje er bilete)</li><li>tekst i skjema</li></ul><p>Desse innhaldstypane skal ikkje testast:</#p><ul><li>Bilete av tekst (Blir testa i 1.4.3b)</li><li>Logoar og varemerke</li><li>Ikkje-informativ tekst som er til pynt, dvs tekst som kan erstattast av annan tekst, utan at meiningsinnhaldet vert endra.</li><li>Tekst i bilete der teksten ikkje er vesentleg for å formidle meiningsinnhaldet.</li><li>Deaktiverte skjemaelement</li><li>Tekst som ikkje er synleg for nokon- Grafiske element i for eksempel diagram og grafar, som støttelinjer, søyler m.m.</li></ul>",
+            "ht": "<p>Desse innhaldstypane skal testast:</p><ul><li>bilete av tekst</li></ul><p>Desse innhaldstypane skal <strong>ikkje</strong> testast:</p><ul><li>Logoar og varemerke</li><li>Ikkje-informativ tekst som er til pynt, dvs tekst som kan erstattast av annan tekst, utan at meiningsinnhaldet vert endra.</li><li>Tekst i bilde der teksten ikkje er vesentleg for å formidle meiningsinnhaldet.</li><li>Deaktiverte skjemaelement</li><li>Tekst som ikkje er synleg for nokon</li><li>Grafiske element i for eksempel diagram og grafer, som støttelinjer, søyler m.m.</li></ul>",
             "type": "jaNei",
-
             "ruting": {
                 "ja": {
                     "type": "gaaTil",
@@ -76,7 +74,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.1",
             "spm": "Beskriv elementet du testar",
@@ -91,9 +88,7 @@
                     "steg": "3.2"
                 }
             } 
-        }
-        ,
-
+        },
         {
             "stegnr": "3.2",
             "spm": "Mål og registrer kontrast mellom farge på tekst og farge på bakgrunn.",
@@ -154,7 +149,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.4",
             "spm": "Er mekanismen visuelt plassert nær starten av sida?",
@@ -172,7 +166,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.5",
             "spm": "Er mekanismen for høgkontrastvisning visuelt markert?",
@@ -190,7 +183,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.6",
             "spm": "Er mekanismen for høgkontrast merka med tekst?",
@@ -207,7 +199,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.7",
             "spm": "Mål og registrer kontrast mellom farge på tekst i mekanismen og farge på bakgrunn.",
@@ -272,7 +263,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.9",
             "spm": "Er skriftstørrelsen mindre enn 19 px?",
@@ -309,7 +299,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.11",
             "spm": " Er det tekslege innhaldet i elementet som vart målt med for svak kontrast i ordinær visning, identisk med elementet i høgkontrastversjon?",
@@ -327,7 +316,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.12",
             "spm": "Mål og registrer kontrast (på det same elementet som vart målt i ordinærvisning) mellom farge på tekst i mekanismen og farge på bakgrunn.",
