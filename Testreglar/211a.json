@@ -19,7 +19,6 @@
             "title": "3.3"
         }
     ],
-
     "steg": [
         {
             "stegnr": "2.1",
@@ -35,7 +34,6 @@
                 }
             } 
         },
-
         {
             "stegnr": "2.2",
             "spm": "Får du synleg fokusmarkering ved tastaturnavigering?",
@@ -54,7 +52,6 @@
                 }
             }
         },
-
         {
             "stegnr": "2.3",
             "spm": "Får du til å betene alle lenker, knappar og funksjonar med tastaturet?",
@@ -73,7 +70,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.1",
             "spm": "Beskriv elementet du ikkje fikk til å betene med tastaturet",
@@ -89,7 +85,6 @@
                 }
             } 
         },
-
         {
             "stegnr": "3.2",
             "spm": "Har elementet (som du ikkje fikk til å betene med tastaturet) funksjonalitet det ikkje er hensiktsmessig å betene med tastaturet?",
@@ -106,7 +101,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.3",
             "spm": "Kva type funksjonalitet er elementet en del av?",

@@ -1,0 +1,233 @@
+{
+    "1.1.1a": {
+        "Bilete som er ei sanseoppleving eller ein test har eit kort tekstalternativ som gir ein beskrivande identifikasjon.": "Bilde som er ei sanseoppleving eller ein test, har beskrivande tekstalternativ.",
+        "Bilete som er ei sanseoppleving eller ein test har ikkje eit kort tekstalternativ som gir ein beskrivande identifikasjon.": "Bilde som er ei sanseoppleving eller ein test, har ikkje beskrivande tekstalternativ.",
+        "Bilete som er komplekst og som har både eit kort tekstalternativ og eit langt utfyllande tekstalternativ.": "Komplekst bilde har beskrivande tekstalternativ. ",
+        "Bilete som er komplekst og som har eit korrekt kopla langt tekstalternativ som ikkje er koda som tekst.": "Komplekst bilde har langt tekstalternativ som ikkje er koda som tekst.",
+        "Bilete som er komplekst og som har eit langt tekstalternativ som ikkje gir ein utfyllande skildring av innhaldet i bilete.": "Komplekst bilde har langt tekstalternativ som ikkje er koda som tekst.",
+        "Bilete som er komplekst og som har eit tekstalternativ som ikkje gir ein beskrivande identifikasjon av bilete.": "Komplekst bilde har kort tekstalternativ som ikkje er beskrivande.",
+        "Bilete som er komplekst og som manglar ei kopling til eit langt tekstalternativ.": "Komplekst bilde har ikkje kopling til langt tekstalternativ.",
+        "Bilete som er meiningsberande med eit kort tekstalternativ som ikkje formidlar same informasjon som bilete.": "Meiningsberande bilde har tekstalternativ som ikkje er beskrivande.",
+        "Bilete som er meiningsberande med eit kort tekstalternativ som formidlar same informasjon som bilete.": "Meiningsberande bilde har beskrivande tekstalternativ.",
+        "Bilete som er pynt og er koda på ein slik måte at det ikkje er til støy.": "Bilde som er pynt/dekor/bakgrunn/formattering, har tomt tekstalternativ.",
+        "Bilete som er pynt/dekor/bakgrunn/formattering og som er koda med eit eller fleire av attributta aria-label eller aria-labelledby.": "Bilde som er pynt/dekor/bakgrunn/formattering, er koda med attributta aria-label eller aria-labelledby.",
+        "Bilete som er pynt/dekor/bakgrunn/formattering som har eit alt-attributt som ikkje er tomt.": "Bilde som er pynt/dekor/bakgrunn/formattering, har ikkje tomt alt-attributt.",
+        "Bilete som er pynt/dekor/bakgrunn/formattering som har eit title-attributt som ikkje er tomt.": "Bilde som er pynt/dekor/bakgrunn/formattering, har ikkje tomt title-attributt.",
+        "Bilete som er pynt/dekor/bakgrunn/formattering som manglar alt-attributtet.": "Bilde som er pynt/dekor/bakgrunn/formattering, manglar alt-attributt.",
+        "Meiningsberande bilete som er koda med role=\"presentation\".": "Meiningsberande bilde er koda med role=\"presentation\".",
+        "Meiningsberande bilete utan tekstalternativ.": "Meiningsberande bilde manglar tekstalternativ.",
+        "Meiningsberande bilete som manglar alt-attributtet.": "Meiningsberande bilde manglar alt-attributt."
+    },
+    "1.1.1b": {
+        "Lenka bilete med alternativ tekst som er  beskrivande for formålet med lenka.": "Lenka bilde har beskrivande tekstalternativ.",
+        "Lenka bilete med alternativ tekst som ikkje er beskrivande for formålet med lenka.": "Lenka bilde har tekstalternativ som ikkje er beskrivande.",
+        "Lenka bilete med ein lenketekst som er misvisande for formålet med lenka.": "Lenka bilde har lenketekst som ikkje er beskrivande.",
+        "Lenka bilete med innhald i aria-attributta på lenkeelementet som er beskrivande for formålet med lenka.": "Lenka bilde har beskrivande tekstalternativ.",
+        "Lenka bilete med innhald i aria-attributta på lenkeelementet som ikkje er beskrivande for formålet med lenka.": "Lenka bilde har tekstalternativ som ikkje er beskrivande.",
+        "Lenka bilete utan alt-attributt.": "Lenka bilde manglar alt-attributt.",
+        "Lenka bilete utan alternativ tekst.": "Lenka bilde manglar tekstalternativ."
+    },
+    "1.2.2a": {
+        "Videoklippet er utan teksting  tekstalternativ nær klippet som ikkje er koda som tekst og tekstalternativ via ein mekanisme som ikkje er koda som tekst.": "Videoklipp har tekstalternativ som ikkje er koda som tekst.Videoklipp har ikkje teksting.",
+        "Videoklippet er utan teksting, tekstalternativ nær klippet som ikkje er koda som tekst og tekstalternativ via ein mekanisme som ikkje gir same bodskap.": "Videoklipp har tekstalternativ som ikkje formidlar same bodskap som lyd og bilde.Videoklipp har ikkje teksting.",
+        "Videoklippet er utan teksting og tekstalternativ nær klippet som ikkje er koda som tekst og utan mekanisme til anna tekstalternativ.": "Videoklipp har tekstalternativ som ikkje er koda som tekst.Videoklipp har ikkje teksting.",
+        "Videoklippet er utan teksting, tekstalternativ nær klippet som ikkje gir same bodskap og tekstalternativ via ein mekanisme som ikkje er koda som tekst.": "Videoklipp har tekstalternativ som ikkje er koda som tekst, og ikkje formidlar same bodskap som lyd og bilde. Videoklipp har ikkje teksting.",
+        "Videoklippet er utan teksting, tekstalternativ nær klippet som ikkje gir same bodskap og tekstalternativ via ein mekanisme som ikkje gir same bodskap.": "Videoklipp har tekstalternativ som ikkje formidlar same bodskap som lyd og bilde.Videoklipp har ikkje teksting.",
+        "Videoklippet er utan teksting og tekstalternativ nær klippet som ikkje gir same bodskap og utan mekanisme til anna tekstalternativ.": "Videoklipp har tekstalternativ som ikkje formidlar same bodskap som lyd og bilde.Videoklipp har ikkje teksting.",
+        "Videoklippet er utan teksting og utan tekstalternativ nær klippet og tekstalternativ via ein mekanisme som ikkje er koda som tekst.": "Videoklipp har tekstalternativ som ikkje er koda som tekst.Videoklipp har ikkje teksting.",
+        "Videoklippet er utan teksting og utan tekstalternativ nær klippet og tekstalternativ via ein mekanisme som ikkje gir same bodskap.": "Videoklipp har tekstalternativ som ikkje formidlar same bodskap som lyd og bilde.Videoklipp har ikkje teksting.",
+        "Videoklippet er utan teksting og utan tekstalternativ nær klippet og utan mekanisme til anna tekstalternativ.": "Videoklipp har verken teksting eller tekstalternativ. ",
+        "Videoklippet har eit tekstalternativ som kan nåast, koda som tekst og som gir same bodskap som videoklippet. .": "Videoklipp har tekstalternativ som formidlar same bodskap som lyd og bilde.Tekstalternativ kan nåast og er koda som tekst.",
+        "Videoklippet har teksting der viktig informasjon blir forstyrra eller skjult, tekstalternativ nær klippet som ikkje er koda som tekst og  tekstalternativ via ein mekanisme som ikkje er koda som tekst.": "Videoklipp har teksting som forstyrrar eller skjuler viktig informasjon i videoen. Videoklipp har tekstalternativ som ikkje er koda som tekst.",
+        "Videoklippet har teksting der viktig informasjon blir forstyrra eller skjult, tekstalternativ nær klippet som ikkje er koda som tekst og tekstalternativ via ein mekanisme som ikkje gir same bodskap.": "Videoklipp har teksting som forstyrrar eller skjuler viktig informasjon i videoen.Tekstalternativ formidlar ikkje same bodskap som lyd og bilde.",
+        "Videoklippet har teksting der viktig informasjon blir forstyrra eller skjult, tekstalternativ nær klippet som ikkje er koda som tekst og utan mekanisme til anna tekstalternativ.": "Videoklipp har teksting som forstyrrar eller skjuler viktig informasjon i videoen. Videoklipp har tekstalternativ som ikkje er koda som tekst.",
+        "Videoklippet har teksting der viktig informasjon blir forstyrra eller skjult, tekstalternativ nær klippet som ikkje gir same bodskap og tekstalternativ via ein mekanisme som ikkje er koda som tekst.": "Videoklipp har teksting som forstyrrar eller skjuler viktig informasjon i videoen.Tekstalternativ formidlar ikkje same bodskap som lyd og bilde.",
+        "Videoklippet har teksting der viktig informasjon blir forstyrra eller skjult, tekstalternativ nær klippet som ikkje gir same bodskap og tekstalternativ via ein mekanisme som ikkje gir same bodskap": "Videoklipp har teksting som forstyrrar eller skjuler viktig informasjon i videoen.Tekstalternativ formidlar ikkje same bodskap som lyd og bilde.",
+        "Videoklippet har teksting der viktig informasjon blir forstyrra eller skjult, tekstalternativ nær klippet som ikkje gir same bodskap og utan mekanisme til anna tekstalternativ.": "Videoklipp har teksting som forstyrrar eller skjuler viktig informasjon i videoen.Tekstalternativ formidlar ikkje same bodskap som lyd og bilde.",
+        "Videoklippet har teksting der viktig informasjon blir forstyrra eller skjult, utan tekstalternativ nær klippet og tekstalternativ via ein mekanisme som ikkje er koda som tekst.": "Videoklipp har teksting som forstyrrar eller skjuler viktig informasjon i videoen. Videoklipp har tekstalternativ som ikkje er koda som tekst.",
+        "Videoklippet har teksting der viktig informasjon blir forstyrra eller skjult, utan tekstalternativ nær klippet og tekstalternativ via ein mekanisme som ikkje gir same bodskap.": "Videoklipp har teksting som forstyrrar eller skjuler viktig informasjon i videoen.Tekstalternativ formidlar ikkje same bodskap som lyd og bilde.",
+        "Videoklippet har teksting der viktig informasjon blir forstyrra eller skjult, utan tekstalternativ nær klippet og utan mekanisme til anna tekstalternativ.": "Videoklipp har teksting som forstyrrar eller skjuler viktig informasjon i videoen. Videoklipp har ikkje tekstalternativ. ",
+        "Videoklippet har teksting som er lesbar/visuelt synleg, utan forstyrringar og som gir same bodskap som videoklippet. .": "Videoklipp har tekstalternativ som formidlar same bodskap som lyd og bilde.",
+        "Videoklippet har teksting som ikkje er lesbar/visuelt synleg og tekstalternativ nær klippet som ikkje gir same bodskap og tekstalternativ via ein mekanisme som ikkje er koda som tekst.": "Videoklipp har teksting som ikkje er mogleg å lese. Tekstalternativ formidlar ikkje same bodskap som lyd og bilde. ",
+        "Videoklippet har teksting som ikkje er lesbar/visuelt synleg og tekstalternativ nær klippet som ikkje gir same bodskap og tekstalternativ via ein mekanisme som ikkje gir same bodskap.": "Videoklipp har teksting som ikkje er mogleg å lese. Tekstalternativ formidlar ikkje same bodskap som lyd og bilde. ",
+        "Videoklippet har teksting som ikkje er lesbar/visuelt synleg og tekstalternativ nær klippet som ikkje gir same bodskap og utan mekanisme til anna tekstalternativ.": "Videoklipp har teksting som ikkje er mogleg å lese. Tekstalternativ formidlar ikkje same bodskap som lyd og bilde. ",
+        "Videoklippet har teksting som ikkje er lesbar/visuelt synleg og tekstalternativ nær klippet som ikkje er koda som tekst og tekstalternativ via ein mekanisme som ikkje er koda som tekst.": "Videoklipp har teksting som ikkje er mogleg å lese.Videoklipp har tekstalternativ som ikkje er koda som tekst.",
+        "Videoklippet har teksting som ikkje er lesbar/visuelt synleg og tekstalternativ nær klippet som ikkje er koda som tekst og tekstalternativ via ein mekanisme som ikkje gir same bodskap.": "Videoklipp har teksting som ikkje er mogleg å lese. Tekstalternativ formidlar ikkje same bodskap som lyd og bilde. ",
+        "Videoklippet har teksting som ikkje er lesbar/visuelt synleg og tekstalternativ nær klippet som ikkje er koda som tekst og utan mekanisme til anna tekstalternativ.": "Videoklipp har teksting som ikkje er mogleg å lese.Videoklipp har tekstalternativ som ikkje er koda som tekst.",
+        "Videoklippet har teksting som ikkje er lesbar/visuelt synleg og utan tekstalternativ nær klippet og tekstalternativ via ein mekanisme som ikkje er koda som tekst.": "Videoklipp har teksting som ikkje er mogleg å lese.Videoklipp har tekstalternativ som ikkje er koda som tekst.",
+        "Videoklippet har teksting som ikkje er lesbar/visuelt synleg og utan tekstalternativ nær klippet og tekstalternativ via ein mekanisme som ikkje gir same bodskap.": "Videoklipp har teksting som ikkje er mogleg å lese. Tekstalternativ formidlar ikkje same bodskap som lyd og bilde. ",
+        "Videoklippet har teksting som ikkje er lesbar/visuelt synleg og utan tekstalternativ nær klippet og utan mekanisme til anna tekstalternativ.": "Videoklipp har teksting som ikkje er mogleg å lese.Videoklipp har ikkje tekstalternativ. ",
+        "Videoklippet har teksting som ikkje gir same bodskap og tekstalternativ nær klippet som ikkje er koda som tekst og tekstalternativ via ein mekanisme som ikkje er koda som tekst.": "Videoklipp har teksting som ikkje formidlar same bodskap som lyd og bilde. Videoklipp har tekstalternativ som ikkje er koda som tekst.",
+        "Videoklippet har teksting som ikkje gir same bodskap og tekstalternativ nær klippet som ikkje er koda som tekst og tekstalternativ via ein mekanisme som ikkje gir same bodskap.": "Videoklipp har teksting og tekstalternativ som ikkje formidlar same bodskap som lyd og bilde.",
+        "Videoklippet har teksting som ikkje gir same bodskap og tekstalternativ nær klippet som ikkje er koda som tekst og utan mekanisme til anna tekstalternativ.": "Videoklipp har teksting som ikkje formidlar same bodskap som lyd og bilde. Videoklipp har tekstalternativ som ikkje er koda som tekst.",
+        "Videoklippet har teksting som ikkje gir same bodskap og tekstalternativ nær klippet som ikkje gir same bodskap og tekstalternativ via ein mekanisme som ikkje er koda som tekst.": "Videoklipp har teksting og tekstalternativ som ikkje formidlar same bodskap innhald som lyd og bilde.",
+        "Videoklippet har teksting som ikkje gir same bodskap og tekstalternativ nær klippet som ikkje gir same bodskap og tekstalternativ via ein mekanisme som ikkje gir same bodskap.": "Videoklipp har teksting og tekstalternativ som ikkje formidlar same bodskap som lyd og bilde. ",
+        "Videoklippet har teksting som ikkje gir same bodskap og tekstalternativ nær klippet som ikkje gir same bodskap og utan mekanisme til anna tekstalternativ.": "Videoklipp har teksting og tekstalternativ som ikkje formidlar same bodskap som lyd og bilde. ",
+        "Videoklippet har teksting som ikkje gir same bodskap og utan tekstalternativ nær klippet og tekstalternativ via ein mekanisme som ikkje er koda som tekst.": "Videoklipp har teksting som ikkje formidlar same bodskap som lyd og bilde. Videoklipp har tekstalternativ som ikkje er koda som tekst.",
+        "Videoklippet har teksting som ikkje gir same bodskap og utan tekstalternativ nær klippet og tekstalternativ via ein mekanisme som ikkje gir same bodskap.": "Videoklipp har teksting og tekstalternativ som ikkje formidlar same bodskap som lyd og bilde. ",
+        "Videoklippet har teksting som ikkje gir same bodskap og utan tekstalternativ nær klippet og utan mekanisme til anna tekstalternativ.": "Videoklipp har teksting som ikkje formidlar same bodskap som lyd og bilde. Videoklipp har ikkje tekstalternativ. "
+    },
+    "1.3.1a": {
+        "Visuell overskrift som er koda som overskrift og som ligg i eit tydeleg overskriftshierarki der nivået i koden  er det same som det visuelle nivået.": "Visuell overskrift er koda som overskrift. Visuelt overskriftsnivå samsvarar med koda overskriftsnivå. ",
+        "Visuell overskrift som er koda som overskrift og som ligg i eit tydeleg overskriftshierarki der nivået i koden ikkje er det same som det visuelle nivået.": "Visuelt overskriftsnivå samsvarar ikkje med koda overskriftsnivå. ",
+        "Visuell overskrift som er koda som overskrift.": "Visuell overskrift er koda som overskrift.",
+        "Visuell overskrift som ikkje er koda som overskrift.": "Visuell overskrift er ikkje koda som overskrift."
+    },
+    "1.3.1b": {
+        "Komplekse tabell der datacellene ikkje er kopla til rett overskriftsceller i koden." : "Tabell har dataceller som ikkje er korrekt kopla til overskriftceller.",
+        "Enkel tabell som har overskriftsceller som er koda med <th> og som har ein koda tabelltittel som ikkje identifiserer innhaldet i tabellen.": "Tabelltittel identifiserer ikkje innhaldet i tabellen.",
+        "Enkel tabell som har overskriftsceller som er koda med <th> og som har ein visuell tabeltittel som ikkje er koda med <caption>-elementet.": "Visuell tabelltittel er ikkje koda med <caption>.",
+        "Enkel tabell som har overskriftsceller som er koda med <th> og som har ein koda tabelltittel som identifiserer innhaldet i tabellen.": "Tabelltittel identifiserer innhaldet i tabellen. Tabell er koda med <table>.",
+        "Komplekse tabell der alle datacellene er kopla til rett overskriftsceller i koden . Tabellen har ikkje synleg tittel.": "Tabell er koda slik at alle dataceller er korrekt kopla til overskriftceller.",
+        "Komplekse tabell der alle datacellene er kopla til rett overskriftsceller i koden og som har ein koda tabelltittel som identifiserer innhaldet i tabellen.": "Tabelltittel identifiserer innhaldet i tabellen. Tabell er koda slik at alle dataceller er korrekt kopla til overskriftceller.",
+        "Komplekse tabell der datacellene ikkje er kopla til rett overskriftsceller i koden . Tabellen har ikkje synleg tittel.": "Tabell har dataceller som ikkje er korrekt kopla til overskriftceller.",
+        "Komplekse tabell der datacellene ikkje er kopla til rett overskriftsceller i koden og som har ein koda tabelltittel som ikkje identifiserer innhaldet i tabellen.": "Tabelltittel identifiserer ikkje innhaldet i tabellen. Tabell har dataceller som ikkje er korrekt kopla til overskriftceller.",
+        "Komplekse tabell der datacellene ikkje er kopla til rett overskriftsceller i koden og som har ein visuell tabeltittel som ikkje er koda med <caption>-elementet.": "Visuell tabelltittel er ikkje koda med <caption>. Tabell har dataceller som ikkje er korrekt kopla til overskriftceller.",
+        "Komplekse tabell der datacellene ikkje er kopla til rett overskriftsceller i koden. Tabellen har ikkje synleg tittel.": "Tabell har dataceller som ikkje er korrekt kopla til overskriftceller.",
+        "Tabell som er koda med <table>-elementet . Tabellen har ikkje synleg tittel.": "Tabell er koda med <table>.",
+        "Tabell som er koda med <table>-elementet og som har ein koda tabelltittel som identifiserer innhaldet i tabellen.": "Tabelltittel identifiserer innhaldet i tabellen. Tabell er koda med <table>.",
+        "Tabell som er koda med <table>-elementet og som har ein koda tabelltittel som ikkje identifiserer innhaldet i tabellen.": "Tabelltittel identifiserer ikkje innhaldet i tabellen.",
+        "Tabell som er koda med <table>-elementet og som har ein visuell tabeltittel som ikkje er koda med <caption>-elementet.": "Visuell tabelltittel er ikkje koda med <caption>.",
+        "Tabell som har overskriftsceller som ikkje er koda med <th>.": "Tabell har overskriftsceller som ikkje er koda med <th>.",
+        "Tabell som har overskriftsceller som ikkje er koda med <th> . Tabellen har ikkje synleg tittel.": "Tabell har overskriftsceller som ikkje er koda med <th>.",
+        "Tabell som har overskriftsceller som ikkje er koda med <th> og som har ein koda tabelltittel som ikkje identifiserer innhaldet i tabellen.": "Tabelltittel identifiserer ikkje innhaldet i tabellen. Tabell har overskriftsceller som ikkje er koda med <th>.",
+        "Tabell som har overskriftsceller som ikkje er koda med <th> og som har ein visuell tabeltittel som ikkje er koda med <caption>-elementet.": "Visuell tabelltittel er ikkje koda med <caption>. Tabell har overskriftsceller som ikkje er koda med <th>.",
+        "Tabell som ikkje er koda med <table>-elementet.": "Tabell er ikkje koda med <table>.",
+        "Enkel tabell som har overskriftsceller som er koda med <th> . Tabellen har ikkje synleg tittel.": "Tabell har overskriftsceller som er koda med <th>."
+    },
+    "1.3.1c": {
+        "Visuell beskrivande liste som ikkje er koda som beskrivande liste (<DL>).": "Visuell beskrivande liste er ikkje koda med <dl>, <dt> og <dd>.",
+        "Visuell liste som ikkje er koda som liste. ": "Visuell nummerert liste er ikkje koda med <ol>.",
+        "Visuell liste som ikkje er koda som liste.": "Visuell unummerert liste er ikkje koda med <ul>.",
+        "Visuell nummerert liste som er korrekt koda som nummerert liste.": "Visuell nummerert liste er koda med <ol>, og punkta i lista er koda med <li>.",
+        "Visuell nummerert liste som ikkje er koda som nummerert liste.": "Visuell nummerert liste er koda med <ol>, og punkta i lista er ikkje koda med <li>.",
+        "Visuell beskrivande liste som er korrekt koda som beskrivande liste (<DL>).": "Visuell beskrivande liste er koda med <dl>, <dt> og <dd>.",
+        "Visuell beskrivande liste som korrekt koda som beskrivande liste (<DL>).": "Visuell beskrivande liste er koda med <dl>, <dt> og <dd>.",
+        "Visuell unummerert liste som er korrekt koda som unummerert liste.": "Visuell unummerert liste er koda med <ul>, og punkta i lista er koda med <li>.",
+        "Visuell unummerert liste som ikkje er koda som unummerert liste.": "Visuell unummerert liste er koda med <ul>, og punkta i lista er ikkje koda med <li>."
+    },
+    "1.4.1a": {
+        "Lenka/lenkene skil seg ikkje visuelt frå ikkje-lenka tekst med andre verkemiddel enn berre farge og har ein kontrast på 3,0:1 eller bedre mot anna tekst og har markering med meir enn farge ved navigering med tastatur og på mouse-over.": "Det er berre farge som skil lenker visuelt frå ikkje-lenka tekst.",
+        "Lenka/lenkene skil seg ikkje visuelt frå ikkje-lenka tekst med andre verkemiddel enn berre farge og har ein kontrast på 3,0:1 eller bedre, men manglar markering med meir enn farge når du navigere til elemenet med tastaturet.": "Det er berre farge som skil lenker visuelt frå ikkje-lenka tekst.",
+        "Lenka/lenkene skil seg ikkje visuelt frå ikkje-lenka tekst med andre verkemiddel enn berre farge og har ein kontrast på 3,0:1 eller bedre, men manglar markering med meir enn farge på mouse-over.": "Det er berre farge som skil lenker visuelt frå ikkje-lenka tekst.",
+        "Lenka/lenkene skil seg ikkje visuelt frå ikkje-lenka tekst med andre verkemiddel enn berre farge og har ein kontrast på mot annan tekst på under 3,0:1.": "Det er berre farge som skil lenker visuelt frå ikkje-lenka tekst.",
+        "Lenka/lenkene skil seg visuelt frå ikkje-lenka tekst med andre verkemiddel enn berre farge.": "Lenker skil seg visuelt frå ikkje-lenka tekst med meir enn berre farge."
+    },
+    "1.4.2a": {
+        "Side med lyd som startar automatisk med ein mekanisme for styring av lyd av som ikkje er mogeleg å nå med tastatur ved å bruke under 6 tab-steg.": "Ved tastaturnavigasjon, krevst det meir enn fem tabsteg for å nå mekanisme for styring av lyd som startar automatisk på nettsida.",
+        "Side med lyd som startar automatisk med ein mekanisme for styring av lyd der det ikkje er mogeleg å slå av lyd eller regulere lydstyrke til null ved hjelp av tastatur.": "Ved tastaturnavigasjon, er det ikkje mogleg å slå av eller regulere lyd som startar automatisk på nettsida.",
+        "Side med lyd som startar automatisk og som har ein mekanisme for styring av lyd som ikkje er visuelt plassert nær starten av sida.": "Mekanisme for styring av lyd som startar automatisk på nettsida, er ikkje visuelt plassert nær starten av sida.",
+        "Side med lyd som startar automatisk og som har ein mekanisme for styring av lyd utan ein tydelig visuell markering.": "Mekanisme for styring av lyd som startar automatisk på nettsida, har ikkje tydeleg visuell markering.",
+        "Side med lyd som startar automatisk og som har ein tydelig markert og fungerande mekanisme for styring av lyd.": "Mekanisme for styring av lyd som startar automatisk på nettsida, fungerer og er tydeleg visuelt markert.",
+        "Side med lyd som startar automatisk og som ikkje har ein mekanisme for å styre lyden.": "Det finst ingen mekanisme for å stoppe lyd som startar automatisk på nettsida."
+    },
+    "1.4.3c": {
+        "Side utan kontrastfeil.": "Testside er utan kontrastfeil.",
+        "Side med kontrastfeil.": "Testside har kontrastfeil."
+    },
+    "1.4.4a": {
+        "Det er testa med ein nettlesar som ikkje let deg zoome inn til 200% og sida er utan eigen mekanisme for zoom.": "Nettlesar og nettside manglar/har mangelfull mekanisme for zoom/forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt.",
+        "Det er testa med ein nettlesar som ikkje let deg zoome inn til 200% og side med eigen mekanisme for zoom som  ikkje er lett å finne.": "Nettlesar og nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt.",
+        "Det er testa med ein nettlesar som ikkje let deg zoome inn til 200% og side med eigen mekanisme for zoom som  ikkje forstørrar all teksten på nettsida.": "Nettlesar og nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt.",
+        "Det er testa med ein nettlesar som ikkje let deg zoome inn til 200% og side med eigen mekanisme som ikkje let deg zoom inn minst 200%.": "Nettlesar og nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt.",
+        "Det er testa med ein nettlesar som ikkje let deg zoome inn til 200% og som let seg zoome til 200% ved hjelp av mekanisme som ikkje har same tekstleg innhald og funksjonalitet som i 100 % visning.": "Nettlesar og nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt.",
+        "Side som let seg zoome til 200 % ved hjelp av mekanisme og som har same tekstleg innhald og funksjonalitet som i 100 % visning.": "Nettside har mekanisme for forstørring til 200%, utan utan tap av innhald eller funksjonalitet.",
+        "Side som let seg zoome til 200 % ved hjelp av nettlesaren men som ikkje har same tekstleg innhald og funksjonalitet som i 100 % visning og sida er utan eigen mekanisme for zoom.": "Nettlesar og nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt.",
+        "Side som let seg zoome til 200 % ved hjelp av nettlesaren men som ikkje har same tekstleg innhald og funksjonalitet som i 100 % visning og side med eigen mekanisme for zoom som ikkje er lett å finne.": "Nettlesar og nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt.",
+        "Side som let seg zoome til 200 % ved hjelp av nettlesaren men som ikkje har same tekstleg innhald og funksjonalitet som i 100 % visning og side med eigen mekanisme for zoom som  ikkje forstørrar all teksten på nettsida.": "Nettlesar og nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt.",
+        "Side som let seg zoome til 200 % ved hjelp av nettlesaren men som ikkje har same tekstleg innhald og funksjonalitet som i 100 % visning og side med eigen mekanisme som ikkje let deg zoom inn minst 200 %.": "Nettlesar og nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt.",
+        "Side som let seg zoome til 200 % ved hjelp av nettlesaren men som ikkje har same tekstleg innhald og funksjonalitet som i 100 % visning og som let seg zoome til 200% ved hjelp av mekanisme som ikkje har same tekstleg innhald og funksjonalitet som i 100 % visning.": "Nettlesar og nettside manglar/har mangelfull mekanisme for forstørring. Tekst kan ikkje forstørrast til minst 200% utan at innhald eller funksjonalitet går tapt.",
+        "Side som let seg zoome til 200 % ved hjelp av nettlesaren og har same tekstleg innhald og funksjonalitet som i 100 % visning.": "Tekst kan forstørrast til minst 200 %, utan tap av innhald eller funksjonalitet."
+    },
+    "2.1.1a": {
+        "Element det ikkje er mogeleg å nå eller betene med tastaturet.": "Det er ikkje mogleg å nå og betene alt innhald/funksjonalitet med tastatur.",
+        "Element som ikkje er testbart.": "Testsidene har ikkje tilstrekkeleg fokusmarkering ved tastaturnavigasjon.",
+        "Side der det er mogleg å bruke tastatur for å betene all funksjonalitet.": "Det er mogleg å nå og betene alt innhald/funksjonalitet med tastatur."
+    },
+    "2.1.2a": {
+        "Nettside utan tastaturfelle.": "Testsidene har ikkje tastaturfeller.",
+        "Tastaturfelle det er mogeleg å navigere ut av  med standardmåtar for tastaturnavigering.": "Testsidene har tastaturfeller som det er mogeleg å navigere ut av, med standard tastaturnavigasjon.",
+        "Tastaturfelle det ikkje er mogeleg å navigere ut av  med standardmåtar for tastaturnavigering.": "Testsidene har tastaturfeller som det ikkje er mogeleg å navigere ut av."
+    },
+    "2.4.4a": {
+        "Lenka har ein lenketekst som åleine er beskrivande for formålet med lenka.": "Lenketekst er beskrivande for formålet med lenka.",
+        "Lenke med lenketekst som saman med programmeringsmessig kopla lenketekst er beskrivande for formålet med lenka.": "Lenketekst saman med programmeringsmessig kopla kontekst, er beskrivande for formålet med lenka.",
+        "Lenke med lenketekst som saman med programmeringsmessig kopla lenketekst ikkje er beskrivande for formålet med lenka.": "Lenketekst saman med programmeringsmessig kopla kontekst, er ikkje beskrivande for formålet med lenka.",
+        "Lenke som har ein lenketekst som åleine ikkje er beskrivande for formålet med lenka og som ikkje har ein programmeringsmessig kopla kontekst.": "Lenketekst er ikkje er beskrivande for formålet med lenka.Lenke har ikkje programmeringsmessig kopla kontekst."
+    },
+    "2.4.6a": {
+        "Overskrift som ikkje referer emne eller formål med innhaldet.": "Overskrift er ikkje beskrivande for emne eller formål med innhaldet.",
+        "Overskrift som referer emne eller formål med innhaldet.": "Overskrift er beskrivande for emne eller formål med innhaldet.",
+        "Overskrift som ikkje refererer emne eller formål med innhaldet.": "Overskrift er ikkje beskrivande for emne eller formål med innhaldet.",
+        "Overskrift som refererer emne eller formål med innhaldet.": "Overskrift er beskrivande for emne eller formål med innhaldet."
+    },
+    "2.4.7a": {
+        "Element det er mogeleg å betene med tastaturet som ikkje får synleg fokusmarkering.": "Innhald som er mogleg å nå/betene med tastatur, har ikkje synleg fokusmarkering.",
+        "Nettside der alle element det er mogleg å betene med tastaturet, får synleg fokusmarkering.": "Innhald som er mogleg å nå/betene med tastatur, har synleg fokusmarkering.",
+        "Nettside med berre eitt element som kan brukast med tastaturet.": "Testside har berre eitt innhaldselement som er aktuelt å nå/betene med tastatur. "
+    },
+    "3.3.1a": {
+        "Skjemaelement med automatisk oppdaging av feil med feilmelding koda i tekst som identifiserer og beskriv feilen.": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som:- tekstleg beskriv feilen - identifiserer kvar feilen er oppstått- er koda som tekst",
+        "Skjemaelement med automatisk oppdaging av feil med feilmelding som ikkje beskriv feilen.": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje beskriv feilen.",
+        "Skjemaelement med automatisk oppdaging av feil med feilmelding som ikkje er koda som tekst.": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje er koda som tekst.",
+        "Skjemaelement med automatisk oppdaging av feil med feilmelding som ikkje identifiserer kvar feilen har oppstått.": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje identifiserer kvar feilen er oppstått.",
+        "Skjemaelement med automatisk oppdaging av feil som ikkje har tekstleg feilmelding.": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir ikkje tekstleg feilmelding. "
+    },
+    "3.3.2a": {
+        "Skjemaelement med identifikasjon i form av tekst som ikkje alltid er synleg når skjemaelementet er i fokus og med identifikasjon i form av ikon/symbol/bilete  som ikkje har informasjon i koden som set brukaren i stand til å identifisere skjemaelementet.": "Skjemaelement med identifikasjon i form av:- tekst, som ikkje alltid er synleg når elementet er i fokus- ikon/symbol/bilde, som ikkje er rett identifisert i koden",
+        "Skjemaelement med identifikasjon i form av tekst som ikkje alltid er synleg når skjemaelementet er i fokus og med identifikasjon i form av ikon/symbol/bilete som ikkje er alltid synleg når skjemaelementet er i fokus.": "Skjemaelement med identifikasjon i form av:- tekst og ikon/symbol/bilde, som ikkje alltid er synlege når elementet er i fokus",
+        "Skjemaelement med identifikasjon i form av tekst som ikkje alltid er synleg når skjemaelementet er i fokus og med identifikasjon i form av ikon/symbol/bilete som ikkje er visuelt plassert i eller rett ved skjemaelementet.": "Skjemaelement med identifikasjon i form av:- tekst, som ikkje alltid er synleg når elementet er i fokus- ikon/symbol/bilde, som ikkje er plassert i/ved skjemaelementet",
+        "Skjemaelement med identifikasjon i form av tekst som ikkje alltid er synleg når skjemaelementet er i fokus og uten identifikasjon i form av ikon/symbol/bilete.": "Skjemaelement med identifikasjon i form av tekst, er ikkje alltid synleg når elementet er i fokus.Skjemaelement har ikkje identifikasjon i form av ikon/symbol/bilde.",
+        "Skjemaelement med identifikasjon i form av tekst som ikkje visuelt er plassert i eller rett ved skjemaelementet og med identifikasjon i form av ikon/symbol/bilete  som ikkje har informasjon i koden som set brukaren i stand til å identifisere skjemaelementet.": "Skjemaelement med identifikasjon i form av:- tekst, som ikkje er plassert i/ved skjemaelementet- ikon/symbol/bilde, som ikkje er rett identifisert i koden",
+        "Skjemaelement med identifikasjon i form av tekst som ikkje visuelt er plassert i eller rett ved skjemaelementet og med identifikasjon i form av ikon/symbol/bilete som ikkje er alltid synleg når skjemaelementet er i fokus.": "Skjemaelement med identifikasjon i form av:- tekst, som ikkje er plassert i/ved skjemaelementet- ikon/symbol/bilde, som ikkje alltid er synleg når elementet er i fokus",
+        "Skjemaelement med identifikasjon i form av tekst som ikkje visuelt er plassert i eller rett ved skjemaelementet og med identifikasjon i form av ikon/symbol/bilete som ikkje er visuelt plassert i eller rett ved skjemaelementet.": "Skjemaelement med identifikasjon i form av tekst og ikon/symbol/bilde som ikkje er plassert i/ved skjemaelementet",
+        "Skjemaelement med identifikasjon i form av tekst som ikkje visuelt er plassert i eller rett ved skjemaelementet og uten identifikasjon i form av ikon/symbol/bilete.": "Skjemaelement med identifikasjon i form av tekst, som ikkje er plassert i/ved skjemaelementet.Skjemaelement har ikkje identifikasjon i form av ikon/symbol/bilde.",
+        "Skjemaelementet med korrekt identifikasjon i form av ikon/symbol/bilete i ett skjema med tekstleg informasjon om at alle felt er obligatoriske.": "Skjemaelement med identifikasjon i form av ikon/symbol/bilde, som er rett identifisert i koden.Skjema har tekstleg informasjon om at element er obligatoriske.",
+        "Skjemaelementet med korrekt identifikasjon i form av ikon/symbol/bilete og som er obligatorisk  utan tekstleg informasjon eller symbol/ikon som indikerer at skjemaelementet er obligatorisk.": "Skjema manglar informasjon om at felt er obligatoriske.",
+        "Skjemaelementet med korrekt identifikasjon i form av ikon/symbol/bilete og som er obligatorisk med ledetekst med eit symbol/ikon som ikkje er tekstleg forklart.": "Skjema har obligatoriske skjemaelement med identifikasjon i form av ikon/symbol/bilde, som ikkje er tekstleg forklart.",
+        "Skjemaelementet med korrekt identifikasjon i form av ikon/symbol/bilete og som er obligatorisk med tekstleg informasjon om at  skjemaelementet er obligatorisk.": "Skjema har obligatoriske skjemaelement med identifikasjon i form av ikon/symbol/bilde, som ikkje er tekstleg forklart.",
+        "Skjemaelementet med korrekt identifikasjon i form av ikon/symbol/bilete og som er obligatorisk og ikkje har forklaringa av symbolet plassert før merkinga er teken i bruk første gang.": "Skjema har obligatoriske skjemaelement med identifikasjon i form av ikon/symbol/bilde.Forklaring av ikon/symbol/bilde er plassert etter skjemaelementet.",
+        "Skjemaelementet med korrekt identifikasjon i form av ikon/symbol/bilete som er obligatorisk, er markert med symbol og har forklaringa av symbolet plassert før merkinga er teken i bruk første gang.": "Skjema har obligatoriske skjemaelement med identifikasjon i form av ikon/symbol/bilde, som er markerte og forklarte før skjemaelementet.",
+        "Skjemaelementet med korrekt identifikasjon i form av ikon/symbol/bilete.": "Skjemaelement med identifikasjon i form av ikon/symbol/bilete.",
+        "Skjemaelementet med korrekt identifikasjon i form av tekst i ett skjema med tekstleg informasjon om at alle felt er obligatoriske.": "Skjemaelement med identifikasjon i form av tekst. Skjema har tekstleg informasjon om at element er obligatoriske.",
+        "Skjemaelementet med korrekt identifikasjon i form av tekst og som er obligatorisk med tekstleg informasjon om at  skjemaelementet er obligatorisk.": "Skjemaelement med korrekt identifikasjon i form av tekst. Skjema har tekstleg informasjon om at element er obligatoriske.",
+        "Skjemaelementet med korrekt identifikasjon i form av tekst og som er obligatorisk, er markert med symbol og har forklaringa av symbolet plassert før merkinga er teken i bruk første gang.": "Skjema har obligatoriske skjemaelement med identifikasjon i form av tekst, som er markerte med symbol og forklarte før skjemaelementet.",
+        "Skjemaelementet med korrekt identifikasjon i form av tekst.": "Skjemaelement med identifikasjon i form av tekst.",
+        "Skjemaelementet uten indentifikasjon i form av tekst og uten identifikasjon i form av ikon/symbol/bilete.": "Skjemaelement utan identifikasjon i form av tekst eller ikon/symbol/bilde.",
+        "Skjemaelementet uten indentifikasjon i form av tekst og med identifikasjon i form av ikon/symbol/bilete  som ikkje har informasjon i koden som set brukaren i stand til å identifisere skjemaelementet.": "Skjemaelement med identifikasjon i form av ikon/symbol/bilde, som ikkje er rett identifisert i koden.",
+        "Skjemaelementet uten indentifikasjon i form av tekst og med identifikasjon i form av ikon/symbol/bilete som ikkje er alltid synleg når skjemaelementet er i fokus.": "Skjemaelement med identifikasjon i form av ikon/symbol/bilde, som ikkje alltid er synleg når elementet er i fokus.",
+        "Skjemaelementet uten indentifikasjon i form av tekst og med identifikasjon i form av ikon/symbol/bilete som ikkje er visuelt plassert i eller rett ved skjemaelementet.": "Skjemaelement med identifikasjon i form av ikon/symbol/bilde, som ikkje er plassert i/ved skjemaelementet",
+        "Skjemaelementet med korrekt identifikasjon i form av tekst og som er obligatorisk  utan tekstleg informasjon eller symbol/ikon som indikerer at skjemaelementet er obligatorisk." : "Skjema manglar informasjon om at felt er obligatoriske." ,
+        "Skjemaelementet med korrekt identifikasjon i form av tekst og som er obligatorisk med ledetekst med eit symbol/ikon som ikkje er tekstleg forklart." : "Skjema har obligatoriske skjemaelement med identifikasjon i form av ikon/symbol/bilde, som ikkje er tekstleg forklart.",
+        "Skjemaelementet med korrekt identifikasjon i form av tekst og som er obligatorisk og ikkje har forklaringa av symbolet plassert før merkinga er teken i bruk første gang." : "Skjema har obligatoriske skjemaelement med identifikasjon i form av ikon/symbol/bilde. Forklaring av ikon/symbol/bilde er plassert etter skjemaelementet."
+    },
+    "4.1.1a": {
+        "deler": {
+            "Side med valideringsfeil av typen:": "Testside med syntaksfeil av typen",
+            "- Feil nøsting av element": "- Element som ikkje er nøsta korrekt",
+            "- Element som ikkje er avslutta korrekt": "- Element som ikkje er avslutta korrekt",
+            "- Element som har same attributt fleire gonger": "- Element som har same attributt fleire gonger",
+            "- Element som har ID-ar som ikkje er unike": "- Element som har ID-ar som ikkje er unike"   
+        },
+        "Side med \"Fatal \"Error\" ved validering av sida.": "Testside med valideringsfeilen \"Fatal Error\".",
+        "Side med valideringsfeil av typane:- Feil nøsting av element- Element som ikkje er avslutta korrekt- Element som har same attributt fleire gonger- Element som har ID-ar som ikkje er unike": "Testside med syntaksfeil av typen- Element som ikkje er nøsta korrekt- Element som ikkje er avslutta korrekt- Element som har same attributt fleire gonger- Element som har ID-ar som ikkje er unike",
+        "Side utan valideringsfeil.": "Testsida har ikkje syntaksfeil.",
+        "Side utan valideringsfeil av typane: - Feil nøsting av element - Element som ikkje er avslutta korrekt - Element som har same attributt fleire gonger - Element som har ID-ar som ikkje er unike." :  "Testsida har ikkje syntaksfeil."
+    },
+    "4.1.2a": {
+        "Skjemaelement som er kopla til ein ledetekst i koden og som er plassert i ei gruppe som ikkje er identifisert i koden.": "Skjemaelement er kopla til ein ledetekst i koden.Skjemaelement er plassert i ei gruppe som ikkje er identifisert i koden.",
+        "Skjemaelement som er kopla til ein ledetekst i koden og som er plassert i ei gruppe som ikkje er kopla i koden.": "Skjemaelement er kopla til ein ledetekst i koden.Ledeteksten identifiserer ikkje skjemaelementet.",
+        "Skjemaelement som er kopla til ein ledetekst i koden og som ved hjelp av innhaldet i <legend> saman med skjemaelementet sin ledetekst identifiserer skjemaelementet.": "Skjemaelement er kopla til ein ledetekst i koden.Skjemaelement er plassert i ei gruppe i koden.Ledetekst identifiserer skjemaelementet.",
+        "Skjemaelement som er kopla til ein ledetekst i koden og som åleine identifiserer skjemaelementet.": "Skjemaelement er kopla til ein ledetekst i koden.Ledeteksten identifiserer skjemaelementet.",
+        "Skjemaelement som er kopla til ein ledetekst i koden som ikkje identifiserer skjemaelementet.": "Skjemaelement er kopla til ein ledetekst i koden.Ledeteksten identifiserer ikkje skjemaelementet.",
+        "Skjemaelement som ikkje er kopla til ein ledetekst i koden.": "Skjemaelement er ikkje er kopla til ein ledetekst i koden.",
+        "Skjemaelementet som blir identifisert av innhaldet i aria-attributtet på gruppeelementet saman med skjemaelementet sin ledetekst.": "Skjemaelement er kopla til ein ledetekst i koden.Ledeteksten identifiserer skjemaelementet.",
+        "Skjemaelementet som ikkje blir identifisert av innhaldet i aria-attributtet på gruppeelementet saman med skjemaelementet sin ledetekst.": "Skjemaelement er kopla til ein ledetekst i koden.Skjemaelement er plassert i ei gruppe som ikkje er identifisert i koden."
+    },
+    "4.1.2b": {
+        "Knapp som er kopla til ein ledetekst i koden som identifiserer skjemaelementet.": "Knapp er kopla til ein ledetekst i koden.Ledeteksten identifiserer knappen.",
+        "Knapp som er kopla til ein ledetekst i koden som ikkje identifiserer skjemaelementet.": "Knapp er kopla til ein ledetekst i koden.Ledeteksten identifiserer ikkje knappen.",
+        "Knapp som ikkje er koda med standardelementa <input> eller <button> og som ikkje har role=\"button\".": "Knapp er ikkje koda med <input> eller <button>. Knapp er ikkje koda med role=\"button\".",
+        "Knapp som ikkje er kopla til ein ledetekst i koden.": "Knapp er ikkje er kopla til ein ledetekst i koden."
+    }
+}

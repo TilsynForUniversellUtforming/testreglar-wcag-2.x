@@ -20,7 +20,6 @@
             "title": "3.2"
         }
     ],
-
     "steg": [
         {
             "stegnr": "2.1",
@@ -36,7 +35,6 @@
                 }
             } 
         },
-
         {
             "stegnr": "2.2",
             "spm": "Får du synleg fokusmarkering ved tastaturnavigering?",

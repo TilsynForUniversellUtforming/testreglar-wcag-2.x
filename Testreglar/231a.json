@@ -26,7 +26,6 @@
             "title": "3.9"
         }
     ],
-
     "steg": [
         {
             "stegnr": "2.1",
@@ -59,7 +58,6 @@
                 }
             }
         },
-
         {
             "stegnr": "2.3",
             "spm": "Sett oppløysinga på skjermen du testar på til 1024*768.",
@@ -72,7 +70,6 @@
                 }
             } 
         },
-
         {
             "stegnr": "3.1",
             "spm": "Beskriv innhaldet som blinkar",
@@ -145,7 +142,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.6",
             "spm": "Størrelsen på området i kvadratpikslar.",
@@ -184,7 +180,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.7",
             "spm": "Ta eit opptak av blinkinga og lagre opptaket.",
@@ -198,7 +193,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.8",
             "spm": "Opne skjermopptaket og spel av opptaket med låg avspelingshastigheit.",
@@ -212,7 +206,6 @@
                 }
             } 
         },
-
         {
             "stegnr": "3.9",
             "spm": "Finst det blinking med frekvens på meir enn tre blink i sekundet?",

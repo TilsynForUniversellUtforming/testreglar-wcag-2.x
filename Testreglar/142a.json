@@ -2,7 +2,7 @@
     "id": "1.4.2a",
     "type": "web",
     "versjon": "1.0",
-    "sistOppdatertAvDifi": "07.02.2019",
+    "sistOppdatertAvDifi": "10.10.2019",
     "side": "2.1",
     "element": "Side",
     "kolonner": [
@@ -30,7 +30,6 @@
     ],
 
     "steg": [
-
         {
             "stegnr": "2.1",
             "spm": "Kva side testar du på?",
@@ -45,7 +44,6 @@
                 }
             } 
         },
-
         {
             "stegnr": "2.2",
             "spm": "Har nettsida lyd som startar automatisk?",
@@ -62,7 +60,6 @@
                 }
             }
         },
-
         {
             "stegnr": "2.3",
             "spm": "Stoppar den automatisk starta lyden innan 3 sekund?",
@@ -80,7 +77,6 @@
                 }
             } 
         },
-
         {
             "stegnr": "3.1",
             "spm": "Finst det ein mekanisme for å styre lyden på nettsida?",
@@ -98,7 +94,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.2",
             "spm": "Er mekanismen visuelt plassert nær starten av sida?",
