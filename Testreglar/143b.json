@@ -61,7 +61,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida bilde av tekst?",
-            "ht": "<p>Desse innhaldstypane skal testast:</p><ul><li>bilete av tekst</li></ul><p>Desse innhaldstypane skal <strong>ikkje</strong> testast:</p><ul><li>Logoar og varemerke</li><li>Ikkje-informativ tekst som er til pynt, dvs tekst som kan erstattast av annan tekst, utan at meiningsinnhaldet vert endra.</li><li>Tekst i bilde der teksten ikkje er vesentleg for å formidle meiningsinnhaldet.</li><li>Deaktiverte skjemaelement</li><li>Tekst som ikkje er synleg for nokon</li><li>Grafiske element i for eksempel diagram og grafer, som støttelinjer, søyler m.m.</li></ul>",
+            "ht": "<p>Desse innhaldstypane skal testast:</p><ul><li>bilde av tekst</li></ul><p>Desse innhaldstypane skal <strong>ikkje</strong> testast:</p><ul><li>Logoar og varemerke</li><li>Ikkje-informativ tekst som er til pynt, dvs tekst som kan erstattast av annan tekst, utan at meiningsinnhaldet vert endra.</li><li>Tekst i bilde der teksten ikkje er vesentleg for å formidle meiningsinnhaldet.</li><li>Deaktiverte skjemaelement</li><li>Tekst som ikkje er synleg for nokon</li><li>Grafiske element i for eksempel diagram og grafer, som støttelinjer, søyler m.m.</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
