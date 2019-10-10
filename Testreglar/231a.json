@@ -2,7 +2,7 @@
     "id": "2.3.1a",
     "type": "web",
     "versjon": "1.0",
-    "sistOppdatertAvDifi": "17.09.2019",
+    "sistOppdatertAvDifi": "07.10.2019",
     "spraak": "no",
     "side": "2.1",
     "element": "3.1",
@@ -44,7 +44,7 @@
         },
         {
             "stegnr": "2.2",
-            "spm": "Har nettsida innhald som blinkar/gimtar?",
+            "spm": "Har nettsida innhald som blinkar/glimtar?",
             "ht": "<p>Sørg for at nettsida har lasta inn fullstendig før du går i gang med testen.</p><p>Blinking på grunn av skjerm eller innlasting av nettsida skal ikkje testast. Blinking er veksling mellom to visuelle tilstandar for å vekke merksemd. Glimt er motsatte parvise skift i relativ lysstyrke som kan forårsake (epileptiske) anfall.</p><p>Du skal vurdere alt innhald på nettsida. Dette omfattar også alle bilde, animasjonar og alle videoklipp. I videoklipp er det nok å teste dei første 5 minuttane av klippet.</p><p><strong>Merk:</strong> Du skal ikkje teste videoklipp i fullskjermsvisning.</p>",
             "type": "jaNei",
             "ruting": {
@@ -105,7 +105,7 @@
         {
             "stegnr": "3.3",
             "spm": "Mål størrelse på innhaldet som blinkar på nettsida. ",
-            "ht": "<p>Du kan bruke eit verktøy for å ta skjermbilete, som for eksempel Snagit. Verktøyet må vise kor mange pikslar skjermutklippet er.</p><p>Viss det finst fleire førekomstar av innhald som blinkar innafor same skjermhøgde på nettsida, skal du måle opp eit område om inneheld desse.</p>",
+            "ht": "<p>Du kan bruke eit verktøy for å ta skjermbilde, som for eksempel Snagit. Verktøyet må vise kor mange pikslar skjermutklippet er.</p><p>Viss det finst fleire førekomstar av innhald som blinkar innafor same skjermhøgde på nettsida, skal du måle opp eit område om inneheld desse.</p>",
             "type": "instruksjon",
             "kilde": [],
             "ruting": {

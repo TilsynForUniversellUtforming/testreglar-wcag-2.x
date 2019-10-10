@@ -2,10 +2,10 @@
     "navn": "4.1.1a Koden inneheld ikkje syntaksfeil",
     "id": "4.1.1a",
     "type": "web",
+    "sistOppdatertAvDifi": "10.10.2019",
     "versjon": "1.0",
     "side": "2.1",
     "element": "Side",
-    "utfall": {},
     "kolonner": [
         {
             "title": "3.1"
@@ -43,14 +43,13 @@
                 }
             } 
         },
-
         {
             "stegnr": "3.1",
             "spm": "Har nettsida valideringsfeil?",
             "ht": "Sjekk om validatoren gir feil av type \"Errors\".",
             "kilde": ["G134"],
             "type": "jaNei",
-            "kilde":["G134"],
+            "kilde": ["G134"],
             "ruting": {
                 "ja": {
                     "type": "gaaTil",
@@ -69,7 +68,7 @@
             "ht": "<p>Feilbeskrivinga vil innehalde noko av det følgjande:</p><p><ul><li>\"Element [navn på element] not allowed…\"</li></ul>",
             "kilde": ["H74"],
             "type": "tekst",
-            "filter" : "tal",
+            "filter": "tal",
             "label": "Tal element",
             "multilinje": false,
             "oblig": true,
@@ -115,9 +114,9 @@
             "stegnr": "3.3",
             "spm": "Kor mange tilfelle er det av element som ikkje er avslutta korrekt?",
             "ht": "<p>Feilbeskrivinga vil innehalde noko av det følgjande:</p><ul><li>\"Unclosed element [navn på element]\".</li><li>\"End tag for [navn på element] omitted\".</li><li>\"End tag for [navn på element] which is not finished\".</li></ul>",
-            "kilde": ["H74","F70"],
+            "kilde": ["H74", "F70"],
             "type": "tekst",
-            "filter" : "tal",
+            "filter": "tal",
             "label": "Tal element",
             "multilinje": false,
             "oblig": true,
@@ -164,7 +163,7 @@
             "spm": "Kor mange tilfelle er det av element som har same attributt fleire gonger?",
             "ht": "<p>Feilbeskrivinga vil innehalde noko av det følgjande:</p><ul><li>\"Duplicate attribute [navn på attributt]\".</li><li>\"Duplicate specification of attribute [navn på attributt]\".</li></ul>",
             "type": "tekst",
-            "filter" : "tal",
+            "filter": "tal",
             "kilde": ["H94"],
             "label": "Tal element",
             "multilinje": false,
@@ -207,14 +206,13 @@
                 }
             } 
         },
-
         {
             "stegnr": "3.5",
             "spm": "Kor mange tilfelle er det av element som har ID-ar som ikkje er unike?",
             "ht": "<p>Feilbeskrivinga vil innehalde noko av det følgjande:</p><ul><li>\"Duplicate ID [navn på ID]\".</li><li>\"ID [navn på element] already defined\".</li></ul>",
             "type": "tekst",
-            "filter" : "tal",
-            "kilde": ["H93","F77"],
+            "filter": "tal",
+            "kilde": ["H93", "F77"],
             "label": "Tal element",
             "multilinje": false,
             "oblig": true,
@@ -256,7 +254,6 @@
                 }
             } 
         },
-
         {
             "stegnr": "3.6",
             "spm": "Får du ein \"Fatal Error\" ved validering av nettsida?",
@@ -270,15 +267,35 @@
                     "utfall": "Testside med valideringsfeilen \"Fatal Error\"."
                 },
                 "nei": {
-                    "type": "avslutt",
-                    "fasit": "sjekkDelutfall",
-                    "utfall": {
-                        "nei": "Testside med syntaksfeil av typen #delutfall(0)#delutfall(1)#delutfall(2)#delutfall(3).",
-                        "ja":  "Testsida har ikkje syntaksfeil."
-                    }
+                        "type": "regler",
+                        "regler": {
+                            "1": {
+                                "type": "talDersom",
+                                "sjekk": ["3.2", "3.3", "3.4", "3.5"],
+                                "verdi": "0",
+                                "mellom1": 4,
+                                "mellom2": 4,
+                                "handling": {
+                                    "type": "avslutt",
+                                    "fasit": "Ja",
+                                    "utfall": "Testsida har ikkje syntaksfeil."  
+                                }
+                            },
+                            "2": {
+                                "type": "talDersom",
+                                "sjekk": ["3.2", "3.3", "3.4", "3.5"],
+                                "verdi": "0",
+                                "mellom1": 0,
+                                "mellom2": 3,
+                                "handling": {
+                                    "type": "avslutt",
+                                    "fasit": "Nei",
+                                    "utfall": "Testside med syntaksfeil av typen #delutfall(0)#delutfall(1)#delutfall(2)#delutfall(3)."  
+                                }
+                            }
+                        }
                 }
             }
         }
-
     ]
 }

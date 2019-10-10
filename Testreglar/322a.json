@@ -44,7 +44,7 @@
         {
             "stegnr": "2.2",
             "spm": "Har nettsida skjemaelement?",
-            "ht": "Eksempel skjemaelement er avkryssingsboks, nedtrekksliste, radioknapp og tekstfelt. Skjemaelement kan ligge aleine eller som en del av for eksempel eit større skjema eller søkefunksjon.",
+            "ht": "Eksempel på skjemaelement er avkryssingsboks, nedtrekksliste, radioknapp og tekstfelt. Skjemaelement kan ligge aleine eller som en del av for eksempel eit større skjema eller søkefunksjon.",
             "type": "jaNei",
             "kilde": [],
             "ruting": {
@@ -86,7 +86,7 @@
                 },
                 "nei": {
                     "type": "ikkjeForekomst",
-                    "utfall": "Skjemaelement det ikkje er mogeleg å navigere til med tastaturet."
+                    "utfall": "Skjemaelement det ikkje er mogleg å navigere til med tastaturet."
                 }
             }
         },
@@ -151,7 +151,7 @@
                 "alle": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Skjemaelement får kontekstendring ved tastaturnavigasjon, utan at det på er varsla på førehand."
+                    "utfall": "Skjemaelement får kontekstendring ved tastaturnavigasjon, utan at det er varsla på førehand."
                 }
             }
         }

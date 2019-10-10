@@ -83,7 +83,7 @@
         },
         {
             "stegnr": "3.3",
-            "spm": "Skriv inn url på ei slik form at vi kan nå aktuell nettside ved å klikke på lenka.",
+            "spm": "Skriv inn URL på ei slik form at vi kan nå aktuell nettside ved å klikke på lenka.",
             "ht": "Oppgi URL for den andre nettsida der du identifiserte blokka med navigasjonselement.",
             "type": "tekst",
             "label": "URL:",
@@ -151,12 +151,12 @@
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Blokker med navigasjonselement som blir gjentekne på fleire sider, opptrer i same relative rekkefølge."
+                    "utfall": "Blokker med navigasjonselement som blir gjentekne på fleire sider, opptrer i same relative rekkefølgje."
                 },
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Blokker med navigasjonselement som blir gjentekne på fleire sider, opptrer ikkje i same relative rekkefølge."
+                    "utfall": "Blokker med navigasjonselement som blir gjentekne på fleire sider, opptrer ikkje i same relative rekkefølgje."
                 }
             }
         }
