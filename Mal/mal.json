@@ -54,7 +54,7 @@
                     "utfall": "Samsvar med kravet"
                 },
                 "nei": {
-                    "type":   "avslutt"
+                    "type":   "avslutt",
                     "fasit":   "Nei",
                     "utfall": "Brot med kravet"
                 }
