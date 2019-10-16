@@ -174,3 +174,28 @@ Ruting alle betyr at den valte rutinga skal nyttast ved alle svar.
             }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Ruting Ja og  Nei gjer ulik ruting for Ja og Nei spørsmål.
+
+### Ruting frå radioboks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            "svarArray": ["1-5 tabsteg", "6-10 tabsteg", "Fleire enn 10 tabsteg", "Når ikkje mekanisme med tastatur"],
+            "ruting": {
+                "alt0": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                },
+                "alt1": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Ved tastaturnavigasjon, krevst det meir enn fem tabsteg for å nå mekanisme for styring av lyd som startar automatisk på nettsida."
+                },
+                "alt2": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Ved tastaturnavigasjon, krevst det meir enn fem tabsteg for å nå mekanisme for styring av lyd som startar automatisk på nettsida."
+                },
+                "alt3": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Ved tastaturnavigasjon, er det ikkje mogleg å slå av eller regulere lyd som startar automatisk på nettsida."
+                }
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
