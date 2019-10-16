@@ -37,7 +37,26 @@
                     "steg": "3.1"
                 },
                 "nei": {
-                    "type": "ikkjeForekomst"
+                    "type":"ikkjeForekomst",
+                    "utfall":"Ikkje ein del av kravet"
+                }
+            }
+        },
+        {
+            "stegnr": "2.3",
+            "spm": "",
+            "ht": "",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Samsvar med kravet"
+                },
+                "nei": {
+                    "type":   "avslutt"
+                    "fasit":   "Nei",
+                    "utfall": "Brot med kravet"
                 }
             }
         }
