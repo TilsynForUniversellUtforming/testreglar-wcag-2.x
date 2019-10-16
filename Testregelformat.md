@@ -138,7 +138,7 @@ Ruting
             }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar. Merk at det 
+Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, som er nærare omtalt i dette kapitelet.
 
 
 ### Typar Ruting
