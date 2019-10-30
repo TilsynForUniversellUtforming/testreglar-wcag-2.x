@@ -86,7 +86,7 @@ Ein ruting regel som sjekkar om eit testregel-svar er mellom to gitte verdiar.
                "verdi2":2.99,
                "handling":{ 
                   "type":"gaaTil",
-                  "steg":"3.7",
+                  "steg":"3.7"
                }
             }
          }
