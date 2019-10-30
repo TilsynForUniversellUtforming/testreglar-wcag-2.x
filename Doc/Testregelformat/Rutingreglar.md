@@ -63,3 +63,9 @@ Ein ulik regel går motsett veg av ein lik regel og utfører handlinga dersom de
    }
 }
 ```
+### Parameter
+Følgjande parameter må settast.
+- "sjekk" : "StegId"  Referanse til steg-id, der svar skal sjekkast.
+- "type"  : "Lik"     Spesifiserer at det er snakk om ein lik regel.
+- "verdi" : "Verdi"   Kva verdi regelen skal sjekke mot.
+- "handling" : ["Handling"] Kva handling som regelen, dersom sann, skal uløyse.
