@@ -66,6 +66,44 @@ Ein ulik regel går motsett veg av ein lik regel og utfører handlinga dersom de
 ### Parameter
 Følgjande parameter må settast.
 - "sjekk" : "steg-id"  Referanse til steg-id, der svar skal sjekkast.
-- "type"  : "ulik"     Spesifiserer at det er snakk om ein lik regel.
+- "type"  : "ulik"     Spesifiserer at det er snakk om ein ulik regel.
 - "verdi" : "verdi"   Kva verdi regelen skal sjekke mot.
 - "handling" : ["Handling"] Kva handling som regelen, dersom sann, skal uløyse.
+
+## Mellom
+Ein ruting regel som sjekkar om eit testregel-svar er mellom to gitte verdiar.
+
+```Json
+{ 
+   "ruting":{ 
+      "alle":{ 
+         "type":"regler",
+         "regler":{ 
+            "1":{ 
+               "sjekk":"3.3",
+               "type":"mellom",
+               "verdi":0,
+               "verdi2":2.99,
+               "handling":{ 
+                  "type":"gaaTil",
+                  "steg":"3.7",
+                  "delutfall":{ 
+                     "nr":0,
+                     "tekst":"Tekst har kontrast på mindre enn 3,0:1.",
+                     "fasit":"Nei"
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+```
+### Parameter
+Følgjande parameter må settast.
+- "sjekk" : "steg-id"  Referanse til steg-id, der svar skal sjekkast.
+- "type"  : "mellom"     Spesifiserer at det er snakk om ein "mellom"-regel.
+- "verdi" : tall   Den lågaste verdien det skal sjekkast mot
+- "verdi2" :tall   Den høgaste verdien det skal sjekkast mot
+- "handling" : ["Handling"] Kva handling som regelen, dersom verdien ligg mellom verdi1 og verdi2
+
