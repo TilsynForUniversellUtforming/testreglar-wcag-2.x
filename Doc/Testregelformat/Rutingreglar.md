@@ -4,9 +4,9 @@ Reglar for ruting er reglar du kan nytte i ein testregel til å legge på vilkå
 
 ## Typar reglar
 - [Lik](#lik)
-- Ulik
-- Mellom
-- Tal Dersom
+- [Ulik](#ulik)
+- [Mellom](#mellom)
+- [Tal dersom](#tal-dersom)
 
 ## Lik
 Ein lik regel sjekkar om eit svar frå ein testregel er lik ein gitt verdi (sann) og utfører då ei handling.
@@ -103,4 +103,6 @@ Følgjande parameter må settast.
 - "verdi" : tall   Den lågaste verdien det skal sjekkast mot
 - "verdi2" :tall   Den høgaste verdien det skal sjekkast mot
 - "handling" : ["Handling"] Kva handling som regelen, dersom verdien ligg mellom verdi1 og verdi2
+
+## Tal dersom
 
