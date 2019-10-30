@@ -35,9 +35,9 @@ Ein lik regel sjekkar om eit svar frå ein testregel er lik ein gitt verdi (sann
 ```
 ### Parameter
 Følgjande parameter må settast.
-- "sjekk" : "StegId"  Referanse til steg-id, der svar skal sjekkast.
-- "type"  : "Lik"     Spesifiserer at det er snakk om ein lik regel.
-- "verdi" : "Verdi"   Kva verdi regelen skal sjekke mot.
+- "sjekk" : "steg-id"  Referanse til steg-id, der svar skal sjekkast.
+- "type"  : "lik"     Spesifiserer at det er snakk om ein lik regel.
+- "verdi" : "verdi"   Kva verdi regelen skal sjekke mot.
 - "handling" : ["Handling"] Kva handling som regelen, dersom sann, skal uløyse.
 
 ## Ulik
@@ -65,7 +65,7 @@ Ein ulik regel går motsett veg av ein lik regel og utfører handlinga dersom de
 ```
 ### Parameter
 Følgjande parameter må settast.
-- "sjekk" : "StegId"  Referanse til steg-id, der svar skal sjekkast.
-- "type"  : "Lik"     Spesifiserer at det er snakk om ein lik regel.
-- "verdi" : "Verdi"   Kva verdi regelen skal sjekke mot.
+- "sjekk" : "steg-id"  Referanse til steg-id, der svar skal sjekkast.
+- "type"  : "ulik"     Spesifiserer at det er snakk om ein lik regel.
+- "verdi" : "verdi"   Kva verdi regelen skal sjekke mot.
 - "handling" : ["Handling"] Kva handling som regelen, dersom sann, skal uløyse.
