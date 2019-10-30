@@ -34,11 +34,12 @@ Steg
 
 Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire
 underelement: 
-- stegnr
-- spm 
-- ht - Hjelpetekst
-- type 
-- ruting
+- [stegnr](#stegnr)
+- [spm](#spørsmål-/-instruksjon) 
+- [ht - Hjelpetekst](#hjelpetekst)
+- [type](#type) 
+- [kilde](#kilde)
+- [ruting](#ruting)
 
 I tilegg finnes desse spesialfelta:
 - label
@@ -141,7 +142,7 @@ Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, so
 ### Typar Ruting
 
 "Ruting til" er det øverste nivået i en ruting. Den vanlege alternativa er  
--   [Alle](#alle)
+-   [Alle](#ruting-alle)
 -   [Ja/Nei](#ruting-ja-og-nei)
 -   [Alternativ frå radioboks](#ruting-frå-radioboks)
 -  [Reglar](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md).
