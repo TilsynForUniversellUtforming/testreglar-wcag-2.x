@@ -42,6 +42,7 @@ Følgjande parameter må settast.
 
 ## Ulik
 Ein ulik regel går motsett veg av ein lik regel og utfører handlinga dersom den er usann.
+### Eksempel
 ```Json
 { 
    "ruting":{ 
@@ -75,6 +76,7 @@ Ein ruting regel som sjekkar om eit Steg.svar er mellom to gitte verdiar.
 
 ``` NB! For å nytte mellom-regel må du sørge for at steget du hentar verdi frå berre lagar tal, dersom ikkje vil du risikere at rutinga ikkje fungerer.```
 
+## Eksempel
 ```Json
 { 
    "ruting":{ 
@@ -107,6 +109,7 @@ Følgjande parameter må settast.
 ## Tal dersom
 Tal dersom sjekkar kor mange Steg.svar som samsvarar med ein gitt verdi.
 
+### Eksempel
 ```Json
 { 
    "ruting":{ 
@@ -115,8 +118,7 @@ Tal dersom sjekkar kor mange Steg.svar som samsvarar med ein gitt verdi.
          "regler":{ 
             "1":{ 
                "type":"talDersom",
-               "sjekk":[ "3.2", "3.3", "3.4", "3.5"
-               ],
+               "sjekk":[ "3.2", "3.3", "3.4", "3.5"],
                "verdi":"0",
                "mellom1":4,
                "mellom2":4,
