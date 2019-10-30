@@ -197,3 +197,9 @@ Ruting Ja og  Nei gjer ulik ruting for Ja og Nei spørsmål.
                 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Ved ruting frå radioboks vil rutinga vere basert på kva alternativ du vel. Dei ulike alternativa skal spesifiserast i matrisa "svarArray", og blir referert til frå 0 til tal alternativ (For eksempel "alt0" vil då vise til det fyrste elementet i matrisa)
+
+### Reglar for ruting
+Det kan òg nyttast reglar til å gje ein meir kraftig ruting. [Meir om dei ulike ruting-reglane finn du her](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md).
+
+
+
