@@ -141,9 +141,10 @@ Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, so
 ### Typar Ruting
 
 "Ruting til" er det øverste nivået i en ruting. Den vanlege alternativa er  
--   Alle (Ruting uansett svar)
--   Ja/Nei
--   [Alternativ frå radioboks]
+-   [Alle](alle)
+-   [Ja/Nei](#ruting-ja-og-nei)
+-   [Alternativ frå radioboks](#ruting-frå-radioboks)
+-  [Reglar](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md).
 
 ### Ruting Alle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
