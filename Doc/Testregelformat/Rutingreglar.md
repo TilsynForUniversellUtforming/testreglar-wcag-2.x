@@ -9,7 +9,7 @@ Reglar for ruting er reglar du kan nytte i ein testregel til å legge på vilkå
 - [Tal dersom](#tal-dersom)
 
 ## Lik
-Ein lik regel sjekkar om eit svar frå ein testregel er lik ein gitt verdi (sann) og utfører då ei handling.
+Ein lik regel sjekkar om eit svar frå eit Steg.svar er lik ein gitt verdi (sann) og utfører då ei handling.
 
 ### Eksempel
 ```Json
@@ -71,7 +71,7 @@ Følgjande parameter må settast.
 - "handling" : ["Handling"] Kva handling som regelen, dersom sann, skal uløyse.
 
 ## Mellom
-Ein ruting regel som sjekkar om eit testregel-svar er mellom to gitte verdiar.
+Ein ruting regel som sjekkar om eit Steg.svar er mellom to gitte verdiar.
 
 ``` NB! For å nytte mellom-regel må du sørge for at steget du hentar verdi frå berre lagar tal, dersom ikkje vil du risikere at rutinga ikkje fungerer.```
 
@@ -100,9 +100,9 @@ Ein ruting regel som sjekkar om eit testregel-svar er mellom to gitte verdiar.
 Følgjande parameter må settast.
 - "sjekk" : "steg-id"  Referanse til steg-id, der svar skal sjekkast.
 - "type"  : "mellom"     Spesifiserer at det er snakk om ein "mellom"-regel.
-- "verdi" : tall   Den lågaste verdien det skal sjekkast mot
-- "verdi2" :tall   Den høgaste verdien det skal sjekkast mot
-- "handling" : ["Handling"] Kva handling som regelen, dersom verdien ligg mellom verdi1 og verdi2
+- "verdi" : tall   Den lågaste verdien det skal sjekkast mot.
+- "verdi2" :tall   Den høgaste verdien det skal sjekkast mot.
+- "handling" : ["Handling"] Kva handling som regelen, dersom verdien ligg mellom verdi1 og verdi2.
 
 ## Tal dersom
-
+Tal dersom sjekkar kor mange Steg.svar som samsvarar med ein gitt verdi.
