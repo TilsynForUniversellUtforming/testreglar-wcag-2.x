@@ -35,7 +35,7 @@ Steg
 Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire
 underelement: 
 - [stegnr](#stegnr)
-- [spm](#spørsmål-/-instruksjon) 
+- [spm](#spørsmål--instruksjon) 
 - [ht - Hjelpetekst](#hjelpetekst)
 - [type](#type) 
 - [kilde](#kilde)
