@@ -134,7 +134,7 @@ Tal dersom sjekkar kor mange Steg.svar som samsvarar med ein gitt verdi.
 }
 ```
 
-Parameter
+### Parameter
 Følgjande parameter må settast.
 - "sjekk" : ["steg-id1","steg-id2"] Matrise med steg-idar som som skal sjekkast-
 - "type" : "talDersom" Spesifiserer at det er snakk om ein "tal dersom"-regel.
