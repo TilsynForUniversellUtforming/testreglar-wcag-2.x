@@ -87,11 +87,6 @@ Ein ruting regel som sjekkar om eit testregel-svar er mellom to gitte verdiar.
                "handling":{ 
                   "type":"gaaTil",
                   "steg":"3.7",
-                  "delutfall":{ 
-                     "nr":0,
-                     "tekst":"Tekst har kontrast på mindre enn 3,0:1.",
-                     "fasit":"Nei"
-                  }
                }
             }
          }
