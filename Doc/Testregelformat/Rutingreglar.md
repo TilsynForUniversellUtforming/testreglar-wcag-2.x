@@ -142,3 +142,48 @@ Følgjande parameter må settast.
 - "mellom1" :tal svar  Den lågaste verdien av tal svar som skal utløyse regelen.
 - "mellom2" :tall svar Den høgaste veriden av tal svar som ska utløyse regelen.
 - "handling" : ["Handling"] Kva handling som regelen, dersom tal steg med lik verdi er mellom "mellom1" og "mellom2"
+
+
+# Eksempel med fleire ruting testreglar
+```JSON
+{ 
+   "stegnr":"3.6",
+   "spm":"Får du ein \"Fatal Error\" ved validering av nettsida?",
+   "ht":"<p>Ein \"Fatal Error\" gjer at validatoren stoppar opp og ikkje får til å validere resten av koden på nettsida. \"Fatal Error\" kan for eksempel oppstå på grunn av script.</p><p>Det kan hende at det ligg fleire syntaksfeil etter ein \"Fatal Error\", men dei er ikkje mogleg å oppdage.</p>",
+   "type":"jaNei",
+   "kilde":[ 
+      "G134"
+   ],
+   "ruting":{ 
+      "alle":{ 
+         "type":"regler",
+         "regler":{ 
+            "1":{ 
+               "type":"talDersom",
+               "sjekk":["3.2","3.3","3.4","3.5"],
+               "verdi":"0",
+               "mellom1":4,
+               "mellom2":4,
+               "handling":{ 
+                  "type":"avslutt",
+                  "fasit":"Ja",
+                  "utfall":"Testsida har ikkje syntaksfeil."
+               }
+            },
+            "2":{ 
+               "type":"talDersom",
+               "sjekk":["3.2","3.3","3.4","3.5"],
+               "verdi":"0",
+               "mellom1":0,
+               "mellom2":3,
+               "handling":{ 
+                  "type":"avslutt",
+                  "fasit":"Nei",
+                  "utfall":"Testside med syntaksfeil av typen #delutfall(0)#delutfall(1)#delutfall(2)#delutfall(3)."
+               }
+            }
+         }
+      }
+   }
+}
+```
