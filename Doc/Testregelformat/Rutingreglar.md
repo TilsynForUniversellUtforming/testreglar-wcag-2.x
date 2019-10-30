@@ -73,6 +73,8 @@ Følgjande parameter må settast.
 ## Mellom
 Ein ruting regel som sjekkar om eit testregel-svar er mellom to gitte verdiar.
 
+``` NB!  For å nytte mellom-regel må du sørge for at steget du hentar verdi frå kun lagar tal, ellers vil du risikere at rutinga ikkje fungerer.```
+
 ```Json
 { 
    "ruting":{ 
