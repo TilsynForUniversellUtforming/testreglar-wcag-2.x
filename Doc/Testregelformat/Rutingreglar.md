@@ -151,9 +151,7 @@ Følgjande parameter må settast.
    "spm":"Får du ein \"Fatal Error\" ved validering av nettsida?",
    "ht":"<p>Ein \"Fatal Error\" gjer at validatoren stoppar opp og ikkje får til å validere resten av koden på nettsida. \"Fatal Error\" kan for eksempel oppstå på grunn av script.</p><p>Det kan hende at det ligg fleire syntaksfeil etter ein \"Fatal Error\", men dei er ikkje mogleg å oppdage.</p>",
    "type":"jaNei",
-   "kilde":[ 
-      "G134"
-   ],
+   "kilde":["G134"],
    "ruting":{ 
       "alle":{ 
          "type":"regler",
