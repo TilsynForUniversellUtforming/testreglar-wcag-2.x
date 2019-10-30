@@ -1,6 +1,6 @@
 # Reglar for ruting
 
-Reglar for ruting er reglar du kan nytte i ein testregel for å legge på vilkår for at ein ruting skal skje. Ein regel skal alltid plasserast i ruting eller handling delen av eit steg. Ein ruting kan ha [fleire ruting-reglar](#eksempel-med-fleire-ruting-testreglar) og det er mogeleg å nøste reglar.
+Reglar for ruting er reglar du kan nytte i ein testregel for å legge på vilkår for at ein ruting skal skje. Ein regel skal alltid plasserast i ruting eller handling delen av eit steg. Ein ruting kan ha [fleire ruting-reglar](##eksempel-med-fleire-ruting-reglar) og det er mogeleg å nøste reglar.
 
 ## Typar reglar
 - [Lik](#lik)
