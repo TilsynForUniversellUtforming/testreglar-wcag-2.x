@@ -106,3 +106,28 @@ Følgjande parameter må settast.
 
 ## Tal dersom
 Tal dersom sjekkar kor mange Steg.svar som samsvarar med ein gitt verdi.
+
+```Json
+{ 
+   "ruting":{ 
+      "alle":{ 
+         "type":"regler",
+         "regler":{ 
+            "1":{ 
+               "type":"talDersom",
+               "sjekk":[ "3.2", "3.3", "3.4", "3.5"
+               ],
+               "verdi":"0",
+               "mellom1":4,
+               "mellom2":4,
+               "handling":{ 
+                  "type":"avslutt",
+                  "fasit":"Ja",
+                  "utfall":"Testsida har ikkje syntaksfeil."
+               }
+            }
+         }
+      }
+   }
+}
+```
