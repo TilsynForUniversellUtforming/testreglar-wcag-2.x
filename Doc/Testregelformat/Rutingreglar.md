@@ -117,8 +117,8 @@ Tal dersom sjekkar kor mange Steg.svar som samsvarar med ein gitt verdi.
          "type":"regler",
          "regler":{ 
             "1":{ 
-               "type":"talDersom",
                "sjekk":[ "3.2", "3.3", "3.4", "3.5"],
+               "type":"talDersom",
                "verdi":"0",
                "mellom1":4,
                "mellom2":4,
@@ -133,3 +133,12 @@ Tal dersom sjekkar kor mange Steg.svar som samsvarar med ein gitt verdi.
    }
 }
 ```
+
+Parameter
+Følgjande parameter må settast.
+"sjekk" : ["steg-id1","steg-id2"] Matrise med steg-idar som som skal sjekkast
+"type" : "talDersom" Spesifiserer at det er snakk om ein "tal dersom"-regel.
+"verdi" : Verdi som svar skal vere lik for å teljast med.
+"mellom1" :tal svar  Den lågaste verdien av tal svar som skal utløyse regelen.
+"mellom2" :tall svar Den høgaste veriden av tal svar som ska utløyse regelen.
+"handling" : ["Handling"] Kva handling som regelen, dersom tal steg med lik verdi er mellom "mellom1" og "mellom2"
