@@ -46,7 +46,6 @@
         }
 
     ],
-
     "steg": [
         {
             "stegnr": "2.1",
@@ -79,7 +78,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.1",
             "spm": "Beskriv bilde med klikkbare område",
@@ -113,7 +111,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.3",
             "spm": "Beskriv det klikkbare området, &#x3C;area&#x3E;-elementet, du testar",
@@ -146,7 +143,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.5",
             "spm": "Har &#x3C;aria&#x3E;-elementet attributtet \"aria-labelledby\" ",
@@ -164,7 +160,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.6",
             "spm": "Er aria-labelledby attributtet kopla til annan tekst på sida? ",
@@ -199,7 +194,6 @@
                 }
             }
         },
-
           {
             "stegnr": "3.8",
             "spm": "Er det innhold i alt-attributtet?",
@@ -217,7 +211,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.9",
             "spm": "Har &#x3C;area&#x3E;-elementet eit title-attributt?",
@@ -236,7 +229,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.10",
             "spm": "Er det innhald i title-attributtet?",
@@ -270,7 +262,6 @@
                 }
             } 
         },
-
         {
             "stegnr": "3.12",
             "spm": "Er innhaldet i attributtet beskrivande for formålet med lenka?",
