@@ -35,6 +35,7 @@
             "type": "tekst",
             "label": "Url/Side:",
             "oblig": true,
+            "datalist":"Sideutvalg",
             "ruting": {
                 "alle": {
                     "type": "gaaTil",
