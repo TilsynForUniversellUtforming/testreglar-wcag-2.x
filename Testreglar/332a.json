@@ -64,6 +64,7 @@
             "ht": "Oppgi url eller side-ID.",
             "type": "tekst",
             "label": "Url/Side:",
+            "datalist":"Sideutvalg",
             "oblig": true,
             "ruting": {
                 "alle": {
