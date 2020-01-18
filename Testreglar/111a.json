@@ -98,9 +98,7 @@
         {
             "title": "3.30"
         }
-        
     ],
-
     "steg": [
         {
             "stegnr": "2.1",
@@ -133,7 +131,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.1",
             "spm": "Beskriv bilde",
@@ -148,8 +145,7 @@
                     "steg": "3.2"
                 }
             } 
-        }
-        ,
+        },
         {
             "stegnr": "3.2",
             "spm": "Er bilde til pynt/dekor eller brukt som bakgrunn eller til formatering?",
@@ -184,7 +180,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.4",
             "spm": "Er bilde koda med attributtet role=\"presentation\"?",
@@ -203,9 +198,6 @@
                 }
             }
         },
-        
-        
-        
         {
             "stegnr": "3.5",
             "spm": "Er bilde koda som &#x3C;img&#x3E;?",
@@ -223,8 +215,6 @@
                 }
             }
         },
-        
-
         {
             "stegnr": "3.6",
             "spm": "Har bilde eit alt-attributt?",
@@ -242,7 +232,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.7",
             "spm": "Er alt-attributtet tomt?",
@@ -261,7 +250,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.8",
             "spm": "Har bilde eit title-attributt?",
@@ -280,7 +268,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.9",
             "spm": "Er title-attributtet tomt?",
@@ -300,7 +287,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.10",
             "spm": "Har bilde attributtet \"aria-label\"?",
@@ -318,7 +304,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.11",
             "spm": "Har bilde attributtet \"aria-labelledby\" eller \"aria-describedby\"?",
@@ -336,7 +321,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.12",
             "spm": "Er aria-labelledby/aria-describedby attributtet kopla til annan tekst på sida?",
@@ -354,7 +338,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.13",
             "spm": "Er bilde koda med attributtet role=\"presentation\"?",
@@ -373,7 +356,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.14",
             "spm": "Er bilde koda som &#x3C;img&#x3E;?",
@@ -390,9 +372,7 @@
                     "steg": "3.17"
                 }
             }
-        }
-        ,
-
+        },
         {
             "stegnr": "3.15",
             "spm": "Har bilde eit alt-attributt?",
@@ -411,7 +391,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.16",
             "spm": "Er det innhald i alt-attributtet?",
@@ -429,7 +408,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.17",
             "spm": "Har bilde eit title-attributt?",
@@ -448,7 +426,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.18",
             "spm": "Er det innhald i title-attributtet?",
@@ -467,7 +444,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.19",
             "spm": "Er bilde ein test eller ei sanseoppleving?",
@@ -521,7 +497,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.22",
             "spm": "Er bilde komplekst?",
@@ -560,7 +535,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.23",
             "spm": "Gir innhaldet i attributtet ein beskrivande identifikasjon av bilde?",
@@ -579,7 +553,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.24",
             "spm": "Ligg det ein utfyllande tekst om bilde i direkte tilknytning til bilde?",
@@ -614,7 +587,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.26",
             "spm": "Ligg det ei lenke, i direkte tilknytning til bilde, som tek deg til ein utfyllande tekst om bilde?",
@@ -632,7 +604,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.27",
             "spm": "Er bilde koda med attributtet longdesc?",
@@ -651,7 +622,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.28",
             "spm": "Fungerer lenka som ligg i longdesc-attributtet?",
@@ -670,7 +640,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.29",
             "spm": "Er tekstalternativet koda som tekst?",
@@ -707,6 +676,5 @@
                 }
             }
         }
-
     ]
 }
