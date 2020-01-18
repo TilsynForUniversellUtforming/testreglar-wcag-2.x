@@ -22,6 +22,7 @@
             "ht": "Kva side testar du på?",
             "type": "tekst",
             "label": "Url/Side:",
+            "datalist":"Sideutvalg",
             "oblig": true,
             "ruting": {
                 "alle": {
