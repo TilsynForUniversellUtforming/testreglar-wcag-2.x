@@ -68,7 +68,6 @@
         }
 
     ],
-
     "steg": [
         {
             "stegnr": "2.1",
@@ -76,14 +75,14 @@
             "ht": "Oppgi url eller side-ID",
             "type": "tekst",
             "label": "Url/Side:",
-            "datalist":"Sideutvalg",
+            "datalist": "Sideutvalg",
             "oblig": true,
             "ruting": {
                 "alle": {
                     "type": "gaaTil",
                     "steg": "2.2"
                 }
-            } 
+            }
         },
         {
             "stegnr": "2.2",
@@ -99,11 +98,10 @@
                 },
                 "nei": {
                     "type": "ikkjeForekomst",
-                    "utfall" : "Testside har ikkje lenka bilde."
+                    "utfall": "Testside har ikkje lenka bilde."
                 }
             }
         },
-
         {
             "stegnr": "3.1",
             "spm": "Beskriv det lenka bilde",
@@ -117,9 +115,8 @@
                     "type": "gaaTil",
                     "steg": "3.2"
                 }
-            } 
-        }
-        ,
+            }
+        },
         {
             "stegnr": "3.2",
             "spm": "Aktiver/opne lenka i ny fane og skriv inn url",
@@ -133,9 +130,8 @@
                     "type": "gaaTil",
                     "steg": "3.3"
                 }
-            } 
-        }
-        ,
+            }
+        },
         {
             "stegnr": "3.3",
             "spm": "Har lenkeelementet (&#x3C;a&#x3E;) attributtet \"aria-label\" ?",
@@ -154,7 +150,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.4",
             "spm": "Har lenkeelementet (&#x3C;a&#x3E;) attributtet \"aria-labelledby\" ?",
@@ -173,7 +168,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.5",
             "spm": "Er aria-labelledby attributtet kopla til annan tekst på sida (lenkekontekst)?",
@@ -192,13 +186,12 @@
                 }
             }
         },
-
         {
             "stegnr": "3.6",
             "spm": "Er innhaldet i aria-attributta beskrivande for formålet med lenka?",
             "ht": "<p>Viss aria-attributta <code>aria-label</code> eller <code>aria-labelledby</code> finst og er rett koda, blir innhaldet i desse attributta lest opp, og ikkje lenketeksten eller eventuelle tekstalternativ på bilde.</p> <p>Viss aria-labelledby visar til dupliserte id-ar, skal du vurdere innhaldet til id-en som står først i koden.</#p>",
             "type": "jaNei",
-            "kilde": ["ARIA7","ARIA8"],
+            "kilde": ["ARIA7", "ARIA8"],
             "svar": null,
             "ruting": {
                 "ja": {
@@ -213,13 +206,12 @@
                 }
             }
         },
-
         {
             "stegnr": "3.7",
             "spm": "Har lenka ein lenketekst?",
             "ht": "<p>Merk at teksten kan vere koda inn i andre element som for eksempel <code>&#x3C;h&#x3E;</code>, <code>&#x3C;span&#x3E;</code> men m&#xE5; ligge inne i <code>&#x3C;a&#x3E;</code> elementet.</p> <p>Merk at det kan vere naudsynt &#xE5; felle ut underordna element i koden for &#xE5; finne teksten.</p> <p>Du skal ikkje vurdere innhaldet i <code>&#x3C;img&#x3E;</code>-elementet.</p>",
             "type": "jaNei",
-            "kilde": ["H30","H39"],
+            "kilde": ["H30", "H39"],
             "svar": null,
             "ruting": {
                 "ja": {
@@ -232,13 +224,12 @@
                 }
             }
         },
-
         {
             "stegnr": "3.8",
             "spm": "Er lenketeksten misvisande for formålet med lenka?",
             "ht": "<p>Lenketeksten er misvisande dersom den kan føre til at brukaren misforstår formålet med lenka.</#p> <p>Vis lenketeksten er intetseiande, er den ikkje nødendigvis misvisande.</p>",
             "type": "jaNei",
-            "kilde": ["H30","H39"],
+            "kilde": ["H30", "H39"],
             "svar": null,
             "ruting": {
                 "ja": {
@@ -252,7 +243,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.9",
             "spm": "Ligg det eit bilde som er koda som &#x3C;img&#x3E; eller &#x3C;svg&#x3E; inne i lenka?",
@@ -282,20 +272,19 @@
                             "verdi": "Ja",
                             "handling": {
                                 "type": "gaaTil",
-                                "steg": "3.18"  
+                                "steg": "3.18"
                             }
                         }
                     }
                 }
             }
         },
-
         {
             "stegnr": "3.10",
             "spm": "Har bilde, som ligg i lenka, attributtet \"aria-label\" ?",
             "ht": "<p>MERK: Du skal ikkje vurdere kvaliteten på teksten.</p><p>Sjå i koden og finn det aktuelle elementet.</p>",
             "type": "jaNei",
-            "kilde": ["ARIA6","F65"],
+            "kilde": ["ARIA6", "F65"],
             "svar": null,
             "ruting": {
                 "ja": {
@@ -308,13 +297,12 @@
                 }
             }
         },
-
         {
             "stegnr": "3.11",
             "spm": "Har bilde, som ligg i lenka, attributtet \"aria-labelledby\"?",
             "ht": "<p>MERK: Du skal ikkje vurdere kvaliteten på teksten.</p><p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>).</p>",
             "type": "jaNei",
-            "kilde": ["ARIA10","F65"],
+            "kilde": ["ARIA10", "F65"],
             "svar": null,
             "ruting": {
                 "ja": {
@@ -327,13 +315,12 @@
                 }
             }
         },
-
         {
             "stegnr": "3.12",
             "spm": "Er aria-labelledby/aria-describedby attributtet kopla til annan tekst på sida?",
             "ht": "Gjer eit søk i koden på id i aria-labelledby. Dersom det finst fleire id-ar skal du undersøke alle. Id-ane vil då vere skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>).",
             "type": "jaNei",
-            "kilde": ["ARIA10","F65"],
+            "kilde": ["ARIA10", "F65"],
             "svar": null,
             "ruting": {
                 "ja": {
@@ -346,7 +333,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.13",
             "spm": "Er bilde koda som &#x3C;img&#x3E;?",
@@ -365,13 +351,12 @@
                 }
             }
         },
-
         {
             "stegnr": "3.14",
             "spm": "Har bilde eit alt-attributt?",
             "ht": "Du kan nytte kodeverkt&#xF8;yet i nettlesaren til &#xE5; sjekke dette. Sj&#xE5; p&#xE5; koden og finn <code>&#x3C;img&#x3E;</code>-elementet. Unders&#xF8;k om bilde har eit alt-attributt.",
             "type": "jaNei",
-            "kilde": ["H30","H37", "F65"],
+            "kilde": ["H30", "H37", "F65"],
             "svar": null,
             "ruting": {
                 "ja": {
@@ -384,15 +369,13 @@
                     "utfall": "Lenka bilde manglar alt-attributt."
                 }
             }
-        }
-        ,
-
+        },
         {
             "stegnr": "3.15",
             "spm": "Er det innhold i alt-attributtet?",
             "ht": "Sjå i koden om alt-attributtet har innhald.",
             "type": "jaNei",
-            "kilde": ["H30","H37"],
+            "kilde": ["H30", "H37"],
             "svar": null,
             "ruting": {
                 "ja": {
@@ -405,7 +388,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.16",
             "spm": "Har bilde eit title-attributt?",
@@ -437,14 +419,13 @@
                             "verdi": "Ja",
                             "handling": {
                                 "type": "gaaTil",
-                                "steg": "3.18"  
+                                "steg": "3.18"
                             }
                         }
                     }
                 }
             }
         },
-
         {
             "stegnr": "3.17",
             "spm": "Er det innhald i title-attributtet?",
@@ -464,7 +445,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.18",
             "spm": "Ligg det fleire bilde inne i same lenke?",
@@ -480,7 +460,7 @@
                     "steg": "3.20"
                 }
             }
-        }, 
+        },
         {
             "stegnr": "3.19",
             "spm": "Har dei andre bilda, som ligg i same lenke, eit tekstalternativ?",
@@ -498,7 +478,7 @@
             "spm": "Er den samla informasjonen i lenketeksten og/eller tekstalternativ beskrivande for formålet med lenka? ",
             "ht": "<p>Gjer ei skjønnsmessig vurdering av om informasjonen i lenka (lenketekst og/eller tekstalternativ til bilde) gir tilstrekkeleg informasjon om kva som er lenkemålet.</p> <p>Viss det ligg fleire bilde i same lenke-element, skal du vurdere tekstalternativa samla.</p> <p>Viss aria-labelledby visar til dupliserte id-ar, skal du vurdere innhaldet til id-en som står først i koden.</p> <p>Merk: Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
             "type": "jaNei",
-            "kilde": ["G82","G94","F30", "F89"],
+            "kilde": ["G82", "G94", "F30", "F89"],
             "svar": null,
             "ruting": {
                 "ja": {
