@@ -50,8 +50,8 @@ Dato for siste oppdatering av testregelen.
 
 ## Språk
 Språket i testregelen.
-no - Norsk
-en - Engelsk
+- no - Norsk
+- en - Engelsk
 ### Eksempel
 ```json
 "spraak" : "no"
