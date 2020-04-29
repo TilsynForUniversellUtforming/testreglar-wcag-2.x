@@ -10,6 +10,7 @@ Generell info om testreglar
 - Id
 -  Type
 -  Versjon
+-  Språk
 -  SistOppdatertAvDifi 
 
 ## Id
@@ -18,14 +19,6 @@ Id er ein unik identifikator for kvar testregel.
 ```json
 "id": "1.4.2a"
 ```
-
-## Versjon
-Kva versjon av testregelen det er snakk om.
-### Eksempel
-```json
-"versjon": "1.0"
-```
-
 
 ### Type
 Type er kategori av testregel. Dei aktuelle typane er: 
@@ -37,6 +30,59 @@ Type er kategori av testregel. Dei aktuelle typane er:
 ```json
 "type": "web"
 ```
+
+## Versjon
+Kva versjon av testregelen det er snakk om.
+### Eksempel
+```json
+"versjon": "1.0"
+```
+
+## SistOppdatertAvDifi 
+Dato for siste oppdatering av testregelen.
+### Eksempel
+```json
+"sistOppdatertAvDifi": "11.07.2019"
+```
+
+## Språk
+Språket i testregelen.
+no - Norsk
+en - Engelsk
+### Eksempel
+```json
+"spraak" : "no"
+```
+
+## Side
+Referanse til kva steg (stegnr) som registerer informasjon om side.
+### Eksempel
+```json
+"side": "2.1"
+```
+
+## Element
+Referanse til kva steg (stegnr) som registerer informasjon om element. 
+Dersom det er sida som er elementet skriv "Side"
+### Eksempel
+```json
+"element": "2.1"
+```
+
+## Kolonner
+Kva steg som skal visast i resultat-tabellen.
+### Eksempel
+```json
+"kolonner": [
+        {
+            "title": "2.2"
+        },
+        
+        {
+            "title": "3.2"
+        }]
+```
+
 Steg
 ----
 
