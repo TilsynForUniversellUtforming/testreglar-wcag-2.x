@@ -83,7 +83,8 @@ Kva steg som skal visast i resultat-tabellen.
         
         {
             "title": "3.2"
-        }]
+        }
+        ]
 ```
 
 Steg
