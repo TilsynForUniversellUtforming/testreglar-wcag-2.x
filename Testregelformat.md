@@ -19,6 +19,13 @@ Id er ein unik identifikator for kvar testregel.
 "id": "1.4.2a"
 ```
 
+## Versjon
+Kva versjon av testregelen det er snakk om.
+### Eksempel
+```json
+"versjon": "1.0"
+```
+
 
 ### Type
 Type er kategori av testregel. Dei aktuelle typane er: 
