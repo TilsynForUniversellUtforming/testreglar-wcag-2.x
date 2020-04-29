@@ -8,10 +8,13 @@ Generell info om testreglar
 ---------------------------
 
 - Id
--  Type
--  Versjon
--  Språk
--  SistOppdatertAvDifi 
+- Type
+- Versjon
+- SistOppdatertAvDifi 
+- Språk
+- Side
+- Element
+- Kolonner
 
 ## Id
 Id er ein unik identifikator for kvar testregel.
@@ -25,7 +28,7 @@ Type er kategori av testregel. Dei aktuelle typane er:
 - web 
 - mobilapplikasjon
 - automat
-## Eksempel
+### Eksempel
 
 ```json
 "type": "web"
