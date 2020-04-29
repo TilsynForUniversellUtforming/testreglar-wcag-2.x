@@ -12,12 +12,13 @@
         } 
     ],
     "steg": [
-        {
+          {
             "stegnr": "2.1",
-            "spm": "",
-            "ht": "",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "",
+            "label": "URL/Side:",
+            "datalist":"Sideutvalg",
             "oblig": true,
             "ruting": {
                 "alle": {
