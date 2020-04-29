@@ -13,7 +13,7 @@
     ],
     "steg": [
         {
-            "stegnr": "",
+            "stegnr": "2.1",
             "spm": "",
             "ht": "",
             "type": "tekst",
@@ -21,7 +21,7 @@
             "oblig": true,
             "ruting": {
                 "alle": {
-                    "type": "ga",
+                    "type": "gaaTil",
                     "steg": "2.2"
                 }
             } 
