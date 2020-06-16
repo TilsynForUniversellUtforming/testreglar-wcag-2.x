@@ -7,10 +7,10 @@
     "element": "3.1",
     "kolonner": [
         {
-            "title": "2.2"
+            "title": "2.3"
         },
         {
-            "title": "2.3"
+            "title": "2.4"
         },
         {
             "title": "3.2"
@@ -26,7 +26,7 @@
             "spm": "Beskrive skjermbilde",
             "ht": "Beskriv skjermbildet med få stikkord.",
             "type": "tekst",
-            "label": "URL/Side:",
+            "label": "Skjermbilde:",
             "datalist":"Sideutvalg",
             "oblig": true,
             "ruting": {
@@ -125,12 +125,12 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Testside har tastaturfelle som det ikkje er mogeleg å navigere ut av."
+                    "utfall": "Det finst sveipefeller i skjermbildet og det er ikkje mogleg å sveipe ut av sveipefella."
                 },
                 "ja": {
                     "type": "avslutt",
                     "fasit": "Ja",
-                    "utfall": "Testside har tastaturfelle som det er mogeleg å navigere ut av, med standard tastaturnavigasjon."
+                    "utfall": "Det er mogleg å sveipe ut av sveipefella."
                 }
             }
         }
