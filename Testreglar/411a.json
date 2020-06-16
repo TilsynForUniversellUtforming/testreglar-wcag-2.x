@@ -47,7 +47,6 @@
             "stegnr": "3.1",
             "spm": "Har nettsida valideringsfeil?",
             "ht": "Sjekk om validatoren gir feil av type \"Errors\".",
-            "kilde": ["G134"],
             "type": "jaNei",
             "kilde": ["G134"],
             "ruting": {
