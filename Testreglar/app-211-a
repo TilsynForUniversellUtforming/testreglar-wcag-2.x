@@ -99,7 +99,7 @@
         },
         {
             "stegnr": "3.2",
-            "spm": "Har elementet (som du ikkje fikk til å betene med tastaturet) funksjonalitet det ikkje er Føremålsteneleg å betene med sveip?",
+            "spm": "Har elementet (som du ikkje fikk til å betene med tastaturet) funksjonalitet det ikkje er føremålsteneleg å betene med sveip?",
             "ht": "<p>Eksempel på slik funksjonalitet er maleverktøy, å gi inndata i form av handskrift, styring av bil/helikopter/eller liknande i spill.</p><p>Dersom det finst funksjonalitet som kan betenast på fleire måtar, er det tilstrekkeleg at ein av måtane kan betenast med tastaturet.</p>",
             "type": "jaNei",
             "ruting": {
