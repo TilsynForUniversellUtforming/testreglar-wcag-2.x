@@ -50,7 +50,7 @@
         {
             "stegnr": "2.3",
             "spm": "Får du til å nå alle lenker, knappar og funksjonar med sveiping?",
-            "ht": "<p>Sveip sakte for å navigere på skjermbilde. Følg nøye med på navigasjonen og informasjonen i eventuell statuslinje for å orientere deg på nettsida. For å betene innhaldet kan du også bruke entertasten, mellomromstasten og piltastane. For å rygge med tastaturet, bruk Shift+Tab.</p><p> Det kan hende at du eventuelt må felle ut menyar og opne modalvindauge for å teste alt innhald på nettsida. For å sjekke om det er mogleg å betene lenker, kan du sjå om lenkemålet (URL) visast i statuslinja i nettlesaren. Det er ikkje nødvendig å aktivere lenka.</p><p><strong>Merk:</strong> Dersom det finst funksjonalitet som kan betenast på fleire måtar, er det tilstrekkeleg at ein av måtane kan betenast med tastaturet. Eksempel på dette er datoveljar, kor brukaren både kan skrive inn dato, og velje dato frå ein kalendar.</p><p><strong>Merk:</strong> Eventuell tastaturfelle, omlasting av sida eller kontekstendring påvirkar ikkje om det mogleg å betene innhaldet.</p>",
+            "ht": "<p>Sveip sakte for å navigere på skjermbilde.<p><strong>Merk:</strong> Dersom det finst funksjonalitet som kan betenast på fleire måtar, er det tilstrekkeleg at ein av måtane kan betenast med tastaturet. Eksempel på dette er datoveljar, kor brukaren både kan skrive inn dato, og velje dato frå ein kalendar.</p><p><strong>Merk:</strong> Eventuell tastaturfelle, omlasting av sida eller kontekstendring påvirkar ikkje om det mogleg å betene innhaldet.</p>",
             "type": "jaNei",
             "kilde":["G202"],
             "ruting": {
