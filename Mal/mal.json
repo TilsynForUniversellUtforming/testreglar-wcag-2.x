@@ -8,20 +8,21 @@
     "element": "",
     "kolonner": [
         {
-            "title": ""
+            "title": "2.2"
         } 
     ],
     "steg": [
-        {
-            "stegnr": "",
-            "spm": "",
-            "ht": "",
+          {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
-            "label": "",
+            "label": "URL/Side:",
+            "datalist":"Sideutvalg",
             "oblig": true,
             "ruting": {
                 "alle": {
-                    "type": "ga",
+                    "type": "gaaTil",
                     "steg": "2.2"
                 }
             } 

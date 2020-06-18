@@ -8,37 +8,96 @@ Generell info om testreglar
 ---------------------------
 
 - Id
--  Type
--  Versjon
--  SistOppdatertAvDifi 
+- Type
+- Versjon
+- SistOppdatertAvDifi 
+- Språk
+- Side
+- Element
+- Kolonner
 
 ## Id
+Id er ein unik identifikator for kvar testregel.
+### Eksempel
 ```json
 "id": "1.4.2a"
 ```
-Id er ein unik identifikator for kvar testregel.
 
 ### Type
+Type er kategori av testregel. Dei aktuelle typane er: 
+- web 
+- mobilapplikasjon
+- automat
+### Eksempel
 
 ```json
 "type": "web"
 ```
 
-Type er kategori av testregel. Dei aktuelle typane er: 
-- web 
-- mobilapplikasjon
-- automat
+## Versjon
+Kva versjon av testregelen det er snakk om.
+### Eksempel
+```json
+"versjon": "1.0"
+```
+
+## SistOppdatertAvDifi 
+Dato for siste oppdatering av testregelen.
+### Eksempel
+```json
+"sistOppdatertAvDifi": "11.07.2019"
+```
+
+## Språk
+Språket i testregelen.
+- no - Norsk
+- en - Engelsk
+### Eksempel
+```json
+"spraak" : "no"
+```
+
+## Side
+Referanse til kva steg (stegnr) som registerer informasjon om side.
+### Eksempel
+```json
+"side": "2.1"
+```
+
+## Element
+Referanse til kva steg (stegnr) som registerer informasjon om element. 
+Dersom det er sida som er elementet skriv "Side"
+### Eksempel
+```json
+"element": "2.1"
+```
+
+## Kolonner
+Kva steg som skal visast i resultat-tabellen.
+### Eksempel
+```json
+"kolonner": [
+        {
+            "title": "2.2"
+        },
+        
+        {
+            "title": "3.2"
+        }
+        ]
+```
 
 Steg
 ----
 
 Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire
 underelement: 
-- stegnr
-- spm 
-- ht - Hjelpetekst
-- type 
-- ruting
+- [stegnr](#stegnr)
+- [spm](#spørsmål--instruksjon) 
+- [ht - Hjelpetekst](#hjelpetekst)
+- [type](#type) 
+- [kilde](#kilde)
+- [ruting](#ruting)
 
 I tilegg finnes desse spesialfelta:
 - label
@@ -71,13 +130,12 @@ Eksempel på steg
 ```
 
 ### Stegnr
-
+Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må
+være unik innanfor same testregel og skal vere på formatet «tal.tal»
+#### Eksempel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "stegnr": "3.1"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må
-være unik innanfor same testregel og skal vere på formatet «tal.tal»
 
 ### Spørsmål / Instruksjon
 
@@ -119,9 +177,9 @@ Type: Array
 Kilde er kva kjelder eit steg bygger på. Eit steg kan bygge på fleire
 kjelder.
 
-Ruting
-------
-
+### Ruting
+Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, som er nærare omtalt i dette kapitelet.
+#### Eksempel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "ruting": {
               "ja": {
@@ -134,18 +192,17 @@ Ruting
                 }
             }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, som er nærare omtalt i dette kapitelet.
-
-
 ### Typar Ruting
 
 "Ruting til" er det øverste nivået i en ruting. Den vanlege alternativa er  
--   Alle (Ruting uansett svar)
--   Ja/Nei
--   [Alternativ frå radioboks]
+-   [Alle](#ruting-alle)
+-   [Ja/Nei](#ruting-ja-og-nei)
+-   [Alternativ frå radioboks](#ruting-frå-radioboks)
+-  [Reglar](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md).
 
 ### Ruting Alle
+Ruting alle betyr at den valte rutinga skal nyttast ved alle svar. 
+#### Eksempel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "ruting": {
               "alle": {
@@ -154,10 +211,9 @@ Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, so
                 }
             }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Ruting alle betyr at den valte rutinga skal nyttast ved alle svar. 
-
 ### Ruting Ja og nei
+Ruting Ja og  Nei gjer ulik ruting for Ja og Nei spørsmål.
+#### Eksempel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "ruting": {
               "ja": {
@@ -170,9 +226,10 @@ Ruting alle betyr at den valte rutinga skal nyttast ved alle svar.
                 }
             }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Ruting Ja og  Nei gjer ulik ruting for Ja og Nei spørsmål.
 
 ### Ruting frå radioboks
+Ved ruting frå radioboks vil rutinga vere basert på kva alternativ du vel. Dei ulike alternativa skal spesifiserast i matrisa "svarArray", og blir referert til frå 0 til tal alternativ (For eksempel "alt0" vil då vise til det fyrste elementet i matrisa)
+#### Eksempel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             "svarArray": ["1-5 tabsteg", "6-10 tabsteg", "Fleire enn 10 tabsteg", "Når ikkje mekanisme med tastatur"],
             "ruting": {
@@ -196,4 +253,13 @@ Ruting Ja og  Nei gjer ulik ruting for Ja og Nei spørsmål.
                     "utfall": "Ved tastaturnavigasjon, er det ikkje mogleg å slå av eller regulere lyd som startar automatisk på nettsida."
                 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Ved ruting frå radioboks vil rutinga vere basert på kva alternativ du vel. Dei ulike alternativa skal spesifiserast i matrisa "svarArray", og blir referert til frå 0 til tal alternativ (For eksempel "alt0" vil då vise til det fyrste elementet i matrisa)
+
+
+### Reglar for ruting
+Det kan òg nyttast reglar til å gje ein meir kraftig ruting. [Meir om dei ulike ruting-reglane finn du her](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md).
+
+
+(c) 2019 Tilsyn for universell utforming
+
+
+

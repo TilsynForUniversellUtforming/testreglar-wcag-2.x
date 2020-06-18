@@ -57,6 +57,7 @@
             "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
             "label": "URL/Side:",
+            "datalist":"Sideutvalg",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -69,7 +70,7 @@
         {
             "stegnr": "2.2",
             "spm": "Gjer ein visuell inspeksjon. Finst det informasjon på nettsida som tilseier at det finst ei tidsavgrensing?",
-            "ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. For å betene innhaldet kan du også bruke enter-tasten, mellomromstasten og piltastane. For å rygge med tasttauret, bruk Shift+Tab.",
+            "ht": "",
             "type": "jaNei",
             "ruting": {
                 "ja": {

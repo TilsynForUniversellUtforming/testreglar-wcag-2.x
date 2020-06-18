@@ -64,7 +64,6 @@
             "title": "3.19"
         }
     ],
-
     "steg": [
         {
             "stegnr": "2.1",
@@ -72,6 +71,7 @@
             "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
             "label": "URL/Side:",
+            "datalist": "Sideutvalg",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -96,7 +96,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.1",
             "spm": "Beskriv kva innhald CAPTCHAen ligg i tilknytning til.",
@@ -111,9 +110,7 @@
                     "steg": "3.2"
                 }
             } 
-        }
-        ,
-
+        },
         {
             "stegnr": "3.2",
             "spm": "Består CAPTCHA-løysinga av fleire enn ein form for CAPTCHA?",
@@ -132,7 +129,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.3",
             "spm": "Er CAPTCHAen i form av eit bilde?",
@@ -172,7 +168,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.5",
             "spm": "Har bilde attributtet \"aria-labelledby\" ?",
@@ -190,7 +185,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.6",
             "spm": "Er aria-labelledby attributtet kopla til annan tekst på sida?",
@@ -230,7 +224,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.8",
             "spm": "Har bilde eit alt-attributt?",
@@ -253,7 +246,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.9",
             "spm": "Er det innhold i alt-attributtet?",
@@ -271,7 +263,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.10",
             "spm": "Har bilde eit title-attributt?",
@@ -294,7 +285,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.11",
             "spm": "Er det innhald i title-attributtet?",
@@ -312,7 +302,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.12",
             "spm": "Gir innhaldet i attributtet saman med kontekst ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
@@ -340,7 +329,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.13",
             "spm": "Er CAPTCHAen i form av eit logisk problem?",
@@ -363,7 +351,6 @@
                 }
             }
         },
-
         {
             "stegnr": "3.14",
             "spm": "Er den logiske CAPTCHAen koda som tekst?",
@@ -572,10 +559,5 @@
                 }
             }
         }
-
-
-
-
-
     ]
 }

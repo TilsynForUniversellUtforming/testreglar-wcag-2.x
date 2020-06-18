@@ -1,6 +1,6 @@
 # Reglar for ruting
 
-Reglar for ruting er reglar du kan nytte i ein testregel for å legge på vilkår for at ein ruting skal skje. Ein regel skal alltid plasserast i ruting eller handling delen av eit steg. Ein ruting kan ha flere reglar og det er mogeleg å nøste reglar.
+Reglar for ruting er reglar du kan nytte i ein testregel for å legge på vilkår for at ein ruting skal skje. Ein regel skal alltid plasserast i ruting eller handling delen av eit steg. Ein ruting kan ha [fleire ruting-reglar](#eksempel-med-fleire-ruting-reglar) og det er mogeleg å nøste reglar.
 
 ## Typar reglar
 - [Lik](#lik)
@@ -144,7 +144,7 @@ Følgjande parameter må settast.
 - "handling" : ["Handling"] Kva handling som regelen, dersom tal steg med lik verdi er mellom "mellom1" og "mellom2"
 
 
-# Eksempel med fleire ruting testreglar
+# Eksempel med fleire ruting-reglar
 ```JSON
 { 
    "stegnr":"3.6",

@@ -11,6 +11,9 @@
             "title": "2.2"
         },
         {
+            "title": "2.3"
+        },
+        {
             "title": "3.3"
         },
         {
@@ -42,6 +45,7 @@
             "ht": "Oppgi URL eller side-ID.",
             "type": "tekst",
             "label": "URL/Side:",
+            "datalist":"Sideutvalg",
             "oblig": true,
             "ruting": {
                 "alle": {
@@ -58,7 +62,7 @@
             "ruting": {
                 "ja": {
                     "type": "gaaTil",
-                    "steg": "3.1"
+                    "steg": "2.3"
                 },
                 "nei": {
                     "type": "ikkjeForekomst",
@@ -66,6 +70,23 @@
                 }
             }
         },
+        {
+            "stegnr": "2.3",
+            "spm": "Er skjemaet i ein eller fleire av kategoriane under?<ul><li>Type 1: Skjema som medfører juridiske og/eller økonomiske plikter for brukaren.</li><li>Type 2: Skjema som endrar eller slettar brukarstyrte data i datalagringssystem.</li><li>Type 3: Skjema som sender svar på testar utført av brukaren.</li></ul>",
+            "ht": "<p>Eksempel på typar av skjema:</p><ul><li>Type 1: kjøp av vare eller billett, inngåing av avtale som medfører plikter med mer, betingelser for å opprette brukerkonto.</li><li>Type 2: Endringer i kontoopplysingar, sletting av brukarkonto. Brukarstyrte data er informasjon som brukaren sjølv skriv inn.</li><li>Type 3: Spørreskjema eller liknande.</li></ul><p>Skjema som ikkje er aktuelle for test er for eksempel søkefelt, oppretting av brukarkonto, abonnering på nyheitsbrev og andre skjema som ikkje medførar juridiske eller økonomiske plikter.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje skjema som medfører juridiske plikter, økonomiske transaksjonar eller endrar/slettar brukarstyrte data."
+                }
+            }
+        },
+
         {
             "stegnr": "3.1",
             "spm": "Beskriv skjemaet/prosessen.",

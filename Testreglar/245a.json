@@ -51,6 +51,7 @@
             "type": "tekst",
             "label": "Nettstad:",
             "oblig": true,
+            "datalist":"Sideutvalg",
             "ruting": {
                 "alle": {
                     "type": "gaaTil",
