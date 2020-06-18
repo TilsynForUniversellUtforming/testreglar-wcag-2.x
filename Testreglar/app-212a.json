@@ -49,24 +49,22 @@
                 }
             } 
         },
-
         {
-            "stegnr": "2.3",
-            "spm": "Finst det element det er mogleg å sveipe til på skjembilde?",
-            "ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. For å betene innhaldet kan du også bruke enter-tasten, mellomromstasten og piltastane. For å rygge med tasttauret, bruk Shift+Tab.",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.4"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Skjermbilde har ikkje innhald/funksjonalitet som er mogleg å nå/betene med sveiping."
-                }
-            }
-        },
-
+			"stegnr": "2.3",
+			"spm": "Finst det element det er mogleg å sveipe til på skjembilde?",
+			"ht": "Sveip sakte for å navigere på nettsida.",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Skjermbilde har ikkje innhald/funksjonalitet som er mogleg å nå/betene med sveiping."
+				}
+			}
+		},
         {
             "stegnr": "2.4",
             "spm": "Finst det ei sveipefelle i skjermbildet?",
