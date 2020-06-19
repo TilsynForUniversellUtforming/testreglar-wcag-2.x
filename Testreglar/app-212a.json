@@ -1,55 +1,54 @@
 {
-    "id": "2.1.2a",
-    "type": "app",
-    "versjon": "1.0",
-    "sistOppdatertAvDifi": "16.06.2020",
-    "side": "2.1",
-    "element": "3.1",
-    "kolonner": [
-        {
-            "title": "2.3"
-        },
-        {
-            "title": "2.4"
-        },
-        {
-            "title": "3.2"
-        },
-        {
-            "title": "3.3"
-        }
-    ],
-
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Beskrive skjermbilde",
-            "ht": "Beskriv skjermbildet med få stikkord.",
-            "type": "tekst",
-            "label": "Skjermbilde:",
-            "datalist":"Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            } 
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Aktivere skjermlesar",
-            "ht": "Aktiver skjermlesar (opplesingsfunksjon). Start opplesing frå starten av skjermbildet. Sveip mot høgre for å lese opp eit og eit element i skjermbildet. Kontroller at du sveiper skjermbildet helt ned.",
-            "type": "instruksjon",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.3"
-                }
-            } 
-        },
-        {
+	"id": "app-2.1.2a",
+	"type": "app",
+	"versjon": "1.0",
+	"sistOppdatertAvDifi": "16.06.2020",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "2.4"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Beskrive skjermbilde",
+			"ht": "Beskriv skjermbildet med få stikkord.",
+			"type": "tekst",
+			"label": "Skjermbilde:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Aktivere skjermlesar",
+			"ht": "Aktiver skjermlesar (opplesingsfunksjon). Start opplesing frå starten av skjermbildet. Sveip mot høgre for å lese opp eit og eit element i skjermbildet. Kontroller at du sveiper skjermbildet helt ned.",
+			"type": "instruksjon",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				}
+			}
+		},
+		{
 			"stegnr": "2.3",
 			"spm": "Finst det element det er mogleg å sveipe til på skjembilde?",
 			"ht": "Sveip sakte for å navigere på nettsida.",
@@ -65,73 +64,81 @@
 				}
 			}
 		},
-        {
-            "stegnr": "2.4",
-            "spm": "Finst det ei sveipefelle i skjermbildet?",
-            "ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Kontroller at du scroller siden helt ned og at du kommer tilbake til starten av nettsida. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle tastaturfeller i all funksjonalitet.",
-            "type": "jaNei",
-            "kilde": ["G21"],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Testside har ikkje tastaturfelle."
-                }
-            }
-        },
-
-        {
-            "stegnr": "3.1",
-            "spm": "Beskriv elementet kor du fann tastaturfella.",
-            "ht": "",
-            "type": "tekst",
-            "label": "Element med tastaturfelle:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            } 
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Kva type funksjonalitet er elementet en del av?",
-            "ht": "Velg frå alternativa under.",
-            "type": "radio",
-            "svarArray": ["Skjema", "Mediaspelar", "Meny", "Modalvindauge", "Anna"],
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                }
-            }
-        },
-
-        {
-            "stegnr": "3.3",
-            "spm": "Er det mogleg å navigere ut av tastaturfella med standardmåtar for tastaturnavigering?",
-            "ht": "Bruk for eksempel piltastane, Esc-tasten, tabulatortasten eller Shift+Tab for å navigere ut av tastaturfella.",
-            "type": "jaNei",
-            "kilde":["G21","F10"],
-            "ruting": {
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Det finst sveipefeller i skjermbildet og det er ikkje mogleg å sveipe ut av sveipefella."
-                },
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Det er mogleg å sveipe ut av sveipefella."
-                }
-            }
-        }
-    ]
+		{
+			"stegnr": "2.4",
+			"spm": "Finst det ei sveipefelle i skjermbildet?",
+			"ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Kontroller at du scroller siden helt ned og at du kommer tilbake til starten av nettsida. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle tastaturfeller i all funksjonalitet.",
+			"type": "jaNei",
+			"kilde": [
+				"G21"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Testside har ikkje tastaturfelle."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv elementet kor du fann tastaturfella.",
+			"ht": "",
+			"type": "tekst",
+			"label": "Element med tastaturfelle:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Kva type funksjonalitet er elementet en del av?",
+			"ht": "Velg frå alternativa under.",
+			"type": "radio",
+			"svarArray": [
+				"Skjema",
+				"Mediaspelar",
+				"Meny",
+				"Modalvindauge",
+				"Anna"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er det mogleg å navigere ut av tastaturfella med standardmåtar for tastaturnavigering?",
+			"ht": "Bruk for eksempel piltastane, Esc-tasten, tabulatortasten eller Shift+Tab for å navigere ut av tastaturfella.",
+			"type": "jaNei",
+			"kilde": [
+				"G21",
+				"F10"
+			],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det finst sveipefeller i skjermbildet og det er ikkje mogleg å sveipe ut av sveipefella."
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det er mogleg å sveipe ut av sveipefella."
+				}
+			}
+		}
+	]
 }
-
