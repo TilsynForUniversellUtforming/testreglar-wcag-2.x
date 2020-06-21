@@ -10,7 +10,6 @@ Generell info om testreglar
 - Id
 - Type
 - Versjon
-- SistOppdatertAvDifi 
 - Språk
 - Side
 - Element
@@ -39,13 +38,6 @@ Kva versjon av testregelen det er snakk om.
 ### Eksempel
 ```json
 "versjon": "1.0"
-```
-
-## SistOppdatertAvDifi 
-Dato for siste oppdatering av testregelen.
-### Eksempel
-```json
-"sistOppdatertAvDifi": "11.07.2019"
 ```
 
 ## Språk
@@ -259,7 +251,7 @@ Ved ruting frå radioboks vil rutinga vere basert på kva alternativ du vel. Dei
 Det kan òg nyttast reglar til å gje ein meir kraftig ruting. [Meir om dei ulike ruting-reglane finn du her](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md).
 
 
-(c) 2019 Tilsyn for universell utforming
+(c) 2018-2020 Tilsyn for universell utforming
 
 
 
