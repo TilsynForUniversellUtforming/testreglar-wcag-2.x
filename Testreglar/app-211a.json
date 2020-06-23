@@ -2,6 +2,7 @@
 	"id": "app-2.1.1a",
 	"type": "app",
 	"versjon": "1.0",
+	"sistOppdatertAvDifi": "16.06.2020",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -25,7 +26,7 @@
 		{
 			"stegnr": "2.1",
 			"spm": "Beskriv skjermbildet som skal vurderast",
-			"ht": "Beskriv skjermbildet med få stikkord, eller velg i lista.",
+			"ht": "<p>Beskriv skjermbildet med få stikkord, eller vel i lista.</p>",
 			"type": "tekst",
 			"label": "Skjermbilde:",
 			"datalist": "Sideutvalg",
@@ -35,7 +36,8 @@
 					"type": "gaaTil",
 					"steg": "2.2"
 				}
-			}
+			},
+			"kilde": []
 		},
 		{
 			"stegnr": "2.2",
@@ -138,7 +140,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Kva type funksjonalitet er elementet en del av?",
-			"ht": "Velg frå alternativa under.",
+			"ht": "<p>Velg frå alternativa under.</p>",
 			"type": "radio",
 			"svarArray": [
 				"Skjema",
@@ -153,7 +155,8 @@
 					"fasit": "Nei",
 					"utfall": "Det er ikkje mogleg å nå og betene alt innhald/funksjonalitet med sveiping."
 				}
-			}
+			},
+			"kilde": []
 		}
 	]
 }
