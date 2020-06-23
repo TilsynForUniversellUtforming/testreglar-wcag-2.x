@@ -82,7 +82,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har nettsida CAPTCHA i form av innhald som ikkje er tekst?",
-			"ht": "<p>Sjå om du finn ein CAPTCHA på nettsida. </p><p>CAPTCHA står for \"Completely Automated Public Turing test to tell Computers and Humans Apart\", kor brukaren ofte blir beden om å taste inn tekst frå eit forvrengt bilde eller ei lydfil.</p>",
+			"ht": "<p>Sjå om du finn ein CAPTCHA på nettsida.</p>\n<p>CAPTCHA står for \"Completely Automated Public Turing test to tell Computers and Humans Apart\", kor brukaren ofte blir beden om å taste inn tekst frå eit forvrengt bilde eller ei lydfil.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -93,7 +93,8 @@
 					"type": "ikkjeForekomst",
 					"utfall": "Testsida har ikkje CAPTCHA med annan utforming enn tekst."
 				}
-			}
+			},
+			"kilde": []
 		},
 		{
 			"stegnr": "3.1",
