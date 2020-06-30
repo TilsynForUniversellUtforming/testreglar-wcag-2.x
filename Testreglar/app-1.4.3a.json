@@ -1,0 +1,139 @@
+{
+	"id": "app-1.4.3a",
+	"type": "app",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.4"
+		}
+	],
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva skjermbilde testar du på?",
+			"ht": "<p>Beskriv skjermbildet med få stikkord, eller vel i lista.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "Skjermbilde:",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har skjermbilde innhald i form av tekst?",
+			"ht": "<p>Desse innhaldstypane skal testast</p>\n<ul>\n<li>tekst mot bakgrunn</li>\n<li>tekst i illustrasjonar og diagram (som ikkje er bilde)</li>\n<li>tekst i skjema</li>\n</ul>\n<p>Desse innhaldstypane skal ikkje testast</p>\n<ul>\n<li>logoar og varemerke</li>\n<li>ikkje-informativ tekst som er til pynt, dvs tekst som kan erstattast av annan tekst, utan at meiningsinnhaldet vert endra</li>\n<li>tekst i bilde der teksten ikkje er vesentleg for å formidle meiningsinnhaldet</li>\n<li>deaktiverte skjemaelement</li>\n<li>tekst som ikkje er synleg for nokon</li>\n<li>grafiske element i for eksempel diagram og grafar, som støttelinjer, søyler m.m.</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Skjermbilde inneheld ikkje tekst."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv elementet du testar?",
+			"ht": "<p>Sjå etter innhaldselement (tekst i form av overskrifter, lenker og annan tekst, tekst i illustrasjonar og diagram) med svak kontrast mellom tekst og bakgrunn. I skjema kan det hende at du må framprovosere eventuelle feilmeldingar og rettleiingstekstar. Formålet er at ein skal kunne finne att elementet på sida som ligg til grunn for kontrastmålinga. For eksempel plassering, kjenneteikn, kva som i står i teksten (treng ikkje gje att heile).</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "Element:",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Kva type funksjonalitet er elementet en del av?",
+			"ht": "",
+			"type": "radio",
+			"kilde": [],
+			"svarArray": [
+				"Skjema",
+				"Mediaspelar",
+				"Meny",
+				"Modalvindauge",
+				"Lenker",
+				"Løpande tekst",
+				"Anna"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Ta skjermbilde som innheld elementet du testar.",
+			"ht": "<p>Skjermbildet må overføres til PC for å kunne ta i bruk verktøy for kontrastmåling.</p>\n<p>Vurder om det same skjermbildet kan brukast til å verifisere fleire testelement.</p>",
+			"type": "instruksjon",
+			"kilde": [],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Mål og registrer kontrast mellom farge på tekst og farge på bakgrunn.",
+			"ht": "<p>Mål og registrer kontrast mellom tekst og bakgrunn for elementet du testar.</p>\n<h4 class=\"h5\">Tips:</h4>\n<ul>\n<li>Du kan zoome eller forstørre bildet for å gjere det enklare å måle kontrasten.</li>\n</ul>\n<h4 class=\"h5\">Retningslinjer for test:</h4>\n<ul>\n<li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li>\n<li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li>\n<li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li>\n</ul>",
+			"type": "tekst",
+			"kilde": [
+				"G18",
+				"F83"
+			],
+			"label": "Kontrast:",
+			"ruting": {
+				"alle": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "3.4",
+							"type": "mellom",
+							"verdi": 0,
+							"verdi2": 4.49,
+							"handling": {
+								"type": "avslutt",
+								"utfall": "Tekst har kontrast mindre enn 4,5:1.",
+								"fasit": "Nei"
+							}
+						},
+						"2": {
+							"sjekk": "3.4",
+							"type": "mellom",
+							"verdi": 4.5,
+							"verdi2": 200,
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Tekst har kontrast på meir enn 4,5:1."
+							}
+						}
+					}
+				}
+			}
+		}
+	]
+}
