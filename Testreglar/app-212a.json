@@ -2,7 +2,6 @@
 	"id": "app-2.1.2a",
 	"type": "app",
 	"versjon": "1.0",
-	"sistOppdatertAvDifi": "16.06.2020",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -67,7 +66,7 @@
 		{
 			"stegnr": "2.4",
 			"spm": "Finst det ei sveipefelle i skjermbildet?",
-			"ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Kontroller at du scroller siden helt ned og at du kommer tilbake til starten av nettsida. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle tastaturfeller i all funksjonalitet.",
+			"ht": "<p>Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Kontroller at du scroller siden helt ned og at du kommer tilbake til starten av nettsida. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle tastaturfeller i all funksjonalitet.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G21"
@@ -80,7 +79,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Testside har ikkje tastaturfelle."
+					"utfall": "Skjermbilde har ikkje sveipefelle."
 				}
 			}
 		},
@@ -121,7 +120,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er det mogleg å navigere ut av tastaturfella med standardmåtar for tastaturnavigering?",
-			"ht": "Bruk for eksempel piltastane, Esc-tasten, tabulatortasten eller Shift+Tab for å navigere ut av tastaturfella.",
+			"ht": "<p>Bruk for eksempel tilbake-tasten på mobilen eller andre standard måtar for operativsystemet å navigere på.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G21",
