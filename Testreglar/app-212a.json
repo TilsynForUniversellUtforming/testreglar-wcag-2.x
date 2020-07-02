@@ -119,7 +119,7 @@
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Er det mogleg å navigere ut av tastaturfella med standardmåtar for tastaturnavigering?",
+			"spm": "Er det mogleg å navigere ut av sveipefella med standardmåtar for navigering?",
 			"ht": "<p>Bruk for eksempel tilbake-tasten på mobilen eller andre standard måtar for operativsystemet å navigere på.</p>",
 			"type": "jaNei",
 			"kilde": [
