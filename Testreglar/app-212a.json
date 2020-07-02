@@ -96,7 +96,8 @@
 					"steg": "3.2"
 				}
 			},
-			"kilde": []
+			"kilde": [],
+			"label": "Element med sveipefelle:"
 		},
 		{
 			"stegnr": "3.2",
