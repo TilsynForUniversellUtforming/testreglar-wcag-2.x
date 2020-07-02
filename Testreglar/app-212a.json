@@ -85,10 +85,9 @@
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Beskriv elementet kor du fann tastaturfella.",
+			"spm": "Beskriv elementet kor du fann sveipefella.",
 			"ht": "",
 			"type": "tekst",
-			"label": "Element med tastaturfelle:",
 			"multilinje": true,
 			"oblig": true,
 			"ruting": {
@@ -96,7 +95,8 @@
 					"type": "gaaTil",
 					"steg": "3.2"
 				}
-			}
+			},
+			"kilde": []
 		},
 		{
 			"stegnr": "3.2",
