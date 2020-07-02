@@ -66,7 +66,7 @@
 		{
 			"stegnr": "2.4",
 			"spm": "Finst det ei sveipefelle i skjermbildet?",
-			"ht": "<p>Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Kontroller at du scroller siden helt ned og at du kommer tilbake til starten av nettsida. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle tastaturfeller i all funksjonalitet.</p>",
+			"ht": "<p>Sveip sakte for å navigere på nettsida. Kontroller at du sveipar heilt ned og at du kjem tilbake til starten av skjermbilde. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle tastaturfeller i all funksjonalitet.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G21"
