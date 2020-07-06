@@ -139,7 +139,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er informasjonen som blir lest opp, i samsvar med formålet med bildet?",
-			"ht": "<p>For bilete er ein av følgjande er oppfylt:</p>\n<ul>\n<li>Bilete som er ei sanseoppleving eller ein test har eit kort tekstalternativ som gir ein beskrivande identifikasjon.</li>\n<li>Bilete som er meiningsberande har eit kort tekstalternativ som gjengir same informasjon som biletet.</li>\n<li>Bilete som er komplekse har både eit kort tekstalternativ og eit utfyllande tekstalternativ</li>\n</ul>",
+			"ht": "<p>For bilde er ein av følgjande er oppfylt:</p>\n<ul>\n<li>Bilde som er ei sanseoppleving eller ein test har eit kort tekstalternativ som gir ein beskrivande identifikasjon.</li>\n<li>Bilde som er meiningsberande har eit kort tekstalternativ som gjengir same informasjon som bilde.</li>\n<li>Bilde som er komplekse har både eit kort tekstalternativ og eit utfyllande tekstalternativ.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"F67",
