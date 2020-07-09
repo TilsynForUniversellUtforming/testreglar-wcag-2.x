@@ -22,6 +22,7 @@
 			"type": "tekst",
 			"kilde": [],
 			"label": "Skjermbilde:",
+			"datalist": "Sideutvalg",
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
