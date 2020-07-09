@@ -36,7 +36,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Innheld skjermbilde bilder?",
-			"ht": "<p>Bla gjennom skjermbildet og sjå etter bilder.</p>",
+			"ht": "<p>Bla gjennom skjermbildet og sjå etter bilder. Merk at du i denne testregelen kun skal teste bilder som ikkje er klikkbare. </p>\n<p>Du kan teste dette med å forsøke å trykke på bildet. Kan du trykke på bildet og det utfører ein handling, er bildet en del av en knapp og skal ikkje testast. Om det ikkje utfører ein handling, er det eit bilde som skal testast.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
