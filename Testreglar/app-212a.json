@@ -37,7 +37,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Aktivere skjermlesar",
-			"ht": "Aktiver skjermlesar (opplesingsfunksjon). Start opplesing frå starten av skjermbildet. Sveip mot høgre for å lese opp eit og eit element i skjermbildet. Kontroller at du sveiper skjermbildet helt ned.",
+			"ht": "<p>Aktiver skjermlesar (opplesingsfunksjon). Start opplesing frå starten av skjermbildet. Sveip mot høgre for å lese opp eit og eit element i skjermbildet. Kontroller at du sveiper gjennom alt innhold i skjermbildet.</p>",
 			"type": "instruksjon",
 			"oblig": true,
 			"ruting": {
@@ -45,12 +45,13 @@
 					"type": "gaaTil",
 					"steg": "2.3"
 				}
-			}
+			},
+			"kilde": []
 		},
 		{
 			"stegnr": "2.3",
 			"spm": "Finst det element det er mogleg å sveipe til på skjembilde?",
-			"ht": "Sveip sakte for å navigere på nettsida.",
+			"ht": "<p>Sveip for å navigere i skjermbildet.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -61,12 +62,13 @@
 					"type": "ikkjeForekomst",
 					"utfall": "Skjermbilde har ikkje innhald/funksjonalitet som er mogleg å nå/betene med sveiping."
 				}
-			}
+			},
+			"kilde": []
 		},
 		{
 			"stegnr": "2.4",
 			"spm": "Finst det ei sveipefelle i skjermbildet?",
-			"ht": "<p>Sveip sakte for å navigere på skjermbilde. Kontroller at du sveipar heilt ned og at du kjem tilbake til starten av skjermbilde. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle tastaturfeller i all funksjonalitet.</p>",
+			"ht": "<p>Sveip for å navigere på skjermbilde. Kontroller at du sveipar gjennom alt innhald og at du kjem tilbake til start. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle sveipefeller i all funksjonalitet.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G21"
