@@ -47,10 +47,10 @@
 
     {
         "stegnr": 4,
-        "spm": "Namn på verksemd",
-        "ht": "Søk opp verksemda du skal teste i lista under",
+        "spm": "Namn på løysing",
+        "ht": "Søk opp løysinga du skal teste i lista under",
         "type": "verksemd",
-        "label": "Verksemd:",
+        "label": "Løysing:",
         "oblig": true,
         "ruting": {
             "alle": {
