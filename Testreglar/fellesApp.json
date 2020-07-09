@@ -15,7 +15,7 @@
     {
         "stegnr": 2,
         "spm": "Registrer kva versjon av operativsystemet du testar på.",
-        "ht": "Informasjon om versjon av operativsystemet finn du ofte i mobilen sine innstillingar.",
+        "ht": "Informasjon om versjon av operativsystemet finn du ofte i mobilen sine innstillingar, \"om telefonen\" \"programvareinformasjon\".",
         "type": "tekst",
         "label": "Versjon:",
         "oblig": true,
