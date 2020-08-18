@@ -139,7 +139,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er informasjonen som blir lest opp, i samsvar med formålet med bildet?",
-			"ht": "<p>For bilde er ein av følgjande er oppfylt:</p>\n<ul>\n<li>Bilde som er ei sanseoppleving eller ein test har eit kort tekstalternativ som gir ein beskrivande identifikasjon.</li>\n<li>Bilde som er meiningsberande har eit kort tekstalternativ som gjengir same informasjon som bilde.</li>\n<li>Bilde som er komplekse har både eit kort tekstalternativ og eit utfyllande tekstalternativ.</li>\n</ul>",
+			"ht": "<p>For bilde er ein av følgjande er oppfylt:</p>\n<ul>\n<li>Bilde som er ei sanseoppleving eller ein test har eit kort tekstalternativ som gir ein beskrivande identifikasjon.</li>\n<li>Bilde som er meiningsberande har eit kort tekstalternativ som gjengir same informasjon som bilde.</li>\n<li>Bilde som er komplekse har både eit kort tekstalternativ og eit utfyllande tekstalternativ.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"F67",
@@ -152,12 +152,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Meiningsberande bilde har tekstalternativ som beskriv formålet med bilde"
+					"utfall": "Meiningsberande bilde har tekstalternativ som beskriv formålet med bilde."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Meiningsberande bilde har ikkje tekstalternativ som beskriv formålet med bilde"
+					"utfall": "Meiningsberande bilde har ikkje tekstalternativ som beskriv formålet med bilde."
 				}
 			}
 		}
