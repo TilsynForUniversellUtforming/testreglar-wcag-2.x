@@ -2,7 +2,6 @@
 	"id": "app-2.1.2a",
 	"type": "app",
 	"versjon": "1.0",
-	"sistOppdatertAvDifi": "16.06.2020",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -38,7 +37,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Aktivere skjermlesar",
-			"ht": "Aktiver skjermlesar (opplesingsfunksjon). Start opplesing frå starten av skjermbildet. Sveip mot høgre for å lese opp eit og eit element i skjermbildet. Kontroller at du sveiper skjermbildet helt ned.",
+			"ht": "<p>Aktiver skjermlesar (opplesingsfunksjon). Start opplesing frå starten av skjermbildet. Sveip mot høgre for å lese opp eit og eit element i skjermbildet. Kontroller at du sveiper gjennom alt innhold i skjermbildet.</p>",
 			"type": "instruksjon",
 			"oblig": true,
 			"ruting": {
@@ -46,12 +45,13 @@
 					"type": "gaaTil",
 					"steg": "2.3"
 				}
-			}
+			},
+			"kilde": []
 		},
 		{
 			"stegnr": "2.3",
 			"spm": "Finst det element det er mogleg å sveipe til på skjembilde?",
-			"ht": "Sveip sakte for å navigere på nettsida.",
+			"ht": "<p>Sveip for å navigere i skjermbildet.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -62,12 +62,13 @@
 					"type": "ikkjeForekomst",
 					"utfall": "Skjermbilde har ikkje innhald/funksjonalitet som er mogleg å nå/betene med sveiping."
 				}
-			}
+			},
+			"kilde": []
 		},
 		{
 			"stegnr": "2.4",
 			"spm": "Finst det ei sveipefelle i skjermbildet?",
-			"ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Kontroller at du scroller siden helt ned og at du kommer tilbake til starten av nettsida. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle tastaturfeller i all funksjonalitet.",
+			"ht": "<p>Sveip for å navigere på skjermbilde. Kontroller at du sveipar gjennom alt innhald og at du kjem tilbake til start. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle sveipefeller i all funksjonalitet.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G21"
@@ -80,16 +81,15 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Testside har ikkje tastaturfelle."
+					"utfall": "Skjermbilde har ikkje sveipefelle."
 				}
 			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Beskriv elementet kor du fann tastaturfella.",
+			"spm": "Beskriv elementet kor du fann sveipefella.",
 			"ht": "",
 			"type": "tekst",
-			"label": "Element med tastaturfelle:",
 			"multilinje": true,
 			"oblig": true,
 			"ruting": {
@@ -97,7 +97,9 @@
 					"type": "gaaTil",
 					"steg": "3.2"
 				}
-			}
+			},
+			"kilde": [],
+			"label": "Element med sveipefelle:"
 		},
 		{
 			"stegnr": "3.2",
@@ -120,8 +122,8 @@
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Er det mogleg å navigere ut av tastaturfella med standardmåtar for tastaturnavigering?",
-			"ht": "Bruk for eksempel piltastane, Esc-tasten, tabulatortasten eller Shift+Tab for å navigere ut av tastaturfella.",
+			"spm": "Er det mogleg å navigere ut av sveipefella med standardmåtar for navigering?",
+			"ht": "<p>Bruk for eksempel tilbake-tasten på mobilen eller andre standard måtar for operativsystemet å navigere på.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G21",

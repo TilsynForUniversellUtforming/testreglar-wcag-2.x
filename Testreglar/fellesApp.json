@@ -15,7 +15,7 @@
     {
         "stegnr": 2,
         "spm": "Registrer kva versjon av operativsystemet du testar på.",
-        "ht": "Denne finn du ofte under \"om\" eller i innstillingar for nettlesaren.",
+        "ht": "Informasjon om versjon av operativsystemet finn du ofte i mobilen sine innstillingar, \"om telefonen\" \"programvareinformasjon\".",
         "type": "tekst",
         "label": "Versjon:",
         "oblig": true,
@@ -47,10 +47,10 @@
 
     {
         "stegnr": 4,
-        "spm": "Namn på verksemd",
-        "ht": "Søk opp verksemda du skal teste i lista under",
+        "spm": "Namn på løysing",
+        "ht": "Søk opp løysinga du skal teste i lista under",
         "type": "verksemd",
-        "label": "Verksemd:",
+        "label": "Løysing:",
         "oblig": true,
         "ruting": {
             "alle": {
