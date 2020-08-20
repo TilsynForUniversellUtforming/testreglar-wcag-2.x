@@ -8,9 +8,12 @@ Generell info om testreglar
 ---------------------------
 
 - Id
--  Type
--  Versjon
--  SistOppdatertAvDifi 
+- Type
+- Versjon
+- Språk
+- Side
+- Element
+- Kolonner
 
 ## Id
 Id er ein unik identifikator for kvar testregel.
@@ -19,17 +22,63 @@ Id er ein unik identifikator for kvar testregel.
 "id": "1.4.2a"
 ```
 
-
 ### Type
 Type er kategori av testregel. Dei aktuelle typane er: 
 - web 
 - mobilapplikasjon
 - automat
-## Eksempel
+### Eksempel
 
 ```json
 "type": "web"
 ```
+
+## Versjon
+Kva versjon av testregelen det er snakk om.
+### Eksempel
+```json
+"versjon": "1.0"
+```
+
+## Språk
+Språket i testregelen.
+- no - Norsk
+- en - Engelsk
+### Eksempel
+```json
+"spraak" : "no"
+```
+
+## Side
+Referanse til kva steg (stegnr) som registerer informasjon om side.
+### Eksempel
+```json
+"side": "2.1"
+```
+
+## Element
+Referanse til kva steg (stegnr) som registerer informasjon om element. 
+Dersom det er sida som er elementet skriv "Side"
+### Eksempel
+```json
+"element": "2.1"
+```
+
+## Kolonner
+Kva steg som skal visast i resultat-tabellen.
+### Eksempel
+```json
+"kolonner": [
+        {
+            "title": "2.2"
+        },
+        
+        {
+            "title": "3.2"
+        }
+        ]
+```
+
 Steg
 ----
 
@@ -202,7 +251,7 @@ Ved ruting frå radioboks vil rutinga vere basert på kva alternativ du vel. Dei
 Det kan òg nyttast reglar til å gje ein meir kraftig ruting. [Meir om dei ulike ruting-reglane finn du her](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md).
 
 
-(c) 2019 Tilsyn for universell utforming
+(c) 2018-2020 Tilsyn for universell utforming
 
 
 

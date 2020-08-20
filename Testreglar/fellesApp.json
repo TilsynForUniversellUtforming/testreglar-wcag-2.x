@@ -1,0 +1,62 @@
+[
+    {
+        "stegnr": 1,
+        "spm": "Kva operativsystem testar du på?",
+        "ht": "Vel i lista under",
+        "type": "radio",
+        "svarArray": ["Android", "IOS", "Anna"],
+        "ruting": {
+            "alle": {
+                "type": "gaaTil",
+                "steg": 2
+            }
+        }
+    },
+    {
+        "stegnr": 2,
+        "spm": "Registrer kva versjon av operativsystemet du testar på.",
+        "ht": "Informasjon om versjon av operativsystemet finn du ofte i mobilen sine innstillingar, \"om telefonen\" \"programvareinformasjon\".",
+        "type": "tekst",
+        "label": "Versjon:",
+        "oblig": true,
+        "ruting": {
+            "alle": {
+                "type": "gaaTil",
+                "steg": 3
+            }
+        }
+    }
+    ,
+
+    {
+        "stegnr": 3,
+        "spm": "Vel kva måling du testar på",
+        "ht": "Vel måling",
+        "type": "maaling",
+        "svarArray": null,
+        "verdier" : ["S 2018:01","T 2018:04", "TEST 2018"] ,
+        "verdier2" : [],
+        "ruting": {
+            "alle": {
+                "type": "gaaTil",
+                "steg": 4
+            }
+        }
+    }
+    ,
+
+    {
+        "stegnr": 4,
+        "spm": "Namn på løysing",
+        "ht": "Søk opp løysinga du skal teste i lista under",
+        "type": "verksemd",
+        "label": "Løysing:",
+        "oblig": true,
+        "ruting": {
+            "alle": {
+                "type": "gaaTil",
+                "steg": "2.1"
+            }
+        }
+    }
+]
