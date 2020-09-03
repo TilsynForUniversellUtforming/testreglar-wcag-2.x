@@ -63,7 +63,8 @@
 					"type": "gaaTil",
 					"steg": "2.2"
 				}
-			}
+			},
+			"datalist": "Sideutvalg"
 		},
 		{
 			"stegnr": "2.2",
@@ -74,11 +75,11 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.1"
+					"steg": "2.3"
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"steg": "Skjermbilde inneheld ikkje skjemaelement"
+					"utfall": "Skjermbilde har ikkje skjema."
 				}
 			}
 		},
@@ -94,7 +95,8 @@
 					"type": "gaaTil",
 					"steg": "2.4"
 				}
-			}
+			},
+			"multilinje": true
 		},
 		{
 			"stegnr": "2.4",
@@ -121,7 +123,8 @@
 					"type": "gaaTil",
 					"steg": "3.2"
 				}
-			}
+			},
+			"multilinje": true
 		},
 		{
 			"stegnr": "3.2",
@@ -138,7 +141,7 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": ""
+					"steg": "3.5"
 				}
 			}
 		},
@@ -239,12 +242,38 @@
 			"kilde": [],
 			"ruting": {
 				"ja": {
-					"type": "gaaTil",
-					"steg": ""
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "2.5",
+							"type": "lik",
+							"verdi": "Nei",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.9",
+								"delutfall": {
+									"nr": 1,
+									"tekst": "identifikasjon i form av ikon/symbol/bilde",
+									"fasit": "Ja"
+								}
+							}
+						},
+						"2": {
+							"sjekk": "2.5",
+							"type": "lik",
+							"verdi": "Ja",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Skjemaelement med identifikasjon i form av ikon/symbol/bilete. Skjema har tekstleg informasjon om at alle skjemaelement er obligatoriske."
+							}
+						}
+					}
 				},
 				"nei": {
-					"type": "gaaTil",
-					"steg": ""
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei)<br>- ikon/symbol/bilde, som ikkje er rett identifisert i koden."
 				}
 			}
 		},
@@ -257,11 +286,12 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": ""
+					"steg": "3.10"
 				},
 				"nei": {
-					"type": "gaaTil",
-					"steg": ""
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Skjemaelement med #delutfall(1,Ja)."
 				}
 			}
 		},
@@ -293,11 +323,12 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": ""
+					"steg": "3.12"
 				},
 				"nei": {
-					"type": "gaaTil",
-					"steg": ""
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjema manglar informasjon om at skjemaelement er obligatoriske."
 				}
 			}
 		},
@@ -310,11 +341,12 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": ""
+					"steg": "3.13"
 				},
 				"nei": {
-					"type": "gaaTil",
-					"steg": ""
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Informasjon om obligatoriske skjemaelement er i form av ikon/symbol/bilde. Ikon/symbol/bilde er ikkje tekstleg forklart."
 				}
 			}
 		},
@@ -326,12 +358,14 @@
 			"kilde": [],
 			"ruting": {
 				"ja": {
-					"type": "gaaTil",
-					"steg": ""
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Skjemaelement med #delutfall(1,Ja). Informasjon om obligatoriske skjemaelement er i form av ikon/symbol/bilde. Forklaring av ikon/symbol/bilde er plassert før skjemaelementet."
 				},
 				"nei": {
-					"type": "gaaTil",
-					"steg": ""
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Informasjon om obligatoriske skjemaelement er i form av ikon/symbol/bilde. Forklaring av ikon/symbol/bilde er plassert etter skjemaelementet."
 				}
 			}
 		}
