@@ -101,7 +101,7 @@
 		{
 			"stegnr": "2.1",
 			"spm": "Kva side testar du på?",
-			"ht": "<p>Oppgi URL eller side-ID.</p>",
+			"ht": "Oppgi URL eller side-ID.",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
@@ -111,13 +111,12 @@
 					"type": "gaaTil",
 					"steg": "2.2"
 				}
-			},
-			"kilde": []
+			}
 		},
 		{
 			"stegnr": "2.2",
 			"spm": "Finst det ikkje-lenka bilde på nettsida?",
-			"ht": "<p>Du skal teste alle bilde som ikkje er lenka. Bilde kan for eksempel vere</p>\n<ul>\n<li>illustrasjonar</li>\n<li>pyntebilde og dekor</li>\n<li>grafar og diagram</li>\n<li>ikon og symbol</li>\n</ul>\n<p>Bilde kan vere koda inni andre HTML-element, som for eksempel <code>&lt;figure&gt;</code>.</p>",
+			"ht": "<p>Du skal teste alle bilde som ikkje er lenka. Bilde kan for eksempel vere</p><ul><li>illustrasjonar</li><li>pyntebilde og dekor</li><li>grafar og diagram</li><li>ikon og symbol</li></ul><p>Bilde kan vere koda inni andre HTML-element, som for eksempel <Code>&#x3C;figure&#x3E;</code>.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -128,8 +127,7 @@
 					"type": "ikkjeForekomst",
 					"utfall": "Testside har ingen ikkje-lenka bilde."
 				}
-			},
-			"kilde": []
+			}
 		},
 		{
 			"stegnr": "3.1",
@@ -346,7 +344,7 @@
 		{
 			"stegnr": "3.12",
 			"spm": "Er aria-labelledby/aria-describedby attributtet kopla til annan tekst på sida?",
-			"ht": "Gjer eit søk i koden på id i aria-labelledby. Dersom det finst fleire id-ar skal du undersøke alle. Id-ane vil då vere skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>).",
+			"ht": "<p>Gjer eit søk i koden på id i aria-labelledby. Dersom det finst fleire id-ar skal du undersøke alle. Id-ane vil då vere skilt med mellomrom. (Aria-labelledby=\"id1 id2\").</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA10",
@@ -406,7 +404,7 @@
 		{
 			"stegnr": "3.15",
 			"spm": "Har bilde eit alt-attributt?",
-			"ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p>",
+			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
 			"type": "jaNei",
 			"kilde": [
 				"H37",
@@ -427,7 +425,7 @@
 		{
 			"stegnr": "3.16",
 			"spm": "Er det innhald i alt-attributtet?",
-			"ht": "Sjå i koden om alt-attributtet har innhald. Eit tomt alt-attributt er koda på formen alt=\"\" eller berre alt.",
+			"ht": "<p>Sjå i koden om alt-attributtet har innhald. Eit tomt alt-attributt er koda på formen <code>alt=\"\"</code> eller berre <code>alt</code>.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"H37"
@@ -466,7 +464,7 @@
 		{
 			"stegnr": "3.18",
 			"spm": "Er det innhald i title-attributtet?",
-			"ht": "<p>Sjå i koden om title-attributtet har innhald. Eit tomt title-attributt er koda på formen <code>title=\"\"</code> eller berre <code>title</code>.</p>",
+			"ht": "Sjå i koden om title-attributtet har innhald. Eit tomt title-attributt er koda på formen title=\"\" eller berre title.",
 			"type": "jaNei",
 			"kilde": [
 				"F65"
@@ -707,7 +705,7 @@
 		{
 			"stegnr": "3.29",
 			"spm": "Er tekstalternativet koda som tekst?",
-			"ht": "<p>Teksten kan vere løpande tekst, tabell eller lignande. Dette kan undersøkast på fleire måtar: Alternativ 1: - Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst. Alternativ 2: - Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</p>",
+			"ht": "<p>Teksten kan vere løpande tekst, tabell eller lignande. Dette kan undersøkast på fleire måtar:</p>\n<ul>\n<li>Alternativ 1: Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst.</li>\n<li>Alternativ 2: Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -719,7 +717,8 @@
 					"fasit": "Nei",
 					"utfall": "Komplekst bilde har langt tekstalternativ som ikkje er koda som tekst."
 				}
-			}
+			},
+			"kilde": []
 		},
 		{
 			"stegnr": "3.30",

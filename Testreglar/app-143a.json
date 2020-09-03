@@ -59,7 +59,8 @@
 					"type": "gaaTil",
 					"steg": "3.2"
 				}
-			}
+			},
+			"multilinje": true
 		},
 		{
 			"stegnr": "3.2",
