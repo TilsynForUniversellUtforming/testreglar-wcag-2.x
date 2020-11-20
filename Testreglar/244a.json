@@ -49,7 +49,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har nettsida lenker som inneheld tekst?",
-			"ht": "<p>Sjå på sida og leit etter lenker. Lenka sin plassering er utan betydning, og kan for eksempel ligge i ein meny, liste, tabell osv.</p><p><strong>Merk: </strong>Du skal ikkje skal teste knappar og lenker som inneheld bilde, desse blir testa i eigne testreglar.</p>",
+			"ht": "<p>Sjå på sida og leit etter lenker. Lenka sin plassering er utan betydning, og kan for eksempel ligge i ein meny, liste, tabell osv.</p>\n<p><strong>Merk: </strong>Du skal ikkje teste knappar og lenker som inneheld bilde, desse blir testa i eigne testreglar.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -60,7 +60,8 @@
 					"type": "ikkjeForekomst",
 					"utfall": "Testside har ikkje lenker som berre består av tekst."
 				}
-			}
+			},
+			"kilde": []
 		},
 		{
 			"stegnr": "3.1",
