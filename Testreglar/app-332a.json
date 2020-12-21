@@ -1,6 +1,8 @@
 {
 	"id": "app-3.3.2a",
 	"type": "app",
+	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Alle skjemaelement har ledetekstar eller instruksjonar som set brukaren i stand til å betene skjemaet. Følgande skal vere oppfylt:</p>\r\n<ul>\r\n<li>Skjemaelementa har ein visuell identifikasjon i form av ledetekst, instruksjon eller ikon/symbol/bilde.</li>\r\n<li>Identifikasjonen er visuelt plassert i eller rett ved skjemaelementa.</li>\r\n<li>Identifikasjonen er alltid synleg når skjemaelementa er i fokus.</li>\r\n<li>Det er opplyst om skjemaelementa er obligatoriske, eventuell merking med symbol skal vere forklart før det blir teke i bruk.</li>\r\n</ul>",
 	"kolonner": [
 		{
 			"title": "2.2"

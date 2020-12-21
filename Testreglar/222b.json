@@ -1,313 +1,332 @@
 {
-    "id": "2.2.2b",
-    "type": "web",
-    "versjon": "1.0",
-    "spraak": "no",
-    "side": "2.1",
-    "element": "3.1",
-    "kolonner": [
-        {
-            "title": "2.2"
-        },
-        {
-            "title": "3.2"
-        },
-        {
-            "title": "3.3"
-        },
-        {
-            "title": "3.4"
-        },
-        {
-            "title": "3.5"
-        },
-        {
-            "title": "3.6"
-        },
-        {
-            "title": "3.7"
-        },
-        {
-            "title": "3.9"
-        },
-        {
-            "title": "3.10"
-        },
-        {
-            "title": "3.11"
-        },
-        {
-            "title": "3.13"
-        },
-        {
-            "title": "3.14"
-        }],
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Kva side testar du på?",
-            "ht": "Oppgi URL eller side-ID.",
-            "type": "tekst",
-            "label": "URL/Side:",
-            "datalist":"Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            } 
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Inneheld sida innhald som blir oppdatert automatisk?",
-            "ht": "<p>Eksempel på innhald som kan bli oppdatert automatisk er</p><ul><li>børsoppdateringar i sanntid</li><li>vermeldingar</li><li>nyheitsstraumar</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Testside har ikkje innhald som blir oppdatert automatisk."
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Beskriv innhaldet som oppdaterer seg automatisk.",
-            "ht": "<p>Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.</p><p>Viss innhaldet er reklame, bør det stå som første stikkord.</p>",
-            "type": "tekst",
-            "label": "Innhald som oppdatere seg automatisk:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            } 
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Inneheld innhaldet som blir oppdatert automatisk ein form for bevegelse, blinking eller rulling som varar i meir enn fem sekund?",
-            "ht": "<strong>Merk:</strong> Automatisk oppdatert innhald som begevar seg, blinkar eller rullar i meir enn fem sekund blir testa i ein eigen testregel (2.2.2a).",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "ja": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Innhaldet som blir oppdatert automatisk, har bevegelse, blinking eller rulling."
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                      
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Vises innhaldet som blir automatisk oppdatert samtidig med anna innhald?",
-            "ht": "Kravet gjeld berre innhald som blir oppdatert automatisk samtidig som anna innhald blir vist på nettsida.",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.4"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Innhald som blir oppdatert, utan å bli vist samtidig med anna innhald."
-                }
-            }
-        },
-        {
-            "stegnr": "3.4",
-            "spm": "Er den automatiske oppdateringa ein del av ei handling der den er nødvendig?",
-            "ht": "Eksempel på dette er handlingar som skjer i sanntid, og kor moglegheit til å pause/stoppe/skjule vil gjere handlinga ugyldig.",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "ja": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Innhald som blir oppdatert automatisk, er ein del av ei handling der automatisk innhald er nødvendig."
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.5"
-                }
-            }
-        },
-        {
-            "stegnr": "3.5",
-            "spm": "Finst det en mekanisme på sida for å pause, stoppe, skjule eller endre oppdateringsfrekvens for det automatisk oppdaterte innhaldet?",
-            "ht": "<p>Mekanismen kan for eksempel vere ein stoppknapp eller pauseknapp.</p><p>Mekanisme for å endre oppdateringsfrekvens, kan for eksempel vere ei nedtrekksliste med ulike oppdateringsalternativ.</p><p>Det er ikkje tilstrekkeleg at innholdet pauser/stoppar berre når innhaldet er i fokus med mus/tastatur.</p>",
-            "type": "jaNei",
-            "kilde": ["G4", "G187", "G186"],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.6"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.11"
-                }
-            }
-        },
-        {
-            "stegnr": "3.6",
-            "spm": "Ligg mekanismen i direkte tilknytning til innhaldet som blir automatisk oppdatert?",
-            "ht": "Plasseringa kan for eksempel vere rett over eller rett ved sida av innhaldet.",
-            "type": "jaNei",
-            "kilde": ["G186"],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.8"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.7"
-                }
-            }
-        },
-        {
-            "stegnr": "3.7",
-            "spm": "Ligg mekanismen på starten av nettsida?",
-            "ht": "<p>Gjer ein visuell inspeksjon og vurder om mekanismen er plassert nær starten av sida.</p><p>Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
-            "type": "jaNei",
-            "kilde": ["G186"],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.8"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.10"
-                }
-            }
-        },
-        {
-            "stegnr": "3.8",
-            "spm": "Aktiver mekanismen.",
-            "ht": "Viss det finst ein mekanisme for å endre oppdateringsfrekvens, skal du sette frekvensen til lenger enn eit minutt.",
-            "type": "instruksjon",
-            "kilde": [],
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.9"
-                }
-            }
-        }, {
-            "stegnr": "3.9",
-            "spm": "Blir innhaldet satt på pause, stoppa, skjult, eller får endra oppdateringsfrekvens?",
-            "ht": "",
-            "type": "jaNei",
-            "kilde": ["G186"],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.10"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.11"
-                }
-            }
-        },
-
-        {
-            "stegnr": "3.10",
-            "spm": "Oppdaterer innhaldet automatisk innan eitt minutt?",
-            "ht": "Av praktiske grunnar, observerer vi innhaldet i eitt minutt. Du kan gjerne observere innhaldet i lengre tid.",
-            "type": "jaNei",
-            "kilde": ["F16"],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.11"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Det er mogleg å pause, stoppe, skjule eller endre oppdateringsfrekvensen for automatisk oppdatert innhald."
-                }
-            }
-        },
-        {
-            "stegnr": "3.11",
-            "spm": "Framgår det på nettsida at det er mogleg å stoppe, sette på pause, skjule eller endre oppdateringsfrekvens for det automatisk oppdaterte innhaldet ved å bruke ein tastatursnarveg?",
-            "ht": "<p>Dokumentasjonen av tastatursnarvegen skal ligge anten på starten av nettsida, eller i direkte tilknytning til det aktuelle innhaldet.</p><p>Ein tastatursnarveg kan for eksempel vere</p><ul><li>Esc-tasten</li><li>ein kombinasjon av Ctrl og ein annan tastekombinasjon</li></ul>",
-            "type": "jaNei",
-            "kilde": ["G4", "G187"],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.12"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Det er ikkje mogleg å pause, stoppe, skjule eller endre oppdateringsfrekvensen for automatisk oppdatert innhald."
-                }
-            }
-        },
-        {
-            "stegnr": "3.12",
-            "spm": "Aktiver tastatursnarvegen.",
-            "ht": "Viss det finst ein tastatursnarveg for å endre oppdateringsfrekvens, skal du sette frekvensen til lenger enn eit minutt.",
-            "type": "instruksjon",
-            "kilde": [],
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.13"
-                }
-            }
-        },
-        {
-            "stegnr": "3.13",
-            "spm": "Blir innhaldet satt på pause, stoppa, skjult eller får endra oppdateringsfrekvensen?",
-            "ht": "",
-            "type": "jaNei",
-            "kilde": ["G187"],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.14"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Det er ikkje mogleg å pause, stoppe, skjule eller endre oppdateringsfrekvensen for automatisk oppdatert innhald."
-                }
-            }
-        },
-
-        {
-            "stegnr": "3.14",
-            "spm": "Oppdaterer innhaldet automatisk innan eitt minutt?",
-            "ht": "Av praktiske grunnar, observerer vi innhaldet i eitt minutt. Du kan gjerne observere innhaldet i lengre tid.",
-            "type": "jaNei",
-            "kilde": ["F16"],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Det er ikkje mogleg å pause, stoppe, skjule eller endre oppdateringsfrekvensen for automatisk oppdatert innhald."
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Det er mogleg å pause, stoppe, skjule eller endre oppdateringsfrekvensen for automatisk oppdatert innhald."
-                }
-            }
-        }
-    ]
+	"id": "2.2.2b",
+	"type": "web",
+	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>For nettsider med innhald som oppdaterer seg automatisk, som blir vist saman med anna innhald og som ikkje er ein nødvendig del av ei handling, er ein av følgande oppfylt: \r\n<ul>\r\n<li>Det finst ein mekanisme for å pause, stoppe, skjule innhaldet eller styre oppdateringsfrekvensen. Mekanismen ligg anten i direkte tilknyting til innhaldet, eller på starten på sida.</li>\r\n<li>Det finst ein dokumentert tastatursnarveg for å pause, stoppe, skjule innhaldet, eller styre oppdateringsfrekvensen.</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"spraak": "no",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		},
+		{
+			"title": "3.6"
+		},
+		{
+			"title": "3.7"
+		},
+		{
+			"title": "3.9"
+		},
+		{
+			"title": "3.10"
+		},
+		{
+			"title": "3.11"
+		},
+		{
+			"title": "3.13"
+		},
+		{
+			"title": "3.14"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi URL eller side-ID.",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Inneheld sida innhald som blir oppdatert automatisk?",
+			"ht": "<p>Eksempel på innhald som kan bli oppdatert automatisk er</p><ul><li>børsoppdateringar i sanntid</li><li>vermeldingar</li><li>nyheitsstraumar</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje innhald som blir oppdatert automatisk."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv innhaldet som oppdaterer seg automatisk.",
+			"ht": "<p>Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.</p><p>Viss innhaldet er reklame, bør det stå som første stikkord.</p>",
+			"type": "tekst",
+			"label": "Innhald som oppdatere seg automatisk:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Inneheld innhaldet som blir oppdatert automatisk ein form for bevegelse, blinking eller rulling som varar i meir enn fem sekund?",
+			"ht": "<strong>Merk:</strong> Automatisk oppdatert innhald som begevar seg, blinkar eller rullar i meir enn fem sekund blir testa i ein eigen testregel (2.2.2a).",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Innhaldet som blir oppdatert automatisk, har bevegelse, blinking eller rulling."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Vises innhaldet som blir automatisk oppdatert samtidig med anna innhald?",
+			"ht": "Kravet gjeld berre innhald som blir oppdatert automatisk samtidig som anna innhald blir vist på nettsida.",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Innhald som blir oppdatert, utan å bli vist samtidig med anna innhald."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er den automatiske oppdateringa ein del av ei handling der den er nødvendig?",
+			"ht": "Eksempel på dette er handlingar som skjer i sanntid, og kor moglegheit til å pause/stoppe/skjule vil gjere handlinga ugyldig.",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Innhald som blir oppdatert automatisk, er ein del av ei handling der automatisk innhald er nødvendig."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Finst det en mekanisme på sida for å pause, stoppe, skjule eller endre oppdateringsfrekvens for det automatisk oppdaterte innhaldet?",
+			"ht": "<p>Mekanismen kan for eksempel vere ein stoppknapp eller pauseknapp.</p><p>Mekanisme for å endre oppdateringsfrekvens, kan for eksempel vere ei nedtrekksliste med ulike oppdateringsalternativ.</p><p>Det er ikkje tilstrekkeleg at innholdet pauser/stoppar berre når innhaldet er i fokus med mus/tastatur.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G4",
+				"G187",
+				"G186"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Ligg mekanismen i direkte tilknytning til innhaldet som blir automatisk oppdatert?",
+			"ht": "Plasseringa kan for eksempel vere rett over eller rett ved sida av innhaldet.",
+			"type": "jaNei",
+			"kilde": [
+				"G186"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Ligg mekanismen på starten av nettsida?",
+			"ht": "<p>Gjer ein visuell inspeksjon og vurder om mekanismen er plassert nær starten av sida.</p><p>Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G186"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Aktiver mekanismen.",
+			"ht": "Viss det finst ein mekanisme for å endre oppdateringsfrekvens, skal du sette frekvensen til lenger enn eit minutt.",
+			"type": "instruksjon",
+			"kilde": [],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Blir innhaldet satt på pause, stoppa, skjult, eller får endra oppdateringsfrekvens?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"G186"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Oppdaterer innhaldet automatisk innan eitt minutt?",
+			"ht": "Av praktiske grunnar, observerer vi innhaldet i eitt minutt. Du kan gjerne observere innhaldet i lengre tid.",
+			"type": "jaNei",
+			"kilde": [
+				"F16"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det er mogleg å pause, stoppe, skjule eller endre oppdateringsfrekvensen for automatisk oppdatert innhald."
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Framgår det på nettsida at det er mogleg å stoppe, sette på pause, skjule eller endre oppdateringsfrekvens for det automatisk oppdaterte innhaldet ved å bruke ein tastatursnarveg?",
+			"ht": "<p>Dokumentasjonen av tastatursnarvegen skal ligge anten på starten av nettsida, eller i direkte tilknytning til det aktuelle innhaldet.</p><p>Ein tastatursnarveg kan for eksempel vere</p><ul><li>Esc-tasten</li><li>ein kombinasjon av Ctrl og ein annan tastekombinasjon</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G4",
+				"G187"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å pause, stoppe, skjule eller endre oppdateringsfrekvensen for automatisk oppdatert innhald."
+				}
+			}
+		},
+		{
+			"stegnr": "3.12",
+			"spm": "Aktiver tastatursnarvegen.",
+			"ht": "Viss det finst ein tastatursnarveg for å endre oppdateringsfrekvens, skal du sette frekvensen til lenger enn eit minutt.",
+			"type": "instruksjon",
+			"kilde": [],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				}
+			}
+		},
+		{
+			"stegnr": "3.13",
+			"spm": "Blir innhaldet satt på pause, stoppa, skjult eller får endra oppdateringsfrekvensen?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"G187"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.14"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å pause, stoppe, skjule eller endre oppdateringsfrekvensen for automatisk oppdatert innhald."
+				}
+			}
+		},
+		{
+			"stegnr": "3.14",
+			"spm": "Oppdaterer innhaldet automatisk innan eitt minutt?",
+			"ht": "Av praktiske grunnar, observerer vi innhaldet i eitt minutt. Du kan gjerne observere innhaldet i lengre tid.",
+			"type": "jaNei",
+			"kilde": [
+				"F16"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å pause, stoppe, skjule eller endre oppdateringsfrekvensen for automatisk oppdatert innhald."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det er mogleg å pause, stoppe, skjule eller endre oppdateringsfrekvensen for automatisk oppdatert innhald."
+				}
+			}
+		}
+	]
 }

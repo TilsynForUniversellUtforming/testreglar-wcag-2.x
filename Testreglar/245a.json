@@ -2,6 +2,7 @@
 	"id": "2.4.5a",
 	"type": "web",
 	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Det skal vere minst to måtar å navigere til innhald på nettsider (på nettstader med meir enn ei nettside).</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [

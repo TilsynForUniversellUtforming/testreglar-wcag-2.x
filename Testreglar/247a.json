@@ -1,123 +1,128 @@
 {
-    "id": "2.4.7a",
-    "type": "web",
-    "versjon": "1.0",
-    "side": "2.1",
-    "element": "3.1",
-    "kolonner": [
-        {
-            "title": "2.2"
-        },
-        {
-            "title": "2.3"
-        },
-        {
-            "title": "2.4"
-        },
-        {
-            "title": "3.2"
-        }
-    ],
-
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Kva side testar du på?",
-            "ht": "Oppgi URL eller side-ID.",
-            "type": "tekst",
-            "label": "URL/Side:",
-            "datalist":"Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            } 
-        },
-
-        {
-            "stegnr": "2.2",
-            "spm": "Finst det element det er mogleg å navigere til med tastaturet?",
-            "ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. For å betene innhaldet kan du også bruke enter-tasten, mellomromstasten og piltastane. For å rygge med tasttauret, bruk Shift+Tab.",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.3"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Testside har ikkje innhald/funksjonalitet som er mogleg å nå/betene med tastatur."
-                }
-            }
-        },
-
-        {
-            "stegnr": "2.3",
-            "spm": "Finst det fleire enn eitt element det er mogleg å navigere til med tastaturet?",
-            "ht": "Dersom det berre finst eitt element som kan brukast med tastaturet på nettsida, er suksesskriteriet oppfylt.",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.4"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Nettside med berre eitt element som kan brukast med tastaturet."
-                }
-            }
-        },
-
-        {
-            "stegnr": "2.4",
-            "spm": "Får du synleg fokusmarkering på alle element det er mogleg å betene med tastaturet?",
-            "ht": "<p>Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Det kan hende at du eventuelt må felle ut menyar og opne modalvindauge for å teste alt innhald på nettsida.</p> <p>Det skal ikkje vere anstrengande å sjå fokusmarkeringa og brukaren skal enkelt kunne sjå kva element som er i fokus.</p> <p>Eksempel på synleg fokusmarkering på element er</p> <ul> <li>ramme, linje eller understreking</li> <li>endra farge på bakgrunn eller tekst</li> <li>skyggelegging</li> <li>tekstmarkør (loddrett strek) eller markering av tekst i skjemafelt</li> <li>anna form for visuell forandring</li> </ul>",
-            "type": "jaNei",
-            "kilde" :["G149","F78"],
-            "ruting": {
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                },
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Nettside der alle element det er mogleg å betene med tastaturet, får synleg fokusmarkering."
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Beskriv elementet kor du ikkje fikk synleg fokusmarkering.",
-            "ht": "",
-            "type": "tekst",
-            "label": "Element:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            } 
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Kva type funksjonalitet er elementet en del av?",
-            "ht": "Velg frå alternativa under.",
-            "type": "radio",
-            "svarArray": ["Skjema", "Mediaspelar", "Meny", "Modalvindauge", "Anna"],
-            "ruting": {
-                "alle": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Element det er mogeleg å betene med tastaturet som ikkje får synleg fokusmarkering."
-                }
-            }
-        }
-
-    ]
+	"id": "2.4.7a",
+	"type": "web",
+	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Alle element det er mogleg å betene med tastaturet, får synleg fokusmarkering. Dette gjeld ikkje dersom det berre finst eitt element det er mogleg å betene med tastaturet på nettsida.</p>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "2.4"
+		},
+		{
+			"title": "3.2"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi URL eller side-ID.",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Finst det element det er mogleg å navigere til med tastaturet?",
+			"ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. For å betene innhaldet kan du også bruke enter-tasten, mellomromstasten og piltastane. For å rygge med tasttauret, bruk Shift+Tab.",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje innhald/funksjonalitet som er mogleg å nå/betene med tastatur."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Finst det fleire enn eitt element det er mogleg å navigere til med tastaturet?",
+			"ht": "Dersom det berre finst eitt element som kan brukast med tastaturet på nettsida, er suksesskriteriet oppfylt.",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Nettside med berre eitt element som kan brukast med tastaturet."
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Får du synleg fokusmarkering på alle element det er mogleg å betene med tastaturet?",
+			"ht": "<p>Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Det kan hende at du eventuelt må felle ut menyar og opne modalvindauge for å teste alt innhald på nettsida.</p> <p>Det skal ikkje vere anstrengande å sjå fokusmarkeringa og brukaren skal enkelt kunne sjå kva element som er i fokus.</p> <p>Eksempel på synleg fokusmarkering på element er</p> <ul> <li>ramme, linje eller understreking</li> <li>endra farge på bakgrunn eller tekst</li> <li>skyggelegging</li> <li>tekstmarkør (loddrett strek) eller markering av tekst i skjemafelt</li> <li>anna form for visuell forandring</li> </ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G149",
+				"F78"
+			],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Nettside der alle element det er mogleg å betene med tastaturet, får synleg fokusmarkering."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv elementet kor du ikkje fikk synleg fokusmarkering.",
+			"ht": "",
+			"type": "tekst",
+			"label": "Element:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Kva type funksjonalitet er elementet en del av?",
+			"ht": "Velg frå alternativa under.",
+			"type": "radio",
+			"svarArray": [
+				"Skjema",
+				"Mediaspelar",
+				"Meny",
+				"Modalvindauge",
+				"Anna"
+			],
+			"ruting": {
+				"alle": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Element det er mogeleg å betene med tastaturet som ikkje får synleg fokusmarkering."
+				}
+			}
+		}
+	]
 }

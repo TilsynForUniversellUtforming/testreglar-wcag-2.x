@@ -1,7 +1,8 @@
 {
-	"id": "app-2.1.2a",
+	"id": "app-2.1.1a",
 	"type": "app",
 	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Alt innhald og funksjonalitet på skjermbildet kan nåast og brukast med sveiping og dobbelttrykk når skjermlesar er aktivert. Unnateke er innhald/funksjonalitet som ikkje er formålstenleg å betene med sveiping.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -10,6 +11,9 @@
 		},
 		{
 			"title": "2.4"
+		},
+		{
+			"title": "2.5"
 		},
 		{
 			"title": "3.2"
@@ -21,8 +25,8 @@
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Beskrive skjermbilde",
-			"ht": "Beskriv skjermbildet med få stikkord.",
+			"spm": "Beskriv skjermbildet som skal vurderast",
+			"ht": "<p>Beskriv skjermbildet med få stikkord, eller vel i lista.</p>",
 			"type": "tekst",
 			"label": "Skjermbilde:",
 			"datalist": "Sideutvalg",
@@ -32,14 +36,14 @@
 					"type": "gaaTil",
 					"steg": "2.2"
 				}
-			}
+			},
+			"kilde": []
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Aktivere skjermlesar",
-			"ht": "Aktiver skjermlesar (opplesingsfunksjon). Start opplesing frå starten av skjermbildet. Sveip mot høgre for å lese opp eit og eit element i skjermbildet. Kontroller at du sveiper skjermbildet helt ned.",
+			"spm": "Aktiver skjermlesar (opplesingsfunksjon).",
+			"ht": "Start opplesing frå starten av skjermbildet. Sveip mot høgre for å lese opp eit og eit element i skjermbildet. For hjelp til korleis du brukar skjermlesar på smarttelefon, sjå <a href=\"https://www.smartja.no/ios/syn/\">IOS</a> og <a href=\"https://www.smartja.no/android/syn/\">Android</a>.",
 			"type": "instruksjon",
-			"oblig": true,
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
@@ -65,30 +69,49 @@
 		},
 		{
 			"stegnr": "2.4",
-			"spm": "Finst det ei sveipefelle i skjermbildet?",
-			"ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Kontroller at du scroller siden helt ned og at du kommer tilbake til starten av nettsida. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle tastaturfeller i all funksjonalitet.",
+			"spm": "Får du til å nå alle lenker, knappar og funksjonar med sveiping?",
+			"ht": "<p>Sveip sakte for å navigere på skjermbilde.<p><strong>Merk:</strong> Dersom det finst funksjonalitet som kan betenast på fleire måtar, er det tilstrekkeleg at ein av måtane kan betenast med tastaturet. Eksempel på dette er datoveljar, kor brukaren både kan skrive inn dato, og velje dato frå ein kalendar.</p><p><strong>Merk:</strong> Eventuell tastaturfelle, omlasting av sida eller kontekstendring påvirkar ikkje om det mogleg å betene innhaldet.</p>",
 			"type": "jaNei",
 			"kilde": [
-				"G21"
+				"G202"
 			],
 			"ruting": {
-				"ja": {
+				"nei": {
 					"type": "gaaTil",
 					"steg": "3.1"
 				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.5"
+				}
+			}
+		},
+		{
+			"stegnr": "2.5",
+			"spm": "Får du til å aktivere alle lenker, knappar og funksjonar med dobbeltrykk?",
+			"ht": "<p>Prøv å aktivere alle lenker, knappar og funksjonar med dobbeltrykk.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G202"
+			],
+			"ruting": {
 				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Testside har ikkje tastaturfelle."
+					"utfall": "Alt innhald og funksjonalitet på skjermbildet kan nåast og brukast med sveiping og dobbelttrykk når skjermlesar er aktivert."
 				}
 			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Beskriv elementet kor du fann tastaturfella.",
-			"ht": "",
+			"spm": "Kva innhald/funksjonalitet fekk du ikkje til å nå eller aktivere med sveiping/dobbeltrykk?",
+			"ht": "Beskriv innhaldet med få stikkord.",
 			"type": "tekst",
-			"label": "Element med tastaturfelle:",
+			"label": "Element:",
 			"multilinje": true,
 			"oblig": true,
 			"ruting": {
@@ -100,8 +123,24 @@
 		},
 		{
 			"stegnr": "3.2",
+			"spm": "Har elementet (som du ikkje fikk til å betene med tastaturet) funksjonalitet det ikkje er føremålsteneleg å betene med sveip?",
+			"ht": "<p>Eksempel på slik funksjonalitet er maleverktøy, å gi inndata i form av handskrift, styring av bil/helikopter/eller liknande i spill.</p><p>Dersom det finst funksjonalitet som kan betenast på fleire måtar, er det tilstrekkeleg at ein av måtane kan betenast med tastaturet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Innhald som ikkje er føremålsteneleg å betene med tastatur."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
 			"spm": "Kva type funksjonalitet er elementet en del av?",
-			"ht": "Velg frå alternativa under.",
+			"ht": "<p>Velg frå alternativa under.</p>",
 			"type": "radio",
 			"svarArray": [
 				"Skjema",
@@ -112,32 +151,12 @@
 			],
 			"ruting": {
 				"alle": {
-					"type": "gaaTil",
-					"steg": "3.3"
-				}
-			}
-		},
-		{
-			"stegnr": "3.3",
-			"spm": "Er det mogleg å navigere ut av tastaturfella med standardmåtar for tastaturnavigering?",
-			"ht": "<p>Bruk for eksempel tilbake-tasten på mobilen eller andre standard måtar for operativsystemet å navigere på.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"G21",
-				"F10"
-			],
-			"ruting": {
-				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Det finst sveipefeller i skjermbildet og det er ikkje mogleg å sveipe ut av sveipefella."
-				},
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Det er mogleg å sveipe ut av sveipefella."
+					"utfall": "Det er ikkje mogleg å nå og betene alt innhald/funksjonalitet med sveiping."
 				}
-			}
+			},
+			"kilde": []
 		}
 	]
 }
