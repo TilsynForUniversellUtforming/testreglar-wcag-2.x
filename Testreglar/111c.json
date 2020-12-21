@@ -2,6 +2,7 @@
 	"id": "1.1.1c",
 	"type": "web",
 	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Informasjon om lenkemålet for klikkbare område i bilde går fram av tekstalternativet.</p>",
 	"side": "2.1",
 	"element": "3.3",
 	"kolonner": [
@@ -294,5 +295,4 @@
 				}
 			}
 		}
-	]
-}
+	]}
