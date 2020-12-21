@@ -3,6 +3,7 @@
 	"type": "web",
 	"versjon": "1.0",
 	"spraak": "no",
+	"kravTilSamsvar": "<p>For bilde i HTML er ein av følgjande er oppfylt:</p>\r\n<ul>\r\n<li>Bilde som er pynt er koda på en slik måte at dei ikkje er til støy.</li>\r\n<li>Bilde som er ei sanseoppleving eller ein test har eit kort tekstalternativ som gir ein beskrivande identifikasjon.</li>\r\n<li>Bilde som er meiningsberande har eit kort tekstalternativ som gjengir same informasjon som biletet.</li>\r\n<li>Bilde som er komplekse har både eit kort tekstalternativ og eit utfyllande tekstalternativ.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -742,5 +743,4 @@
 				}
 			}
 		}
-	]
-}
+	]}
