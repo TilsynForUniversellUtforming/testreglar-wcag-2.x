@@ -2,6 +2,7 @@
 	"id": "1.1.1b",
 	"type": "web",
 	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<p>Informasjon om lenkemålet for eit lenka bilde går fram av eitt av følgande alternativ:</p>\r\n<ul>\r\n<li>Lenketeksten.</li>\r\n<li>Tekstalternativet til bildet.</li>\r\n<li>Lenketeksten saman med tekstalternativet til bildet.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -535,5 +536,4 @@
 				}
 			}
 		}
-	]
-}
+	]}
