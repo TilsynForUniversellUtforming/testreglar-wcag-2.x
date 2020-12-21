@@ -2,6 +2,7 @@
 	"id": "app-2.1.2a",
 	"type": "app",
 	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ol>\r\n<li>Det finst ikkje sveipefeller i skjermbildet, eller</li>\r\n<li>Det er mogleg å sveipe ut av sveipefella (dvs. det er ikkje ei sveipefelle)</li>\r\n</ol>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
