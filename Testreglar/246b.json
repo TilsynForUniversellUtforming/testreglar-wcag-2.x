@@ -3,7 +3,7 @@
 	"type": "web",
 	"versjon": "1.0",
 	"spraak": "no",
-	"kravTilSamsvar": "",
+	"kravTilSamsvar": "<p>Ledetekstar beskriv emne eller formål med skjemaelementet.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -138,4 +138,5 @@
 				}
 			}
 		}
-	]}
+	]
+}
