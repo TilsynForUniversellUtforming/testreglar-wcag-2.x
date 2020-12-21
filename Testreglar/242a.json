@@ -1,108 +1,111 @@
 {
-    "id": "2.4.2a",
-    "type": "web",
-    "versjon": "1.0",
-    "spraak": "no",
-    "side": "2.1",
-    "element": "Side",
-    "kolonner": [
-        {
-            "title": "3.1"
-        },
-        {
-            "title": "3.2"
-        },
-        {
-            "title": "3.3"
-        },
-        {
-            "title": "3.4"
-        }
-    ],
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Kva side testar du på?",
-            "ht": "Oppgi URL eller side-ID.",
-            "type": "tekst",
-            "label": "URL/Side:",
-            "datalist":"Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                }
-            } 
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Har sida ein sidetittel?",
-            "ht": "<p>Undersøk i koden om sidetittelen står i &#x3C;title&#x3E;-elementet, som er nøsta i &#x3C;head&#x3E;-elementet på starten av HTML-koden.</p><p>Merk at &#x3C;title&#x3E;-elementet ikkje er det same som title-attributt. &#x3C;title&#x3E;-elementet er obligatorisk og finst berre ein gong per nettside.</p>",
-            "type": "jaNei",
-            "kilde": ["H25"],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Nettsida har ikkje sidetittel."
-                }
-            }
-        },
-
-        {
-            "stegnr": "3.2",
-            "spm": "Kva er sidetittelen på sida?",
-            "ht": "Sidetitlar er gjerne vist i fana på nettlesaren. Merk at sidetittel ikkje er det same som hovudoverskrift på sida.",
-            "type": "tekst",
-            "label": "Sidetittel",
-            "kilde": [],
-            "multilinje": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Gje ei stikkordsmessig beskriving av innhaldet på sida.",
-            "ht": "Legg vekt på å beskrive sida med få ord, gjerne hovudoverskrift og litt utfyllande informasjon.",
-            "type": "tekst",
-            "label": "Beskriving av innhaldet:",
-            "kilde": [],
-            "multilinje": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.4"
-                }
-            }
-        },
-
-        {
-            "stegnr": "3.4",
-            "spm": "Gir sidetittelen relevant beskriving av emne eller formål med sida? ",
-            "ht": "<p>Sidetittelen skal vere relevant for emne eller formål med sida, og han skal gi meining også når han vert lest ut av kontekst.</p><p>Namnet på sida/dokumentet er nok til å gi ein beskrivande sidetittel, men det er ikkje noko krav om å bruke namnet på sida/dokumentet.</p><p>Eksempel på sidetitlar som ikkje er beskrivande:</p><ul><li>\"Skriv inn navnet på HTML-dokumentet her\" </li><li>\"Dokument uten tittel\" </li><li>\"Ingen tittel\" </li><li>\"Ny side 1\"</li><li>Filnavn som ikkje er beskrivende alene, feks “rapport.html\" eller \"spk12.html\"</li><li>Tom tekst</li><li>Tekst som er brukt til å fylle plassen, som for eksempel fyllord eller placeholder</li></ul>",
-            "type": "jaNei",
-            "kilde": ["G88", "F25"],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Sidetittel er beskrivande for innhaldet på sida."
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Sidetittel er ikkje beskrivande for innhaldet på sida."
-                }
-            }
-        }
-    ]
-}
+	"id": "2.4.2a",
+	"type": "web",
+	"versjon": "1.0",
+	"kravTilSamsvar": "",
+	"spraak": "no",
+	"side": "2.1",
+	"element": "Side",
+	"kolonner": [
+		{
+			"title": "3.1"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi URL eller side-ID.",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Har sida ein sidetittel?",
+			"ht": "<p>Undersøk i koden om sidetittelen står i &#x3C;title&#x3E;-elementet, som er nøsta i &#x3C;head&#x3E;-elementet på starten av HTML-koden.</p><p>Merk at &#x3C;title&#x3E;-elementet ikkje er det same som title-attributt. &#x3C;title&#x3E;-elementet er obligatorisk og finst berre ein gong per nettside.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"H25"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Nettsida har ikkje sidetittel."
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Kva er sidetittelen på sida?",
+			"ht": "Sidetitlar er gjerne vist i fana på nettlesaren. Merk at sidetittel ikkje er det same som hovudoverskrift på sida.",
+			"type": "tekst",
+			"label": "Sidetittel",
+			"kilde": [],
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Gje ei stikkordsmessig beskriving av innhaldet på sida.",
+			"ht": "Legg vekt på å beskrive sida med få ord, gjerne hovudoverskrift og litt utfyllande informasjon.",
+			"type": "tekst",
+			"label": "Beskriving av innhaldet:",
+			"kilde": [],
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Gir sidetittelen relevant beskriving av emne eller formål med sida? ",
+			"ht": "<p>Sidetittelen skal vere relevant for emne eller formål med sida, og han skal gi meining også når han vert lest ut av kontekst.</p><p>Namnet på sida/dokumentet er nok til å gi ein beskrivande sidetittel, men det er ikkje noko krav om å bruke namnet på sida/dokumentet.</p><p>Eksempel på sidetitlar som ikkje er beskrivande:</p><ul><li>\"Skriv inn navnet på HTML-dokumentet her\" </li><li>\"Dokument uten tittel\" </li><li>\"Ingen tittel\" </li><li>\"Ny side 1\"</li><li>Filnavn som ikkje er beskrivende alene, feks “rapport.html\" eller \"spk12.html\"</li><li>Tom tekst</li><li>Tekst som er brukt til å fylle plassen, som for eksempel fyllord eller placeholder</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G88",
+				"F25"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Sidetittel er beskrivande for innhaldet på sida."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Sidetittel er ikkje beskrivande for innhaldet på sida."
+				}
+			}
+		}
+	]}
