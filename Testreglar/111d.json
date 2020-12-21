@@ -2,6 +2,7 @@
 	"id": "1.1.1d",
 	"type": "web",
 	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Dersom det er brukt CAPTCHA med ikkje-tekstleg innhald, er følgande oppfylt:</p>\r\n<ul>\r\n<li>Det finst minst to former for CAPTCHA, for eksempel i form av bilde, lyd eller tekst.</li>\r\n<li>Ikkje-tekstleg innhald har eit tekstalternativ som identifiserer og beskriv formålet.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
