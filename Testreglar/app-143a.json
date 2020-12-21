@@ -1,6 +1,7 @@
 {
 	"id": "app-1.4.3a",
 	"type": "app",
+	"kravTilSamsvar": "<p>Tekst skal ha kontrast mot bakgrunnen på minst 4,5:1.</p>",
 	"kolonner": [
 		{
 			"title": "2.2"
