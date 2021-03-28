@@ -48,7 +48,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Kor mange element feilar på kontrast?",
-			"ht": "<p><a class=\"aUnderLine\" target=\"_blank\" href=\"https://chrome.google.com/webstore/detail/siteimprove-accessibility/efcfolpjihicnikpmhnmphjhhpiclljc\">Bruk nettlesartillegget Siteimprove Accessibility Checker i Chrome</a> (Du kan last ned dette frå Chrome Store).</p> <p>Skriv av verdien du får i feltet Contrast (Minimum) under overskrifta Distingushable.</p><p>Dersom feltet Contrast (Minimum) ikkje kjem opp er sida uten feil og du skal registere 0.</p>",
+			"ht": "<p><a class=\"aUnderLine\" href=\"https://chrome.google.com/webstore/detail/siteimprove-accessibility/efcfolpjihicnikpmhnmphjhhpiclljc\" target=\"_blank\" rel=\"noopener noreferrer\">Bruk nettlesartillegget Siteimprove Accessibility Checker i Chrome</a> (Du kan last ned dette frå Chrome Store).</p>\n<p>Skriv av verdien du får i feltet Contrast (Minimum) under overskrifta Distingushable.</p>\n<p>Dersom feltet Contrast (Minimum) ikkje kjem opp er sida uten feil og du skal registere 0.</p>",
 			"image": {
 				"href": "../testreglar/filer/bilete/143c-01.png",
 				"alt": "Illustrasjon av Siteimprove Accessibility Checker i Chrome"
@@ -60,7 +60,7 @@
 				"G145",
 				"F83"
 			],
-			"label": "Mengd feil:",
+			"label": "Tal feil:",
 			"oblig": true,
 			"ruting": {
 				"alle": {
