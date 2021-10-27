@@ -391,7 +391,7 @@
 		{
 			"stegnr": "3.17",
 			"spm": "Identifiserer ledeteksten funksjonen til knappen?",
-			"ht": "<p>Ta utgangspunktet i ledeteksten du fann i førre steg.</p><p>Det er tilstrekkeleg at ledeteksten identifiserer knappen eller er lik teksten på knappen. Vi krever uansett ikkje meir identifikasjon enn den synlege informasjonen på knappen.</p>Knappar som er koda med berre eit type-element som er anten type=\"submit\" eller type=\"reset\", skal du vurdere den visuelle teksten på knappen.</p><strong>Merk:</strong>: Ledeteksten skal vere på same språk som skjemaet. </p>",
+			"ht": "<p>Ta utgangspunktet i ledeteksten du fann i førre steg.</p>\n<p>Det er tilstrekkeleg at ledeteksten identifiserer knappen eller er lik teksten på knappen. Vi krever uansett ikkje meir identifikasjon enn den synlege informasjonen på knappen.</p>\n<p>Knappar som er koda med berre eit type-element som er anten <code>type=\"submit</code>\" eller <code>type=\"reset</code>\", skal du vurdere den visuelle teksten på knappen.</p>\n<p><strong>Merk: </strong>Ledeteksten skal vere på same språk som skjemaet.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G108"
