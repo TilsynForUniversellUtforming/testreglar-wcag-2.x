@@ -1,7 +1,7 @@
 {
 	"id": "3.3.4a",
 	"type": "web",
-	"versjon": "1.1",
+	"versjon": "2",
 	"spraak": "no",
 	"kravTilSamsvar": "<p>For nettsider som medfører juridiske forpliktingar eller krev økonomiske transaksjonar frå brukaren, som enten endrar brukarstyrte data i datalagringssystem eller som sender svar på testar utført av brukaren, må ein av følgjande vere oppfylt:</p>\r\n<ul>\r\n<li>For inndatafelt som er obligatoriske eller krev eit bestemt format:\r\n<ul>\r\n<li>vert inndatafeil oppdaga og</li>\r\n<li>brukaren får moglegheit til å rette opp eventuelle feil.</li>\r\n</ul>\r\n</li>\r\n<li>Før innsending får brukaren:\r\n<ul>\r\n<li>oppfordring om å gjennomgå informasjonen som er lagt inn</li>\r\n<li>moglegheit til endre all informasjon før innsending og</li>\r\n<li>brukaren får moglegheit til å rette opp eventuelle feil.</li>\r\n</ul>\r\n</li>\r\n<li>Etter innsending får brukaren:\r\n<ul>\r\n<li>beskjed om korleis dei kan angre innsending av skjemaet og</li>\r\n<li>det let seg gjere å angre innsendinga.</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
