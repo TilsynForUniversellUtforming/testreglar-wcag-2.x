@@ -506,7 +506,7 @@
 		{
 			"stegnr": "3.20",
 			"spm": "Gir innhaldet i attributtet ein beskrivande identifikasjon av bilde?",
-			"ht": "Gjer ei skjønnsmessig vurdering av om informasjonen i attributtet (dvs. tekstalternativet) identifiserer innhaldet i bilde. Viss aria-labelledby visar til dupliserte id-ar, skal du vurdere innhaldet til id-en som står først i koden. Merk: Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.",
+			"ht": "<p>Gjer ei skjønnsmessig vurdering av om informasjonen i attributtet (dvs. tekstalternativet) identifiserer innhaldet i bilde. Viss aria-labelledby visar til dupliserte id-ar, skal du vurdere innhaldet til id-en som står først i koden.</p>\n<p><strong>Merk:</strong> Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G94",
@@ -743,4 +743,5 @@
 				}
 			}
 		}
-	]}
+	]
+}
