@@ -219,11 +219,10 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Har lenka ein lenketekst?",
-			"ht": "<p>Merk at teksten kan vere koda inn i andre element som for eksempel <code>&#x3C;h&#x3E;</code>, <code>&#x3C;span&#x3E;</code> men m&#xE5; ligge inne i <code>&#x3C;a&#x3E;</code> elementet.</p> <p>Merk at det kan vere naudsynt &#xE5; felle ut underordna element i koden for &#xE5; finne teksten.</p> <p>Du skal ikkje vurdere innhaldet i <code>&#x3C;img&#x3E;</code>-elementet.</p>",
+			"ht": "<p>Merk at teksten kan vere koda inn i andre element som for eksempel <code>&lt;h&gt;</code>, <code>&lt;span&gt;</code> men må ligge inne i <code>&lt;a&gt;</code> elementet.</p>\n<p>Merk at det kan vere naudsynt å felle ut underordna element i koden for å finne teksten.</p>\n<p>Du skal ikkje vurdere innhaldet i <code>&lt;img&gt;</code>-elementet.</p>",
 			"type": "jaNei",
 			"kilde": [
-				"H30",
-				"H39"
+				"H30"
 			],
 			"svar": null,
 			"ruting": {
@@ -240,11 +239,10 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Er lenketeksten misvisande for formålet med lenka?",
-			"ht": "<p>Lenketeksten er misvisande dersom den kan føre til at brukaren misforstår formålet med lenka.</#p> <p>Vis lenketeksten er intetseiande, er den ikkje nødendigvis misvisande.</p>",
+			"ht": "<p>Lenketeksten er misvisande dersom den kan føre til at brukaren misforstår formålet med lenka.</p>\n<p>Vis lenketeksten er intetseiande, er den ikkje nødendigvis misvisande.</p>",
 			"type": "jaNei",
 			"kilde": [
-				"H30",
-				"H39"
+				"H30"
 			],
 			"svar": null,
 			"ruting": {
@@ -536,4 +534,5 @@
 				}
 			}
 		}
-	]}
+	]
+}
