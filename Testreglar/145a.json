@@ -134,20 +134,18 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Går informasjon/funksjonalitet i presentasjonen tapt viss bilde av tekst kodast om til tekst?",
-			"ht": "<p>Eksempel på situasjonar der bruk av bilde av tekst er nødvendig: </p><ul><li>Det ikkje er mogleg å formatere teksten for å oppnå same effekt. </li><li>Det ikkje er mogleg å presentere effekten i dei vanlegaste nettleserane. </li><li>Presentasjonen krev bruk av teknikkar/teknologi som ikkje oppfyller WCAG.</li></ul>",
-			"kilde": [
-				"SK"
-			],
+			"ht": "<p>Eksempel på situasjonar der bruk av bilde av tekst er nødvendig: </p>\n<ul>\n<li>Det ikkje er mogleg å formatere teksten for å oppnå same effekt. </li>\n<li>Det ikkje er mogleg å presentere effekten i dei vanlegaste nettleserane.</li>\n<li>Presentasjonen krev bruk av teknikkar/teknologi som ikkje oppfyller WCAG.</li>\n</ul>",
+			"kilde": [],
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Bilde av tekst, der nødvendig informasjon/funksjonalitet i presentasjonen går tapt, viss bilde vert koda som tekst."
+				},
+				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
 					"utfall": "Bilde av tekst er brukt unødvendig, fordi innhaldet kan kodast som tekst utan at vesentleg informasjon eller funksjonalitet går tapt."
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Bilde av tekst, der nødvendig informasjon/funksjonalitet i presentasjonen går tapt, viss bilde vert koda som tekst."
 				}
 			}
 		}
