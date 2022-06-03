@@ -107,8 +107,8 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Har &#x3C;HTML&#x3E;-elementet attributtet lang?",
-			"ht": "Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette.",
+			"spm": "Har &lt;html&gt;-elementet attributtet lang?",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"H57"
@@ -127,8 +127,8 @@
 		},
 		{
 			"stegnr": "3.5",
-			"spm": "Har &#x3C;HTML&#x3E;-elementet attributtet xml:lang?",
-			"ht": "Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette.",
+			"spm": "Har &lt;html&gt;-elementet attributtet xml:lang?",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"H57"
@@ -147,8 +147,8 @@
 		},
 		{
 			"stegnr": "3.6",
-			"spm": "Har &#x3C;HTML&#x3E;-elementet attributtet lang eller xml:lang?",
-			"ht": "Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette.",
+			"spm": "Har &lt;html&gt;-elementet attributtet lang eller xml:lang?",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"H57"
