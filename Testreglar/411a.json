@@ -44,7 +44,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Har nettsida valideringsfeil?",
-			"ht": "Sjekk om validatoren gir feil av type \"Errors\".",
+			"ht": "<p>For å sjekke sida for valideringsfeil kan du bruke <a href=\"https://validator.w3.org/\" target=\"_blank\" rel=\"noopener\">W3C sin kodevalidator</a>.</p>\n<p>Sjekk om validatoren gir feil av type \"Errors\".</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G134"
