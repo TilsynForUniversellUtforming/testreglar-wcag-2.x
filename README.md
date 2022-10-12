@@ -1,2 +1,2 @@
-# Webtestreglar - Tilsyn for universell utforming DIFI
-Tilsynet i Difi sine testreglar for testing av universell utforming.
+# Webtestreglar for WCAG 2.x
+Tilsynet for universell utforming sine testreglar for testing av WCAG 2.x-standarden.
