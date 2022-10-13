@@ -45,7 +45,7 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"steg": "Skjermbilde har ikkje interaktive element"
+					"utfall": "Skjermbilde har ikkje interaktive element"
 				}
 			}
 		},
