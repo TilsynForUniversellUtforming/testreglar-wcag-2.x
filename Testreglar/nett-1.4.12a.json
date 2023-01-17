@@ -1,0 +1,89 @@
+{
+	"id": "Nett-1.4.12a ",
+	"type": "web",
+	"kravTilSamsvar": "<p><span lang=\"NO-BOK\">Det er flere m&aring;ter &aring; oppfylle kravet p&aring;:</span></p>\r\n<ul>\r\n<li>Tekst har eller kan settes til f&oslash;lgende fire tekstegenskaper samtidig, uten tap av innhold eller funksjonalitet:\r\n<ul>\r\n<li><span lang=\"NO-BOK\">Linjeh&oslash;yde (linjeavstand) minst 1,5 ganger skriftst&oslash;rrelsen</span></li>\r\n<li><span lang=\"NO-BOK\">Avstand etter avsnitt minst 2 ganger skriftst&oslash;rrelsen.</span></li>\r\n<li><span lang=\"NO-BOK\">Avstanden mellom bokstaver i blokker av tekst (sperring) minst 0,12 ganger skriftst&oslash;rrelsen.</span></li>\r\n<li><span lang=\"NO-BOK\">Avstanden mellom ord minst 0,16 ganger skriftst&oslash;rrelsen og</span></li>\r\n</ul>\r\n</li>\r\n<li>Andre stilegenskaper blir ikke endret som f&oslash;lge av justert tekstavstand.</li>\r\n</ul>",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.1"
+		},
+		{
+			"title": "3.2"
+		}
+	],
+	"side": "2.1",
+	"element": "Side",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hva side tester du på?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "URL/Side-ID:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Sjekk om innhold på siden er kodet i et oppmerkingsspråk og støtter endring av tekstegenskaper?",
+			"ht": "<p>Oppmerkingsspråk eller markeringsspråk  er et språk eller regelsett for å kode formatering av tekst og dokumenter. Et markeringsspråk består av tekstelementer, kalt tagger, som legges inn i tekstfiler for å angi formatering. Disse tekstelementene vises ikke sammen med teksten, men styrer hvordan teksten skal se ut og presenteres. Eksempler på oppmerkingsspråk er HTML og XML. </p>\n<p>Tekstegenskaper i dette kravet omfatter linjehøyde (linjeavstand), avstand etter avsnitt, avstanden mellom bokstaver i blokker av tekst (sperring) og avstanden mellom ord.</p>\n<p>Unntak: <span lang=\"NO-BOK\">Menneskelige språk eller skripter som ikke bruker en eller flere av disse tekstegenskapene i skriftspråket er et unntak i kravet. Etter ordlyden er det tilstrekkelig å kun bruke tekstegenskapene som finnes for den bestemte kombinasjonen av språk og skript. Eksempler på tekst som er unntatt, fordi den ikke støtter endring av tekstegenskaper, er </span></p>\n<ul>\n<li class=\"MsoNormal\"><span lang=\"NO-BOK\" style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\">video med innbrent (fast) teksting </span></li>\n<li class=\"MsoNormal\"><span style=\"font-family: Arial, sans-serif; text-indent: -18pt;\">PDF-dokumenter </span></li>\n<li class=\"MsoNormal\"><!-- [if !supportLists]--><span lang=\"NO-BOK\" style=\"font-family: 'Arial',sans-serif;\">bilder av tekst: i relasjon til dette suksesskriteriet er</span><span lang=\"NO-BOK\" style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\"> implementasjoner av canvas å regne som bilder av tekst</span></li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke innhold som er kodet i et oppmerkingsspråk eller støtter endring av tekstegenskaper."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Er alt innhold og funksjonalitet lik i vanlig visning og visning med justert tekstavstand?",
+			"ht": "<p>Sett zoomnivået på nettleseren til 100 %.</p>\n<p>Dra verktøyet lenken <a href=\"javascript:(function(){var d=document,id='phltsbkmklt',el=d.getElementById(id),f=d.querySelectorAll('iframe'),i=0,l=f.length;if(el){function removeFromShadows(root){for(var el of root.querySelectorAll('*')){if(el.shadowRoot){el.shadowRoot.getElementById(id).remove();removeFromShadows(el.shadowRoot);}}}el.remove();if(l){for(i=0;i<l;i++){try{f[i].contentWindow.document.getElementById(id).remove();removeFromShadows(f[i].contentWindow.document);}catch(e){console.log(e)}}}removeFromShadows(d);}else{s=d.createElement('style');s.id=id;s.appendChild(d.createTextNode('*{line-height:1.5 !important;letter-spacing:0.12em !important;word-spacing:0.16em !important;}p{margin-bottom:2em !important;}'));function applyToShadows(root){for(var el of root.querySelectorAll('*')){if(el.shadowRoot){el.shadowRoot.appendChild(s.cloneNode(true));applyToShadows(el.shadowRoot);}}}d.getElementsByTagName('head')[0].appendChild(s);for(i=0;i<l;i++){try{f[i].contentWindow.document.getElementsByTagName('head')[0].appendChild(s.cloneNode(true));applyToShadows(f[i].contentWindow.document);}catch(e){console.log(e)}}applyToShadows(d);}})();\">Text Spacing</a> til bokmerkeraden i nettleseren.</p>\n<p>Bruk verktøyet for å teste testsiden.</p>\n<p>Sjekk at alt innhold og funksjonalitet er tilgjengelig i visning med justert tekstavstand. Eksempel på brudd er at tekst overlapper annet innhold eller avkortes.</p>\n<p>Du kan sammenligne nettsiden i vanlig visning og visning med justert tekstavstand for å gjøre vurdering lettere.</p>\n<p>Det er ok om vi får tilgang til innhold/funksjonalitet ved å måtte scrolle vannrett og/eller loddrett. Merk at en og same side kan se ulik ut i ordinær og justert visning, f.eks. kan meny i justert visning være en knapp, mens du i ordinær visning får se hele menyen. Det er ikke ok at innhold blir dekket over av annet innhold i justert visning, eller at innhold forsvinner fra sida.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"C35",
+				"C36"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Tekstegenskaper kan justeres, uten tap av innhold og funksjonalitet."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Hvilket innhold og funksjonalitet fikk du ikke tilgang til?",
+			"ht": "<p>Registrer med stikkord.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "Innhold og funksjonlaitet:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Tekstavstand kan ikke justeres, uten tap av innhold og funksjonalitet."
+				}
+			}
+		}
+	]
+}
