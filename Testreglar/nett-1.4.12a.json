@@ -14,6 +14,9 @@
 		},
 		{
 			"title": "3.2"
+		},
+		{
+			"title": "3.3"
 		}
 	],
 	"side": "2.1",
@@ -91,11 +94,26 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Hvilket innhold og funksjonalitet fikk du ikke tilgang til?",
-			"ht": "<p>Registrer med stikkord.</p>",
+			"spm": "Skriv antall element(er) og funksjonalitet du ikke fikk tilgang til",
+			"ht": "<p>Her skriver du antall element(er) og funksjonalitet du ikke fikk tilgang til på testsiden.</p>",
 			"type": "tekst",
 			"kilde": [],
-			"label": "Innhold og funksjonlaitet:",
+			"label": "Antall element(er) og funksjonalitet:",
+			"filter": "tal",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Beskriv element(er) og funksjonalitet du ikke fikk tilgang til",
+			"ht": "<p>Registrer element(er) og funksjonalitet med stikkord.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "Element (er) og funksjonalitet:",
 			"multilinje": true,
 			"ruting": {
 				"alle": {
