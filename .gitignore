@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Testreglar-2.1.njsproj
+/node_modules
+/Testreglar-2.1.sln
+/Testreglar-2.1.njsproj.user
