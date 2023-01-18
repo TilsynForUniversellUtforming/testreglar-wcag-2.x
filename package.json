@@ -1,0 +1,17 @@
+{
+  "name": "uutilsynet-testreglar-wcag-2x",
+  "version": "0.0.1",
+  "description": "Testreglar for WCAG 2.x",
+  "scripts": {
+    "lint": "eslint . --ext .json"
+  },
+  "author": {
+    "name": "Tilsynet for universell utforming"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0",
+    "eslint-plugin-json": "^3.1.0"
+  }
+}
