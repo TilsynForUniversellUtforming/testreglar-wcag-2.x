@@ -10,6 +10,9 @@
 			"title": "2.3"
 		},
 		{
+			"title": "2.4"
+		},
+		{
 			"title": "3.2"
 		},
 		{
@@ -53,6 +56,23 @@
 		},
 		{
 			"stegnr": "2.3",
+			"spm": "Har nettsiden innhold i form av tekst?",
+			"ht": "<p>Disse innholdstypene skal testes</p>\n<ul>\n<li>tekst</li>\n<li>tekst i illustrasjoner og diagram (som ikke er bilde)</li>\n<li>tekst i skjema</li>\n</ul>\n<p>Disse innholdstypene skal ikke testes<!--#p--></p>\n<ul>\n<li>bilde av tekst</li>\n<li>logoer og varemerke</li>\n<li>ikke-informativ tekst som er til pynt, dvs tekst som kan erstattes av annen tekst, uten at meningsinnholdet vært endret</li>\n<li>tekst i bilde der teksten ikke er vesentlig for å formidle meningsinnholdet</li>\n<li>deaktiverte skjemaelement</li>\n<li>tekst som ikke er synlig for noen</li>\n<li>grafiske element i for eksempel diagram og grafer, som støttelinjer, søyler m.m.</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Det er ikke tekstlig innhold på siden."
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
 			"spm": "Sjekk om innhold på siden støtter endring av tekstegenskaper?",
 			"ht": "<p>Tekstegenskaper i dette kravet omfatter linjehøyde (linjeavstand), avstand etter avsnitt, avstanden mellom bokstaver i blokker av tekst (sperring) og avstanden mellom ord.</p>\n<p><strong>Unntak: </strong>Menneskelige språk eller skripter som ikke bruker en eller flere av disse tekstegenskapene i skriftspråket er et unntak i kravet. Etter ordlyden er det tilstrekkelig å kun bruke tekstegenskapene som finnes for den bestemte kombinasjonen av språk og skript. Eksempler på tekst som er unntatt, fordi den ikke støtter endring av tekstegenskaper, er</p>\n<ul>\n<li>video med innbrent (fast) teksting</li>\n<li>PDF-dokumenter</li>\n<li>bilder av tekst: i relasjon til dette suksesskriteriet er implementasjoner av canvas å regne som bilder av tekst</li>\n</ul>",
 			"type": "jaNei",
@@ -70,8 +90,8 @@
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Får du tilgang til alt innhold og funksjonalitet i visning med justert tekstavstand?",
-			"ht": "<p>Slik kan du justere tekstavstand på testsiden:</p>\n<ul>\n<li>Sett zoomnivået på nettleseren til 100 %.</li>\n<li>Dra verktøyet lenken <a href=\"javascript:(function(){var d=document,id='phltsbkmklt',el=d.getElementById(id),f=d.querySelectorAll('iframe'),i=0,l=f.length;if(el){function removeFromShadows(root){for(var el of root.querySelectorAll('*')){if(el.shadowRoot){el.shadowRoot.getElementById(id).remove();removeFromShadows(el.shadowRoot);}}}el.remove();if(l){for(i=0;i<l;i++){try{f[i].contentWindow.document.getElementById(id).remove();removeFromShadows(f[i].contentWindow.document);}catch(e){console.log(e)}}}removeFromShadows(d);}else{s=d.createElement('style');s.id=id;s.appendChild(d.createTextNode('*{line-height:1.5 !important;letter-spacing:0.12em !important;word-spacing:0.16em !important;}p{margin-bottom:2em !important;}'));function applyToShadows(root){for(var el of root.querySelectorAll('*')){if(el.shadowRoot){el.shadowRoot.appendChild(s.cloneNode(true));applyToShadows(el.shadowRoot);}}}d.getElementsByTagName('head')[0].appendChild(s);for(i=0;i<l;i++){try{f[i].contentWindow.document.getElementsByTagName('head')[0].appendChild(s.cloneNode(true));applyToShadows(f[i].contentWindow.document);}catch(e){console.log(e)}}applyToShadows(d);}})();\">Text Spacing</a> til bokmerkeraden i nettleseren.</li>\n<li>Bruk verktøyet for å teste testsiden.</li></ul>\n<p>Sjekk at alt innhold og funksjonalitet er tilgjengelig i visning med justert tekstavstand. Eksempel på brudd er at tekst overlapper annet innhold eller avkortes.</p>\n<p><strong>Merk: </strong>Du kan sammenligne nettsiden i vanlig visning og visning med justert tekstavstand for å gjøre vurdering lettere.</p>\n<p><strong>Merk: </strong>Det er ok om vi får tilgang til innhold/funksjonalitet ved å måtte scrolle vannrett og/eller loddrett. Merk at en og same side kan se ulik ut i ordinær og justert visning, f.eks. kan meny i justert visning være en knapp, mens du i ordinær visning får se hele menyen. Det er ikke ok at innhold blir dekket over av annet innhold i justert visning, eller at innhold forsvinner fra sida.</p>",
+			"spm": "Får du tilgang til alt innhold eller funksjonalitet i visning med justert tekstavstand?",
+			"ht": "<p>Slik kan du justere tekstavstand på testsiden:</p>\n<ul>\n<li>Sett zoomnivået på nettleseren til 100 %.</li>\n<li>Dra verktøyet lenken <a>Text Spacing</a> til bokmerkeraden i nettleseren.</li>\n<li>Bruk verktøyet for å teste testsiden.</li>\n</ul>\n<p>Sjekk at alt innhold eller funksjonalitet er tilgjengelig i visning med justert tekstavstand. Eksempel på brudd er at tekst overlapper annet innhold eller avkortes.</p>\n<p><strong>Merk: </strong>Du kan sammenligne nettsiden i vanlig visning og visning med justert tekstavstand for å gjøre vurdering lettere.</p>\n<p><strong>Merk: </strong>Det er ok om vi får tilgang til innhold/funksjonalitet ved å måtte scrolle vannrett og/eller loddrett. Merk at en og same side kan se ulik ut i ordinær og justert visning, f.eks. kan meny i justert visning være en knapp, mens du i ordinær visning får se hele menyen. Det er ikke ok at innhold blir dekket over av annet innhold i justert visning, eller at innhold forsvinner fra sida.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"C35",
@@ -81,7 +101,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Tekstegenskaper kan justeres, uten tap av innhold og funksjonalitet."
+					"utfall": "Tekstegenskaper kan justeres, uten tap av innhold eller funksjonalitet."
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -91,8 +111,8 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Skriv antall element(er) og funksjonalitet du ikke fikk tilgang til",
-			"ht": "<p>Her skriver du antall element(er) og funksjonalitet du ikke fikk tilgang til på testsiden.</p>",
+			"spm": "Skriv antall element(er) eller funksjonalitet du ikke fikk tilgang til",
+			"ht": "<p>Her skriver du antall element(er) eller funksjonalitet du ikke fikk tilgang til på testsiden.</p>",
 			"type": "tekst",
 			"kilde": [],
 			"label": "Antall element(er) og funksjonalitet:",
