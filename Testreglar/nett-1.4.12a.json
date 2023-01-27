@@ -30,7 +30,7 @@
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Hva side tester du på?",
+			"spm": "Hvilken side tester du på?",
 			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
 			"kilde": [],
