@@ -160,7 +160,7 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Blir andre andre stilegenskaper, enn de som inngår i kravet, endret som følge av justert tekstavstand?",
+			"spm": "Blir andre stilegenskaper, enn de som inngår i kravet, endret som følge av justert tekstavstand?",
 			"ht": "<p>Sjekk at andre stilegenskaper ikke blir endret som følge av justert tekstavstand.</p>\n<p>Andre stilegenskaper er for eksempel endret skrifttype, farge, størrelse, plassering, avstand rundt elements innhold (padding), volum, prosodi i den syntetiske talen av innholdselementet som de er gjengitt (for eksempel på skjerm, via høyttaler, via leselist) av brukeragenter.</p>",
 			"type": "jaNei",
 			"kilde": [],
