@@ -1,0 +1,292 @@
+{
+	"id": "1.2.1a",
+	"type": "web",
+	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>Førehandsinnspelt lyd, som ikkje er eit mediealternativ til tekst eller video, har alternativ i form av tekst.</li>\r\n<li>Tekstalternativet er:<br />Visuelt plassert nær lydklippet, eller kan nåast via ein mekanisme (lenke, knapp eller liknande) nær lydklippet.</li>\r\n</ul>\r\n<p>I begge tilfelle er eit krav at tekstalternativet: Er koda som tekst og formidlar det same hovudinnhaldet som lydklippet, i same rekkefølge.</p>\r\n<p>Det er ikkje krav om eksakt attgjeving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		},
+		{
+			"title": "3.6"
+		},
+		{
+			"title": "3.7"
+		},
+		{
+			"title": "3.8"
+		},
+		{
+			"title": "3.9"
+		},
+		{
+			"title": "3.10"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi URL eller side-ID.",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettsida lydklipp?",
+			"ht": "<p>Aktuelle metodar kan vere:</p><ul><li>Sjå på sidene om det finst ein playknapp eller liknande. </li><li>Bruk internt søk på nettstaden.</li><li>Bruk Google (Du kan bruke \"site:urlnettstad søkeord\" for å berre søke på ein bestemt nettstad).</li></ul><p>Aktuelle søkeomgrep kan være: \"Podcast\"/\"Podkast\", \"Lydklipp\", \"Lyd*\", \"Lydfil\", \"opptak\", \"Hør her\", \"Høyr her\", \"Lytt\",\"mp3\"</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje lydklipp."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Skriv inn tittel på lydklippet",
+			"ht": "<p>Legg inn tittel på lydklippet eller stikkord om innhaldet, dersom tittel manglar.</p><p>Merk at du må registrere nok informasjon til at lydklippet kan identifiserast.</p>",
+			"type": "tekst",
+			"label": "Lydklipp:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er lydklippet førehandsinnspelt?",
+			"ht": "<p>Aktuelle metodar for å finne ut dette er:</p><ul><li>Prøv å starte lydklippet og sjå om avspelinga startar frå byrjinga av fila og om det finst informasjon om varigheiten på klippet.</li><li> Sjå etter informasjon om når klippet er publisert.</li><li>Sjå etter informasjon som tilseier at klippet er live/direkte. </li></ul><p>Dette kan for eksempel vere: Rødt felt med teksten \"live\" eller at det ikkje er mogeleg å spole i klippet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Lydklipp er direkte/live (ikkje førehandsinnspelt)."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er lydklippet eit mediealternativ til tekst eller mediealternativ til video uten lyd og tydeleg merka som det?",
+			"ht": "<p>Undersøk om det i tilknytning til lydklippet finst ein tekst som visuelt står fram som hovudformatet for formidling av informasjonen. </p><p>Indikasjonar på at lydklippet er eit mediealternativ til tekst kan vere:</p><ul><li>Ikon (for eksempel høgtalar, noteikon) som indikerer at lydklippet er eit alternativ til ein nærliggande tekst eller video utan lyd.</li><li>Lenke med lenketekst der det går fram at det er eit lydklipp (for eksempel \"lytt til teksten\", \"les opp teksten\").</li><li> Eit mediealternativ til tekst eller video utan lyd er tydeleg merka når det er presentert i direkte nærleik til ein tekst/video og det ikkje er tvil om at det er et alternativ til den aktuelle teksten/videoen.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Lydklipp er mediealternativ til tekst."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Finst det ein tekst visuelt plassert nær lydklippet/avspelaren som omtaler klippet?",
+			"ht": "<p>I dette steget skal du ikkje ta stilling til kvaliteten på teksten. Det er nok at teksten ligg nær klippet, den kan for eksempel ligge over eller under lydklippet.</p><p>Du skal ikkje måtte scrolle vekk frå lydklippet for å finne teksten. (Du kan scrolle på sida, men lydklippet skal fortsatt vere synleg i nettlesaren).</p><p>Merk at det er ok at du må scrolle for å lese gjennom teksten.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.7",
+					"delutfall": {
+						"nr": 0,
+						"fasit": "Nei",
+						"tekst": "Lydklipp manglar tekstalternativ nær lydklippet/avspelaren."
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Er tekstalternativet koda som tekst?",
+			"ht": "<p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilete av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Opne kodeverktøyet i nettlesaren.</li><li>Bruk \"select\" funksjonen i verktøyet og markere et område i tekstalternativet.</li><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G158",
+				"F30"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.7",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "Lydklipp har tekstalternativ som ikkje er koda som tekst.",
+						"fasit": "Nei"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Er informasjonen/innhaldet som blir formidla i lydklippet i samsvar med informasjon som blir formidla i teksten?  ",
+			"ht": "<p>Samanlikn tekstalternativet med innhaldet i lydklippet:</p><ul><li>Gå gjennom dei første minuttane av lydklippet.</li><li>Vurder om lydklipp og tekstalternativ formidlar det same hovudinnhaldet i lik rekkefølge.</li></ul><p><strong>MERK:</strong> Vi krev ikkje eksakt attgjevinng av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p><p>Dersom du allereie i starten av lydklippet avdekkar at det ikkje er samsvar mellom lydklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G158",
+				"F30",
+				"F67"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Lydklippet har tekstalternativ som kan nåast, er koda som tekst og formidlar same bodskap som lydklippet."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.7",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "Lydklipp har tekstalternativ som ikkje formidlar same bodskap som lydklippet.",
+						"fasit": "Nei"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Finst det ein mekanisme (lenke, knapp eller liknande) nær lydklippet som tilseier at du vert leia til eit tekstalternativ til lydklippet?",
+			"ht": "<p>Du skal ikkje måtte scrolle vekk frå videoklippet for å sjå at det finst ein mekanisme.</p><p>Merk at det er ok at du må scrolle for å lese gjennom tekstalternativet. (Du kan scrolle på sida, men videoklippet skal fortsatt vere synleg i nettlesaren).</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"nei": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "3.4",
+							"type": "lik",
+							"verdi": "Nei",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "Lydklipp manglar tekstalternativ."
+							}
+						},
+						"2": {
+							"sjekk": "3.4",
+							"type": "lik",
+							"verdi": "Ja",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "#delutfall(0)"
+							}
+						}
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Start tastaturnavigeringa frå klippet. Kor mange tab-steg treng du for å nå mekanismen (lenka/knappen eller liknande)?",
+			"ht": "<p>Merk at mekanismen (knappen/lenka eller liknande) kan anten ligge før eller etter i tab-rekkefølgja og at begge plasseringar er godkjende.</p> <p>Registrer ved hjelp av svaralternativa kor mange tabsteg du treng for å nå mekanismen som leiar til tekstalternativet. Stopp om du treng meir enn 10 tab-steg, ref. svaralternativa.</p>",
+			"type": "radio",
+			"svarArray": [
+				"1-5 tabsteg",
+				"6-10 tabsteg",
+				"Fleire enn 10 tabsteg",
+				"Når ikkje mekanisme med tastatur",
+				"Ikkje mogleg å verifisere"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Er tekstalternativet koda som tekst?",
+			"ht": "<p>Dette kan undersøkast på fleire måtar:</p> <p>Alternativ 1:</p> <ul> <li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilete av tekst.</li> </ul> <p>Alternativ 2:</p> <ul> <li>Opne kodeverktøyet i nettlesaren.</li> <li>Bruk \"select\" funksjonen i verktøyet og markere et område i tekstalternativet.</li> <li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li> </ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G158"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(0) Lydklipp har tekstalternativ via mekanisme som ikkje er koda som tekst."
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Er informasjonen/innhaldet som blir formidla i lydklippet i samsvar med informasjon som blir formidla i teksten?",
+			"ht": "<p>Samanlikn tekstalternativet med innhaldet i lydklippet:</p><ul><li>Gå gjennom dei første minuttane av lydklippet.</li><li>Vurder om lydklipp og tekstalternativ formidlar det same hovudinnhaldet i lik rekkefølge. </li></ul><p><strong>MERK:</strong> Vi krev ikkje eksakt attgjevinng av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p><p>Dersom du allereie i starten av lydklippet avdekkar at det ikkje er samsvar mellom lydklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G158",
+				"F30",
+				"F67"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Lydklippet har tekstalternativ som kan nåast, er koda som tekst og formidlar same bodskap som lydklippet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(0) Lydklipp har tekstalternativ via mekanisme som ikkje formidlar same bodskap som lydklippet."
+				}
+			}
+		}
+	]}

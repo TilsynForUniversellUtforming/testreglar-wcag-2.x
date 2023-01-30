@@ -1,0 +1,171 @@
+{
+	"id": "3.2.3a",
+	"type": "web",
+	"versjon": "1.0",
+	"spraak": "no",
+	"kravTilSamsvar": "<p>Blokker med navigasjonsmekanismar som blir gjentekne på fleire sider på nettstaden, opptrer i same relative rekkefølgje på alle sidene dei finst.</p>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.6"
+		},
+		{
+			"title": "3.7"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi URL eller side-ID.",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettsida navigasjonsmekanismar som blir gjenteke på fleire nettsider?",
+			"ht": "<p>Gjer ein visuell inspeksjon. Ikkje test med tastaturet.</p><p>For å gjere det lettare å teste, kan du opne startsida på ein skjerm for å samanlikne med andre nettsider på ein annan skjerm.</p><p>Bruk menyen, søk og andre formar for navigasjon på nettstaden for å opne fleire sider.</p><p>Du skal finne ut om blokker med fleire navigasjonselement blir gjenteke på fleire av sidene du opna/navigerte til.</p><p>Eksempel på blokker med fleire navigeringselement er:</p><ul><li>Topptekst med klikkbar logo, meny, søkefelt.</li><li>Botntekst med lenker for å navigere på nettstaden.</li><li>Meny </li></ul><p>Leserekkefølgje ved tastaturnavigering blir ivareteke i suksesskriterium 1.3.2 og 2.4.3.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje navigasjonsmekanismar som blir gjentekne på fleire nettsider."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv blokka med navigasjonselement som skal vurderast.",
+			"ht": "<p>Du skal registrere og legge til data for kvar blokk med navigasjonselement som blir gjenteke på fleire nettsider.</p><p>Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.</p>",
+			"type": "tekst",
+			"label": "Blokka med navigasjonselement:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Opne ei anna nettside på nettstaden, som har same blokk med navigasjonselement.",
+			"ht": "",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Skriv inn URL på ei slik form at vi kan nå aktuell nettside ved å klikke på lenka.",
+			"ht": "Oppgi URL for den andre nettsida der du identifiserte blokka med navigasjonselement.",
+			"type": "tekst",
+			"label": "URL:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Har elementa i blokka den same relative rekkefølgja?",
+			"ht": "<p>Gjer ein visuell inspeksjon. Ikkje test med tastaturet. </p><p>Merk at andre element kan settast inn, eller takast ut, utan at det endrar den relative rekkefølgja.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G61",
+				"F66"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Blokker med navigasjonselement som blir gjentekne på fleire sider, opptrer ikkje i same relative rekkefølge."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Opne ei tredje nettside på nettstaden, som har same blokk med navigasjonselement.",
+			"ht": "",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Skriv inn url på ei slik form at vi kan nå aktuell nettside ved å klikke på lenka.",
+			"ht": "Oppgi URL for den andre nettsida der du identifiserte blokka med navigasjonselement.",
+			"type": "tekst",
+			"label": "URL:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Har elementa i blokka den same relative rekkefølgja?",
+			"ht": "<p>Gjer ein visuell inspeksjon. Ikkje test med tastaturet. </p><p>Merk at andre element kan settast inn, eller takast ut, utan at det endrar den relative rekkefølgja.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G61",
+				"F66"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Blokker med navigasjonselement som blir gjentekne på fleire sider, opptrer i same relative rekkefølgje."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Blokker med navigasjonselement som blir gjentekne på fleire sider, opptrer ikkje i same relative rekkefølgje."
+				}
+			}
+		}
+	]
+}

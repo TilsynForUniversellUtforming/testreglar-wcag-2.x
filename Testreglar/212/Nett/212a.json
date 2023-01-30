@@ -1,0 +1,131 @@
+{
+	"id": "2.1.2a",
+	"type": "web",
+	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Det er mogleg å navigere med tastatur gjennom alt innhaldet på nettsida, utan å bli ståande fast i noko element.</p>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi URL eller side-ID.",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Finst det element det er mogleg å navigere til med tastaturet?",
+			"ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. For å betene innhaldet kan du også bruke enter-tasten, mellomromstasten og piltastane. For å rygge med tasttauret, bruk Shift+Tab.",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje innhald/funksjonalitet som er mogleg å nå/betene med tastatur."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Finst det tastaturfeller på nettsida?",
+			"ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Kontroller at du scroller siden helt ned og at du kommer tilbake til starten av nettsida. Hugs å felle ut menyar, opne modalvindauge, gå inn i alle plugins med for eksempel mediaspelarar, kommentarfelt og sosiale media for å avdekke eventuelle tastaturfeller i all funksjonalitet.",
+			"type": "jaNei",
+			"kilde": [
+				"G21"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Testside har ikkje tastaturfelle."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv elementet kor du fann tastaturfella.",
+			"ht": "",
+			"type": "tekst",
+			"label": "Element med tastaturfelle:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Kva type funksjonalitet er elementet en del av?",
+			"ht": "Velg frå alternativa under.",
+			"type": "radio",
+			"svarArray": [
+				"Skjema",
+				"Mediaspelar",
+				"Meny",
+				"Modalvindauge",
+				"Anna"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er det mogleg å navigere ut av tastaturfella med standardmåtar for tastaturnavigering?",
+			"ht": "Bruk for eksempel piltastane, Esc-tasten, tabulatortasten eller Shift+Tab for å navigere ut av tastaturfella.",
+			"type": "jaNei",
+			"kilde": [
+				"G21",
+				"F10"
+			],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Testside har tastaturfelle som det ikkje er mogeleg å navigere ut av."
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Testside har tastaturfelle som det er mogeleg å navigere ut av, med standard tastaturnavigasjon."
+				}
+			}
+		}
+	]
+}

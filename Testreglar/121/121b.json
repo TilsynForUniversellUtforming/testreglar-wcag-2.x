@@ -1,0 +1,430 @@
+{
+	"id": "1.2.1b",
+	"type": "web",
+	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<p>Førehandsinnspelt video utan lyd, som ikkje er eit alternativ til tekst eller lyd har alternativ i form av tekst eller lyd.</p>\r\n<p>Alternativ i form av tekst eller lyd er:</p>\r\n<ul>\r\n<li>Visuelt plassert nær videoklippet, eller kan nåast via ein mekanisme (lenke, knapp eller liknande) nær videoklippet.</li>\r\n<li>Formidlar det same hovudinnhaldet som videoklippet, i same rekkefølge.</li>\r\n</ul>\r\n<p>Alternativ i form av lyd skal i tillegg</p>\r\n<ul>\r\n<li>vere mogleg å spele av</li>\r\n</ul>\r\n<p>Alternativ i form av tekst skal i tillegg</p>\r\n<ul>\r\n<li>vere koda som tekst</li>\r\n</ul>\r\n<p>Det er ikkje krav om eksakt attgiving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		},
+		{
+			"title": "3.6"
+		},
+		{
+			"title": "3.7"
+		},
+		{
+			"title": "3.8"
+		},
+		{
+			"title": "3.9"
+		},
+		{
+			"title": "3.10"
+		},
+		{
+			"title": "3.11"
+		},
+		{
+			"title": "3.12"
+		},
+		{
+			"title": "3.13"
+		},
+		{
+			"title": "3.14"
+		},
+		{
+			"title": "3.15"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi URL eller side-ID.",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettstaden videoklipp?",
+			"ht": "<p>Aktuelle metodar kan vere:</p><ul><li>Sjå på sidene om det finst ein playknapp eller liknande. </li><li>Bruk internt søk på nettstaden.</li><li>Bruk Google (Du kan bruke \"site:urlnettstad søkeord\" for å berre søke på ein bestemt nettstad).</li></ul><p>Aktuelle søkeomgrep kan være: \"Video\", \"Animasjon\", \"YouTube\", \"Viemo\", \"opptak\", \"H264\", \"mpeg4\". Merk at søkeomgrepa over er best tilpassa for søk interent på ein netts</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje video."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Skriv inn tittel på videofila.",
+			"ht": "<p>Legg inn tittel på videofila eller stikkord om innhaldet, dersom tittel manglar.</p>",
+			"type": "tekst",
+			"label": "Lydklipp:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er videoen utan lyd?",
+			"ht": "<p>I denne testreglen skal du berre teste video uten lyd, video med lyd blir testa i 1.2.2a. Sett i gang videoen og høyr etter om det er lyd i videoen. Dersom videoen er lang, kan du ta stikkprøvar på ulike stader i videoen.</p><p><strong>MERK:</strong> Med lyd meinest alle former for lyd, også lyd som ikkje er meiningsbærande eller vesentleg for å formidle innhaldet i videoen. </p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Videoklipp med lyd."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er videoen førehandsinnspelt?",
+			"ht": "<p>Aktuelle metodar for å finne ut dette er:</p>\n<ul>\n<li>Prøv å starte videoklippet og sjå om avspelinga startar frå byrjinga av fila og om det finst informasjon om varigheiten på klippet.</li>\n<li>Sjå etter informasjon om når klippet er publisert.</li>\n<li>Sjå etter informasjon som tilseier at klippet er live/direkte. Dette kan for eksempel vere: Rødt felt med teksten \"live\" eller at det ikkje er mogleg å spole i klippet.</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Videoklipp er direkte/live (ikkje førehandsinnspelte)."
+				}
+			},
+			"kilde": []
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er lydklippet eit mediealternativ til tekst eller mediealternativ til video uten lyd og tydeleg merka som det?",
+			"ht": "<p>Undersøk om det i tilknytning til lydklippet finst ein tekst som visuelt står fram som hovudformatet for formidling av informasjonen. </p><p>Indikasjonar på at lydklippet er eit mediealternativ til tekst kan vere:</p><ul><li>Ikon (for eksempel høgtalar, noteikon) som indikerer at lydklippet er eit alternativ til ein nærliggande tekst eller video utan lyd.</li><li>Lenke med lenketekst der det går fram at det er eit lydklipp (for eksempel \"lytt til teksten\", \"les opp teksten\").</li><li> Eit mediealternativ til tekst eller video utan lyd er tydeleg merka når det er presentert i direkte nærleik til ein tekst/video og det ikkje er tvil om at det er et alternativ til den aktuelle teksten/videoen.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Videoklipp er mediealternativ til tekst/lyd"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Finst det ein tekst visuelt plassert nær videoklippet/avspelaren som omtaler klippet?",
+			"ht": "<p>I dette steget skal du ikkje ta stilling til kvaliteten på teksten. Det er nok at teksten ligg nær klippet, den kan for eksempel ligge over eller under videoklippet.</p><p>Du skal ikkje måtte scrolle vekk frå videoklippet for å finne teksten. (Du kan scrolle på sida, men videoklippet skal fortsatt vere synleg i nettlesaren).</p><p>Merk at det er ok at du må scrolle for å lese gjennom teksten.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.8",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "",
+						"fasit": "ikkjeForekomst"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Er tekstalternativet koda som tekst?",
+			"ht": "<p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Opne kodeverktøyet i nettlesaren.</li><li>Bruk \"select\" funksjonen i verktøyet og markere eit område i tekstalternativet.</li><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G159"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.8",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "<br> - tekstalternativ som ikkje er koda som tekst",
+						"fasit": "Nei"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Er informasjonen/innhaldet som blir formidla i videoen i samsvar med informasjon som blir formidla i teksten? ",
+			"ht": "<p>Samanlikn tekstalternativet med innhaldet i videoen:</p><ul><li>Gå gjennom dei første minuttane av videoen. </li><li>Vurder om video og tekstalternativ formidlar det same hovudinnhaldet i lik rekkefølge. </li></ul><p><strong>Merk:</strong> Vi krev ikkje eksakt attgjevinng av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p><p>Dersom du allereie i starten av videoen avdekkar at det ikkje er samsvar mellom video og tekstalternativ, kan du stoppe gjennomgangen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G159",
+				"F67",
+				"F30"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Videoklipp utan lyd, har tekstalternativ som er koda som tekst og formidlar same bodskap som videoklippet."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.8",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "<br> - tekstalternativ som ikkje formidlar same bodskap som videoklippet",
+						"fasit": "Nei"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Finst det ein mekanisme (lenke, knapp eller liknande) nær videoen som tilseier at du vert leia til eit tekstalternativ til videoen?",
+			"ht": "<p><p>Du skal ikkje måtte scrolle vekk frå videoklippet for å sjå at det finst ein mekanisme.</p><p>Merk at det er ok at du må scrolle for å lese gjennom tekstalternativet. (Du kan scrolle på sida, men videoklippet skal fortsatt vere synleg i nettlesaren).</p></p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.12",
+					"delutfall": {
+						"nr": 1,
+						"tekst": "",
+						"fasit": "ikkjeForekomst"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Kor mange tab-steg treng du for å nå mekanismen (lenka/knappen eller liknande) frå videoen?",
+			"ht": "<p>Merk at antall tab-steg berre blir nytta til kartlegging og ikkje inngår i vudering av samsvar/avvik og at mekanismen (knappen/lenka eller liknande) kan anten ligge før eller etter i tab-rekkefølgja og at begge plasseringar er godkjende.</p> <p>Registrer ved hjelp av svaralternativa kor mange tabsteg du treng for å nå mekanismen som leiar til tekstalternativet. Stopp om du treng meir enn 10 tab-steg, ref. svaralternativa.</p>",
+			"type": "radio",
+			"svarArray": [
+				"1-5 tabsteg",
+				"6-10 tabsteg",
+				"Fleire enn 10 tabsteg",
+				"Når ikkje mekanisme med tastatur",
+				"Ikkje mogleg å verifisere"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Er tekstalternativet koda som tekst?",
+			"ht": "<p>Dette kan undersøkast på fleire måtar:</p> <p>Alternativ 1:</p> <ul> <li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilde av tekst.</li> </ul> <p>Alternativ 2:</p> <ul> <li>Opne kodeverktøyet i nettlesaren.</li> <li>Bruk \"select\" funksjonen i verktøyet og markere eit område i tekstalternativet.</li> <li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li> </ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G158"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.12",
+					"delutfall": {
+						"nr": 1,
+						"tekst": "<br> - tekstalternativ via ein mekanisme som ikkje er koda som tekst",
+						"fasit": "Nei"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Er informasjonen/innhaldet som blir formidla i lydklippet i samsvar med informasjon som blir formidla i teksten?",
+			"ht": "<p>Samanlikn tekstalternativet med innhaldet i lydklippet:</p><ul><li>Gå gjennom dei første minuttane av lydklippet.</li><li>Vurder om lydklipp og tekstalternativ formidlar det same hovudinnhaldet i lik rekkefølge. </li></ul><p><strong>Merk:</strong> Vi krev ikkje eksakt attgjevinng av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p><p>Dersom du allereie i starten av lydklippet avdekkar at det ikkje er samsvar mellom lydklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G158",
+				"F30",
+				"F67"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Videoklipp utan lyd, har tekstalternativ som er koda som tekst og formidlar same bodskap som videoklippet"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.12",
+					"delutfall": {
+						"nr": 1,
+						"tekst": "<br> - tekstalternativ via ein mekanisme som ikkje formidlar same bodskap som videoklippet ",
+						"fasit": "Nei"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.12",
+			"spm": "Finst det ein mekanisme (lenke, knapp eller liknande) nær videoen som tilseier at du vert leia til eit mediealternativ (lydklipp/lydfil) til videoen?",
+			"ht": "<p><strong>Merk:</strong> Du skal ikkje teste lytt til teksten-funksjonalitet. Du skal teste lyd som refererer til video.</p><p>Eit lydklipp kan vere kjenneteikna ved </p><ul><li>eit høgtalarikon</li><li>ein playknapp</li><li>ei lenke med ein lenketekst som for eksempel \"lydklipp\", \"lydalternativ\"</li></ul><p>Du skal ikkje måtte scrolle vekk frå videoklippet for å sjå at det finst eit mediealternativ.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				},
+				"nei": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "3.5",
+							"type": "lik",
+							"verdi": "Nei",
+							"handling": {
+								"type": "regler",
+								"regler": {
+									"1": {
+										"sjekk": "3.8",
+										"type": "lik",
+										"verdi": "Nei",
+										"handling": {
+											"type": "avslutt",
+											"fasit": "Nei",
+											"utfall": "Videoklipp utan lyd, manglar både tekstalternativ og lydalternativ."
+										}
+									}
+								}
+							}
+						},
+						"2": {
+							"sjekk": "3.5",
+							"type": "lik",
+							"verdi": "Ja",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "Videoklipp utan lyd, har: #delutfall(0)#delutfall(1)"
+							}
+						},
+						"3": {
+							"sjekk": "3.8",
+							"type": "lik",
+							"verdi": "Ja",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "Videoklipp utan lyd, har: #delutfall(0)#delutfall(1)"
+							}
+						}
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.13",
+			"spm": "Får du til å spele av lydklippet?",
+			"ht": "Set i gang lydklippet og kontroller at det er mogleg å spele av.",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.14"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Videoklipp utan lyd, har: #delutfall(0)#delutfall(1) <br/>- lydalternativ som ikkje er mogleg å spele av"
+				}
+			}
+		},
+		{
+			"stegnr": "3.14",
+			"spm": "Start tastaturnavigeringa frå klippet. Kor mange tab-steg treng du for å nå mekanismen (lenka/knappen eller liknande)?",
+			"ht": "<p>Merk at antall tab-steg berre blir nytta til kartlegging og ikkje inngår i vudering av samsvar/avvik) og at mekanismen (knappen/lenka eller liknande) kan anten ligge før eller etter i tab-rekkefølgja og at begge plasseringar er godkjende.</p><p>Registrer ved hjelp av svaralternativa kor mange tabsteg du treng for å nå mekanismen som leiar til tekstalternativet. Stopp om du treng meir enn 10 tab-steg, ref. svaralternativa. </p>",
+			"type": "radio",
+			"svarArray": [
+				"1-5 tabsteg",
+				"6-10 tabsteg",
+				"Fleire enn 10 tabsteg",
+				"Når ikkje mekanisme med tastatur",
+				"Ikkje mogleg å verifisere"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.15"
+				}
+			}
+		},
+		{
+			"stegnr": "3.15",
+			"spm": "Er informasjonen/innhaldet som blir formidla i videoen i samsvar med informasjon som blir formidla i lydklippet? ",
+			"ht": "<p>Samanlikn lydklippet med innhaldet i videoen:</p><ul><li>Gå gjennom for eksempel dei første 5 minuttane av videoen. </li><li>Vurder om video og lydfil formidlar det same hovudinnhaldet i lik rekkefølge. </li></ul><p><strong>Merk:</strong> Vi krev ikkje eksakt attgjeving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p><p>Dersom du allereie i starten av videoen avdekkar at det ikkje er samsvar mellom video og lydfil, kan du stoppe gjennomgangen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G166"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Videoklipp utan lyd, har lydalternativ som let seg spele av og formidlar same bodskap som videoklippet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Videoklipp utan lyd har: #delutfall(0)#delutfall(1)<br/>- lydalternativ som ikkje formidlar same bodskap som videoklippet"
+				}
+			}
+		}
+	]}
