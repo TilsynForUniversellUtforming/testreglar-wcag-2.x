@@ -1,0 +1,170 @@
+{
+	"id": "2.4.3a",
+	"type": "web",
+	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>For innhald som får fokus ved tastaturnavigasjon og må navigerast i ei bestemt rekkefølgje, er eit av følgande oppfylt:\r\n<ul>\r\n<li>tastaturrekkefølgje og visuell rekkefølgje er like, eller</li>\r\n<li>tastaturrekkefølgja og visuell rekkefølgje er ikkje like, men det er mogleg å forstå og bruke innhaldet</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "2.4"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi URL eller side-ID.",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Får du synleg fokusmarkering ved tastaturnavigering?",
+			"ht": "<p>Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet.</p><p>Følg nøye med på navigasjonen og informasjonen i eventuell statuslinje for å orientere deg på nettsida.</p><p>Vi er avhengige av synleg fokusmarkør for å kunne gjennomføre testen. Synleg fokusmarkering blir testa på suksesskriterium 2.4.7.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ikkje testbart",
+					"utfall": "Testside har ikkje tilstrekkeleg fokusmarkering ved tastaturnavigasjon."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Får du til å navigere på heile eller delar av nettsida med tastaturet?",
+			"ht": "<p>Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. For å betene innhaldet kan du også bruke enter-tasten, mellomromstasten og piltastane. For å rygge med tastaturet, bruk Shift+Tab.</p><p>Det kan hende at du eventuelt må felle ut menyar og opne modalvindauge for å teste alt innhald på nettsida.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje innhald/funksjonalitet som er mogleg å nå/betene med tastatur."
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Er tastaturrekkefølgja på nettsida den same som den visuelle rekkefølgja på innhaldet?",
+			"ht": "<p>Trykk sakte på tab-tasten for å navigere med tastaturet. Naviger frå starten av nettsida. Navigasjonen skal gå gjennom kvar enkelt blokk av innhald før den fortsetter vidare til neste blokk.</p><p>Det kan hende at du eventuelt må felle ut menyar og skjemafelt, og opne modalvindauge for å teste alt innhald på nettsida.</p><p>Merk: Ved opning av modalvindauge held navigasjonen  seg inne i vindauget. Etter lukking fortset navigeringa på elementet som opna modalvinduet, eller elementet som ligger direkte etterpå.</p><ul><li>Du skal berre teste innhald det er mogleg å nå med tastaturet.</li><li>Tastaturrekkefølgje er den rekkefølgja innhaldet får fokus i ved tastaturnavigering.</li><li>For å betene innhaldet kan du også bruke enter-tasten, mellomromstasten og piltastane. For å rygge med tastaturet, bruk Shift+Tab.</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"C27"
+			],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Testside har tastaturrekkefølgje som er identisk med visuell rekkefølgje på innhaldet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv innhaldet kor tastaturrekkefølgja er ulik.",
+			"ht": "Dersom det er fleire skal du skal registrere og legge til data for kvar enkelt observasjon. Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.",
+			"type": "tekst",
+			"label": "Element:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Kva type innhald er det ein del av?",
+			"ht": "Vel frå alternativa under.",
+			"type": "radio",
+			"svarArray": [
+				"Skjema",
+				"Mediaspelar",
+				"Meny",
+				"Modalvindauge",
+				"Anna"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Må innhaldet vere i ei bestemt tastaturrekkefølgje for at du skal kunne forstå og bruke innhaldet?",
+			"ht": "<p>Meiningsinnhaldet skal ikkje vere endra, sjølv om rekkefølgja er ulik.</p><p>Eksempel der rekkefølgja påverker beteninga, er at fokusrekkefølgja navigerer gjennom alle skjemafelt før brukaren kjem til knappen for å sende inn.</p><p>Merk at det kan vere fleire rekkefølgjer som gir same mening.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje innhald som må navigerast i ei bestemt tastaturrekkefølgje for at det skal vere mogleg å forstå og bruke."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Kan du forstå og bruke innhaldet, sjølv om tastaturrekkefølgja ikkje er lik den visuelle rekkefølgja?",
+			"ht": "Tastaturrekkefølgja treng ikkje vere identisk med den visuelle rekkefølgja, så lenge meiningsinnhald og betening er ivareteke.",
+			"type": "jaNei",
+			"kilde": [
+				"G59"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Testside har tastaturrekkefølgje som er identisk med visuell rekkefølgje på innhaldet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Testside har innhald det ikkje er mogeleg å forstå/bruke, fordi tastaturrekkefølgja ikkje er lik den visuelle rekkefølgja."
+				}
+			}
+		}
+	]
+}

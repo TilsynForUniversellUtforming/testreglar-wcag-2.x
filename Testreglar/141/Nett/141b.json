@@ -1,0 +1,154 @@
+{
+	"id": "1.4.1b",
+	"type": "web",
+	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>Dersom farge er brukt som visuelt verkemiddel for å formidle informasjon eller skilje ut visuelle element i grafiske framstillingar, er også eit av følgande oppfylt:\r\n<ul>\r\n<li>Forklarande tekst eller andre visuelle verkemiddel som gir same informasjon som er formidla gjennom bruk av farge. Eksempel: mønster, form (for eksempel stjerne, diamant, firkant og liknande) eller direkte kopling mellom del av illustrasjon der farge er brukt og forklarande informasjon.</li>\r\n<li>Det finst ein mekanisme som aktiverer slik informasjon</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi URL eller side-ID",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettsida grafiske framstillingar av informasjon?",
+			"ht": "Registrer ja eller nei.",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje grafiske framstillingar."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Har nettsida grafiske framstillingar av informasjon der farge er brukt som visuelt verkemiddel for å formidle informasjon eller skille ut visuelle element i illustrasjonane?",
+			"ht": "Føresetnaden er at det finst fleire element med ulike fargar som skal skillast frå kvarandre. For eksempel ein graf med berre ein dataserie eller kor det berre er brukt ein farge for å vise verdiar, skal ikkje testast.Merk at illustrasjonar som er markerte med farge i kombinasjon med andre visuelle verkemiddel, inkludert forklarande tekst, også skal reknast med her.",
+			"type": "jaNei",
+			"kilde": [
+				"G111"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje grafiske framstillingar der farge er brukt til å formidle informasjon."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv illustrasjonen",
+			"ht": "Legg inn overskrift, plassering eller andre stikkord som er slik at illustrasjonen kan identifiserast.",
+			"type": "tekst",
+			"label": "Illustrasjon:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Gir forklarande tekst eller andre visuelle verkemiddel den same informasjonen som er formidla gjennom bruk av farge?  ",
+			"ht": "Merk  at det her skal gjerast kun visuell inspeksjon.Eksempel på visuelle verkemiddel i tillegg til fargemønsterform, som for eksempel stjerne, diamant, firkant og liknandedirekte kopling mellom del av illustrasjon der farge er brukt og forklarande informasjon ",
+			"type": "jaNei",
+			"kilde": [
+				"G14",
+				"G111",
+				"F13"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Grafisk framstilling har forklarande tekst eller andre visuelle verkemiddel, som formidlar same informasjon som er gitt gjennom bruk av farge."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Finst det ein mekanisme for å aktivere forklarande informasjon eller andre visuelle verkemiddel, i tillegg til farge?",
+			"ht": "Du skal ikkje måtte scrolle bort frå illustrasjonen.Merk at mekanismen kan vere ein knapp for å aktivere visuelle verkemiddel i tillegg til farge. Mouseover som indikerer at du får tilgang til ledetekst/forklaring er også ein slik mekanisme.",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Grafisk framstilling har ikkje forklarande tekst eller andre visuelle verkemiddel, som formidlar same informasjon som er gitt gjennom bruk av farge."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Gir mekanismen den same informasjonen som er formidla gjennom bruk av farge?",
+			"ht": "Aktiver mekanismen og kontroller at andre visuelle verkemiddel enn berre farge finst for å fomidle informasjon eller skille ut visuelle element i illustrasjonen.",
+			"type": "jaNei",
+			"kilde": [
+				"G14",
+				"F13"
+			],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Grafisk framstilling har ikkje forklarande tekst eller andre visuelle verkemiddel, som formidlar same informasjon som er gitt gjennom bruk av farge."
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Grafisk framstilling har forklarande tekst eller andre visuelle verkemiddel, som formidlar same informasjon som er gitt gjennom bruk av farge."
+				}
+			}
+		}
+	]
+}
