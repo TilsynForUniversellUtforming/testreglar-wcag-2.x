@@ -1,5 +1,5 @@
 {
-	"id": "Nett-1.4.12a ",
+	"id": "nett-1.4.12a ",
 	"type": "web",
 	"kravTilSamsvar": "<p><span lang=\"NO-BOK\">Det er flere m&aring;ter &aring; oppfylle kravet p&aring;:</span></p>\r\n<ul>\r\n<li>Tekst har eller kan settes til f&oslash;lgende fire tekstegenskaper samtidig, uten tap av innhold eller funksjonalitet:\r\n<ul>\r\n<li><span lang=\"NO-BOK\">Linjeh&oslash;yde (linjeavstand) minst 1,5 ganger skriftst&oslash;rrelsen</span></li>\r\n<li><span lang=\"NO-BOK\">Avstand etter avsnitt minst 2 ganger skriftst&oslash;rrelsen.</span></li>\r\n<li><span lang=\"NO-BOK\">Avstanden mellom bokstaver i blokker av tekst (sperring) minst 0,12 ganger skriftst&oslash;rrelsen.</span></li>\r\n<li><span lang=\"NO-BOK\">Avstanden mellom ord minst 0,16 ganger skriftst&oslash;rrelsen og</span></li>\r\n</ul>\r\n</li>\r\n<li>Andre stilegenskaper blir ikke endret som f&oslash;lge av justert tekstavstand.</li>\r\n</ul>",
 	"kolonner": [
