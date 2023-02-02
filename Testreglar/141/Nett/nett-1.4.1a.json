@@ -48,7 +48,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har nettsida lenker?",
-			"ht": "<p>Bruk verktøyet <a href=\"https://www.ssa.gov/accessibility/andi/help/install.html\" target=\"_blank\" rel=\"noopener\">ANDI bokmerkerad</a> til å identifisere lenker:</p>\n<ul>\n<li>Vel \"Links/buttons\" frå \"Select Module\", så ser du tal lenker på sida under overskrifta \"Links Found:\". </li>\n<li>Alle lenker er no markerte av verktøyet med blå stipla linje.</li>\n</ul>",
+			"ht": "<p>Du kan bruke verktøyet <a href=\"https://www.ssa.gov/accessibility/andi/help/install.html\" target=\"_blank\" rel=\"noopener\">ANDI bokmerkerad</a> til å identifisere lenker:</p>\n<ul>\n<li>Vel \"Links/buttons\" frå \"Select Module\", så ser du tal lenker på sida under overskrifta \"Links Found:\". </li>\n<li>Alle lenker er no markerte av verktøyet med blå stipla linje.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -64,7 +64,7 @@
 		},
 		{
 			"stegnr": "2.3",
-			"spm": "Har testsida lenker i løpande tekst?",
+			"spm": "Har nettsida lenker i løpande tekst?",
 			"ht": "<p>Lenker i løpande tekst, er lenker som visuelt og kontekstuelt, er knytt til ikkje-lenka løpande tekst, plassert før eller etter  den aktuelle lenka. Merk at dette også gjeld lenka overskrifter.</p>\n<p><strong>Vi skal ikkje skal teste følgjande:</strong></p>\n<ul>\n<li>lenker i meny</li>\n<li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka løpande tekst.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
@@ -82,7 +82,7 @@
 		{
 			"stegnr": "2.4",
 			"spm": "Har ei eller fleire av lenkene du identifiserte i forrige steg, identisk farge som løpande tekst på testsida?",
-			"ht": "<p>Slå av verktøyet ANDI bokmerkerad.</p>\n<p>Gjer ein visuell inspeksjon av lenkene.</p>\n<p>Om du er usikker på om fargen er identisk, så kan du sjekke fargen på lenketekst og løpande tekst under CSS-egenskap \"color:\" i koden.</p>\n<p>Merk at lenker som er markerte med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
+			"ht": "<p>Slå av verktøyet ANDI bokmerkerad.</p>\n<p>Gjer ein visuell inspeksjon av lenkene.</p>\n<p>Merk at lenker som er markerte med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -136,7 +136,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Mål og registrer kontrast mellom farge på tekst i lenka og farge på omkringliggande ikkje-lenka løpande tekst.",
-			"ht": "<p>Kontrast skal registerast med desimaltall (For eksempel 4.5).</p>\n<p>Tips:</p>\n<ul>\n<li>Du kan zoome eller forstørre testsida for å gjere det enklare å måle kontrasten på den identifiserte lenka og farge på omkringliggande ikkje-lenka løpande tekst. Bruk verktøyet <a href=\"https://www.tpgi.com/color-contrast-checker/\" target=\"_blank\" rel=\"noopener\">Colour Contrast Analyser</a>.</li>\n<li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er represenativ for hovudfargen på teksten.</li>\n<li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li>\n<li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li>\n</ul>",
+			"ht": "<p>Kontrast skal registrerast med desimaltal (For eksempel 4.5).</p>\n<p>Tips:</p>\n<ul>\n<li>Du kan zoome eller forstørre testsida for å gjere det enklare å måle kontrasten på den identifiserte lenka og farge på omkringliggande ikkje-lenka løpande tekst. Bruk verktøyet <a href=\"https://www.tpgi.com/color-contrast-checker/\" target=\"_blank\" rel=\"noopener\">Colour Contrast Analyser</a>.</li>\n<li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li>\n<li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li>\n<li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li>\n</ul>",
 			"type": "tekst",
 			"kilde": [
 				"G183"
