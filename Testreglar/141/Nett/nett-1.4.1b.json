@@ -92,7 +92,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Gir forklarande tekst eller andre visuelle verkemiddel den same informasjonen som er formidla gjennom bruk av farge?",
-			"ht": "<p>Merk at det her skal det kun gjerast visuell inspeksjon. Eksempel på visuelle verkemiddel i tillegg til farge er</p>\n<ul>\n<li>mønster/form, som for eksempel stjerne, diamant, firkant og liknande</li>\n<li>direkte kopling mellom del av illustrasjon der farge er brukt og forklarande tekst.</li>\n</ul>",
+			"ht": "<p>Merk at her skal det berre gjerast visuell inspeksjon. Eksempel på visuelle verkemiddel i tillegg til farge er</p>\n<ul>\n<li>mønster/form, som for eksempel stjerne, diamant, firkant og liknande</li>\n<li>direkte kopling mellom del av illustrasjon der farge er brukt og forklarande tekst.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"F13",
@@ -132,7 +132,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Gir mekanismen den same informasjonen som er formidla gjennom bruk av farge?",
-			"ht": "Aktiver mekanismen og kontroller at andre visuelle verkemiddel enn berre farge finst for å fomidle informasjon eller skille ut visuelle element i illustrasjonen.",
+			"ht": "Aktiver mekanismen og kontroller at andre visuelle verkemiddel enn berre farge finst for å formidle informasjon eller skilje ut visuelle element i illustrasjonen.",
 			"type": "jaNei",
 			"kilde": [
 				"G14",
