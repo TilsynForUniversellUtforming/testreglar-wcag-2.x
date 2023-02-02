@@ -45,7 +45,7 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Sjekk om innholdet på nettsiden er kodet i et oppmerkingsspråk?",
+			"spm": "Er innholdet på nettsiden kodet i et oppmerkingsspråk?",
 			"ht": "<p>Oppmerkingsspråk eller markeringsspråk er et språk eller regelsett for å kode formatering av tekst og dokumenter. Et markeringsspråk består av tekstelementer, kalt tagger, som legges inn i tekstfiler for å angi formatering. Disse tekstelementene vises ikke sammen med teksten, men styrer hvordan teksten skal se ut og presenteres.</p>\n<p>Eksempler på oppmerkingsspråk er HTML og XML. </p>",
 			"type": "jaNei",
 			"kilde": [],
@@ -97,7 +97,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Beskriv elementet du tester.",
-			"ht": "<p>Elementet med tekst kan for eksempel være overskrifter, løpende tekst, lenker, tekst i illustrasjoner og diagrammer (unntatt bilde av tekst).</p>\n<p>Formålet er at en skal kunne finne igjen elementet på siden som ligger til grunn for tekstavstand. For eksempel plassering, kjennetegn, hva som i står i teksten (trenger ikke gi igjen hele).</p>\n<p><strong>Merk: </strong>Dersom finnes det flere elementer eller funksjonalitet som skal vurderes, registrerer du hvert element for seg.</p>",
+			"ht": "<p>Elementet med tekst kan for eksempel være overskrifter, løpende tekst, lenker, tekst i illustrasjoner og diagrammer (unntatt bilde av tekst).</p>\n<p>Formålet er at en skal kunne finne igjen elementet på siden som ligger til grunn for tekstavstand. For eksempel plassering, kjennetegn, hva som i står i teksten (trenger ikke gjengi hele).</p>\n<p><strong>Merk: </strong>Dersom finnes det flere elementer eller funksjonalitet som skal vurderes, registrerer du hvert element for seg.</p>",
 			"type": "tekst",
 			"kilde": [],
 			"label": "Beskrivelse av element:",
