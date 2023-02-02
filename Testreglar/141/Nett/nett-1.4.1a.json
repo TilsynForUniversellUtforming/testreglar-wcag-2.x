@@ -81,7 +81,7 @@
 		},
 		{
 			"stegnr": "2.4",
-			"spm": "Har ei eller fleire av lenkene du identifiserte i forrige steg, identisk farge som løpande tekst på testsida?",
+			"spm": "Har alle lenkene du identifiserte i forrige steg, identisk farge som løpande tekst på testsida?",
 			"ht": "<p>Slå av verktøyet ANDI bokmerkerad.</p>\n<p>Gjer ein visuell inspeksjon av lenkene.</p>\n<p>Merk at lenker som er markerte med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
 			"type": "jaNei",
 			"ruting": {
