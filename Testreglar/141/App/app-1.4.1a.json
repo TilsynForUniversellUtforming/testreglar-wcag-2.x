@@ -59,7 +59,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Har appsida lenker i løpande tekst?",
-			"ht": "<p>Lenker i løpande tekst, er lenker som visuelt og kontekstuelt, er knytt til ikkje-lenka løpande tekst, plassert før eller etter  den aktuelle lenka. Merk at dette også gjeld lenka overskrifter.</p>\n<p><strong>Vi skal ikkje skal teste følgjande:</strong></p>\n<ul>\n<li>lenker i meny</li>\n<li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka løpande tekst.</li>\n</ul>",
+			"ht": "<p>Lenker i løpande tekst, er lenker som visuelt og kontekstuelt, er knytt til ikkje-lenka løpande tekst, plassert før eller etter  den aktuelle lenka. Merk at dette også gjeld lenka overskrifter.</p>\n<p><strong>Vi skal ikkje teste følgjande:</strong></p>\n<ul>\n<li>lenker i meny</li>\n<li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka løpande tekst.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -76,7 +76,7 @@
 		{
 			"stegnr": "2.4",
 			"spm": "Har ei eller fleire av lenkene du identifiserte i forrige steg, identisk farge som løpande tekst på appsida?",
-			"ht": "<p>Gjer ein visuell inspeksjon av lenkene.</p>\n<p>Merk at lenker som er markerte med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
+			"ht": "<p>Gjer ein visuell inspeksjon av lenkene.</p>\n<p>Merk at lenker som er markert med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
