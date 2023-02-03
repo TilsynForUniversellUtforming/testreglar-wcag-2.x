@@ -1,0 +1,171 @@
+{
+	"id": "app-1.4.1a",
+	"type": "app",
+	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Kravet kan oppfylles p&aring; flere m&aring;ter.</p>\r\n<ul>\r\n<li>\r\n<p>Lenker i l&oslash;pende tekst oppfyller et av alternativer under:</p>\r\n<ul>\r\n<li>\r\n<p>Lenker markerte med farge, skiller seg ut fra n&aelig;rliggende ikke-lenket tekst med mer enn bare farge, eksempel er skrifttype, skriftst&oslash;rrelse, understreking, utheva skrift, ramme eller ikon eller</p>\r\n</li>\r\n<li><span style=\"font-size: 11.0pt; line-height: 107%; font-family: 'Arial',sans-serif; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: NO-BOK; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\">Lenker markerte med bare farge har kontrast p&aring; minst 3:1, mot n&aelig;rliggende ikke-lenket tekst </span></li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "2.4"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva appside testar du på?",
+			"ht": "<p>Oppgi appside-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			},
+			"kilde": []
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsida lenker?",
+			"ht": "<p>Gjer ein visuell inspeksjon.</p>\n<p>Sjå etter innhald som har annan farge enn hovudfargen på teksten på appsida.</p>\n<p>Bruk berøringsskjerm eller eksternt tastatur til å sjekke om valt innhald er klikkbart.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje lenker."
+				}
+			},
+			"kilde": []
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Har appsida lenker i løpande tekst?",
+			"ht": "<p>Lenker i løpande tekst, er lenker som visuelt og kontekstuelt, er knytt til ikkje-lenka løpande tekst, plassert før eller etter  den aktuelle lenka. Merk at dette også gjeld lenka overskrifter.</p>\n<p><strong>Vi skal ikkje skal teste følgjande:</strong></p>\n<ul>\n<li>lenker i meny</li>\n<li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka løpande tekst.</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje lenker i løpande tekst."
+				}
+			},
+			"kilde": []
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Har ei eller fleire av lenkene du identifiserte i forrige steg, identisk farge som løpande tekst på appsida?",
+			"ht": "<p>Gjer ein visuell inspeksjon av lenkene.</p>\n<p>Merk at lenker som er markerte med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har berre lenker med samme farge som ikkje-lenka løpande tekst."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			},
+			"kilde": []
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv den lenka du testar",
+			"ht": "<p>Merk at du ikkje skal teste alle lenkene på testsida. Du skal berre teste dei du har identifisert som aktuelle testobjekt etter visuell inspeksjon. Dette gjeld lenker som ligg i løpande tekst og som er merka med farge.</p>\n<p>Legg inn lenketekst, plassering eller andre stikkord, slik at lenka kan identifiserast.</p>\n<p> </p>",
+			"type": "tekst",
+			"label": "Lenke:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"kilde": []
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Skil lenka seg visuelt frå ikkje-lenka løpande tekst med andre verkemiddel enn berre farge?",
+			"ht": "<p>Føremålet er å identifisere lenker, som skil seg frå ikkje-lenka løpande tekst, med meir enn berre med farge. Dei kan for eksempel vere markerte slik</p>\n<ul>\n<li>endra skrifttype- eller gruppe</li>\n<li>endra skriftstørrelse</li>\n<li>understreking</li>\n<li>utheva/feit/kursiv skrift</li>\n<li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka</li>\n<li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst</li>\n</ul>\n<p><strong>Merk:</strong> Du skal teste all tekst som ligg visuelt og kontekstuelt knytt til lenka. Teksten kan vere plassert før eller etter lenka.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F73",
+				"G182"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Lenka skil seg visuelt frå ikkje-lenka løpande tekst med meir enn berre farge."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Mål og registrer kontrast mellom farge på tekst i lenka og farge på omkringliggande ikkje-lenka løpande tekst.",
+			"ht": "<p>Kontrast skal registrerast med desimaltal (For eksempel 4.5).</p>\n<p>Tips:</p>\n<ul>\n<li>Ta skjermbilde som innheld elementet du testar.</li>\n<li>Skjermbildet må overførast til PC for å kunne ta i bruk verktøy for kontrastmåling. Vurder om det same skjermbildet kan brukast til å verifisere fleire testelement.</li>\n<li>Bruk verktøyet <a href=\"https://www.tpgi.com/color-contrast-checker/\" target=\"_blank\" rel=\"noopener\">Colour Contrast Analyser</a>.</li>\n<li>Du kan zoome eller forstørre skjermbildet av testsida for å gjere det enklare å måle kontrasten på den identifiserte lenka og farge på omkringliggande ikkje-lenka løpande tekst.</li>\n<li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li>\n<li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li>\n<li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li>\n</ul>",
+			"type": "tekst",
+			"kilde": [
+				"G183"
+			],
+			"label": "Målt kontrast:",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "3.3",
+							"type": "mellom",
+							"verdi": 0,
+							"verdi2": 2.94,
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "Det er berre farge som skil lenker visuelt frå ikkje-lenka løpande tekst."
+							}
+						},
+						"2": {
+							"sjekk": "3.3",
+							"type": "mellom",
+							"verdi": 2.95,
+							"verdi2": 200,
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Lenker skil seg visuelt frå ikkje-lenka løpande tekst med meir enn berre farge."
+							}
+						}
+					}
+				}
+			}
+		}
+	]
+}
