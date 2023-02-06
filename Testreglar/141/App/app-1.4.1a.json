@@ -13,10 +13,10 @@
 			"title": "2.3"
 		},
 		{
-			"title": "2.4"
+			"title": "3.2"
 		},
 		{
-			"title": "3.2"
+			"title": "3.3"
 		},
 		{
 			"title": "3.3"
@@ -59,33 +59,16 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Har appsida lenker i løpande tekst?",
-			"ht": "<p>Lenker i løpande tekst, er lenker som visuelt og kontekstuelt, er knytt til ikkje-lenka løpande tekst, plassert før eller etter  den aktuelle lenka. Merk at dette også gjeld lenka overskrifter.</p>\n<p><strong>Vi skal ikkje teste følgjande:</strong></p>\n<ul>\n<li>lenker i meny</li>\n<li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka løpande tekst.</li>\n</ul>",
+			"ht": "<p>Lenker i løpande tekst, er lenker som visuelt og kontekstuelt, er knytt til ikkje-lenka løpande tekst, plassert før eller etter  den aktuelle lenka. Merk at dette også gjeld lenka overskrifter.</p>\n<p><strong>Vi skal ikkje skal teste følgjande:</strong></p>\n<ul>\n<li>lenker i meny</li>\n<li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka løpande tekst.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "2.4"
+					"steg": "3.1"
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
 					"utfall": "Testside har ikkje lenker i løpande tekst."
-				}
-			},
-			"kilde": []
-		},
-		{
-			"stegnr": "2.4",
-			"spm": "Har ei eller fleire av lenkene du identifiserte i forrige steg, identisk farge som løpande tekst på appsida?",
-			"ht": "<p>Gjer ein visuell inspeksjon av lenkene.</p>\n<p>Merk at lenker som er markert med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "ikkjeForekomst",
-					"utfall": "Testside har berre lenker med samme farge som ikkje-lenka løpande tekst."
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.1"
 				}
 			},
 			"kilde": []
@@ -108,6 +91,23 @@
 		},
 		{
 			"stegnr": "3.2",
+			"spm": "Har lenka du identifiserte i forrige steg, identisk farge som løpande tekst på appsida?",
+			"ht": "<p>Gjer ein visuell inspeksjon av lenkene.</p>\n<p>Merk at lenker som er markerte med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har berre lenker med samme farge som ikkje-lenka løpande tekst."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			},
+			"kilde": []
+		},
+		{
+			"stegnr": "3.3",
 			"spm": "Skil lenka seg visuelt frå ikkje-lenka løpande tekst med andre verkemiddel enn berre farge?",
 			"ht": "<p>Føremålet er å identifisere lenker, som skil seg frå ikkje-lenka løpande tekst, med meir enn berre med farge. Dei kan for eksempel vere markerte slik</p>\n<ul>\n<li>endra skrifttype- eller gruppe</li>\n<li>endra skriftstørrelse</li>\n<li>understreking</li>\n<li>utheva/feit/kursiv skrift</li>\n<li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka</li>\n<li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst</li>\n</ul>\n<p><strong>Merk:</strong> Du skal teste all tekst som ligg visuelt og kontekstuelt knytt til lenka. Teksten kan vere plassert før eller etter lenka.</p>",
 			"type": "jaNei",
@@ -123,7 +123,7 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.3"
+					"steg": "3.4"
 				}
 			}
 		},
