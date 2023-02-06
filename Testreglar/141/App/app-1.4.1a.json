@@ -92,12 +92,12 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Har lenka du identifiserte i forrige steg, identisk farge som løpande tekst på appsida?",
-			"ht": "<p>Gjer ein visuell inspeksjon av lenkene.</p>\n<p>Merk at lenker som er markerte med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
+			"ht": "<p>Gjer ein visuell inspeksjon av lenka.</p>\n<p>Merk at lenke som er markert med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testside har berre lenker med samme farge som ikkje-lenka løpande tekst."
+					"utfall": "Lenka har samme farge som ikkje-lenka løpande tekst."
 				},
 				"nei": {
 					"type": "gaaTil",
