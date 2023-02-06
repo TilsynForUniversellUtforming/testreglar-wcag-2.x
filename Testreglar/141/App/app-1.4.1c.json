@@ -13,7 +13,7 @@
 			"title": "2.3"
 		},
 		{
-			"title": "2.5"
+			"title": "2.4"
 		},
 		{
 			"title": "3.2"
@@ -73,21 +73,8 @@
 		},
 		{
 			"stegnr": "2.4",
-			"spm": "Gjennomgå skjemaet frå starten, inkludert å fylle ut, å sjå etter skjemaelement, instruksjonar eller feilmeldingar som er markert med farge.",
-			"ht": "<p>Eksempel på merking med farge kan vere</p>\n<ul>\n<li>obligatoriske felt som er markert med rødt</li>\n<li>feilmeldingar eller instruksjonar som er markert med rødt</li>\n<li>felt som er OK markert med grønt</li>\n</ul>\n<p>For å finne aktuelle element kan du gjere følgjande:</p>\n<ul>\n<li>visuell inspeksjon av skjemaet for å sjå etter felt eller tekst som er i ein annan farge</li>\n<li>still deg i første skjemafelt og naviger med tab-tast for å sjekke om noko blir merka med farge</li>\n<li>viss fleirsidig, prøv å bla til siste side utan å fylle ut</li>\n<li>prøv å sende inn eit tomt skjema</li>\n</ul>",
-			"type": "instruksjon",
-			"kilde": [],
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.5"
-				}
-			}
-		},
-		{
-			"stegnr": "2.5",
-			"spm": "Har skjemaet innhald som er merka med farge?",
-			"ht": "<p>Føresetnaden er at det finst skjemaelement, instruksjonar eller feilmeldingar som er markert med farge.</p>",
+			"spm": "Har skjemaet skjemaelement, instruksjonar eller feilmeldingar som er merka med farge?",
+			"ht": "<p>Gjennomgå skjemaet frå starten, inkludert å fylle ut, å sjå etter skjemaelement, instruksjonar eller feilmeldingar som er markert med farge. Eksempel på merking med farge kan vere</p>\n<ul>\n<li>obligatoriske felt som er markert med rødt</li>\n<li>feilmeldingar eller instruksjonar som er markert med rødt</li>\n<li>felt som er OK markert med grønt</li>\n</ul>\n<p>For å finne aktuelle element kan du gjere følgjande:</p>\n<ul>\n<li>visuell inspeksjon av skjemaet for å sjå etter felt eller tekst som er i ein annan farge</li>\n<li>still deg i første skjemafelt og naviger med tab-tast for å sjekke om noko blir merka med farge</li>\n<li>viss fleirsidig, prøv å bla til siste side utan å fylle ut</li>\n<li>prøv å sende inn eit tomt skjema</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
