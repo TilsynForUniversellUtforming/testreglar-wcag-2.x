@@ -10,9 +10,6 @@
 			"title": "2.2"
 		},
 		{
-			"title": "2.3"
-		},
-		{
 			"title": "3.2"
 		},
 		{
@@ -41,25 +38,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har appsida grafiske framstillingar av informasjon?",
-			"ht": "<p>Registrer ja eller nei.</p>\n<p>Eksempel på grafiske framstillingar er</p>\n<ul>\n<li>illustrasjon av ulike ruter for offentleg transport, for eksempel buss og tog</li>\n<li>stolpediagram over gjennomsnittlege bustadprisar for ulike kommuner i Vestland</li>\n<li>illustrasjon av kjemiske forbindelser, for eksempel H2O og</li>\n<li>flytdiagram som viser trinn i en prosess</li>\n</ul>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "2.3"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje grafiske framstillingar."
-				}
-			},
-			"kilde": []
-		},
-		{
-			"stegnr": "2.3",
 			"spm": "Har appsida grafiske framstillingar av informasjon, der farge er brukt som visuelt verkemiddel, for å formidle informasjon eller skille ut visuelle element i illustrasjonane?",
-			"ht": "<p>Føresetnaden er at det finst fleire element med ulike fargar, som skal skillast frå kvarandre. For eksempel skal ein graf med berre ein dataserie eller kor det berre er brukt ein farge for å vise verdiar, ikkje testast.</p>\n<p><strong>Merk </strong>at illustrasjonar som er markerte med farge i kombinasjon med andre visuelle verkemiddel, inkludert forklarande tekst, også skal reknast med her.</p>",
+			"ht": "<p>Føresetnaden er at det finst fleire element med ulike fargar, som skal skillast frå kvarandre. For eksempel skal ein graf med berre ein dataserie eller kor det berre er brukt ein farge for å vise verdiar, ikkje testast.</p>\n<p>Eksempel på grafiske framstillingar blant anna er</p>\n<ul>\n<li>illustrasjon av ulike ruter med fargar for offentleg transport, for eksempel buss og tog</li>\n<li>stolpediagram over gjennomsnittlege bustadprisar for ulike kommuner i Vestland</li>\n<li>illustrasjon av kjemiske forbindelser, for eksempel H2O og</li>\n<li>flytdiagram som viser trinn i en prosess</li>\n</ul>\n<p><strong>Merk </strong>at illustrasjonar som er markerte med farge i kombinasjon med andre visuelle verkemiddel, inkludert forklarande tekst, også skal reknast med her.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G111"
