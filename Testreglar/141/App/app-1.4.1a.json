@@ -28,7 +28,7 @@
 			"spm": "Kva appside testar du på?",
 			"ht": "<p>Oppgi appside-ID.</p>",
 			"type": "tekst",
-			"label": "URL/Side:",
+			"label": "Appide:",
 			"datalist": "Sideutvalg",
 			"oblig": true,
 			"ruting": {
