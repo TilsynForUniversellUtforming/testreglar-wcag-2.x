@@ -28,7 +28,7 @@
 			"spm": "Kva appside testar du på?",
 			"ht": "<p>Oppgi appside-ID.</p>",
 			"type": "tekst",
-			"label": "Appide:",
+			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
 			"oblig": true,
 			"ruting": {
@@ -42,7 +42,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har appsida lenker?",
-			"ht": "<p>Gjer ein visuell inspeksjon.</p>\n<p>Sjå etter innhald som har annan farge enn hovudfargen på teksten på appsida.</p>\n<p>Bruk berøringsskjerm eller eksternt tastatur til å sjekke om valt innhald er klikkbart.</p>",
+			"ht": "<p>Gjer ein visuell inspeksjon.</p>\n<p>Sjå etter innhald som har ein annan farge enn hovudfargen på teksten på appsida.</p>\n<p>Bruk berøringsskjerm eller eksternt tastatur til å sjekke om valt innhald er klikkbart.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -59,7 +59,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Har appsida lenker i løpande tekst?",
-			"ht": "<p>Lenker i løpande tekst, er lenker som visuelt og kontekstuelt, er knytt til ikkje-lenka løpande tekst, plassert før eller etter  den aktuelle lenka. Merk at dette også gjeld lenka overskrifter.</p>\n<p><strong>Vi skal ikkje skal teste følgjande:</strong></p>\n<ul>\n<li>lenker i meny</li>\n<li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka løpande tekst.</li>\n</ul>",
+			"ht": "<p>Lenker i løpande tekst, er lenker som visuelt og kontekstuelt, er knytt til ikkje-lenka løpande tekst, plassert før eller etter den aktuelle lenka. Merk at dette også gjeld lenka overskrifter.</p>\n<p><strong>Vi skal ikkje skal teste følgjande:</strong></p>\n<ul>\n<li>lenker i meny</li>\n<li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka løpande tekst.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -92,7 +92,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Har lenka du identifiserte i forrige steg, identisk farge som løpande tekst på appsida?",
-			"ht": "<p>Gjer ein visuell inspeksjon av lenka.</p>\n<p>Merk at lenke som er markert med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
+			"ht": "<p>Gjer ein visuell inspeksjon av lenka.</p>\n<p>Merk at lenker som er markert med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
