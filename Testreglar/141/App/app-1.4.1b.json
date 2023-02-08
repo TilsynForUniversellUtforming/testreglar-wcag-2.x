@@ -2,7 +2,7 @@
 	"id": "app-1.4.1b",
 	"type": "app",
 	"versjon": "1.0",
-	"kravTilSamsvar": "<p>Kravet kan oppfylles p&aring; flere m&aring;ter:</p>\r\n<ul>\r\n<li>N&aring;r farge er brukt for &aring; formidle informasjon eller skille ut visuelle element i grafiske framstillinger, er ett av f&oslash;lgende punkter oppfylt i tillegg\r\n<ul>\r\n<li>Forklarende tekst gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Andre visuelle virkemiddel gir samme informasjon som er formidlet med farge eller\r\n<ul>\r\n<li>Eksempel p&aring; andre visuelle virkemiddel er m&oslash;nster, form som stjerne, diamant, firkant eller lignende</li>\r\n</ul>\r\n</li>\r\n<li>Det er direkte kobling mellom del av illustrasjon der farge er brukt og forklarende informasjon, og det finnes en mekanisme som aktiverer informasjonen</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Kravet kan oppfylles p&aring; flere m&aring;ter:</p>\r\n<ul>\r\n<li>N&aring;r farge er brukt for &aring; formidle informasjon eller skille ut visuelle element i grafiske framstillinger, er ett av f&oslash;lgende punkter oppfylt i tillegg\r\n<ul>\r\n<li>Forklarende tekst gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Andre visuelle virkemiddel gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Det er direkte kobling mellom del av illustrasjon der farge er brukt og forklarende informasjon og</li>\r\n<li>Det finnes en mekanisme som aktiverer informasjonen</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -25,7 +25,7 @@
 			"spm": "Kva appside testar du på?",
 			"ht": "<p>Oppgi appside-ID.</p>",
 			"type": "tekst",
-			"label": "Appside:",
+			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
 			"oblig": true,
 			"ruting": {
@@ -39,7 +39,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har appsida grafiske framstillingar av informasjon, der farge er brukt som visuelt verkemiddel, for å formidle informasjon eller skille ut visuelle element i illustrasjonane?",
-			"ht": "<p>Føresetnaden er at det finst fleire element med ulike fargar, som skal skilast frå kvarandre. For eksempel skal ein graf med berre ein dataserie eller kor det berre er brukt ein farge for å vise verdiar, ikkje testast.</p>\n<p>Eksempel på grafiske framstillingar er blant anna</p>\n<ul>\n<li>illustrasjon av ulike ruter med fargar for offentleg transport, for eksempel buss og tog</li>\n<li>stolpediagram over gjennomsnittlege bustadprisar for ulike kommunar i Vestland</li>\n<li>illustrasjon av kjemiske forbindelsar, for eksempel H2O og</li>\n<li>flytdiagram som viser trinn i ein prosess</li>\n</ul>\n<p><strong>Merk </strong>at illustrasjonar som er markerte med farge i kombinasjon med andre visuelle verkemiddel, inkludert forklarande tekst, også skal reknast med her.</p>",
+			"ht": "<p>Føresetnaden er at det finst fleire element med ulike fargar, som skal skillast frå kvarandre. For eksempel skal ein graf med berre ein dataserie eller kor det berre er brukt ein farge for å vise verdiar, ikkje testast.</p>\n<p><strong>Merk </strong>at illustrasjonar som er markerte med farge i kombinasjon med andre visuelle verkemiddel, inkludert forklarande tekst, også skal reknast med her.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G111"
