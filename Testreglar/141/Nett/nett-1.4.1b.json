@@ -37,7 +37,7 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har nettsida grafiske framstillingar av informasjon, der farge er brukt som visuelt verkemiddel, for å formidle informasjon eller skille ut visuelle element i illustrasjonane?",
+			"spm": "Har nettsida grafiske framstillingar av informasjon, der farge er brukt som visuelt verkemiddel, for å formidle informasjon eller skilje ut visuelle element i illustrasjonane?",
 			"ht": "<p>Føresetnaden er at det finst fleire element med ulike fargar, som skal skillast frå kvarandre. For eksempel skal ein graf med berre ein dataserie eller kor det berre er brukt ein farge for å vise verdiar, ikkje testast.</p>\n<p><strong>Merk </strong>at illustrasjonar som er markerte med farge i kombinasjon med andre visuelle verkemiddel, inkludert forklarande tekst, også skal reknast med her.</p>",
 			"type": "jaNei",
 			"kilde": [
@@ -57,7 +57,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Beskriv illustrasjonen",
-			"ht": "Legg inn overskrift, plassering eller andre stikkord som er slik at illustrasjonen kan identifiserast.",
+			"ht": "<p>Legg inn overskrift, plassering eller andre stikkord som er slik at illustrasjonen kan identifiserast.</p>\n<p><strong>Merk: </strong>Dersom sida har fleire illustasjonar må prosedyren repeterast.</p>",
 			"type": "tekst",
 			"label": "Illustrasjon:",
 			"multilinje": true,
@@ -67,7 +67,8 @@
 					"type": "gaaTil",
 					"steg": "3.2"
 				}
-			}
+			},
+			"kilde": []
 		},
 		{
 			"stegnr": "3.2",
