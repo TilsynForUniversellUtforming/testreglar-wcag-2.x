@@ -2,7 +2,7 @@
 	"id": "nett-1.4.1c",
 	"type": "web",
 	"versjon": "1.0",
-	"kravTilSamsvar": "<p>Der skjemaelement, instruksjoner eller feilmeldinger bruker farge for &aring;</p>\r\n<ul>\r\n<li>formidle informasjon</li>\r\n<li>vise en handling</li>\r\n<li>be om respons eller</li>\r\n<li>skille ut et visuelt element</li>\r\n</ul>\r\n<p>er det merket med mer enn bare fagre, og markeringen er visuell.&nbsp;</p>",
+	"kravTilSamsvar": "<p>Der skjemaelement, instruksjoner eller feilmeldinger bruker farge for å</p>\r\n<ul>\r\n<li>formidle informasjon</li>\r\n<li>vise en handling</li>\r\n<li>be om respons eller</li>\r\n<li>skille ut et visuelt element</li>\r\n</ul>\r\n<p>er det merket med mer enn bare fagre, og markeringen er visuell. </p>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -41,7 +41,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har nettstaden interaktive skjema/skjemaelement?",
-			"ht": "<p>Sjå over sida for å sjå om det inneheld element du kan trykke på eller fylle inn informasjon i. Dette vil for eksempel vere:</p>\n<ul>\n<li>Inputfelt (Felt for å fylle inn tekst, tall dato osv...)</li>\n<li>Knappar</li>\n<li>Avkryssingsboksar</li>\n</ul>\n<p><strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>\n<p>Registrer ja eller nei.</p>",
+			"ht": "<p>Sjå over sida for å sjå om det inneheld element du kan trykke på eller fylle inn informasjon i. Dette vil for eksempel vere:</p>\n<ul>\n<li>Inputfelt (Felt for å fylle inn tekst, tall dato osv...)</li>\n<li>Knappar</li>\n<li>Avkryssingsboksar</li>\n</ul>\n<p><strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
