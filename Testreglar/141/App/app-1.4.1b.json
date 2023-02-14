@@ -2,7 +2,7 @@
 	"id": "app-1.4.1b",
 	"type": "app",
 	"versjon": "1.0",
-	"kravTilSamsvar": "<p>Kravet kan oppfylles p&aring; flere m&aring;ter:</p>\r\n<ul>\r\n<li>N&aring;r farge er brukt for &aring; formidle informasjon eller skille ut visuelle element i grafiske framstillinger, er ett av f&oslash;lgende punkter oppfylt i tillegg\r\n<ul>\r\n<li>Forklarende tekst gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Andre visuelle virkemiddel gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Det er direkte kobling mellom del av illustrasjon der farge er brukt og forklarende informasjon og</li>\r\n<li>Det finnes en mekanisme som aktiverer informasjonen</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Kravet kan oppfylles på flere måter:</p>\r\n<ul>\r\n<li>Når farge er brukt for å formidle informasjon eller skille ut visuelle element i grafiske framstillinger, er ett av følgende punkter oppfylt i tillegg\r\n<ul>\r\n<li>Forklarende tekst gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Andre visuelle virkemiddel gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Det er direkte kobling mellom del av illustrasjon der farge er brukt og forklarende informasjon og</li>\r\n<li>Det finnes en mekanisme som aktiverer informasjonen</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -38,7 +38,7 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har appsida grafiske framstillingar av informasjon, der farge er brukt som visuelt verkemiddel, for å formidle informasjon eller skille ut visuelle element i illustrasjonane?",
+			"spm": "Har appsida grafiske framstillingar av informasjon, der farge er brukt som visuelt verkemiddel, for å formidle informasjon eller skilje ut visuelle element i illustrasjonane?",
 			"ht": "<p>Føresetnaden er at det finst fleire element med ulike fargar, som skal skillast frå kvarandre. For eksempel skal ein graf med berre ein dataserie eller kor det berre er brukt ein farge for å vise verdiar, ikkje testast.</p>\n<p><strong>Merk </strong>at illustrasjonar som er markerte med farge i kombinasjon med andre visuelle verkemiddel, inkludert forklarande tekst, også skal reknast med her.</p>",
 			"type": "jaNei",
 			"kilde": [
@@ -58,7 +58,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Beskriv illustrasjonen",
-			"ht": "<p>Legg inn overskrift, plassering eller andre stikkord som er slik at illustrasjonen kan identifiserast.</p>",
+			"ht": "<p>Legg inn overskrift, plassering eller andre stikkord som er slik at illustrasjonen kan identifiserast.</p>\n<p><strong>Merk: </strong>Dersom sida har fleire illustasjonar må prosedyren repeterast.</p>",
 			"type": "tekst",
 			"label": "Illustrasjon:",
 			"multilinje": true,
@@ -114,11 +114,11 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Gir mekanismen den same informasjonen som er formidla gjennom bruk av farge?",
-			"ht": "Aktiver mekanismen og kontroller at andre visuelle verkemiddel enn berre farge finst for å fomidle informasjon eller skille ut visuelle element i illustrasjonen.",
+			"ht": "<p>Aktiver mekanismen og kontroller at andre visuelle verkemiddel enn berre farge finst for å formidle informasjon eller skille ut visuelle element i illustrasjonen.</p>",
 			"type": "jaNei",
 			"kilde": [
-				"G14",
-				"F13"
+				"F13",
+				"G14"
 			],
 			"ruting": {
 				"nei": {
