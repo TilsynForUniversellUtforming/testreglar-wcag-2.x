@@ -1,0 +1,137 @@
+{
+	"id": "app-1.4.1b",
+	"type": "app",
+	"versjon": "1.0",
+	"kravTilSamsvar": "<p>Kravet kan oppfylles på flere måter:</p>\r\n<ul>\r\n<li>Når farge er brukt for å formidle informasjon eller skille ut visuelle element i grafiske framstillinger, er ett av følgende punkter oppfylt i tillegg\r\n<ul>\r\n<li>Forklarende tekst gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Andre visuelle virkemiddel gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Det er direkte kobling mellom del av illustrasjon der farge er brukt og forklarende informasjon og</li>\r\n<li>Det finnes en mekanisme som aktiverer informasjonen</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva appside testar du på?",
+			"ht": "<p>Oppgi appside-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			},
+			"kilde": []
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsida grafiske framstillingar av informasjon, der farge er brukt som visuelt verkemiddel, for å formidle informasjon eller skilje ut visuelle element i illustrasjonane?",
+			"ht": "<p>Føresetnaden er at det finst fleire element med ulike fargar, som skal skillast frå kvarandre. For eksempel skal ein graf med berre ein dataserie eller kor det berre er brukt ein farge for å vise verdiar, ikkje testast.</p>\n<p><strong>Merk </strong>at illustrasjonar som er markerte med farge i kombinasjon med andre visuelle verkemiddel, inkludert forklarande tekst, også skal reknast med her.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G111"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje grafiske framstillingar der farge er brukt til å formidle informasjon."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv illustrasjonen",
+			"ht": "<p>Legg inn overskrift, plassering eller andre stikkord som er slik at illustrasjonen kan identifiserast.</p>\n<p><strong>Merk: </strong>Dersom sida har fleire illustasjonar må prosedyren repeterast.</p>",
+			"type": "tekst",
+			"label": "Illustrasjon:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"kilde": []
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Gir forklarande tekst eller andre visuelle verkemiddel den same informasjonen som er formidla gjennom bruk av farge?",
+			"ht": "<p>Merk at det her skal det kun gjerast visuell inspeksjon. Eksempel på visuelle verkemiddel i tillegg til farge er</p>\n<ul>\n<li>mønster/form, som for eksempel stjerne, diamant, firkant og liknande</li>\n<li>direkte kopling mellom del av illustrasjon der farge er brukt og forklarande tekst.</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [
+				"F13",
+				"G14",
+				"G111"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Grafisk framstilling har forklarande tekst eller andre visuelle verkemiddel, som formidlar same informasjon som er gitt gjennom bruk av farge."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Finst det ein mekanisme for å aktivere forklarande informasjon eller andre visuelle verkemiddel, i tillegg til farge?",
+			"ht": "<p>Du skal ikkje måtte scrolle bort frå illustrasjonen.</p>\n<p>Merk at mekanismen kan vere ein knapp eller at du trykker på fargen for å aktivere det visuelle verkemiddelet som kjem i tillegg til farge.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Grafisk framstilling har ikkje forklarande tekst eller andre visuelle verkemiddel, som formidlar same informasjon som er gitt gjennom bruk av farge."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Gir mekanismen den same informasjonen som er formidla gjennom bruk av farge?",
+			"ht": "<p>Aktiver mekanismen og kontroller at andre visuelle verkemiddel enn berre farge finst for å formidle informasjon eller skille ut visuelle element i illustrasjonen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F13",
+				"G14"
+			],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Grafisk framstilling har ikkje forklarande tekst eller andre visuelle verkemiddel, som formidlar same informasjon som er gitt gjennom bruk av farge."
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Grafisk framstilling har forklarande tekst eller andre visuelle verkemiddel, som formidlar same informasjon som er gitt gjennom bruk av farge."
+				}
+			}
+		}
+	]
+}
