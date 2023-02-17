@@ -1,7 +1,7 @@
 {
-	"id": "1.4.10a",
+	"id": "nett-1.4.10a",
 	"type": "web",
-	"kravTilSamsvar": "<p>Innhald kan presenterast uten tap av informasjon eller funksjonalitet og uten at brukaren m&aring; rulle i to dimensjoner ved:</p>\r\n<ul>\r\n<li>innhald som rullar loddrett med ei bredde som tilsvarar 320 CSS-piksler</li>\r\n<li>innhald som rullar vassrett med ei h&oslash;gde som tilsvarar 256 CSS-piksler</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Kravet kan oppfylles på flere måter:</p>\r\n<ul>\r\n<li>\r\n<p>Brukeren får tilgang til samme informasjon og funksjonalitet, uten å måtte scrolle i to dimensjoner.</p>\r\n<ul>\r\n<li>\r\n<p>innhold som ruller loddrett med en bredde som tilsvarer 320 CSS-piksler (tilsvarer desktop nettleservindu (viewport) satt til en bredde på 1280 CSS-piksler ved 400 prosent forstørrelse) og</p>\r\n</li>\r\n<li>\r\n<p>alt innhold og funksjonalitet kan nås og brukes </p>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<p>eller</p>\r\n<ul>\r\n<li style=\"list-style-type: none;\">\r\n<ul>\r\n<li>\r\n<p>innhold som ruller vannrett med en høyde som tilsvarer 256 CSS-piksler (tilsvarer desktop nettleservindu (viewport) satt til en høyde på 1024 CSS-piksler ved 400 prosent forstørrelse) og</p>\r\n</li>\r\n<li>\r\n<p>alt innhold og funksjonalitet kan nås og brukes <br>eller</p>\r\n</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p>Brukeren får tilgang til samme informasjon og funksjonalitet i en alternativ versjon av nettsiden, via en mekanisme og</p>\r\n<ul>\r\n<li>\r\n<p>Mekanismen for å endre visning (layout) ligger på samme nettside og</p>\r\n</li>\r\n<li>\r\n<p>Mekanismen endrer visning (layout) av nettsiden og</p>\r\n</li>\r\n<li>\r\n<p>Alternativ versjon krever ikke at brukeren scroller i to dimensjoner</p>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<div style=\"mso-element: comment-list;\">\r\n<div style=\"mso-element: comment;\">\r\n<div id=\"_com_2\" class=\"msocomtxt\"><!-- [if !supportAnnotations]--></div>\r\n<!--[endif]--></div>\r\n</div>",
 	"kolonner": [
 		{
 			"title": "2.2"
@@ -13,6 +13,9 @@
 			"title": "3.4"
 		},
 		{
+			"title": "3.5"
+		},
+		{
 			"title": "3.6"
 		},
 		{
@@ -20,11 +23,11 @@
 		}
 	],
 	"side": "2.1",
-	"element": "3.5",
+	"element": "3.3",
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
+			"spm": "Hvilken side tester du?",
 			"ht": "<p>Angi URL eller side-ID.</p>",
 			"type": "tekst",
 			"kilde": [],
@@ -39,31 +42,33 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Kva veg rullar hovudinnhaldet på sida?",
-			"ht": "<p>Oppgje kva veg houvdinnhaldet på sida rullar (scrollar). </p>",
-			"type": "radio",
+			"spm": "Scroller innholdet på siden loddrett?",
+			"ht": "<p>Innhold som leses vannrett, for eksempel innhold på norsk og engelsk, og som vanligvis scroller loddrett (nedover), skal vurderes.</p>",
+			"type": "jaNei",
 			"kilde": [],
 			"svarArray": [
 				"Hovudinnhaldet rullar loddrett ",
 				"Hovudinnhaldet rullar vassrett"
 			],
 			"ruting": {
-				"alt0": {
+				"ja": {
 					"type": "gaaTil",
 					"steg": "3.1"
 				},
-				"alt1": {
-					"type": "gaaTil",
-					"steg": "3.3"
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke innhold som scroller loddrett."
 				}
 			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Still inn nettlesaren til ei viewport-bredde på 320 css-pikslar.",
-			"ht": "<p>Dette kan du gjere på fleire måtar:</p>\n<p><strong>Ved hjelp av nettlesaren sin device toolbar</strong></p>\n<ul>\n<li>Opne nettlesaren sitt utviklarverktøy (I Chrome kan du opne det ved å bruke Ctrl+Shift+I).</li>\n<li>Aktiver Device toolbar.</li>\n<li>Sett breidda på viewporten til 320px. </li>\n</ul>\n<p><strong>Ved å endre oppløysinga på skjermen</strong></p>\n<ul>\n<li>Endre oppløysinga på skjermen til ei oppløysing som er 1280px brei (For eksempel 1280x720).</li>\n<li>Pass på at nettlesaren er maksimert og zoom inn til 400%.</li>\n</ul>",
+			"spm": "Still inn nettleseren med en presentasjonsramme (viewport) bredde på 320 css-piksler.",
+			"ht": "<p>Dette kan du gjøre på flere måter:</p>\n<p><strong>Ved hjelp av nettleserens device toolbar</strong></p>\n<ul>\n<li>Åpne nettleserens utviklerverktøy (I Chrome kan du åpne det ved å bruke Ctrl+Shift+I).</li>\n<li>Aktiver Device toolbar via ikon av mobil og nettbrett øverst til venstre. (I Chrome kan du åpne det ved å bruke Ctrl+Shift+M).</li>\n<li>Sett bredden på presentasjonsrammen til 320px hvis du ikke har det fra før. \n<ul>\n<li>Trykk på Dimensions &gt; Edit...</li>\n<li>Trykk på Add custom device...</li>\n<li>Gi Device Name: Test1.4.10</li>\n<li>Sett bredde på presentasjonsrammen til 320px og la høyden stå som den er.</li>\n<li>Husk User agent type \"Mobile\".</li>\n<li>Trykk på Add knapp for å lagre enhet.</li>\n<li>Velg Dimensions: Test1.4.10</li>\n<li>Sett inspektørens zoom på 100%. <strong>Merk:</strong> Dette ikke er zoom i nettleseren.</li>\n</ul>\n</li>\n</ul>\n<p><strong>Ved å endre oppløsningen på skjermen</strong></p>\n<ul>\n<li>Endre oppløysingen på skjermen til en oppløsning som er 1280px bredde (For eksempel 1280x720).</li>\n<li>Pass på at nettleservinduet er maksimert og zoom inn til 400%.</li>\n</ul>",
 			"type": "instruksjon",
-			"kilde": [],
+			"kilde": [
+				"F102"
+			],
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
@@ -73,28 +78,30 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Får du tilgang til same innhald og funksjonalitet som i vanleg visning utan å skrolle horisontalt?",
-			"ht": "<p>Du kan samanlikne nettsida i vanleg visning og med tilpassa viewport for å gjere det lettare å vurdere.</p>\n<p>Du skal ikkje måtte skrolle <strong>horisontalt (bortover)</strong> for å få tilgang til innhald eller funksjonalitet. </p>\n<p><strong>Merk:</strong> ei og same side kan sjå ulik ut i ordinær og forminska visning, f.eks. kan meny i forminska visning vere ein knapp, medan du i ordinær visning får sjå heile menyen.</p>\n<p><strong>Merk:</strong> Det er ikkje ok at innhald blir dekka over av anna innhald med tilpassa viewport, eller at innhald forsvinn frå sida.</p>",
+			"spm": "Får du tilgang til samme innhold og funksjonalitet som i vanlig visning, uten å scrolle vannrett (bortover)?",
+			"ht": "<p>Du kan sammenligne nettsiden i vanlig visning og visning med tilpasset presentasjonsramme og zoom for å gjøre det lettere å vurdere.</p>\n<p>Du skal ikke måtte scrolle vannrett <strong>(bortover)</strong> for å få tilgang til innhold eller funksjonalitet. </p>\n<p><strong>Merk:</strong> en og samme nettside kan se ulik ut i vanlig og tilpasset visning, for eksempel kan meny i tilpasset visning være en knapp, mens du i ordinær visning får se hele menyen.</p>\n<p><strong>Merk:</strong> Det er ikke ok at innhold blir dekket over av annet innhold i tilpasset visning, eller at innhold forsvinner fra nettsiden.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.5"
+					"steg": "3.3"
 				},
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Nettside med dynamisk tilpassing av alt innhald og funksjonalitet."
+					"utfall": "Testsiden har dynamisk tilpassing av alt innhold og funksjonalitet."
 				}
 			}
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Still inn nettlesaren til ei viewport-høgde på 256 css-pikslar.",
-			"ht": "<p>Dette kan du gjere på fleire måtar:</p>\n<p><strong>Ved hjelp av nettlesaren sin device toolbar</strong></p>\n<ul>\n<li>Opne nettlesaren sitt utviklarverktøy (I Chrome kan du opne det ved å bruke Ctrl+Shift+I).</li>\n<li>Aktiver Device toolbar.</li>\n<li>Sett høgda på viewporten til 256px. </li>\n</ul>\n<p><strong>Ved å endre oppløysinga på skjermen</strong></p>\n<ul>\n<li>Endre oppløysinga på skjermen til ei oppløysing som er 1024px <strong>høg</strong> (For eksempel 1280x1024).</li>\n<li>Pass på at nettlesaren er maksimert og zoom inn til 400%.</li>\n</ul>",
-			"type": "instruksjon",
+			"spm": "Hvilket innhold og/eller funksjonalitet fikk du ikke tilgang til?",
+			"ht": "<p>Beskriv elementet eller funksjonaliteten. Hvis det gjelder flere elementer eller funksjonalitet, registrerer du en og en.</p>",
+			"type": "tekst",
 			"kilde": [],
+			"label": "",
+			"multilinje": true,
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
@@ -104,48 +111,53 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Får du tilgang til samme innhald og funksjonalitet som i vanleg visning utan å skrolle loddrett?",
-			"ht": "<p>Du kan samanlikne nettsida i vanleg visning og med tilpassa viewport for å gjere det lettare å vurdere.</p>\n<p>Du skal ikkje måtte skrolle <strong>loddrett (nedover) </strong>for å få tilgang til innhald eller funksjonalitet. </p>\n<p><strong>Merk:</strong> ei og same side kan sjå ulik ut i ordinær og forminska visning, f.eks. kan meny i forminska visning vere ein knapp, medan du i ordinær visning får sjå heile menyen.</p>\n<p><strong>Merk:</strong> Det er ikkje ok at innhald blir dekka over av anna innhald med tilpassa viewport, eller at innhald forsvinn frå sida.</p>",
+			"spm": "Finnes det en mekanisme på nettsiden for endre visning (layout)?",
+			"ht": "<p>Mekanismen for å endre visningen skal ligge på samme side som endrer visning (layout), slik at det ikke kreves scrolling i to dimensjoner.</p>",
 			"type": "jaNei",
-			"kilde": [],
+			"kilde": [
+				"G206"
+			],
 			"ruting": {
 				"nei": {
-					"type": "gaaTil",
-					"steg": "3.5"
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Testside har ikke dynamisk tilpassing av alt innhold og funksjonalitet eller en mekanisme som endrer layout, slik at det ikke kreves scrolling i to dimensjoner."
 				},
 				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Nettside med dynamisk tilpassing av alt innhald og funksjonalitet."
+					"type": "gaaTil",
+					"steg": "3.5"
 				}
 			}
 		},
 		{
 			"stegnr": "3.5",
-			"spm": "Kva innhald og funksjonalitet fikk du ikkje tilgang til?",
-			"ht": "<p>Registrer med stikkord. Dersom det er fleire, registrerer du ein og ein.</p>",
-			"type": "tekst",
+			"spm": "Sjekk at mekanismen endrer visning (layout), og at du får tilgang til alt innhold og funksjonalitet, uten vannrett (bortover) scrolling.",
+			"ht": "<p>Aktiver mekanismen og sjekk at du får tilgang til alt innhold og funksjonalitet, uten vannrett (bortover) scrolling.</p>",
+			"type": "jaNei",
 			"kilde": [],
-			"label": "",
-			"multilinje": true,
 			"ruting": {
-				"alle": {
+				"nei": {
 					"type": "gaaTil",
 					"steg": "3.6"
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Testside har dynamisk tilpassing av alt innhold og funksjonalitet via en mekanisme."
 				}
 			}
 		},
 		{
 			"stegnr": "3.6",
-			"spm": "Får du tilgang til informasjonen/funksjonaliteten ved å skrolle?",
-			"ht": "<p>Sjekk om du får tilgang til informasjonen/funksjonaliteten ved å skrolle.</p>",
+			"spm": "Får du tilgang til informasjonen/funksjonaliteten ved å scrolle?",
+			"ht": "<p>Sjekk om du får tilgang til informasjonen/funksjonaliteten ved å scrolle.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Innhald som ikkje let seg dynamisk tilpasse."
+					"utfall": "Innholdet tilpasser seg ikke dynamisk tilpasning."
 				},
 				"ja": {
 					"type": "gaaTil",
@@ -155,19 +167,19 @@
 		},
 		{
 			"stegnr": "3.7",
-			"spm": "Er ein todimensjonalt layout nødvendig for å ivareta bruk og betyding?",
-			"ht": "<p>Innhald som krev todimensjonalt layout for å ivareta bruk og betydning er unntatt kravet. Dette gjeld for eksempel</p>\n<ul>\n<li>grafikk og video</li>\n<li>datatabellar</li>\n<li>verktøylinjer</li>\n</ul>\n<p><strong>Merk: </strong>Suksesskriteriet gjelder ikkje for grensesnitt som har verktøylinjer.</p>",
+			"spm": "Er todimensjonal layout nødvendig for å ivareta bruk eller meningsinnhold?",
+			"ht": "<p>Innhold som krever todimensjonal layout for å ivareta bruk eller meningsinnhold er unntatt kravet. Dette gjelder for eksempel</p>\n<ul>\n<li>grafikk og video</li>\n<li>datatabeller</li>\n<li>presentasjoner</li>\n<li>innhold som krever at verktøylinjer er synlige</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
 				"ja": {
 					"type": "ikkjeForekomst",
-					"utfall": "Innhald der ein todimensjonalt layout er nødvendig for å ivareta bruk og betyding."
+					"utfall": "Todimensjonal visning (layout) er nødvendig for å ivareta innholdets bruk og betyding."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Innhald som ikkje let seg dynamisk tilpasse."
+					"utfall": "Innholdet tilpasser seg ikke dynamisk tilpasning."
 				}
 			}
 		}
