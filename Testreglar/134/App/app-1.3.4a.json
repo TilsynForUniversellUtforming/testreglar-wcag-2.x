@@ -31,7 +31,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Er det mulig å vise appsiden både i stående og liggende retning?",
-			"ht": "<p><!--StartFragment --><span class=\"cf0\">Sjekk først at enhetens operativsystem <strong>ikke</strong> begrenser visningsretningen, f</span><span class=\"cf0\">or eksempel at enheten </span><span class=\"cf0\">har autorotasjon skrudd av. </span></p>\n<p>Dersom autorotasjon er skudd av, skal du slå på autorotasjon. </p>",
+			"ht": "<p>Sjekk først at enhetens operativsystem ikke begrenser visningsretningen, for eksempel at enheten har autorotasjon skrudd av.</p>\n<p>Dersom autorotasjon er skudd av, skal du slå på autorotasjon.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F97"
@@ -50,8 +50,8 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Er det avgjørende med en bestemt visningsretning av innholdet? ",
-			"ht": "<p>Avgjørende er situasjoner der det aktuelle innholdet bare kan forstås i en bestemt visningsretning, eller der teknologien begrenser valg av visningsretning. </p>\n<p><span class=\"ui-provider cfa cfb c d e f g h i j k l m n o p q r s t cfc cfd w x y z ab ac ae af ag ah ai aj ak\" dir=\"ltr\">Eksempler på at en bestemt visningsretning kan være avgjørende, er blant annet i en piano-app, lysark for en projektor eller TV, eller innhold i virtuell virkelighet der endring av visningsretning ikke er aktuelt. Det må gjøres en konkret vurdering av innholdet som testes. </span></p>",
+			"spm": "Er det avgjørende med en bestemt visningsretning av innholdet?",
+			"ht": "<p>Avgjørende er situasjoner der det aktuelle innholdet bare kan forstås i en bestemt visningsretning, eller der teknologien begrenser valg av visningsretning.</p>\n<p>Eksempler på at en bestemt visningsretning kan være avgjørende, er blant annet i en piano-app, lysark for en projektor eller TV, eller innhold i virtuell virkelighet der endring av visningsretning ikke er aktuelt. Det må gjøres en konkret vurdering av innholdet som testes.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
