@@ -46,10 +46,6 @@
 			"ht": "<p>Innhold som leses vannrett, for eksempel innhold på norsk og engelsk, og som vanligvis scroller loddrett (nedover), skal vurderes.</p>",
 			"type": "jaNei",
 			"kilde": [],
-			"svarArray": [
-				"Hovudinnhaldet rullar loddrett ",
-				"Hovudinnhaldet rullar vassrett"
-			],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
@@ -64,7 +60,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Still inn nettleseren med en presentasjonsramme (viewport) bredde på 320 css-piksler.",
-			"ht": "<p>Dette kan du gjøre på flere måter:</p>\n<p><strong>Ved hjelp av nettleserens device toolbar</strong></p>\n<ul>\n<li>Åpne nettleserens utviklerverktøy (I Chrome kan du åpne det ved å bruke Ctrl+Shift+I).</li>\n<li>Aktiver Device toolbar via ikon av mobil og nettbrett øverst til venstre. (I Chrome kan du åpne det ved å bruke Ctrl+Shift+M).</li>\n<li>Sett bredden på presentasjonsrammen til 320px hvis du ikke har det fra før. \n<ul>\n<li>Trykk på Dimensions &gt; Edit...</li>\n<li>Trykk på Add custom device...</li>\n<li>Gi Device Name: Test1.4.10</li>\n<li>Sett bredde på presentasjonsrammen til 320px og la høyden stå som den er.</li>\n<li>Husk User agent type \"Mobile\".</li>\n<li>Trykk på Add knapp for å lagre enhet.</li>\n<li>Velg Dimensions: Test1.4.10</li>\n<li>Sett inspektørens zoom på 100%. <strong>Merk:</strong> Dette ikke er zoom i nettleseren.</li>\n</ul>\n</li>\n</ul>\n<p><strong>Ved å endre oppløsningen på skjermen</strong></p>\n<ul>\n<li>Endre oppløysingen på skjermen til en oppløsning som er 1280px bredde (For eksempel 1280x720).</li>\n<li>Pass på at nettleservinduet er maksimert og zoom inn til 400%.</li>\n</ul>",
+			"ht": "<p>Dette kan du gjøre på flere måter:</p>\n<p><strong>Ved hjelp av nettleserens device toolbar</strong></p>\n<ul>\n<li>Åpne nettleserens utviklerverktøy (I Chrome kan du åpne det ved å bruke Ctrl+Shift+I).</li>\n<li>Aktiver Device toolbar via ikon av mobil og nettbrett øverst til venstre. (I Chrome kan du åpne det ved å bruke Ctrl+Shift+M).</li>\n<li>Sett bredden på presentasjonsrammen til 320px hvis du ikke har det fra før.\n<ul>\n<li>Trykk på Dimensions &gt; Edit...</li>\n<li>Trykk på Add custom device...</li>\n<li>Gi Device Name: Test1.4.10</li>\n<li>Sett bredde på presentasjonsrammen til 320px og la høyden stå som den er.</li>\n<li>Husk User agent type \"Mobile\".</li>\n<li>Trykk på Add knapp for å lagre enhet.</li>\n<li>Velg Dimensions: Test1.4.10</li>\n<li>Sett inspektørens zoom på 100%. <strong>Merk:</strong> Dette er ikke zoom i nettleseren.</li>\n</ul>\n</li>\n</ul>\n<p><strong>Ved å endre oppløsningen på skjermen</strong></p>\n<ul>\n<li>Endre oppløsningen på skjermen til en oppløsning med 1280px bredde (For eksempel 1280x720).</li>\n<li>Pass på at nettleservinduet er maksimert og zoom inn til 400%.</li>\n</ul>",
 			"type": "instruksjon",
 			"kilde": [
 				"F102"
@@ -79,7 +75,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Får du tilgang til samme innhold og funksjonalitet som i vanlig visning, uten å scrolle vannrett (bortover)?",
-			"ht": "<p>Du kan sammenligne nettsiden i vanlig visning og visning med tilpasset presentasjonsramme og zoom for å gjøre det lettere å vurdere.</p>\n<p>Du skal ikke måtte scrolle vannrett <strong>(bortover)</strong> for å få tilgang til innhold eller funksjonalitet. </p>\n<p><strong>Merk:</strong> en og samme nettside kan se ulik ut i vanlig og tilpasset visning, for eksempel kan meny i tilpasset visning være en knapp, mens du i ordinær visning får se hele menyen.</p>\n<p><strong>Merk:</strong> Det er ikke ok at innhold blir dekket over av annet innhold i tilpasset visning, eller at innhold forsvinner fra nettsiden.</p>",
+			"ht": "<p>Du kan sammenligne nettsiden i vanlig visning og visning med tilpasset presentasjonsramme og zoom for å gjøre det lettere å vurdere.</p>\n<p>Du skal ikke måtte scrolle vannrett <strong>(bortover)</strong> for å få tilgang til innhold eller funksjonalitet.</p>\n<p><strong>Merk:</strong> en og samme nettside kan se ulik ut i vanlig og tilpasset visning, for eksempel kan meny i tilpasset visning være en knapp, mens du i ordinær visning får se hele menyen.</p>\n<p><strong>Merk:</strong> Det er ikke ok at innhold blir dekket over av annet innhold i tilpasset visning, eller at innhold forsvinner fra nettsiden.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -111,7 +107,7 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Finnes det en mekanisme på nettsiden for endre visning (layout)?",
+			"spm": "Finnes det en mekanisme på nettsiden for å endre visning (layout)?",
 			"ht": "<p>Mekanismen for å endre visningen skal ligge på samme side som endrer visning (layout), slik at det ikke kreves scrolling i to dimensjoner.</p>",
 			"type": "jaNei",
 			"kilde": [
@@ -174,7 +170,7 @@
 			"ruting": {
 				"ja": {
 					"type": "ikkjeForekomst",
-					"utfall": "Todimensjonal visning (layout) er nødvendig for å ivareta innholdets bruk og betyding."
+					"utfall": "Todimensjonal visning (layout) er nødvendig for å ivareta innholdets bruk og betydning."
 				},
 				"nei": {
 					"type": "avslutt",
