@@ -46,10 +46,6 @@
 			"ht": "<p>Du skal vurdere innhold som leses vannrett, for eksempel innhold på norsk og engelsk, og som vanligvis scroller loddrett (nedover).</p>",
 			"type": "jaNei",
 			"kilde": [],
-			"svarArray": [
-				"Hovudinnhaldet rullar loddrett ",
-				"Hovudinnhaldet rullar vassrett"
-			],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
@@ -63,8 +59,8 @@
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "For å teste bruker du en av tilsynets enheter med presentasjonsramme (viewport) bredde på 360 css-piksler. Du velger enten en iOS eller Android enhet. ",
-			"ht": "<p><strong>Operativsystem iOS</strong></p>\n<p>Bruk tilsynets iPhone 13 mini (2021) som har dimensjon 5.4 tommer og presentasjonsramme (viewport): 360 x 780 piksler.</p>\n<p><strong>Operativsystem androi</strong><strong>d</strong></p>\n<p>Bruk tilsynets Samsung S20 (2020) som har dimensjon 6.2 tommer og presentasjonsramme (viewport): 360 x 800 piksler.</p>\n<p><strong>Felles, uavhengig av operativsystem</strong></p>\n<p>(Mulig dette hører hjemme i en rutine, og ikke i testregelen): Last ned appen du skal teste. Hvis appen er installert fra før, sjekker du om den er oppdatert. Last ned nyeste versjon av appen dersom det trengs. Deretter åpner du appen på enheten.</p>\n<p><strong>Merk: </strong>Tekststørrelsen i innstillingene til operativsystemet (og hvis den finnes i selve appen) skal settes til standard, 100%.</p>\n<p> </p>",
+			"spm": "For å teste bruker du en enhet med presentasjonsramme (viewport) bredde på 360 css-piksler. Du velger enten en iOS eller Android enhet. ",
+			"ht": "<p><strong>Operativsystem iOS</strong></p>\n<p>Bruk tilsynets iPhone 13 mini (2021) som har dimensjon 5.4 tommer og presentasjonsramme (viewport): 360 x 780 piksler.</p>\n<p><strong>Operativsystem Androi</strong><strong>d</strong></p>\n<p>Bruk tilsynets Samsung S20 (2020) som har dimensjon 6.2 tommer og presentasjonsramme (viewport): 360 x 800 piksler.</p>\n<p><strong>Felles, uavhengig av operativsystem</strong></p>\n<p>Last ned appen du skal teste. Hvis appen er installert fra før, sjekker du om den er oppdatert. Last ned nyeste versjon av appen dersom det trengs. Deretter åpner du appen på enheten.</p>\n<p><strong>Merk: </strong>Tekststørrelsen i innstillingene til operativsystemet (og hvis den finnes i selve appen) skal settes til standard, 100%.</p>\n<p> </p>",
 			"type": "instruksjon",
 			"kilde": [
 				"F102"
