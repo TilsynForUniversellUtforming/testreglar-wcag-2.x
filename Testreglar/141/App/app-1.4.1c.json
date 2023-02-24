@@ -138,7 +138,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "I skjemaelement, instruksjon eller feilmelding er det brukt både farge og andre visuelle verkemiddel, for å formidle informasjon."
+					"utfall": "I skjemaelement, instruksjon eller feilmelding er det brukt både farge og andre visuelle verkemiddel for å formidle informasjon."
 				},
 				"nei": {
 					"type": "avslutt",
