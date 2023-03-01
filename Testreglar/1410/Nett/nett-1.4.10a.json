@@ -59,7 +59,7 @@
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Still inn nettleseren med en presentasjonsramme (viewport) bredde på 320 css-piksler.",
+			"spm": "Endre bredden på presentasjonsrammen (viewport) i nettleseren til 320 css-piksler.",
 			"ht": "<p>Dette kan du gjøre på flere måter:</p>\n<p><strong>Ved hjelp av nettleserens device toolbar</strong></p>\n<ul>\n<li>Åpne nettleserens utviklerverktøy (I Chrome kan du åpne det ved å bruke Ctrl+Shift+I).</li>\n<li>Aktiver Device toolbar via ikon av mobil og nettbrett øverst til venstre. (I Chrome kan du åpne det ved å bruke Ctrl+Shift+M).</li>\n<li>Sett bredden på presentasjonsrammen til 320px hvis du ikke har det fra før.\n<ul>\n<li>Trykk på Dimensions &gt; Edit...</li>\n<li>Trykk på Add custom device...</li>\n<li>Gi Device Name: Test1.4.10</li>\n<li>Sett bredde på presentasjonsrammen til 320px og la høyden stå som den er.</li>\n<li>Husk User agent type \"Mobile\".</li>\n<li>Trykk på Add knapp for å lagre enhet.</li>\n<li>Velg Dimensions: Test1.4.10</li>\n<li>Sett inspektørens zoom på 100%. <strong>Merk:</strong> Dette er ikke zoom i nettleseren.</li>\n</ul>\n</li>\n</ul>\n<p><strong>Ved å endre oppløsningen på skjermen</strong></p>\n<ul>\n<li>Endre oppløsningen på skjermen til en oppløsning med 1280px bredde (For eksempel 1280x720).</li>\n<li>Pass på at nettleservinduet er maksimert og zoom inn til 400%.</li>\n</ul>",
 			"type": "instruksjon",
 			"kilde": [
@@ -108,7 +108,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Finnes det en mekanisme på nettsiden for å endre visning (layout)?",
-			"ht": "<p>Mekanismen for å endre visningen skal ligge på samme side som endrer visning (layout), slik at det ikke kreves scrolling i to dimensjoner.</p>",
+			"ht": "<p>Mekanisme for å endre visning skal ligge på samme side for å unngå at man må scrolle i to dimensjoner.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G206"
@@ -117,7 +117,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Testside har ikke dynamisk tilpassing av alt innhold og funksjonalitet eller en mekanisme som endrer layout, slik at det ikke kreves scrolling i to dimensjoner."
+					"utfall": "Testsiden har ikke dynamisk tilpassing av alt innhold og funksjonalitet eller en mekanisme som endrer layout, slik at det ikke kreves scrolling i to dimensjoner."
 				},
 				"ja": {
 					"type": "gaaTil",
@@ -127,8 +127,8 @@
 		},
 		{
 			"stegnr": "3.5",
-			"spm": "Sjekk at mekanismen endrer visning (layout), og at du får tilgang til alt innhold og funksjonalitet, uten vannrett (bortover) scrolling.",
-			"ht": "<p>Aktiver mekanismen og sjekk at du får tilgang til alt innhold og funksjonalitet, uten vannrett (bortover) scrolling.</p>",
+			"spm": "Endrer mekanismen visning sånn at du får tilgang til alt innhold og funksjonalitet uten vannrett scrolling?",
+			"ht": "<p>Aktiver mekanismen og sjekk at du får tilgang til alt innhold og funksjonalitet, uten vannrett scrolling.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -139,7 +139,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Testside har dynamisk tilpassing av alt innhold og funksjonalitet via en mekanisme."
+					"utfall": "Testsiden har dynamisk tilpassing av alt innhold og funksjonalitet via en mekanisme."
 				}
 			}
 		},
