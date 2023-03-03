@@ -36,7 +36,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har appsiden interaktive skjema/skjemaelement?",
-			"ht": "<p>Gjør en visuell inspeksjon av appsiden for å sjekke om den har skjemaelementer du kan trykke på eller fylle inn informasjon i. Dette kan for eksempel være:</p>\n<ul>\n<li>Inndatafelt (Felt for å fylle inn tekst, tall dato osv...)</li>\n<li>Knapper</li>\n<li>Avkryssingsbokser</li>\n</ul>\n<p><strong>Merk:</strong> PDF, Word eller lignende er ikke aktuelle testobjekt.</p>",
+			"ht": "<p>Finn interaktive skjemaelement på appsiden ved visuell inspeksjon. Dette kan være:</p>\n<ul>\n<li>Inndatafelt (Felt for å fylle inn tekst, tall dato osv...)</li>\n</ul>\n<p><strong>Merk:</strong> PDF, Word eller lignende er ikke aktuelle testobjekt.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -46,14 +46,14 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Appsiden har ikke interaktive skjema."
+					"utfall": "Appsiden har ikke interaktive skjema/skjemaelement."
 				}
 			}
 		},
 		{
 			"stegnr": "2.3",
-			"spm": "Har skjemaet du identifiserte i forrige steg, skjemaelementer (inndatafelter) som samler inn informasjon om brukeren?",
-			"ht": "<p><span lang=\"NO-BOK\">Inndatafeltet som samler inn informasjon om brukeren skal gjelde informasjon relatert til den personen som fyller ut skjemaet, og ikke til en annen person, som for eksempel brukerens ektefelle eller barn.</span></p>\n<p><span lang=\"NO-BOK\">Sjekk om skjemaelementet (inndatafeltet) tjener et formål som er del av listen nedenfor:</span></p>\n<ul>\n<li>fornavn</li>\n<li>etternavn</li>\n<li>kallenavn</li>\n<li>fødselsdato</li>\n<li>dag i fødselsdato</li>\n<li>måned i fødselsdato</li>\n<li>år i fødselsdato</li>\n<li>kjønnsidentitet</li>\n<li>e-post</li>\n<li>landskode</li>\n<li>telefon</li>\n<li>brukernavn</li>\n<li>nytt passord</li>\n<li>nåværende passord</li>\n<li>engangskode (fra sms)</li>\n<li>engangskode (fra e-post)</li>\n<li>adresse</li>\n<li>postnummer</li>\n<li>by eller sted</li>\n<li>land</li>\n<li>url</li>\n<li>bilde (url-en til et bilde som representerer personen)</li>\n</ul>\n<p><strong>Merk:</strong> Tilsynet tester ikke kredittkortinformasjon, fordi tilsynet har ikke kredittkort. Du skal ikke bruke ditt private kredittkort. </p>",
+			"spm": "Samler skjemaelementet inn informasjon om brukeren?",
+			"ht": "<p><span lang=\"NO-BOK\">Inndatafeltet som samler inn informasjon om brukeren skal gjelde informasjon relatert til den personen som fyller ut skjemaet, og ikke til en annen person, som for eksempel brukerens ektefelle eller barn.</span></p>\n<p><span lang=\"NO-BOK\">Sjekk om skjemaelementet (inndatafeltet) tjener et formål som er del av listen nedenfor:</span></p>\n<ul>\n<li>fornavn</li>\n<li>etternavn</li>\n<li>kallenavn</li>\n<li>fødselsdato</li>\n<li>dag i fødselsdato</li>\n<li>måned i fødselsdato</li>\n<li>år i fødselsdato</li>\n<li>kjønnsidentitet</li>\n<li>e-post</li>\n<li>landskode</li>\n<li>telefon</li>\n<li>brukernavn</li>\n<li>nytt passord</li>\n<li>nåværende passord</li>\n<li>engangskode (fra sms)</li>\n<li>engangskode (fra e-post)</li>\n<li>adresse</li>\n<li>postnummer</li>\n<li>by eller sted</li>\n<li>land</li>\n<li>url</li>\n<li>bilde (url-en til et bilde som representerer personen)</li>\n</ul>\n<p><strong>Merk:</strong> Tilsynet tester ikke kredittkortinformasjon. Du skal ikke bruke ditt private kredittkort. </p>",
 			"type": "jaNei",
 			"kilde": [
 				"H98"
