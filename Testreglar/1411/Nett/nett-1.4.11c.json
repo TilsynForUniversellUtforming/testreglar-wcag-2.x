@@ -39,8 +39,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har testsiden grafiske objekter eller deler av grafikk som kreves for å forstå innholdet?",
-			"ht": "<p>Gjør en visuell inspeksjon for å identifisere grafiske objekter eller deler av grafiske objekter som kreves (er nødvendig) for å forstå innholdet. Det er mange ulike typer grafiske objekter. Eksempler er</p>\n<ul>\n<li>Enkel grafikk, som for eksempel et ensfarget ikon, er frittstående objekter.</li>\n<li>Grafer som inneholder flere linjer eller søyler, inneholder flere grafiske objekter. Hver linje/søyle er et objekt, som skal følge kravet. </li>\n</ul>\n<p><strong>Dynamisk ikke-tekstlig innhold</strong></p>\n<p>Ikke-tekstlig innhold kan være dynamisk, der kontrasten varierer eller viser mer informasjon, når innholdet får tastaturfokus eller musepekeren holdes over. For at brukeren skal kunne oppfatte det dynamiske innholdet, må kravet oppfylles både</p>\n<ul>\n<li>før innholdet får fokus og</li>\n<li>når det har fokus</li>\n</ul>\n<p>enten ved bruk av tekst eller ved å øke kontrasten (minst 3:1) for det grafiske objektet som trer fram. </p>\n<p><strong>Grafiske objekter som ikke skal testes:</strong></p>\n<ul>\n<li>Grafikk som kun er til pynt (dekorative objekter).</li>\n<li>Grafiske objekter som ikke formidler informasjon, fordi informasjonen også er formidlet i form av tekst. Det kan være i form av synlige ledetekster, verdier eller tekstalternativ.</li>\n<li>Informasjonen er tilgjengelig i en annen form, for eksempel i en tabell som følger grafikken, som blir synlig \"Long Description\".</li>\n</ul>",
+			"spm": "Finnes det grafiske objekter på siden som er nødvendig for å forstå innholdet?",
+			"ht": "<p>Gjør en visuell inspeksjon for å identifisere grafiske objekter der informasjonen kun formidles gjennom grafikken og ikke gjennom tilhørende tekst. Det er mange ulike typer grafiske objekter, eksempler på grafiske objekter som skal følge kravet er:</p>\n<ul>\n<li>Enkel grafikk, som for eksempel et ensfarget ikon, er frittstående objekter.</li>\n<li>Grafer som inneholder flere linjer eller søyler, inneholder flere grafiske objekter. Hver linje/søyle er et objekt, som skal følge kravet. </li>\n</ul>\n<p><strong>Dynamisk ikke-tekstlig innhold</strong></p>\n<p>Ikke-tekstlig innhold kan være dynamisk, der kontrasten varierer eller viser mer informasjon, når innholdet får tastaturfokus eller musepekeren holdes over. For at brukeren skal kunne oppfatte det dynamiske innholdet, må kravet oppfylles både</p>\n<ul>\n<li>før innholdet får fokus og</li>\n<li>når det har fokus</li>\n</ul>\n<p>enten ved bruk av tekst eller ved å øke kontrasten (minst 3:1) for det grafiske objektet som trer fram. </p>\n<p><strong>Grafiske objekter som ikke skal testes:</strong></p>\n<ul>\n<li>Grafikk som kun er til pynt (dekorative objekter).</li>\n<li>Grafikk der informasjonen formidles gjennom grafikken med tilhørende tekst. Det kan være i form av synlige ledetekster, verdier eller tekstalternativ.</li>\n<li>Informasjonen er tilgjengelig i en annen form, for eksempel i en tabell som følger grafikken, som blir synlig \"Long Description\".</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -57,7 +57,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Hvilket grafisk objekt tester du?",
-			"ht": "<p>Beskriv det grafiske objektet, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere objekter, registrerer du ett og ett.</p>",
+			"ht": "<p>Beskriv det grafiske objektet, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere objekter, registrerer du ett og ett.</p>",
 			"type": "tekst",
 			"kilde": [],
 			"label": "Grafisk objekt:",
@@ -71,7 +71,7 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Er en bestemt presentasjon av det grafiske objektet er avgjørende for informasjonen som blir formidlet?",
+			"spm": "Er en bestemt presentasjon av det grafiske objektet avgjørende for informasjonen som blir formidlet?",
 			"ht": "<p>Grafiske objekter trenger ikke å oppfylle kontrastkravet når «<em>en bestemt presentasjon av grafikk er avgjørende for informasjonen som formidles</em>». Avgjørende-unntaket er i følge forståartikkelen ment å gjelde når det ikke er mulig å presentere grafikken med tilstrekkelig kontrast, uten å undergrave betydningen.</p>\n<p>Dersom en bestemt presentasjon av det ikke tekstlige innholdet er avgjørende, gjelder ikke kravet. Eksempler er</p>\n<ul>\n<li>grafikk som er en del av en logo eller merkevare</li>\n<li>flagg</li>\n<li>bilder av personer eller uteområder</li>\n<li>skjermbilder som viser hvordan en nettside så ut tidligere</li>\n<li>fargeforandringer som representerer måleenheter, for eksempel i et heatmap</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
@@ -123,7 +123,7 @@
 					}
 				}
 			},
-			"label": "Målt kontrast (Format 4.48):",
+			"label": "Målt kontrast (Format 4.48:1 skrives som 4.48):",
 			"filter": "tal"
 		},
 		{
