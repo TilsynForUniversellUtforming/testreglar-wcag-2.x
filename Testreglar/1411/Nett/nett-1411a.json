@@ -1,0 +1,142 @@
+{
+	"id": "nett-1.4.11a",
+	"type": "web",
+	"kravTilSamsvar": "<p>Den visuelle presentasjonen har et kontrastforhold på minst 3:1 mot farge(r) som ligger ved siden av</p>\r\n<ul>\r\n<li>Visuell informasjon som kreves for å identifisere aktive brukergrensesnittkomponenter, samt hvordan de kan betjenes\r\n<ul>\r\n<li>Med mindre utseendet bestemt av brukeragenten og ikke er endret av innholdsprodusenten</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		}
+	],
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Oppgi URL eller side-ID</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "URL/Side-ID:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsiden brukergrensesnittkomponenter, der visuell informasjon er eneste virkemiddel, for å identifisere komponenten og/eller hvordan den kan betjenes?",
+			"ht": "<p>Gjør en visuell inspeksjon for å identifisere brukergrensesnittkomponenter, hvor visuell informasjon brukes som eneste virkemiddel for at brukeren kan identifisere selve komponenten og/eller hvordan den kan betjenes.</p>\n<ul>\n<li>Eksempler på brukergrensesnittkomponenter er lenker, knapper og skjemaelementer.</li>\n<li>Eksempler på visuell informasjon er blant annet kantlinje, symbol/ikon eller farge</li>\n</ul>\n<p><strong>Merk:</strong> Nedtrekkslister har ofte både tekstlig og ikke-tekstlig innhold, som tekst og ikon for pil ned. Pil ned er nødvendig for å forstå at komponenten er en nedtrekksliste, og gir informasjon om hvordan den skal betjenes. Pilen skal derfor testes, selv om nedtrekkslisten også inneholder tekst. </p>\n<p><strong>Disse innholdstypene skal ikke testes:</strong></p>\n<ul>\n<li>Hvis en knapp har tekst eller et inndatafelt har plassholdertekst som er synlig, gjelder ikke kravet. Hvis en knapp med tekst også har en farget kantlinje, er ikke kantlinjen eneste visuelle virkemiddel. I slike situasjoner gjelder ikke 1.4.11, men dekkes derimot  av 1.4.3 Kontrast (minimum).</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke brukergrensesnittkomponenter der visuell informasjon er eneste virkemiddel for å identifisere den og/eller hvordan den kan betjenes."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken brukergrensesnittkomponent tester du?",
+			"ht": "<p>Beskriv brukergrensesnittkomponenten, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere komponenter, registrerer du en og en.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "Brukergrensesnittkomponent:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er brukergrensesnittkomponenten deaktivert?",
+			"ht": "<p>Du skal bare teste aktive komponenter. Aktive komponenter er de som brukeren kan samhandle med.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Brukergrensesnittkomponenten er deaktivert."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er utseendet på komponenten og/eller hvordan den kan betjenes, endret av innholdsprodusenten?",
+			"ht": "<p>Hvis utseendet til den aktuelle brukergrensesnittkomponenten og/eller hvordan den kan betjenes, er bestemt av brukeragenten, og ikke  endret av innholdsprodusenten, gjelder ikke kravet.</p>\n<p>Slik kan du teste om utseendet på komponenten og/eller hvordan den kan betjenes, er bestemt av brukeragenten (i Google Chrome):</p>\n<p><strong>Alternativ 1 </strong></p>\n<p>Med kodeverktøyet i nettleseren</p>\n<ul>\n<li>Du kan bruke kodeverktøyet i nettleseren for å sjekke dette i CSS-stilarket</li>\n<li>Velg komponenten du tester og sjekk i \"Styles\" om det for eksempel finnes en av disse CSS-egenskapene:\n<ul>\n<li><code>background</code></li>\n<li><code>background-color</code></li>\n<li><code>background-image</code></li>\n<li><code>color</code></li>\n<li><code>border-color</code></li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk: </strong>Listen over CSS-egenskaper er ikke uttømmende<strong>. </strong></p>\n<p><strong>Alternativ 2</strong></p>\n<p>Med Chrome extension <a href=\"https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm\" target=\"_blank\" rel=\"noopener\">Web Developer </a>ved å slå av CSS-stilarket, gitt av innholdsprodusenten </p>\n<ul>\n<li>Åpne testsiden i ny fane slik at du kan sammenligne komponenten i vanlig visning (med CSS-stilark gitt av innholdsprodusenten) og visning bestemt av brukeragenten (nettleseren)\n<ul>\n<li>Bruk verktøyet Web Developer &gt; CSS og trykk på \"Disable All Styles\" for å slå av CSS-stilark gitt av innholdsprodusenten</li>\n<li>Gjør en visuell inspeksjon for å sjekke om utseendet på komponenten er ulikt, og dermed er endret av innholdsprodusenten</li>\n</ul>\n</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Utseendet til den aktuelle brukergrensesnittkomponenten og/eller hvordan den kan betjenes, er bestemt av brukeragenten."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Mål og registrer kontrast mellom visuell informasjon som kreves for å identifisere komponenten og/eller for å betjene den, og farge(r) som ligger rett ved siden av.",
+			"ht": "<p>Du skal måle og registrere kontrast mellom fargen på visuell informasjon, som kreves for å identifisere komponenten, og/eller betjene den og direkte tilgrensende farge(r), som er nødvendige å skille fra hverandre visuelt, for å kunne identifisere eller betjene brukergrensesnittkomponenten. </p>\n<p><strong>Merk:</strong> Dersom det er flere ulike farger rundt elementet, skal du registrere den med dårligst kontrast.</p>\n<p><strong>Tips: </strong>Du kan zoome eller forstørre nettsiden for å gjøre det enklere å måle kontrasten.</p>\n<p><strong>Retningslinjer for test:</strong></p>\n<ul>\n<li>Dersom komponenten ligger på gradert bakgrunn, skal en teste den svakeste kontrasten.</li>\n<li>Bruk Color Contrast Checker – TPGi for å måle kontrastforhold</li>\n<li>Når det gjelder hva som menes med «fargen rett ved siden av», er det flere løsninger.\n<ul>\n<li>Hvis et skjemafelt har en grå ramme og hvit fyllfarge, er det tilstrekkelig at kontrasten mellom rammen og bakgrunnen som ligger utenfor skjemafeltet, er på minst 3:1.</li>\n<li>Dersom samme skjemafelt ligger på en bakgrunn som har for dårlig kontrast mot den grå rammen, er det tilstrekkelig at kontrasten mellom den hvite fyllfargen og bakgrunnen er på minst 3:1. Då kan du se bort fra rammen når en måler kontrasten</li>\n</ul>\n</li>\n</ul>",
+			"type": "tekst",
+			"kilde": [],
+			"ruting": {
+				"alle": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "3.4",
+							"type": "mellom",
+							"verdi": 0,
+							"verdi2": 2.99,
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "Ikke-tekstlig innhold (brukergrensesnittkomponenten) har kontrast under 3:1."
+							}
+						},
+						"2": {
+							"type": "mellom",
+							"sjekk": "3.4",
+							"verdi": 3,
+							"verdi2": 3000,
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Ikke-tekstlig innhold (brukergrensesnittkomponenten) har kontrast på minst 3:1."
+							}
+						}
+					}
+				}
+			},
+			"label": "Målt kontrast (Format 4.48:1 skrives som 4.48):",
+			"filter": "tal"
+		}
+	]
+}
