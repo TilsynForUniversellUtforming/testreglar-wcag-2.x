@@ -108,7 +108,9 @@
 			"spm": "Mål og registrer kontrast mellom farge på tilstanden og farge som ligger rett ved siden av.",
 			"ht": "<p>Du skal måle og registrere kontrast mellom farge på tilstanden og direkte tilgrensende farge(r), som er nødvendige å skille fra hverandre visuelt, for å kunne identifisere tilstanden til brukergrensesnittkomponenten. </p>\n<p><strong>Merk:</strong> Dersom det er flere ulike farger rundt elementet, skal du registrere den med dårligst kontrast.</p>\n<p><strong>Tips: </strong>Du kan zoome eller forstørre nettsiden for å gjøre det enklere å måle kontrasten.</p>\n<p><strong>Retningslinjer for test:</strong></p>\n<ul>\n<li>Dersom tilstanden ligger på gradert bakgrunn, skal en teste den svakeste kontrasten.</li>\n<li>Bruk Color Contrast Checker – TPGi for å måle kontrastforhold</li>\n<li>Når det gjelder hva som menes med «fargen rett ved siden av», er det flere løsninger.\n<ul>\n<li>Hvis et skjemafelt har en grå ramme og hvit fyllfarge, er det tilstrekkelig at kontrasten mellom rammen og bakgrunnen som ligger utenfor skjemafeltet, er på minst 3:1.</li>\n<li>Dersom samme skjemafelt ligger på en bakgrunn som har for dårlig kontrast mot den grå rammen, er det tilstrekkelig at kontrasten mellom den hvite fyllfargen og bakgrunnen er på minst 3:1. Da kan du se bort fra rammen når en måler kontrasten.</li>\n</ul>\n</li>\n</ul>",
 			"type": "tekst",
-			"kilde": [],
+			"kilde": [
+				"G195"
+			],
 			"ruting": {
 				"alle": {
 					"type": "regler",
