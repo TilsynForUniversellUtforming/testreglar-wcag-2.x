@@ -1,0 +1,183 @@
+{
+	"id": "app-1.4.10a",
+	"type": "app",
+	"kravTilSamsvar": "<p>Kravet kan oppfylles på flere måter:</p>\r\n<ul>\r\n<li>\r\n<p>Brukeren får tilgang til samme informasjon og funksjonalitet, uten å måtte scrolle i to dimensjoner.</p>\r\n<ul>\r\n<li>\r\n<p>innhold som ruller loddrett med en bredde som tilsvarer 320 CSS-piksler (tilsvarer desktop nettleservindu (viewport) satt til en bredde på 1280 CSS-piksler ved 400 prosent forstørrelse) og</p>\r\n</li>\r\n<li>\r\n<p>alt innhold og funksjonalitet kan nås og brukes </p>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<p>eller</p>\r\n<ul>\r\n<li style=\"list-style-type: none;\">\r\n<ul>\r\n<li>\r\n<p>innhold som ruller vannrett med en høyde som tilsvarer 256 CSS-piksler (tilsvarer desktop nettleservindu (viewport) satt til en høyde på 1024 CSS-piksler ved 400 prosent forstørrelse) og</p>\r\n</li>\r\n<li>\r\n<p>alt innhold og funksjonalitet kan nås og brukes </p>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<p>eller</p>\r\n<ul>\r\n<li>\r\n<p>Brukeren får tilgang til samme informasjon og funksjonalitet i en alternativ versjon av appsiden, via en mekanisme og</p>\r\n<ul>\r\n<li>\r\n<p>Mekanismen for å endre visning (layout) ligger på samme appside og</p>\r\n</li>\r\n<li>\r\n<p>Mekanismen endrer visning (layout) av appsiden og</p>\r\n</li>\r\n<li>\r\n<p>Alternativ versjon krever ikke at brukeren scroller i to dimensjoner</p>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<div style=\"mso-element: comment-list;\">\r\n<div style=\"mso-element: comment;\">\r\n<div id=\"_com_2\" class=\"msocomtxt\"><!-- [if !supportAnnotations]--></div>\r\n<!--[endif]--></div>\r\n</div>",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		},
+		{
+			"title": "3.6"
+		},
+		{
+			"title": "3.7"
+		}
+	],
+	"side": "2.1",
+	"element": "3.3",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken appside tester du?",
+			"ht": "<p>Oppgi appside-ID.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			},
+			"label": "Appside:",
+			"datalist": "Sideutvalg"
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Scroller innholdet på siden loddrett?",
+			"ht": "<p>Du skal vurdere innhold som leses vannrett, for eksempel innhold på norsk og engelsk, og som vanligvis scroller loddrett (nedover).</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appsiden har ikke innhold som scroller loddrett."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "For å teste bruker du en enhet med presentasjonsramme (viewport) bredde på 360 css-piksler. Du velger enten en iOS eller Android enhet. ",
+			"ht": "<p><strong>Operativsystem iOS</strong></p>\n<p>Eksempel på iOS testenhet er iPhone 13 mini fra 2021 som har dimensjon 5.4 tommer og presentasjonsramme (viewport): 360 x 780 piksler.</p>\n<p><strong>Operativsystem Android</strong></p>\n<p>Eksempel på Android testenhet er Samsung S20 fra 2020 som har dimensjon 6.2 tommer og presentasjonsramme (viewport): 360 x 800 piksler.</p>\n<p><strong>Felles, uavhengig av operativsystem</strong></p>\n<p>Last ned appen du skal teste. Hvis appen er installert fra før, sjekker du om den er oppdatert. Last ned nyeste versjon av appen dersom det trengs. Deretter åpner du appen på enheten.</p>\n<p><strong>Merk: </strong>Tekststørrelsen i innstillingene til operativsystemet (og hvis den finnes i selve appen) skal settes til standard, 100%.</p>\n<p> </p>",
+			"type": "instruksjon",
+			"kilde": [
+				"F102"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Får du tilgang til alt innhold og funksjonalitet uten å scrolle vannrett (bortover) i stående visning?",
+			"ht": "<p>Du skal ikke måtte scrolle vannrett <strong>(bortover)</strong> for å få tilgang til innhold eller funksjonalitet. </p>\n<p><strong>Merk:</strong> Det er ikke ok at innhold er dekket over av annet innhold, eller at innhold forsvinner fra appsiden.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Appsiden har dynamisk tilpassing av alt innhold og funksjonalitet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Hvilket innhold og/eller funksjonalitet fikk du ikke tilgang til?",
+			"ht": "<p>Beskriv elementet eller funksjonaliteten. Hvis det gjelder flere elementer eller funksjonalitet, registrerer du en og en.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Finnes det en mekanisme på appsiden for endre visning (layout)?",
+			"ht": "<p>Mekanismen for å endre visningen skal ligge på samme appsiden og endre visningen (layout), slik at det ikke kreves scrolling i to dimensjoner. Mekanismen kan for eksempel være en knapp. </p>",
+			"type": "jaNei",
+			"kilde": [
+				"G206"
+			],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Appsiden har ikke dynamisk tilpassing av alt innhold og funksjonalitet eller en mekanisme som endrer layout, slik at det ikke kreves scrolling i to dimensjoner."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Endrer mekanismen visning (layout) og får du tilgang til alt innhold uten vannrett scrolling?",
+			"ht": "<p>Aktiver mekanismen og sjekk at du får tilgang til alt innhold og funksjonalitet, uten vannrett (bortover) scrolling.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Appsiden har dynamisk tilpassing av alt innhold og funksjonalitet via en mekanisme."
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Får du tilgang til informasjonen/funksjonaliteten ved å scrolle?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Innholdet har ikke dynamisk tilpasning."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Er todimensjonal scrolling nødvendig for å ivareta bruk eller meningsinnhold?",
+			"ht": "<p>Innhold som krever todimensjonal scrolling for å ivareta bruk eller meningsinnhold er unntatt kravet. Dette gjelder for eksempel</p>\n<ul>\n<li>grafikk og video</li>\n<li>datatabeller</li>\n<li>presentasjoner</li>\n<li>grensesnitt som krever synlige verktøylinjer</li>\n</ul>\n<p> </p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Todimensjonal scrolling er nødvendig for å ivareta innholdets bruk og betyding."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Innholdet har ikke dynamisk tilpasning."
+				}
+			}
+		}
+	]
+}
