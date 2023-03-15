@@ -1,0 +1,167 @@
+{
+	"id": "nett-1.4.11c",
+	"type": "web",
+	"kravTilSamsvar": "<p>Den visuelle presentasjonen har et kontrastforhold på minst 3:1 mot farge(r) som ligger ved siden av for</p>\r\n<ul>\r\n<li>Deler av grafikk som kreves for å forstå innholdet\r\n<ul>\r\n<li>Med mindre en bestemt presentasjon er avgjørende for informasjonen som blir formidlet</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		}
+	],
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Oppgi URL eller side-ID</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "URL/Side-ID:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Finnes det grafiske objekter på siden som er nødvendig for å forstå innholdet?",
+			"ht": "<p>Gjør en visuell inspeksjon for å identifisere grafiske objekter der informasjonen kun formidles gjennom grafikken og ikke gjennom tilhørende tekst. Det er mange ulike typer grafiske objekter, eksempler på grafiske objekter som skal følge kravet er:</p>\n<ul>\n<li>Enkel grafikk, som for eksempel et ensfarget ikon, er frittstående objekter.</li>\n<li>Grafer som inneholder flere linjer eller søyler, inneholder flere grafiske objekter. Hver linje/søyle er et objekt, som skal følge kravet. </li>\n</ul>\n<p>Visuelle eksempler på dette finnes i dokumentet <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html#graphical-objects\" target=\"_blank\" rel=\"noopener\">suksesskriterium 1.4.11 Kontrast for ikke-tekstlig innhold</a>.</p>\n<p><strong>Dynamisk ikke-tekstlig innhold</strong></p>\n<p>Ikke-tekstlig innhold kan være dynamisk, der kontrasten varierer eller viser mer informasjon, når innholdet får tastaturfokus eller musepekeren holdes over. For at brukeren skal kunne oppfatte det dynamiske innholdet, må kravet oppfylles både</p>\n<ul>\n<li>før innholdet får fokus og</li>\n<li>når det har fokus</li>\n</ul>\n<p>enten ved bruk av tekst eller ved å øke kontrasten (minst 3:1) for det grafiske objektet som trer fram. </p>\n<p><strong>Grafiske objekter som ikke skal testes:</strong></p>\n<ul>\n<li>Grafikk som kun er til pynt (dekorative objekter).</li>\n<li>Grafikk der informasjonen formidles gjennom grafikken med tilhørende tekst. Det kan være i form av synlige ledetekster, verdier eller tekstalternativ.</li>\n<li>Informasjonen er tilgjengelig i en annen form, for eksempel i en tabell som følger grafikken, som blir synlig \"Long Description\".</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke grafiske objekter som kreves for å forstå innholdet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilket grafisk objekt tester du?",
+			"ht": "<p>Beskriv det grafiske objektet, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere objekter, registrerer du ett og ett.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "Grafisk objekt:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er en bestemt presentasjon av det grafiske objektet avgjørende for informasjonen som blir formidlet?",
+			"ht": "<p>Grafiske objekter trenger ikke å oppfylle kontrastkravet når «<em>en bestemt presentasjon av grafikk er avgjørende for informasjonen som formidles</em>». Avgjørende-unntaket er i følge forståartikkelen ment å gjelde når det ikke er mulig å presentere grafikken med tilstrekkelig kontrast, uten å undergrave betydningen.</p>\n<p>Dersom en bestemt presentasjon av det ikke tekstlige innholdet er avgjørende, gjelder ikke kravet. Eksempler er</p>\n<ul>\n<li>grafikk som er en del av en logo eller merkevare</li>\n<li>flagg</li>\n<li>bilder av personer eller uteområder</li>\n<li>skjermbilder som viser hvordan en nettside så ut tidligere</li>\n<li>fargeforandringer som representerer måleenheter, for eksempel i et heatmap</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "En bestemt presentasjon av det grafiske objektet er avgjørende for informasjonen som formidles."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Mål og registrer kontrasten til det grafiske objektet mot farge som ligger rett ved siden av.",
+			"ht": "<p>Du skal måle og registrere kontrast mellom fargen til det grafiske objektet, som kreves for å forstå innholdet, og direkte tilgrensende farge (ekstern). </p>\n<p><strong>Merk:</strong> Dersom du tester en grafikk objekt som består av flere grafiske objekter, registrer du et og et objekt, og tester det mot fargen som ligger ved siden av. Se eksempel med <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/img/contrast-currency-down.png\" target=\"_blank\" rel=\"noopener\">pund</a> i forståartikkelen. Om du er i tvil om hvilke farger du skal måle, finner du flere eksempler i <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html#graphical-objects\" target=\"_blank\" rel=\"noopener\">forståartikkelen</a>.</p>\n<p><strong>Tips: </strong>Du kan zoome eller forstørre nettsiden for å gjøre det enklere å måle kontrasten. </p>\n<p><strong>Retningslinjer for test:</strong></p>\n<ul>\n<li>Identifiser den fargen (ekstern) som ligger rett ved siden av objektet.\n<ul>\n<li>Dersom objektet ligger på gradert bakgrunn, skal du registrere den med dårligst kontrast.</li>\n</ul>\n</li>\n<li>Bruk Color Contrast Checker – TPGi for å måle kontrastforhold</li>\n</ul>",
+			"type": "tekst",
+			"kilde": [
+				"G207",
+				"G209"
+			],
+			"ruting": {
+				"alle": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "3.3",
+							"type": "mellom",
+							"verdi": 0,
+							"verdi2": 2.99,
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.4"
+							}
+						},
+						"2": {
+							"type": "mellom",
+							"sjekk": "3.3",
+							"verdi": 3,
+							"verdi2": 3000,
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Det grafiske objektet har kontrast på minst 3:1."
+							}
+						}
+					}
+				}
+			},
+			"label": "Målt kontrast (Format 4.48:1 skrives som 4.48):",
+			"filter": "tal"
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Ligger det flere ulike farger rett ved siden av det grafiske objektet?",
+			"ht": "<p>Dersom det er flere ulike farger rett ved siden av objektet, tester man den fargen med dårligst kontrast. Dette inkluderer grafiske objekter med gradert bakgrunn. </p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det grafiske objektet har ikke kontrast på minst 3:1."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Er objektet fortsatt mulig å forstå, selv om man går ut fra at bakgrunnsfargen er usynlig?",
+			"ht": "<p>Dersom kontrasten er svakere enn 3:1, skal man anta at bakgrunnsfargen med dårligst kontrast er usynlig og stille seg spørsmålet; er objektet fortsatt mulig å forstå?</p>\n<p>Hvis objektet ikke er mulig å forstå, er det et brudd på kravet. Se eksempel i forståartikkelen om <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html#gradients\" target=\"_blank\" rel=\"noopener\">grafiske objekter med gradert bakgrunnsfarge</a>.</p>\n<p> </p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det grafiske objektet har ikke kontrast på minst 3:1."
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det grafiske objektet er fortsatt mulig å forstå, selv om kontrast er under 3:1."
+				}
+			}
+		}
+	]
+}
