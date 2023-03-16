@@ -1,0 +1,10 @@
+{
+    "nett_angi_side_spm" : {
+    "nn" : "Kva side testar du på?",
+    "bm" : "Hvilken side tester du på?"
+    },
+    "nett_angi_side_ht" : {
+    "nn" : "Oppgi URL eller side-ID.",
+    "bm" : "Angi URL eller side-ID."
+    } 
+}
