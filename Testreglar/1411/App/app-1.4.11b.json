@@ -36,8 +36,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har appsiden aktive brukergrensesnittkomponenter, der farge brukes som eneste visuelle virkemiddel, for å indikere tilstander?",
-			"ht": "<p>Gjør en visuell inspeksjon av appsiden for å identifisere brukergrensesnittkomponenter der farge brukes som eneste visuelle virkemiddel for å indikere tilstander.</p>\n<p>Eksempler på tilstander er:</p>\n<ul>\n<li>Funksjons-tilstander (av/på, valgt/ikke valgt, vis/skjul, aktivert/ikke aktivert, avkryssingsboks, radio knapper, steg i skjema).</li>\n<li>Interaksjons-tilstander (om fokusert/ikke fokusert (med eksternt tastatur eller trykk handling)).</li>\n</ul>\n<p>Visuelle eksempler på dette finnes i dokumentet <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html\" target=\"_blank\" rel=\"noopener\">suksesskriterium 1.4.11 Kontrast for ikke-tekstlig innhold</a>.</p>\n<p><strong>Tilstander som ikke skal testes:</strong></p>\n<ul>\n<li>Hvis en knapp har tekst eller et inndatafelt har plassholdertekst som er synlig, gjelder ikke kravet. Hvis en knapp med tekst også har en farget kantlinje som tilstand, er ikke kantlinjen eneste visuelle virkemiddel for å indikere re tilstand. I slike situasjoner gjelder ikke 1.4.11, men de dekkes derimot av 1.4.3 Kontrast (minimum).</li>\n</ul>",
+			"spm": "Har appsiden aktive brukergrensesnittkomponenter, der farge brukes som eneste visuelle virkemiddel for å indikere tilstander?",
+			"ht": "<p>Gjør en visuell inspeksjon av appsiden for å identifisere brukergrensesnittkomponenter der farge brukes som eneste visuelle virkemiddel for å indikere tilstander.</p>\n<p>Eksempler på tilstander er:</p>\n<ul>\n<li>Funksjons-tilstander (av/på, valgt/ikke valgt, vis/skjul, aktivert/ikke aktivert, avkryssingsboks, radio knapper, steg i skjema).</li>\n<li>Interaksjons-tilstander (om fokusert/ikke fokusert (med eksternt tastatur eller trykk handling)).</li>\n</ul>\n<p>Visuelle eksempler på dette finnes i dokumentet <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html\" target=\"_blank\" rel=\"noopener\">suksesskriterium 1.4.11 Kontrast for ikke-tekstlig innhold</a>.</p>\n<p><strong>Disse tilstandene skal ikke testes:</strong></p>\n<ul>\n<li>Hvis en knapp har tekst eller et inndatafelt har plassholdertekst som er synlig, gjelder ikke kravet. Hvis en knapp med tekst også har en farget kantlinje som tilstand, er ikke kantlinjen eneste visuelle virkemiddel for å indikere tilstand.\n<ul>\n<li>I slike situasjoner gjelder ikke 1.4.11, men de dekkes derimot av 1.4.3 Kontrast (minimum).</li>\n</ul>\n</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -74,8 +74,9 @@
 			"kilde": [],
 			"svarArray": [
 				"Fokus",
+				"Peker over (hover)",
 				"Valgt/ikke-valgt",
-				"Vis/skjult",
+				"Vis/skjul",
 				"Annet"
 			],
 			"ruting": {
