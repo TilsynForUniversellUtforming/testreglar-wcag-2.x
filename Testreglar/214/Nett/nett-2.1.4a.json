@@ -1,10 +1,13 @@
 {
-	"id": "2.1.4a",
+	"id": "nett-2.1.4a",
 	"type": "web",
-	"kravTilSamsvar": "<p>For hurtigtastar som består av eit teikn er ein av følgjande er oppfylt:</p>\r\n<ul>\r\n<li>Slå av: Det finnast ein mekanisme for å slå av hurtigtasten.</li>\r\n<li>Omadressere: Det finnast ein mekanisme for å omadressere hurtigtasten til å bruke ein eller flere modifiseringstaster.</li>\r\n<li>Aktiv berre ved fokus: Hurtigtasten for ein brukergrensesnittkomponent er berre aktiv når komponenten kjem i fokus.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Krav til samsvar: </p>\r\n<ul>\r\n<li>Det er en mekanisme for å slå av hurtigtasten\r\n<ul>\r\n<li>Mekanismen ligger på samme nettside som innholdet som benytter hurtigtaster eller</li>\r\n</ul>\r\n</li>\r\n<li>Det er en mekanisme for å rekonfigurere (omadressere) hurtigtasten ved hjelp av en eller flere modifiseringstaster\r\n<ul>\r\n<li>Mekanismen ligger på samme nettside som innholdet som benytter hurtigtaster eller</li>\r\n</ul>\r\n</li>\r\n<li>Hurtigtasten for en brukergrensesnittkomponent er kun aktiv når komponenten kommer i fokus</li>\r\n</ul>",
 	"kolonner": [
 		{
 			"title": "2.2"
+		},
+		{
+			"title": "2.3"
 		},
 		{
 			"title": "3.2"
@@ -17,6 +20,9 @@
 		},
 		{
 			"title": "3.5"
+		},
+		{
+			"title": "3.6"
 		}
 	],
 	"side": "2.1",
@@ -24,10 +30,10 @@
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
+			"spm": "Hvilken side tester du?",
 			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
-			"label": "URL/Side:",
+			"label": "URL/Side-ID:",
 			"datalist": "Sideutvalg",
 			"oblig": true,
 			"ruting": {
@@ -40,8 +46,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har nettsida innhald som blir aktivert av hurtigtastar?",
-			"ht": "<p>Undersøk nettsida for å sjå om det finnes innhald som blir aktivert av hurtigtastar/tastatursnarvegar.</p>",
+			"spm": "Er det oppgitt av innholdsprodusent eller i innholdet, at testsiden har hurtigtast som består av kun ett tegn?",
+			"ht": "<p>Indentifiser hurtigtast som om innholdsprodusent eller innholdet har oppgitt.</p>\n<p>Hurtigtast som består av kun ett tegn, omfatter alle utskriftstegn (dvs. alle bokstaver, både store og små), tegnsetting, siffer eller symboler).</p>\n<p><strong>Merk: </strong>Hurtigtast som kombineres med kun <strong>Shift</strong>-tasten er omfattet av kravet, og skal testes. For eksempel, når du bruker Shift-tasten for å få stor bokstav eller tegnsetting.</p>\n<p>Dette skal ikke testes: </p>\n<ul>\n<li>Tilgangstaster (Accesskeys) er ikke omfattet av kravet, fordi de brukes alltid sammen med en eller flere modifiseringstaster.</li>\n<li>iFrame skal ikke testes.</li>\n<li>Kravet gjelder ifølge ordlyden kun i situasjoner der innholdsprodusenten faktisk har tatt i bruk hurtigtaster på nettsiden, som i tillegg består utelukkende av ett enkelt tegn (single-key shortcut). Du skal ikke teste hurtigtaster som er angitt av brukeragenten.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -50,18 +56,35 @@
 					"steg": "3.1"
 				},
 				"nei": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Har testsiden hurtigtast som består av ett tegn?",
+			"ht": "<p>Slik tester du om det er tatt i bruk hurtigtaster, omfattet av kravet, i tilfeller der vi ikke har opplysninger om det fra innholdsprodusent eller i innholdet: </p>\n<ul>\n<li>Trykk på alle utskriftstegn (Alle bokstaver, både store og små, tegnsetting, siffer eller symbol)</li>\n<li><strong>Merk: </strong>Ikke trykk på\n<ul>\n<li>modifiseringstaster, som Ctrl, Alt, Esc,</li>\n<li>piltaster</li>\n<li>funksjonstaster, F1-F12.</li>\n<li>Space, Enter, Return, Tab eller Delete</li>\n</ul>\n</li>\n</ul>\n<ul>\n<li>Hold deretter nede Shift-tasten og trykk på de samme tastene igjen.</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Nettsida har ikkje innhald som blir aktivert av hurtigtastar."
+					"utfall": "Testsiden har ikke hurtigtaster som består av kun ett tegn."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
 				}
 			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Beskriv innhaldet som har hurtigtastar.",
-			"ht": "<p>Beskriv innhaldet som har hurtigtastar. Dersom det er fleire element må du registrere dei kvar for seg. </p>",
+			"spm": "Beskriv hurtigtasten du tester",
+			"ht": "<p>Beskriv hurtigtasten, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere hurtigtaster, registrerer du en og en.</p>",
 			"type": "tekst",
 			"kilde": [],
-			"label": "Innhald som har hurtigtastar",
+			"label": "Hurtigtast:",
 			"multilinje": true,
 			"ruting": {
 				"alle": {
@@ -72,14 +95,14 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Består tastatursnarvegen av berre eit teikn?",
-			"ht": "<p>Sjekk om tastatursnarvegen består av berre eit enkelt teikn.</p>\n<p><strong>Merk:</strong> Dette omfattar store bokstaver, små bokstaver, teiknsetting, siffer og symbol.</p>",
+			"spm": "Utløser hurtigtasten en handling?",
+			"ht": "<p>Eksempel på handlinger er at den aktuelle hurtigtasten</p>\n<ul>\n<li>åpner en lenke</li>\n<li>aktiverer knapp</li>\n<li>endrer farge på et element</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Tastatursnarvegen består av meir enn eit teikn."
+					"utfall": "Hurtigtasten utløser ikke en handling."
 				},
 				"ja": {
 					"type": "gaaTil",
@@ -89,18 +112,14 @@
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Finnast det ein måte å slå av tastatursnarvegen?",
-			"ht": "<p>Sjekk om det finast ein måte å slå av/ deaktivere tastatursnarvegen.</p>",
+			"spm": "Er hurtigtasten bare aktiv ved fokus?",
+			"ht": "<p>Sjekk om hurtigtasten bare er aktiv når den tilhørende brukergrensesnittkomponenten er i fokus.</p>",
 			"type": "jaNei",
-			"kilde": [
-				"G217",
-				"F99"
-			],
+			"kilde": [],
 			"ruting": {
 				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Tastatursnarveg som det er mogeleg å deaktivere."
+					"type": "ikkjeForekomst",
+					"utfall": "Hurtigtasten er bare aktiv når den tilhørende brukergrensesnittkomponenten er i fokus."
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -110,8 +129,8 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Er det mogeleg for brukaren å omadressere (remap) tastatursnarvegen, slik at den brukar ein eller fleire modifiseringstastar?",
-			"ht": "<p>Eksempel på modifiseringstastar kan være Ctrl, Shift eller Alt i kombinasjon med den opphavlege hurtigtasten.</p>",
+			"spm": "Finnes det en mekanisme for å slå av hurtigtasten, som fungerer?",
+			"ht": "<p>Mekanismen for å slå av eller rekonfigurere hurtigtasten skal være</p>\n<ul>\n<li>på samme nettside som innholdet med hurtigtasten eller</li>\n<li>mulig å nå via en tydelig merket en mekanisme som ligger på samme nettside.</li>\n</ul>\n<p>Det er tilstrekkelig at mekanismen for eksempel er plassert i topp- eller bunnteksten eller er dokumentert i innstillingene for nettstedet. </p>\n<p><strong>Merk:</strong> Du skal teste at mekanismen faktisk slår av hurtigtasten (fungerer).</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G217",
@@ -121,7 +140,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Tastatursnarveg som let seg omadressere til å bruke ein eller fleire modifiseringstastar. "
+					"utfall": "Det finnes en mekanisme for å slå av hurtigtasten."
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -131,20 +150,44 @@
 		},
 		{
 			"stegnr": "3.5",
-			"spm": "Er hurtigtasten berre aktiv ved fokus?",
-			"ht": "<p>Sjekk om hurtigtasten berre er aktiv når den tilhøyrande brukargrensesnittkomponenten kjem i fokus.</p>",
+			"spm": "Finnes det en mekanisme for å rekonfigurere (omadressere) hurtigtasten ved hjelp av en eller flere modifiseringstaster?",
+			"ht": "<p>Eksempel på modifiseringstaster kan være Ctrl, Alt, Alt Gr og Shift eller en kombinasjon av slike, eller tilsvarende modifiseringstaster for Mac.</p>",
 			"type": "jaNei",
-			"kilde": [],
+			"kilde": [
+				"G217",
+				"F99"
+			],
 			"ruting": {
 				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Hurtigtasten som berre er aktiv når den tilhøyrande brukargrensesnittkomponenten kjem i fokus."
+					"type": "gaaTil",
+					"steg": "3.6"
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Hurtigtast beståande av eit teikn som ikkje let seg slå av, omadressere eller er aktiv utan fokus."
+					"utfall": "Hurtigtast som består av ett tegn, kan ikke slås av eller omadresseres."
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Rekonfigurerer hurtigtasten og sjekk om den fungerer.",
+			"ht": "<p>Rekonfigurerer hurtigtasten med en eller flere modifiseringstaster (Ctrl, Alt, Alt Gr og Shift eller en kombinasjon av slike) eller tilsvarende modifiseringstaster for Mac, og sjekk om rekonfigureringen fungerer.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G217",
+				"F99"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det finnes en mekanisme for å rekonfigurere (omadressere) hurtigtasten."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det finnes en mekanisme for å rekonfigurere (omadressere) hurtigtasten, men den fungerer ikke."
 				}
 			}
 		}
