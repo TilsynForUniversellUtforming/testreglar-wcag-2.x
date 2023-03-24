@@ -64,7 +64,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Har testsiden hurtigtast som består av ett tegn?",
-			"ht": "<p>Slik tester du om det er tatt i bruk hurtigtaster, omfattet av kravet, i tilfeller der vi ikke har opplysninger om det fra innholdsprodusent eller i innholdet: </p>\n<ul>\n<li>Trykk på alle utskriftstegn (Alle bokstaver, både store og små, tegnsetting, siffer eller symbol)</li>\n<li><strong>Merk: </strong>Ikke trykk på\n<ul>\n<li>modifiseringstaster, som Ctrl, Alt, Esc,</li>\n<li>piltaster</li>\n<li>funksjonstaster, F1-F12.</li>\n<li>Space, Enter, Return, Tab eller Delete</li>\n</ul>\n</li>\n</ul>\n<ul>\n<li>Hold deretter nede Shift-tasten og trykk på de samme tastene igjen.</li>\n</ul>",
+			"ht": "<p>Slik tester du om det er tatt i bruk hurtigtaster, omfattet av kravet, i tilfeller der vi ikke har opplysninger om det fra innholdsprodusent eller i innholdet: </p>\n<ul>\n<li>Trykk på alle utskriftstegn (Alle bokstaver, både store og små, tegnsetting, siffer eller symbol)\n<ul>\n<li><strong>Merk: </strong>Ikke trykk på\n<ul>\n<li>modifiseringstaster, som Ctrl, Alt, Esc,</li>\n<li>piltaster</li>\n<li>funksjonstaster, F1-F12.</li>\n<li>Space, Enter, Return, Tab eller Delete</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Se etter endringer på siden som følge av at du har trykket hurtigtasten.</li>\n<li>Hold deretter nede Shift-tasten, trykk på de samme tastene igjen og se etter endringer på siden.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -171,7 +171,7 @@
 		},
 		{
 			"stegnr": "3.6",
-			"spm": "Rekonfigurerer hurtigtasten og sjekk om den fungerer.",
+			"spm": "Rekonifigurer hurtigtasten. Fungerer hurtigtasten etter at du har rekonfigurert den?",
 			"ht": "<p>Rekonfigurerer hurtigtasten med en eller flere modifiseringstaster (Ctrl, Alt, Alt Gr og Shift eller en kombinasjon av slike) eller tilsvarende modifiseringstaster for Mac, og sjekk om rekonfigureringen fungerer.</p>",
 			"type": "jaNei",
 			"kilde": [
