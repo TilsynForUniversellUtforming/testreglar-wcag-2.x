@@ -114,7 +114,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Forsvinner det ekstra innholdet, fordi informasjonen ikke lenger er gyldig?",
-			"ht": "<p>Dersom det ekstra innholdet forsvinner, fordi Informasjonen som formidles av det ekstra innholdet er ikke lenger aktuell, gjelder ikke kravet. Eksempel er en \"opptatt\"-melding, som ikke lenger er gyldig, fordi brukeren har blitt tilgjengelig i mellomtiden.</p>",
+			"ht": "<p>Dersom det ekstra innholdet forsvinner, fordi informasjonen ikke lenger er gyldig, så gjelder ikke kravet. Eksempel er en \"opptatt\"-melding, som ikke lenger er gyldig, fordi brukeren har blitt tilgjengelig i mellomtiden.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
