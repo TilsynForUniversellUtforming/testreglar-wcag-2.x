@@ -1,0 +1,189 @@
+{
+	"id": "nett-2.5.2a",
+	"type": "web",
+	"kravTilSamsvar": "<p>For funksjonalitet som kan betjenes med en enkelt pekerbevegelse skal minst én av følgende være oppfylt:</p>\r\n<ul>\r\n<li>Trykkhandlingen (down-event) fra brukeren utløser ikke funksjonalitet eller</li>\r\n<li>Funksjonen utføres på slipphandlingen (up-event), og det finnes en mekanisme\r\n<ul>\r\n<li>for å avbryte funksjonen før den utføres, eller</li>\r\n<li>for å angre funksjonen etter at den er utført eller </li>\r\n</ul>\r\n</li>\r\n<li>Slipphandlingen (up-event) opphever resultatet av den foregående trykkhandlingen (down-event) eller</li>\r\n<li>Det er avgjørende å utføre funksjonen på trykkhandlingen (down-event)</li>\r\n</ul>",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		},
+		{
+			"title": "3.6"
+		},
+		{
+			"title": "3.7"
+		}
+	],
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "URL/Side-ID:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Finnes det funksjonalitet som kan betjenes med en enkelt pekerbevegelse (single pointer)?",
+			"ht": "<p>Enkelt pekerbevegelse er pekerinndata som fungerer med kun ett kontaktpunkt med skjermen, herunder:</p>\n<ul>\n<li>enkelttrykk og -klikk,</li>\n<li>dobbelttrykk og -klikk,</li>\n<li>lange trykk</li>\n</ul>\n<p><strong>Slik identifiserer du funksjonalitet som kan betjenes med en enkelt pekerbevegelse:</strong></p>\n<ul>\n<li>Du skal åpne testsiden på en enhet med berøringsskjerm f.eks. smarttelefon eller nettbrett. </li>\n<li>Slå av skjermleser og andre andre tilgjengelighetsfunksjoner hvis det er aktivert\n<ul>\n<li>Dette gjelder både hjelpemiddelteknologi og innstillinger i operativsystemet</li>\n</ul>\n</li>\n<li>Gjør visuell inspeksjon og sjekk om det finnes lenker og knapper eller lignende funksjonalitet </li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Det finnes ikke funksjonalitet som kan betjenes med en enkelt pekerbevegelse."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken funksjonalitet tester du?",
+			"ht": "<p>Beskriv funksjonaliteten, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere funksjoner, registrerer du en og en.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "Funksjonalitet:",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Utløser trykkhandlingen (down-event) med pekeren funksjonen?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Trykk og hold nede pekeren du bruker (museknappen, fingeren eller stylus) på innholdet på berøringsskjermen</li>\n<li>Sjekk om trykkhandlingen (down-event) utløser funksjonen\n<ul>\n<li>Eksempel: Lenker åpnes når du trykker og holder.</li>\n</ul>\n</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [
+				"F101"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Trykkhandlingen (down-event) utløser ikke funksjonen"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er det avgjørende å utføre funksjonen på trykkhandlingen (down-event)?",
+			"ht": "<p>Eksempler der det er avgjørende å utføre funksjonen på trykkhandlingen:</p>\n<ul>\n<li>Funksjoner som krever eller måler reaksjon, for eksempel leirdueskyting</li>\n<li>Funksjoner som etterligner et tastatur, for eksempel skjermtastatur </li>\n<li>Funksjoner som etterligner et instrument, for eksempel tangenter på et piano </li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Det er avgjørende å utføre funksjonen på trykkhandlingen (down-event)."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Opphever slipphandlingen med pekeren (up-event) resultatet av den foregående trykkhandlingen (down-event)?",
+			"ht": "<p>Sjekk om slipphandlingen med pekeren reverserer eller avbryter resultatet av den foregående trykkhandlingen.</p>\n<p>Eksempler:</p>\n<ul>\n<li>Trykk og hold for å zoome inn: Trykke og holde pekeren på et bilde for å forstørre det.  Når pekeren slippes vises bildet i vanlig størrelse</li>\n<li>Dra og slipp: Trykkhandlingen plukker opp et objekt som følger pekeren, for eksempel et Kanban-brett i Jira.\n<ul>\n<li>Dersom pekeren slippes utenfor slippsonen, går objektet tilbake til utgangspunktet</li>\n<li>Dersom pekeren slippes innenfor slippsonen kommer det opp en dialogboks for å bekrefte eller avbryte</li>\n</ul>\n</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Slipphandlingen (up-event) opphever ikke resultatet av den foregående trykkhandlingen (down-event)"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Fullfører slipphandlingen en funksjon?",
+			"ht": "<p>Når funksjonen utføres på slipphandlingen, finnes det en mekanisme for å angre funksjonen etter at den er fullført.</p>\n<p>Eksempel:</p>\n<ul>\n<li>Dra- og slipp: Brukeren kan flytte et objekt tilbake til utgangspunktet</li>\n<li>Angre sletting: Brukeren kan angre sletting av en fil</li>\n<li>Angre aktivering: Brukeren aktiverer høykontrastvisning av en nettside</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Slipphandlingen (up-event) opphever resultatet av den foregående trykkhandlingen (down-event)"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Finnes det en mekanisme for å angre funksjonen som ble utført på slipphandlingen, etter at den er fullført?",
+			"ht": "<p>Eksempel: </p>\n<ul>\n<li>Dialogboks for å bekrefte</li>\n<li>Flytte objektet tilbake til utgangspunktet</li>\n<li>Angre-knapp</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det finnes ikke en mekanisme for å angre funksjonen fullført av slipphandlingen."
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Angrer mekanisme funksjonen som ble utført på slipphandlingen etter at den er fullført?",
+			"ht": "<p>Eksempel:</p>\n<ul>\n<li>Dra- og slipp: brukeren flyttet et objekt fra et startpunkt til sluttpunkt, det finnes en mekanisme for å flytte objektet tilbake til startpunkt.</li>\n<li>Sletting: brukeren slettet et dokument eller en mappe, det finnes en mekanisme for å gjenopprette filen.</li>\n<li>Endret visning: brukeren aktiverte høykontrast versjon av en nettside, det finnes en mekanisme for å endre til vanlig versjon. </li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det finnes en mekanisme for å angre funksjonen fullført av slipphandlingen (up-event)."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det finnes ikke en mekanisme for å angre funksjonen fullført av slipphandlingen (up-event))."
+				}
+			}
+		}
+	]
+}
