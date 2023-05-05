@@ -1,0 +1,317 @@
+{
+	"id": "2.5.3a",
+	"type": "web",
+	"versjon": "1.0",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		},
+		{
+			"title": "3.6"
+		},
+		{
+			"title": "3.7"
+		},
+		{
+			"title": "3.8"
+		},
+		{
+			"title": "3.9"
+		},
+		{
+			"title": "3.10"
+		},
+		{
+			"title": "3.11"
+		}
+	],
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "<p>Oppgi url eller side-ID.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettsida skjemaelement, lenker eller knappar?",
+			"ht": "<p><strong>Merk:</strong> Skjema i PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje skjemaelement, lenker eller knappar."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Inneheld nettsida visuelle ledetekstar, lenker eller knappar med tekst?",
+			"ht": "<p>Aktuelle testelement er:</p>\n<ul>\n<li>visuelle ledetekstar</li>\n<li>knappar med tekst</li>\n<li>lenker i form av tekst</li>\n</ul>\n<p>Ledetekstar omfattar all synleg tekst eller anna komponent med tekst som brukast til å identifisere skjemaelement.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Nettsida har ikkje synlege ledetekstar, lenker eller knappar med tekst."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Referer synleg ledetekst til elementet du testar.",
+			"ht": "<p>Referer synleg ledetekst til skjemaelementet, lenka eller knappen du testar.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "Synleg ledetekst:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er elementet du testar koda med attributtet \"aria-label\" ?",
+			"ht": "<p>Sjekk om skjemaelementet, lenka eller knappen du testar er koda med attributtet <code>aria-label.</code></p>\n<p>Eksempel:<code> &lt;input aria-label=\"ledetekst\"/&gt;</code></p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er elementet du testar koda med attributtet \"aria-labelledby\" ?",
+			"ht": "<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p>\n<p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er aria-labelledby-attributtet kopla til annan tekst på sida (lenkekontekst)?",
+			"ht": "<p>Gjer eit søk i koden på id i aria-labelledby. Dersom det finst fleire id-ar, skal du undersøke alle. Id-ane er då skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>).</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Kva type element testar du?",
+			"ht": "<p>Vel mellom skjemaelement, lenke eller knapp.</p>",
+			"type": "radio",
+			"kilde": [],
+			"svarArray": [
+				"Skjemaelement",
+				"Lenke",
+				"Knapp"
+			],
+			"ruting": {
+				"alt0": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"alt1": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"alt2": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Finst det tekst i elementet?",
+			"ht": "<p>Sjekk om det ligg tekst mellom start og sluttkoden til knappen/lenka. Det kan hende du må felle ut delar av koden for å få tak i teksten.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"type": "lik",
+							"sjekk": "3.5",
+							"verdi": "Knapp",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.7"
+							}
+						},
+						"2": {
+							"type": "lik",
+							"sjekk": "3.5",
+							"verdi": "Lenke",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.8"
+							}
+						}
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Har knappen eit value-attributt?",
+			"ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Er elementet du testar kopla til eit &lt;label&gt;-element i koden?",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette. Sjekk at:</p>\n<ol>\n<li>Skjemaelementet/lenka/knappen har eit id-attributt.</li>\n<li><code>&lt;label&gt;</code>-elementet har eit for-attributt.</li>\n<li><code>&lt;label&gt;</code>-elementet er ikkje koda med <code>display:none</code></li>\n<li>Innhaldet i <code>&lt;label&gt;</code>-elementet sitt for-attributt er det same som innhaldet i skjemaelementet/knappen sitt id-attributt.</li>\n</ol>\n<p>Det er nok at verdien er lik.</p>\n<p><strong>Merk:</strong> Det er ikkje tilstrekkeleg at svaralternativ i ei nedtrekksliste har label-attributt, fordi dette fungerer som identifikasjon til svaralternativet og ikkje til lista.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Ligg elementet du testar inne i eit &lt;label&gt;-element i koden?",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette. Sjå om det finst eit <code>&lt;label&gt;</code>-element som startar framføre og blir avslutta etter skjemaelementet/lenka/knappen. Du må kanskje felle ut <code>&lt;label&gt;</code>-elementet i koden for å sjå all koding.</p>\n<p>I dette tilfellet er ledeteksten all tekst som ligg inne i <code>&lt;label&gt;</code>-elementet.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Er elementet koda med eit title-attributt?",
+			"ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p>\n<p>Eksempel : <code>&lt;button title=\"Ledetekst\"&gt;&lt;/button&gt;</code></p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelement, lenke eller knapp er ikkje er kopla til ein ledetekst i koden."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Inneheld ledeteksten du fann i koden den synlege ledeteksten?",
+			"ht": "<p>Sjekk om ledeteksten du fann i koden:</p>\n<ul>\n<li>er identisk med den synlege ledeteksten</li>\n<li>inneheld den synlege ledeteksten på ein eller anna måte, og dei orda som er i den synlege ledeteksten er samanhengande og kjem i same rekkjefølgje.</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G208",
+				"G211",
+				"F96"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Skjemaelement, lenke eller knapp som inneheld den synlege ledeteksten i koden."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelement, lenke eller knapp som ikkje inneheld den synlege ledeteksten i koden."
+				}
+			}
+		}
+	],
+	"kravTilSamsvar": "<p>Skjemaelement, lenker og knappar har ein ledetekst i koden som:</p>\r\n<ul>\r\n<li>er identisk med den synlege ledeteksten, eller</li>\r\n<li>inneheld den synlege ledeteksten på ein eller annan måte, og dei orda som er i den synlege ledeteksten er sammenhengande og kjem i same rekkjefølgje</li>\r\n</ul>"
+}
