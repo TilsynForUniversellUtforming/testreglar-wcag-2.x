@@ -46,7 +46,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Finnes det funksjonalitet som kan betjenes med en enkelt pekerbevegelse (single pointer)?",
-			"ht": "<p>Enkelt pekerbevegelse er pekerinndata som fungerer med kun ett kontaktpunkt med skjermen, herunder:</p>\n<ul>\n<li>enkelttrykk og -klikk,</li>\n<li>dobbelttrykk og -klikk,</li>\n<li>lange trykk</li>\n</ul>\n<p><strong>Slik identifiserer du funksjonalitet som kan betjenes med en enkelt pekerbevegelse:</strong></p>\n<ul>\n<li>Du skal åpne testsiden på en enhet med berøringsskjerm f.eks. smarttelefon eller nettbrett. </li>\n<li>Slå av skjermleser og andre andre tilgjengelighetsfunksjoner hvis det er aktivert\n<ul>\n<li>Dette gjelder både hjelpemiddelteknologi og innstillinger i operativsystemet</li>\n</ul>\n</li>\n<li>Gjør visuell inspeksjon og sjekk om det finnes lenker og knapper eller lignende funksjonalitet </li>\n</ul>",
+			"ht": "<p>Enkelt pekerbevegelse er pekerinndata som fungerer med kun ett kontaktpunkt med skjermen, herunder:</p>\n<ul>\n<li>enkelttrykk og -klikk,</li>\n<li>dobbelttrykk og -klikk,</li>\n<li>lange trykk</li>\n</ul>\n<p>Slik identifiserer du funksjonalitet som kan betjenes med en enkelt pekerbevegelse:</p>\n<ul>\n<li>Åpne testsiden på en enhet med berøringsskjerm f.eks. smarttelefon eller nettbrett. </li>\n<li>Slå av skjermleser og andre andre tilgjengelighetsfunksjoner, hvis det er aktivert på enheten\n<ul>\n<li>Dette gjelder både hjelpemiddelteknologi og innstillinger i operativsystemet</li>\n</ul>\n</li>\n<li>Gjør en visuell inspeksjon og sjekk om det finnes lenker og knapper eller lignende funksjonalitet </li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -98,7 +98,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er det avgjørende å utføre funksjonen på trykkhandlingen (down-event)?",
-			"ht": "<p>Eksempler der det er avgjørende å utføre funksjonen på trykkhandlingen:</p>\n<ul>\n<li>Funksjoner som krever eller måler reaksjon, for eksempel leirdueskyting</li>\n<li>Funksjoner som etterligner et tastatur, for eksempel skjermtastatur </li>\n<li>Funksjoner som etterligner et instrument, for eksempel tangenter på et piano </li>\n</ul>",
+			"ht": "<p>Dette gjelder tilfeller der tidspunkt (timingen) for en aktivering av funksjonen er viktig og forutsetter ned-hendelsen</p>\n<p>Eksempler på situasjoner der det er avgjørende å utføre funksjonen på trykkhandlingen:</p>\n<ul>\n<li>Funksjoner som krever eller måler reaksjon, for eksempel leirdueskyting</li>\n<li>Funksjoner som etterligner et tastatur, for eksempel skjermtastatur </li>\n<li>Funksjoner som etterligner et instrument, for eksempel tangenter på et piano </li>\n<li>Andre simuleringer og spill fra det virkelige liv.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -115,7 +115,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Opphever slipphandlingen med pekeren (up-event) resultatet av den foregående trykkhandlingen (down-event)?",
-			"ht": "<p>Sjekk om slipphandlingen med pekeren reverserer eller avbryter resultatet av den foregående trykkhandlingen.</p>\n<p>Eksempler:</p>\n<ul>\n<li>Trykk og hold for å zoome inn: Trykke og holde pekeren på et bilde for å forstørre det.  Når pekeren slippes vises bildet i vanlig størrelse</li>\n<li>Dra og slipp: Trykkhandlingen plukker opp et objekt som følger pekeren, for eksempel et Kanban-brett i Jira.\n<ul>\n<li>Dersom pekeren slippes utenfor slippsonen, går objektet tilbake til utgangspunktet</li>\n<li>Dersom pekeren slippes innenfor slippsonen kommer det opp en dialogboks for å bekrefte eller avbryte</li>\n</ul>\n</li>\n</ul>",
+			"ht": "<p>Sjekk om slipphandlingen med pekeren reverserer eller avbryter resultatet av den foregående trykkhandlingen.</p>\n<ul>\n<li>Trykk og hold nede pekeren du bruker (museknappen, fingeren eller stylus) på innholdet.</li>\n<li>Bevege deretter pekeren vekk fra innholdet, mens du fremdeles holder pekeren nede.</li>\n<li>Sjekk at dette ikke utfører en handling.</li>\n</ul>\n<p>Eksempler:</p>\n<ul>\n<li>Trykk og hold for å zoome inn: Trykke og holde pekeren på et bilde for å forstørre det.  Når pekeren slippes vises bildet i vanlig størrelse</li>\n<li>Dra og slipp: Trykkhandlingen plukker opp et objekt som følger pekeren, for eksempel et Kanban-brett i Jira.\n<ul>\n<li>Dersom pekeren slippes utenfor slippsonen, går objektet tilbake til utgangspunktet</li>\n<li>Dersom pekeren slippes innenfor slippsonen kommer det opp en dialogboks for å bekrefte eller avbryte</li>\n</ul>\n</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -133,7 +133,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Fullfører slipphandlingen en funksjon?",
-			"ht": "<p>Når funksjonen utføres på slipphandlingen, finnes det en mekanisme for å angre funksjonen etter at den er fullført.</p>\n<p>Eksempel:</p>\n<ul>\n<li>Dra- og slipp: Brukeren kan flytte et objekt tilbake til utgangspunktet</li>\n<li>Angre sletting: Brukeren kan angre sletting av en fil</li>\n<li>Angre aktivering: Brukeren aktiverer høykontrastvisning av en nettside</li>\n</ul>",
+			"ht": "<p>Eksempel:</p>\n<ul>\n<li>Dra- og slipp: Brukeren flyttet et objekt til sluttpunktet</li>\n<li>Slette fil eller data: Brukeren slettet en fil eller data</li>\n<li>Aktivere en funksjonalitet: Brukeren aktiverte høykontrastvisning av en nettside</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -150,8 +150,8 @@
 		},
 		{
 			"stegnr": "3.6",
-			"spm": "Finnes det en mekanisme for å angre funksjonen som ble utført på slipphandlingen, etter at den er fullført?",
-			"ht": "<p>Eksempel: </p>\n<ul>\n<li>Dialogboks for å bekrefte</li>\n<li>Flytte objektet tilbake til utgangspunktet</li>\n<li>Angre-knapp</li>\n</ul>",
+			"spm": "Finnes det en mekanisme for å angre funksjonen etter at den er fullført, når funksjonen fullføres på slipphandlingen?",
+			"ht": "<p>Eksempel: </p>\n<ul>\n<li>Dialogboks for å bekrefte, avbryte eller brukeren kan flytte et objekt tilbake til utgangspunktet</li>\n<li>Dialogboks for å bekrefte, avbryte eller brukeren kan angre sletting av en fil</li>\n<li>Angre-knapp eller lignende</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -162,14 +162,14 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Det finnes ikke en mekanisme for å angre funksjonen fullført av slipphandlingen."
+					"utfall": "Det finnes ikke en mekanisme for å angre funksjonen fullført av slipphandlingen (up-event)."
 				}
 			}
 		},
 		{
 			"stegnr": "3.7",
-			"spm": "Angrer mekanisme funksjonen som ble utført på slipphandlingen etter at den er fullført?",
-			"ht": "<p>Eksempel:</p>\n<ul>\n<li>Dra- og slipp: brukeren flyttet et objekt fra et startpunkt til sluttpunkt, det finnes en mekanisme for å flytte objektet tilbake til startpunkt.</li>\n<li>Sletting: brukeren slettet et dokument eller en mappe, det finnes en mekanisme for å gjenopprette filen.</li>\n<li>Endret visning: brukeren aktiverte høykontrast versjon av en nettside, det finnes en mekanisme for å endre til vanlig versjon. </li>\n</ul>",
+			"spm": "Fungerer mekanismen som skal angre funksjonen? ",
+			"ht": "<p>Eksempel:</p>\n<ul>\n<li>Dra- og slipp: brukeren flyttet et objekt fra et startpunkt til sluttpunkt, det finnes en mekanisme for å flytte objektet tilbake til startpunkt.</li>\n<li>Sletting: brukeren slettet et dokument eller en mappe, det finnes en mekanisme for å gjenopprette filen.</li>\n<li>Endret visning: brukeren aktiverte høykontrast versjon av en nettside, det finnes en mekanisme for å endre til vanlig versjon. </li>\n<li>Andre lignende mekanismer som angrer funksjonen som ble utført på slipphandlingen etter at den er fullført</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -181,7 +181,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Det finnes ikke en mekanisme for å angre funksjonen fullført av slipphandlingen (up-event))."
+					"utfall": "Det finnes ikke en mekanisme for å angre funksjonen fullført av slipphandlingen (up-event)."
 				}
 			}
 		}
