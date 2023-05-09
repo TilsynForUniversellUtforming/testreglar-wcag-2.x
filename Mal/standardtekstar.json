@@ -6,5 +6,13 @@
     "nett_angi_side_ht" : {
     "nn" : "Oppgi URL eller side-ID.",
     "bm" : "Angi URL eller side-ID."
-    } 
+    },
+    "app_angi_side_spm" : {
+        "nn" : "Kva skjermbilde testar du på?",
+        "bm" : "Hvilket skjermbilde tester du på?"
+        },  
+    "app_angi_side_ht" : {
+        "nn" : "Beskriv skjermbildet med få stikkord, eller vel i lista.",
+        "bm" : "Beskriv skjermbildet med få stikkord, eller velg i listen."
+        }  
 }
