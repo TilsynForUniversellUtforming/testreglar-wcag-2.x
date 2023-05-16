@@ -1,0 +1,151 @@
+{
+	"id": "nett-2.5.4a",
+	"type": "web",
+	"kravTilSamsvar": "<ul>\r\n<li><span lang=\"NO-BOK\" style=\"font-size: 11.0pt; line-height: 107%; font-family: 'Arial',sans-serif; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: NO-BOK; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\">Funksjonalitet som kan brukes med å bevege enheten eller gjennom brukerbevegelser</span>, kan også brukes med vanlige brukergrensesnittkomponenter og</li>\r\n<li>Brukeren kan slå av bevegelsesaktivering av innhold via\r\n<ul>\r\n<li>innstillinger i brukeragenter som lar brukeren slå av bevegelsesaktivering på systemnivå eller</li>\r\n<li>en mekanisme for å slå av bevegelsesaktivering, og mekanismen ligger på samme side som innholdet med bevegelsesaktivering</li>\r\n</ul>\r\n</li>\r\n<li>Kravet gjelder med mindre\r\n<ul>\r\n<li>Støttet grensesnitt: Bevegelsen er brukt for å betjene funksjonalitet gjennom et grensesnitt som er tilgjengelighetsstøttende</li>\r\n<li>Avgjørende: Bevegelsen er avgjørende for funksjonaliteten, og det vil gjøre aktiviteten ugyldig.</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kolonner": [
+		{
+			"title": "2.1"
+		},
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		}
+	],
+	"side": "3.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "URL/Side-ID:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har virksomheten svart at nettstedet har funksjonalitet som kan betjenes med bevegelsesaktivering?",
+			"ht": "<p>Sjekk dokumentasjonen mottatt fra virksomheten. </p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke funksjonalitet med bevegelsesaktivering."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken funksjonalitet tester du?",
+			"ht": "<p>Bruk informasjonen fra virksomheten. Beskriv funksjonaliteten, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere funksjoner, registrerer du en og en.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"label": "Funksjonalitet:",
+			"datalist": "Sideutvalg"
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Hvilken type bevegelsesaktivering har funksjonaliteten?",
+			"ht": "<p>Kravet gjelder for følgende:</p>\n<ul>\n<li>bevegelser med selve enheten, gjennom for eksempel å vippe, rotere eller riste på den</li>\n<li>brukerbevegelser mot enheten, for eksempel ved at brukeren gjør ulike gester mot kamera </li>\n</ul>\n<p>Bruk informasjonen virksomheten og registrer bevegelsen. Eksempler på bevegelsaktivering er:</p>\n<ul>\n<li>Brukeren snur på enheten for å gå til neste eller forrige side</li>\n<li>Brukeren beveger enheten rundt for å se på ulike deler av et bilde</li>\n<li>Brukeren lukker en nettside ved å riste på enheten</li>\n<li>Brukeren gir tommel opp mot kamera for å godkjenne en handling</li>\n</ul>",
+			"type": "radio",
+			"kilde": [],
+			"svarArray": [
+				"Bevege selve enheten",
+				"Brukerbevegelser (gester) mot enheten"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er bevegelsesaktivering avgjørende for funksjonaliteten?",
+			"ht": "<p>Åpne testsiden på smarttelefon eller nettbrett. </p>\n<p>Noen ganger er nettinnhold avhengig av å bruke enhetssensordata eller bevegelsen er kontrollert av nettleseren eller operativsystemet. Da er bevegelsen avgjørende for funksjonaliteten. </p>\n<p>Eksempler på innhold som er unntatt fordi det er avgjørende vil være når:</p>\n<ul>\n<li>operativsystemet på enheten har funksjonalitet for å \n<ul>\n<li>slette innskrevet tekst ved å riste på den</li>\n<li>slå av lyden på innkommende anrop ved å snu skjermen ned</li>\n<li>dra håndflaten over skjermen for å ta skjermbilde</li>\n</ul>\n</li>\n<li>en skritteller er avhengig av enhetens bevegelser for å registrere og telle skritt</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Bevegelsesaktivering er avgjørende for funksjonaliteten."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Kan funksjonaliteten også betjenes med vanlige brukergrensesnittkomponenter?",
+			"ht": "<p>Vanlige brukergrensesnittkomponenter kan være lenke, knapp eller lignende.</p>\n<p>Eksempler</p>\n<ul>\n<li>Bevegelsesaktivert glidebryter (slider): En slider kan justeres ved å vippe enheten til høyre eller venstre. I tillegg er det knapper som tilbyr samme funksjonalitet. </li>\n<li>Rist for å slette/angre: Når brukeren har skrevet tekst i et skjemafelt, og deretter rister på enheten, kommer det opp en dialogboks der brukeren kan slette teksten. Støtte for backspace eller en knapp for å slette tekst i skjemafeltet, tilbyr samme funksjonalitet. </li>\n<li>Sidenavigering i en bok: Øyesporing oppdager når brukeren har lest en side, og blar automatisk til neste side. Det finnes knapper som tilbyr samme funksjonalitet. </li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G213"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Funksjonalitet med bevegelsesaktivering kan ikke betjenes med vanlige brukergrensesnittkomponenter."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Kan brukeren slå av bevegelsesaktiveringen?",
+			"ht": "<p>I følge ordlyden skal brukeren kunne slå av bevegelsesaktivering av innhold. Dette kan støttes på to måter: </p>\n<ul>\n<li>innstillinger i brukeragenten lar brukeren slå av bevegelsesaktivering på systemnivå eller</li>\n<li>det finnes en mekanisme for å slå av bevegelsesaktivering, og den ligger på samme side som innholdet med bevegelsesaktivering</li>\n</ul>\n<p>Eksempler på støtte for å slå av bevegelsesaktivering er:</p>\n<ul>\n<li>Bevegelsesaktivert glidebryter (slider): En slider kan justeres ved å vippe enheten til høyre eller venstre. En avkryssingsboks på siden slår av bevegelsesaktiveringen. </li>\n<li>Rist for å slette/angre: Når brukeren har skrevet tekst i et skjemafelt, og deretter rister på enheten, kommer det opp en dialogboks der brukeren kan slette teksten. Rist for å slette/angre kan slås av i innstillinger i nettleseren. </li>\n<li>Sidenavigering i en bok: Øyesporing oppdager når brukeren har lest en side og blar automatisk til neste side. Øyesporing kan slås av med en knapp på siden.</li>\n</ul>\n<p> </p>",
+			"type": "jaNei",
+			"kilde": [
+				"G213"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Funksjonalitet med bevegelsesaktivering kan betjenes med vanlige brukergrensesnittkomponenter og brukeren kan slå den av."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Funksjonalitet med bevegelsesaktivering kan betjenes med vanlige brukergrensesnittkomponenter, men brukeren kan ikke slå den av."
+				}
+			}
+		}
+	]
+}
