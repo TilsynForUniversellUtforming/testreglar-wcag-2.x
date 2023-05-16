@@ -1,7 +1,7 @@
 {
 	"id": "nett-2.5.2a",
 	"type": "web",
-	"kravTilSamsvar": "<p>For funksjonalitet som kan betjenes med en enkelt pekerbevegelse skal minst én av følgende være oppfylt:</p>\r\n<ul>\r\n<li>Trykkhandlingen (down-event) fra brukeren utløser ikke funksjonalitet eller</li>\r\n<li>Funksjonen utføres på slipphandlingen (up-event), og det finnes en mekanisme\r\n<ul>\r\n<li>for å avbryte funksjonen før den utføres, eller</li>\r\n<li>for å angre funksjonen etter at den er utført eller </li>\r\n</ul>\r\n</li>\r\n<li>Slipphandlingen (up-event) opphever resultatet av den foregående trykkhandlingen (down-event) eller</li>\r\n<li>Det er avgjørende å utføre funksjonen på trykkhandlingen (down-event)</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For funksjonalitet som kan betjenes med en enkel pekerbevegelse skal minst én av følgende være oppfylt:</p>\r\n<ul>\r\n<li>Trykkhandlingen (down-event) fra brukeren utløser ikke funksjonalitet eller</li>\r\n<li>Funksjonen utføres på slipphandlingen (up-event), og det finnes en mekanisme\r\n<ul>\r\n<li>for å avbryte funksjonen før den utføres, eller</li>\r\n<li>for å angre funksjonen etter at den er utført eller </li>\r\n</ul>\r\n</li>\r\n<li>Slipphandlingen (up-event) opphever resultatet av den foregående trykkhandlingen (down-event) eller</li>\r\n<li>Det er avgjørende å utføre funksjonen på trykkhandlingen (down-event)</li>\r\n</ul>",
 	"kolonner": [
 		{
 			"title": "2.2"
@@ -45,8 +45,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Finnes det funksjonalitet som kan betjenes med en enkelt pekerbevegelse (single pointer)?",
-			"ht": "<p>Enkelt pekerbevegelse er pekerinndata som fungerer med kun ett kontaktpunkt med skjermen, herunder:</p>\n<ul>\n<li>enkelttrykk og -klikk,</li>\n<li>dobbelttrykk og -klikk,</li>\n<li>lange trykk</li>\n</ul>\n<p>Slik identifiserer du funksjonalitet som kan betjenes med en enkelt pekerbevegelse:</p>\n<ul>\n<li>Åpne testsiden på en enhet med berøringsskjerm f.eks. smarttelefon eller nettbrett. </li>\n<li>Slå av skjermleser og andre andre tilgjengelighetsfunksjoner, hvis det er aktivert på enheten\n<ul>\n<li>Dette gjelder både hjelpemiddelteknologi og innstillinger i operativsystemet</li>\n</ul>\n</li>\n<li>Gjør en visuell inspeksjon og sjekk om det finnes lenker og knapper eller lignende funksjonalitet </li>\n</ul>",
+			"spm": "Finnes det funksjonalitet som kan betjenes med en enkel pekerbevegelse (single pointer)?",
+			"ht": "<p>Enkel pekerbevegelse er pekerinndata som fungerer med kun ett kontaktpunkt med skjermen, herunder:</p>\n<ul>\n<li>enkeltrykk og -klikk,</li>\n<li>dobbelttrykk og -klikk,</li>\n<li>lange trykk</li>\n</ul>\n<p>Slik identifiserer du funksjonalitet som kan betjenes med en enkel pekerbevegelse:</p>\n<ul>\n<li>Åpne testsiden på en enhet med berøringsskjerm f.eks. smarttelefon eller nettbrett. </li>\n<li>Slå av skjermleser og andre andre tilgjengelighetsfunksjoner, hvis det er aktivert på enheten\n<ul>\n<li>Dette gjelder både hjelpemiddelteknologi og innstillinger i operativsystemet</li>\n</ul>\n</li>\n<li>Gjør en visuell inspeksjon og sjekk om det finnes lenker og knapper eller lignende funksjonalitet </li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -56,7 +56,7 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Det finnes ikke funksjonalitet som kan betjenes med en enkelt pekerbevegelse."
+					"utfall": "Det finnes ikke funksjonalitet som kan betjenes med en enkel pekerbevegelse."
 				}
 			}
 		},
@@ -98,7 +98,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er det avgjørende å utføre funksjonen på trykkhandlingen (down-event)?",
-			"ht": "<p>Dette gjelder tilfeller der tidspunkt (timingen) for en aktivering av funksjonen er viktig og forutsetter ned-hendelsen</p>\n<p>Eksempler på situasjoner der det er avgjørende å utføre funksjonen på trykkhandlingen:</p>\n<ul>\n<li>Funksjoner som krever eller måler reaksjon, for eksempel leirdueskyting</li>\n<li>Funksjoner som etterligner et tastatur, for eksempel skjermtastatur </li>\n<li>Funksjoner som etterligner et instrument, for eksempel tangenter på et piano </li>\n<li>Andre simuleringer og spill fra det virkelige liv.</li>\n</ul>",
+			"ht": "<p>Dette gjelder tilfeller der tidspunkt (timingen) for en aktivering av funksjonen er viktig og forutsetter ned-hendelsen</p>\n<p>Eksempler på situasjoner der det er avgjørende å utføre funksjonen på trykkhandlingen:</p>\n<ul>\n<li>Funksjoner som krever eller måler reaksjon, for eksempel leirdueskyting spill</li>\n<li>Funksjoner som etterligner et tastatur, for eksempel skjermtastatur </li>\n<li>Funksjoner som etterligner et instrument, for eksempel tangenter på et piano </li>\n<li>Andre simuleringer og spill fra det virkelige liv.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
