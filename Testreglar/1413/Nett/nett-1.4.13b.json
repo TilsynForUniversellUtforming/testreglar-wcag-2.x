@@ -1,5 +1,5 @@
 {
-	"id": "nett-1.4.13b",
+	"id": "nett-1.4.13a",
 	"type": "web",
 	"kravTilSamsvar": "<p>Når innhold kommer til syne og så forsvinner ved at man flytter tastaturfokus til innholdet og deretter flytter fokus vekk, gjelder alle de følgende punktene:</p>\r\n<ul>\r\n<li>Det er en mekanisme for å avvise eller lukke det ekstra innholdet, uten å flytte tastaturfokuset og\r\n<ul>\r\n<li>Med mindre det ekstra innholdet formidler en inndatafeil eller ikke forstyrrer eller erstatter annet innhold</li>\r\n</ul>\r\n</li>\r\n<li>Det ekstra innholdet forblir synlig helt til\r\n<ul>\r\n<li>brukeren flytter fokus eller</li>\r\n<li>brukeren avviser innholdet eller</li>\r\n<li>informasjonen ikke lenger er gyldig</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"kolonner": [
@@ -45,14 +45,14 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Finnes det innhold som kommer til syne ved tastaturfokus på testsiden?",
-			"ht": "<p>Tab gjennom elementer med tastaturet for å identifisere ekstra innhold som viser ved tastaturfokus.</p>\n<p>Dette er innhold der ekstra innhold kommer til syne og så forsvinner, når innholdet får tastaturfokus og deretter flytter tastaturfokus vekk.</p>\n<p>Du skal bare teste elementer som får tastaturfokus.</p>\n<p><strong>Merk:</strong> Innhold som kan betjenes med muspekeren, skal også kunne betjenes ved kun med tastaturet, men dette testes i krav 2.1.1 Tastatur.</p>",
+			"spm": "Finnes det pekerfølsomt innhold som kommer til syne ved tastaturfokus (fokus) på testsiden?",
+			"ht": "<p>Tab gjennom elementer med tastaturet for å identifisere ekstra innhold som vises ved fokus. Dette er ekstra innhold som kommer til syne når elementet får fokus, og deretter forsvinner når fokus flyttes vekk.</p>\n<p><strong>Merk:</strong> Du skal bare teste elementer som får fokus.</p>\n<p><strong>Merk:</strong> Innhold som kan betjenes med muspekeren, skal også kunne betjenes med tastaturet, men dette testes i suksesskriterium 2.1.1 Tastatur.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikke innhold som kommer til syne ved tastaturfokus."
+					"utfall": "Testsiden har ikke pekerfølsomt innhold."
 				},
 				"ja": {
 					"type": "gaaTil",
@@ -77,10 +77,12 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Er den visuelle presentasjonen av det ekstra innholdet endret av innholdsprodusenten?",
-			"ht": "<p>Hvis den visuelle presentasjonen av det ekstra innholdet er kontrollert av brukeragenten og ikke endret av innholdsprodusent, gjelder ikke kravet.</p>\n<p>Det følger av merknaden til suksesskriteriet at eksempel på ekstra innhold som er kontrollert av brukeragenten, omfatter verktøytips (tooltip) som kommer av bruk av <a href=\"https://www.w3.org/TR/html/dom.html#the-title-attribute\" target=\"_blank\" rel=\"noopener\">tittel-attributtet</a>. Du kan bruke utviklerverktøy i nettleseren for å teste om tittel-attributtet er benyttet. </p>\n<p>Slik tester du om det ekstra innholdet er endret av innholdsprodusenten:</p>\n<ul>\n<li>Åpne testsiden i ny fane slik at du kan sammenligne komponenten i vanlig visning (med CSS-stilark gitt av innholdsprodusenten) og visning bestemt av brukeragenten (nettleseren)</li>\n<li>Bruk Chrome extension <a href=\"https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm\" target=\"_blank\" rel=\"noopener\">Web Developer</a> &gt; CSS og trykk på \"Disable All Styles\" for å slå av CSS-stilark gitt av innholdsprodusenten</li>\n<li>Gjør en visuell inspeksjon for å sjekke om utseendet på ekstra innhold er ulikt, og dermed er endret av innholdsprodusenten</li>\n</ul>\n<p><strong>Merk: </strong>Egendefinerte verktøytips, undermenyer og annet ekstra innhold som ikke er modalvindu (nonmodal popups) som kommer til syne ved tastaturfokus, er eksempler på innhold som er omfattet av dette kravet.</p>\n<p> </p>",
+			"spm": "Er den visuelle presentasjonen av det ekstra innholdet, endret av innholdsprodusenten?",
+			"ht": "<p>Hvis den visuelle presentasjonen av det ekstra innholdet er kontrollert av brukeragenten og ikke endret av innholdsprodusent, gjelder ikke kravet.</p>\n<p>Det følger av merknaden til suksesskriteriet at eksempel på ekstra innhold som er kontrollert av brukeragenten, omfatter verktøytips (tooltip) som kommer av bruk av <a href=\"https://www.w3.org/TR/html/dom.html#the-title-attribute\" target=\"_blank\" rel=\"noopener\">tittel-attributtet</a>. Du kan bruke utviklerverktøy i nettleseren for å teste om tittel-attributtet er benyttet. </p>\n<p><strong>Merk: </strong>Egendefinerte verktøytips, undermenyer og annet ekstra innhold som ikke er modalvindu (nonmodal popups) som er pekerfølsomt, er eksempler på innhold som er omfattet av dette kravet.</p>\n<p> </p>",
 			"type": "jaNei",
-			"kilde": [],
+			"kilde": [
+				"F95"
+			],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
@@ -94,61 +96,23 @@
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Forblir det ekstra innholdet synlig, helt til du flytter tastaturfokus vekk?",
-			"ht": "<p>Det ekstra innholdet forblir synlig helt til:</p>\n<ul>\n<li>du flytter fokus vekk</li>\n<li>du avviser innholdet eller</li>\n<li>informasjonen ikke lenger er gyldig</li>\n</ul>\n<p>Slik tester du :</p>\n<ul>\n<li>Vis det ekstra innholdet ved å sette tastaturfokus på elementet</li>\n<li>Sjekk om ekstra innholdet forblir synlig helt til du flytter fokus vekk fra elementet (minst 20 sekunder)\n<ul>\n<li>Med mindre at du selv avviser det ekstra innholdet via en mekanisme. Eksempel på mekanisme:\n<ul>\n<li style=\"list-style-type: none;\">\n<ul>\n<li>Esc-tasten elller</li>\n<li>En annen tast som er oppgitt av innholdet eller</li>\n<li>Ved å aktivere elementet som utløser det ekstra innholdet (enter).</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk</strong>: Kravet, forståartikkelen eller teknikkene inneholder ikke en avgrensning på 20 sekunder. Kravet sier at innholdet skal være synlig helt til brukeren flytter tastaturfokus. Vi vurderer at kravet er oppfylt, dersom det ekstra innholdet er synlig for brukeren i minst 20 sekunder. Tidsangivelsen på 20 sekunder bygger på begrunnelse fra forståartikkelen knyttet til suksesskriterium 2.2.1 Justerbar hastighet. </p>\n<p><strong>Merk: </strong>Hvis aktiveringen av elementet som viser det ekstra innholdet, også brukes til å lukke innholdet, skal det ikke føre til kontekstendring. </p>",
+			"spm": "Finnes det en mekanisme for å avvise eller lukke det ekstra innholdet, uten å flytte fokus?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Vis innholdet ved å navigere med tastatur til elementet.</li>\n<li>Trykk på Esc eller en annen synlig, dokumentert snarvei oppgitt av innholdet, uten å flytte fokus.</li>\n<li>Sjekk at det ekstra innholdet blir avvist eller lukket.</li>\n</ul>",
 			"type": "jaNei",
-			"kilde": [
-				"SCR39"
-			],
+			"kilde": [],
 			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
 				"nei": {
 					"type": "gaaTil",
 					"steg": "3.4"
-				},
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.5"
 				}
 			}
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Forsvinner det ekstra innholdet, fordi informasjonen ikke lenger er gyldig?",
-			"ht": "<p>Dersom det ekstra innholdet forsvinner, fordi informasjonen ikke lenger er gyldig, så gjelder ikke kravet. Eksempel er en \"opptatt\"-melding, som ikke lenger er gyldig, fordi brukeren har blitt tilgjengelig i mellomtiden.</p>",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "ikkjeForekomst",
-					"utfall": "Det ekstra innholdet forsvinner, fordi informasjonen ikke lenger er gyldig."
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Innhold ved tastaturfokus kan ikke betjenes. Det ekstra innholdet forblir ikke synlig til brukeren flytter fokus vekk."
-				}
-			}
-		},
-		{
-			"stegnr": "3.5",
-			"spm": "Finnes det en mekanisme for å avvise eller lukke det ekstra innholdet, uten å flytte tastaturfokus?",
-			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Vis innholdet ved å flytte tastaturfokus til elementet.</li>\n<li>Trykk på Esc eller en annen synlig, dokumentert snarvei oppgitt av innholdet, uten å flytte tastaturfokus.</li>\n<li>Sjekk at det  ekstra innholdet blir avvist eller lukket.</li>\n</ul>",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Innhold ved tastaturfokus kan betjenes. Det finnes en mekanisme for å avvise eller lukke det ekstra innholdet, uten å flytte fokus."
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.6"
-				}
-			}
-		},
-		{
-			"stegnr": "3.6",
 			"spm": "Formidler det ekstra innholdet en inndatafeil?",
 			"ht": "<p>Inndatafeil (input error) er, i følge ordlisten, informasjon angitt av brukeren, som ikke godkjennes.</p>\n<p>Dette omfatter</p>\n<ul>\n<li>informasjon nettsiden krever, men som brukeren har utelatt</li>\n<li>informasjon som angis av brukeren, men som faller utenfor påkrevd dataformat eller verdier</li>\n</ul>",
 			"type": "jaNei",
@@ -160,25 +124,64 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.7"
+					"steg": "3.5"
 				}
 			}
 		},
 		{
-			"stegnr": "3.7",
-			"spm": "Forstyrer eller erstatter det ekstra innholdet, annet innhold?",
+			"stegnr": "3.5",
+			"spm": "Forstyrrer eller erstatter det ekstra innholdet, annet innhold?",
 			"ht": "<p>Sjekk om plasseringen av det ekstra innholdet ikke skjuler annet innhold, inkludert utløseren (triggeren). </p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
 				"ja": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Innhold ved tastaturfokus kan ikke betjenes. Det ekstra innholdet forstyrrer eller erstatter annet innhold."
+					"type": "gaaTil",
+					"steg": "3.6"
 				},
 				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Det ekstra innholdet forstyrrer eller erstatter ikke annet innhold."
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det ekstra innholdet kan ikke betjenes, fordi det ikke er mulig å avvise eller lukke det ekstra innholdet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Forblir det ekstra innholdet synlig, helt til du flytter fokus vekk?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Vis det ekstra innholdet ved å holde fokus på elementet</li>\n<li>Sjekk om det ekstra innholdet forblir synlig i minst 60 sekunder, med mindre\n<ul>\n<li>du flytter fokus vekk fra elementet, eller</li>\n<li>avvise det ekstra innholdet uten å flytte fokus</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong> Kravet, forståartikkelen eller teknikkene inneholder ikke en avgrensning på 60 sekunder. Kravet sier at innholdet skal være synlig helt til brukeren flytter fokus. Vi vurderer likevel at kravet er oppfylt, dersom det ekstra innholdet er synlig for brukeren i minst 60 sekunder.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"SCR39"
+			],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det ekstra innholdet forblir synlig, er mulig å bruke og å avvise."
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Forsvinner det ekstra innholdet, fordi informasjonen ikke lenger er gyldig?",
+			"ht": "<p>Dersom det ekstra innholdet forsvinner, fordi informasjonen ikke lenger er gyldig, er kravet oppfylt.  Eksempel er en \"opptatt\"-melding, som ikke lenger er gyldig, fordi brukeren har blitt tilgjengelig i mellomtiden.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det ekstra innholdet forblir synlig, er mulig å bruke og å avvise."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det ekstra innholdet kan ikke betjenes, fordi det ikke forblir synlig."
 				}
 			}
 		}
