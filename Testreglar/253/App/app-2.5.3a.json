@@ -50,7 +50,7 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Appsiden har ikke brukergrensesnittkomponenter."
+					"utfall": "Appsiden har ikke interaktive brukergrensesnittkomponenter."
 				}
 			}
 		},
@@ -140,12 +140,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Appsiden har brukergrensesnittkomponenter med synlig ledetekst, der tilgjengelig navn inneholder samme tekst, i samme rekkefølge som den synelige ledeteksten."
+					"utfall": "Appsiden har brukergrensesnittkomponenter med synlig ledetekst, der tilgjengelig navn inneholder samme tekst, i samme rekkefølge som den synlige ledeteksten."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Appsiden har brukergrensesnittkomponenter med synlig ledetekst, der tilgjengelig navn ikke inneholder samme tekst, i samme rekkefølge som den synelige ledeteksten."
+					"utfall": "Appsiden har brukergrensesnittkomponenter med synlig ledetekst, der tilgjengelig navn ikke inneholder samme tekst, i samme rekkefølge som den synlige ledeteksten."
 				}
 			}
 		}
