@@ -86,7 +86,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er flerpunkts- eller stibasert gest avgjørende?",
-			"ht": "<p>Dersom avgjørende elementer fjernes, vil det medføre en grunnleggende endring av informasjonen eller funksjonaliteten i innholdet, <strong>og </strong>informasjonen og funksjonaliteten vil ikke kunne gjenskapes på en annen måte som samsvarer med kravene.</p>\n<p>Eksempler er en signatur, frihåndstegning eller sveip et objekt for å godkjenne.</p>",
+			"ht": "<p>Dersom avgjørende elementer fjernes, vil det medføre en grunnleggende endring av informasjonen eller funksjonaliteten i innholdet, <strong>og </strong>informasjonen og funksjonaliteten vil ikke kunne gjenskapes på en annen måte som samsvarer med kravene.</p>\n<p>Eksempler er en signatur eller frihåndstegning.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
