@@ -122,8 +122,8 @@
 			"kilde": [],
 			"ruting": {
 				"ja": {
-					"type": "ikkjeForekomst",
-					"utfall": "Det ekstra innholdet formidler en inndatafeil."
+					"type": "gaaTil",
+					"steg": "3.6"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -138,11 +138,11 @@
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
-				"ja": {
+				"nei": {
 					"type": "gaaTil",
 					"steg": "3.6"
 				},
-				"nei": {
+				"ja": {
 					"type": "avslutt",
 					"fasit": "Nei",
 					"utfall": "Det ekstra innholdet kan ikke betjenes, fordi det ikke er mulig å avvise eller lukke det ekstra innholdet."
