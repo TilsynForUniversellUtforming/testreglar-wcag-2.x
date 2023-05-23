@@ -46,7 +46,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Finnes det funksjonalitet som kan betjenes med en enkel pekerbevegelse (single pointer)?",
-			"ht": "<p>Enkel pekerbevegelse er pekerinndata som fungerer med kun ett kontaktpunkt med skjermen, herunder:</p>\n<ul>\n<li>enkeltrykk og -klikk,</li>\n<li>dobbelttrykk og -klikk,</li>\n<li>lange trykk</li>\n</ul>\n<p>Slik identifiserer du funksjonalitet som kan betjenes med en enkel pekerbevegelse:</p>\n<ul>\n<li>Åpne testsiden på en enhet med berøringsskjerm f.eks. smarttelefon eller nettbrett. </li>\n<li>Slå av skjermleser og andre andre tilgjengelighetsfunksjoner, hvis det er aktivert på enheten\n<ul>\n<li>Dette gjelder både hjelpemiddelteknologi og innstillinger i operativsystemet</li>\n</ul>\n</li>\n<li>Gjør en visuell inspeksjon og sjekk om det finnes interaktive elementer som lenker og knapper eller lignende funksjonalitet</li>\n</ul>",
+			"ht": "<p>Enkel pekerbevegelse er pekerinndata som fungerer med kun ett kontaktpunkt med skjermen, herunder:</p>\n<ul>\n<li>enkeltrykk og -klikk,</li>\n<li>dobbelttrykk og -klikk,</li>\n<li>lange trykk</li>\n</ul>\n<p>Slik identifiserer du funksjonalitet som kan betjenes med en enkel pekerbevegelse:</p>\n<ul>\n<li>Åpne testsiden på en enhet med berøringsskjerm f.eks. smarttelefon eller nettbrett. </li>\n<li>Slå av skjermleser og andre tilgjengelighetsfunksjoner, hvis det er aktivert på enheten\n<ul>\n<li>Dette gjelder både hjelpemiddelteknologi og innstillinger i operativsystemet</li>\n</ul>\n</li>\n<li>Gjør en visuell inspeksjon og sjekk om det finnes interaktive elementer, som lenker og knapper eller lignende funksjonalitet</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -78,7 +78,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Utløser trykkhandlingen (down-event) med pekeren funksjonen?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Trykk og hold nede pekeren du bruker (museknappen, fingeren eller stylus) på innholdet på berøringsskjermen</li>\n<li>Sjekk om trykkhandlingen (down-event) utløser funksjonen\n<ul>\n<li>Eksempel: Lenker åpnes når du trykker og holder.</li>\n</ul>\n</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Trykk og hold nede pekeren du bruker (museknappen, fingeren eller stylus) på innholdet på berøringsskjermen</li>\n<li>Sjekk om trykkhandlingen (down-event) utløser funksjonen\n<ul>\n<li>Eksempel: En lenke åpnes med en gang du trykker på den.</li>\n</ul>\n</li>\n</ul>\n<p>Merknad: Ikke hold nede pekeren lenge, fordi innholdsprodusent kan ha implementert innhold som kommer opp ved hold event.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F101"
@@ -98,7 +98,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er det avgjørende å utføre funksjonen på trykkhandlingen (down-event)?",
-			"ht": "<p>Dette gjelder tilfeller der tidspunkt (timingen) for en aktivering av funksjonen er viktig og forutsetter ned-hendelsen</p>\n<p>Eksempler på situasjoner der det er avgjørende å utføre funksjonen på trykkhandlingen:</p>\n<ul>\n<li>Funksjoner som krever eller måler reaksjon, for eksempel leirdueskyting spill</li>\n<li>Funksjoner som etterligner et tastatur, for eksempel skjermtastatur </li>\n<li>Funksjoner som etterligner et instrument, for eksempel tangenter på et piano </li>\n<li>Andre simuleringer og spill fra det virkelige liv.</li>\n</ul>",
+			"ht": "<p>Dette gjelder tilfeller der tidspunkt (timingen) for en aktivering av funksjonen er viktig og forutsetter ned-hendelsen</p>\n<p>Eksempler på situasjoner der det er avgjørende å utføre funksjonen på trykkhandlingen:</p>\n<ul>\n<li>Funksjoner som krever eller måler reaksjon, for eksempel leirdueskyting spill</li>\n<li>Funksjoner som etterligner et tastatur, for eksempel skjermtastatur jf. merknad til suksesskriteriet</li>\n<li>Funksjoner som etterligner et instrument, for eksempel tangenter på et piano </li>\n<li>Andre simuleringer og spill fra det virkelige liv.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -115,7 +115,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Opphever slipphandlingen med pekeren (up-event) resultatet av den foregående trykkhandlingen (down-event)?",
-			"ht": "<p>Sjekk om slipphandlingen med pekeren reverserer eller avbryter resultatet av den foregående trykkhandlingen.</p>\n<ul>\n<li>Trykk og hold nede pekeren du bruker (museknappen, fingeren eller stylus) på innholdet.</li>\n<li>Bevege deretter pekeren vekk fra innholdet, mens du fremdeles holder pekeren nede.</li>\n<li>Sjekk at dette ikke utfører en handling.</li>\n</ul>\n<p>Eksempler:</p>\n<ul>\n<li>Trykk og hold for å zoome inn: Trykke og holde pekeren på et bilde for å forstørre det.  Når pekeren slippes vises bildet i vanlig størrelse</li>\n<li>Dra og slipp: Trykkhandlingen plukker opp et objekt som følger pekeren, for eksempel et Kanban-brett i Jira.\n<ul>\n<li>Dersom pekeren slippes utenfor slippsonen, går objektet tilbake til utgangspunktet</li>\n<li>Dersom pekeren slippes innenfor slippsonen kommer det opp en dialogboks for å bekrefte eller avbryte</li>\n</ul>\n</li>\n</ul>",
+			"ht": "<p>Sjekk om slipphandlingen med pekeren reverserer eller avbryter resultatet av den foregående trykkhandlingen.</p>\n<ul>\n<li>Trykk og hold nede pekeren du bruker (museknappen, fingeren eller stylus) på innholdet.</li>\n<li>Beveg deretter pekeren vekk fra innholdet, mens du fremdeles holder pekeren nede.</li>\n<li>Slipp opp pekeren og sjekk at dette ikke utfører en handling.</li>\n</ul>\n<p>Eksempler:</p>\n<ul>\n<li>Trykk og hold for å zoome inn: Trykke og holde pekeren på et bilde for å forstørre det.  Når pekeren slippes vises bildet i vanlig størrelse</li>\n<li>Dra og slipp: Trykkhandlingen plukker opp et objekt som følger pekeren, for eksempel et Kanban-brett i Jira.\n<ul>\n<li>Dersom pekeren slippes utenfor slippsonen, går objektet tilbake til utgangspunktet</li>\n<li>Dersom pekeren slippes innenfor slippsonen kommer det opp en dialogboks for å bekrefte eller avbryte</li>\n</ul>\n</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
