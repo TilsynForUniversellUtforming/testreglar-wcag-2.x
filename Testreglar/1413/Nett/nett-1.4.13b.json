@@ -97,7 +97,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Finnes det en mekanisme for å avvise eller lukke det ekstra innholdet, uten å flytte fokus?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Vis innholdet ved å navigere med tastatur til elementet.</li>\n<li>Trykk på Esc eller en annen synlig, dokumentert snarvei oppgitt av innholdet, uten å flytte fokus.</li>\n<li>Sjekk at det ekstra innholdet blir avvist eller lukket.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Vis innholdet ved å navigere med tastatur til elementet.</li>\n<li>Bruk vanlige metoder for å prøve å avvise eller lukke innholdet, for eksempel Esc, uten å flytte fokus.\n<ul>\n<li>Dersom dette ikke fungerer, sjekk om det er oppgitt en snarvei i innholdet</li>\n</ul>\n</li>\n<li>Sjekk at det ekstra innholdet blir avvist eller lukket.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
