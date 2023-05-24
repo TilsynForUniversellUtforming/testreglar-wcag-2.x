@@ -102,7 +102,7 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Kan funksjonaliteten betjenes med en enkelt pekerbevegelse?",
+			"spm": "Kan funksjonaliteten betjenes med en enkelt pekerbevegelse, uten stibasert gest?",
 			"ht": "<p>Enkelt pekerbevegelse (single pointer) er pekerinndata som fungerer med ett kontaktpunkt med skjermen, herunder:</p>\n<ul>\n<li>enkelttrykk og -klikk,</li>\n<li>dobbelttrykk og -klikk,</li>\n<li>lange trykk</li>\n</ul>\n<p>Eksempler:</p>\n<ul>\n<li>Karuseller, sveipe gjennom oppgaver: At det finnes piler, knapper e.l. som kan betjenes med enkelttrykk og -klikk for å bla gjennom bilder og oppgaver\n<ul>\n<li>Det kan også være mulig at det ikke finnes en visuell synlig mekanisme, men bilder eller oppgaver kan sveipes med en enkelt trykk handling på venstre eller høyre siden av elementet.</li>\n</ul>\n</li>\n<li>Glidebryter: At det finnes knapper som kan betjenes med enkelttrykk og -klikk for å øke eller redusere verdier<br>Hold og vis-zooming: At det finnes \"lange trykk\", \"dobbelttrykk\" eller \"hold og vis\" for å vise en stor versjon av et bilde</li>\n<li>Å tegne \"Z\" for å angre en handling: Det finnes en \"angre\"-knapp</li>\n<li>Kanban-brett f.eks. Jira: Dra og slipp for å endre status på oppgaven. Status kan også endres via en nedtrekksliste</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
