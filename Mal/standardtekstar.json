@@ -12,7 +12,7 @@
     "app": {
         "app_angi_side_spm": {
             "nn": "Kva appside testar du?",
-            "bm": "Hvilken appside testar du?"
+            "bm": "Hvilken appside tester du?"
         },
         "app_angi_side_ht": {
             "nn": "Beskriv appsida med få stikkord, eller vel i lista.",
