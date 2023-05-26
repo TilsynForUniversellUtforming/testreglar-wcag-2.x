@@ -11,12 +11,12 @@
     },
     "app": {
         "app_angi_side_spm": {
-            "nn": "Kva skjermbilde testar du på?",
-            "bm": "Hvilket skjermbilde tester du på?"
+            "nn": "Kva appside testar du?",
+            "bm": "Hvilken appside testar du?"
         },
         "app_angi_side_ht": {
-            "nn": "Beskriv skjermbildet med få stikkord, eller vel i lista.",
-            "bm": "Beskriv skjermbildet med få stikkord, eller velg i listen."
+            "nn": "Beskriv appsida med få stikkord, eller vel i lista.",
+            "bm": "Beskriv appsiden med få stikkord, eller velg i listen."
         }
     }
 }
