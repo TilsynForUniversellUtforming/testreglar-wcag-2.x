@@ -78,7 +78,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Utløser trykkhandlingen (down-event) med pekeren funksjonen?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Trykk og hold nede pekeren du bruker (museknappen, fingeren eller stylus) på innholdet på berøringsskjermen</li>\n<li>Sjekk om trykkhandlingen (down-event) utløser funksjonen\n<ul>\n<li>Eksempel: En lenke åpnes med en gang du trykker på den.</li>\n</ul>\n</li>\n</ul>\n<p>Merknad: Ikke hold nede pekeren lenge, fordi innholdsprodusent kan ha implementert innhold som kommer opp ved hold event.</p>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Trykk og hold nede pekeren du bruker (museknappen, fingeren eller stylus) på innholdet på berøringsskjermen</li>\n<li>Sjekk om trykkhandlingen (down-event) utløser funksjonen\n<ul>\n<li>Eksempel: En lenke åpnes med en gang du trykker på den.</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merknad:</strong> Ikke hold nede pekeren lenge, fordi innholdsprodusent kan ha implementert innhold som kommer opp ved hold event. Kravet gjelder både berøringsskjerm og enheter som støtter musepekeren.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F101"
