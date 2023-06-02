@@ -1,10 +1,22 @@
 {
-    "nett_angi_side_spm" : {
-    "nn" : "Kva side testar du?",
-    "bm" : "Hvilken side tester du?"
+    "nett": {
+        "nett_angi_side_spm": {
+            "nn": "Kva side testar du?",
+            "bm": "Hvilken side tester du?"
+        },
+        "nett_angi_side_ht": {
+            "nn": "Oppgi URL eller side-ID.",
+            "bm": "Angi URL eller side-ID."
+        }
     },
-    "nett_angi_side_ht" : {
-    "nn" : "Oppgi URL eller side-ID.",
-    "bm" : "Angi URL eller side-ID."
-    } 
+    "app": {
+        "app_angi_side_spm": {
+            "nn": "Kva appside testar du?",
+            "bm": "Hvilken appside tester du?"
+        },
+        "app_angi_side_ht": {
+            "nn": "Beskriv appsida med få stikkord, eller vel i lista.",
+            "bm": "Beskriv appsiden med få stikkord, eller velg i listen."
+        }
+    }
 }
