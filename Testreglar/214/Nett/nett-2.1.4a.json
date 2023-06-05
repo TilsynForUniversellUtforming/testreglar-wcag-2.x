@@ -118,7 +118,8 @@
 			"kilde": [],
 			"ruting": {
 				"ja": {
-					"type": "ikkjeForekomst",
+					"type": "avslutt",
+					"fasit": "Ja",
 					"utfall": "Hurtigtasten er bare aktiv når den tilhørende brukergrensesnittkomponenten er i fokus."
 				},
 				"nei": {
@@ -129,7 +130,7 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Finnes det en mekanisme for å slå av hurtigtasten, som fungerer?",
+			"spm": "Finnes det en fungerende mekanisme for å slå av hurtigtasten?",
 			"ht": "<p>Mekanismen for å slå av eller rekonfigurere hurtigtasten skal være</p>\n<ul>\n<li>på samme nettside som innholdet med hurtigtasten eller</li>\n<li>mulig å nå via en tydelig merket en mekanisme som ligger på samme nettside.</li>\n</ul>\n<p>Det er tilstrekkelig at mekanismen for eksempel er plassert i topp- eller bunnteksten eller er dokumentert i innstillingene for nettstedet. </p>\n<p><strong>Merk:</strong> Du skal teste at mekanismen faktisk slår av hurtigtasten (fungerer).</p>",
 			"type": "jaNei",
 			"kilde": [
