@@ -31,7 +31,7 @@
 		{
 			"stegnr": "2.1",
 			"spm": "Hvilken side tester du?",
-			"ht": "<p>Oppgi URL eller side-ID</p>",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
 			"kilde": [],
 			"label": "URL/Side-ID:",
