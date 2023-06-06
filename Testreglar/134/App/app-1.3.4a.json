@@ -23,7 +23,7 @@
 		{
 			"stegnr": "2.1",
 			"spm": "Hvilken appside tester du?",
-			"ht": "<p>Oppgi appside-ID.</p>",
+			"ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
 			"type": "tekst",
 			"kilde": [],
 			"label": "Appside:",
