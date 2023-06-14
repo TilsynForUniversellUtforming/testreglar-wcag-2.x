@@ -1,0 +1,109 @@
+{
+	"id": "1.3.4a-2022",
+	"versjon": "1.0",
+	"type": "web",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		}
+	],
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Får du tilgang til alt innhaldet på nettsida i både portrett og landskapsvisning?",
+			"ht": "<p>Sjekk at du får tilgang til alt innhaldet på nettsida både i portrett- og landskapsvisning. Du kan bruke device-toolbaren i nettlesaren sitt utviklingsverktøy for å teste dette.</p>\n<p>Eit tips kan vere å bruke to skjermar slik at du kan lettare kan sjå forskjell mellom nettsida i vanleg pc-visning og dei ulike visningsretningane. </p>",
+			"type": "jaNei",
+			"kilde": [
+				"F97"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Alt innhald på nettsida fungerer i både portrett- og landskapsvisning."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Kva element fungerer ikkje i begge visningsretningar?",
+			"ht": "<p>Identifiser innhaldet som ikkje er tilgjengelig i begge visningsretningar. </p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Finst det ein fungerande mekanisme for å snu visningsretninga på elementet?",
+			"ht": "<p>Sjå i området rundt elementet om det finst ein mekanisme som let deg endre visningsretning. Aktiver mekanismen og sjekk om elementet skiftar visningsretning.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G214"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Innhald med ein mekanisme som let brukaren endre visningsretning."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er ei spesifikk retning naudsynt for at innhaldet skal fungere?",
+			"ht": "<p>Med naudsynt meinast her: dersom innhaldet blir fjerna, vil det fundamentalt endre informasjonen eller funksjon til innhaldet, og ein kan ikkje oppnå same informasjon og funksjon på ein annen måte som vil vere i samsvar.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Innhald der ein bestemt visningsretning er naudsynt for å ivareta informasjon og funksjon."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Innhald som ikkje er tilgjengelig i både portrett- og landskapsvisning. "
+				}
+			}
+		}
+	],
+	"kravTilSamsvar": "<p>Det er mogeleg å vise nettsida i både ståande og liggande visning utan tap av innhald med unntak av:</p>\r\n<ul>\r\n<li>innhald der ei bestemt visingsretning er naudsynt for at informasjon og funksjonalitet skal fungere</li>\r\n</ul>"
+}
