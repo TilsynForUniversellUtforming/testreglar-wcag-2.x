@@ -1,7 +1,7 @@
 {
 	"id": "nett-2.1.4a",
 	"type": "web",
-	"kravTilSamsvar": "<p>Krav til samsvar: </p>\r\n<ul>\r\n<li>Det er en mekanisme for å slå av hurtigtasten\r\n<ul>\r\n<li>Mekanismen ligger på samme nettside som innholdet som benytter hurtigtaster eller</li>\r\n</ul>\r\n</li>\r\n<li>Det er en mekanisme for å rekonfigurere (omadressere) hurtigtasten ved hjelp av en eller flere modifiseringstaster\r\n<ul>\r\n<li>Mekanismen ligger på samme nettside som innholdet som benytter hurtigtaster eller</li>\r\n</ul>\r\n</li>\r\n<li>Hurtigtasten for en brukergrensesnittkomponent er kun aktiv når komponenten kommer i fokus</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Dersom en hurtigtast er implementert i innholdet ved å bruke kun en bokstav (inklusive store og små bokstaver), tegnsetting, siffer eller symboltegn, gjelder minst ett av følgende punkter:</p>\r\n<ul>\r\n<li>Det er en mekanisme for å slå av hurtigtasten\r\n<ul>\r\n<li>Mekanismen ligger på samme nettside som innholdet som benytter hurtigtaster eller</li>\r\n</ul>\r\n</li>\r\n<li>Det er en mekanisme for å rekonfigurere (omadressere) hurtigtasten ved hjelp av en eller flere modifiseringstaster\r\n<ul>\r\n<li>Mekanismen ligger på samme nettside som innholdet som benytter hurtigtaster eller</li>\r\n</ul>\r\n</li>\r\n<li>Hurtigtasten for en brukergrensesnittkomponent er kun aktiv når komponenten kommer i fokus</li>\r\n</ul>",
 	"kolonner": [
 		{
 			"title": "2.2"
@@ -46,8 +46,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Er det oppgitt av innholdsprodusent eller i innholdet, at testsiden har hurtigtast som består av kun ett tegn?",
-			"ht": "<p>Identifiser hurtigtast som er oppgitt av innholdsprodusent, eller i innholdet.</p>\n<p>Hurtigtast som består av kun ett tegn, omfatter alle utskriftstegn (dvs. alle bokstaver, både store og små), tegnsetting, siffer eller symboler).</p>\n<p><strong>Merk: </strong>Hurtigtast som kombineres med kun <strong>Shift</strong>-tasten er omfattet av kravet, og skal testes. For eksempel, når du bruker Shift-tasten for å få stor bokstav eller tegnsetting.</p>\n<p>Dette skal ikke testes: </p>\n<ul>\n<li>Tilgangstaster (Accesskeys) er ikke omfattet av kravet, fordi de brukes alltid sammen med en eller flere modifiseringstaster.</li>\n<li>iFrame skal ikke testes.</li>\n<li>Kravet gjelder ifølge ordlyden kun i situasjoner der innholdsprodusenten faktisk har tatt i bruk hurtigtaster på nettsiden, som i tillegg består utelukkende av ett enkelt tegn (single-key shortcut). Du skal ikke teste hurtigtaster som er angitt av brukeragenten.</li>\n</ul>",
+			"spm": "Er det oppgitt i innholdet, at testsiden har hurtigtast som består av kun ett tegn?",
+			"ht": "<p>Identifiser hurtigtast som er oppgitt i innholdet.</p>\n<p>Hurtigtast som består av kun ett tegn, omfatter alle utskriftstegn (dvs. alle bokstaver, både store og små), tegnsetting, siffer eller symboler).</p>\n<p><strong>Merk: </strong>Hurtigtast som kombineres med kun <strong>Shift</strong>-tasten er omfattet av kravet, og skal testes. For eksempel, når du bruker Shift-tasten for å få stor bokstav eller tegnsetting.</p>\n<p>Dette skal ikke testes: </p>\n<ul>\n<li>Tilgangstaster (Accesskeys) er ikke omfattet av kravet, fordi de brukes alltid sammen med en eller flere modifiseringstaster.</li>\n<li>iFrame skal ikke testes.</li>\n<li>Kravet gjelder ifølge ordlyden kun i situasjoner der innholdsprodusenten faktisk har tatt i bruk hurtigtaster på nettsiden, som i tillegg består utelukkende av ett enkelt tegn (single-key shortcut). Du skal ikke teste hurtigtaster som er angitt av brukeragenten.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -64,7 +64,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Har testsiden hurtigtast som består av ett tegn?",
-			"ht": "<p>Slik tester du om det er tatt i bruk hurtigtaster, omfattet av kravet, i tilfeller der vi ikke har opplysninger om det fra innholdsprodusent eller i innholdet: </p>\n<ul>\n<li>Trykk på alle utskriftstegn (Alle bokstaver, både store og små, tegnsetting, siffer eller symbol)\n<ul>\n<li><strong>Merk: </strong>Ikke trykk på\n<ul>\n<li>modifiseringstaster, som Ctrl, Alt, Esc,</li>\n<li>piltaster</li>\n<li>funksjonstaster, F1-F12.</li>\n<li>Space, Enter, Return, Tab eller Delete</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Se etter endringer på siden som følge av at du har trykket hurtigtasten.</li>\n<li>Hold deretter nede Shift-tasten, trykk på de samme tastene igjen og se etter endringer på siden.</li>\n</ul>",
+			"ht": "<p>Slik tester du om det er tatt i bruk hurtigtaster, omfattet av kravet, i tilfeller der vi ikke har opplysninger om det: </p>\n<ul>\n<li>Trykk på alle utskriftstegn (Alle bokstaver, både store og små, tegnsetting, siffer eller symbol)\n<ul>\n<li><strong>Merk: </strong>Ikke trykk på\n<ul>\n<li>modifiseringstaster, som Ctrl, Alt, Esc,</li>\n<li>piltaster</li>\n<li>funksjonstaster, F1-F12.</li>\n<li>Space, Enter, Return, Tab eller Delete</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Se etter endringer på siden som følge av at du har trykket hurtigtasten.</li>\n<li>Hold deretter nede Shift-tasten, trykk på de samme tastene igjen og se etter endringer på siden.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
