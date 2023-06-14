@@ -1,0 +1,104 @@
+{
+	"id": "1.2.5a",
+	"type": "web",
+	"kravTilSamsvar": "<p>Førehandsinnspelt video er synstolka.</p>",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		}
+	],
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "<p>Oppgi URl eller side-ID.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettstaden videoklipp?",
+			"ht": "<p>Aktuelle metodar kan vere:</p>\n<ul>\n<li>Sjå på sidene om det finst ein playknapp eller liknande.</li>\n<li>Bruk internt søk på nettstaden.</li>\n<li>Bruk Google (Du kan bruke \"site:urlnettstad søkeord\" for å berre søke på ein bestemt nettstad).</li>\n</ul>\n<p>Aktuelle søkeomgrep kan være: \"Video\", \"Animasjon\", \"YouTube\", \"Viemo\", \"opptak\", \"H264\", \"mpeg4\". Merk at søkeomgrepa over er best tilpassa for søk interent på ein nettstad.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje video."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Skriv inn tittel på videofila.",
+			"ht": "<p>Legg inn tittel på videofila eller stikkord om innhaldet, dersom tittel manglar. Dersom nettsida har fleire videoar må du teste dei kvar for seg.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "Video:",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er videoen førehandsinnspelt?",
+			"ht": "<p>Aktuelle metodar for å finne ut dette er:</p> <ul> <li>Prøv å starte videoklippet og sjå om avspelinga startar frå byrjinga av fila og om det finst informasjon om varigheiten på klippet.</li> <li>Sjå etter informasjon om når klippet er publisert.</li> <li>Sjå etter informasjon som tilseier at klippet er live/direkte.</li> </ul> <p>Dette kan for eksempel vere: Rødt felt med teksten \"live\" eller at det ikkje er mogeleg å spole i klippet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Videoklipp er direkte/live (ikkje førehandsinnspelte)."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er videoen synstolka?",
+			"ht": "<p>Med synstolking meinast munnlege kommentarar og omtaler som vert lag til lydsporet for å formidle viktige visuelle detaljer som ikkje kan forståast berre ut i frå det opphavlege lydsporet.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G78"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Video har synstolking som formidlar viktige visuelle detaljer som ikkje kan forståast berre ut i frå det opphavlege lydsporet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Video manglar synstolking som formidlar viktige visuelle detaljer som ikkje kan forståast berre ut i frå det opphavlege lydsporet."
+				}
+			}
+		}
+	]
+}
