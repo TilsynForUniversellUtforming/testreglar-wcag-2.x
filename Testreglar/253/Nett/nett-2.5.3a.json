@@ -57,7 +57,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Hvilken brukergrensesnittkomponent tester du?",
-			"ht": "<p>Gjengi nøyaktig den synlige ledeteksten til den aktuelle brukergrensesnittkomponenten. Hvis det gjelder flere brukergrensesnittkomponenter, registrerer du en og en.</p>",
+			"ht": "<p>Gjengi den synlige ledeteksten til den aktuelle brukergrensesnittkomponenten. Hvis det gjelder flere brukergrensesnittkomponenter, registrerer du en og en.</p>",
 			"type": "tekst",
 			"kilde": [],
 			"label": "Brukergrensesnittkomponent:",
