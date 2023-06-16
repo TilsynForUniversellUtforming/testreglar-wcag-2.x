@@ -169,7 +169,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Statusbeskjed er programmatisk bestemt med <code>role=\"status\"</code>"
+					"utfall": "Statusbeskjed er programmatisk bestemt med role=\"status\"."
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -191,7 +191,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Statusbeksjed er ikke programmatisk bestemt med hverken <code>role=\"status\"</code> eller <code>aria-live=\"polite\"</code>"
+					"utfall": "Statusbeksjed er ikke programmatisk bestemt med hverken role=\"status\" eller aria-live=\"polite\"."
 				}
 			}
 		},
@@ -205,12 +205,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Statusbeskjed er programmatisk bestemt med <code>aria-live=\"polite\"</code> og <code>aria-atomic=\"true\"</code>"
+					"utfall": "Statusbeskjed er programmatisk bestemt med aria-live=\"polite\" og aria-atomic=\"true\"."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Statusbeskjed er ikke programmatisk bestemt, for det mangler <code>aria-atomic=\"true\"</code>, i tillegg til <code>aria-live=\"polite\"</code>"
+					"utfall": "Statusbeskjed er ikke programmatisk bestemt, for det mangler aria-atomic=\"true\", i tillegg til aria-live=\"polite\"."
 				}
 			}
 		},
@@ -260,7 +260,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Statusbeskjed med informasjon om at det har oppstått en feil er programmatisk bestemt med <code>role=\"alert\"</code>"
+					"utfall": "Statusbeskjed med informasjon om at det har oppstått en feil er programmatisk bestemt med role=\"alert\"."
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -282,7 +282,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Statusbeskjed med informasjon om at det har oppstått en feil er ikke programmatisk bestemt hverken med <code>role=\"alert\"</code> eller <code>aria-live=\"assertive\"</code>"
+					"utfall": "Statusbeskjed med informasjon om at det har oppstått en feil er ikke programmatisk bestemt hverken med role=\"alert\" eller aria-live=\"assertive\"."
 				}
 			}
 		},
@@ -296,12 +296,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Statusbeskjed er programmatisk bestemt med <code>aria-live=\"assertive\"</code> og <code>aria-atomic=\"true\"</code>"
+					"utfall": "Statusbeskjed er programmatisk bestemt med aria-live=\"assertive\" og aria-atomic=\"true\"."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Statusbeskjed er ikke programmatisk bestemt, for det mangler <code>aria-atomic=\"true\"</code>, i tillegg til <code>aria-live=\"assertive\"</code>"
+					"utfall": "Statusbeskjed er ikke programmatisk bestemt, for det mangler aria-atomic=\"true\", i tillegg til aria-live=\"assertive\"."
 				}
 			}
 		},
@@ -353,7 +353,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Statusbeskjed med informasjon om fremdriften er programmatisk bestemt med <code>role=\"progressbar\"</code> eller <code>aria-live=\"meter\"</code>"
+					"utfall": "Statusbeskjed med informasjon om fremdriften er programmatisk bestemt med role=\"progressbar\" eller aria-live=\"meter\"."
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -375,7 +375,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Statusbeskjed med informasjon om fremdriften er programmatisk bestemt med elementet <code>&lt;progress&gt;</code> eller <code>&lt;meter&gt;</code>"
+					"utfall": "Statusbeskjed med informasjon om fremdriften er programmatisk bestemt med elementet &lt;progress&gt; eller &lt;meter&gt;."
 				}
 			}
 		},
@@ -393,7 +393,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Statusbeskjed med informasjon om fremdriften er ikke programmatisk bestemt hverken med elementet <code>&lt;progress&gt;</code>, <code>&lt;meter&gt;</code> eller JavaScript"
+					"utfall": "Statusbeskjed med informasjon om fremdriften er ikke programmatisk bestemt hverken med elementet &lt;progress&gt;, &lt;meter&gt; eller JavaScript."
 				}
 			}
 		},
@@ -412,7 +412,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Statusbeskjed med informasjon om fremdriften er ikke programmatisk bestemt med elementet <code>&lt;progress&gt;</code>, <code>&lt;meter&gt;</code> eller JavaScript"
+					"utfall": "Statusbeskjed med informasjon om fremdriften er ikke programmatisk bestemt med elementet &lt;progress&gt;, &lt;meter&gt; eller JavaScript."
 				}
 			}
 		},
@@ -428,7 +428,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Statusbeskjed om fremdriften er programmatisk bestemt med <code>role=\"log\"</code>"
+					"utfall": "Statusbeskjed om fremdriften er programmatisk bestemt med role=\"log\"."
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -465,12 +465,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Statusbeksjed om fremdriften er programmatisk bestemt med <code>role=\"status\"</code> og <code>aria-atomic=\"false\"</code>."
+					"utfall": "Statusbeksjed om fremdriften er programmatisk bestemt med role=\"status\" og aria-atomic=\"false\"."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Statusbeksjed er ikke programmatisk bestemt med hverken <code>role=\"log\"</code> eller <code>role=\"status\"</code>."
+					"utfall": "Statusbeksjed er ikke programmatisk bestemt med hverken role=\"log\" eller role=\"status\"."
 				}
 			}
 		},
@@ -488,7 +488,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Statusbeksjed er ikke programmatisk bestemt med hverken <code>role=\"log\"</code>, <code>role=\"status\"</code> eller <code>aria-live=\"polite\"</code>"
+					"utfall": "Statusbeksjed er ikke programmatisk bestemt med hverken role=\"log\", role=\"status\" eller aria-live=\"polite\"."
 				}
 			}
 		},
@@ -502,12 +502,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Statusbeksjed om fremdriften er programmatisk bestemt med <code>aria-live=\"polite\"</code> og <code>aria-atomic=\"false\"</code>"
+					"utfall": "Statusbeksjed om fremdriften er programmatisk bestemt med aria-live=\"polite\" og aria-atomic=\"false\"."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Statusbeskjed om fremdriften er ikke programmatisk bestemt, for det mangler <code>aria-atomic=\"false\"</code>, i tillegg til <code>aria-live=\"polite\"</code>"
+					"utfall": "Statusbeskjed om fremdriften er ikke programmatisk bestemt, for det mangler aria-atomic=\"false\", i tillegg til aria-live=\"polite\"."
 				}
 			}
 		}
