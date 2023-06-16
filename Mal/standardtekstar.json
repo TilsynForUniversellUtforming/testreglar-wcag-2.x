@@ -7,6 +7,14 @@
         "nett_angi_side_ht": {
             "nn": "Oppgi URL eller side-ID.",
             "bm": "Angi URL eller side-ID."
+        },
+        "nett_beskriv_element_spm": {
+            "nn": "Kva element testar du?",
+            "bm": "Hvilket element tester du?"
+        },
+        "nett_beskriv_element_ht": {
+            "nn": "Beskriv elementet, slik at det er mogleg å identifisere det i ettertid. Viss det gjeld fleire element, registrerer du eit og eit.",
+            "bm": "Beskriv elementet, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere elementer, registrerer du et og et."
         }
     },
     "app": {
@@ -17,6 +25,14 @@
         "app_angi_side_ht": {
             "nn": "Beskriv appsida med få stikkord, eller vel i lista.",
             "bm": "Beskriv appsiden med få stikkord, eller velg i listen."
+        },
+        "app_beskriv_element_spm": {
+            "nn": "Kva element testar du?",
+            "bm": "Hvilket element tester du?"
+        },
+        "app_beskriv_element_ht": {
+            "nn": "Beskriv elementet, slik at det er mogleg å identifisere det i ettertid. Viss det gjeld fleire element, registrerer du eit og eit.",
+            "bm": "Beskriv elementet, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere elementer, registrerer du et og et."
         }
     }
 }
