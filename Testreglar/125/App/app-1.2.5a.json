@@ -26,6 +26,9 @@
 		},
 		{
 			"title": "3.8"
+		},
+		{
+			"title": "3.9"
 		}
 	],
 	"side": "2.1",
@@ -149,7 +152,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Er viktig visuell informasjon formidlet via den originale lyden i videoen?",
-			"ht": "<p>Aktuelle metoder for å finne ut dette er: </p>\n<ul>\n<li>starte videoklippet og vurder de stikkprøvene du registrerte i forrige steg</li>\n<li>sammenlign informasjon formidlet i original lyden med visuelle innholdet i videoen</li>\n<li>vurder om viktig visuell informasjon i videoen er tilstrekkelig beskrevet, i rett rekkefølge via den originale lyden </li>\n</ul>\n<p><strong>Merk:</strong> Med \"tilstrekkelig beskrevet\" menes det at brukeren skal få beskrevet meningsbærende visuell informasjon, slik at en kan forstå videoens sammenhenger, fortellinger og budskap gjennom lyden. I tillegg vil det være nyttig å ta høyde for hvem, hva og hvor.</p>\n<p>Det er i utgangspunktet ikke nødvendig med synstolking av en video der den visuelle informasjonen er statisk, for eksempel der den som snakker står foran et lerret med logoen til en virksomhet, dersom det ellers ikke brukes andre viktige visuelle virkemidler. Det kan beskrives muntlig innledningsvis.</p>\n<p>Utvidet synstolking er regulert i suksesskriterium 1.2.7. Det er et krav på nivå AAA, og er ikke et minstekrav i norsk regelverk. Utvidet synstolking kan likevel benyttes som en metode for å oppfylle 1.2.5. Det innebærer at videoen blir stoppet for å gi plass til ytterligere muntlig beskrivelse av viktig visuell informasjon.</p>",
+			"ht": "<p>Aktuelle metoder for å finne ut dette er: </p>\n<ul>\n<li>starte videoklippet og vurder de stikkprøvene du registrerte i forrige steg</li>\n<li>sammenlign informasjon formidlet i original lyden med visuelle innholdet i videoen</li>\n<li>vurder om viktig visuell informasjon i videoen er tilstrekkelig beskrevet, i rett rekkefølge via den originale lyden</li>\n</ul>\n<p><strong>Merk:</strong> Med \"tilstrekkelig beskrevet\" menes det at brukeren skal få beskrevet meningsbærende visuell informasjon, slik at en kan forstå videoens sammenhenger, fortellinger og budskap gjennom lyden. I tillegg vil det være nyttig å ta høyde for hvem, hva og hvor.</p>\n<p>Det er i utgangspunktet ikke nødvendig med synstolking av en video der den visuelle informasjonen er statisk, for eksempel der den som snakker står foran et lerret med logoen til en virksomhet, dersom det ellers ikke brukes andre viktige visuelle virkemidler. Det kan beskrives muntlig innledningsvis.</p>\n<p>Utvidet synstolking er regulert i suksesskriterium 1.2.7. Det er et krav på nivå AAA, og er ikke et minstekrav i norsk regelverk. Utvidet synstolking kan likevel benyttes som en metode for å oppfylle 1.2.5. Det innebærer at videoen blir stoppet for å gi plass til ytterligere muntlig beskrivelse av viktig visuell informasjon.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -187,8 +190,26 @@
 		},
 		{
 			"stegnr": "3.8",
+			"spm": "Forstyrrer synstolkingen informasjonen i den originale lyden i videoen?",
+			"ht": "<p>Sjekk om synstolkingen forstyrrer den originale lyden i videoen.</p>\n<p><strong>Merk:</strong> Forstyrrer betyr at synstolkingen kommer i konflikt med den originale lyden i videoen, slik at brukeren ikke for med seg informasjon i videoen.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Synstolkingen forstyrrer informasjon i den originale lyden."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
 			"spm": "Er viktig visuell informasjon formidlet i synstolket lydspor tilstrekkelig beskrevet, i rett rekkefølge?",
-			"ht": "<p>Hva som er «viktig» visuell informasjon vil variere etter type video, og blir avgjort etter en totalvurdering.</p>\n<p>Eksempler på visuell informasjon som vanligvis skal synstolkes, er ifølge merknad til definisjonen av synstolking</p>\n<ul>\n<li>handling (hva)</li>\n<li>karakterer/personer (hvem)</li>\n<li>sceneskifter/stedskifter (hvor, hvordan)</li>\n<li>tekst på skjermen og</li>\n<li>annet viktig visuelt innhold som endres underveis</li>\n</ul>\n<p><strong>Slik tester du</strong></p>\n<ul>\n<li>spill av videoen med synstolket lydspor og gå gjennom de stikkprøvene i videoen</li>\n<li>sammenlign informasjon formidlet i original lyden med visuelle innholdet i videoen</li>\n<li>vurder om viktig visuell informasjon i videoen er tilstrekkelig beskrevet, i rett rekkefølge i synstolket lydspor (standard synstolking).</li>\n<li>synstolkingen skal ikke forstyrre lyden i originalfilmen</li>\n</ul>\n<p><strong>Merk: </strong>Med \"tilstrekkelig beskrevet\" menes det at brukeren skal få beskrevet meningsbærende visuell informasjon, slik at en kan forstå videoens sammenhenger, fortellinger og budskap gjennom lyden. I tillegg vil det være nyttig å ta høyde for hvem, hva og hvor. </p>\n<p>Det er i utgangspunktet ikke nødvendig med synstolking av en video der den visuelle informasjonen er statisk, for eksempel der den som snakker står foran et lerret med logoen til en virksomhet, dersom det ellers ikke brukes andre viktige visuelle virkemidler. Det kan beskrives muntlig innledningsvis.</p>\n<p>Utvidet synstolking er regulert i suksesskriterium 1.2.7. Det er et krav på nivå AAA, og er ikke et minstekrav i norsk regelverk. Utvidet synstolking kan likevel benyttes som en metode for å oppfylle 1.2.5. Det innebærer at videoen blir stoppet for å gi plass til ytterligere muntlig beskrivelse av viktig visuell informasjon.</p>",
+			"ht": "<p>Hva som er «viktig» visuell informasjon vil variere etter type video, og blir avgjort etter en totalvurdering.</p>\n<p>Eksempler på visuell informasjon som vanligvis skal synstolkes, er ifølge merknad til definisjonen av synstolking</p>\n<ul>\n<li>handling (hva)</li>\n<li>karakterer/personer (hvem)</li>\n<li>sceneskifter/stedskifter (hvor, hvordan)</li>\n<li>tekst på skjermen og</li>\n<li>annet viktig visuelt innhold som endres underveis</li>\n</ul>\n<p><strong>Slik tester du</strong></p>\n<ul>\n<li>spill av videoen med synstolket lydspor og gå gjennom de stikkprøvene i videoen</li>\n<li>sammenlign informasjon formidlet i original lyden med visuelle innholdet i videoen</li>\n<li>vurder om viktig visuell informasjon i videoen er tilstrekkelig beskrevet, i rett rekkefølge i synstolket lydspor (standard synstolking).</li>\n</ul>\n<p><strong>Merk: </strong>Med \"tilstrekkelig beskrevet\" menes det at brukeren skal få beskrevet meningsbærende visuell informasjon, slik at en kan forstå videoens sammenhenger, fortellinger og budskap gjennom lyden. I tillegg vil det være nyttig å ta høyde for hvem, hva og hvor. </p>\n<p>Det er i utgangspunktet ikke nødvendig med synstolking av en video der den visuelle informasjonen er statisk, for eksempel der den som snakker står foran et lerret med logoen til en virksomhet, dersom det ellers ikke brukes andre viktige visuelle virkemidler. Det kan beskrives muntlig innledningsvis.</p>\n<p>Utvidet synstolking er regulert i suksesskriterium 1.2.7. Det er et krav på nivå AAA, og er ikke et minstekrav i norsk regelverk. Utvidet synstolking kan likevel benyttes som en metode for å oppfylle 1.2.5. Det innebærer at videoen blir stoppet for å gi plass til ytterligere muntlig beskrivelse av viktig visuell informasjon.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
