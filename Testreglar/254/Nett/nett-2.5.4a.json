@@ -42,8 +42,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har virksomheten svart at nettstedet har funksjonalitet som kan betjenes med bevegelsesaktivering?",
-			"ht": "<p>Sjekk dokumentasjonen mottatt fra virksomheten. </p>",
+			"spm": "Har testsiden funksjonalitet med bevegelsesaktivering?",
+			"ht": "<p>Kravet gjelder for følgende:</p>\n<ul>\n<li>bevegelser med selve enheten, gjennom for eksempel å vippe, rotere eller riste på den</li>\n<li>brukerbevegelser mot enheten, for eksempel ved at brukeren gjør ulike gester mot kamera</li>\n</ul>\n<p><strong>Slik tester du:</strong></p>\n<p>Du bør bruke en fysisk enhet, for eksempel smarttelefon eller nettbrett.</p>\n<ul>\n<li>se om du finner informasjon som tilsier at det finnes funksjonalitet med bevegelsesaktivering og instruksjoner.</li>\n<li>alternativt kan du gjøre ulike handlinger for å sjekke det:\n<ul>\n<li>snu på enheten</li>\n<li>beveg enheten rundt</li>\n<li>riste på enheten</li>\n<li>gi tommel opp mot kamera</li>\n</ul>\n</li>\n<li>sjekk om handlingen utløser en funksjonalitet</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -60,7 +60,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Hvilken funksjonalitet tester du?",
-			"ht": "<p>Bruk informasjonen fra virksomheten. Beskriv funksjonaliteten, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere funksjoner, registrerer du en og en.</p>",
+			"ht": "<p>Beskriv funksjonaliteten, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere funksjoner, registrerer du en og en.</p>",
 			"type": "tekst",
 			"kilde": [],
 			"ruting": {
@@ -92,7 +92,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er bevegelsesaktivering avgjørende for funksjonaliteten?",
-			"ht": "<p>Åpne testsiden på smarttelefon eller nettbrett. </p>\n<p>Noen ganger er nettinnhold avhengig av å bruke enhetssensordata eller bevegelsen er kontrollert av nettleseren eller operativsystemet. Da er bevegelsen avgjørende for funksjonaliteten. </p>\n<p>Eksempler på innhold som er unntatt fordi det er avgjørende vil være når:</p>\n<ul>\n<li>operativsystemet på enheten har funksjonalitet for å \n<ul>\n<li>slette innskrevet tekst ved å riste på den</li>\n<li>slå av lyden på innkommende anrop ved å snu skjermen ned</li>\n<li>dra håndflaten over skjermen for å ta skjermbilde</li>\n</ul>\n</li>\n<li>en skritteller er avhengig av enhetens bevegelser for å registrere og telle skritt</li>\n</ul>",
+			"ht": "<p>Noen ganger er nettinnhold avhengig av å bruke enhetssensordata eller bevegelsen er kontrollert av nettleseren eller operativsystemet. Da er bevegelsen avgjørende for funksjonaliteten. </p>\n<p>Eksempler på innhold som er unntatt fordi det er avgjørende vil være når:</p>\n<ul>\n<li>operativsystemet på enheten har funksjonalitet for å \n<ul>\n<li>slette innskrevet tekst ved å riste på den</li>\n<li>slå av lyden på innkommende anrop ved å snu skjermen ned</li>\n<li>dra håndflaten over skjermen for å ta skjermbilde</li>\n</ul>\n</li>\n<li>en skritteller er avhengig av enhetens bevegelser for å registrere og telle skritt</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -129,7 +129,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Kan brukeren slå av bevegelsesaktiveringen?",
-			"ht": "<p>I følge ordlyden skal brukeren kunne slå av bevegelsesaktivering av innhold. Dette kan gjøres på følgende måte: </p>\n<ul>\n<li>via innstillinger gitt av innholdsprodusent eller i brukeragenter, på systemnivå</li>\n</ul>\n<p>Eksempler på måter for å slå av bevegelsesaktivering er:</p>\n<ul>\n<li>Bevegelsesaktivert glidebryter (slider): En slider kan justeres ved å vippe enheten til høyre eller venstre. En avkryssingsboks på siden slår av bevegelsesaktiveringen. </li>\n<li>Rist for å slette/angre: Når brukeren har skrevet tekst i et skjemafelt, og deretter rister på enheten, kommer det opp en dialogboks der brukeren kan slette teksten. Rist for å slette/angre kan slås av i innstillinger i nettleseren. </li>\n<li>Sidenavigering i en bok: Øyesporing oppdager når brukeren har lest en side og blar automatisk til neste side. Øyesporing kan slås av med en knapp på siden.</li>\n</ul>",
+			"ht": "<p>I følge ordlyden skal brukeren kunne slå av bevegelsesaktivering av innhold. Dette kan gjøres på følgende måte: </p>\n<ul>\n<li>via innstillinger gitt av innholdsprodusent eller i brukeragenter, på systemnivå</li>\n</ul>\n<p>Sjekk om du får til å slå av bevegelsesaktiveringen. </p>\n<p>Eksempler på måter for å slå av bevegelsesaktivering er:</p>\n<ul>\n<li>Bevegelsesaktivert glidebryter (slider): En slider kan justeres ved å vippe enheten til høyre eller venstre. En avkryssingsboks på siden slår av bevegelsesaktiveringen. </li>\n<li>Rist for å slette/angre: Når brukeren har skrevet tekst i et skjemafelt, og deretter rister på enheten, kommer det opp en dialogboks der brukeren kan slette teksten. Rist for å slette/angre kan slås av i innstillinger i nettleseren. </li>\n<li>Sidenavigering i en bok: Øyesporing oppdager når brukeren har lest en side og blar automatisk til neste side. Øyesporing kan slås av med en knapp på siden.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G213"
