@@ -24,9 +24,10 @@ Id er ein unik identifikator for kvar testregel.
 
 ### Type
 Type er kategori av testregel. Dei aktuelle typane er: 
-- web 
-- mobilapplikasjon
-- automat
+- App
+- Automat
+- Dokument
+- Nett
 ### Eksempel
 
 ```json
