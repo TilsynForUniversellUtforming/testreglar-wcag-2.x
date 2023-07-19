@@ -2,34 +2,77 @@ import * as fs from 'fs';
 import { glob } from 'glob';
 
 
+let filer;
+
+beforeAll(async () => {
+    filer = await hentFiler();
+});
+
 
 test('Sjekker at Testregelmappe finnes', () => {
     expect(fs.existsSync("./Testreglar")).toBe(true);
 });
 
 
-test('Sjekker dataformat', async () => {
 
 
-    const a = await lesFiler();
+describe('Sjekk av testregelformat', () => {
+
+    console.log(filer);
+
+    // Applies only to tests in this descrisbe block
 
 
-    expect(a).toBe(true);
+
+    
+
+    test('Sjekker at Testregelmappe finnes', async() => {
+
+        filer.forEach(async (f) => {
+
+            const file = fs.readFileSync(f, 'utf8')
+            const testregel = JSON.parse(fs.readFileSync(f, 'utf8'));
+
+            if (testregel.id == null) {
+                console.log(testregel.id);
+            } else {
+                expect(typeof testregel.id).toBe("string");
+            }
+            
+
+            
+            //expect(typeof(testregel.id)).toBe("string");
+            
+        });
+            
+
+     
+        
+    });
+
+    /**filer.forEach((e) => {
+
+
+        test('Sjekker at Testregelmappe finnes', () => {
+            expect(true).toBe(true);
+        });
+
+    });*/
+
+    
 });
 
 
 
 
 async function hentFiler() {
-    const jsfiles = await glob('Testreglar/**/*.json');
-    return jsfiles;
-
+    filer = await glob('Testreglar/**/*.json');
+    return filer;
 
 }
 
 async function lesFiler() {
     let check;
-    const filer = await hentFiler();
     await filer.forEach(async (f: string) => {
         check = await test_fil(f);
     }, check);
