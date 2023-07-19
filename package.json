@@ -2,16 +2,32 @@
   "name": "uutilsynet-testreglar-wcag-2x",
   "version": "0.0.1",
   "description": "Testreglar for WCAG 2.x",
-  "scripts": {
-    "lint": "eslint . --ext .json"
-  },
+  "main": "app.js",
   "author": {
     "name": "Tilsynet for universell utforming"
   },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "lint": "eslint . --ext .json --ext .ts"
+  },
   "devDependencies": {
+    "@types/node": "^20.4.2",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
     "eslint": "^8.45.0",
+    "typescript": "^5.1.6",
     "eslint-plugin-json": "^3.1.0"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ]
   }
+
 }
