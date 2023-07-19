@@ -33,6 +33,7 @@
     <Content Include="Doc\Testregelformat\Rutingreglar.md" />
     <Content Include="Mal\mal.json" />
     <Content Include="Mal\standardtekstar.json" />
+    <Content Include="Doc\Testregelformat\Testregelformat.md" />
     <Content Include="Testreglar\111\App\app-111a.json" />
     <Content Include="Testreglar\111\Nett\111a.json" />
     <Content Include="Testreglar\111\Nett\111b.json" />
