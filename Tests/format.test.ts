@@ -15,32 +15,16 @@ test('Sjekker at Testregelmappe finnes', () => {
 });
 
 
+test('Testregelformat er korrekt', async () => {
+    let format_sjekk = true;
 
-
-describe('Sjekk av testregelformat', () => {
-
-
-    test('Testregelformat er korrekt', async () => {
-
-        let format_sjekk = true;
-       
-
-        
-
-        filer.forEach(async (f: string) => {
-
-            if (!sjekk_format(f)) {
-                format_sjekk = false;
-            }  
-         
-           
-        });
-        expect(format_sjekk).toEqual(true);
-        
+    filer.forEach((f: string) => {
+        if (!sjekk_format(f)) {
+            format_sjekk = false;
+        }
     });
+    expect(format_sjekk).toEqual(true);
 });
-
-
 
 
 
@@ -51,8 +35,7 @@ async function hentFiler() {
 }
 
 
-
-function sjekk_format(file):boolean {
+function sjekk_format(file): boolean {
     if (!file.startsWith("Testreglar\\felles\\")) {
         const testregel = JSON.parse(fs.readFileSync(file, 'utf8'));
 
@@ -66,8 +49,6 @@ function sjekk_format(file):boolean {
             console.log("Filen " + file + " mangler spraak felt");
             return false
         }
-
-        
     }
 
     return true;
