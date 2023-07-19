@@ -139,6 +139,7 @@
     <Folder Include="Doc\" />
     <Folder Include="Doc\Testregelformat\" />
     <Folder Include="Mal\" />
+    <Folder Include="Tests\" />
     <Folder Include="src\" />
     <Folder Include="Testreglar\" />
     <Folder Include="Testreglar\111\" />
@@ -260,6 +261,11 @@
     <Folder Include="Utdatert\1410\Nett\" />
     <Folder Include="Utdatert\253\" />
     <Folder Include="Utdatert\253\Nett\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Tests\format.test.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>

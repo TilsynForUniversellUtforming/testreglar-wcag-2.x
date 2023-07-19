@@ -5,6 +5,11 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "testreglar-wcag-2.x", "testreglar-wcag-2.x.njsproj", "{9383CABB-CD4D-40DF-9E1C-BFA8325287DE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A7ECC174-EC3E-4D58-A5E3-5875E15FC3A5}"
+	ProjectSection(SolutionItems) = preProject
+		.eslintrc.json = .eslintrc.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
