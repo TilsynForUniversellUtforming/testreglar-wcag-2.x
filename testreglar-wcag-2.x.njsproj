@@ -128,7 +128,6 @@
     <Content Include="Testreglar\413\Nett\nett-4.1.3a.json" />
     <Content Include="Testreglar\felles\fellesApp.json" />
     <Content Include="Testreglar\felles\fellesWeb.json" />
-    <Content Include="Tests\jestGlobalSetup.js" />
     <Content Include="Utdatert\134\Nett\1.3.4a-2022.json" />
     <Content Include="Utdatert\1410\Nett\1410a.json" />
     <Content Include="Utdatert\253\Nett\2.5.3a-2022.json" />

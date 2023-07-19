@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import { glob } from 'glob';
 
 
+
 let filer;
 
 beforeAll(async () => {
@@ -18,49 +19,27 @@ test('Sjekker at Testregelmappe finnes', () => {
 
 describe('Sjekk av testregelformat', () => {
 
-    console.log(filer);
 
-    // Applies only to tests in this descrisbe block
+    test('Testregelformat er korrekt', async () => {
 
+        let format_sjekk = true;
+       
 
+        
 
-    
+        filer.forEach(async (f: string) => {
 
-    test('Sjekker at Testregelmappe finnes', async() => {
-
-        filer.forEach(async (f) => {
-
-            const file = fs.readFileSync(f, 'utf8')
-            const testregel = JSON.parse(fs.readFileSync(f, 'utf8'));
-
-            if (testregel.id == null) {
-                console.log(testregel.id);
-            } else {
-                expect(typeof testregel.id).toBe("string");
-            }
-            
-
-            
-            //expect(typeof(testregel.id)).toBe("string");
-            
+            if (!sjekk_format(f)) {
+                format_sjekk = false;
+            }  
+         
+           
         });
-            
-
-     
+        expect(format_sjekk).toEqual(true);
         
     });
-
-    /**filer.forEach((e) => {
-
-
-        test('Sjekker at Testregelmappe finnes', () => {
-            expect(true).toBe(true);
-        });
-
-    });*/
-
-    
 });
+
 
 
 
@@ -71,34 +50,25 @@ async function hentFiler() {
 
 }
 
-async function lesFiler() {
-    let check;
-    await filer.forEach(async (f: string) => {
-        check = await test_fil(f);
-    }, check);
-
-    return check;
-
-}
 
 
-async function test_fil(f) {
+function sjekk_format(file):boolean {
+    if (!file.startsWith("Testreglar\\felles\\")) {
+        const testregel = JSON.parse(fs.readFileSync(file, 'utf8'));
 
+        if (typeof (testregel.id) !== "string") {
+            console.log("Filen " + file + " mangler id-felt");
+            return false
+        } else if (typeof (testregel.type) !== "string") {
+            console.log("Filen " + file + " mangler type felt");
+            return false
+        } else if (typeof (testregel.spraak) !== "string") {
+            console.log("Filen " + file + " mangler spraak felt");
+            return false
+        }
 
-
-    const obj = JSON.parse(fs.readFileSync(f, 'utf8'));
-
-    if (typeof (obj.id) === "string") {
-        return true;
-    } else {
-        return false;
+        
     }
+
+    return true;
 }
-
-
-
-
-
-
-
-
