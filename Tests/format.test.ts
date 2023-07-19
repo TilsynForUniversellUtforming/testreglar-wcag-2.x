@@ -1,6 +1,5 @@
 import * as fs from 'fs';
-import { glob } from 'glob';
-
+import { glob } from '../node_modules/glob/dist/mjs/index';
 
 
 let filer;
@@ -31,7 +30,6 @@ test('Testregelformat er korrekt', async () => {
 async function hentFiler() {
     filer = await glob('Testreglar/**/*.json');
     return filer;
-
 }
 
 
