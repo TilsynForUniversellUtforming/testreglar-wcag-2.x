@@ -1,8 +1,11 @@
 {
+	"namn": "App-1.4.1a Lenka tekst skil seg frå annan tekst med meir enn berre farge - 2023",
 	"id": "app-1.4.1a",
-	"type": "app",
+	"testlabId": 376,
 	"versjon": "1.0",
-	"kravTilSamsvar": "<p>Kravet kan oppfylles p&aring; flere m&aring;ter.</p>\r\n<ul>\r\n<li>\r\n<p>Lenker i l&oslash;pende tekst oppfyller et av alternativer under:</p>\r\n<ul>\r\n<li>\r\n<p>Lenker markerte med farge, skiller seg ut fra n&aelig;rliggende ikke-lenket tekst med mer enn bare farge, eksempel er skrifttype, skriftst&oslash;rrelse, understreking, utheva skrift, ramme eller ikon eller</p>\r\n</li>\r\n<li><span style=\"font-size: 11.0pt; line-height: 107%; font-family: 'Arial',sans-serif; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: NO-BOK; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;\">Lenker markerte med bare farge har kontrast p&aring; minst 3:1, mot n&aelig;rliggende ikke-lenket tekst </span></li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"type": "App",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Kravet kan oppfylles på flere måter.</p>\r\n<ul>\r\n<li>\r\n<p>Lenker i løpende tekst oppfyller et av alternativer under:</p>\r\n<ul>\r\n<li>\r\n<p>Lenker markerte med farge, skiller seg ut fra nærliggende ikke-lenket tekst med mer enn bare farge, eksempel er skrifttype, skriftstørrelse, understreking, utheva skrift, ramme eller ikon eller</p>\r\n</li>\r\n<li>Lenker markerte med bare farge har kontrast på minst 3:1, mot nærliggende ikke-lenket tekst</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -36,8 +39,7 @@
 					"type": "gaaTil",
 					"steg": "2.2"
 				}
-			},
-			"kilde": []
+			}
 		},
 		{
 			"stegnr": "2.2",

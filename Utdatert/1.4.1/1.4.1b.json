@@ -1,7 +1,10 @@
 {
+	"namn": "1.4.1b Informasjon i grafiske framstillingar skil seg ut med meir enn berre farge",
 	"id": "1.4.1b",
-	"type": "web",
+	"testlabId": 146,
 	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
 	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>Dersom farge er brukt som visuelt verkemiddel for å formidle informasjon eller skilje ut visuelle element i grafiske framstillingar, er også eit av følgande oppfylt:\r\n<ul>\r\n<li>Forklarande tekst eller andre visuelle verkemiddel som gir same informasjon som er formidla gjennom bruk av farge. Eksempel: mønster, form (for eksempel stjerne, diamant, firkant og liknande) eller direkte kopling mellom del av illustrasjon der farge er brukt og forklarande informasjon.</li>\r\n<li>Det finst ein mekanisme som aktiverer slik informasjon</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",

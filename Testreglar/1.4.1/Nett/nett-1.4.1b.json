@@ -1,8 +1,11 @@
 {
+	"namn": "Nett-1.4.1b Informasjon i grafiske framstillingar skil seg ut med meir enn berre farge - 2023",
 	"id": "nett-1.4.1b",
-	"type": "web",
+	"testlabId": 374,
 	"versjon": "1.0",
-	"kravTilSamsvar": "<p>Kravet kan oppfylles p&aring; flere m&aring;ter:</p>\r\n<ul>\r\n<li>N&aring;r farge er brukt for &aring; formidle informasjon eller skille ut visuelle element i grafiske framstillinger, er ett av f&oslash;lgende punkter oppfylt i tillegg\r\n<ul>\r\n<li>Forklarende tekst gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Andre visuelle virkemiddel gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Det er direkte kobling mellom del av illustrasjon der farge er brukt og forklarende informasjon og</li>\r\n<li>Det finnes en mekanisme som aktiverer informasjonen</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"type": "Nett",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Kravet kan oppfylles på flere måter:</p>\r\n<ul>\r\n<li>Når farge er brukt for å formidle informasjon eller skille ut visuelle element i grafiske framstillinger, er ett av følgende punkter oppfylt i tillegg\r\n<ul>\r\n<li>Forklarende tekst gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Andre visuelle virkemiddel gir samme informasjon som er formidlet med farge eller</li>\r\n<li>Det er direkte kobling mellom del av illustrasjon der farge er brukt og forklarende informasjon og</li>\r\n<li>Det finnes en mekanisme som aktiverer informasjonen</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -23,7 +26,7 @@
 		{
 			"stegnr": "2.1",
 			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID",
+			"ht": "<p>Oppgi URL eller side-ID</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
