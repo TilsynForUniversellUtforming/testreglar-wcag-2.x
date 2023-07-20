@@ -1,692 +1,695 @@
 {
-	"id": "2.4.5a",
-	"type": "web",
-	"versjon": "1.0",
-	"kravTilSamsvar": "<p>Det skal vere minst to måtar å navigere til innhald på nettsider (på nettstader med meir enn ei nettside).</p>",
-	"side": "2.1",
-	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "2.5"
-		},
-		{
-			"title": "2.6"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		},
-		{
-			"title": "3.10"
-		}
-	],
-	"steg": [
-		{
-			"stegnr": "2.1",
-			"spm": "Registrer URL til nettstaden",
-			"ht": "Skriv inn URL til nettstaden.",
-			"type": "tekst",
-			"label": "Nettstad:",
-			"oblig": true,
-			"datalist": "Sideutvalg",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.2"
-				}
-			}
-		},
-		{
-			"stegnr": "2.2",
-			"spm": "Består nettstaden av berre ei nettside?",
-			"ht": "Merk at nettstader som berre består av ei side, er unnateke kravet, jamfør formulering i suksesskriteriet.",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "ikkjeForekomst",
-					"utfall": "Nettstaden består berre av ei side."
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "2.3"
-				}
-			}
-		},
-		{
-			"stegnr": "2.3",
-			"spm": "Finst det ei liste med lenker til innhaldet på nettstaden?",
-			"ht": "<p>Ei slik liste med lenker kan vere i form av </p><ul><li>ein meny</li><li>innhaldsliste</li></ul>",
-			"type": "jaNei",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.4"
-				}
-			}
-		},
-		{
-			"stegnr": "2.4",
-			"spm": "Har nettstaden søkefunksjon?",
-			"ht": "<p>Søkefelt på same side eller lenke til søk.</p><p>Merk at søkefunksjonen skal ligge på den aktuelle nettstaden og ikkje på ein annan nettstad, som for eksempel Google eller Kvasir. Nettstaden kan bruke eksterne søk, men søkefunksjonen skal uansett ligge på nettstaden.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.5"
-				}
-			}
-		},
-		{
-			"stegnr": "2.5",
-			"spm": "Har nettstaden nettstadkart?",
-			"ht": "",
-			"type": "jaNei",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.6"
-				}
-			}
-		},
-		{
-			"stegnr": "2.6",
-			"spm": "Har nettstaden andre måtar å navigere på, for eksempel ein alfabetisk sideoversikt?",
-			"ht": "<p>Søkefelt på same side eller lenke til søk.</p><p>Merk at søkefunksjonen skal ligge på den aktuelle nettstaden og ikkje på ein annan nettstad, som for eksempel Google eller Kvasir. Nettstaden kan bruke eksterne søk, men søkefunksjonen skal uansett ligge på nettstaden.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"alle": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"sjekk": [
-								"2.3",
-								"2.4",
-								"2.5",
-								"2.6"
-							],
-							"type": "talDersom",
-							"verdi": "Ja",
-							"mellom1": 2,
-							"mellom2": 4,
-							"handling": {
-								"type": "gaaTil",
-								"steg": "3.1"
-							}
-						},
-						"2": {
-							"sjekk": [
-								"2.3",
-								"2.4",
-								"2.5",
-								"2.6"
-							],
-							"type": "talDersom",
-							"verdi": "Ja",
-							"mellom1": 0,
-							"mellom2": 1,
-							"handling": {
-								"type": "avslutt",
-								"fasit": "Nei",
-								"utfall": "Nettstaden har mindre enn to måtar å navigere på."
-							}
-						}
-					}
-				}
-			}
-		},
-		{
-			"stegnr": "3.1",
-			"spm": "Oppgi URL til nettsida som skal testast.",
-			"ht": "Skriv inn URL/Side-ID.",
-			"type": "tekst",
-			"label": "Element",
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.2"
-				}
-			}
-		},
-		{
-			"stegnr": "3.2",
-			"spm": "Er nettsida du har opna ein del av ein prosess, der kvar enkelt handling er nødvendig for å gjennomføre ein aktivitet? ",
-			"ht": "<p>Merk at nettsider som er ein del av eller resultat av ein prosess, er unnateke kravet.</p><p>Eksempel på slike prosessar</p><ul><li>kjøpsprosess i nettbutikk, frå ein søker opp ei vare, til vara er kjøpt og betalt</li><li>bruk av nettbank</li><li>søk og andre skjema</li></ul>",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje innhald som må navigerast i ei bestemt tastaturrekkefølgje for at det skal vere mogleg å forstå og bruke."
-				},
-				"nei": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"sjekk": "2.3",
-							"type": "lik",
-							"verdi": "Ja",
-							"handling": {
-								"type": "gaaTil",
-								"steg": "3.3"
-							}
-						},
-						"2": {
-							"sjekk": "2.3",
-							"type": "lik",
-							"verdi": "Nei",
-							"handling": {
-								"type": "regler",
-								"regler": {
-									"1": {
-										"sjekk": "2.4",
-										"type": "lik",
-										"verdi": "Ja",
-										"handling": {
-											"type": "gaaTil",
-											"steg": "3.5"
-										}
-									},
-									"2": {
-										"sjekk": "2.4",
-										"type": "lik",
-										"verdi": "Nei",
-										"handling": {
-											"type": "regler",
-											"regler": {
-												"1": {
-													"sjekk": "2.5",
-													"type": "lik",
-													"verdi": "Ja",
-													"handling": {
-														"type": "gaaTil",
-														"steg": "3.8"
-													}
-												},
-												"2": {
-													"sjekk": "2.5",
-													"type": "lik",
-													"verdi": "Nei",
-													"handling": {
-														"type": "gaaTil",
-														"steg": "3.10"
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		{
-			"stegnr": "3.3",
-			"spm": "Prøv å finne aktuell testside ved å navigere i meny/lenkesamling.",
-			"ht": "Merk at nettstader som berre består av ei side, er unnateke kravet, jamfør formulering i suksesskriteriet.",
-			"type": "instruksjon",
-			"kilde": [
-				"G125",
-				"G126"
-			],
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.4"
-				}
-			}
-		},
-		{
-			"stegnr": "3.4",
-			"spm": "Kom du til forventa side ved å navigere i meny/lenkesamling?",
-			"ht": "Merk at nettstader som berre består av ei side, er unnateke kravet, jamfør formulering i suksesskriteriet.",
-			"type": "jaNei",
-			"kilde": [
-				"G125",
-				"G126"
-			],
-			"ruting": {
-				"alle": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"sjekk": "2.4",
-							"type": "lik",
-							"verdi": "Ja",
-							"handling": {
-								"type": "gaaTil",
-								"steg": "3.5"
-							}
-						},
-						"2": {
-							"sjekk": "2.4",
-							"type": "lik",
-							"verdi": "Nei",
-							"handling": {
-								"type": "regler",
-								"regler": {
-									"1": {
-										"sjekk": "2.5",
-										"type": "lik",
-										"verdi": "Ja",
-										"handling": {
-											"type": "gaaTil",
-											"steg": "3.8"
-										}
-									},
-									"2": {
-										"sjekk": "2.5",
-										"type": "lik",
-										"verdi": "Nei",
-										"handling": {
-											"type": "gaaTil",
-											"steg": "3.10"
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		{
-			"stegnr": "3.5",
-			"spm": "Prøv å finne aktuell testside ved hjelp av søkefunksjonen.",
-			"ht": "Bruk hovudoverskrifta eller sidetittelen på testsida som søkeomgrep.",
-			"type": "instruksjon",
-			"kilde": [],
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.6"
-				}
-			}
-		},
-		{
-			"stegnr": "3.6",
-			"spm": "Kjem du til ei side som viser resultat av søket?",
-			"ht": "Merk at du ikkje skal vurdere om du finn sida du søker etter i dette teststeget.",
-			"type": "jaNei",
-			"kilde": [
-				"G161"
-			],
-			"ruting": {
-				"nei": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"sjekk": "2.5",
-							"type": "lik",
-							"verdi": "Ja",
-							"handling": {
-								"type": "gaaTil",
-								"steg": "3.7"
-							}
-						},
-						"2": {
-							"sjekk": "2.5",
-							"type": "lik",
-							"verdi": "Nei",
-							"handling": {
-								"type": "regler",
-								"regler": {
-									"1": {
-										"sjekk": "2.6",
-										"type": "lik",
-										"verdi": "Ja",
-										"handling": {
-											"type": "gaaTil",
-											"steg": "3.10"
-										}
-									},
-									"2": {
-										"sjekk": "2.6",
-										"type": "lik",
-										"verdi": "Nei",
-										"handling": {
-											"type": "regler",
-											"regler": {
-												"1": {
-													"sjekk": [
-														"3.4",
-														"3.7"
-													],
-													"type": "talDersom",
-													"verdi": "Ja",
-													"mellom1": 2,
-													"mellom2": 2,
-													"handling": {
-														"type": "avslutt",
-														"fasit": "Ja",
-														"utfall": "Det finst minst to måtar å navigere til innhald på testsidene."
-													}
-												},
-												"2": {
-													"sjekk": [
-														"3.4",
-														"3.7"
-													],
-													"type": "talDersom",
-													"verdi": "Ja",
-													"mellom1": 0,
-													"mellom2": 1,
-													"handling": {
-														"type": "avslutt",
-														"fasit": "Nei",
-														"utfall": "Det finst ikkje to måtar å navigere til innhald på testsidene."
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				},
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.7"
-				}
-			}
-		},
-		{
-			"stegnr": "3.7",
-			"spm": "Er det mogleg å navigere til sida du søkte etter frå sida som viser søkeresultat?",
-			"ht": "",
-			"type": "jaNei",
-			"kilde": [
-				"G161"
-			],
-			"ruting": {
-				"alle": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"sjekk": "2.5",
-							"type": "lik",
-							"verdi": "Ja",
-							"handling": {
-								"type": "gaaTil",
-								"steg": "3.8"
-							}
-						},
-						"2": {
-							"sjekk": "2.5",
-							"type": "lik",
-							"verdi": "Nei",
-							"handling": {
-								"type": "regler",
-								"regler": {
-									"1": {
-										"sjekk": "2.6",
-										"type": "lik",
-										"verdi": "Ja",
-										"handling": {
-											"type": "gaaTil",
-											"steg": "3.10"
-										}
-									},
-									"2": {
-										"sjekk": "2.6",
-										"type": "lik",
-										"verdi": "Nei",
-										"handling": {
-											"type": "regler",
-											"regler": {
-												"1": {
-													"sjekk": [
-														"3.4",
-														"3.7",
-														"3.9"
-													],
-													"type": "talDersom",
-													"verdi": "Ja",
-													"mellom1": 2,
-													"mellom2": 4,
-													"handling": {
-														"type": "avslutt",
-														"fasit": "Ja",
-														"utfall": "Det finst minst to måtar å navigere til innhald på testsidene."
-													}
-												},
-												"2": {
-													"sjekk": [
-														"3.4",
-														"3.7",
-														"3.9"
-													],
-													"type": "talDersom",
-													"verdi": "Ja",
-													"mellom1": 0,
-													"mellom2": 1,
-													"handling": {
-														"type": "avslutt",
-														"fasit": "Nei",
-														"utfall": "Det finst ikkje to måtar å navigere til innhald på testsidene."
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		{
-			"stegnr": "3.8",
-			"spm": "Finst det eit nettstadkart eller ei lenke til nettstadkart på den aktuelle testsida?",
-			"ht": "Du kan for eksempel søke på sida etter nettstadkartet, sjå under eventuell lenke til \"om nettstaden\" eller liknande.",
-			"type": "jaNei",
-			"kilde": [
-				"G63"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.9"
-				},
-				"nei": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"sjekk": "2.6",
-							"type": "lik",
-							"verdi": "Ja",
-							"handling": {
-								"type": "gaaTil",
-								"steg": "3.10"
-							}
-						},
-						"2": {
-							"sjekk": "2.6",
-							"type": "lik",
-							"verdi": "Nei",
-							"handling": {
-								"type": "regler",
-								"regler": {
-									"1": {
-										"sjekk": [
-											"3.4",
-											"3.7",
-											"3.9"
-										],
-										"type": "talDersom",
-										"verdi": "Ja",
-										"mellom1": 2,
-										"mellom2": 4,
-										"handling": {
-											"type": "avslutt",
-											"fasit": "Ja",
-											"utfall": "Det finst minst to måtar å navigere til innhald på testsidene."
-										}
-									},
-									"2": {
-										"sjekk": [
-											"3.4",
-											"3.7",
-											"3.9"
-										],
-										"type": "talDersom",
-										"verdi": "Ja",
-										"mellom1": 0,
-										"mellom2": 1,
-										"handling": {
-											"type": "avslutt",
-											"fasit": "Nei",
-											"utfall": "Det finst ikkje to måtar å navigere til innhald på testsidene."
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		{
-			"stegnr": "3.9",
-			"spm": "Finn du testsida eller området på nettstaden som testsida tilhøyrer, ved hjelp av nettstadkartet?",
-			"ht": "<p>Ein eventuell brødsmulesti kan i informasjon om kva område testsida høyrer til under.</p><p>Du kan også søke etter aktuell testside eller område ved å bruke Ctrl+F.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"G63"
-			],
-			"ruting": {
-				"alle": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"sjekk": "2.6",
-							"type": "lik",
-							"verdi": "Ja",
-							"handling": {
-								"type": "gaaTil",
-								"steg": "3.10"
-							}
-						},
-						"2": {
-							"sjekk": "2.6",
-							"type": "lik",
-							"verdi": "Nei",
-							"handling": {
-								"type": "regler",
-								"regler": {
-									"1": {
-										"sjekk": [
-											"3.4",
-											"3.7",
-											"3.9"
-										],
-										"type": "talDersom",
-										"verdi": "Ja",
-										"mellom1": 2,
-										"mellom2": 4,
-										"handling": {
-											"type": "avslutt",
-											"fasit": "Ja",
-											"utfall": "Det finst minst to måtar å navigere til innhald på testsidene."
-										}
-									},
-									"2": {
-										"sjekk": [
-											"3.4",
-											"3.7",
-											"3.9"
-										],
-										"type": "talDersom",
-										"verdi": "Ja",
-										"mellom1": 0,
-										"mellom2": 1,
-										"handling": {
-											"type": "avslutt",
-											"fasit": "Nei",
-											"utfall": "Det finst ikkje to måtar å navigere til innhald på testsidene."
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		{
-			"stegnr": "3.10",
-			"spm": "Finn du testsida eller området på nettstaden som testsida tilhøyrer, i for eksempel ein alfabetisk sideoversikt?",
-			"ht": "<p>Ein eventuell brødsmulesti kan gje informasjon om kva område testsida høyrer til under.</p><p>Du kan også søke etter aktuell testside eller område ved å bruke Ctrl+F.</p>",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"alle": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"sjekk": [
-								"3.4",
-								"3.7",
-								"3.9",
-								"3.10"
-							],
-							"type": "talDersom",
-							"verdi": "Ja",
-							"mellom1": 2,
-							"mellom2": 4,
-							"handling": {
-								"type": "avslutt",
-								"fasit": "Ja",
-								"utfall": "Det finst minst to måtar å navigere til innhald på testsidene."
-							}
-						},
-						"2": {
-							"sjekk": [
-								"3.4",
-								"3.7",
-								"3.9",
-								"3.10"
-							],
-							"type": "talDersom",
-							"verdi": "Ja",
-							"mellom1": 0,
-							"mellom2": 1,
-							"handling": {
-								"type": "avslutt",
-								"fasit": "Nei",
-								"utfall": "Det finst ikkje to måtar å navigere til innhald på testsidene."
-							}
-						}
-					}
-				}
-			}
-		}
-	]
+    "namn": "2.4.5a Det er fleire måtar å navigere på",
+    "id": "2.4.5a",
+    "testlabId": 208,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nn",
+    "kravTilSamsvar": "<p>Det skal vere minst to måtar å navigere til innhald på nettsider (på nettstader med meir enn ei nettside).</p>",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "2.3"
+        },
+        {
+            "title": "2.4"
+        },
+        {
+            "title": "2.5"
+        },
+        {
+            "title": "2.6"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.6"
+        },
+        {
+            "title": "3.7"
+        },
+        {
+            "title": "3.8"
+        },
+        {
+            "title": "3.9"
+        },
+        {
+            "title": "3.10"
+        }
+    ],
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Registrer URL til nettstaden",
+            "ht": "Skriv inn URL til nettstaden.",
+            "type": "tekst",
+            "label": "Nettstad:",
+            "oblig": true,
+            "datalist": "Sideutvalg",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Består nettstaden av berre ei nettside?",
+            "ht": "Merk at nettstader som berre består av ei side, er unnateke kravet, jamfør formulering i suksesskriteriet.",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Nettstaden består berre av ei side."
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "2.3"
+                }
+            }
+        },
+        {
+            "stegnr": "2.3",
+            "spm": "Finst det ei liste med lenker til innhaldet på nettstaden?",
+            "ht": "<p>Ei slik liste med lenker kan vere i form av </p><ul><li>ein meny</li><li>innhaldsliste</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.4"
+                }
+            }
+        },
+        {
+            "stegnr": "2.4",
+            "spm": "Har nettstaden søkefunksjon?",
+            "ht": "<p>Søkefelt på same side eller lenke til søk.</p><p>Merk at søkefunksjonen skal ligge på den aktuelle nettstaden og ikkje på ein annan nettstad, som for eksempel Google eller Kvasir. Nettstaden kan bruke eksterne søk, men søkefunksjonen skal uansett ligge på nettstaden.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.5"
+                }
+            }
+        },
+        {
+            "stegnr": "2.5",
+            "spm": "Har nettstaden nettstadkart?",
+            "ht": "",
+            "type": "jaNei",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.6"
+                }
+            }
+        },
+        {
+            "stegnr": "2.6",
+            "spm": "Har nettstaden andre måtar å navigere på, for eksempel ein alfabetisk sideoversikt?",
+            "ht": "<p>Søkefelt på same side eller lenke til søk.</p><p>Merk at søkefunksjonen skal ligge på den aktuelle nettstaden og ikkje på ein annan nettstad, som for eksempel Google eller Kvasir. Nettstaden kan bruke eksterne søk, men søkefunksjonen skal uansett ligge på nettstaden.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "alle": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": [
+                                "2.3",
+                                "2.4",
+                                "2.5",
+                                "2.6"
+                            ],
+                            "type": "talDersom",
+                            "verdi": "Ja",
+                            "mellom1": 2,
+                            "mellom2": 4,
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.1"
+                            }
+                        },
+                        "2": {
+                            "sjekk": [
+                                "2.3",
+                                "2.4",
+                                "2.5",
+                                "2.6"
+                            ],
+                            "type": "talDersom",
+                            "verdi": "Ja",
+                            "mellom1": 0,
+                            "mellom2": 1,
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Nettstaden har mindre enn to måtar å navigere på."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Oppgi URL til nettsida som skal testast.",
+            "ht": "Skriv inn URL/Side-ID.",
+            "type": "tekst",
+            "label": "Element",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Er nettsida du har opna ein del av ein prosess, der kvar enkelt handling er nødvendig for å gjennomføre ein aktivitet? ",
+            "ht": "<p>Merk at nettsider som er ein del av eller resultat av ein prosess, er unnateke kravet.</p><p>Eksempel på slike prosessar</p><ul><li>kjøpsprosess i nettbutikk, frå ein søker opp ei vare, til vara er kjøpt og betalt</li><li>bruk av nettbank</li><li>søk og andre skjema</li></ul>",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje innhald som må navigerast i ei bestemt tastaturrekkefølgje for at det skal vere mogleg å forstå og bruke."
+                },
+                "nei": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "2.3",
+                            "type": "lik",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.3"
+                            }
+                        },
+                        "2": {
+                            "sjekk": "2.3",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "regler",
+                                "regler": {
+                                    "1": {
+                                        "sjekk": "2.4",
+                                        "type": "lik",
+                                        "verdi": "Ja",
+                                        "handling": {
+                                            "type": "gaaTil",
+                                            "steg": "3.5"
+                                        }
+                                    },
+                                    "2": {
+                                        "sjekk": "2.4",
+                                        "type": "lik",
+                                        "verdi": "Nei",
+                                        "handling": {
+                                            "type": "regler",
+                                            "regler": {
+                                                "1": {
+                                                    "sjekk": "2.5",
+                                                    "type": "lik",
+                                                    "verdi": "Ja",
+                                                    "handling": {
+                                                        "type": "gaaTil",
+                                                        "steg": "3.8"
+                                                    }
+                                                },
+                                                "2": {
+                                                    "sjekk": "2.5",
+                                                    "type": "lik",
+                                                    "verdi": "Nei",
+                                                    "handling": {
+                                                        "type": "gaaTil",
+                                                        "steg": "3.10"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Prøv å finne aktuell testside ved å navigere i meny/lenkesamling.",
+            "ht": "Merk at nettstader som berre består av ei side, er unnateke kravet, jamfør formulering i suksesskriteriet.",
+            "type": "instruksjon",
+            "kilde": [
+                "G125",
+                "G126"
+            ],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Kom du til forventa side ved å navigere i meny/lenkesamling?",
+            "ht": "Merk at nettstader som berre består av ei side, er unnateke kravet, jamfør formulering i suksesskriteriet.",
+            "type": "jaNei",
+            "kilde": [
+                "G125",
+                "G126"
+            ],
+            "ruting": {
+                "alle": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "2.4",
+                            "type": "lik",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.5"
+                            }
+                        },
+                        "2": {
+                            "sjekk": "2.4",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "regler",
+                                "regler": {
+                                    "1": {
+                                        "sjekk": "2.5",
+                                        "type": "lik",
+                                        "verdi": "Ja",
+                                        "handling": {
+                                            "type": "gaaTil",
+                                            "steg": "3.8"
+                                        }
+                                    },
+                                    "2": {
+                                        "sjekk": "2.5",
+                                        "type": "lik",
+                                        "verdi": "Nei",
+                                        "handling": {
+                                            "type": "gaaTil",
+                                            "steg": "3.10"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Prøv å finne aktuell testside ved hjelp av søkefunksjonen.",
+            "ht": "Bruk hovudoverskrifta eller sidetittelen på testsida som søkeomgrep.",
+            "type": "instruksjon",
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }
+        },
+        {
+            "stegnr": "3.6",
+            "spm": "Kjem du til ei side som viser resultat av søket?",
+            "ht": "Merk at du ikkje skal vurdere om du finn sida du søker etter i dette teststeget.",
+            "type": "jaNei",
+            "kilde": [
+                "G161"
+            ],
+            "ruting": {
+                "nei": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "2.5",
+                            "type": "lik",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.7"
+                            }
+                        },
+                        "2": {
+                            "sjekk": "2.5",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "regler",
+                                "regler": {
+                                    "1": {
+                                        "sjekk": "2.6",
+                                        "type": "lik",
+                                        "verdi": "Ja",
+                                        "handling": {
+                                            "type": "gaaTil",
+                                            "steg": "3.10"
+                                        }
+                                    },
+                                    "2": {
+                                        "sjekk": "2.6",
+                                        "type": "lik",
+                                        "verdi": "Nei",
+                                        "handling": {
+                                            "type": "regler",
+                                            "regler": {
+                                                "1": {
+                                                    "sjekk": [
+                                                        "3.4",
+                                                        "3.7"
+                                                    ],
+                                                    "type": "talDersom",
+                                                    "verdi": "Ja",
+                                                    "mellom1": 2,
+                                                    "mellom2": 2,
+                                                    "handling": {
+                                                        "type": "avslutt",
+                                                        "fasit": "Ja",
+                                                        "utfall": "Det finst minst to måtar å navigere til innhald på testsidene."
+                                                    }
+                                                },
+                                                "2": {
+                                                    "sjekk": [
+                                                        "3.4",
+                                                        "3.7"
+                                                    ],
+                                                    "type": "talDersom",
+                                                    "verdi": "Ja",
+                                                    "mellom1": 0,
+                                                    "mellom2": 1,
+                                                    "handling": {
+                                                        "type": "avslutt",
+                                                        "fasit": "Nei",
+                                                        "utfall": "Det finst ikkje to måtar å navigere til innhald på testsidene."
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                }
+            }
+        },
+        {
+            "stegnr": "3.7",
+            "spm": "Er det mogleg å navigere til sida du søkte etter frå sida som viser søkeresultat?",
+            "ht": "",
+            "type": "jaNei",
+            "kilde": [
+                "G161"
+            ],
+            "ruting": {
+                "alle": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "2.5",
+                            "type": "lik",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.8"
+                            }
+                        },
+                        "2": {
+                            "sjekk": "2.5",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "regler",
+                                "regler": {
+                                    "1": {
+                                        "sjekk": "2.6",
+                                        "type": "lik",
+                                        "verdi": "Ja",
+                                        "handling": {
+                                            "type": "gaaTil",
+                                            "steg": "3.10"
+                                        }
+                                    },
+                                    "2": {
+                                        "sjekk": "2.6",
+                                        "type": "lik",
+                                        "verdi": "Nei",
+                                        "handling": {
+                                            "type": "regler",
+                                            "regler": {
+                                                "1": {
+                                                    "sjekk": [
+                                                        "3.4",
+                                                        "3.7",
+                                                        "3.9"
+                                                    ],
+                                                    "type": "talDersom",
+                                                    "verdi": "Ja",
+                                                    "mellom1": 2,
+                                                    "mellom2": 4,
+                                                    "handling": {
+                                                        "type": "avslutt",
+                                                        "fasit": "Ja",
+                                                        "utfall": "Det finst minst to måtar å navigere til innhald på testsidene."
+                                                    }
+                                                },
+                                                "2": {
+                                                    "sjekk": [
+                                                        "3.4",
+                                                        "3.7",
+                                                        "3.9"
+                                                    ],
+                                                    "type": "talDersom",
+                                                    "verdi": "Ja",
+                                                    "mellom1": 0,
+                                                    "mellom2": 1,
+                                                    "handling": {
+                                                        "type": "avslutt",
+                                                        "fasit": "Nei",
+                                                        "utfall": "Det finst ikkje to måtar å navigere til innhald på testsidene."
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.8",
+            "spm": "Finst det eit nettstadkart eller ei lenke til nettstadkart på den aktuelle testsida?",
+            "ht": "Du kan for eksempel søke på sida etter nettstadkartet, sjå under eventuell lenke til \"om nettstaden\" eller liknande.",
+            "type": "jaNei",
+            "kilde": [
+                "G63"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.9"
+                },
+                "nei": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "2.6",
+                            "type": "lik",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.10"
+                            }
+                        },
+                        "2": {
+                            "sjekk": "2.6",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "regler",
+                                "regler": {
+                                    "1": {
+                                        "sjekk": [
+                                            "3.4",
+                                            "3.7",
+                                            "3.9"
+                                        ],
+                                        "type": "talDersom",
+                                        "verdi": "Ja",
+                                        "mellom1": 2,
+                                        "mellom2": 4,
+                                        "handling": {
+                                            "type": "avslutt",
+                                            "fasit": "Ja",
+                                            "utfall": "Det finst minst to måtar å navigere til innhald på testsidene."
+                                        }
+                                    },
+                                    "2": {
+                                        "sjekk": [
+                                            "3.4",
+                                            "3.7",
+                                            "3.9"
+                                        ],
+                                        "type": "talDersom",
+                                        "verdi": "Ja",
+                                        "mellom1": 0,
+                                        "mellom2": 1,
+                                        "handling": {
+                                            "type": "avslutt",
+                                            "fasit": "Nei",
+                                            "utfall": "Det finst ikkje to måtar å navigere til innhald på testsidene."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.9",
+            "spm": "Finn du testsida eller området på nettstaden som testsida tilhøyrer, ved hjelp av nettstadkartet?",
+            "ht": "<p>Ein eventuell brødsmulesti kan i informasjon om kva område testsida høyrer til under.</p><p>Du kan også søke etter aktuell testside eller område ved å bruke Ctrl+F.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G63"
+            ],
+            "ruting": {
+                "alle": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "2.6",
+                            "type": "lik",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.10"
+                            }
+                        },
+                        "2": {
+                            "sjekk": "2.6",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "regler",
+                                "regler": {
+                                    "1": {
+                                        "sjekk": [
+                                            "3.4",
+                                            "3.7",
+                                            "3.9"
+                                        ],
+                                        "type": "talDersom",
+                                        "verdi": "Ja",
+                                        "mellom1": 2,
+                                        "mellom2": 4,
+                                        "handling": {
+                                            "type": "avslutt",
+                                            "fasit": "Ja",
+                                            "utfall": "Det finst minst to måtar å navigere til innhald på testsidene."
+                                        }
+                                    },
+                                    "2": {
+                                        "sjekk": [
+                                            "3.4",
+                                            "3.7",
+                                            "3.9"
+                                        ],
+                                        "type": "talDersom",
+                                        "verdi": "Ja",
+                                        "mellom1": 0,
+                                        "mellom2": 1,
+                                        "handling": {
+                                            "type": "avslutt",
+                                            "fasit": "Nei",
+                                            "utfall": "Det finst ikkje to måtar å navigere til innhald på testsidene."
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.10",
+            "spm": "Finn du testsida eller området på nettstaden som testsida tilhøyrer, i for eksempel ein alfabetisk sideoversikt?",
+            "ht": "<p>Ein eventuell brødsmulesti kan gje informasjon om kva område testsida høyrer til under.</p><p>Du kan også søke etter aktuell testside eller område ved å bruke Ctrl+F.</p>",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": [
+                                "3.4",
+                                "3.7",
+                                "3.9",
+                                "3.10"
+                            ],
+                            "type": "talDersom",
+                            "verdi": "Ja",
+                            "mellom1": 2,
+                            "mellom2": 4,
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Ja",
+                                "utfall": "Det finst minst to måtar å navigere til innhald på testsidene."
+                            }
+                        },
+                        "2": {
+                            "sjekk": [
+                                "3.4",
+                                "3.7",
+                                "3.9",
+                                "3.10"
+                            ],
+                            "type": "talDersom",
+                            "verdi": "Ja",
+                            "mellom1": 0,
+                            "mellom2": 1,
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Det finst ikkje to måtar å navigere til innhald på testsidene."
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
 }
