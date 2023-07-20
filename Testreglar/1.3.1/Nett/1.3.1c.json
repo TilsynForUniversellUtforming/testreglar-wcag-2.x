@@ -1,7 +1,10 @@
 {
+	"namn": "1.3.1c Lister er rett koda",
 	"id": "1.3.1c",
-	"type": "web",
+	"testlabId": 244,
 	"versjon": "1.1",
+	"type": "Nett",
+	"spraak": "nn",
 	"kravTilSamsvar": "<p>Visuelle lister er koda på følgande måte:</p>\r\n<ul>\r\n<li>Nummererte lister er koda som nummerert liste.</li>\r\n<li>Unummererte lister er koda som unummerert liste.</li>\r\n<li>Beskrivande lister (lister som har to nivå og gir utfyllande forklaringar) er koda som beskrivande lister.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
@@ -308,4 +311,5 @@
 				}
 			}
 		}
-	]}
+	]
+}
