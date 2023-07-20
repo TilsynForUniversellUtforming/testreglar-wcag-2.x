@@ -1,7 +1,10 @@
 {
+	"namn": "1.2.1b Førehandsinnspelt video utan lyd, har alternativ i form av tekst eller lyd",
 	"id": "1.2.1b",
-	"type": "web",
+	"testlabId": 65,
 	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
 	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<p>Førehandsinnspelt video utan lyd, som ikkje er eit alternativ til tekst eller lyd har alternativ i form av tekst eller lyd.</p>\r\n<p>Alternativ i form av tekst eller lyd er:</p>\r\n<ul>\r\n<li>Visuelt plassert nær videoklippet, eller kan nåast via ein mekanisme (lenke, knapp eller liknande) nær videoklippet.</li>\r\n<li>Formidlar det same hovudinnhaldet som videoklippet, i same rekkefølge.</li>\r\n</ul>\r\n<p>Alternativ i form av lyd skal i tillegg</p>\r\n<ul>\r\n<li>vere mogleg å spele av</li>\r\n</ul>\r\n<p>Alternativ i form av tekst skal i tillegg</p>\r\n<ul>\r\n<li>vere koda som tekst</li>\r\n</ul>\r\n<p>Det er ikkje krav om eksakt attgiving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p>",
 	"side": "2.1",
 	"element": "3.1",
@@ -427,4 +430,5 @@
 				}
 			}
 		}
-	]}
+	]
+}
