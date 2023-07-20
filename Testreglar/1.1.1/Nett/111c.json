@@ -1,7 +1,10 @@
 {
+	"namn": "1.1.1c Formål med klikkbare område i bilde, går fram av tekstalternativ",
 	"id": "1.1.1c",
-	"type": "web",
+	"testlabId": 167,
 	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
 	"kravTilSamsvar": "<p>Informasjon om lenkemålet for klikkbare område i bilde går fram av tekstalternativet.</p>",
 	"side": "2.1",
 	"element": "3.3",
@@ -123,8 +126,8 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Har &#x3C;area&#x3E;-elementet attributtet \"aria-label\" ?",
-			"ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette. Attributtet overstyrer eventuelt alt-attributt eller title-attributt.</p><p><strong>Merk: </strong>Du skal ikkje vurdere kvaliteten på teksten. </p>",
+			"spm": "Har &lt;area&gt;-elementet attributtet \"aria-label\" ?",
+			"ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette. Attributtet overstyrer eventuelt alt-attributt eller title-attributt.</p>\n<p><strong>Merk: </strong>Du skal ikkje vurdere kvaliteten på teksten.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA6"
@@ -295,4 +298,5 @@
 				}
 			}
 		}
-	]}
+	]
+}
