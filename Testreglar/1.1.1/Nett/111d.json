@@ -1,7 +1,10 @@
 {
+	"namn": "1.1.1d CAPTCHA har tekstalternativ og alternativ form",
 	"id": "1.1.1d",
-	"type": "web",
+	"testlabId": 231,
 	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
 	"kravTilSamsvar": "<p>Dersom det er brukt CAPTCHA med ikkje-tekstleg innhald, er følgande oppfylt:</p>\r\n<ul>\r\n<li>Det finst minst to former for CAPTCHA, for eksempel i form av bilde, lyd eller tekst.</li>\r\n<li>Ikkje-tekstleg innhald har eit tekstalternativ som identifiserer og beskriv formålet.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
@@ -68,7 +71,7 @@
 		{
 			"stegnr": "2.1",
 			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
@@ -177,7 +180,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Har bilde attributtet \"aria-labelledby\" ?",
-			"ht": "<p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten. </p><p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (Aria-labelledby=\"id1 id2\")</p>",
+			"ht": "<p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>\n<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (Aria-labelledby=\"id1 id2\")</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA10",
