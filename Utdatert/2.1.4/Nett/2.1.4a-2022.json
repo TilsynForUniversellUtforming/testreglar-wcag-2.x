@@ -1,0 +1,156 @@
+{
+	"namn": "2.1.4a Hurtigtastar som består av eit tegn",
+	"id": "2.1.4a-2022",
+	"testlabId": 287,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>For hurtigtastar som består av eit teikn er ein av følgjande er oppfylt:</p>\r\n<ul>\r\n<li>Slå av: Det finnast ein mekanisme for å slå av hurtigtasten.</li>\r\n<li>Omadressere: Det finnast ein mekanisme for å omadressere hurtigtasten til å bruke ein eller flere modifiseringstaster.</li>\r\n<li>Aktiv berre ved fokus: Hurtigtasten for ein brukergrensesnittkomponent er berre aktiv når komponenten kjem i fokus.</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			},
+			"kilde": []
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettsida innhald som blir aktivert av hurtigtastar?",
+			"ht": "<p>Undersøk nettsida for å sjå om det finnes innhald som blir aktivert av hurtigtastar/tastatursnarvegar.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Nettsida har ikkje innhald som blir aktivert av hurtigtastar."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv innhaldet som har hurtigtastar.",
+			"ht": "<p>Beskriv innhaldet som har hurtigtastar. Dersom det er fleire element må du registrere dei kvar for seg. </p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "Innhald som har hurtigtastar",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Består tastatursnarvegen av berre eit teikn?",
+			"ht": "<p>Sjekk om tastatursnarvegen består av berre eit enkelt teikn.</p>\n<p><strong>Merk:</strong> Dette omfattar store bokstaver, små bokstaver, teiknsetting, siffer og symbol.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Tastatursnarvegen består av meir enn eit teikn."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Finnast det ein måte å slå av tastatursnarvegen?",
+			"ht": "<p>Sjekk om det finast ein måte å slå av/ deaktivere tastatursnarvegen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G217",
+				"F99"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Tastatursnarveg som det er mogeleg å deaktivere."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er det mogeleg for brukaren å omadressere (remap) tastatursnarvegen, slik at den brukar ein eller fleire modifiseringstastar?",
+			"ht": "<p>Eksempel på modifiseringstastar kan være Ctrl, Shift eller Alt i kombinasjon med den opphavlege hurtigtasten.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G217",
+				"F99"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Tastatursnarveg som let seg omadressere til å bruke ein eller fleire modifiseringstastar. "
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Er hurtigtasten berre aktiv ved fokus?",
+			"ht": "<p>Sjekk om hurtigtasten berre er aktiv når den tilhøyrande brukargrensesnittkomponenten kjem i fokus.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Hurtigtasten som berre er aktiv når den tilhøyrande brukargrensesnittkomponenten kjem i fokus."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Hurtigtast beståande av eit teikn som ikkje let seg slå av, omadressere eller er aktiv utan fokus."
+				}
+			}
+		}
+	]
+}
