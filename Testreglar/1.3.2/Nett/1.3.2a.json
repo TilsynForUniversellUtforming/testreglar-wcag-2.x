@@ -1,7 +1,10 @@
 {
+	"namn": "1.3.2a Meiningsfylt leserekkefølge er ivareteken i koden.",
 	"id": "1.3.2a",
-	"type": "web",
+	"testlabId": 235,
 	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
 	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>Leserekkefølge på innhaldet i visning med CSS slått av, samanlikna med vanleg visning, er anten:\r\n<ul>\r\n<li>Den same, eller</li>\r\n<li>ei leserekkefølge som på annan måte presenterer det same meiningsinnhaldet.</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",

@@ -1,7 +1,13 @@
 {
+	"namn": "2.5.3a Ledetekst i namn 2022",
 	"id": "2.5.3a-2022",
-	"type": "web",
+	"testlabId": 273,
 	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Skjemaelement, lenker og knappar har ein ledetekst i koden som:</p>\r\n<ul>\r\n<li>er identisk med den synlege ledeteksten, eller</li>\r\n<li>inneheld den synlege ledeteksten på ein eller annan måte, og dei orda som er i den synlege ledeteksten er sammenhengande og kjem i same rekkjefølgje</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
 	"kolonner": [
 		{
 			"title": "2.2"
@@ -40,8 +46,6 @@
 			"title": "3.11"
 		}
 	],
-	"side": "2.1",
-	"element": "3.1",
 	"steg": [
 		{
 			"stegnr": "2.1",
@@ -312,6 +316,5 @@
 				}
 			}
 		}
-	],
-	"kravTilSamsvar": "<p>Skjemaelement, lenker og knappar har ein ledetekst i koden som:</p>\r\n<ul>\r\n<li>er identisk med den synlege ledeteksten, eller</li>\r\n<li>inneheld den synlege ledeteksten på ein eller annan måte, og dei orda som er i den synlege ledeteksten er sammenhengande og kjem i same rekkjefølgje</li>\r\n</ul>"
+	]
 }
