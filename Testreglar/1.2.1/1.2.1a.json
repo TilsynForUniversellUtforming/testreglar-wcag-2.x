@@ -1,8 +1,11 @@
 {
+	"namn": "1.2.1a Førehandsinnspelt lyd har alternativ i form av tekst",
 	"id": "1.2.1a",
-	"type": "web",
+	"testlabId": 15,
 	"versjon": "1.0",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>Førehandsinnspelt lyd, som ikkje er eit mediealternativ til tekst eller video, har alternativ i form av tekst.</li>\r\n<li>Tekstalternativet er:<br />Visuelt plassert nær lydklippet, eller kan nåast via ein mekanisme (lenke, knapp eller liknande) nær lydklippet.</li>\r\n</ul>\r\n<p>I begge tilfelle er eit krav at tekstalternativet: Er koda som tekst og formidlar det same hovudinnhaldet som lydklippet, i same rekkefølge.</p>\r\n<p>Det er ikkje krav om eksakt attgjeving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p>",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>Førehandsinnspelt lyd, som ikkje er eit mediealternativ til tekst eller video, har alternativ i form av tekst.</li>\r\n<li>Tekstalternativet er:<br>Visuelt plassert nær lydklippet, eller kan nåast via ein mekanisme (lenke, knapp eller liknande) nær lydklippet.</li>\r\n</ul>\r\n<p>I begge tilfelle er eit krav at tekstalternativet: Er koda som tekst og formidlar det same hovudinnhaldet som lydklippet, i same rekkefølge.</p>\r\n<p>Det er ikkje krav om eksakt attgjeving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -289,4 +292,5 @@
 				}
 			}
 		}
-	]}
+	]
+}

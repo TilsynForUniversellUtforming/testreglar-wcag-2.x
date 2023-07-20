@@ -1,8 +1,11 @@
 {
+	"namn": "1.3.1a Overskrifter er rett koda",
 	"id": "1.3.1a",
-	"type": "web",
+	"testlabId": 242,
 	"versjon": "1.0",
-	"kravTilSamsvar": "<p>Visuelle overskrifter er koda som overskrift.</p>\r\n<p>Overskrifter som inngår i eit visuelt overskriftshierarki, er koda med rett overskriftsnivå.</p>",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<ul>\r\n<li>Visuelle overskrifter er koda som overskrift.</li>\r\n<li>Overskrifter som inngår i eit visuelt overskriftshierarki, er koda med rett overskriftsnivå.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [

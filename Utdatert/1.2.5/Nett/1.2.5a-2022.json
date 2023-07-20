@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Førehandsinnspelt video er synstolka.</p>",
+	"kravTilSamsvar": "<p>FÃ¸rehandsinnspelt video er synstolka.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -22,7 +22,7 @@
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
+			"spm": "Kva side testar du pÃ¥?",
 			"ht": "<p>Oppgi URl eller side-ID.</p>",
 			"type": "tekst",
 			"kilde": [],
@@ -38,7 +38,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har nettstaden videoklipp?",
-			"ht": "<p>Aktuelle metodar kan vere:</p>\n<ul>\n<li>Sjå på sidene om det finst ein playknapp eller liknande.</li>\n<li>Bruk internt søk på nettstaden.</li>\n<li>Bruk Google (Du kan bruke \"site:urlnettstad søkeord\" for å berre søke på ein bestemt nettstad).</li>\n</ul>\n<p>Aktuelle søkeomgrep kan være: \"Video\", \"Animasjon\", \"YouTube\", \"Viemo\", \"opptak\", \"H264\", \"mpeg4\". Merk at søkeomgrepa over er best tilpassa for søk interent på ein nettstad.</p>",
+			"ht": "<p>Aktuelle metodar kan vere:</p>\n<ul>\n<li>SjÃ¥ pÃ¥ sidene om det finst ein playknapp eller liknande.</li>\n<li>Bruk internt sÃ¸k pÃ¥ nettstaden.</li>\n<li>Bruk Google (Du kan bruke \"site:urlnettstad sÃ¸keord\" for Ã¥ berre sÃ¸ke pÃ¥ ein bestemt nettstad).</li>\n</ul>\n<p>Aktuelle sÃ¸keomgrep kan vÃ¦re: \"Video\", \"Animasjon\", \"YouTube\", \"Viemo\", \"opptak\", \"H264\", \"mpeg4\". Merk at sÃ¸keomgrepa over er best tilpassa for sÃ¸k interent pÃ¥ ein nettstad.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -54,8 +54,8 @@
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Skriv inn tittel på videofila.",
-			"ht": "<p>Legg inn tittel på videofila eller stikkord om innhaldet, dersom tittel manglar. Dersom nettsida har fleire videoar må du teste dei kvar for seg.</p>",
+			"spm": "Skriv inn tittel pÃ¥ videofila.",
+			"ht": "<p>Legg inn tittel pÃ¥ videofila eller stikkord om innhaldet, dersom tittel manglar. Dersom nettsida har fleire videoar mÃ¥ du teste dei kvar for seg.</p>",
 			"type": "tekst",
 			"kilde": [],
 			"label": "Video:",
@@ -69,8 +69,8 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Er videoen førehandsinnspelt?",
-			"ht": "<p>Aktuelle metodar for å finne ut dette er:</p> <ul> <li>Prøv å starte videoklippet og sjå om avspelinga startar frå byrjinga av fila og om det finst informasjon om varigheiten på klippet.</li> <li>Sjå etter informasjon om når klippet er publisert.</li> <li>Sjå etter informasjon som tilseier at klippet er live/direkte.</li> </ul> <p>Dette kan for eksempel vere: Rødt felt med teksten \"live\" eller at det ikkje er mogeleg å spole i klippet.</p>",
+			"spm": "Er videoen fÃ¸rehandsinnspelt?",
+			"ht": "<p>Aktuelle metodar for Ã¥ finne ut dette er:</p> <ul> <li>PrÃ¸v Ã¥ starte videoklippet og sjÃ¥ om avspelinga startar frÃ¥ byrjinga av fila og om det finst informasjon om varigheiten pÃ¥ klippet.</li> <li>SjÃ¥ etter informasjon om nÃ¥r klippet er publisert.</li> <li>SjÃ¥ etter informasjon som tilseier at klippet er live/direkte.</li> </ul> <p>Dette kan for eksempel vere: RÃ¸dt felt med teksten \"live\" eller at det ikkje er mogeleg Ã¥ spole i klippet.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -79,14 +79,14 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Videoklipp er direkte/live (ikkje førehandsinnspelte)."
+					"utfall": "Videoklipp er direkte/live (ikkje fÃ¸rehandsinnspelte)."
 				}
 			}
 		},
 		{
 			"stegnr": "3.3",
 			"spm": "Er videoen synstolka?",
-			"ht": "<p>Med synstolking meinast munnlege kommentarar og omtaler som vert lag til lydsporet for å formidle viktige visuelle detaljer som ikkje kan forståast berre ut i frå det opphavlege lydsporet.</p>",
+			"ht": "<p>Med synstolking meinastÂ munnlege kommentarar og omtaler som vert lag til lydsporet for Ã¥ formidle viktige visuelle detaljer som ikkje kan forstÃ¥ast berre ut i frÃ¥ det opphavlege lydsporet.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G78"
@@ -95,12 +95,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Video har synstolking som formidlar viktige visuelle detaljer som ikkje kan forståast berre ut i frå det opphavlege lydsporet."
+					"utfall": "Video har synstolking som formidlar viktige visuelle detaljer som ikkje kan forstÃ¥ast berre ut i frÃ¥ det opphavlege lydsporet."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Video manglar synstolking som formidlar viktige visuelle detaljer som ikkje kan forståast berre ut i frå det opphavlege lydsporet."
+					"utfall": "Video manglar synstolking som formidlar viktige visuelle detaljer som ikkje kan forstÃ¥ast berre ut i frÃ¥ det opphavlege lydsporet."
 				}
 			}
 		}

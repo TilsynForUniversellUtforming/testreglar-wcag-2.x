@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { glob } from '../node_modules/glob/dist/mjs/index';
+import { glob } from 'glob'
 
 
 let filer;

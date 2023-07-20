@@ -1,7 +1,10 @@
 {
+	"namn": "1.3.1b Tabellar og overskriftsceller er rett koda",
 	"id": "1.3.1b",
-	"type": "web",
+	"testlabId": 243,
 	"versjon": "1.1",
+	"type": "Nett",
+	"spraak": "nn",
 	"kravTilSamsvar": "<p>Følgande innhald i tabellar er koda semantisk rett:</p>\r\n<ul>\r\n<li>Tabelltittel.</li>\r\n<li>Overskriftsceller.</li>\r\n<li>Tabellar med overskrift i berre ei rad eller kolonne.</li>\r\n<li>Overskriftsceller i tabellar med overskrifter både på kolonne og rad.</li>\r\n<li>Overskriftsceller i tabellar med overskrifter på fleire rader og/eller kolonnar inne i tabellen.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
@@ -56,7 +59,7 @@
 		{
 			"stegnr": "2.1",
 			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID",
+			"ht": "<p>Oppgi URL eller side-ID</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
@@ -429,4 +432,5 @@
 				}
 			}
 		}
-	]}
+	]
+}

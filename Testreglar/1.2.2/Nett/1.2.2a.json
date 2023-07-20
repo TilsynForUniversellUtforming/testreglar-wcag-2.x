@@ -1,7 +1,10 @@
 {
+	"namn": "1.2.2a Førehandsinnspelt video med lyd, er teksta",
 	"id": "1.2.2a",
-	"type": "web",
+	"testlabId": 13,
 	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
 	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<p>Førehandsinnspelt video med lyd, som ikkje er eit mediealternativ til tekst, har alternativ i form av teksting eller tekstalternativ.</p>\r\n<p>Teksting, som anten ligg fast (open teksting) eller som kan slåast på (skjult teksting) skal:</p>\r\n<ul>\r\n<li>Formidle innhaldet i lyd og bilde.</li>\r\n<li>Innhalde følgande element: Tale og dialog med markering av kven som snakkar, og lydinnhald som er viktig for å forstå videoen.</li>\r\n<li>Vere visuelt synleg, men ikkje forstyrre viktig innhald i videoen.</li>\r\n</ul>\r\n<p>Tekstalternativ, alternativ kan videoen ha eit tekstalternativ som er visuelt plassert nær videoklippet, eller kan nåast via ein mekanisme (lenke, knapp eller liknande).</p>\r\n<p>Tekstalternativet skal</p>\r\n<ul>\r\n<li>vere koda som tekst.</li>\r\n<li>formidle innhaldet i lyd og bilde og innehalde følgande element: Tale og dialog med markering av kven som snakkar og lydinnhald som er viktig for å forstå videoen.</li>\r\n</ul>\r\n<p>Det er ikkje krav om eksakt attgiving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p>",
 	"side": "2.1",
 	"element": "3.1",
