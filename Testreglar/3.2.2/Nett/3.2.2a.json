@@ -1,171 +1,173 @@
 {
-	"id": "3.2.2a",
-	"type": "web",
-	"spraak": "no",
-	"versjon": "1.0",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar:</p>\r\n<ul>\r\n<li>Endring av innstillingar i brukargrensesnittkomponentar gir ikkje automatiske kontekstendringar</li>\r\n<li>Viss endring av innstillingar i brukargrensesnittkomponentar gir automatiske kontekstendringar, skal brukaren varslast på førehand.</li>\r\n</ul>",
-	"side": "2.1",
-	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		}
-	],
-	"steg": [
-		{
-			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
-			"type": "tekst",
-			"label": "URL/Side:",
-			"datalist": "Sideutvalg",
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.2"
-				}
-			}
-		},
-		{
-			"stegnr": "2.2",
-			"spm": "Har nettsida skjemaelement?",
-			"ht": "Eksempel på skjemaelement er avkryssingsboks, nedtrekksliste, radioknapp og tekstfelt. Skjemaelement kan ligge aleine eller som en del av for eksempel eit større skjema eller søkefunksjon.",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.1"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje skjema."
-				}
-			}
-		},
-		{
-			"stegnr": "3.1",
-			"spm": "Beskriv skjemaelementet som skal vurderast.",
-			"ht": "Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.",
-			"type": "tekst",
-			"label": "Skjemaelement:",
-			"multilinje": true,
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.2"
-				}
-			}
-		},
-		{
-			"stegnr": "3.2",
-			"spm": "Får du til å navigere til skjemaelementet med tastaturet?",
-			"ht": "Trykk på tabulatortasten (tab-tasten) for å navigere til elementet med tastaturet.",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.3"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Skjemaelement det ikkje er mogleg å navigere til med tastaturet."
-				}
-			}
-		},
-		{
-			"stegnr": "3.3",
-			"spm": "Kva type skjemaelement er det?",
-			"ht": "Velg frå alternativa under.",
-			"type": "radio",
-			"svarArray": [
-				"Radioknapp",
-				"Tekstfelt",
-				"Sjekkboks",
-				"Modalvindauge",
-				"Anna"
-			],
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.4"
-				}
-			}
-		},
-		{
-			"stegnr": "3.4",
-			"spm": "Kan du bruke skjemaelementet med tastaturet utan at det skjer ei kontekstendring?",
-			"ht": "<p>Test alle element i skjemaet på følgjande måte:</p><ul><li>Avkryssingsboks: Krysse av med å bruke mellomromstasten.</li><li>Nedtrekksliste: Bla i lista med å bruke piltastane.</li><li>Radioknapp: Velje med å bruke piltastane eller mellomromstasten.</li><li>Skjemafelt: Skriv i feltet.</li></ul><p>Det kan hende at nettsida lastar på nytt ved betening. Du skal fortsatt sjekke om det har oppstått ei kontekstendring.</p><p>Eksempel på kontekstendring er:</p><ul><li>Opning av nytt innhald i anten same eller ny fane, vindauge eller program.</li><li>Tastaturfokus blir flytta til ein annan komponent på nettsida.</li><li>Vesentleg endring av meiningsinnhaldet til nettsida.</li><li>Innsending av skjema.</li></ul><p><strong>Merk:</strong> Endring av innhald fører ikkje alltid til endring av kontekst. Dynamisk endring eller utvidelse må skje i tillegg til nokon av punkta over for å vere ei kontekstendring.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"F36",
-				"F37"
-			],
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Skjemaelement får ikkje kontekstendring ved tastaturnavigasjon."
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.5"
-				}
-			}
-		},
-		{
-			"stegnr": "3.5",
-			"spm": "Fikk du varsel om at det ville skje kontekstendring før du brukte skjemaelementet?",
-			"ht": "Ta en visuell sjekk. Varselet skal vere synleg og ligge før elementet på nettsida, for eksempel på starten av skjemaet eller rett før det aktuelle elementet.",
-			"type": "jaNei",
-			"kilde": [
-				"G13"
-			],
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Skjemaelement får kontekstendring ved tastaturnavigasjon. Kontekstendring er varsla på førehand."
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.6"
-				}
-			}
-		},
-		{
-			"stegnr": "3.6",
-			"spm": "Beskriv kvar kontekstendringa oppstod.",
-			"ht": "Legg inn stikkord som er slik at feilen kan identifiserast.",
-			"type": "tekst",
-			"label": "Kontekstendring:",
-			"multilinje": true,
-			"kilde": [],
-			"ruting": {
-				"alle": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Skjemaelement får kontekstendring ved tastaturnavigasjon, utan at det er varsla på førehand."
-				}
-			}
-		}
-	]
+    "namn": "3.2.2a Endra innstilling i skjemaelement fører ikkje til kontekstendring",
+    "id": "3.2.2a",
+    "testlabId": 241,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nn",
+    "kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar:</p>\r\n<ul>\r\n<li>Endring av innstillingar i brukargrensesnittkomponentar gir ikkje automatiske kontekstendringar</li>\r\n<li>Viss endring av innstillingar i brukargrensesnittkomponentar gir automatiske kontekstendringar, skal brukaren varslast på førehand.</li>\r\n</ul>",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.3"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.5"
+        },
+        {
+            "title": "3.6"
+        }
+    ],
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi URL eller side-ID.",
+            "type": "tekst",
+            "label": "URL/Side:",
+            "datalist": "Sideutvalg",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har nettsida skjemaelement?",
+            "ht": "Eksempel på skjemaelement er avkryssingsboks, nedtrekksliste, radioknapp og tekstfelt. Skjemaelement kan ligge aleine eller som en del av for eksempel eit større skjema eller søkefunksjon.",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje skjema."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Beskriv skjemaelementet som skal vurderast.",
+            "ht": "Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.",
+            "type": "tekst",
+            "label": "Skjemaelement:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Får du til å navigere til skjemaelementet med tastaturet?",
+            "ht": "Trykk på tabulatortasten (tab-tasten) for å navigere til elementet med tastaturet.",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Skjemaelement det ikkje er mogleg å navigere til med tastaturet."
+                }
+            }
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Kva type skjemaelement er det?",
+            "ht": "Velg frå alternativa under.",
+            "type": "radio",
+            "svarArray": [
+                "Radioknapp",
+                "Tekstfelt",
+                "Sjekkboks",
+                "Modalvindauge",
+                "Anna"
+            ],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Kan du bruke skjemaelementet med tastaturet utan at det skjer ei kontekstendring?",
+            "ht": "<p>Test alle element i skjemaet på følgjande måte:</p><ul><li>Avkryssingsboks: Krysse av med å bruke mellomromstasten.</li><li>Nedtrekksliste: Bla i lista med å bruke piltastane.</li><li>Radioknapp: Velje med å bruke piltastane eller mellomromstasten.</li><li>Skjemafelt: Skriv i feltet.</li></ul><p>Det kan hende at nettsida lastar på nytt ved betening. Du skal fortsatt sjekke om det har oppstått ei kontekstendring.</p><p>Eksempel på kontekstendring er:</p><ul><li>Opning av nytt innhald i anten same eller ny fane, vindauge eller program.</li><li>Tastaturfokus blir flytta til ein annan komponent på nettsida.</li><li>Vesentleg endring av meiningsinnhaldet til nettsida.</li><li>Innsending av skjema.</li></ul><p><strong>Merk:</strong> Endring av innhald fører ikkje alltid til endring av kontekst. Dynamisk endring eller utvidelse må skje i tillegg til nokon av punkta over for å vere ei kontekstendring.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "F36",
+                "F37"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Skjemaelement får ikkje kontekstendring ved tastaturnavigasjon."
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Fikk du varsel om at det ville skje kontekstendring før du brukte skjemaelementet?",
+            "ht": "Ta en visuell sjekk. Varselet skal vere synleg og ligge før elementet på nettsida, for eksempel på starten av skjemaet eller rett før det aktuelle elementet.",
+            "type": "jaNei",
+            "kilde": [
+                "G13"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Skjemaelement får kontekstendring ved tastaturnavigasjon. Kontekstendring er varsla på førehand."
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }
+        },
+        {
+            "stegnr": "3.6",
+            "spm": "Beskriv kvar kontekstendringa oppstod.",
+            "ht": "Legg inn stikkord som er slik at feilen kan identifiserast.",
+            "type": "tekst",
+            "label": "Kontekstendring:",
+            "multilinje": true,
+            "kilde": [],
+            "ruting": {
+                "alle": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Skjemaelement får kontekstendring ved tastaturnavigasjon, utan at det er varsla på førehand."
+                }
+            }
+        }
+    ]
 }

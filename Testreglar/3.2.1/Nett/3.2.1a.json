@@ -1,130 +1,132 @@
 {
-	"id": "3.2.1a",
-	"type": "web",
-	"spraak": "no",
-	"versjon": "1.0",
-	"kravTilSamsvar": "<p>Det er mogleg å navigere gjennom nettsida utan at det skjer ei kontekstendring, når dei ulike elementa får fokus.</p>",
-	"side": "2.1",
-	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "3.2"
-		}
-	],
-	"steg": [
-		{
-			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
-			"type": "tekst",
-			"label": "URL/Side:",
-			"datalist": "Sideutvalg",
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.2"
-				}
-			}
-		},
-		{
-			"stegnr": "2.2",
-			"spm": "Får du synleg fokusmarkering ved tastaturnavigering?",
-			"ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Du er avhengig av synleg fokusmarkør for å kunne gjennomføre testen. Fokusmarkeringa må vere såpass synleg at du kan følgje med på tastaturnavigasjonen. Synleg fokusmarkering blir testa på suksesskriterium 2.4.7.",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "2.3"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Ikkje testbart",
-					"utfall": "Testside har ikkje tilstrekkeleg fokusmarkering ved tastaturnavigasjon."
-				}
-			}
-		},
-		{
-			"stegnr": "2.3",
-			"spm": "Får du til å navigere på heile eller delar av nettsida med tastaturet?",
-			"ht": "<p>Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. For å betene innhaldet kan du også bruke enter-tasten, mellomromstasten og piltastane. For å rygge med tastaturet, bruk Shift+Tab.</p><p>Det kan hende at du må felle ut menyar og opne modalvindauge for å teste alt innhald på nettsida.</p>",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "2.4"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje innhald/funksjonalitet som er mogleg å nå/betene med tastatur."
-				}
-			}
-		},
-		{
-			"stegnr": "2.4",
-			"spm": "Kan du navigere gjennom nettsida med tastaturet utan at det skjer ei kontekstendring når dei ulike elementa får fokus?",
-			"ht": "<p>Trykk sakte på tab-tasten for å navigere med tastaturet. Naviger frå starten av nettsida. Det kan hende at du må felle ut menyar og skjemafelt, og opne modalvindauge for å teste alt innhald på nettsida.</p><p>Eksempel på kontekstendring er:</p><ul><li>Opning av innhald i anten same eller ny fane, vindauge eller program.</li><li>Tastaturfokus blir flytta til ein annan komponent på nettsida.</li><li>Vesentleg endring av meiningsinnhaldet til nettsida.</li><li>Innsending av skjema.</li></ul><p>Du skal berre teste innhald det er mogleg å nå med tastaturet. For å betene innhaldet kan du også bruke enter-tasten, mellomromstasten og piltastane. For å rygge med tastaturet, bruk Shift+Tab.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"G107"
-			],
-			"ruting": {
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.1"
-				},
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Testside kan navigerast med tastatur, utan at det skjer ei kontekstendring når innhaldselement får fokus."
-				}
-			}
-		},
-		{
-			"stegnr": "3.1",
-			"spm": "Beskriv innhaldet som endrar konteksten og kva kontekstendring som skjer.",
-			"ht": "<p>Du skal registrere og legge til data for kvar enkelt observasjon der fokus gir kontekstendring.</p><p>Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.</p>",
-			"type": "tekst",
-			"label": "Element:",
-			"multilinje": true,
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.2"
-				}
-			}
-		},
-		{
-			"stegnr": "3.2",
-			"spm": "Kva type funksjonalitet er elementet ein del av?",
-			"ht": "Velg frå alternativa under.",
-			"type": "radio",
-			"svarArray": [
-				"Skjema",
-				"Mediaspelar",
-				"Meny",
-				"Modalvindauge",
-				"Anna"
-			],
-			"ruting": {
-				"alle": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Testside kan ikkje navigerast med tastatur, utan at det skjer ei kontekstendring når innhaldselement får fokus."
-				}
-			}
-		}
-	]
+    "namn": "3.2.1a Fokus ved tastaturnavigasjon, gir ikkje kontekstendring",
+    "id": "3.2.1a",
+    "testlabId": 239,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nn",
+    "kravTilSamsvar": "<p>Det er mogleg å navigere gjennom nettsida utan at det skjer ei kontekstendring, når dei ulike elementa får fokus.</p>",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "2.3"
+        },
+        {
+            "title": "2.4"
+        },
+        {
+            "title": "3.2"
+        }
+    ],
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi URL eller side-ID.",
+            "type": "tekst",
+            "label": "URL/Side:",
+            "datalist": "Sideutvalg",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Får du synleg fokusmarkering ved tastaturnavigering?",
+            "ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Du er avhengig av synleg fokusmarkør for å kunne gjennomføre testen. Fokusmarkeringa må vere såpass synleg at du kan følgje med på tastaturnavigasjonen. Synleg fokusmarkering blir testa på suksesskriterium 2.4.7.",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "2.3"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ikkje testbart",
+                    "utfall": "Testside har ikkje tilstrekkeleg fokusmarkering ved tastaturnavigasjon."
+                }
+            }
+        },
+        {
+            "stegnr": "2.3",
+            "spm": "Får du til å navigere på heile eller delar av nettsida med tastaturet?",
+            "ht": "<p>Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. For å betene innhaldet kan du også bruke enter-tasten, mellomromstasten og piltastane. For å rygge med tastaturet, bruk Shift+Tab.</p><p>Det kan hende at du må felle ut menyar og opne modalvindauge for å teste alt innhald på nettsida.</p>",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "2.4"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje innhald/funksjonalitet som er mogleg å nå/betene med tastatur."
+                }
+            }
+        },
+        {
+            "stegnr": "2.4",
+            "spm": "Kan du navigere gjennom nettsida med tastaturet utan at det skjer ei kontekstendring når dei ulike elementa får fokus?",
+            "ht": "<p>Trykk sakte på tab-tasten for å navigere med tastaturet. Naviger frå starten av nettsida. Det kan hende at du må felle ut menyar og skjemafelt, og opne modalvindauge for å teste alt innhald på nettsida.</p><p>Eksempel på kontekstendring er:</p><ul><li>Opning av innhald i anten same eller ny fane, vindauge eller program.</li><li>Tastaturfokus blir flytta til ein annan komponent på nettsida.</li><li>Vesentleg endring av meiningsinnhaldet til nettsida.</li><li>Innsending av skjema.</li></ul><p>Du skal berre teste innhald det er mogleg å nå med tastaturet. For å betene innhaldet kan du også bruke enter-tasten, mellomromstasten og piltastane. For å rygge med tastaturet, bruk Shift+Tab.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G107"
+            ],
+            "ruting": {
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Testside kan navigerast med tastatur, utan at det skjer ei kontekstendring når innhaldselement får fokus."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Beskriv innhaldet som endrar konteksten og kva kontekstendring som skjer.",
+            "ht": "<p>Du skal registrere og legge til data for kvar enkelt observasjon der fokus gir kontekstendring.</p><p>Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.</p>",
+            "type": "tekst",
+            "label": "Element:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Kva type funksjonalitet er elementet ein del av?",
+            "ht": "Velg frå alternativa under.",
+            "type": "radio",
+            "svarArray": [
+                "Skjema",
+                "Mediaspelar",
+                "Meny",
+                "Modalvindauge",
+                "Anna"
+            ],
+            "ruting": {
+                "alle": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Testside kan ikkje navigerast med tastatur, utan at det skjer ei kontekstendring når innhaldselement får fokus."
+                }
+            }
+        }
+    ]
 }
