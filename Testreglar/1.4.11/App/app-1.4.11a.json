@@ -1,7 +1,13 @@
 {
+	"namn": "App-1.4.11a Det er tilstrekkelig kontrast for aktive ikke-tekstlige brukergrensesnittkomponenter 2023",
 	"id": "app-1.4.11a",
-	"type": "app",
+	"testlabId": 391,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nb",
 	"kravTilSamsvar": "<p>Den visuelle presentasjonen har et kontrastforhold på minst 3:1 mot farge(r) som ligger ved siden av</p>\r\n<ul>\r\n<li>Visuell informasjon som kreves for å identifisere aktive brukergrensesnittkomponenter, samt hvordan de kan betjenes\r\n<ul>\r\n<li>Med mindre utseendet er bestemt av brukeragenten og ikke er endret av innholdsprodusenten</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
 	"kolonner": [
 		{
 			"title": "2.2"
@@ -16,8 +22,6 @@
 			"title": "3.4"
 		}
 	],
-	"side": "2.1",
-	"element": "3.1",
 	"steg": [
 		{
 			"stegnr": "2.1",
@@ -86,7 +90,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er utseendet på komponenten og/eller hvordan den kan betjenes, endret av innholdsprodusenten?",
-			"ht": "<p>Hvis utseendet til den aktuelle brukergrensesnittkomponenten og/eller hvordan den kan betjenes, er bestemt av operativsystemet, og ikke endret av innholdsprodusenten, gjelder ikke kravet.</p>\n<p><strong>Merk:</strong> Komponenten skal testes og vurderes på enhetens standardinnstillinger:</p>\n<ul>\n<li>Sjekk at enheten du tester med, kun har standardinnstillinger aktivert.</li>\n<li>Dark mode-visning eller andre innstillinger i operativsystemet, som \"Øk kontrast\" (iOS) eller \"Høy kontrast-modus\", (Android), skal være av. </li>\n</ul>\n<p>Slik sjekker du standardutseendet til komponenter uten tilgang kildekode </p>\n<p><strong>Standardutseende iOS</strong></p>\n<ul>\n<li>Åpne <a href=\"https://developer.apple.com/design/human-interface-guidelines/components/all-components/\" target=\"_blank\" rel=\"noopener\">liste over iOS komponenter</a> </li>\n<li>Velg \"iOS and iPadOS\" for å filtrere komponenter som gjelder iOS.</li>\n<li>Finn og åpne den aktuelle komponenten</li>\n<li>Gjør en visuell inspeksjon for å sjekke om utseendet på komponenten er ulikt, og dermed er endret av innholdsprodusenten.</li>\n</ul>\n<p><strong>Standardutseende Android</strong></p>\n<ul>\n<li>Åpne <a href=\"https://developer.android.com/develop/ui/views/components/floating-action-button\" target=\"_blank\" rel=\"noopener\">liste over Android komponenter</a></li>\n<li>Velg aktuell komponent fra menyen \"Add components\"</li>\n<li>Gjør en visuell inspeksjon for å sjekke om utseendet på komponenten er ulikt, og dermed er endret av innholdsprodusenten.</li>\n</ul>",
+			"ht": "<p>Hvis utseendet til den aktuelle brukergrensesnittkomponenten og/eller hvordan den kan betjenes, er bestemt av operativsystemet, og ikke endret av innholdsprodusenten, gjelder ikke kravet.</p>\n<p><strong>Merk:</strong> Komponenten skal testes og vurderes på enhetens standardinnstillinger:</p>\n<ul>\n<li>Sjekk at enheten du tester med, kun har standardinnstillinger aktivert.</li>\n<li>Dark mode-visning eller andre innstillinger i operativsystemet, som \"Øk kontrast\" (iOS) eller \"Høy kontrast-modus\", (Android), skal være av. </li>\n</ul>\n<p>Slik sjekker du standardutseendet til komponenter uten tilgang kildekode </p>\n<p><strong>Standardutseende iOS</strong></p>\n<ul>\n<li>Åpne <a href=\"https://developer.apple.com/design/human-interface-guidelines/components/all-components/\" target=\"_blank\" rel=\"noopener\">liste over iOS komponenter</a> </li>\n<li>Velg \"iOS and iPadOS\" for å filtrere komponenter som gjelder iOS.</li>\n<li>Finn og åpne den aktuelle komponenten</li>\n<li>Gjør en visuell inspeksjon for å sjekke om utseendet på komponenten er ulikt, og dermed er endret av innholdsprodusenten.</li>\n</ul>\n<p><strong>Standardutseende Android</strong></p>\n<ul>\n<li>Åpne <a href=\"https://developer.android.com/develop/ui/views/components/floating-action-button\" target=\"_blank\" rel=\"noopener\">liste over Android komponenter</a></li>\n<li>Velg aktuell komponent fra menyen \"Add components\"</li>\n<li>Gjør en visuell inspeksjon for å sjekke om utseendet på komponenten er ulikt, og dermed er endret av innholdsprodusenten.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {

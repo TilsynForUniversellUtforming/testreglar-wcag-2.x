@@ -1,7 +1,10 @@
 {
+	"namn": "1.4.3c Det er tilstrekkeleg kontrast mellom tekst og bakgrunn",
 	"id": "1.4.3c",
-	"type": "web",
+	"testlabId": 255,
 	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
 	"kravTilSamsvar": "<p>Verktøyet rapporterer ingen kontrastfeil på sida.</p>",
 	"side": "2.1",
 	"element": "Side",

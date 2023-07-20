@@ -1,8 +1,10 @@
 {
+	"namn": "1.4.4a Tekst kan forstørrast til minst 200 % utan tap av innhald og funksjonalitet",
 	"id": "1.4.4a",
-	"type": "web",
+	"testlabId": 213,
 	"versjon": "1.0",
-	"spraak": "no",
+	"type": "Nett",
+	"spraak": "nn",
 	"kravTilSamsvar": "<p>All tekst kan forstørrast opp til minst 200 % visning utan tap av innhald eller funksjonalitet.</p>",
 	"side": "2.1",
 	"element": "Side",

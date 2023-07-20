@@ -1,7 +1,13 @@
 {
-	"id": "nett-1.4.11a",
-	"type": "web",
+	"namn": "Nett-1.4.11b Det er tilstrekkelig kontrast på tilstander for aktive ikke-tekstlige brukergrensesnittkomponenter 2023",
+	"id": "nett-1.4.11b",
+	"testlabId": 389,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nb",
 	"kravTilSamsvar": "<p>Den visuelle presentasjonen har et kontrastforhold på minst 3:1 mot farge(r) som ligger ved siden av</p>\r\n<ul>\r\n<li>Visuell informasjon som kreves for å indikere tilstand for aktive brukergrensesnittkomponenter\r\n<ul>\r\n<li>Med mindre utseendet er bestemt av brukeragenten og ikke er endret av innholdsprodusenten</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
 	"kolonner": [
 		{
 			"title": "2.2"
@@ -16,15 +22,12 @@
 			"title": "3.4"
 		}
 	],
-	"side": "2.1",
-	"element": "3.1",
 	"steg": [
 		{
 			"stegnr": "2.1",
 			"spm": "Hvilken side tester du?",
 			"ht": "<p>Oppgi URL eller side-ID</p>",
 			"type": "tekst",
-			"kilde": [],
 			"label": "URL/Side-ID:",
 			"datalist": "Sideutvalg",
 			"ruting": {

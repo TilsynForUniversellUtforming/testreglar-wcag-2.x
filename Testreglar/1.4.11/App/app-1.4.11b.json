@@ -1,7 +1,13 @@
 {
+	"namn": "App-1.4.11b Det er tilstrekkelig kontrast på tilstander for aktive ikke-tekstlige brukergrensesnittkomponenter 2023",
 	"id": "app-1.4.11b",
-	"type": "app",
+	"testlabId": 392,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "",
 	"kravTilSamsvar": "<p>Den visuelle presentasjonen har et kontrastforhold på minst 3:1 mot farge(r) som ligger ved siden av</p>\r\n<ul>\r\n<li>Visuell informasjon som kreves for å indikere tilstand for aktive brukergrensesnittkomponenter\r\n<ul>\r\n<li>Med mindre utseendet er bestemt av brukeragenten og ikke er endret av innholdsprodusenten</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
 	"kolonner": [
 		{
 			"title": "2.2"
@@ -16,15 +22,12 @@
 			"title": "3.4"
 		}
 	],
-	"side": "2.1",
-	"element": "3.1",
 	"steg": [
 		{
 			"stegnr": "2.1",
 			"spm": "Hvilken appside tester du?",
 			"ht": "<p>Oppgi appside-ID.</p>",
 			"type": "tekst",
-			"kilde": [],
 			"label": "Appside:",
 			"datalist": "Sideutvalg",
 			"ruting": {
