@@ -1,0 +1,310 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>testreglar-wcag-2.x</Name>
+    <RootNamespace>testreglar-wcag-2.x</RootNamespace>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>9383cabb-cd4d-40df-9e1c-bfa8325287de</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>dist\app.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Doc\Testregelformat\Rutingreglar.md" />
+    <Content Include="jest.config.js" />
+    <Content Include="Mal\mal.json" />
+    <Content Include="Mal\standardtekstar.json" />
+    <Content Include="Doc\Testregelformat\Testregelformat.md" />
+    <Content Include="Testreglar\111\App\app-111a.json" />
+    <Content Include="Testreglar\111\Nett\111a.json" />
+    <Content Include="Testreglar\111\Nett\111b.json" />
+    <Content Include="Testreglar\111\Nett\111c.json" />
+    <Content Include="Testreglar\111\Nett\111d.json" />
+    <Content Include="Testreglar\121\121a.json" />
+    <Content Include="Testreglar\121\121b.json" />
+    <Content Include="Testreglar\122\Nett\122a.json" />
+    <Content Include="Testreglar\125\App\app-1.2.5a.json" />
+    <Content Include="Testreglar\125\Nett\nett-1.2.5a.json" />
+    <Content Include="Testreglar\131\Nett\131a.json" />
+    <Content Include="Testreglar\131\Nett\131b.json" />
+    <Content Include="Testreglar\131\Nett\131c.json" />
+    <Content Include="Testreglar\132\Nett\132a.json" />
+    <Content Include="Testreglar\133\Nett\133a.json" />
+    <Content Include="Testreglar\134\App\app-1.3.4a.json" />
+    <Content Include="Testreglar\135\App\app-1.3.5a.json" />
+    <Content Include="Testreglar\135\Nett\.gitkeep" />
+    <Content Include="Testreglar\1410\App\app-1.4.10a.json" />
+    <Content Include="Testreglar\1410\Nett\nett-1.4.10a.json" />
+    <Content Include="Testreglar\1411\App\.gitkeep" />
+    <Content Include="Testreglar\1411\App\app-1.4.11a.json" />
+    <Content Include="Testreglar\1411\App\app-1.4.11b.json" />
+    <Content Include="Testreglar\1411\App\app-1.4.11c.json" />
+    <Content Include="Testreglar\1411\Nett\nett-1.4.11a.json" />
+    <Content Include="Testreglar\1411\Nett\nett-1.4.11b.json" />
+    <Content Include="Testreglar\1411\Nett\nett-1.4.11c.json" />
+    <Content Include="Testreglar\1412\Nett\nett-1.4.12a.json" />
+    <Content Include="Testreglar\1413\Nett\nett-1.4.13a.json" />
+    <Content Include="Testreglar\1413\Nett\nett-1.4.13b.json" />
+    <Content Include="Testreglar\141\App\app-1.4.1a.json" />
+    <Content Include="Testreglar\141\App\app-1.4.1b.json" />
+    <Content Include="Testreglar\141\App\app-1.4.1c.json" />
+    <Content Include="Testreglar\141\Nett\141a.json" />
+    <Content Include="Testreglar\141\Nett\141b.json" />
+    <Content Include="Testreglar\141\Nett\141c.json" />
+    <Content Include="Testreglar\141\Nett\nett-1.4.1a.json" />
+    <Content Include="Testreglar\141\Nett\nett-1.4.1b.json" />
+    <Content Include="Testreglar\141\Nett\nett-1.4.1c.json" />
+    <Content Include="Testreglar\142\Nett\142a.json" />
+    <Content Include="Testreglar\143\App\app-143a.json" />
+    <Content Include="Testreglar\143\Nett\143a.json" />
+    <Content Include="Testreglar\143\Nett\143b.json" />
+    <Content Include="Testreglar\143\Nett\143c.json" />
+    <Content Include="Testreglar\144\Nett\144a.json" />
+    <Content Include="Testreglar\145\Nett\145a.json" />
+    <Content Include="Testreglar\211\App\app-211a.json" />
+    <Content Include="Testreglar\211\Nett\211a.json" />
+    <Content Include="Testreglar\212\App\app-212a.json" />
+    <Content Include="Testreglar\212\Nett\212a.json" />
+    <Content Include="Testreglar\214\Nett\nett-2.1.4a.json" />
+    <Content Include="Testreglar\221\Nett\221a.json" />
+    <Content Include="Testreglar\222\Nett\222a.json" />
+    <Content Include="Testreglar\222\Nett\222b.json" />
+    <Content Include="Testreglar\231\Nett\231a.json" />
+    <Content Include="Testreglar\241\Nett\241a.json" />
+    <Content Include="Testreglar\242\Nett\242a.json" />
+    <Content Include="Testreglar\243\Nett\243a.json" />
+    <Content Include="Testreglar\244\Nett\244a.json" />
+    <Content Include="Testreglar\245\Nett\245a.json" />
+    <Content Include="Testreglar\246\Nett\246a.json" />
+    <Content Include="Testreglar\246\Nett\246b.json" />
+    <Content Include="Testreglar\247\Nett\247a.json" />
+    <Content Include="Testreglar\251\App\app-2.5.1a.json" />
+    <Content Include="Testreglar\251\Nett\nett-2.5.1a.json" />
+    <Content Include="Testreglar\252\App\app-2.5.2a.json" />
+    <Content Include="Testreglar\252\Nett\nett-2.5.2a.json" />
+    <Content Include="Testreglar\253\App\app-2.5.3a.json" />
+    <Content Include="Testreglar\253\Nett\nett-2.5.3a.json" />
+    <Content Include="Testreglar\254\App\app-2.5.4a.json" />
+    <Content Include="Testreglar\254\Nett\nett-2.5.4a.json" />
+    <Content Include="Testreglar\311\Nett\311a.json" />
+    <Content Include="Testreglar\312\Nett\312a.json" />
+    <Content Include="Testreglar\321\Nett\321a.json" />
+    <Content Include="Testreglar\322\Nett\322a.json" />
+    <Content Include="Testreglar\323\Nett\323a.json" />
+    <Content Include="Testreglar\324\Nett\324a.json" />
+    <Content Include="Testreglar\331\App\app-331a.json" />
+    <Content Include="Testreglar\331\Nett\331a.json" />
+    <Content Include="Testreglar\331\Nett\331b.json" />
+    <Content Include="Testreglar\332\App\app-332a.json" />
+    <Content Include="Testreglar\332\Nett\332a.json" />
+    <Content Include="Testreglar\333\Nett\333a.json" />
+    <Content Include="Testreglar\334\Nett\334a.json" />
+    <Content Include="Testreglar\334\Nett\334b.json" />
+    <Content Include="Testreglar\411\Nett\411a.json" />
+    <Content Include="Testreglar\412\App\app-412a.json" />
+    <Content Include="Testreglar\412\Nett\412a.json" />
+    <Content Include="Testreglar\412\Nett\412b.json" />
+    <Content Include="Testreglar\412\Nett\412c.json" />
+    <Content Include="Testreglar\413\Nett\nett-4.1.3a.json" />
+    <Content Include="Testreglar\felles\fellesApp.json" />
+    <Content Include="Testreglar\felles\fellesWeb.json" />
+    <Content Include="Utdatert\134\Nett\1.3.4a-2022.json" />
+    <Content Include="Utdatert\1410\Nett\1410a.json" />
+    <Content Include="Utdatert\253\Nett\2.5.3a-2022.json" />
+    <None Include="src\app.ts" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Doc\" />
+    <Folder Include="Doc\Testregelformat\" />
+    <Folder Include="Mal\" />
+    <Folder Include="Tests\" />
+    <Folder Include="src\" />
+    <Folder Include="Testreglar\" />
+    <Folder Include="Testreglar\111\" />
+    <Folder Include="Testreglar\111\App\" />
+    <Folder Include="Testreglar\111\Nett\" />
+    <Folder Include="Testreglar\121\" />
+    <Folder Include="Testreglar\122\" />
+    <Folder Include="Testreglar\122\Nett\" />
+    <Folder Include="Testreglar\125\" />
+    <Folder Include="Testreglar\125\App\" />
+    <Folder Include="Testreglar\125\Nett\" />
+    <Folder Include="Testreglar\131\" />
+    <Folder Include="Testreglar\131\Nett\" />
+    <Folder Include="Testreglar\132\" />
+    <Folder Include="Testreglar\132\Nett\" />
+    <Folder Include="Testreglar\133\" />
+    <Folder Include="Testreglar\133\Nett\" />
+    <Folder Include="Testreglar\134\" />
+    <Folder Include="Testreglar\134\App\" />
+    <Folder Include="Testreglar\135\" />
+    <Folder Include="Testreglar\135\App\" />
+    <Folder Include="Testreglar\135\Nett\" />
+    <Folder Include="Testreglar\1410\" />
+    <Folder Include="Testreglar\1410\App\" />
+    <Folder Include="Testreglar\1410\Nett\" />
+    <Folder Include="Testreglar\1411\" />
+    <Folder Include="Testreglar\1411\App\" />
+    <Folder Include="Testreglar\1411\Nett\" />
+    <Folder Include="Testreglar\1412\" />
+    <Folder Include="Testreglar\1412\Nett\" />
+    <Folder Include="Testreglar\1413\" />
+    <Folder Include="Testreglar\1413\Nett\" />
+    <Folder Include="Testreglar\141\" />
+    <Folder Include="Testreglar\141\App\" />
+    <Folder Include="Testreglar\141\Nett\" />
+    <Folder Include="Testreglar\142\" />
+    <Folder Include="Testreglar\142\Nett\" />
+    <Folder Include="Testreglar\143\" />
+    <Folder Include="Testreglar\143\App\" />
+    <Folder Include="Testreglar\143\Nett\" />
+    <Folder Include="Testreglar\144\" />
+    <Folder Include="Testreglar\144\Nett\" />
+    <Folder Include="Testreglar\145\" />
+    <Folder Include="Testreglar\145\Nett\" />
+    <Folder Include="Testreglar\211\" />
+    <Folder Include="Testreglar\211\App\" />
+    <Folder Include="Testreglar\211\Nett\" />
+    <Folder Include="Testreglar\212\" />
+    <Folder Include="Testreglar\212\App\" />
+    <Folder Include="Testreglar\212\Nett\" />
+    <Folder Include="Testreglar\214\" />
+    <Folder Include="Testreglar\214\Nett\" />
+    <Folder Include="Testreglar\221\" />
+    <Folder Include="Testreglar\221\Nett\" />
+    <Folder Include="Testreglar\222\" />
+    <Folder Include="Testreglar\222\Nett\" />
+    <Folder Include="Testreglar\231\" />
+    <Folder Include="Testreglar\231\Nett\" />
+    <Folder Include="Testreglar\241\" />
+    <Folder Include="Testreglar\241\Nett\" />
+    <Folder Include="Testreglar\242\" />
+    <Folder Include="Testreglar\242\Nett\" />
+    <Folder Include="Testreglar\243\" />
+    <Folder Include="Testreglar\243\Nett\" />
+    <Folder Include="Testreglar\244\" />
+    <Folder Include="Testreglar\244\Nett\" />
+    <Folder Include="Testreglar\245\" />
+    <Folder Include="Testreglar\245\Nett\" />
+    <Folder Include="Testreglar\246\" />
+    <Folder Include="Testreglar\246\Nett\" />
+    <Folder Include="Testreglar\247\" />
+    <Folder Include="Testreglar\247\Nett\" />
+    <Folder Include="Testreglar\251\" />
+    <Folder Include="Testreglar\251\App\" />
+    <Folder Include="Testreglar\251\Nett\" />
+    <Folder Include="Testreglar\252\" />
+    <Folder Include="Testreglar\252\App\" />
+    <Folder Include="Testreglar\252\Nett\" />
+    <Folder Include="Testreglar\253\" />
+    <Folder Include="Testreglar\253\App\" />
+    <Folder Include="Testreglar\253\Nett\" />
+    <Folder Include="Testreglar\254\" />
+    <Folder Include="Testreglar\254\App\" />
+    <Folder Include="Testreglar\254\Nett\" />
+    <Folder Include="Testreglar\311\" />
+    <Folder Include="Testreglar\311\Nett\" />
+    <Folder Include="Testreglar\312\" />
+    <Folder Include="Testreglar\312\Nett\" />
+    <Folder Include="Testreglar\321\" />
+    <Folder Include="Testreglar\321\Nett\" />
+    <Folder Include="Testreglar\322\" />
+    <Folder Include="Testreglar\322\Nett\" />
+    <Folder Include="Testreglar\323\" />
+    <Folder Include="Testreglar\323\Nett\" />
+    <Folder Include="Testreglar\324\" />
+    <Folder Include="Testreglar\324\Nett\" />
+    <Folder Include="Testreglar\331\" />
+    <Folder Include="Testreglar\331\App\" />
+    <Folder Include="Testreglar\331\Nett\" />
+    <Folder Include="Testreglar\332\" />
+    <Folder Include="Testreglar\332\App\" />
+    <Folder Include="Testreglar\332\Nett\" />
+    <Folder Include="Testreglar\333\" />
+    <Folder Include="Testreglar\333\Nett\" />
+    <Folder Include="Testreglar\334\" />
+    <Folder Include="Testreglar\334\Nett\" />
+    <Folder Include="Testreglar\411\" />
+    <Folder Include="Testreglar\411\Nett\" />
+    <Folder Include="Testreglar\412\" />
+    <Folder Include="Testreglar\412\App\" />
+    <Folder Include="Testreglar\412\Nett\" />
+    <Folder Include="Testreglar\413\" />
+    <Folder Include="Testreglar\413\Nett\" />
+    <Folder Include="Testreglar\felles\" />
+    <Folder Include="Utdatert\" />
+    <Folder Include="Utdatert\134\" />
+    <Folder Include="Utdatert\134\Nett\" />
+    <Folder Include="Utdatert\1410\" />
+    <Folder Include="Utdatert\1410\Nett\" />
+    <Folder Include="Utdatert\253\" />
+    <Folder Include="Utdatert\253\Nett\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Tests\format.test.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -7,3 +7,6 @@
 /node_modules
 /Testreglar-2.1.sln
 /Testreglar-2.1.njsproj.user
+/bin
+/obj/Debug
+/dist
