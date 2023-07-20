@@ -33,8 +33,8 @@ async function hentFiler() {
 }
 
 
-function sjekk_format(file): boolean {
-    if (!file.startsWith("Testreglar\\felles\\")) {
+function sjekk_format(file:string): boolean {
+    if (!file.includes("felles")) {
         const testregel = JSON.parse(fs.readFileSync(file, 'utf8'));
 
         if (typeof (testregel.id) !== "string") {
