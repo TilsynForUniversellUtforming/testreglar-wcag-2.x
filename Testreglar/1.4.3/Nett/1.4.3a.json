@@ -1,7 +1,10 @@
 {
+	"namn": "1.4.3a Det er tilstrekkeleg kontrast mellom tekst og bakgrunn",
 	"id": "1.4.3a",
-	"type": "web",
+	"testlabId": 145,
 	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
 	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ol>\r\n<li>Tekst har kontrast\r\n<ul>\r\n<li>på minst 4,5:1 mot bakgrunnen</li>\r\n<li>på minst 3,0 mot bakgrunnen og tekststørrelse er minst 24 pikslar eller 19 pikslar feit/utheva</li>\r\n</ul>\r\n</li>\r\n<li>Det finst ein høgkontrastversjon som tilfredsstiller følgande krav:\r\n<ul>\r\n<li>Mekanismen for å aktivere er plassert nær starten av sida og er visuelt markert med tekst eller ikon.</li>\r\n<li>Mekanismen tilfredsstiller krava til kontrast i punkt 1 over.</li>\r\n<li>Tekst i høgkontrastversjon tilfredsstiller krava til kontrast punkt 1 over.</li>\r\n<li>Det tekstlege elementet som vart målt med for svak kontrast i ordinær visning, er identisk med elementet  i høgkontrastversjon.</li>\r\n</ul>\r\n</li>\r\n</ol>",
 	"side": "2.1",
 	"element": "3.1",
@@ -71,7 +74,7 @@
 		{
 			"stegnr": "2.1",
 			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",

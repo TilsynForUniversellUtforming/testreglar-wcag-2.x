@@ -1,8 +1,13 @@
 {
+	"namn": "App 1.4.3a Det er tilstrekkeleg kontrast mellom tekst og bakgrunn",
 	"id": "app-1.4.3a",
-	"type": "app",
-	"versjon":"1.0",
+	"testlabId": 268,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nn",
 	"kravTilSamsvar": "<p>Tekst skal ha kontrast mot bakgrunnen på minst 4,5:1.</p>",
+	"side": "2.1",
+	"element": "3.1",
 	"kolonner": [
 		{
 			"title": "2.2"
@@ -14,8 +19,6 @@
 			"title": "3.4"
 		}
 	],
-	"side": "2.1",
-	"element": "3.1",
 	"steg": [
 		{
 			"stegnr": "2.1",
