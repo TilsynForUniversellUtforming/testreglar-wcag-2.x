@@ -1,0 +1,164 @@
+{
+    "namn": "App 2.1.1a Nå alt med sveiping",
+    "id": "app-2.1.1a",
+    "testlabId": 260,
+    "versjon": "1.0",
+    "type": "App",
+    "spraak": "nn",
+    "kravTilSamsvar": "<p>Alt innhald og funksjonalitet på skjermbildet kan nåast og brukast med sveiping og dobbelttrykk når skjermlesar er aktivert. Unnateke er innhald/funksjonalitet som ikkje er formålstenleg å betene med sveiping.</p>",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.3"
+        },
+        {
+            "title": "2.4"
+        },
+        {
+            "title": "2.5"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.3"
+        }
+    ],
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Beskriv skjermbildet som skal vurderast",
+            "ht": "<p>Beskriv skjermbildet med få stikkord, eller vel i lista.</p>",
+            "type": "tekst",
+            "label": "Skjermbilde:",
+            "datalist": "Sideutvalg",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Aktiver skjermlesar (opplesingsfunksjon).",
+            "ht": "Start opplesing frå starten av skjermbildet. Sveip mot høgre for å lese opp eit og eit element i skjermbildet. For hjelp til korleis du brukar skjermlesar på smarttelefon, sjå <a href=\"https://www.smartja.no/ios/syn/\">IOS</a> og <a href=\"https://www.smartja.no/android/syn/\">Android</a>.",
+            "type": "instruksjon",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.3"
+                }
+            }
+        },
+        {
+            "stegnr": "2.3",
+            "spm": "Finst det element det er mogleg å sveipe til på skjembilde?",
+            "ht": "Sveip sakte for å navigere på nettsida.",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "2.4"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Skjermbilde har ikkje innhald/funksjonalitet som er mogleg å nå/betene med sveiping."
+                }
+            }
+        },
+        {
+            "stegnr": "2.4",
+            "spm": "Får du til å nå alle lenker, knappar og funksjonar med sveiping?",
+            "ht": "<p>Sveip sakte for å navigere på skjermbilde.<p><strong>Merk:</strong> Dersom det finst funksjonalitet som kan betenast på fleire måtar, er det tilstrekkeleg at ein av måtane kan betenast med tastaturet. Eksempel på dette er datoveljar, kor brukaren både kan skrive inn dato, og velje dato frå ein kalendar.</p><p><strong>Merk:</strong> Eventuell tastaturfelle, omlasting av sida eller kontekstendring påvirkar ikkje om det mogleg å betene innhaldet.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G202"
+            ],
+            "ruting": {
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "2.5"
+                }
+            }
+        },
+        {
+            "stegnr": "2.5",
+            "spm": "Får du til å aktivere alle lenker, knappar og funksjonar med dobbeltrykk?",
+            "ht": "<p>Prøv å aktivere alle lenker, knappar og funksjonar med dobbeltrykk.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G202"
+            ],
+            "ruting": {
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Alt innhald og funksjonalitet på skjermbildet kan nåast og brukast med sveiping og dobbelttrykk når skjermlesar er aktivert."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Kva innhald/funksjonalitet fekk du ikkje til å nå eller aktivere med sveiping/dobbeltrykk?",
+            "ht": "Beskriv innhaldet med få stikkord.",
+            "type": "tekst",
+            "label": "Element:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Har elementet (som du ikkje fikk til å betene med tastaturet) funksjonalitet det ikkje er føremålsteneleg å betene med sveip?",
+            "ht": "<p>Eksempel på slik funksjonalitet er maleverktøy, å gi inndata i form av handskrift, styring av bil/helikopter/eller liknande i spill.</p><p>Dersom det finst funksjonalitet som kan betenast på fleire måtar, er det tilstrekkeleg at ein av måtane kan betenast med tastaturet.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+                "ja": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Innhald som ikkje er føremålsteneleg å betene med tastatur."
+                }
+            }
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Kva type funksjonalitet er elementet en del av?",
+            "ht": "<p>Velg frå alternativa under.</p>",
+            "type": "radio",
+            "svarArray": [
+                "Skjema",
+                "Mediaspelar",
+                "Meny",
+                "Modalvindauge",
+                "Anna"
+            ],
+            "ruting": {
+                "alle": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Det er ikkje mogleg å nå og betene alt innhald/funksjonalitet med sveiping."
+                }
+            },
+            "kilde": []
+        }
+    ]
+}

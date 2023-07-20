@@ -1,142 +1,144 @@
 {
-	"id": "2.4.6b",
-	"type": "web",
-	"versjon": "1.0",
-	"spraak": "no",
-	"kravTilSamsvar": "<p>Ledetekstar beskriv emne eller formål med skjemaelementet.</p>",
-	"side": "2.1",
-	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		}
-	],
-	"steg": [
-		{
-			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
-			"type": "tekst",
-			"label": "URL/Side:",
-			"datalist": "Sideutvalg",
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.2"
-				}
-			}
-		},
-		{
-			"stegnr": "2.2",
-			"spm": "Har nettstaden digitale/interaktive skjema/skjemaelement?",
-			"ht": "<p><strong>Merk:</strong> Skjema i PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "2.3"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje skjema."
-				}
-			}
-		},
-		{
-			"stegnr": "2.3",
-			"spm": "Beskriv skjemaet/prosessen.",
-			"ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
-			"type": "tekst",
-			"label": "Skjema:",
-			"multilinje": true,
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.4"
-				}
-			}
-		},
-		{
-			"stegnr": "2.4",
-			"spm": "Inneheld skjemaet ledetekstar?",
-			"ht": "Ledetekster omfatter all synlig tekst eller anna komponent med tekst som blir brukt til å identifisere skjemaelement.",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.1"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Skjema har ikkje ledetekstar.",
-					"element": "2.3"
-				}
-			}
-		},
-		{
-			"stegnr": "3.1",
-			"spm": "Referer ledeteksten/ledetekstane til skjemaelementet som skal vurderast.",
-			"ht": "<p>Merk at eit og same skjemaelement kan ha fleire ledetekstar som til saman skal gi informasjon om emne eller føremål.</p><p>Merk at vi her ser vekk frå kravet om at obligatoriske skjemafelt skal vere merka. Dette vert ivareteke under SK 3.3.2</p>",
-			"type": "tekst",
-			"label": "Ledetekst:",
-			"multilinje": true,
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.3"
-				}
-			}
-		},
-		{
-			"stegnr": "3.2",
-			"spm": "Beskriv skjemaelementet som ledeteksten høyrer til.",
-			"ht": "Kortfatta, stikkord",
-			"type": "tekst",
-			"label": "Skjemaelement:",
-			"multilinje": true,
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.3"
-				}
-			}
-		},
-		{
-			"stegnr": "3.3",
-			"spm": "Er ledeteksten beskrivande for emne eller formål med skjemaelementet?",
-			"ht": "",
-			"type": "jaNei",
-			"kilde": [
-				"G131"
-			],
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Ledeteksten er beskrivande for emne eller formål med skjemafeltet."
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Ledeteksten er ikkje beskrivande for emne eller formål med skjemafeltet."
-				}
-			}
-		}
-	]
+    "namn": "2.4.6b Ledetekstar beskriv skjemaelement ",
+    "id": "2.4.6b",
+    "testlabId": 210,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nn",
+    "kravTilSamsvar": "<p>Ledetekstar beskriv emne eller formål med skjemaelementet.</p>",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "2.3"
+        },
+        {
+            "title": "2.4"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.3"
+        }
+    ],
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi URL eller side-ID.",
+            "type": "tekst",
+            "label": "URL/Side:",
+            "datalist": "Sideutvalg",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har nettstaden digitale/interaktive skjema/skjemaelement?",
+            "ht": "<p><strong>Merk:</strong> Skjema i PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "2.3"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje skjema."
+                }
+            }
+        },
+        {
+            "stegnr": "2.3",
+            "spm": "Beskriv skjemaet/prosessen.",
+            "ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
+            "type": "tekst",
+            "label": "Skjema:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.4"
+                }
+            }
+        },
+        {
+            "stegnr": "2.4",
+            "spm": "Inneheld skjemaet ledetekstar?",
+            "ht": "Ledetekster omfatter all synlig tekst eller anna komponent med tekst som blir brukt til å identifisere skjemaelement.",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Skjema har ikkje ledetekstar.",
+                    "element": "2.3"
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Referer ledeteksten/ledetekstane til skjemaelementet som skal vurderast.",
+            "ht": "<p>Merk at eit og same skjemaelement kan ha fleire ledetekstar som til saman skal gi informasjon om emne eller føremål.</p><p>Merk at vi her ser vekk frå kravet om at obligatoriske skjemafelt skal vere merka. Dette vert ivareteke under SK 3.3.2</p>",
+            "type": "tekst",
+            "label": "Ledetekst:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Beskriv skjemaelementet som ledeteksten høyrer til.",
+            "ht": "Kortfatta, stikkord",
+            "type": "tekst",
+            "label": "Skjemaelement:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                }
+            }
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Er ledeteksten beskrivande for emne eller formål med skjemaelementet?",
+            "ht": "",
+            "type": "jaNei",
+            "kilde": [
+                "G131"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Ledeteksten er beskrivande for emne eller formål med skjemafeltet."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Ledeteksten er ikkje beskrivande for emne eller formål med skjemafeltet."
+                }
+            }
+        }
+    ]
 }

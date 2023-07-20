@@ -1,375 +1,377 @@
 {
-	"id": "2.2.2a",
-	"type": "web",
-	"versjon": "1.0",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>For nettsider med innhald som bevegar seg, blinkar eller rullar i meir enn 5 sekundar, og som blir vist saman med anna innhald og ikkje er ein nødvendig del av ei handling, er ein av følgande oppfylt:\r\n<ul>\r\n<li>Det finst ein mekanisme for å pause, stoppe eller skjule innhaldet. Mekanismen ligg anten i direkte tilknyting til innhaldet, eller på starten på sida.</li>\r\n<li>Det finst ein dokumentert tastatursnarveg for å pause, stoppe eller skjule innhaldet.</li>\r\n<li>Det finst ein mekanisme nær starten av nettsida for å laste sida på nytt utan denne type innhald.</li>\r\n</ul>\r\n</li>\r\n</ul>",
-	"spraak": "no",
-	"side": "2.1",
-	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		},
-		{
-			"title": "3.10"
-		},
-		{
-			"title": "3.11"
-		},
-		{
-			"title": "3.12"
-		},
-		{
-			"title": "3.13"
-		},
-		{
-			"title": "3.14"
-		},
-		{
-			"title": "3.15"
-		}
-	],
-	"steg": [
-		{
-			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi url eller side-ID.",
-			"type": "tekst",
-			"label": "Url/Side:",
-			"datalist": "Sideutvalg",
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.2"
-				}
-			}
-		},
-		{
-			"stegnr": "2.2",
-			"spm": "Inneheld sida innhald som blinkar/beveger seg/rullar som startar automatisk?",
-			"ht": "Eksempel på denne typen innhald er videoinnhald, animasjonar, spill og rullande børsnoteringar.",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.1"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje innhald som bevegar seg/blinkar/rullar."
-				}
-			}
-		},
-		{
-			"stegnr": "3.1",
-			"spm": "Beskriv innhaldet som bevegar seg/blinkar/rullar.",
-			"ht": "<p>Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.</p><p>Viss innhaldet er reklame, bør det stå som første stikkord.</p>",
-			"type": "tekst",
-			"label": "Innhald som bevegar seg/blinkar/rullar:",
-			"multilinje": true,
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.2"
-				}
-			}
-		},
-		{
-			"stegnr": "3.2",
-			"spm": "Varer bevegelsa/blinkinga/rullinga i meir enn 5 sekund?",
-			"ht": "Bruk nedtellingsur eller stoppeklokke for å sjekke om bevegelsa/blinkinka/rullinga varar i meir enn 5 sekund",
-			"type": "jaNei",
-			"kilde": [
-				"G11"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.3"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Innhald som bevegar seg/blinkar/rullar i mindre enn 5 sekund."
-				}
-			}
-		},
-		{
-			"stegnr": "3.3",
-			"spm": "Vises bevegelsa/blinkinga/rullinga samtidig med anna innhald?",
-			"ht": "Kravet gjeld berre innhald som beveger seg/blinkar/rullar samtidig som anna innhald blir vist på nettsida.",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.4"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Innhald som bevegar seg/blinkar/rullar, utan å bli vist samtidig med anna innhald."
-				}
-			}
-		},
-		{
-			"stegnr": "3.4",
-			"spm": "Er bevegelsa/blinkinga/rullinga en del av ei handling der den er nødvendig?",
-			"ht": "Eksempel på dette er handlingar som skjer i sanntid, og kor moglegheit til å pause/stoppe/skjule vil gjere handlinga ugyldig.",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "ikkjeForekomst",
-					"utfall": "Innhald som bevegar seg/blinkar/rullar, som er del av ei handling der det er nødvendig."
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.5"
-				}
-			}
-		},
-		{
-			"stegnr": "3.5",
-			"spm": "Finst det en mekanisme på sida for å pause, stoppe eller skjule det bevegande/blinkande/rullande innhaldet?",
-			"ht": "<p>Mekanismen kan for eksempel vere ein stopp-knapp eller pauseknapp.</p><p>Det er ikkje tilstrekkeleg at innholdet pauser/stoppar berre når innhaldet er i fokus med mus/tastatur.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"G4",
-				"G186",
-				"G187"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.6"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.10"
-				}
-			}
-		},
-		{
-			"stegnr": "3.6",
-			"spm": "Ligg mekanismen i direkte tilknytning til innhaldet som beveger seg/blinkar/rullar?",
-			"ht": "Plasseringa kan for eksempel vere rett over eller rett ved sida av innhaldet.",
-			"type": "jaNei",
-			"kilde": [
-				"G186"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.8"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.7"
-				}
-			}
-		},
-		{
-			"stegnr": "3.7",
-			"spm": "Ligg mekanismen på starten av nettsida?",
-			"ht": "<p>Gjer ein visuell inspeksjon og vurder om mekanismen er plassert nær starten av sida.</p><p>Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"G186"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.8"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.10"
-				}
-			}
-		},
-		{
-			"stegnr": "3.8",
-			"spm": "Aktiver mekanismen. Blir innhaldet satt på pause, stoppa eller skjult?",
-			"ht": "<p>Aktiver mekanismen og sjekk om innhaldet blir sett på pause, stoppa eller skjult.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"G186"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.9"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.10"
-				}
-			}
-		},
-		{
-			"stegnr": "3.9",
-			"spm": "Startar det bevegande/blinkande/rullande innhaldet av seg sjølv innan eitt minutt?",
-			"ht": "<p>Av praktiske grunnar, observerer vi innhaldet i eit minutt. Du kan gjerne observere innhaldet i lengre tid.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"F16"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.10"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Det er mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
-				}
-			}
-		},
-		{
-			"stegnr": "3.10",
-			"spm": "Går det fram på nettsida at det er mogleg å stoppe, sette på pause eller skjule bevegande/blinkande/rullande innhald ved å bruke ein tastatursnarveg?",
-			"ht": "<p>Dokumentasjonen av tastatursnarvegen skal ligge anten på starten av nettsida, eller i direkte tilknytning til det aktuelle innhaldet.</p><p>Ein tastatursnarveg kan for eksempel vere:</p><ul><li>Esc-tasten.</li><li>Ein kombinasjon av Ctrl og ein annan tastekombinasjon.</li></ul>",
-			"type": "jaNei",
-			"kilde": [
-				"G4",
-				"G187"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.11"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.13"
-				}
-			}
-		},
-		{
-			"stegnr": "3.11",
-			"spm": "Aktiver tastatursnarvegen. Blir innhaldet satt på pause, stoppa eller skjult?",
-			"ht": "<p>Dokumentasjonen av tastatursnarvegen skal ligge anten på starten av nettsida, eller i direkte tilknytning til det aktuelle innhaldet.</p><p>Ein tastatursnarveg kan for eksempel vere:</p><ul><li>Esc-tasten.</li><li>Ein kombinasjon av Ctrl og ein annan tastekombinasjon.</li></ul>",
-			"type": "jaNei",
-			"kilde": [
-				"G187"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.12"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.13"
-				}
-			}
-		},
-		{
-			"stegnr": "3.12",
-			"spm": "Startar det bevegande/blinkande/rullande innhaldet av seg sjølv innan eit minutt?",
-			"ht": "Av praktiske grunnar, observerer vi innhaldet i eit minutt. Du kan gjerne observere innhaldet i lengre tid.",
-			"type": "jaNei",
-			"kilde": [
-				"F16"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.13"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Det er mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
-				}
-			}
-		},
-		{
-			"stegnr": "3.13",
-			"spm": "Finst det en mekanisme nær starten av nettsida for å laste sida på nytt, utan innhald som beveger seg/blinkar/rullar?",
-			"ht": "<p>Gjer ein visuell inspeksjon og vurder om mekanismen er plassert nær starten av sida.  </p><p>Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"G191"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.14"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
-				}
-			}
-		},
-		{
-			"stegnr": "3.14",
-			"spm": "Aktiver mekanismen. Laster nettsida på nytt uten innhald som beveger seg/blinkar/rullar?",
-			"ht": "Nettsida skal laste på nytt utan innhald som beveger seg/blinkar/rullar. Du kan anten bli teke til same side eller ei anna side som har tilsvarande innhald.",
-			"type": "jaNei",
-			"kilde": [
-				"G191"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.15"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
-				}
-			}
-		},
-		{
-			"stegnr": "3.15",
-			"spm": "Startar det bevegande/blinkande/rullande innhaldet av seg sjølv innan eit minutt?",
-			"ht": "Av praktiske grunnar, observerer vi innhaldet i eit minutt. Du kan gjerne observere innhaldet i lengre tid.",
-			"type": "jaNei",
-			"kilde": [
-				"F16"
-			],
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Det er mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
-				}
-			}
-		}
-	]
+    "namn": "2.2.2a Det er mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar",
+    "id": "2.2.2a",
+    "testlabId": 229,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nn",
+    "kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>For nettsider med innhald som bevegar seg, blinkar eller rullar i meir enn 5 sekundar, og som blir vist saman med anna innhald og ikkje er ein nødvendig del av ei handling, er ein av følgande oppfylt:\r\n<ul>\r\n<li>Det finst ein mekanisme for å pause, stoppe eller skjule innhaldet. Mekanismen ligg anten i direkte tilknyting til innhaldet, eller på starten på sida.</li>\r\n<li>Det finst ein dokumentert tastatursnarveg for å pause, stoppe eller skjule innhaldet.</li>\r\n<li>Det finst ein mekanisme nær starten av nettsida for å laste sida på nytt utan denne type innhald.</li>\r\n</ul>\r\n</li>\r\n</ul>",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.3"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.5"
+        },
+        {
+            "title": "3.6"
+        },
+        {
+            "title": "3.7"
+        },
+        {
+            "title": "3.8"
+        },
+        {
+            "title": "3.9"
+        },
+        {
+            "title": "3.10"
+        },
+        {
+            "title": "3.11"
+        },
+        {
+            "title": "3.12"
+        },
+        {
+            "title": "3.13"
+        },
+        {
+            "title": "3.14"
+        },
+        {
+            "title": "3.15"
+        }
+    ],
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi url eller side-ID.",
+            "type": "tekst",
+            "label": "Url/Side:",
+            "datalist": "Sideutvalg",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Inneheld sida innhald som blinkar/beveger seg/rullar som startar automatisk?",
+            "ht": "Eksempel på denne typen innhald er videoinnhald, animasjonar, spill og rullande børsnoteringar.",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje innhald som bevegar seg/blinkar/rullar."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Beskriv innhaldet som bevegar seg/blinkar/rullar.",
+            "ht": "<p>Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.</p><p>Viss innhaldet er reklame, bør det stå som første stikkord.</p>",
+            "type": "tekst",
+            "label": "Innhald som bevegar seg/blinkar/rullar:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Varer bevegelsa/blinkinga/rullinga i meir enn 5 sekund?",
+            "ht": "Bruk nedtellingsur eller stoppeklokke for å sjekke om bevegelsa/blinkinka/rullinga varar i meir enn 5 sekund",
+            "type": "jaNei",
+            "kilde": [
+                "G11"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Innhald som bevegar seg/blinkar/rullar i mindre enn 5 sekund."
+                }
+            }
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Vises bevegelsa/blinkinga/rullinga samtidig med anna innhald?",
+            "ht": "Kravet gjeld berre innhald som beveger seg/blinkar/rullar samtidig som anna innhald blir vist på nettsida.",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Innhald som bevegar seg/blinkar/rullar, utan å bli vist samtidig med anna innhald."
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Er bevegelsa/blinkinga/rullinga en del av ei handling der den er nødvendig?",
+            "ht": "Eksempel på dette er handlingar som skjer i sanntid, og kor moglegheit til å pause/stoppe/skjule vil gjere handlinga ugyldig.",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Innhald som bevegar seg/blinkar/rullar, som er del av ei handling der det er nødvendig."
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Finst det en mekanisme på sida for å pause, stoppe eller skjule det bevegande/blinkande/rullande innhaldet?",
+            "ht": "<p>Mekanismen kan for eksempel vere ein stopp-knapp eller pauseknapp.</p><p>Det er ikkje tilstrekkeleg at innholdet pauser/stoppar berre når innhaldet er i fokus med mus/tastatur.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G4",
+                "G186",
+                "G187"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.10"
+                }
+            }
+        },
+        {
+            "stegnr": "3.6",
+            "spm": "Ligg mekanismen i direkte tilknytning til innhaldet som beveger seg/blinkar/rullar?",
+            "ht": "Plasseringa kan for eksempel vere rett over eller rett ved sida av innhaldet.",
+            "type": "jaNei",
+            "kilde": [
+                "G186"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                }
+            }
+        },
+        {
+            "stegnr": "3.7",
+            "spm": "Ligg mekanismen på starten av nettsida?",
+            "ht": "<p>Gjer ein visuell inspeksjon og vurder om mekanismen er plassert nær starten av sida.</p><p>Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G186"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.10"
+                }
+            }
+        },
+        {
+            "stegnr": "3.8",
+            "spm": "Aktiver mekanismen. Blir innhaldet satt på pause, stoppa eller skjult?",
+            "ht": "<p>Aktiver mekanismen og sjekk om innhaldet blir sett på pause, stoppa eller skjult.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G186"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.9"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.10"
+                }
+            }
+        },
+        {
+            "stegnr": "3.9",
+            "spm": "Startar det bevegande/blinkande/rullande innhaldet av seg sjølv innan eitt minutt?",
+            "ht": "<p>Av praktiske grunnar, observerer vi innhaldet i eit minutt. Du kan gjerne observere innhaldet i lengre tid.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "F16"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.10"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Det er mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
+                }
+            }
+        },
+        {
+            "stegnr": "3.10",
+            "spm": "Går det fram på nettsida at det er mogleg å stoppe, sette på pause eller skjule bevegande/blinkande/rullande innhald ved å bruke ein tastatursnarveg?",
+            "ht": "<p>Dokumentasjonen av tastatursnarvegen skal ligge anten på starten av nettsida, eller i direkte tilknytning til det aktuelle innhaldet.</p><p>Ein tastatursnarveg kan for eksempel vere:</p><ul><li>Esc-tasten.</li><li>Ein kombinasjon av Ctrl og ein annan tastekombinasjon.</li></ul>",
+            "type": "jaNei",
+            "kilde": [
+                "G4",
+                "G187"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.11"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.13"
+                }
+            }
+        },
+        {
+            "stegnr": "3.11",
+            "spm": "Aktiver tastatursnarvegen. Blir innhaldet satt på pause, stoppa eller skjult?",
+            "ht": "<p>Dokumentasjonen av tastatursnarvegen skal ligge anten på starten av nettsida, eller i direkte tilknytning til det aktuelle innhaldet.</p><p>Ein tastatursnarveg kan for eksempel vere:</p><ul><li>Esc-tasten.</li><li>Ein kombinasjon av Ctrl og ein annan tastekombinasjon.</li></ul>",
+            "type": "jaNei",
+            "kilde": [
+                "G187"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.12"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.13"
+                }
+            }
+        },
+        {
+            "stegnr": "3.12",
+            "spm": "Startar det bevegande/blinkande/rullande innhaldet av seg sjølv innan eit minutt?",
+            "ht": "Av praktiske grunnar, observerer vi innhaldet i eit minutt. Du kan gjerne observere innhaldet i lengre tid.",
+            "type": "jaNei",
+            "kilde": [
+                "F16"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.13"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Det er mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
+                }
+            }
+        },
+        {
+            "stegnr": "3.13",
+            "spm": "Finst det en mekanisme nær starten av nettsida for å laste sida på nytt, utan innhald som beveger seg/blinkar/rullar?",
+            "ht": "<p>Gjer ein visuell inspeksjon og vurder om mekanismen er plassert nær starten av sida.  </p><p>Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G191"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.14"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
+                }
+            }
+        },
+        {
+            "stegnr": "3.14",
+            "spm": "Aktiver mekanismen. Laster nettsida på nytt uten innhald som beveger seg/blinkar/rullar?",
+            "ht": "Nettsida skal laste på nytt utan innhald som beveger seg/blinkar/rullar. Du kan anten bli teke til same side eller ei anna side som har tilsvarande innhald.",
+            "type": "jaNei",
+            "kilde": [
+                "G191"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.15"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
+                }
+            }
+        },
+        {
+            "stegnr": "3.15",
+            "spm": "Startar det bevegande/blinkande/rullande innhaldet av seg sjølv innan eit minutt?",
+            "ht": "Av praktiske grunnar, observerer vi innhaldet i eit minutt. Du kan gjerne observere innhaldet i lengre tid.",
+            "type": "jaNei",
+            "kilde": [
+                "F16"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Det er mogleg å pause, stoppe eller skjule innhald som bevegar seg, blinkar eller rullar."
+                }
+            }
+        }
+    ]
 }

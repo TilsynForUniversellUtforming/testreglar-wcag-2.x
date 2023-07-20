@@ -1,103 +1,106 @@
 {
-	"id": "2.4.6a",
-	"type": "web",
-	"versjon": "1.0",
-	"kravTilSamsvar": "<p>Dersom det er brukt overskrifter, skal dei beskrive emne eller formål for innhaldet som høyrer til.</p>",
-	"side": "2.1",
-	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		}
-	],
-	"steg": [
-		{
-			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
-			"type": "tekst",
-			"label": "URL/Side:",
-			"datalist": "Sideutvalg",
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.2"
-				}
-			}
-		},
-		{
-			"stegnr": "2.2",
-			"spm": "Har nettsida innhald som framstår som overskrift(er)?",
-			"ht": "<p>Merk at det ikkje er krav om at nettsider har overskrifter. <a class=\"aUnderLine\" href=\"https://uu.difi.no/krav-og-regelverk/wcag-20-standarden/246-overskrifter-og-ledetekster-niva-aa\" target=\"_blank\">I dette SK</a> skal det heller ikkje vurderast om overskrifter er koda som overskrifter.</p><p>Overkrifter kan ligge i hovudinnhald, meny, topptekst, botntekst, skjema, tabell og bilde.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.1"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje innhald som visuelt framstår som overskrifter."
-				}
-			}
-		},
-		{
-			"stegnr": "3.1",
-			"spm": "Referer overskrifta som er aktuell for test.",
-			"ht": "Du kan for eksempel kopiere inn overskrifta frå nettsida.",
-			"type": "tekst",
-			"label": "Element:",
-			"multilinje": true,
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.2"
-				}
-			}
-		},
-		{
-			"stegnr": "3.2",
-			"spm": "Gi ei stikkordsmessig beskriving av emne eller føremål med innhaldet som høyrer til den aktuelle overskrifta.",
-			"ht": "Legg vekt på å beskrive innhaldet med få ord. Merk at denne testen ikkje legg opp til inspeksjon av kode.",
-			"type": "tekst",
-			"label": "Emne eller føremål med innhaldet:",
-			"multilinje": true,
-			"oblig": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.3"
-				}
-			}
-		},
-		{
-			"stegnr": "3.3",
-			"spm": "Refererer overskrifta emne eller formål med innhaldet?",
-			"ht": "<p>Merk at overskrifter ikke treng å vere lange, men dei bør gjengi det viktigaste innhaldet som høyrer til overskrifta. </p><p>Eit ord eller et enkelt teikn kan være tilstrekkeleg, for eksempel ei alfabetisk liste.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"G130"
-			],
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Overskrift er beskrivande for emne eller formål med innhaldet."
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Overskrift er ikkje beskrivande for emne eller formål med innhaldet."
-				}
-			}
-		}
-	]
+    "namn": "2.4.6a Overskrifter beskriv innhaldet",
+    "id": "2.4.6a",
+    "testlabId": 209,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nn",
+    "kravTilSamsvar": "<p>Dersom det er brukt overskrifter, skal dei beskrive emne eller formål for innhaldet som høyrer til.</p>",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.3"
+        }
+    ],
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi URL eller side-ID.",
+            "type": "tekst",
+            "label": "URL/Side:",
+            "datalist": "Sideutvalg",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har nettsida innhald som framstår som overskrift(er)?",
+            "ht": "<p>Merk at det ikkje er krav om at nettsider har overskrifter. <a class=\"aUnderLine\" href=\"https://uu.difi.no/krav-og-regelverk/wcag-20-standarden/246-overskrifter-og-ledetekster-niva-aa\" target=\"_blank\">I dette SK</a> skal det heller ikkje vurderast om overskrifter er koda som overskrifter.</p><p>Overkrifter kan ligge i hovudinnhald, meny, topptekst, botntekst, skjema, tabell og bilde.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje innhald som visuelt framstår som overskrifter."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Referer overskrifta som er aktuell for test.",
+            "ht": "Du kan for eksempel kopiere inn overskrifta frå nettsida.",
+            "type": "tekst",
+            "label": "Element:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Gi ei stikkordsmessig beskriving av emne eller føremål med innhaldet som høyrer til den aktuelle overskrifta.",
+            "ht": "Legg vekt på å beskrive innhaldet med få ord. Merk at denne testen ikkje legg opp til inspeksjon av kode.",
+            "type": "tekst",
+            "label": "Emne eller føremål med innhaldet:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                }
+            }
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Refererer overskrifta emne eller formål med innhaldet?",
+            "ht": "<p>Merk at overskrifter ikke treng å vere lange, men dei bør gjengi det viktigaste innhaldet som høyrer til overskrifta. </p><p>Eit ord eller et enkelt teikn kan være tilstrekkeleg, for eksempel ei alfabetisk liste.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G130"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Overskrift er beskrivande for emne eller formål med innhaldet."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Overskrift er ikkje beskrivande for emne eller formål med innhaldet."
+                }
+            }
+        }
+    ]
 }

@@ -1,151 +1,155 @@
 {
-	"id": "nett-2.5.3a",
-	"type": "web",
-	"kravTilSamsvar": "<p>For brukergrensesnittkomponenter med ledetekster som inneholder tekst eller bilder av tekst, som støtter tilgjengelig navn, gjelder en av følgende:</p>\r\n<ul>\r\n<li>Synlig (visuell) ledetekst og tilgjengelig navn (accessible name) er identiske eller</li>\r\n<li>Tilgjengelig navn (accessible name) inneholder samme tekst, i samme rekkefølge som synlig (visuell) ledetekst </li>\r\n</ul>",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		}
-	],
-	"side": "2.1",
-	"element": "3.1",
-	"steg": [
-		{
-			"stegnr": "2.1",
-			"spm": "Hvilken side tester du?",
-			"ht": "<p>Angi URL eller side-ID.</p>",
-			"type": "tekst",
-			"kilde": [],
-			"label": "URL/Side-ID:",
-			"datalist": "Sideutvalg",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.2"
-				}
-			}
-		},
-		{
-			"stegnr": "2.2",
-			"spm": "Har testsiden brukergrensesnittkomponenter med synlig ledetekst?",
-			"ht": "<p>Gjennomfør en visuell inspeksjon og identifiser brukergrensesnittkomponenter med synlig ledetekst. Dette gjelder blant annet brukergrensesnittkomponenter med rolle i <a href=\"https://www.w3.org/TR/wai-aria-1.1/#widget_roles\" target=\"_blank\" rel=\"noopener\">widget-kategorien</a>.</p>\n<p><strong>Merk:</strong> Skjema i PDF, Word eller liknende, er ikke aktuelle testobjekt. </p>\n<p>Synlig ledetekst til brukergrensesnittkomponenten kan bestå av</p>\n<ul>\n<li>bare tekst</li>\n<li>bilde av tekst brukt som symbol, for eksempel\n<ul>\n<li>Der bokstavene F, K og U brukes i et tekstredigeringsverktøy som symbol for fet, kursiv og understreket tekst</li>\n<li>Forstørrelsesglass symbol for søkefelt</li>\n<li>Hjertesymbol for funksjonen favoritt</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong> Når synlig ledetekst mangler skal placeholdertekst i tekstfelt testes som ledetekst. Dette gjelder kun i relasjon til 2.5.3.</p>",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.1"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Testsiden har ikke brukergrensesnittkomponenter med synlig ledetekst som består av tekst eller bilde av tekst."
-				}
-			}
-		},
-		{
-			"stegnr": "3.1",
-			"spm": "Hvilken brukergrensesnittkomponent tester du?",
-			"ht": "<p>Gjengi den synlige ledeteksten til den aktuelle brukergrensesnittkomponenten. Hvis det gjelder flere brukergrensesnittkomponenter, registrerer du en og en.</p>",
-			"type": "tekst",
-			"kilde": [],
-			"label": "Brukergrensesnittkomponent:",
-			"multilinje": true,
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.2"
-				}
-			}
-		},
-		{
-			"stegnr": "3.2",
-			"spm": "Ligger synlig ledetekst rett ved siden av brukergrensesnittkomponenten?",
-			"ht": "<p>Rett ved siden av brukergrensesnittkomponenten betyr vanligvis ledetekst som står</p>\n<ul>\n<li>rett til venstre for kombinasjonsbokser, nedtrekkslister og tekstfelt</li>\n<li>rett til høyre for avkryssingsbokser og radioknapper</li>\n<li>i lenker, faner, knapper eller rett under ikon eller bilde av tekst som fungerer som knapper</li>\n<li>placeholdertekst i tekstfelt - Merk: Dette gjelder kun i relasjon til 2.5.3, når synlig ledetekst mangler.</li>\n</ul>\n<p>Dette skal du ikke ta med i vurderingen av synlig ledetekst i relasjon til krav 2.5.3:</p>\n<ul>\n<li>gruppeledetekst for skjemaelementer i grupper\n<ul>\n<li>dvs. ledetekst brukt med legend/fieldset eller med rolle som gruppe eller radiogruppe.</li>\n</ul>\n</li>\n<li>instruksjoner</li>\n<li>overskrifter</li>\n</ul>",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.3"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Brukergrensesnittkomponenten har ikke synlig ledetekst som ligger rett ved siden av."
-				}
-			}
-		},
-		{
-			"stegnr": "3.3",
-			"spm": "Hvilken type brukergrensesnittkomponenten er det?",
-			"ht": "<p>Velg fra alternativ:</p>",
-			"type": "radio",
-			"kilde": [],
-			"svarArray": [
-				"Skjemaelement",
-				"Meny",
-				"Lenke",
-				"Knapp",
-				"Andre komponenter"
-			],
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.4"
-				}
-			}
-		},
-		{
-			"stegnr": "3.4",
-			"spm": "Har brukergrensesnittkomponenten et tilgjengelig navn, som ikke er tomt?",
-			"ht": "<p>Du kan bruke kodeverktøyet \"Tilgjengelighet\" i nettleseren for å sjekke om brukergrensesnittkomponenten har tilgjengelig navn i feltet \"Name\" under \"Beregnede egenskaper\".</p>",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.5"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Brukergrensesnittkomponenten med synlig ledetekst har ikke tilgjengelig navn."
-				}
-			}
-		},
-		{
-			"stegnr": "3.5",
-			"spm": "Inneholder tilgjengelig navn for komponenten samme tekst, i samme rekkefølge, som den synlige ledeteksten?",
-			"ht": "<p>Sammenlign og sjekk om</p>\n<ul>\n<li>Synlig ledetekst og tilgjengelig navn er identiske eller</li>\n<li>Tilgjengelig navn inneholder samme tekst, i samme rekkefølge som synlig ledetekst</li>\n</ul>\n<p><strong>Merk: </strong>Du kan se vekk fra følgende i vurderingen av tilgjengelig navn </p>\n<ul>\n<li>store og små bokstaver</li>\n<li>tegnsetting, for eksempel kolon og punktum\n<ul>\n<li>Eksempel: Synlig ledetekst er Fornavn:</li>\n<li>Tilgjengelig navn er \"fornavn\"</li>\n<li>Kravet er oppfylt selv om tilgjengelig navn ikke inneholder stor bokstav og kolon</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong> </p>\n<ul>\n<li><strong>Matematiske symboler og formler: </strong>Tilgjengelig navn skal være identisk med den synlige ledeteksten.\n<ul>\n<li>Eksempel: Radioknapper med synlige ledetekster A&gt;B, A=B, A&lt;B. Tilgjengelig navn til de samme radioknappene skal være \"A&gt;B\", \"A=B\", \"A&lt;B\". </li>\n</ul>\n</li>\n<li><strong>Symbolske teksttegn</strong>: Når tekst eller bilde av tekst brukes som symbol, er det funksjonen til det symbolske teksttegnet, som skal avspeiles i tilgjengelig navn.\n<ul>\n<li>Eksempel\n<ul>\n<li>Bokstavene <strong>F</strong>, <em>K</em> og <span style=\"text-decoration: underline;\">U</span> brukes i et tekstredigeringsverktøy som symbol for fet, kursiv og understreket tekst. Tilgjengelig navn kan være \"fet\", \"kursiv\" og \"understreket\" eller tilsvarende</li>\n<li>Bokstaven X brukes som symbol for å lukke et vindu eller en dialogboks. Tilgjengelig navn kan være \"Lukk\" eller tilsvarende</li>\n<li><a href=\"https://unicode.org/emoji/charts/full-emoji-list.html\" target=\"_blank\" rel=\"noopener\">Unicode emojis</a> brukes til å uttrykke følelser osv. Tilgjengelig navn skal avspeile følelsen eller lignende. Tilgjengelig navn kan være smiler, ler, sint, hjerte, jogger, kyss, sol osv.</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>",
-			"type": "jaNei",
-			"kilde": [
-				"F96",
-				"G208",
-				"G211"
-			],
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Brukergrensesnittkomponenten med synlig ledetekst som ligger rett ved siden av, har tilgjengelig navn i samme rekkefølge som den synlige ledeteksten."
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Brukergrensesnittkomponenten med synlig ledetekst som ligger rett ved siden av, har ikke tilgjengelig navn i samme rekkefølge som den synlige ledeteksten."
-				}
-			}
-		}
-	]
+    "namn": "Nett-2.5.3a Synlig ledetekst er en del av tilgjengelig navn 2023",
+    "id": "nett-2.5.3a",
+    "testlabId": 400,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nb",
+    "kravTilSamsvar": "<p>For brukergrensesnittkomponenter med ledetekster som inneholder tekst eller bilder av tekst, som støtter tilgjengelig navn, gjelder en av følgende:</p>\r\n<ul>\r\n<li>Synlig (visuell) ledetekst og tilgjengelig navn (accessible name) er identiske eller</li>\r\n<li>Tilgjengelig navn (accessible name) inneholder samme tekst, i samme rekkefølge som synlig (visuell) ledetekst </li>\r\n</ul>",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.3"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.5"
+        }
+    ],
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Hvilken side tester du?",
+            "ht": "<p>Angi URL eller side-ID.</p>",
+            "type": "tekst",
+            "kilde": [],
+            "label": "URL/Side-ID:",
+            "datalist": "Sideutvalg",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har testsiden brukergrensesnittkomponenter med synlig ledetekst?",
+            "ht": "<p>Gjennomfør en visuell inspeksjon og identifiser brukergrensesnittkomponenter med synlig ledetekst. Dette gjelder blant annet brukergrensesnittkomponenter med rolle i <a href=\"https://www.w3.org/TR/wai-aria-1.1/#widget_roles\" target=\"_blank\" rel=\"noopener\">widget-kategorien</a>.</p>\n<p><strong>Merk:</strong> Skjema i PDF, Word eller liknende, er ikke aktuelle testobjekt. </p>\n<p>Synlig ledetekst til brukergrensesnittkomponenten kan bestå av</p>\n<ul>\n<li>bare tekst</li>\n<li>bilde av tekst brukt som symbol, for eksempel\n<ul>\n<li>Der bokstavene F, K og U brukes i et tekstredigeringsverktøy som symbol for fet, kursiv og understreket tekst</li>\n<li>Forstørrelsesglass symbol for søkefelt</li>\n<li>Hjertesymbol for funksjonen favoritt</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong> Når synlig ledetekst mangler skal placeholdertekst i tekstfelt testes som ledetekst. Dette gjelder kun i relasjon til 2.5.3.</p>",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testsiden har ikke brukergrensesnittkomponenter med synlig ledetekst som består av tekst eller bilde av tekst."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Hvilken brukergrensesnittkomponent tester du?",
+            "ht": "<p>Gjengi den synlige ledeteksten til den aktuelle brukergrensesnittkomponenten. Hvis det gjelder flere brukergrensesnittkomponenter, registrerer du en og en.</p>",
+            "type": "tekst",
+            "kilde": [],
+            "label": "Brukergrensesnittkomponent:",
+            "multilinje": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Ligger synlig ledetekst rett ved siden av brukergrensesnittkomponenten?",
+            "ht": "<p>Rett ved siden av brukergrensesnittkomponenten betyr vanligvis ledetekst som står</p>\n<ul>\n<li>rett til venstre for kombinasjonsbokser, nedtrekkslister og tekstfelt</li>\n<li>rett til høyre for avkryssingsbokser og radioknapper</li>\n<li>i lenker, faner, knapper eller rett under ikon eller bilde av tekst som fungerer som knapper</li>\n<li>placeholdertekst i tekstfelt - Merk: Dette gjelder kun i relasjon til 2.5.3, når synlig ledetekst mangler.</li>\n</ul>\n<p>Dette skal du ikke ta med i vurderingen av synlig ledetekst i relasjon til krav 2.5.3:</p>\n<ul>\n<li>gruppeledetekst for skjemaelementer i grupper\n<ul>\n<li>dvs. ledetekst brukt med legend/fieldset eller med rolle som gruppe eller radiogruppe.</li>\n</ul>\n</li>\n<li>instruksjoner</li>\n<li>overskrifter</li>\n</ul>",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Brukergrensesnittkomponenten har ikke synlig ledetekst som ligger rett ved siden av."
+                }
+            }
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Hvilken type brukergrensesnittkomponenten er det?",
+            "ht": "<p>Velg fra alternativ:</p>",
+            "type": "radio",
+            "kilde": [],
+            "svarArray": [
+                "Skjemaelement",
+                "Meny",
+                "Lenke",
+                "Knapp",
+                "Andre komponenter"
+            ],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Har brukergrensesnittkomponenten et tilgjengelig navn, som ikke er tomt?",
+            "ht": "<p>Du kan bruke kodeverktøyet \"Tilgjengelighet\" i nettleseren for å sjekke om brukergrensesnittkomponenten har tilgjengelig navn i feltet \"Name\" under \"Beregnede egenskaper\".</p>",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Brukergrensesnittkomponenten med synlig ledetekst har ikke tilgjengelig navn."
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Inneholder tilgjengelig navn for komponenten samme tekst, i samme rekkefølge, som den synlige ledeteksten?",
+            "ht": "<p>Sammenlign og sjekk om</p>\n<ul>\n<li>Synlig ledetekst og tilgjengelig navn er identiske eller</li>\n<li>Tilgjengelig navn inneholder samme tekst, i samme rekkefølge som synlig ledetekst</li>\n</ul>\n<p><strong>Merk: </strong>Du kan se vekk fra følgende i vurderingen av tilgjengelig navn </p>\n<ul>\n<li>store og små bokstaver</li>\n<li>tegnsetting, for eksempel kolon og punktum\n<ul>\n<li>Eksempel: Synlig ledetekst er Fornavn:</li>\n<li>Tilgjengelig navn er \"fornavn\"</li>\n<li>Kravet er oppfylt selv om tilgjengelig navn ikke inneholder stor bokstav og kolon</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong> </p>\n<ul>\n<li><strong>Matematiske symboler og formler: </strong>Tilgjengelig navn skal være identisk med den synlige ledeteksten.\n<ul>\n<li>Eksempel: Radioknapper med synlige ledetekster A&gt;B, A=B, A&lt;B. Tilgjengelig navn til de samme radioknappene skal være \"A&gt;B\", \"A=B\", \"A&lt;B\". </li>\n</ul>\n</li>\n<li><strong>Symbolske teksttegn</strong>: Når tekst eller bilde av tekst brukes som symbol, er det funksjonen til det symbolske teksttegnet, som skal avspeiles i tilgjengelig navn.\n<ul>\n<li>Eksempel\n<ul>\n<li>Bokstavene <strong>F</strong>, <em>K</em> og <span style=\"text-decoration: underline;\">U</span> brukes i et tekstredigeringsverktøy som symbol for fet, kursiv og understreket tekst. Tilgjengelig navn kan være \"fet\", \"kursiv\" og \"understreket\" eller tilsvarende</li>\n<li>Bokstaven X brukes som symbol for å lukke et vindu eller en dialogboks. Tilgjengelig navn kan være \"Lukk\" eller tilsvarende</li>\n<li><a href=\"https://unicode.org/emoji/charts/full-emoji-list.html\" target=\"_blank\" rel=\"noopener\">Unicode emojis</a> brukes til å uttrykke følelser osv. Tilgjengelig navn skal avspeile følelsen eller lignende. Tilgjengelig navn kan være smiler, ler, sint, hjerte, jogger, kyss, sol osv.</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>",
+            "type": "jaNei",
+            "kilde": [
+                "F96",
+                "G208",
+                "G211"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Brukergrensesnittkomponenten med synlig ledetekst som ligger rett ved siden av, har tilgjengelig navn i samme rekkefølge som den synlige ledeteksten."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Brukergrensesnittkomponenten med synlig ledetekst som ligger rett ved siden av, har ikke tilgjengelig navn i samme rekkefølge som den synlige ledeteksten."
+                }
+            }
+        }
+    ]
 }
