@@ -26,14 +26,14 @@ Id er ein unik identifikator for kvar testregel.
 "id": "1.4.2a"
 ```
 
-## Id
-T estlabId er ein unik id i tilsynets system for testing.
+## TestlabId
+TestlabId er ein unik id i tilsynets system for testing.
 ### Eksempel
 ```json
 "testlabId": 153
 ```
 
-### Type
+## Type
 Type er kategori av testregel. Dei aktuelle typane er: 
 - App
 - Automat
