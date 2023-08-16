@@ -1,15 +1,11 @@
 Testregelformat
 ===============
-
-Innhald i formatet
-------------------
-
 Generell info om testreglar
 ---------------------------
 
 - Namn
 - Id
-- testlabId
+- TestlabId
 - Type
 - Versjon
 - Språk
