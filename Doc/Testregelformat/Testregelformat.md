@@ -18,7 +18,7 @@ Generell info om testreglar
 - Kolonner
 
 ## Namn
-Namn på testregel
+Namn på testregel.
 ### Eksempel
 ```json
 "namn": "1.1.1a Bilde har tekstalternativ"
@@ -31,7 +31,7 @@ Id er ein unik identifikator for kvar testregel.
 ```
 
 ## Id
-Unik id i tilsynets system for test
+T estlabId er ein unik id i tilsynets system for testing.
 ### Eksempel
 ```json
 "testlabId": 153
