@@ -7,7 +7,9 @@ Innhald i formatet
 Generell info om testreglar
 ---------------------------
 
+- Namn
 - Id
+- testlabId
 - Type
 - Versjon
 - Språk
@@ -15,11 +17,24 @@ Generell info om testreglar
 - Element
 - Kolonner
 
+## Namn
+Namn på testregel
+### Eksempel
+```json
+"namn": "1.1.1a Bilde har tekstalternativ"
+```
 ## Id
 Id er ein unik identifikator for kvar testregel.
 ### Eksempel
 ```json
 "id": "1.4.2a"
+```
+
+## Id
+Unik id i tilsynets system for test
+### Eksempel
+```json
+"testlabId": 153
 ```
 
 ### Type
