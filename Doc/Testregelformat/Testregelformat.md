@@ -1,13 +1,11 @@
 Testregelformat
 ===============
-
-Innhald i formatet
-------------------
-
 Generell info om testreglar
 ---------------------------
 
+- Namn
 - Id
+- TestlabId
 - Type
 - Versjon
 - Språk
@@ -15,6 +13,12 @@ Generell info om testreglar
 - Element
 - Kolonner
 
+## Namn
+Namn på testregel.
+### Eksempel
+```json
+"namn": "1.1.1a Bilde har tekstalternativ"
+```
 ## Id
 Id er ein unik identifikator for kvar testregel.
 ### Eksempel
@@ -22,7 +26,14 @@ Id er ein unik identifikator for kvar testregel.
 "id": "1.4.2a"
 ```
 
-### Type
+## TestlabId
+TestlabId er ein unik id i tilsynets system for testing.
+### Eksempel
+```json
+"testlabId": 153
+```
+
+## Type
 Type er kategori av testregel. Dei aktuelle typane er: 
 - App
 - Automat
