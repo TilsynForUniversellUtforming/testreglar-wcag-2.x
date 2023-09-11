@@ -1,11 +1,11 @@
 {
-	"namn": "1.4.3b Det er tilstrekkeleg kontrast mellom tekst og bakgrunn i bilde av tekst",
-	"id": "1.4.3b",
-	"testlabId": 147,
+	"namn": "Nett-1.4.3b Det er tilstrekkeleg kontrast mellom tekst og bakgrunn i bilde av tekst 2023",
+	"id": "nett-1.4.3b",
+	"testlabId": 442,
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ol>\r\n<li>Bilde av tekst har kontrast på minst 3:1 mot bakgrunnen.</li>\r\n<li>Det finst ein høgkontrastversjon som tilfredsstiller følgande krav: <br>\r\n<ul>\r\n<li>Mekanismen for å aktivere er plassert nær starten av sida og er visuelt markert med tekst eller ikon.</li>\r\n<li>Mekanismen har kontrast på minst 4,5:1.</li>\r\n<li>Tekst i høgkontrastversjon tilfredsstiller krava til kontrast punkt 1 over.</li>\r\n<li>Det tekstlege elementet som vart målt med for svak kontrast i ordinær visning, er identisk med element i høgkontrastversjon.</li>\r\n</ul>\r\n</li>\r\n</ol>",
+	"kravTilSamsvar": "<p>Bilde av tekst</p>\r\n<ul>\r\n<li>Bilde av tekst har kontrast på minst 4.5:1 mot bakgrunnen</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
