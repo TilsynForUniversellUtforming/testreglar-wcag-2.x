@@ -35,7 +35,7 @@
             "bm": "Beskriv elementet, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere elementer, registrerer du et og et."
         },
         "app_skjermleser_spm": {
-            "nn":"Er det mogleg å sveipe til skjemaelementer?",
+            "nn":"Er det mogleg å sveipe til skjemaelement?",
             "bm":"Er det mulig å sveipe til skjemaelementer?"
         },
         "app_skjermleser_ht": {
