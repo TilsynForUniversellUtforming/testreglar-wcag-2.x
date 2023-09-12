@@ -1,25 +1,25 @@
 {
-	"namn": "1.4.3a Det er tilstrekkeleg kontrast mellom tekst og bakgrunn",
-	"id": "1.4.3a",
-	"testlabId": 145,
+	"namn": "Nett-1.4.3a Det er tilstrekkelig kontrast mellom tekst og bakgrunn 2023",
+	"id": "nett-1.4.3a",
+	"testlabId": 439,
 	"versjon": "1.0",
 	"type": "Nett",
-	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ol>\r\n<li>Tekst har kontrast\r\n<ul>\r\n<li>på minst 4,5:1 mot bakgrunnen</li>\r\n<li>på minst 3,0 mot bakgrunnen og tekststørrelse er minst 24 pikslar eller 19 pikslar feit/utheva</li>\r\n</ul>\r\n</li>\r\n<li>Det finst ein høgkontrastversjon som tilfredsstiller følgande krav:\r\n<ul>\r\n<li>Mekanismen for å aktivere er plassert nær starten av sida og er visuelt markert med tekst eller ikon.</li>\r\n<li>Mekanismen tilfredsstiller krava til kontrast i punkt 1 over.</li>\r\n<li>Tekst i høgkontrastversjon tilfredsstiller krava til kontrast punkt 1 over.</li>\r\n<li>Det tekstlege elementet som vart målt med for svak kontrast i ordinær visning, er identisk med elementet  i høgkontrastversjon.</li>\r\n</ul>\r\n</li>\r\n</ol>",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Tekst</p>\r\n<ul>\r\n<li>Tekst har kontrast på minst 4,5:1 mot bakgrunnen</li>\r\n<li>Stor tekst har kontrast på minst 3,0:1 mot bakgrunnen</li>\r\n</ul>",
 	"side": "2.1",
-	"element": "3.1",
+	"element": "3.4",
 	"kolonner": [
 		{
 			"title": "2.2"
+		},
+		{
+			"title": "3.1"
 		},
 		{
 			"title": "3.2"
 		},
 		{
 			"title": "3.3"
-		},
-		{
-			"title": "3.4"
 		},
 		{
 			"title": "3.5"
@@ -29,54 +29,15 @@
 		},
 		{
 			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		},
-		{
-			"title": "3.10"
-		},
-		{
-			"title": "3.11"
-		},
-		{
-			"title": "3.12"
-		},
-		{
-			"title": "3.13"
-		},
-		{
-			"title": "3.14"
-		},
-		{
-			"title": "3.15"
-		},
-		{
-			"title": "3.16"
-		},
-		{
-			"title": "3.17"
-		},
-		{
-			"title": "3.18"
-		},
-		{
-			"title": "3.19"
-		},
-		{
-			"title": "3.20"
 		}
 	],
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "<p>Oppgi URL eller side-ID.</p>",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
 			"type": "tekst",
-			"label": "URL/Side:",
+			"label": "URL/Side-ID:",
 			"datalist": "Sideutvalg",
 			"oblig": true,
 			"ruting": {
@@ -88,8 +49,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har nettsida innhald i form av tekst?",
-			"ht": "<p>Desse innhaldstypane skal testast</p><ul><li>tekst mot bakgrunn</li><li>tekst i illustrasjonar og diagram (som ikkje er bilde)</li><li>tekst i skjema</li></ul><p>Desse innhaldstypane skal ikkje testast</#p><ul><li>bilde av tekst (blir testa i 1.4.3b)</li><li>logoar og varemerke</li><li>ikkje-informativ tekst som er til pynt, dvs tekst som kan erstattast av annan tekst, utan at meiningsinnhaldet vert endra</li><li>tekst i bilde der teksten ikkje er vesentleg for å formidle meiningsinnhaldet</li><li>deaktiverte skjemaelement</li><li>tekst som ikkje er synleg for nokon</li><li>grafiske element i for eksempel diagram og grafar, som støttelinjer, søyler m.m.</li></ul>",
+			"spm": "Har testsiden tekst?",
+			"ht": "<p>Disse innholdstypene er omfattet</p>\n<ul>\n<li>tekst</li>\n<li>tekst i illustrasjoner og diagram (som ikke er bilde)</li>\n<li>tekst i skjema inkl. placeholder</li>\n<li>tekst som kommer til syne ved musepekeren over eller tastaturfokus</li>\n</ul>\n<p><strong>Merk:</strong> Innhold som ikke skal testes</p>\n<ul>\n<li>bilde av tekst (blir testet i nett-1.4.3b)</li>\n<li>Ikke-tekstlig innhold i diagram og grafer, som støttelinjer, søyler (blir testet i nett-1.4.11)</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -98,485 +59,193 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje tekst."
+					"utfall": "Testsiden har ikke tekst."
 				}
 			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Beskriv elementet du testar.",
-			"ht": "Scroll nedover sida og sjå etter innhaldselement (tekst i form av overskrifter, lenker og annan tekst, tekst i illustrasjonar og diagram) med svak kontrast mellom tekst og bakgrunn. I skjema kan det hende at du må framprovosere eventuelle feilmeldingar og rettleiingstekstar. Formålet er at ein skal kunne finne att elementet på sida som ligg til grunn for kontrastmålinga. For eksempel plassering, kjenneteikn, kva som i står i teksten (treng ikkje gje att heile).",
-			"type": "tekst",
-			"multilinje": true,
-			"label": "Beskrivelse av element:",
-			"oblig": true,
+			"spm": "Er det brudd på kravet til kontrast mellom tekst og bakgrunn på testsiden?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk verktøyet <a href=\"https://chrome.google.com/webstore/detail/siteimprove-accessibility/djcglbmbegflehmbfleechkjhmedcopn\" target=\"_blank\" rel=\"noopener\">Siteimprove Accessibility Checker i Chrome</a> på testsiden</li>\n<li>Dersom feltet \"Contrast (Minimum)\" ikke dukker opp under overskriften \"Distingushable\", har verktøyet ikke funnet brudd på kravet</li>\n</ul>",
+			"type": "jaNei",
 			"ruting": {
-				"alle": {
+				"ja": {
 					"type": "gaaTil",
 					"steg": "3.2"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Testsiden har ikke kontrastfeil."
 				}
 			}
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Kva type funksjonalitet er elementet en del av?",
-			"ht": "",
-			"type": "radio",
-			"svarArray": [
-				"Skjema",
-				"Mediaspelar",
-				"Meny",
-				"Modalvindauge",
-				"Lenker",
-				"Løpande tekst",
-				"Anna"
-			],
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.3"
-				}
-			}
-		},
-		{
-			"stegnr": "3.3",
-			"spm": "Mål og registrer kontrast mellom farge på tekst og farge på bakgrunn.",
-			"ht": "<p>Mål og registrer kontrast mellom tekst og bakgrunn for elementet du skal teste.</#p> <h4 class=\"h5\">Tips:</h4> <ul> <li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten. </li> </ul> <h4 class=\"h5\">Retningslinjer for test:</h4> <ul> <li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li> <li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li> <li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li> </ul>",
+			"spm": "Kvalitetssikre resultatene fra verktøyet og registrer antall brudd",
+			"ht": "<p>Verktøyet kan i enkelte tilfeller gi feil resultater, for eksempel fordi det</p>\n<ul>\n<li>ikke tar høyde for alle unntakene </li>\n<li>ikke alltid henter rett bakgrunnsfarge, for eksempel dersom bakgrunnen består av flere lag</li>\n</ul>\n<ol>\n<li>Gå gjennom bruddene i verktøyet (stikkprøver) for å sjekke om noen av de gjelder tekst som er unntatt\n<ul>\n<li>tekst i logoer og varemerke</li>\n<li>tekst som er til pynt, dvs. tekst som kan erstattes av annen tekst, uten at meningsinnholdet blir endret</li>\n<li>tekst i bilde der teksten ikke er vesentlig for å formidle meningsinnholdet</li>\n<li>tekst i inaktive brukergrensesnittkomponenter, for eksempel deaktiverte knapper</li>\n<li>tekst som ikke er synlig for brukeren</li>\n</ul>\n</li>\n<li>Sjekk også om bruddene kan være feil av andre grunner, for eksempel fordi verktøyet ikke har brukt riktig bakgrunnsfarge.</li>\n</ol>\n<p><strong>Merk:</strong> Siteimprove Accessibility Checker fanger også opp brudd som gjelder fargeendringer ved tilstander f.eks. hover, focus, visited og tekst som kommer til syne ved hover og focus. Dette er omfattet av kravet. </p>\n<p>Registrer antall brudd. </p>",
 			"type": "tekst",
-			"filter": "tal",
-			"label": "Målt kontrast (Format 4.48):",
-			"kilde": [
-				"G18",
-				"G145",
-				"F83"
-			],
 			"ruting": {
 				"alle": {
 					"type": "regler",
 					"regler": {
 						"1": {
-							"sjekk": "3.3",
+							"sjekk": "3.2",
 							"type": "mellom",
 							"verdi": 0,
-							"verdi2": 2.99,
+							"verdi2": 0,
 							"handling": {
 								"type": "gaaTil",
-								"steg": "3.7",
-								"delutfall": {
-									"nr": 0,
-									"tekst": "Tekst har kontrast på mindre enn 3,0:1.",
-									"fasit": "Nei"
-								}
+								"steg": "3.3"
 							}
 						},
 						"2": {
-							"sjekk": "3.3",
+							"sjekk": "3.2",
 							"type": "mellom",
-							"verdi": 3,
-							"verdi2": 4.49,
+							"verdi": 1,
+							"verdi2": 2000000,
 							"handling": {
 								"type": "gaaTil",
-								"steg": "3.4"
-							}
-						},
-						"3": {
-							"sjekk": "3.3",
-							"type": "mellom",
-							"verdi": 4.5,
-							"verdi2": 200,
-							"handling": {
-								"type": "avslutt",
-								"fasit": "Ja",
-								"utfall": "Element med målt kontrast over minstekravet for liten tekst 4,5:1."
+								"steg": "3.3"
 							}
 						}
 					}
+				}
+			},
+			"label": "Antall brudd:",
+			"filter": "tal"
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Har du funnet brudd på kravet som verktøyet ikke avdekker? ",
+			"ht": "<p>Dersom du ved en visuell inspeksjon av testsiden mener du har identifisert tekst som bryter kravet, som ikke er fanget opp av det automatiske verktøyet, skal du registrere det i tillegg. </p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"type": "lik",
+							"sjekk": "3.2",
+							"verdi": "0",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Testsiden har ikke kontrastfeil."
+							}
+						},
+						"2": {
+							"type": "mellom",
+							"sjekk": "3.2",
+							"verdi": 1,
+							"verdi2": 10000,
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "Testsiden har kontrastfeil."
+							}
+						}
+					}
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
 				}
 			}
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Er skriftstørrelsen 24 px eller større?",
-			"ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer.</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
-			"type": "jaNei",
+			"spm": "Hvilket element tester du?",
+			"ht": "<p>Beskriv teksten, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere elementer, registrerer du et og et.</p>",
+			"type": "tekst",
 			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Stor tekst har kontrast på meir enn 3,0:1."
-				},
-				"nei": {
+				"alle": {
 					"type": "gaaTil",
 					"steg": "3.5"
 				}
-			}
+			},
+			"label": "Tekst:",
+			"multilinje": true
 		},
 		{
 			"stegnr": "3.5",
-			"spm": "Er skriftstørrelsen mindre enn 19 px ?",
-			"ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer.</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
-			"type": "jaNei",
-			"krav:": "G145",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.7",
-					"delutfall": {
-						"nr": 0,
-						"tekst": "Liten tekst har kontrast på mindre enn 4,5:1.",
-						"fasit": "Nei"
-					}
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.6"
-				}
-			}
-		},
-		{
-			"stegnr": "3.6",
-			"spm": "Er teksten utheva/bold/feit skrift?",
-			"ht": "Her er det tilstrekkeleg å gjere ein visuell inspeksjon og ta stilling til om teksten står fram som utheva.",
-			"type": "jaNei",
-			"krav:": "G145",
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Stor tekst har kontrast på meir enn 3,0:1."
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.7",
-					"delutfall": {
-						"nr": 0,
-						"tekst": "Liten tekst har kontrast på mindre enn 4,5:1.",
-						"fasit": "Nei"
-					}
-				}
-			}
-		},
-		{
-			"stegnr": "3.7",
-			"spm": "Finst det ein mekanisme for å aktivere ein høgkontrastversjon?",
-			"ht": "<p>Dersom sida har innhold med for svak kontrast, skal vi teste om det finst tilgang til ein høgkontrastversjon. Mekanisme for høgkontrastversjon kan vere:</p> <ul><li> knapp med kontrastsymbol som for eksempel halvmåne, eller knapp med bokstavar med høgkontrast</li> <li>knapp eller lenke med teksten \"høgkontrast\" eller tilsvarande</li></ul>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.9"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "#delutfall(0) Det finst ikkje nokon mekanisme for å aktivere ein høgkontrastversjon."
-				}
-			}
-		},
-		{
-			"stegnr": "3.8",
-			"spm": "Er mekanismen visuelt plassert nær starten av sida?",
-			"ht": "<p>Gjer ein visuell inspeksjon og vurder om mekanismen er plassert nær starten av sida.  </p><p>Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.9"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "#delutfall(0) Mekanisme for aktivering av høgkontrastversjon, er ikkje visuelt plassert nær starten av sida."
-				}
-			}
-		},
-		{
-			"stegnr": "3.9",
-			"spm": "Er mekanismen for høgkontrastvisning visuelt markert?",
-			"ht": "<p>Visuell markering er for eksempel</p><ul><li> ein tekst som seier høgkontrast, kontrast eller liknande</li><li>eit ikon som viser f.eks. bokstavar, halvmåne, eller andre symbol for kontrast/lysstyrke</li></ul>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.10"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "#delutfall(0) Mekanisme for aktivering av høgkontrastversjon, manglar tydeleg visuell markering."
-				}
-			}
-		},
-		{
-			"stegnr": "3.10",
-			"spm": "Er mekanismen for høgkontrast merka med tekst?",
-			"ht": "<p>Merk at ein her berre skal ta stilling til om mekanismen er markert med tekst. I såfall skal ein gå vidare til å måle kontrast. Viss mekanismen er markert med berre eit ikon, er det ikkje krav til kontrast.</p><p><strong>Merk:</strong> Tekst kan bestå av berre ein bokstav. Tekst omfattar også bilete av tekst.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.11"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.16"
-				}
-			}
-		},
-		{
-			"stegnr": "3.11",
-			"spm": "Mål og registrer kontrast mellom farge på tekst i mekanismen og farge på bakgrunn.",
-			"ht": "<p>Kontrast skal registrerast med desimaltall (For eksempel 4,5).</#p> <h4 class=\"h5\">Tips:</h4> <ul> <li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten. </li> </ul> <h4 class=\"h5\">Retningslinjer for test:</h4> <ul> <li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li> <li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li> <li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li> </ul>",
+			"spm": "Mål og registrer kontrast mellom farge på tekst og farge på bakgrunn.",
+			"ht": "<p><strong>Slik tester du:</strong></p>\n<p>Alternativ 1:</p>\n<ul>\n<li>Åpne DevTools i nettleseren (F12) Chrome</li>\n<li>Inspiser teksten med funksjonen \"inspiser element med mus\" \n<ul>\n<li>Klikk på pil-knappen i øvre venstre hjørne av vinduet, for å aktivere funksjonen</li>\n</ul>\n</li>\n<li>Hold musepekeren over teksten du tester</li>\n<li>En pop-up viser kontrasten, og om teksten samsvarer eller bryter med kravet, under overskriften \"Accsessibility\"\n<ul>\n<li>Grøn hake indikerer samsvar </li>\n<li>Oransje utropstegn indikerer brudd</li>\n</ul>\n</li>\n<li>Registrer kontrast</li>\n</ul>\n<p>Alternativ 2:</p>\n<ul>\n<li>Inspiser teksten i DevTools i nettleseren (F12) Chrome</li>\n<li>Du finner liste over alle CSS-egenskaper knyttet til teksten\n<ul>\n<li>Vanligvis er det på høyre side i verktøyet, under fanen Beregnet (Computed)</li>\n</ul>\n</li>\n<li>Du kan filtrere aktuelle CSS-egenskaper på ordet \"color\"</li>\n<li>Kopier deretter verdien fra egenskapen \"color\" og \"backgroud-color\" (Shift og klikk på firkant fargeikon for å endre fargeformat til HEX-kode)</li>\n<li>Bruk deretter verktøyet WebAIM Contrast Checker eller TPGi Colour Contrast Analyzer (CCA) for å måle kontrasten</li>\n<li>Registrer kontrast</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Dersom du ikke kan hente fargekodene fra egenskaper \"color\" og \"backgroud-color\" i koden, for eksempel i tilfeller der bakgrunnsfargen er ikke oppgitt, bakgrunnen er gradert, mønstret eller et bilde, kan du isteden bruke pipette til å hente fargekodene\n<ul>\n<li>I Chromes DevTools, under \"Stiler\"-fanen kan du klikke på fargeboksen for å få opp fargevelger-pop-up og bruke pipette.</li>\n<li>Bruk av pipette kan være unøyaktig, og gi ulike resultater, særlig for mindre skrift. Du skal velge en farge som er representativ for hovedfargen på teksten.</li>\n</ul>\n</li>\n<li>Dersom bakgrunnen er gradert, mønstret eller et bilde, skal du måle på det svakeste punktet. Merk at teksten også kan være gradert.</li>\n<li>Dersom bokstavene har et omriss på minst 1 piksel, vil omrisset være bakgrunnsfargen.</li>\n</ul>",
 			"type": "tekst",
-			"filter": "tal",
-			"label": "Målt kontrast (Format 4.48):",
-			"kilde": [
-				"G18",
-				"G145",
-				"F83"
-			],
 			"ruting": {
 				"alle": {
 					"type": "regler",
 					"regler": {
 						"1": {
-							"sjekk": "3.11",
+							"sjekk": "3.5",
 							"type": "mellom",
 							"verdi": 0,
 							"verdi2": 2.99,
 							"handling": {
 								"type": "avslutt",
 								"fasit": "Nei",
-								"utfall": "#delutfall(0) Tekst på mekanisme for aktivering av høgkontrastversjon, har kontrast på mindre enn 3,0:1."
+								"utfall": "Stor tekst har kontrast mot bakgrunnen under 3,0:1."
 							}
 						},
 						"2": {
-							"sjekk": "3.11",
+							"sjekk": "3.5",
 							"type": "mellom",
 							"verdi": 3,
 							"verdi2": 4.49,
 							"handling": {
 								"type": "gaaTil",
-								"steg": "3.12"
+								"steg": "3.6"
 							}
 						},
 						"3": {
-							"sjekk": "3.11",
-							"type": "mellom",
-							"verdi": 4.5,
-							"verdi2": 200,
-							"handling": {
-								"type": "gaaTil",
-								"steg": "3.16"
-							}
-						}
-					}
-				}
-			}
-		},
-		{
-			"stegnr": "3.12",
-			"spm": "Er mekanismen tekst?",
-			"ht": "<p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Opne kodeverktøyet i nettlesaren.</li><li>Bruk \"select\" funksjonen i verktøyet og marker eit område i tekstalternativet.</li><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.13"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.16"
-				}
-			}
-		},
-		{
-			"stegnr": "3.13",
-			"spm": "Er skriftstørrelsen 24 px eller større?",
-			"ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer.</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"G145"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.16"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.14"
-				}
-			}
-		},
-		{
-			"stegnr": "3.14",
-			"spm": "Er skriftstørrelsen mindre enn 19 px ?",
-			"ht": "",
-			"type": "jaNei",
-			"kilde": [
-				"G145"
-			],
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "#delutfall(0) Mekanisme for aktivering av høgkontrastversjon, har liten tekst med kontrast på mindre enn 4,5:1."
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.15"
-				}
-			}
-		},
-		{
-			"stegnr": "3.15",
-			"spm": "Er teksten utheva/bold/feit skrift?",
-			"ht": "Her er det tilstrekkeleg å gjere ein visuell inspeksjon og ta stilling til om teksten framstår som utheva.",
-			"type": "jaNei",
-			"kilde": [
-				"G145"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.16"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "#delutfall(0) Mekanisme for aktivering av høgkontrastversjon, har liten tekst med kontrast på mindre enn 4,5:1."
-				}
-			}
-		},
-		{
-			"stegnr": "3.16",
-			"spm": " Er det tekslege innhaldet i elementet som vart målt med for svak kontrast i ordinær visning, identisk med elementet i høgkontrastversjon?",
-			"ht": "Slå på høgkontrasvisning og sjekk elementet. Merk at du her skal sjekke berre elementet som ikkje overheldt kontrastkravet i ordinær visning.",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.17"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "#delutfall(0)"
-				}
-			}
-		},
-		{
-			"stegnr": "3.17",
-			"spm": "Mål og registrer kontrast (på det same elementet som vart målt i ordinærvisning) mellom farge på tekst i mekanismen og farge på bakgrunn.",
-			"ht": "<p>Kontrast skal registerast med desimal tall (For eksempel 4,5).</#p> <h4 class=\"h5\">Tips:</h4> <ul> <li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten. </li> </ul> <h4 class=\"h5\">Retningslinjer for test:</h4> <ul> <li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li> <li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li> <li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li> </ul>",
-			"type": "tekst",
-			"filter": "tal",
-			"label": "Målt kontrast (Format 4.48):",
-			"kilde": [
-				"G18",
-				"G145",
-				"G174",
-				"F83"
-			],
-			"ruting": {
-				"alle": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"sjekk": "3.17",
-							"type": "mellom",
-							"verdi": 0,
-							"verdi2": 2.99,
-							"handling": {
-								"type": "avslutt",
-								"fasit": "Nei",
-								"utfall": "#delutfall(0) Tekst har kontrast på mindre enn 3,0:1, målt i høgkontrastversjon."
-							}
-						},
-						"2": {
-							"sjekk": "3.17",
-							"type": "mellom",
-							"verdi": 3,
-							"verdi2": 4.49,
-							"handling": {
-								"type": "gaaTil",
-								"steg": "3.18"
-							}
-						},
-						"3": {
-							"sjekk": "3.17",
+							"sjekk": "3.5",
 							"type": "mellom",
 							"verdi": 4.5,
 							"verdi2": 200,
 							"handling": {
 								"type": "avslutt",
 								"fasit": "Ja",
-								"utfall": "Tekst har kontrast på meir enn 4,5:1, målt i høgkontrastversjon."
+								"utfall": "Tekst har kontrast mot bakgrunnen på minst 4,5:1."
 							}
 						}
 					}
 				}
-			}
+			},
+			"label": "Målt kontrast (Format 4.48):",
+			"filter": "tal"
 		},
 		{
-			"stegnr": "3.18",
+			"stegnr": "3.6",
 			"spm": "Er skriftstørrelsen 24 px eller større?",
-			"ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer.</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
+			"ht": "<p>Her kan du bruke verktøyet WhatFont:</p>\n<ul>\n<li>Aktiver WhatFont.</li>\n<li>Trykk på teksten du skal måle størrelsen på.</li>\n<li>Registrer verdien som står i FontSize</li>\n</ul>\n<p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
 			"type": "jaNei",
-			"kilde": [
-				"G145"
-			],
 			"ruting": {
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Stor tekst har kontrast på meir enn 3,0:1, målt i høgkontrastversjon."
+					"utfall": "Stor tekst har kontrast mot bakgrunnen på minst 3,0:1."
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.19"
+					"steg": "3.7"
 				}
 			}
 		},
 		{
-			"stegnr": "3.19",
-			"spm": "Er skriftstørrelsen mindre enn 19 px ?",
-			"ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer.</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
+			"stegnr": "3.7",
+			"spm": "Er teksten uthevet/bold/feit?",
+			"ht": "<p>Her er det tilstrekkelig å gjøre en visuell inspeksjon.</p>",
 			"type": "jaNei",
-			"kilde": [
-				"G145"
-			],
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "#delutfall(0) Tekst har kontrast på mindre enn 3,0:1, målt i høgkontrastversjon."
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.20"
-				}
-			}
-		},
-		{
-			"stegnr": "3.20",
-			"spm": "Er teksten utheva/bold/feit skrift?",
-			"ht": "Her er det tilstrekkeleg å gjere ein visuell inspeksjon og ta stilling til om teksten framstår som utheva.",
-			"type": "jaNei",
-			"kilde": [
-				"G145"
-			],
 			"ruting": {
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Stor tekst har kontrast på meir enn 3,0:1, målt i høgkontrastversjon."
+					"utfall": "Stor tekst har kontrast mot bakgrunnen på minst 3,0:1."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "#delutfall(0) Tekst har kontrast på mindre enn 3,0:1, målt i høgkontrastversjon."
+					"utfall": "Tekst har kontrast mot bakgrunnen på under 4,5:1."
 				}
 			}
 		}
