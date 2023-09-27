@@ -77,8 +77,8 @@
 		},
 		{
 			"stegnr": "2.3",
-			"spm": "Hvilket skjema/prosess tester du?",
-			"ht": "<p>Beskriv skjema/prosess, slik at det er mulig å identifisere det i ettertid.</p>",
+			"spm": "Hvilket skjema/skjemaelement tester du?",
+			"ht": "<p>Beskriv skjema/skjemaelement, slik at det er mulig å identifisere det i ettertid. </p>\n<p><strong>Merk:</strong> Hvis skjema/skjemaelement inngår i en prosess skal du også beskrive prosessen.</p>",
 			"type": "tekst",
 			"label": "Skjema/prosess:",
 			"multilinje": true,
@@ -216,7 +216,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er feilmeldingen kodet som tekst?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser (opplesingsfunksjon)\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: TalkBack</li>\n</ul>\n</li>\n<li>Trykk på feilmeldingen du tester, og sjekk om den blir lest opp</li>\n</ul>\n<p><strong>Merk:</strong> Hvis feilmeldingen ikke blir lest opp, er den ikke kodet som tekst.</p>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser (opplesingsfunksjon)\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: TalkBack</li>\n</ul>\n</li>\n<li>Trykk på eller sveip til feilmeldingen du tester, og sjekk om den blir lest opp</li>\n</ul>\n<p><strong>Merk:</strong> Hvis feilmeldingen ikke blir lest opp, antar vi at den ikke er kodet som tekst.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -253,7 +253,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Inneholder feilmeldingen tekst som beskriver feilen?",
-			"ht": "<p>Feilmeldingen gir informasjon om hva feilen består i, slik at brukeren vet at hva som har gått feil, for eksempel \"Telefonnummer kan ikke inneholde bokstaver\".</p>\n<p><strong>Merk:</strong> Det er ikke krav om at feilmeldingen skal inneholde forslag til hvordan feil skal rettes. Dette er omfattet av suksesskriterium 3.3.3.</p>",
+			"ht": "<p>Feilmeldingen gir informasjon om hva som er feil, for eksempel: \"Telefonnummer kan ikke inneholde bokstaver\".</p>\n<p><strong>Merk:</strong> Det er ikke krav om at feilmeldingen skal inneholde forslag til hvordan feil skal rettes. Dette er omfattet av suksesskriterium 3.3.3.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G84",
@@ -263,12 +263,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som:<br>- identifiserer hvor feilen er oppstått<br>- tekstlig beskriver feilen<br>- er kodet som tekst<br>- informasjonen blir liggende i skjemaelementet"
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som:<br/>- er kodet som tekst<br/>- identifiserer hvor feilen har oppstått<br/>- beskriver feilen tekstlig"
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som ikke beskriver feilen."
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som:<br/>- er kodet som tekst<br/>- identifiserer hvor feilen har oppstått<br/>- ikke beskriver feilen tekstlig"
 				}
 			}
 		}
