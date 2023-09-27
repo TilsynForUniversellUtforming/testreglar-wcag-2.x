@@ -43,7 +43,7 @@
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Hvilken side tester du?",
+			"spm": "Hvilken appside tester du?",
 			"ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
 			"type": "tekst",
 			"label": "Appside:",
