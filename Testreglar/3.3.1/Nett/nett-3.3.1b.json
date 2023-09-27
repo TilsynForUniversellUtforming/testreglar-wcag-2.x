@@ -68,14 +68,14 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testsiden har ikke skjema."
+					"utfall": "Testsiden har ikke skjema/skjemaelement."
 				}
 			}
 		},
 		{
 			"stegnr": "2.3",
-			"spm": "Hvilket skjema/prosess tester du?",
-			"ht": "<p>Beskriv skjema/prosess, slik at det er mulig å identifisere det i ettertid.</p>",
+			"spm": "Hvilket skjema/skjemaelement tester du?",
+			"ht": "<p>Beskriv skjema/skjemaelement, slik at det er mulig å identifisere det i ettertid. </p>\n<p><strong>Merk: </strong>Hvis skjema/skjemaelement inngår i en prosess skal du også beskrive prosessen.</p>",
 			"type": "tekst",
 			"label": "Skjema/prosess:",
 			"multilinje": true,
@@ -105,8 +105,8 @@
 		},
 		{
 			"stegnr": "2.5",
-			"spm": "Er det mulig å endre forhåndsutfylt informasjon i et eller flere skjemaelementer?",
-			"ht": "<p>Sjekk om du kan endre forhåndsutfylt informasjon i et eller flere skjemaelementer.</p>\n<p><strong>Merk:</strong> Hvis du ikke får endre informasjonen i minst et av skjemaelementene som er forhåndsutfylt, skal skjemaet ikke testes.</p>",
+			"spm": "Er det mulig å endre forhåndsutfylt informasjon i et eller flere skjemaelementer til feil format eller verdi?",
+			"ht": "<p>Sjekk om du kan endre forhåndsutfylt informasjon i et eller flere skjemaelementer til feil format eller verdi.</p>\n<p>For eksempel endre forhåndsutfylt informasjon i et skjemaelement for navn fra bokstaver til tall, eller omvendt for et skjemaelement som krever telefonnummer eller dato.</p>\n<p><strong>Merk:</strong> Hvis du ikke får endre informasjonen i minst et av skjemaelementene som er forhåndsutfylt, skal skjemaet ikke testes.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -122,7 +122,7 @@
 		{
 			"stegnr": "2.6",
 			"spm": "Får du sende inn et skjema der du har fylt inn data i feil format eller verdi?",
-			"ht": "<p>Legg inn feil inndata i alle skjemaelement.</p>\n<p>Prøv deretter å fullføre/sende inn eller gå videre i skjemaet.</p>\n<p>Eksempel på feil inndata er:</p>\n<ul>\n<li>Postnummer som inneholder bokstaver.</li>\n<li>Navn som inneholder tall eller spesialtegn.</li>\n<li>Ugyldig e-postformat.</li>\n<li>Ugyldig datoformat.</li>\n<li>Ugyldig telefonnummer.</li>\n<li>Data utenfor grenseverdi, for eksempel måned 14 i en dato.</li>\n</ul>\n<p><strong>Merk: </strong>Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes. Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut informasjon rett format eller verdi, indikerer at brukeren har fylt ut inndata som faller utenfor påkrevd dataformat eller verdier, og at dette oppdages automatisk, uten at brukeren er involvert. </p>",
+			"ht": "<p>Legg inn feil inndata i alle skjemaelement.</p>\n<p>Prøv deretter å fullføre/sende inn eller gå videre i skjemaet.</p>\n<p><strong>Merk:</strong> Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes.</p>\n<p>Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut informasjon rett format eller verdi, indikerer at brukeren har fylt ut inndata som faller utenfor påkrevd dataformat eller verdier, og at dette oppdages automatisk, uten at brukeren er involvert.</p>\n<p>Eksempel på feil inndata er:</p>\n<ul>\n<li>Postnummer som inneholder bokstaver.</li>\n<li>Navn som inneholder tall eller spesialtegn.</li>\n<li>Ugyldig e-postformat.</li>\n<li>Ugyldig datoformat.</li>\n<li>Ugyldig telefonnummer.</li>\n<li>Data utenfor grenseverdi, for eksempel måned 14 i en dato. </li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -226,14 +226,14 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som ikke identifiserer hvor feilen er oppstått."
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som ikke identifiserer hvor feilen har oppstått."
 				}
 			}
 		},
 		{
 			"stegnr": "3.6",
 			"spm": "Inneholder feilmeldingen tekst som beskriver feilen?",
-			"ht": "<p>Feilmeldingen gir informasjon om hva feilen består i, slik at brukeren vet at kva som har gått feil, for eksempel \"Telefonnummer kan ikke inneholde bokstaver\".</p>\n<p><strong>Merk:</strong> Det er ikke krav om at feilmeldingen skal inneholde forslag til hvordan feil skal rettes. Dette er omfattet av suksesskriterium 3.3.3.</p>",
+			"ht": "<p>Feilmeldingen gir informasjon om hva som er feil, for eksempel: \"Telefonnummer kan ikke inneholde bokstaver\".</p>\n<p><strong>Merk:</strong> Det er ikke krav om at feilmeldingen skal inneholde forslag til hvordan feil skal rettes. Dette er omfattet av suksesskriterium 3.3.3.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G84",
@@ -243,12 +243,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som:<br>- identifiserer hvor feilen er oppstått<br>- tekstlig beskriver feilen<br>- er kodet som tekst<br>- informasjonen blir liggende i skjemaelementet"
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som:<br/>- er kodet som tekst<br/>- identifiserer hvor feilen har oppstått<br/>- beskriver feilen tekstlig"
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som ikke beskriver feilen."
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som:<br/>- er kodet som tekst<br/>- identifiserer hvor feilen har oppstått<br/>- ikke beskriver feilen tekstlig"
 				}
 			}
 		}
