@@ -1,0 +1,416 @@
+{
+	"namn": "4.1.2b Knappar er identifiserte i koden",
+	"id": "4.1.2b",
+	"testlabId": 247,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Knappar er kopla til ein ledetekst i koden. Dette kan gjerast på fleire måtar. Ledeteksten identifiserer funksjonen til knappen.</p>\r\n<p>Knappar som ikkje er koda med standardelementa i (X)HTML , skal ha informasjon om rolle.</p>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		},
+		{
+			"title": "3.6"
+		},
+		{
+			"title": "3.7"
+		},
+		{
+			"title": "3.8"
+		},
+		{
+			"title": "3.9"
+		},
+		{
+			"title": "3.10"
+		},
+		{
+			"title": "3.11"
+		},
+		{
+			"title": "3.12"
+		},
+		{
+			"title": "3.13"
+		},
+		{
+			"title": "3.14"
+		},
+		{
+			"title": "3.15"
+		},
+		{
+			"title": "3.16"
+		},
+		{
+			"title": "3.17"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi url eller side-ID.",
+			"type": "tekst",
+			"label": "Url/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettsida knappar?",
+			"ht": "<p>Sjekk om nettsida har knappar. Knappar blir brukt for eksempel til å aktivere ein funksjon eller sende inn skjema.</p>Husk at knappar som består av eit bilde og knappar som er koda som lenker skal også testast her.</p><strong>Merk:</strong> Du skal teste funksjonalitet som ser ut som knapp. Indikatoren er ikkje avgrensa til å berre teste knappar som er koda som <code>&#x3C;button&#x3E; </code>eller <code>&#x3C;input&#x3E;</code>.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje knappar."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv knappen som skal vurderast.",
+			"ht": "Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.",
+			"type": "tekst",
+			"label": "Element",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er knappen ein del av den globale søkefunksjonen?",
+			"ht": "Ein global søkefunksjon er ein navigasjonsmekanisme som let brukaren søke i alle sidene på nettstaden.",
+			"type": "jaNei",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er knappen koda som &#x3C;button&#x3E; eller &#x3C;input&#x3E;?",
+			"ht": "Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette.",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Har knappen attributtet role=\"button\"?",
+			"ht": "Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette.",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Knapp er ikkje koda med &#x3C;input&#x3E; eller &#x3C;button&#x3E;. Knapp er ikkje koda med role=\"button\"."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Har knappen attributtet \"aria-label\"?",
+			"ht": "<p>Sjå i koden og finn knappen.</p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"ARIA14",
+				"F68"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.17"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Har knappen attributtet \"aria-labelledby\" ?",
+			"ht": "<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten. </p>",
+			"type": "jaNei",
+			"kilde": [
+				"ARIA16",
+				"F68"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Er aria-labelledby attributtet kopla til annan tekst på sida (lenkekontekst)?",
+			"ht": "<p>Gjer eit søk i koden på id i aria-labelledby. Dersom det finst fleire id-ar, skal du undersøke alle. Id-ane vil då vere skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>).</p>",
+			"type": "jaNei",
+			"kilde": [
+				"ARIA16",
+				"F68"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.17"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Er knappen koda som &#x3C;input&#x3E;?",
+			"ht": "Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette.",
+			"type": "jaNei",
+			"kilde": [
+				"H91",
+				"F68"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Finst det tekst i elementet?",
+			"ht": "Sjekk om det ligg tekst mellom start og sluttkoden til elementet. Det kan hende du må felle ut delar av koden for å få tak i teksten.",
+			"type": "jaNei",
+			"kilde": [
+				"H91",
+				"F68"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.17"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.16"
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Er knappen koda som &#x3C;input type=\"image\"&#x3E;?",
+			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette. ",
+			"type": "jaNei",
+			"kilde": [
+				"H91"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Har knappen eit alt-attributt?",
+			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette. ",
+			"type": "jaNei",
+			"kilde": [
+				"H36",
+				"H91",
+				"F68"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.17"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				}
+			}
+		},
+		{
+			"stegnr": "3.12",
+			"spm": "Har knappen eit value-attributt?",
+			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+			"type": "jaNei",
+			"kilde": [
+				"H91"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.17"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				}
+			}
+		},
+		{
+			"stegnr": "3.13",
+			"spm": "Er knappen koda som &#x3C;input type=\"reset\"&#x3E; eller &#x3C;input type=\"submit\"&#x3E;?",
+			"ht": "<p><strong>Merk:</strong> Viss knappen er koda med <code>type=\"image\"</code>, vil svaret her alltid vere \"Nei\".</p>",
+			"type": "jaNei",
+			"kilde": [
+				"H91"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.17"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.14"
+				}
+			}
+		},
+		{
+			"stegnr": "3.14",
+			"spm": "Er knappen kopla til eit &#x3C;label&#x3E;-element i koden?",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette. Sjekk at:</p> <ol> <li>Knappen har eit id-attributt.</li> <li><code>&#x3C;label&#x3E;</code>-elementet har eit for-attributt. </li> <li>Innhaldet i <code>&#x3C;label&#x3E;</code>-elementet sitt for-attributt er det same som innhaldet i knappen sitt id-attributt.</li> </ol> <p>Det er nok at verdien er lik. </p>",
+			"type": "jaNei",
+			"kilde": [
+				"H44",
+				"F68"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.17"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.15"
+				}
+			}
+		},
+		{
+			"stegnr": "3.15",
+			"spm": "Ligg knappen inne i eit &#x3C;label&#x3E;-element i koden?",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette. Sjå om det finst eit <code>&#x3C;label&#x3E;</code>-element som starter framføre og blir avslutta etter knappen. Du må kanskje felle ut <code>&#x3C;label&#x3E;</code>-elementet i koden for å sjå all koding.</p>I dette tilfellet er ledeteksten all tekst som ligg inne i <code>&#x3C;label&#x3E;</code>-elementet. </p>",
+			"type": "jaNei",
+			"kilde": [
+				"F68"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.17"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.16"
+				}
+			}
+		},
+		{
+			"stegnr": "3.16",
+			"spm": "Har knappen eit title-attributt?",
+			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+			"type": "jaNei",
+			"kilde": [
+				"H65",
+				"F68"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.17"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Knapp er ikkje er kopla til ein ledetekst i koden."
+				}
+			}
+		},
+		{
+			"stegnr": "3.17",
+			"spm": "Identifiserer ledeteksten funksjonen til knappen?",
+			"ht": "<p>Ta utgangspunktet i ledeteksten du fann i førre steg.</p>\n<p>Det er tilstrekkeleg at ledeteksten identifiserer knappen eller er lik teksten på knappen. Vi krever uansett ikkje meir identifikasjon enn den synlege informasjonen på knappen.</p>\n<p>Knappar som er koda med berre eit type-element som er anten <code>type=\"submit</code>\" eller <code>type=\"reset</code>\", skal du vurdere den visuelle teksten på knappen.</p>\n<p><strong>Merk: </strong>Ledeteksten skal vere på same språk som skjemaet.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G108"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Knapp er kopla til ein ledetekst i koden. Ledeteksten identifiserer knappen."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Knapp er kopla til ein ledetekst i koden. Ledeteksten identifiserer ikkje knappen."
+				}
+			}
+		}
+	]
+}
