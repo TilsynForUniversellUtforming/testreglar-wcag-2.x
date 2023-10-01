@@ -1,11 +1,11 @@
 {
-	"namn": "4.1.2c Iframe er identifiserte i koden",
-	"id": "4.1.2c",
-	"testlabId": 248,
+	"namn": "Nett-4.1.2c Iframe har et tilgjengelig navn som beskriver formålet med innholdet i iframe.",
+	"id": "nett-4.1.2c",
+	"testlabId": 437,
 	"versjon": "1.0",
 	"type": "Nett",
-	"spraak": "nn",
-	"kravTilSamsvar": "<p>Der det er brukt iframe-elementet i koden, har iframe ein ledetekst som identifiserer innhaldet.</p>",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Der det er brukt iframe-elementet i koden, har iframe et tilgjengelig navn, som beskriver formålet med innholdet i iframe.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -20,19 +20,13 @@
 		},
 		{
 			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
 		}
 	],
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
@@ -46,10 +40,9 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har nettsida  &#x3C;iframe&#x3E;-element?",
-			"ht": "<p>Søk etter <code>&#x3C;iframe&#x3E;</code>-elementet i kjeldekoden til nettsida.</p>",
+			"spm": "Har testsiden &lt;iframe&gt;-element?",
+			"ht": "<p>Søk etter <code>&lt;iframe&gt;</code>-elementet i kildekoden til testsiden.</p>",
 			"type": "jaNei",
-			"kilde": [],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
@@ -57,14 +50,14 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje iframe."
+					"utfall": "Testsiden har ikke iframe."
 				}
 			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Beskriv iframen som skal vurderast.",
-			"ht": "<p>Du skal registrere og legge til data for kvart enkelt <code>&#x3C;iframe&#x3E;</code>-element.</p><p>Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.</p>",
+			"spm": "Hvilken iframe tester du?",
+			"ht": "<p>Beskriv <code>&lt;iframe&gt;</code>-elementet, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere elementer, registrerer du et og et.</p>",
 			"type": "tekst",
 			"label": "Iframe element:",
 			"multilinje": true,
@@ -78,85 +71,47 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Har &#x3C;iframe&#x3E;-elementet attributtet \"aria-label\" ?",
-			"ht": "<p>Sjå i koden om du finn attributtet \"aria-label\" på <code>&#x3C;iframe&#x3E;</code>-elementet.</p><p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
+			"spm": "Har &lt;iframe&gt;-elementet et tilgjengelig navn?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser <code>&lt;iframe&gt;</code>-elementet i Chrome</li>\n<li>Velg <code>&lt;iframe&gt;</code>-elementet i kildekoden</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li>\n<li>Sjekk om informasjon under \"Name\" ikke er tomt</li>\n</ul>",
 			"type": "jaNei",
-			"kilde": [
-				"ARIA14"
-			],
 			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.6"
-				},
 				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Iframe har ikke et tilgjengelig navn."
+				},
+				"ja": {
 					"type": "gaaTil",
 					"steg": "3.3"
 				}
-			}
+			},
+			"kilde": [
+				"ARIA14",
+				"ARIA16",
+				"H64"
+			]
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Har &#x3C;iframe&#x3E;-elementet attributtet \"aria-labelledby\" ?",
-			"ht": "Velg frå alternativa under.",
-			"type": "jaNei",
-			"kilde": [
-				"ARIA16"
+			"spm": "Hvilket attributt gir tilgjengelig navn til iframe?",
+			"ht": "<ul>\n<li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Checker</li>\n<li>Velg et alternativ.</li>\n</ul>",
+			"type": "radio",
+			"svarArray": [
+				"aria-labelledby",
+				"aria-label",
+				"title"
 			],
 			"ruting": {
-				"ja": {
+				"alle": {
 					"type": "gaaTil",
 					"steg": "3.4"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.5"
 				}
 			}
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Er aria-labelledby attributtet kopla til annan tekst på sida (lenkekontekst)?",
-			"ht": "<p>Gjer eit søk i koden på id i aria-labelledby. Dersom det finst fleire id-ar, skal du undersøke alle. Id-ane vil då vere skilt med mellomrom. (Aria-labelledby=\"id1 id2\").</p>",
-			"type": "jaNei",
-			"kilde": [
-				"ARIA16"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.6"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.5"
-				}
-			}
-		},
-		{
-			"stegnr": "3.5",
-			"spm": "Har &#x3C;iframe&#x3E;-elementet eit title-attributt?",
-			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
-			"type": "jaNei",
-			"kilde": [
-				"H64"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.6"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Iframe er ikkje er kopla til ein ledetekst i koden."
-				}
-			}
-		},
-		{
-			"stegnr": "3.6",
-			"spm": "Identifiserar ledeteksten innhaldet som ligg i &#x3C;iframe&#x3E;?",
-			"ht": "<p>Ta utgangspunktet i ledeteksten du fann i førre steg. Det er tilstrekkeleg at ledeteksten identifiserar innhaldet. Ledeteksten treng ikkje gi ei utfyllande skildring av innhaldet.</p><p>For reklame er det tilstrekkeleg at ledeteksten seier at det handlar om reklame.</p><p><strong>Merk:</strong> Ledeteksten skal vere på same språk som nettsida.</p>",
+			"spm": "Beskriver det tilgjengelige navnet formålet med innholdet som ligger i &lt;iframe&gt;?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Ta utgangspunkt i det tilgjengelige navnet du fant i forrige steg.</li>\n<li>Sjekk om det tilgjengelige navnet beskriver formålet med <code>&lt;iframe&gt;</code>-elementet. Det er tilstrekkelig at det tilgjengelige navnet identifiserer <code>&lt;iframe&gt;</code>-elementet.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G108"
@@ -165,12 +120,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Iframe er kopla til ein ledetekst i koden. Ledeteksten identifiserar innhaldet i iframe."
+					"utfall": "Iframe har et tilgjengelig navn, som beskriver formålet med innholdet i iframe."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Ledeteksten identifiserar ikkje innhaldet i iframe."
+					"utfall": "Iframe har et tilgjengelig navn, som ikke beskriver formålet med innholdet i iframe."
 				}
 			}
 		}
