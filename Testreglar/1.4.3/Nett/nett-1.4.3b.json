@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Bilde av tekst</p>\r\n<ul>\r\n<li>Bilde av tekst har kontrast på minst 4.5:1 mot bakgrunnen</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Bilder av tekst</p>\r\n<ul>\r\n<li>Bilde av tekst har kontrast på minst 4.5:1 mot bakgrunnen</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -81,7 +81,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Beskriv elementet du testar",
-			"ht": "Formålet er at ein skal kunne finne att elementet på sida som ligg til grunn for kotrastmålinga. For eksempel plassering, kjenneteikn, kva som i står i teksten ( treng ikkje gje att heile).",
+			"ht": "<p>Formålet er at ein skal kunne finne att elementet på sida som ligg til grunn for kontrastmålinga. For eksempel plassering, kjenneteikn, kva som i står i teksten ( treng ikkje gje att heile).</p>",
 			"type": "tekst",
 			"multilinje": true,
 			"label": "Beskrivelse av element:",
@@ -96,14 +96,14 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Mål og registrer kontrast mellom farge på tekst og farge på bakgrunn.",
-			"ht": "<p>Mål og registrer kontrast mellom tekst og bakgrunn for elementet du skal teste.</#p> <h4 class=\"h5\">Tips:</h4> <ul> <li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten. </li> </ul> <h4 class=\"h5\">Retningslinjer for test:</h4> <ul> <li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li> <li>Dersom bakgrunnen er gradert, mønstra eller eit bilde, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li> <li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li> </ul>",
+			"ht": "<p>Mål og registrer kontrast mellom tekst og bakgrunn for elementet du skal teste.<!--#p--></p>\n<h4 class=\"h5\">Tips:</h4>\n<ul>\n<li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten.</li>\n</ul>\n<h4 class=\"h5\">Retningslinjer for test:</h4>\n<ul>\n<li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li>\n<li>Dersom bakgrunnen er gradert, mønstra eller eit bilde, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li>\n<li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li>\n</ul>",
 			"type": "tekst",
 			"filter": "tal",
 			"label": "Målt kontrast (Format 4.48):",
 			"kilde": [
+				"F83",
 				"G18",
-				"G145",
-				"F83"
+				"G145"
 			],
 			"ruting": {
 				"alle": {
@@ -132,7 +132,7 @@
 							"handling": {
 								"type": "avslutt",
 								"fasit": "Ja",
-								"utfall": "Bilde av tekst har kontrast på meir enn 3,0:1."
+								"utfall": "Bilde av tekst har kontrast på minst 3,0:1."
 							}
 						}
 					}
@@ -212,14 +212,14 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Mål og registrer kontrast mellom farge på tekst i mekanismen og farge på bakgrunn.",
-			"ht": "<p>Kontrast skal registerast med desimaltall (For eksempel 4,5).</#p> <h4 class=\"h5\">Tips:</h4> <ul> <li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten. </li> </ul> <h4 class=\"h5\">Retningslinjer for test:</h4> <ul> <li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li> <li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li> <li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li> </ul>",
+			"ht": "<p>Kontrast skal registerast med desimaltall (For eksempel 4,5).<!--#p--></p>\n<h4 class=\"h5\">Tips:</h4>\n<ul>\n<li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten.</li>\n</ul>\n<h4 class=\"h5\">Retningslinjer for test:</h4>\n<ul>\n<li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li>\n<li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li>\n<li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li>\n</ul>",
 			"type": "tekst",
 			"filter": "tal",
-			"label": "Målt kontrast (Format 4.48):",
+			"label": "Målt kontrast (Format 4,48):",
 			"kilde": [
+				"F83",
 				"G18",
-				"G145",
-				"F83"
+				"G145"
 			],
 			"ruting": {
 				"alle": {
@@ -263,7 +263,7 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Er skriftstørrelsen 24 px eller større?",
-			"ht": "<p>Her kan verktøyet WhatFont brukast:</p><ul><li>Aktiver WhatFont.</li><li>Trykk på teksten du skal måle størrelsen på.</li><li>Les av verdien FontSize og registrer.</li></ul><p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
+			"ht": "<p>Her kan verktøyet WhatFont brukast:</p>\n<ul>\n<li>Aktiver WhatFont.</li>\n<li>Trykk på teksten du skal måle størrelsen på.</li>\n<li>Les av verdien FontSize og noter den ned.</li>\n</ul>\n<p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G145"
@@ -291,7 +291,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "#delutfall(0) Mekanisme for aktivering av høgkontrastversjon, har liten tekst med kontrast på mindre enn 4,5:1."
+					"utfall": "#delutfall(0) Mekanisme for aktivering av høgkontrastversjon, har tekst med kontrast på mindre enn 4,5:1."
 				},
 				"nei": {
 					"type": "gaaTil",
