@@ -185,3 +185,113 @@ Følgjande parameter må settast.
    }
 }
 ```
+# Eksempel med nøsting
+```JSON
+{
+  "stegnr": "3.7",
+      "spm": "Inneheld instruksjonen tilvising til skjemaelements  orientering eller plassering på sida?",
+      "ht": "",
+      "type": "jaNei",
+      "ruting": {
+        "alle": {
+          "type": "regler",
+          "regler": {
+            "1": {
+              "sjekk": "3.3",
+              "type": "lik",
+              "verdi": "Nei",
+              "handling": {
+                "type": "regler",
+                "regler": {
+                  "1": {
+                    "sjekk": "3.4",
+                    "type": "lik",
+                    "verdi": "Nei",
+                    "handling": {
+                      "type": "regler",
+                      "regler": {
+                        "1": {
+                          "sjekk": "3.5",
+                          "type": "lik",
+                          "verdi": "Nei",
+                          "handling": {
+                            "type": "regler",
+                            "regler": {
+                              "1": {
+                                "sjekk": "3.6",
+                                "type": "lik",
+                                "verdi": "Nei",
+                                "handling": {
+                                  "type": "regler",
+                                  "regler": {
+                                    "1": {
+                                      "sjekk": "3.7",
+                                      "type": "lik",
+                                      "verdi": "Nei",
+                                      "handling": {
+                                        "type": "ikkjeForekomst",
+                                        "utfall": "Tekstlege instruksjon utan tilvising til sensoriske eigenskapar."
+                                      }
+                                    },
+                                    "2": {
+                                      "sjekk": "3.7",
+                                      "type": "lik",
+                                      "verdi": "Ja",
+                                      "handling": {
+                                        "type": "gaaTil",
+                                        "steg": "3.8"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "2": {
+                                "sjekk": "3.6",
+                                "type": "lik",
+                                "verdi": "Ja",
+                                "handling": {
+                                  "type": "gaaTil",
+                                  "steg": "3.8"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "sjekk": "3.5",
+                          "type": "lik",
+                          "verdi": "Ja",
+                          "handling": {
+                            "type": "gaaTil",
+                            "steg": "3.8"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "2": {
+                    "sjekk": "3.4",
+                    "type": "lik",
+                    "verdi": "Ja",
+                    "handling": {
+                      "type": "gaaTil",
+                      "steg": "3.8"
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "sjekk": "3.3",
+              "type": "lik",
+              "verdi": "Ja",
+              "handling": {
+                "type": "gaaTil",
+                "steg": "3.8"
+              }
+            }
+          }
+        }
+      }
+    }
+```
