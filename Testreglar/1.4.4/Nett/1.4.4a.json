@@ -101,7 +101,7 @@
 		},
 		{
 			"stegnr": "2.4",
-			"spm": "Sett oppløysinga på skjermen du testar på til 1920*1080.",
+			"spm": "Sett oppløysinga på skjermen du testar på til 1920*1080",
 			"ht": "<p>Dette gjer du ved å endre innstillingane på skjermen i ditt operativsystem.</p><p>Denne oppløysinga byggjer på statistikk over dei mest brukte skjermoppløysingane per 2023.</p>",
 			"type": "instruksjon",
 			"ruting": {
