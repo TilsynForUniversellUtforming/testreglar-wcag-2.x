@@ -40,7 +40,7 @@
         },
         {
             "stegnr": "2.2",
-            "spm": "Får du synleg fokusmarkering ved tastaturnavigering?",
+            "spm": "Får du synleg fokusmarkering ved tastaturnavigering ?",
             "ht": "Trykk sakte på tabulatortasten (tab-tasten) for å navigere på nettsida med tastaturet. Du er avhengig av synleg fokusmarkør for å kunne gjennomføre testen. Fokusmarkeringa må vere såpass synleg at du kan følgje med på tastaturnavigasjonen. Synleg fokusmarkering blir testa på suksesskriterium 2.4.7.",
             "type": "jaNei",
             "kilde": [
