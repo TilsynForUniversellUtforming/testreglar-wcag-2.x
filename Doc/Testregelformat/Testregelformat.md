@@ -53,12 +53,13 @@ Kva versjon av testregelen det er snakk om.
 ```
 
 ## Språk
-Språket i testregelen.
-- no - Norsk
+Språket i testregelen (ISO 639-1).
+- nb - Bokmål
+- nn - Nynorsk
 - en - Engelsk
 ### Eksempel
 ```json
-"spraak" : "no"
+"spraak" : "nn"
 ```
 
 ## Side
@@ -256,6 +257,7 @@ Ved ruting frå radioboks vil rutinga vere basert på kva alternativ du vel. Dei
                     "fasit": "Nei",
                     "utfall": "Ved tastaturnavigasjon, er det ikkje mogleg å slå av eller regulere lyd som startar automatisk på nettsida."
                 }
+            }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -263,7 +265,7 @@ Ved ruting frå radioboks vil rutinga vere basert på kva alternativ du vel. Dei
 Det kan òg nyttast reglar til å gje ein meir kraftig ruting. [Meir om dei ulike ruting-reglane finn du her](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md).
 
 
-(c) 2018-2020 Tilsyn for universell utforming
+(c) 2018-2023 Tilsyn for universell utforming
 
 
 
