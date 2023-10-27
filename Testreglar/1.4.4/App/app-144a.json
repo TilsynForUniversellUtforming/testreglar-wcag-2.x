@@ -72,7 +72,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Tekst på appsida kan forstørrast til minst 200 %, utan tap av innhald eller funksjonalitet"
+					"utfall": "Tekst på appsida kan forstørrast til minst 200 %, utan tap av innhald eller funksjonalitet."
 				},
 				"nei": {
 					"type": "gaaTil",
