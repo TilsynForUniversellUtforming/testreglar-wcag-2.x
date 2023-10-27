@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p><span style=\"font-family: Symbol; mso-fareast-font-family: Symbol; mso-bidi-font-family: Symbol;\"><span style=\"mso-list: Ignore;\"><span style=\"font: 7.0pt 'Times New Roman';\"> </span></span></span><span style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\">All tekst kan forstørres opp til minst 200 % visning uten at innhold eller funksjonalitet går tapt</span></p>",
+	"kravTilSamsvar": "<p>All tekst kan forstørres opp til minst 200 % visning uten at innhold eller funksjonalitet går tapt.</p>",
 	"side": "2.1",
 	"element": "Side",
 	"kolonner": [
