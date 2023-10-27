@@ -5,7 +5,7 @@
     "versjon": "1.0",
     "type": "Nett",
     "spraak": "nn",
-    "kravTilSamsvar": "<p><!-- [if !supportLists]--></p>\r\n<ul>\r\n<li><span style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\">All tekst kan forstørres opp til minst 200 % visning uten at innhold eller funksjonalitet går tapt</span></li>\r\n<li><span style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\">Dersom forstørring tilbys via en mekanisme på den aktuelle nettsiden, skal den være lett å finne</span></li>\r\n</ul>",
+    "kravTilSamsvar": "<ul>\r\n<li>All tekst kan forstørres opp til minst 200 % visning uten at innhold eller funksjonalitet går tapt</li>\r\n<li>Dersom forstørring tilbys via en mekanisme på den aktuelle nettsiden, skal den være lett å finne</li>\r\n</ul>",
     "side": "2.1",
     "element": "Side",
     "kolonner": [
