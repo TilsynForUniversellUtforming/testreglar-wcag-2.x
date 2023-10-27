@@ -93,7 +93,7 @@
 				"alle": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Tekst på appsida blir ikkje forstørra til minst 200 %, utan tap av innhald eller funksjonalitet"
+					"utfall": "Tekst på appsida blir ikkje forstørra til minst 200 %, utan tap av innhald eller funksjonalitet."
 				}
 			}
 		}
