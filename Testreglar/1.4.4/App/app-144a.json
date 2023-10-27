@@ -88,14 +88,15 @@
 			"spm": "Kva innhald og/eller funksjonalitet fekk du ikkje tilgang til?",
 			"ht": "<p>Beskriv innhaldet eller funksjonaliteten. Viss det gjeld fleire element eller funksjonalitet, registrerer du eit og eit.</p>",
 			"type": "tekst",
-			"label": "",
+			"label": "Registrer med stikkord",
 			"ruting": {
 				"alle": {
 					"type": "avslutt",
 					"fasit": "Nei",
 					"utfall": "Tekst på appsida blir ikkje forstørra til minst 200 %, utan tap av innhald eller funksjonalitet."
 				}
-			}
+			},
+			"multilinje": true
 		}
 	]
 }
