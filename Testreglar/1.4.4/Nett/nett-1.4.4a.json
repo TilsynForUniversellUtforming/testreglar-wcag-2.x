@@ -71,7 +71,7 @@
         },
         {
             "stegnr": "2.3",
-            "spm": "Sett oppløysinga på skjermen du testar med til 1920 px x 1080 px",
+            "spm": "Sett oppløysinga på skjermen du testar med til 1920 x 1080 pikslar",
             "ht": "<p>Viss du ikkje har dette som standard, må du endre på oppløysinga, før du startar test. </p>\n<p>Slik endrer du innstilling: System &gt;Display &gt;Display resolution &gt;1920x1080 &gt;Keep Changes</p>\n<p><strong>Merk</strong>: Oppløysinga vi testar med, byggjer på statistikk over dei mest brukte skjermoppløysingane i verda per 2022-2023.</p>",
             "type": "instruksjon",
             "ruting": {
