@@ -171,6 +171,28 @@ Type steg. Et steg kan vere av desse typane :
 - tekst 
 - instruksjon
 
+#### Ekstra eigenskapar for type tekst
+##### Multilinje
+Type: boolean
+
+Set om eit tekstfelt skal gå over fleire linjer. Dersom den ikke er angitt vil den som standard vere sett til false.
+~~~~~~~~~~~~~~~~~~
+"multilinje": true
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##### Filter
+Type: string
+
+Set tekstfeltet til eit bestemt filter.
+| Verdi |Omtale   | Eksempel |
+|---|---|---|
+|  tal |  Tekstfelt skal berre akseptere tall |  `"filter": "tall"`|
+
+##### datalist
+Type: string
+| Verdi |Omtale   | Eksempel |
+|---|---|---|
+|  Sideutvalg |  Tekstfeltet skal ha autocomplete på sideutvalg. |  `"datalist": "Sideutvalg"`|
+
 ### Kilde
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
