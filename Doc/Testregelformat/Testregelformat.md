@@ -185,7 +185,7 @@ Type: string
 Set tekstfeltet til eit bestemt filter.
 | Verdi |Omtale   | Eksempel |
 |---|---|---|
-|  tal |  Tekstfelt skal berre akseptere tall |  `"filter": "tall"`|
+|  tal |  Tekstfelt skal berre akseptere tal. |  `"filter": "tall"`|
 
 ##### datalist
 Type: string
