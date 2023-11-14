@@ -104,12 +104,12 @@
 			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Ikke fyll ut informasjon i skjemaet (tomt skjema) eller la alle obligatoriske skjemaelementer stå tomme.\n<ul>\n<li>Hvis obligatoriske skjemaelementer er forhåndsutfylt, fjern forhåndsutfylt informasjon der det er mulig.\n<ul>\n<li>Forhåndsutfylt informasjon betyr at det allerede står inndata i skjemaet når testsiden er lastet inn.</li>\n<li>Eksempel på forhåndsutfylt informasjon, er informasjon hentet fra folkeregisteret som for eksempel personnummer, fornavn, etternavn og adresse.</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Prøv deretter å fullføre/sende inn eller gå videre i skjemaet.\n<ul>\n<li>Hensikten er å sjekke om tomme obligatoriske skjemaelementer blir oppdaget automatisk. </li>\n</ul>\n</li>\n</ul>\n<p>Begrepet \"oppdages automatisk\" betyr at skjemaet er satt opp slik at det selv oppdager når det mangler nødvendig informasjon i obligatoriske elementer i skjemaet.</p>\n<p><strong>Merk:</strong> Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes. Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut rett informasjon, indikerer at brukeren har utelatt inndata som appsiden krever, og at dette oppdages automatisk, uten at brukeren er involvert.</p>",
 			"type": "jaNei",
 			"ruting": {
-				"ja": {
+				"nei": {
 					"type": "ikkjeForekomst",
 					"utfall": "Skjema oppdager ikke automatisk at obligatoriske skjemaelementer er tomme.",
 					"element": "2.3"
 				},
-				"nei": {
+				"ja": {
 					"type": "gaaTil",
 					"steg": "3.1"
 				}
