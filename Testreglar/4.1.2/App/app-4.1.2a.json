@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Det er flere måter å oppfylle kravet på.</p>\r\n<p>Navn og rolle:</p>\r\n<ul>\r\n<li>Alle brukergrensesnittkomponenter har et tilgjengelig navn, som beskriver formålet med den aktuelle komponenten og</li>\r\n<li>Brukergrensesnittkomponenter som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen og</li>\r\n<li>Alle brukergrensesnittkomponenter har riktig rolle, som identifiserer funksjonen til den aktuelle komponenten</li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>Når tilstander, egenskaper og verdier i brukergrensesnittkomponenter kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>Varsel om endringer i den aktuelle komponenten er tilgjengelig for brukeragenter </li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Det er flere måter å oppfylle kravet på.</p>\r\n<p>Navn og rolle:</p>\r\n<ul>\r\n<li>Alle brukergrensesnittkomponenter har et tilgjengelig navn, som beskriver formålet med den aktuelle komponenten og</li>\r\n<li>Alle brukergrensesnittkomponenter har riktig rolle, som identifiserer funksjonen til den aktuelle komponenten og</li>\r\n<li>Brukergrensesnittkomponenter som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen</li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>Når tilstander, egenskaper og verdier i brukergrensesnittkomponenter kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>Varsel om endringer i den aktuelle komponenten er tilgjengelig for brukeragenter </li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
