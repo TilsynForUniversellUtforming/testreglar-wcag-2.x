@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Der det er brukt iframe-elementet i koden, har iframe et tilgjengelig navn, som beskriver formålet med innholdet i iframe.</p>",
+	"kravTilSamsvar": "<p>Der det er brukt iframe-elementet, har iframe et tilgjengelig navn, som beskriver formålet med innholdet i iframe.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -41,7 +41,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsiden &lt;iframe&gt;-element?",
-			"ht": "<p>Søk etter <code>&lt;iframe&gt;</code>-elementet i kildekoden til testsiden.</p>",
+			"ht": "<p>Søk etter <code>&lt;iframe&gt;</code>-elementet i kildekoden til testsiden. </p>\n<p><strong>Merk:</strong> Du skal vurdere kun iframe som er visuell synlige og inkludert i accessibilty tree. Skjult iframe for eksempel fra Google Analytics er ikke omfattet av kravet, fordi det ikke er en brukergrensesnittkomponent.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
