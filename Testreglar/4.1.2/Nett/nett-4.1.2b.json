@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Det er flere måter å oppfylle kravet på.</p>\r\n<p>Navn og rolle:</p>\r\n<ul>\r\n<li>knapper har et tilgjengelig navn, som beskriver formålet med den aktuelle knappen og</li>\r\n<li>knapper har riktig rolle, som identifiserer funksjonen til den aktuelle knappen </li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>Når tilstander, egenskaper og verdier ved knappen kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>Varsel om endringer i den aktuelle knappen er tilgjengelig for brukeragenter </li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Det er flere måter å oppfylle kravet på.</p>\r\n<p>Navn og rolle:</p>\r\n<ul>\r\n<li>knapper har et tilgjengelig navn, som beskriver formålet med den aktuelle knappen og</li>\r\n<li>knapper har riktig rolle, som identifiserer funksjonen til den aktuelle knappen </li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>når tilstander, egenskaper og verdier ved knappen kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>varsel om endringer i den aktuelle knappen er tilgjengelig for brukeragenter </li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -57,7 +57,7 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Bruk verktøyet og sjekk om det gir resultater under \"Button has accessible name\" og/eller \"Image button has accessible name\".",
+			"spm": "Gir verktøyet resultater under \"Button has accessible name\" og/eller \"Image button has accessible name\"?",
 			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk verktøyet <a href=\"https://chrome.google.com/webstore/detail/qualweb-extension/ljgilomdnehokancdcbkmbndkkiggioc\" target=\"_blank\" rel=\"noopener\">QualWeb </a>i Chrome på testsiden\n<ul>\n<li>velg kun \"ACT Rules\"</li>\n<li>trykk på knappen \"Evaluate\"</li>\n<li>utvid \"Fliters\"</li>\n<li>fjern hake på \"Warning\"</li>\n</ul>\n</li>\n<li>Sjekk om det finnes resultater på \"Button has accessible name\" og \"Image button has accessible name\"<br>\n<ul>\n<li>trykk på \"Button has accessible name\" og/eller \"Image button has accessible name\" for å vise aktuelle resultater\n<ul>\n<li>Dersom alternativene ikke kommer opp, har ikke QW funnet knapper</li>\n</ul>\n</li>\n<li>velg både Passed og Failed</li>\n<li>du kan bruke \"Highlight Element\" for å vise hvor aktuelle knapper ligger på siden\n<ul>\n<li>Bruk pilene for å navigere gjennom resultater for forskjellige knapper</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Hvis verktøyet ikke finner knapper, velger du \"Nei\" i dette steget</li>\n<li>Hvis en knapp har <a href=\"https://www.w3.org/TR/wai-aria-1.1/#switch\" target=\"_blank\" rel=\"noopener\">role=\"switch\"</a>, skal den testes i nett-4.1.2a</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
@@ -87,20 +87,24 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Har verktøyet funnet brudd for denne knappen?",
-			"ht": "<p>Hvis Qualweb gir resultat:</p>\n<ul>\n<li>\"Failed\": Det er brudd og testen avsluttes.</li>\n<li>\"Passed\": Knappen skal testes videre.</li>\n</ul>",
-			"type": "jaNei",
+			"spm": "Hvilket resultat gir verktøyet for dette skjemaelementet?",
+			"ht": "<p>Verktøyet gir resultat:</p>",
+			"type": "radio",
 			"ruting": {
-				"ja": {
+				"alt0": {
 					"type": "avslutt",
 					"fasit": "Nei",
 					"utfall": "Knappen har ikke et tilgjengelig navn."
 				},
-				"nei": {
+				"alt1": {
 					"type": "gaaTil",
 					"steg": "3.3"
 				}
-			}
+			},
+			"svarArray": [
+				"Brudd (Failed)",
+				"Samsvar (Passed)"
+			]
 		},
 		{
 			"stegnr": "3.3",
@@ -115,13 +119,13 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Knappen har ikke role button."
+					"utfall": "Knappen er ikke kodet med role button."
 				}
 			},
 			"kilde": [
 				"ARIA4",
-				"G10",
-				"F59"
+				"F59",
+				"G10"
 			]
 		},
 		{
