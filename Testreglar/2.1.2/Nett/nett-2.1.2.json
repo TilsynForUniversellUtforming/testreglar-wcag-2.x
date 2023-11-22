@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p class=\"MsoNormal\" style=\"margin-bottom: 6.0pt; margin-top: 0in; mso-margin-bottom-alt: 8.0pt; mso-margin-top-alt: 0in; mso-add-space: auto;\"><span style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\">Det er mulig å navigere gjennom alt innhold på nettsiden som kan få tastaturfokus, uten å bli stående fast i et element. </span></p>\r\n<ul style=\"margin-top: 0in;\" type=\"disc\">\r\n<li class=\"MsoNormal\" style=\"margin-bottom: 0in; margin-top: 0in; mso-margin-bottom-alt: 8.0pt; mso-margin-top-alt: 0in; mso-add-space: auto; mso-list: l0 level1 lfo1;\"><span style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\">Alternativ tastaturnavigasjon er beskrevet for brukeren, dersom standardmetoder ikke er brukt. </span></li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Det er mulig å navigere gjennom alt innhold på nettsiden som kan få tastaturfokus, uten å bli stående fast i et element.</p>\r\n<ul type=\"disc\">\r\n<li>Alternativ tastaturnavigasjon er beskrevet for brukeren, dersom standardmetoder ikke er brukt.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "2.5",
 	"kolonner": [
