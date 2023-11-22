@@ -5,15 +5,15 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p class=\"MsoNormal\" style=\"margin-bottom: 6.0pt; margin-top: 0in; mso-margin-bottom-alt: 8.0pt; mso-margin-top-alt: 0in; mso-add-space: auto;\"><span style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\">Det er mulig å navigere gjennom alt innhold på nettsiden som kan få tastaturfokus, uten å bli stående fast i et element. </span></p>\r\n<ul style=\"margin-top: 0in;\" type=\"disc\">\r\n<li class=\"MsoNormal\" style=\"margin-bottom: 0in; margin-top: 0in; mso-margin-bottom-alt: 8.0pt; mso-margin-top-alt: 0in; mso-add-space: auto; mso-list: l0 level1 lfo1;\"><span style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\">Alternativ tastaturnavigasjon er beskrevet for brukeren, dersom standardmetoder ikke er brukt. </span></li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Det er mulig å navigere gjennom alt innhold på nettsiden som kan få tastaturfokus, uten å bli stående fast i et element.</p>\r\n<ul type=\"disc\">\r\n<li>Alternativ tastaturnavigasjon er beskrevet for brukeren, dersom standardmetoder ikke er brukt.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "2.5",
 	"kolonner": [
 		{
-			"title": "2.3"
+			"title": "2.2"
 		},
 		{
-			"title": "2.2"
+			"title": "2.3"
 		},
 		{
 			"title": "2.4"
@@ -45,6 +45,22 @@
 			}
 		},
 		{
+			"stegnr": "2.2",
+			"spm": "Finst det element på nettsida det er mogleg å navigere til med tastaturet?",
+			"ht": "<p>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Det finst ikkje element på nettsida som det er mogleg å navigere til med tastaturet."
+				}
+			}
+		},
+		{
 			"stegnr": "2.3",
 			"spm": "Får du synleg fokusmarkering ved tastaturnavigering?",
 			"ht": "<p>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet. Du er avhengig av synleg fokusmarkør for å kunne gjennomføre testen. Den må vere såpass synleg at du kan følgje med på tastaturnavigasjonen. </p>\n<p><strong>Merk:</strong> Synleg fokusmarkering blir testa på suksesskriterium 2.4.7.</p>",
@@ -62,25 +78,9 @@
 			}
 		},
 		{
-			"stegnr": "2.2",
-			"spm": "Finst det element på nettsida det er mogleg å navigere til med tastaturet?",
-			"ht": "<p>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "2.3"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Testsida har ikkje innhald/funksjonalitet som er mogleg å nå/betene med tastatur."
-				}
-			}
-		},
-		{
 			"stegnr": "2.4",
 			"spm": "Får du indikasjon på at det finst minst ei tastaturfelle på nettsida?",
-			"ht": "<p>Bruk standard tastaturnavigasjon for å navigere på nettsida. </p>\n<ul>\n<li>For å betene innhaldet kan du også bruke enter, mellom og pil.</li>\n<li>For å rygge med tastaturet, bruk Shift+Tab.</li>\n<li>Det kan vere at du må opne menyar og modaler for å teste alt innhald.</li>\n</ul>\n<p>Meir informasjon om <a href=\"https://act-rules.github.io/rules/ebe86a#standard-keyboard-navigation\" target=\"_blank\" rel=\"noopener\">Standard tastaturnavigasjon.</a></p>",
+			"ht": "<p>Bruk standard tastaturnavigasjon for å navigere på nettsida. </p>\n<ul>\n<li>For å betene innhaldet kan du også bruke enter, mellom og pil.</li>\n<li>For å rygge med tastaturet, bruk Shift+Tab.</li>\n<li>Det kan vere at du må opne menyar og modaler for å teste alt innhald.</li>\n</ul>\n<p>Ei tastaturfelle er at brukaren blir ståande fast i eit element som er mogleg å navigere til med tastaturet. Grunnen er at det ikkje er mogleg å navigere ut av/bort frå det aktuelle elementet berre med hjelp av tastaturet. </p>\n<p>Meir informasjon om <a href=\"https://act-rules.github.io/rules/ebe86a#standard-keyboard-navigation\" target=\"_blank\" rel=\"noopener\">Standard tastaturnavigasjon.</a></p>",
 			"type": "jaNei",
 			"kilde": [
 				"G21"
@@ -131,7 +131,7 @@
 		},
 		{
 			"stegnr": "2.7",
-			"spm": "Får du beskrive ein alternativ tastaturnavigasjon, i nærleiken av elementet?",
+			"spm": "Er det beskrive alternativ tastaturnavigasjon, i nærleiken av elementet?",
 			"ht": "<p>Sjekk om det står ein beskrivelse av korleis du navigerer ut av/bort frå elementet, i nærleiken av det aktuelle elementet.</p>",
 			"type": "jaNei",
 			"ruting": {
@@ -142,14 +142,14 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Alternativ tastaturnavigasjon er ikkje beskrive for brukaren."
+					"utfall": "Det er ikkje beskrive alternativ tastaturnavigasjon i nærleiken av elementet."
 				}
 			}
 		},
 		{
 			"stegnr": "2.8",
-			"spm": "Får du til å navigere vidare med alternativ tastaturnavigasjon?",
-			"ht": "<p>Følg beskrivelsen av alternativ tastaturnavigasjon som du fann i forrige steg.</p>\n<p>Sjekk om den fungerer eller ikkje. </p>",
+			"spm": "Kan du navigere vidare med alternativ tastaturnavigasjon?",
+			"ht": "<p>Følg beskrivelsen som du fann i forrige steg, og sjekk om den fungerer. </p>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
