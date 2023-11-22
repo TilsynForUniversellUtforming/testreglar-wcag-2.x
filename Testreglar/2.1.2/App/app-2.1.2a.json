@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p class=\"MsoNormal\" style=\"margin-bottom: 6.0pt; margin-top: 0in; mso-margin-bottom-alt: 8.0pt; mso-margin-top-alt: 0in; mso-add-space: auto;\"><span style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\">Det er mulig å navigere gjennom alt innhold i appen som kan få tastaturfokus, uten å bli stående fast i et element.</span></p>",
+	"kravTilSamsvar": "<p>Det er mulig å navigere gjennom alt innhold i appen som kan få tastaturfokus, uten å bli stående fast i et element.</p>",
 	"side": "2.1",
 	"element": "2.5",
 	"kolonner": [
@@ -60,14 +60,14 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Appsida har ikkje innhald/funksjonalitet som er mogleg å nå/betene med sveiping."
+					"utfall": "Det finst ikkje element det er mogleg å sveipe til på appsida."
 				}
 			}
 		},
 		{
 			"stegnr": "2.4",
 			"spm": "Får du indikasjon på at det finst minst ei sveipefelle på appsida?",
-			"ht": "<p>Sveip sakte for å navigere på appsida. </p>\n<ul>\n<li>Kontroller at du sveipar gjennom alt innhald og at du kjem tilbake til start.</li>\n<li>Hugs å opne menyar, modaler, og å gå inn i plugins med for eksempel mediaspelarar og kommentarfelt for å teste alt innhald. </li>\n</ul>",
+			"ht": "<p>Sveip sakte for å navigere på appsida. </p>\n<ul>\n<li>Kontroller at du sveipar gjennom alt innhald og at du kjem tilbake til start.</li>\n<li>Hugs å opne menyar, modaler, og å gå inn i plugins med for eksempel mediaspelarar og kommentarfelt for å teste alt innhald. </li>\n</ul>\n<p><strong>Merk</strong>: Sveipefelle inneber at brukaren ikkje kan sveipe frem og tilbake mellom ulike elementer på appsida, utan å bli ståande fast i eit element</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G21"
@@ -115,7 +115,10 @@
 					"fasit": "Nei",
 					"utfall": "Appsida har sveipefeller."
 				}
-			}
+			},
+			"kilde": [
+				"G21"
+			]
 		}
 	]
 }
