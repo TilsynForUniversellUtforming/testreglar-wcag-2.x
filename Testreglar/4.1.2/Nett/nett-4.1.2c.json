@@ -40,7 +40,7 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har testsiden &lt;iframe&gt;-element?",
+			"spm": "Har testsiden synlige &lt;iframe&gt;-element?",
 			"ht": "<p>Søk etter <code>&lt;iframe&gt;</code>-elementet i kildekoden til testsiden. </p>\n<p><strong>Merk:</strong> Du skal vurdere kun iframe som er visuell synlige og inkludert i accessibilty tree. Skjult iframe for eksempel fra Google Analytics er ikke omfattet av kravet, fordi det ikke er en brukergrensesnittkomponent.</p>",
 			"type": "jaNei",
 			"ruting": {
@@ -72,7 +72,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Har &lt;iframe&gt;-elementet et tilgjengelig navn?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser <code>&lt;iframe&gt;</code>-elementet i Chrome</li>\n<li>Velg <code>&lt;iframe&gt;</code>-elementet i kildekoden</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li>\n<li>Sjekk om informasjon under \"Name\" ikke er tomt</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser <code>&lt;iframe&gt;</code>-elementet i Chrome</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li>\n<li>Sjekk om informasjon under \"Name\" ikke er tomt</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
