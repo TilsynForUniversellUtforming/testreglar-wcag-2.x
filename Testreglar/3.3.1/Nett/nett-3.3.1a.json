@@ -1,0 +1,192 @@
+{
+	"namn": "Nett-3.3.1a Skjema gir feilmelding hvis tomme obligatoriske skjemafelt blir oppdaget automatisk 2023",
+	"id": "nett-3.3.1a",
+	"testlabId": 410,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Dersom det blir oppdaget automatisk at obligatoriske skjemaelement ikke er fylt ut, er følgende punkter oppfylt:</p>\r\n<ul>\r\n<li>Skjemaelementet der feilen oppstod identifiseres og</li>\r\n<li>Brukeren får en presis tekstlig beskrivelse av feilen og</li>\r\n<li>Feilmeldingen er kodet som tekst </li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "2.4"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side-ID:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsiden skjema/skjemaelement?",
+			"ht": "<p><strong>Merk:</strong> Du skal ikke teste skjema i PDF, Word eller lignende.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke skjema/skjemaelement."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Hvilket skjema/skjemaelement tester du?",
+			"ht": "<p>Beskriv skjema/skjemaelement, slik at det er mulig å identifisere det i ettertid. </p>\n<p><strong>Merk:</strong> Hvis skjema/skjemaelement inngår i en prosess skal du også beskrive prosessen.</p>",
+			"type": "tekst",
+			"label": "Skjema/prosess:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Oppdager skjemaet automatisk at obligatoriske skjemaelement er tomme?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Ikke fyll ut informasjon i skjemaet (tomt skjema) eller la alle obligatoriske skjemaelementer stå tomme.\n<ul>\n<li>Hvis obligatoriske skjemaelementer er forhåndsutfylt, fjern forhåndsutfylt informasjon der det er mulig.\n<ul>\n<li>Forhåndsutfylt informasjon betyr at det allerede står inndata i skjemaet når testsiden er lastet inn.</li>\n<li>Eksempel på forhåndsutfylt informasjon, er informasjon hentet fra folkeregisteret som for eksempel personnummer, fornavn, etternavn og adresse.</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Prøv deretter å fullføre/sende inn eller gå videre i skjemaet.\n<ul>\n<li>Hensikten er å sjekke om tomme obligatoriske skjemaelementer blir oppdaget automatisk. </li>\n</ul>\n</li>\n</ul>\n<p>Begrepet \"oppdages automatisk\" betyr at skjemaet er satt opp slik at det selv oppdager når det mangler nødvendig informasjon i obligatoriske elementer i skjemaet. Dette er ofte kodet ved å bruke eksempelvis attributtet <code>required</code> eller <code>aria-required=\"true\"</code>.</p>\n<p><strong>Merk:</strong> Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes. Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut rett informasjon, indikerer at brukeren har utelatt inndata som nettsiden krever, og at dette oppdages automatisk, uten at brukeren er involvert.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Skjema oppdager ikke automatisk at obligatoriske skjemaelementer er tomme.",
+					"element": "2.3"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilket obligatorisk skjemaelement tester du?",
+			"ht": "<p>Beskriv elementet, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere elementer, registrerer du et og et.</p>",
+			"type": "tekst",
+			"label": "Skjemaelement:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Får du en tekstlig feilmelding?",
+			"ht": "<p>Feilmeldingen må være i form av tekst. Feilmeldingen kan for eksempel vises</p>\n<ul>\n<li>i et modalvindu</li>\n<li>i ledeteksten til skjemaelement</li>\n<li>et annet sted i skjemaet/på siden, for eksempel på toppen</li>\n<li>når du navigerer i skjemaet</li>\n</ul>\n<p><strong>Merk:</strong> Det er ikke nok å identifisere feilen utelukkende med for eksempel </p>\n<ul>\n<li>et symbol i ledeteksten</li>\n<li>ved å endre farge</li>\n<li>visuell plassering av feilmeldingen  </li>\n<li>deaktivert knapp for å sende inn eller gå videre i skjemaet</li>\n<li>lignende ikke-tekstlige indikatorer</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G83"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får ikke tekstlig feilmelding."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er feilmeldingen kodet som tekst?",
+			"ht": "<p>Dette kan du sjekke på flere måter:</p>\n<p>Alternativ 1:</p>\n<ul>\n<li>Prøv å markere teksten med mus eller tastatur. Dette indikerer at testen er kodet som tekst, og ikke er bilde av tekst.</li>\n</ul>\n<p>Alternativ 2:</p>\n<ul>\n<li>Åpne kodeverktøyet i nettleseren.</li>\n<li>Bruk \"select\" funksjonen i verktøyet og marker teksten.</li>\n<li>Sjekk at teksten er kodet som tekst, ved å se om du finner igjen teksten i koden.</li>\n</ul>\n<p>Alternativ 3:</p>\n<ul>\n<li>Dersom skjemaelementet har attributtet \"required\" eller aria-required=\"true\", kommer det fram en melding i nettleseren. Denne meldingen er kodet som tekst.</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får feilmelding, men den er ikke er kodet som tekst."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Inneholder feilmeldingen tekst som identifiserer hvor feilen har oppstått?",
+			"ht": "<p>Feilmeldingen skal inneholde informasjon som identifiserer skjemaelementet som er tomt.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G83"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får feilmelding som ikke identifiserer hvor feilen er oppstått."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Inneholder feilmeldingen tekst som beskriver feilen?",
+			"ht": "<p>Feilmeldingen gir informasjon om hva som er feil, for eksempel: \"Fornavn må fylles ut\".</p>\n<p><strong>Merk:</strong> Det er ikke krav om at feilmeldingen skal inneholde forslag til hvordan feil skal rettes. Dette er omfattet av suksesskriterium 3.3.3.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G83"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får feilmelding som:<br/>- er kodet som tekst<br/>- identifiserer hvor feilen har oppstått<br/>- beskriver feilen tekstlig"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får feilmelding som:<br/>- er kodet som tekst<br/>- identifiserer hvor feilen har oppstått<br/>- ikke beskriver feilen tekstlig"
+				}
+			}
+		}
+	]
+}
