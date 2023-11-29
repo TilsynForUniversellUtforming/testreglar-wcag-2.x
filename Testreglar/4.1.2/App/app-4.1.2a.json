@@ -35,6 +35,9 @@
 		},
 		{
 			"title": "3.8"
+		},
+		{
+			"title": "3.9"
 		}
 	],
 	"steg": [
@@ -200,8 +203,8 @@
 		},
 		{
 			"stegnr": "3.7",
-			"spm": "Hvilken tilstand tester du?",
-			"ht": "<p>Beskriv tilstanden, slik at det er mulig å identifisere den i ettertid.</p>",
+			"spm": "Hvor mange tilstander har brukergrensesnittkomponenten? ",
+			"ht": "<p>Registrer antall tilstander.</p>\n<p>Eksempel: en avkryssingsboks kan ha to tilstander avkrysset eller ikke avkrysset</p>",
 			"type": "tekst",
 			"ruting": {
 				"alle": {
@@ -209,14 +212,14 @@
 					"steg": "3.8"
 				}
 			},
-			"label": "Tilstand:",
-			"multilinje": true
+			"label": "Antall tilstander:",
+			"filter": "tal"
 		},
 		{
 			"stegnr": "3.8",
-			"spm": "Er den aktuelle tilstanden angitt programmatisk?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: Talkback </li>\n</ul>\n</li>\n<li>Trykk på komponenten du tester</li>\n<li>Sjekk om skjermleser leser opp nåværende tilstand\n<ul>\n<li>Vanligvis starter  opplesningen med tilgjengelig navn, rolle og deretter tilstanden.</li>\n<li>Du skal kun vurdere tilstanden her</li>\n</ul>\n</li>\n<li>Endre tilstanden med dobbelttrykk</li>\n<li>Sjekk om skjermleser leser opp endret tilstand</li>\n</ul>",
-			"type": "jaNei",
+			"spm": "Hvor mange tilstander er ikke angitt programmatisk?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: Talkback </li>\n</ul>\n</li>\n<li>Trykk på komponenten du tester</li>\n<li>Sjekk om skjermleser leser opp nåværende tilstand\n<ul>\n<li>Vanligvis starter  opplesningen med tilgjengelig navn, rolle og deretter tilstanden.</li>\n<li>Du skal kun vurdere tilstanden her</li>\n</ul>\n</li>\n<li>Endre tilstanden med dobbelttrykk</li>\n<li>Sjekk om skjermleser leser opp endret tilstand</li>\n<li>Registrer antall tilstander som ikke er lest opp av skjermleser.</li>\n</ul>",
+			"type": "tekst",
 			"ruting": {
 				"ja": {
 					"type": "avslutt",
@@ -227,11 +230,52 @@
 					"type": "avslutt",
 					"fasit": "Nei",
 					"utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, rollen identifiserer komponentens funksjon, men komponentens tilstand er ikke angitt programmatisk."
+				},
+				"alle": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"type": "lik",
+							"sjekk": "3.8",
+							"verdi": "0",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, rollen identifiserer komponentens funksjon og komponentens tilstand er angitt programmatisk."
+							}
+						},
+						"2": {
+							"type": "ulik",
+							"sjekk": "3.8",
+							"verdi": "0",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.9"
+							}
+						}
+					}
 				}
 			},
 			"kilde": [
 				"G10"
-			]
+			],
+			"label": "Antall tilstander:",
+			"filter": "tal"
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Hvilke tilstander er ikke angitt programmatisk?",
+			"ht": "<p>Beskriv tilstander som ikke er angitt programmatisk, slik at det er mulig å identifisere dem i ettertid.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, rollen identifiserer komponentens funksjon, men komponentens tilstand er ikke angitt programmatisk."
+				}
+			},
+			"label": "Tilstander:",
+			"multilinje": true
 		}
 	]
 }
