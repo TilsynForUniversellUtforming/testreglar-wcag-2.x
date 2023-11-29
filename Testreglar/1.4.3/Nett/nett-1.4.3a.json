@@ -5,15 +5,12 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Tekst</p>\r\n<ul>\r\n<li>Tekst har kontrast på minst 4,5:1 mot bakgrunnen</li>\r\n<li>Stor tekst har kontrast på minst 3,0:1 mot bakgrunnen</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For nettsider med tekst gjelder følgende:</p>\r\n<ul>\r\n<li>Tekst har kontrast på minst 4,5:1 mot bakgrunnen</li>\r\n<li>Stor tekst har kontrast på minst 3,0:1 mot bakgrunnen</li>\r\n</ul>",
 	"side": "2.1",
-	"element": "3.4",
+	"element": "3.1",
 	"kolonner": [
 		{
 			"title": "2.2"
-		},
-		{
-			"title": "3.1"
 		},
 		{
 			"title": "3.2"
@@ -22,13 +19,7 @@
 			"title": "3.3"
 		},
 		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
+			"title": "3.4"
 		}
 	],
 	"steg": [
@@ -50,7 +41,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsiden tekst?",
-			"ht": "<p>Disse innholdstypene er omfattet</p>\n<ul>\n<li>tekst</li>\n<li>tekst i illustrasjoner og diagram (som ikke er bilde)</li>\n<li>tekst i skjema inkl. placeholder</li>\n<li>tekst som kommer til syne ved musepekeren over eller tastaturfokus</li>\n</ul>\n<p><strong>Merk:</strong> Innhold som ikke skal testes</p>\n<ul>\n<li>bilde av tekst (blir testet i nett-1.4.3b)</li>\n<li>Ikke-tekstlig innhold i diagram og grafer, som støttelinjer, søyler (blir testet i nett-1.4.11)</li>\n</ul>",
+			"ht": "<p>Dette er omfattet av kravet</p>\n<ul>\n<li>tekst</li>\n<li>tekst i illustrasjoner og diagram (som ikke er bilde)</li>\n<li>tekst i skjema inkl. placeholder</li>\n<li>tekst som kommer til syne ved musepekeren over eller tastaturfokus</li>\n</ul>\n<p><strong>Merk:</strong> Dette skal ikke testes</p>\n<ul>\n<li>bilde av tekst (blir testet i nett-1.4.3b)</li>\n<li>Ikke-tekstlig innhold i diagram og grafer, som støttelinjer, søyler (blir testet i nett-1.4.11)</li>\n<li>tekst i logoer og varemerke</li>\n<li>tekst som er til pynt, dvs. tekst som kan erstattes av annen tekst, uten at meningsinnholdet blir endret</li>\n<li>tekst i bilde der teksten ikke er vesentlig for å formidle meningsinnholdet</li>\n<li>tekst i inaktive brukergrensesnittkomponenter, for eksempel deaktiverte knapper</li>\n<li>tekst som ikke er synlig for brukeren</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -65,110 +56,20 @@
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Er det brudd på kravet til kontrast mellom tekst og bakgrunn på testsiden?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk verktøyet <a href=\"https://chrome.google.com/webstore/detail/siteimprove-accessibility/djcglbmbegflehmbfleechkjhmedcopn\" target=\"_blank\" rel=\"noopener\">Siteimprove Accessibility Checker i Chrome</a> på testsiden</li>\n<li>Dersom feltet \"Contrast (Minimum)\" ikke dukker opp under overskriften \"Distingushable\", har verktøyet ikke funnet brudd på kravet</li>\n</ul>",
-			"type": "jaNei",
+			"spm": "Gjør en visuell inspeksjon eller bruk verktøy for å identifisere tekst med indikasjon på dårlig kontrast. ",
+			"ht": "<p><strong>Merk: </strong>I skjema kan det hende at du må framprovosere eventuelle feilmeldinger og instruksjoner.</p>\n<p>Gjør en visuell inspeksjon, bruk testverktøy eller en kombinasjon av disse, for å identifisere tekst som potensielt bryter kravet.</p>\n<p>Beskriv teksten, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere elementer, registrerer du et og et.</p>\n<p>Slik finner du aktuelle tekstelementer dersom du bruker testverktøy:</p>\n<ul>\n<li>bruk verktøyet <a href=\"https://chrome.google.com/webstore/detail/siteimprove-accessibility/djcglbmbegflehmbfleechkjhmedcopn\" target=\"_blank\" rel=\"noopener\">Siteimprove Accessibility Checker</a> i Chrome på testsiden</li>\n<li>sett filteret på AA conformance i Choose conformance level, under Choose filters</li>\n<li>dersom feltet \"Contrast (Minimum)\" ikke dukker opp under overskriften \"Distingushable\", har verktøyet ikke funnet tekst med brudd på kravet</li>\n</ul>",
+			"type": "tekst",
 			"ruting": {
-				"ja": {
+				"alle": {
 					"type": "gaaTil",
 					"steg": "3.2"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Testsiden har ikke kontrastfeil."
-				}
-			}
-		},
-		{
-			"stegnr": "3.2",
-			"spm": "Kvalitetssikre resultatene fra verktøyet og registrer antall brudd",
-			"ht": "<p>Verktøyet kan i enkelte tilfeller gi feil resultater, for eksempel fordi det</p>\n<ul>\n<li>ikke tar høyde for alle unntakene </li>\n<li>ikke alltid henter rett bakgrunnsfarge, for eksempel dersom bakgrunnen består av flere lag</li>\n</ul>\n<ol>\n<li>Gå gjennom bruddene i verktøyet (stikkprøver) for å sjekke om noen av de gjelder tekst som er unntatt\n<ul>\n<li>tekst i logoer og varemerke</li>\n<li>tekst som er til pynt, dvs. tekst som kan erstattes av annen tekst, uten at meningsinnholdet blir endret</li>\n<li>tekst i bilde der teksten ikke er vesentlig for å formidle meningsinnholdet</li>\n<li>tekst i inaktive brukergrensesnittkomponenter, for eksempel deaktiverte knapper</li>\n<li>tekst som ikke er synlig for brukeren</li>\n</ul>\n</li>\n<li>Sjekk også om bruddene kan være feil av andre grunner, for eksempel fordi verktøyet ikke har brukt riktig bakgrunnsfarge.</li>\n</ol>\n<p><strong>Merk:</strong> Siteimprove Accessibility Checker fanger også opp brudd som gjelder fargeendringer ved tilstander f.eks. hover, focus, visited og tekst som kommer til syne ved hover og focus. Dette er omfattet av kravet. </p>\n<p>Registrer antall brudd. </p>",
-			"type": "tekst",
-			"ruting": {
-				"alle": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"sjekk": "3.2",
-							"type": "mellom",
-							"verdi": 0,
-							"verdi2": 0,
-							"handling": {
-								"type": "gaaTil",
-								"steg": "3.3"
-							}
-						},
-						"2": {
-							"sjekk": "3.2",
-							"type": "mellom",
-							"verdi": 1,
-							"verdi2": 2000000,
-							"handling": {
-								"type": "gaaTil",
-								"steg": "3.3"
-							}
-						}
-					}
-				}
-			},
-			"label": "Antall brudd:",
-			"filter": "tal"
-		},
-		{
-			"stegnr": "3.3",
-			"spm": "Har du funnet brudd på kravet som verktøyet ikke avdekker? ",
-			"ht": "<p>Dersom du ved en visuell inspeksjon av testsiden mener du har identifisert tekst som bryter kravet, som ikke er fanget opp av det automatiske verktøyet, skal du registrere det i tillegg. </p>",
-			"type": "jaNei",
-			"ruting": {
-				"nei": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"type": "lik",
-							"sjekk": "3.2",
-							"verdi": "0",
-							"handling": {
-								"type": "avslutt",
-								"fasit": "Ja",
-								"utfall": "Testsiden har ikke kontrastfeil."
-							}
-						},
-						"2": {
-							"type": "mellom",
-							"sjekk": "3.2",
-							"verdi": 1,
-							"verdi2": 10000,
-							"handling": {
-								"type": "avslutt",
-								"fasit": "Nei",
-								"utfall": "Testsiden har kontrastfeil."
-							}
-						}
-					}
-				},
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.4"
-				}
-			}
-		},
-		{
-			"stegnr": "3.4",
-			"spm": "Hvilket element tester du?",
-			"ht": "<p>Beskriv teksten, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere elementer, registrerer du et og et.</p>",
-			"type": "tekst",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.5"
 				}
 			},
 			"label": "Tekst:",
 			"multilinje": true
 		},
 		{
-			"stegnr": "3.5",
+			"stegnr": "3.2",
 			"spm": "Mål og registrer kontrast mellom farge på tekst og farge på bakgrunn.",
 			"ht": "<p><strong>Slik tester du:</strong></p>\n<p>Alternativ 1:</p>\n<ul>\n<li>Åpne DevTools i nettleseren (F12) Chrome</li>\n<li>Inspiser teksten med funksjonen \"inspiser element med mus\" \n<ul>\n<li>Klikk på pil-knappen i øvre venstre hjørne av vinduet, for å aktivere funksjonen</li>\n</ul>\n</li>\n<li>Hold musepekeren over teksten du tester</li>\n<li>En pop-up viser kontrasten, og om teksten samsvarer eller bryter med kravet, under overskriften \"Accsessibility\"\n<ul>\n<li>Grøn hake indikerer samsvar </li>\n<li>Oransje utropstegn indikerer brudd</li>\n</ul>\n</li>\n<li>Registrer kontrast</li>\n</ul>\n<p>Alternativ 2:</p>\n<ul>\n<li>Inspiser teksten i DevTools i nettleseren (F12) Chrome</li>\n<li>Du finner liste over alle CSS-egenskaper knyttet til teksten\n<ul>\n<li>Vanligvis er det på høyre side i verktøyet, under fanen Beregnet (Computed)</li>\n</ul>\n</li>\n<li>Du kan filtrere aktuelle CSS-egenskaper på ordet \"color\"</li>\n<li>Kopier deretter verdien fra egenskapen \"color\" og \"backgroud-color\" (Shift og klikk på firkant fargeikon for å endre fargeformat til HEX-kode)</li>\n<li>Bruk deretter verktøyet WebAIM Contrast Checker eller TPGi Colour Contrast Analyzer (CCA) for å måle kontrasten</li>\n<li>Registrer kontrast</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Dersom du ikke kan hente fargekodene fra egenskaper \"color\" og \"backgroud-color\" i koden, for eksempel i tilfeller der bakgrunnsfargen er ikke oppgitt, bakgrunnen er gradert, mønstret eller et bilde, kan du isteden bruke pipette til å hente fargekodene\n<ul>\n<li>I Chromes DevTools, under \"Stiler\"-fanen kan du klikke på fargeboksen for å få opp fargevelger-pop-up og bruke pipette.</li>\n<li>Bruk av pipette kan være unøyaktig, og gi ulike resultater, særlig for mindre skrift. Du skal velge en farge som er representativ for hovedfargen på teksten.</li>\n</ul>\n</li>\n<li>Dersom bakgrunnen er gradert, mønstret eller et bilde, skal du måle på det svakeste punktet. Merk at teksten også kan være gradert.</li>\n<li>Dersom bokstavene har et omriss på minst 1 piksel, vil omrisset være bakgrunnsfargen.</li>\n</ul>",
 			"type": "tekst",
@@ -177,7 +78,7 @@
 					"type": "regler",
 					"regler": {
 						"1": {
-							"sjekk": "3.5",
+							"sjekk": "3.2",
 							"type": "mellom",
 							"verdi": 0,
 							"verdi2": 2.99,
@@ -188,17 +89,17 @@
 							}
 						},
 						"2": {
-							"sjekk": "3.5",
+							"sjekk": "3.2",
 							"type": "mellom",
 							"verdi": 3,
 							"verdi2": 4.49,
 							"handling": {
 								"type": "gaaTil",
-								"steg": "3.6"
+								"steg": "3.3"
 							}
 						},
 						"3": {
-							"sjekk": "3.5",
+							"sjekk": "3.2",
 							"type": "mellom",
 							"verdi": 4.5,
 							"verdi2": 200,
@@ -215,7 +116,7 @@
 			"filter": "tal"
 		},
 		{
-			"stegnr": "3.6",
+			"stegnr": "3.3",
 			"spm": "Er skriftstørrelsen 24 px eller større?",
 			"ht": "<p>Her kan du bruke verktøyet WhatFont:</p>\n<ul>\n<li>Aktiver WhatFont.</li>\n<li>Trykk på teksten du skal måle størrelsen på.</li>\n<li>Registrer verdien som står i FontSize</li>\n</ul>\n<p>Deaktiver WhatFont etter at du har målt tekststørrelse.</p>",
 			"type": "jaNei",
@@ -227,12 +128,12 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.7"
+					"steg": "3.4"
 				}
 			}
 		},
 		{
-			"stegnr": "3.7",
+			"stegnr": "3.4",
 			"spm": "Er teksten uthevet/bold/feit?",
 			"ht": "<p>Her er det tilstrekkelig å gjøre en visuell inspeksjon.</p>",
 			"type": "jaNei",
