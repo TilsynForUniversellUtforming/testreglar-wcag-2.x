@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Det er flere måter å oppfylle kravet på.</p>\r\n<p>Navn og rolle:</p>\r\n<ul>\r\n<li>Alle skjemaelementer har et tilgjengelig navn, som beskriver formålet med det aktuelle elementet og </li>\r\n<li>Alle skjemaelementer har riktig rolle, som identifiserer funksjonen til det aktuelle elementet og</li>\r\n<li>Skjemaelementer som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen</li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>Når tilstander, egenskaper og verdier i skjemaelementer kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>Varsel om endringer i den aktuelle elementet er tilgjengelig for brukeragenter </li>\r\n</ul>\r\n<p> </p>",
+	"kravTilSamsvar": "<p>Det er flere måter å oppfylle kravet på.</p>\r\n<p>Navn og rolle:</p>\r\n<ul>\r\n<li>Alle skjemaelementer har et tilgjengelig navn, som beskriver formålet med det aktuelle elementet og </li>\r\n<li>Alle skjemaelementer har riktig rolle, som identifiserer funksjonen til det aktuelle elementet og</li>\r\n<li>Skjemaelementer som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen</li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>Når tilstander, egenskaper og verdier i skjemaelementer kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>Varsel om endringer i det aktuelle elementet er tilgjengelig for brukeragenter</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -65,6 +65,9 @@
 		},
 		{
 			"title": "3.19"
+		},
+		{
+			"title": "3.20"
 		}
 	],
 	"steg": [
@@ -94,7 +97,7 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.19"
+					"steg": "3.20"
 				}
 			}
 		},
@@ -397,8 +400,8 @@
 		},
 		{
 			"stegnr": "3.17",
-			"spm": "Hvilken tilstand tester du?",
-			"ht": "<p>Beskriv tilstanden, slik at det er mulig å identifisere den i ettertid.</p>",
+			"spm": "Hvor mange tilstander har skjemaelementet? ",
+			"ht": "<p>Registrer antall tilstander.</p>\n<p>Eksempel: En avkryssingsboks kan ha to tilstander, avkrysset eller ikke avkrysset.</p>",
 			"type": "tekst",
 			"ruting": {
 				"alle": {
@@ -406,33 +409,64 @@
 					"steg": "3.18"
 				}
 			},
-			"label": "Tilstand:",
-			"multilinje": true
+			"label": "Antall tilstander:",
+			"filter": "tal"
 		},
 		{
 			"stegnr": "3.18",
-			"spm": "Er den aktuelle tilstanden angitt programmatisk?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser skjemaelementet i Chrome</li>\n<li>Bruk Accessibility Checker</li>\n<li>Under ARIA-attributter eller Computed Properties, sjekk om det finnes:\n<ul>\n<li>avkryssingsboks eller radioknapp\n<ul>\n<li>hvis avkrysset: aria-checked: true eller Checked: true</li>\n<li>hvis ikke avkrysset: aria-checked: false eller Checked: false</li>\n</ul>\n</li>\n<li>nedtrekksliste<br>\n<ul>\n<li>hvis innholdet er sammensluttet: aria-expanded: false eller Expanded: false</li>\n<li>hvis innholdet er utvidet: aria-expanded: true eller Expanded: true</li>\n</ul>\n</li>\n<li>switch\n<ul>\n<li>hvis knappen er på: aria-pressed: true eller aria-checked: true</li>\n<li>hvis knappen er av: aria-pressed: false eller aria-checked: false</li>\n<li>hvis knappen har en mellomliggende tilstand mellom tilstander av og på: aria-pressed: mixed.</li>\n</ul>\n</li>\n<li>annet: andre relevante tilstander (State) knyttet til <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Roles</a></li>\n</ul>\n</li>\n</ul>",
-			"type": "jaNei",
+			"spm": "Hvor mange tilstander er ikke angitt programmatisk?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser skjemaelementet i Chrome</li>\n<li>Bruk Accessibility Checker</li>\n<li>Under ARIA-attributter eller Computed Properties, sjekk om det finnes:\n<ul>\n<li>avkryssingsboks eller radioknapp\n<ul>\n<li>hvis avkrysset: aria-checked: true eller Checked: true</li>\n<li>hvis ikke avkrysset: aria-checked: false eller Checked: false</li>\n</ul>\n</li>\n<li>nedtrekksliste<br>\n<ul>\n<li>hvis innholdet er sammensluttet: aria-expanded: false eller Expanded: false</li>\n<li>hvis innholdet er utvidet: aria-expanded: true eller Expanded: true</li>\n</ul>\n</li>\n<li>switch\n<ul>\n<li>hvis knappen er på: aria-pressed: true eller aria-checked: true</li>\n<li>hvis knappen er av: aria-pressed: false eller aria-checked: false</li>\n<li>hvis knappen har en mellomliggende tilstand mellom tilstander av og på: aria-pressed: mixed.</li>\n</ul>\n</li>\n<li>annet: andre relevante tilstander (State) knyttet til <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Roles</a></li>\n</ul>\n</li>\n<li>Registrer antall tilstander som ikke er angitt programmatisk.</li>\n</ul>",
+			"type": "tekst",
 			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Skjemaelementet har et tilgjengelig navn, og riktig rolle, som beskriver formålet med det aktuelle elementet. Tilstanden er angitt programmatisk."
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Skjemaelementet har et tilgjengelig navn, og riktig rolle, som beskriver formålet med det aktuelle elementet. Tilstanden er ikke angitt programmatisk."
+				"alle": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"type": "lik",
+							"sjekk": "3.18",
+							"verdi": "0",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Skjemaelementet har et tilgjengelig navn, og riktig rolle, som beskriver formålet med det aktuelle elementet. Tilstanden er angitt programmatisk."
+							}
+						},
+						"2": {
+							"type": "ulik",
+							"sjekk": "3.18",
+							"verdi": "0",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.19"
+							}
+						}
+					}
 				}
 			},
 			"kilde": [
 				"ARIA5",
 				"G10"
-			]
+			],
+			"label": "Antall tilstander:",
+			"filter": "tal"
 		},
 		{
 			"stegnr": "3.19",
+			"spm": "Hvilke tilstander er ikke angitt programmatisk?",
+			"ht": "<p>Beskriv tilstander som ikke er angitt programmatisk, slik at det er mulig å identifisere dem i ettertid.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementet har et tilgjengelig navn, og riktig rolle, som beskriver formålet med det aktuelle elementet. Tilstanden er ikke angitt programmatisk."
+				}
+			},
+			"label": "Tilstander:",
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.20",
 			"spm": "Har testsiden skjemaelementer som verktøyet ikke avdekker?",
 			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes flere skjemaelementer på testsiden.</p>\n<p>Begrensninger i verktøyet</p>\n<ul>\n<li>Det finner kun skjemaelementer som har en rolle fra <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Role</a></li>\n<li>Det finner ikke skjemaelementer kodet på andre måter, for eksempel <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code> eller lignende  </li>\n</ul>\n<p><strong>Skjemaelement:</strong> Eksempel på skjemaelementer er avkryssningsboks, nedtrekksliste, radioknapp, inndatafelt, søkefelt, switch og listeboks.</p>",
 			"type": "jaNei",
