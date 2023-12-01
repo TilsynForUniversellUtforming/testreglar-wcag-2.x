@@ -35,36 +35,41 @@ async function hentFiler() {
 
 function sjekk_format(file:string): boolean {
     if (!file.includes("felles")) {
-        const testregel:Testregel = JSON.parse(fs.readFileSync(file, 'utf8'));
-
-        if (typeof (testregel.id) !== "string") {
-            console.log("Filen " + file + " mangler id-felt");
-            return false
-        } else if (typeof (testregel.type) !== "string") {
-            console.log("Filen " + file + " mangler type felt");
-            return false
-        } else if (typeof (testregel.spraak) !== "string") {
-            console.log("Filen " + file + " mangler spraak felt");
-            return false
-        } else if (typeof (testregel.kravTilSamsvar) !== "string") {
-            console.log("Filen " + file + " mangler feltet kravTilSamsvar");
-            return false
-        } else if (typeof (testregel.side) !== "string") {
-            console.log("Filen " + file + " mangler feltet side");
-            return false
-        } else if (typeof (testregel.element) !== "string") {
-            console.log("Filen " + file + " mangler feltet side");
-            return false
-        } else if (typeof (testregel.namn) !== "string") {
-            console.log("Filen " + file + " mangler feltet namn");
-            return false
-        } else if (!Array.isArray(testregel.kolonner)) {
-            console.log("Filen " + file + " mangler feltet kolonner");
-            return false
-        } else if (!Array.isArray(testregel.steg)) {
-            console.log("Filen " + file + " mangler feltet steg");
+        try{
+            const testregel:Testregel = JSON.parse(fs.readFileSync(file, 'utf8'));
+            if (typeof (testregel.id) !== "string") {
+                console.log("Filen " + file + " mangler id-felt");
+                return false
+            } else if (typeof (testregel.type) !== "string") {
+                console.log("Filen " + file + " mangler type felt");
+                return false
+            } else if (typeof (testregel.spraak) !== "string") {
+                console.log("Filen " + file + " mangler spraak felt");
+                return false
+            } else if (typeof (testregel.kravTilSamsvar) !== "string") {
+                console.log("Filen " + file + " mangler feltet kravTilSamsvar");
+                return false
+            } else if (typeof (testregel.side) !== "string") {
+                console.log("Filen " + file + " mangler feltet side");
+                return false
+            } else if (typeof (testregel.element) !== "string") {
+                console.log("Filen " + file + " mangler feltet side");
+                return false
+            } else if (typeof (testregel.namn) !== "string") {
+                console.log("Filen " + file + " mangler feltet namn");
+                return false
+            } else if (!Array.isArray(testregel.kolonner)) {
+                console.log("Filen " + file + " mangler feltet kolonner");
+                return false
+            } else if (!Array.isArray(testregel.steg)) {
+                console.log("Filen " + file + " mangler feltet steg");
+                return false
+            }
+        } catch {
+            console.log("Filen " + file + " inneholder ikke gyldig JSON");
             return false
         }
+      
     }
 
     return true;
