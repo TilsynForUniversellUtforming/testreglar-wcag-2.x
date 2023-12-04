@@ -1,0 +1,302 @@
+{
+	"namn": "1.1.1c Formål med klikkbare område i bilde, går fram av tekstalternativ",
+	"id": "1.1.1c",
+	"testlabId": 167,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Informasjon om lenkemålet for klikkbare område i bilde går fram av tekstalternativet.</p>",
+	"side": "2.1",
+	"element": "3.3",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.1"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		},
+		{
+			"title": "3.6"
+		},
+		{
+			"title": "3.7"
+		},
+		{
+			"title": "3.8"
+		},
+		{
+			"title": "3.9"
+		},
+		{
+			"title": "3.10"
+		},
+		{
+			"title": "3.11"
+		},
+		{
+			"title": "3.12"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Finst det bilde med fleire klikkbare område på sida?",
+			"ht": "<p>Bruk kodeverktøyet i nettlesaren og sjekk om det finst bilde som er koda med <code>&#x3C;map&#x3E;</code>-elementet.</p><p>Bilde sin plassering er utan betydning, og kan for eksempel ligge i ein meny, liste, tabell osv.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje bilde med klikkbare område."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv bilde med klikkbare område",
+			"ht": "<p>Plukk ut bilde for test. Dersom det er fleire må du teste eit og eit. Du kan for eksempel beskrive bilde, plassering på sida, element som er i nærleiken.</p>",
+			"type": "tekst",
+			"label": "Bilde:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Finst det &#x3C;area&#x3E; element inne i &#x3C;map&#x3E;-elementet?",
+			"ht": "<p>Fell ut &#x3C;map&#x3E;-elementet og sjå om du finn &#x3C;area&#x3E;-element som er nøsta under &#x3C;map&#x3E;-elementet i koden.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"element": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Beskriv det klikkbare området, &#x3C;area&#x3E;-elementet, du testar",
+			"ht": "Vel eit &#x3C;area&#x3E;-element. Dersom du testar eit nytt bilde gå til steg 3.1 for å registere først. Dersom det er fleire &#x3C;area&#x3E;-elementet må du registere eit og eit. Skriv inn nokre stikkord som beskriver det klikkbare området.",
+			"type": "tekst",
+			"label": "Area-element:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Har &lt;area&gt;-elementet attributtet \"aria-label\" ?",
+			"ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette. Attributtet overstyrer eventuelt alt-attributt eller title-attributt.</p>\n<p><strong>Merk: </strong>Du skal ikkje vurdere kvaliteten på teksten.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"ARIA6"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Har &lt;aria&gt;-elementet attributtet \"aria-labelledby\"",
+			"ht": "<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. <code>(Aria-labelledby=\"id1 id2\")</code></p>\n<p><strong>Merk: </strong>Du skal ikkje vurdere kvaliteten på teksten.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"ARIA10"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Er aria-labelledby attributtet kopla til annan tekst på sida?",
+			"ht": "<p>Gjer eit søk i koden på id i aria-labelledby. Dersom det finst fleire id-ar skal du undersøke alle. Id-ane vil då vere skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p>",
+			"type": "jaNei",
+			"kilde": [
+				"ARIA10"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Har &#x3C;area&#x3E;-elementet eit alt-attributt?",
+			"ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette. Sjå på koden og finn bilde i koden. Undersøk om &#x3C;area&#x3E;-elementet har eit alt-attributt. </p>",
+			"type": "jaNei",
+			"kilde": [
+				"H24"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Er det innhold i alt-attributtet?",
+			"ht": "Sjå i koden om alt-attributtet har innhald",
+			"type": "jaNei",
+			"kilde": [
+				"H24"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Har &#x3C;area&#x3E;-elementet eit title-attributt?",
+			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+			"type": "jaNei",
+			"kilde": [
+				"F65"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Klikkbart område i bilde manglar tekstalternativ."
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Er det innhald i title-attributtet?",
+			"ht": "<p>Sjå i koden om title-attributtet har innhald.</p><p>Eit tomt title-attributt er koda på formen title=\"\" eller berre title.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F65"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Klikkbart område i bilde manglar tekstalternativ."
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Aktiver/opne lenka i ny fane og skriv inn url",
+			"ht": "Kopier lenkemålet frå kodeattributtet <code>href</code> og opne lenka i nytt vindauge/fane for å gjere det lettare å vurdere på neste steg.",
+			"type": "tekst",
+			"label": "URL:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				}
+			}
+		},
+		{
+			"stegnr": "3.12",
+			"spm": "Er innhaldet i attributtet beskrivande for formålet med lenka?",
+			"ht": "<p>Gjer ei skjønnsmessig vurdering av om innhaldet i alt-attributtet gir tilstrekkeleg informasjon om kva som er lenkemålet.</p><p><strong>Merk: </strong>Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil. </p>",
+			"type": "jaNei",
+			"kilde": [
+				"G82",
+				"G94",
+				"H24",
+				"F30"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Klikkbart område i bilde har beskrivande tekstalternativ."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Klikkbart område i bilde har tekstalternativ som ikkje er beskrivande."
+				}
+			}
+		}
+	]
+}
