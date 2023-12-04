@@ -85,7 +85,7 @@
 							"handling": {
 								"type": "avslutt",
 								"fasit": "Nei",
-								"utfall": "Stor tekst har kontrast mot bakgrunnen under 3,0:1."
+								"utfall": "Tekst har kontrast mot bakgrunnen under 3,0:1."
 							}
 						},
 						"2": {
