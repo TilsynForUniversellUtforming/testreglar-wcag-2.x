@@ -85,7 +85,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Nettside der alle element det er mogleg å bruke med tastaturet, får synleg fokusmarkering."
+					"utfall": "Alle element som er mogleg å bruke med tastaturet, får synleg fokusmarkering."
 				}
 			}
 		},
@@ -101,7 +101,7 @@
 				"alle": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Nettside der element det er mogeleg å bruke med tastaturet, ikkje får synleg fokusmarkering."
+					"utfall": "Element som er mogeleg å bruke med tastaturet, ikkje får synleg fokusmarkering."
 				}
 			}
 		}
