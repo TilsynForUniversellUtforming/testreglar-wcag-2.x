@@ -1,11 +1,11 @@
 {
-	"namn": "1.1.1d CAPTCHA har tekstalternativ og alternativ form",
-	"id": "1.1.1d",
-	"testlabId": 231,
+	"namn": "Nett-1.1.1d CAPTCHA har tekstalternativ og alternativ form",
+	"id": "nett-1.1.1d",
+	"testlabId": 462,
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Dersom det er brukt CAPTCHA med ikkje-tekstleg innhald, er følgande oppfylt:</p>\r\n<ul>\r\n<li>Det finst minst to former for CAPTCHA, for eksempel i form av bilde, lyd eller tekst.</li>\r\n<li>Ikkje-tekstleg innhald har eit tekstalternativ som identifiserer og beskriv formålet.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For CAPTCHA skal tekstalternativet identifisere og beskrive hensikten. Følgende skal være oppfylt</p>\r\n<ul>\r\n<li>Tekstalternativet skal identifisere at det handler om en test, for å verifisere at brukeren er et menneske og</li>\r\n<li>Det tilbys minst to ulike typer CAPTCHA</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -70,12 +70,11 @@
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
+			"spm": "Kva side testar du?",
 			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
-			"oblig": true,
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
@@ -85,8 +84,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har nettsida CAPTCHA i form av innhald som ikkje er tekst?",
-			"ht": "<p>Sjå om du finn ein CAPTCHA på nettsida.</p>\n<p>CAPTCHA står for \"Completely Automated Public Turing test to tell Computers and Humans Apart\", kor brukaren ofte blir beden om å taste inn tekst frå eit forvrengt bilde eller ei lydfil.</p>",
+			"spm": "Finst det ikkje-tekstleg CAPTCHA på testsida?",
+			"ht": "<p>Gjer ein visuell inspeksjon, for å sjå om du finn CAPTCHA på nettsida.</p>\n<p>CAPTCHA står for \"Completely Automated Public Turing test to tell Computers and Humans Apart\". Brukaren blir ofte bedt om å </p>\n<ul>\n<li>legge inn tekst frå eit forvrengt bilde</li>\n<li>oppgi kva som blir sagt i eit lydklipp</li>\n<li>velge alle bilder som inneheld ein bil</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -95,17 +94,16 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testsida har ikkje CAPTCHA med annan utforming enn tekst."
+					"utfall": "Testsida har ingen ikkje-tekstleg CAPTCHA."
 				}
-			},
-			"kilde": []
+			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Beskriv kva innhald CAPTCHAen ligg i tilknytning til.",
-			"ht": "CAPTCHA ligg ofte i tilknytning til skjema. Du kan for eksempel beskrive namn på skjema, plassering på sida, element som er i nærleiken.",
+			"spm": "Kva CAPTCHA testar du?",
+			"ht": "<p>Beskriv CAPTCHAen, slik at det er mogleg å identifisere den i ettertid. Viss det gjeld fleire CAPTCHA, registrerer du ein og ein. </p>\n<p><strong>Tips:</strong> CAPTCHA ligg ofte i tilknytning til skjema. Du kan for eksempel oppgi namn på skjema, plassering på sida, element som er i nærleiken.</p>",
 			"type": "tekst",
-			"label": "CAPTCHAen ligg i tilknytning til:",
+			"label": "CAPTCHA:",
 			"multilinje": true,
 			"oblig": true,
 			"ruting": {
@@ -117,8 +115,8 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Består CAPTCHA-løysinga av fleire enn ein form for CAPTCHA?",
-			"ht": "Alternativ formar for CAPTCHA kan vere bilde, logikk eller lyd.",
+			"spm": "Har CAPTCHAen du testar minst to ulike format?",
+			"ht": "<p>Ulike format kan vere;</p>\n<ul>\n<li>bilde</li>\n<li>lyd </li>\n<li>logisk oppgåve</li>\n<li>tekst</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G144"
@@ -131,13 +129,13 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "CAPTCHA manglar alternativ utforming."
+					"utfall": "CAPTCHA har ikkje minst to ulike format."
 				}
 			}
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Er CAPTCHAen i form av eit bilde?",
+			"spm": "Er CAPTCHAen eit bilde?",
 			"ht": "<p>Sjå i i koden for å finne ut om CAPTCHAen er eit bilde som er koda som <code>&lt;img&gt;</code>.</p>",
 			"type": "jaNei",
 			"ruting": {
@@ -154,13 +152,12 @@
 						"tekst": ""
 					}
 				}
-			},
-			"kilde": []
+			}
 		},
 		{
 			"stegnr": "3.4",
 			"spm": "Har bilde attributtet \"aria-label\" ?",
-			"ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p><p>Attributtet overstyrer eventuelt alt-attributt eller title-attributt.</p><p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten. </p><p>Sjå i koden og finn det aktuelle &#x3C;img&#x3E;-elementet.</p>",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren til å sjekke dette.</p>\n<p>Attributtet overstyrer eventuelt alt-attributt eller title-attributt.</p>\n<p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA6",
@@ -180,7 +177,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Har bilde attributtet \"aria-labelledby\" ?",
-			"ht": "<p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>\n<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (Aria-labelledby=\"id1 id2\")</p>",
+			"ht": "<p><strong>Merk:</strong> ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom, for eksempel <code>aria-labelledby=\"id1 id2\"</code>.</p>\n<p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA10",
@@ -200,7 +197,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Er aria-labelledby attributtet kopla til annan tekst på sida?",
-			"ht": "<p>Gjer eit søk i koden på id i aria-labelledby. Dersom det finst fleire id-ar skal du undersøke alle. Id-ane vil då vere skilt med mellomrom. (<code>Aria-labelledby=\"id1 id2\"</code>)</p>",
+			"ht": "<p>Gjer eit søk i koden på id i aria-labelledby. Dersom det finst fleire id-ar skal du undersøke alle. Id-ane vil då vere skilt med mellomrom, for eksempel <code>aria-labelledby=\"id1 id2\".</code></p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA10",
@@ -220,7 +217,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Er bilde koda med attributtet role=\"presentation\"?",
-			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren til å sjekke dette.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F38"
@@ -232,7 +229,7 @@
 					"delutfall": {
 						"nr": 0,
 						"fasit": "Nei",
-						"tekst": "CAPTCHA i form av bilde, er koda med role=\"presentation\"."
+						"tekst": "Bilde-CAPTCHA er koda med role=\"presentation\"."
 					}
 				},
 				"nei": {
@@ -244,11 +241,11 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Har bilde eit alt-attributt?",
-			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren til å sjekke dette.</p>",
 			"type": "jaNei",
 			"kilde": [
-				"H37",
-				"F65"
+				"F65",
+				"H37"
 			],
 			"ruting": {
 				"ja": {
@@ -261,7 +258,7 @@
 					"delutfall": {
 						"nr": 0,
 						"fasit": "Nei",
-						"tekst": "CAPTCHA i form av bilde, manglar alt-attributt."
+						"tekst": "Bilde-CAPTCHA har ikkje alt-attributt."
 					}
 				}
 			}
@@ -269,7 +266,7 @@
 		{
 			"stegnr": "3.9",
 			"spm": "Er det innhold i alt-attributtet?",
-			"ht": "<p>Sjå i koden om alt-attributtet har innhald.</p><p>Eit tomt alt-attributt er koda på formen alt=\"\" eller berre alt.</p>",
+			"ht": "<p>Sjå i koden om alt-attributtet har innhald. Eit tomt alt-attributt er koda på formen <code>alt=\"\"</code> eller berre <code>alt</code>.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"H37"
@@ -288,7 +285,7 @@
 		{
 			"stegnr": "3.10",
 			"spm": "Har bilde eit title-attributt?",
-			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren til å sjekke dette.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F65"
@@ -304,7 +301,7 @@
 					"delutfall": {
 						"nr": 0,
 						"fasit": "Nei",
-						"tekst": "CAPTCHA i form av bilde, manglar tekstalternativ."
+						"tekst": "Bilde-CAPTCHA har ikkje tekstalternativ."
 					}
 				}
 			}
@@ -312,7 +309,7 @@
 		{
 			"stegnr": "3.11",
 			"spm": "Er det innhald i title-attributtet?",
-			"ht": "<p>Sjå i koden om title-attributtet har innhald.</p><p>Eit tomt title-attributt er koda på formen title=\"\" eller berre title.</p>",
+			"ht": "<p>Sjå i koden om title-attributtet har innhald.</p>\n<p>Eit tomt title-attributt er koda på formen <code>title=\"\"</code> eller berre <code>title</code>.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F65"
@@ -330,12 +327,12 @@
 		},
 		{
 			"stegnr": "3.12",
-			"spm": "Gir innhaldet i attributtet saman med kontekst ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
-			"ht": "<p>Innhaldet i attributtet skal identifisere at det handlar om ein test, kode eller utfordring for å verifisere at brukaren er eit menneske. Konteksten er for eksempel tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</p><p>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p><p>Viss aria-labelledby visar til dupliserte ID-ar, skal du vurdere innhaldet til ID-en som står først i koden.</p><p><strong>MERK:</strong> Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
+			"spm": "Gir innhaldet i attributtet, saman med konteksten, ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
+			"ht": "<p>Gjer ei skjønnsmessig vurdering</p>\n<ul>\n<li>Innhaldet i attributtet skal identifisere at det er ein test for å verifisere at brukaren er eit menneske.</li>\n<li>Konteksten er for eksempel tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</li>\n<li>Viss <code>aria-labelledby</code> visar til dupliserte ID-ar, skal du vurdere innhaldet til ID-en som står først i koden.</li>\n</ul>\n<p><strong>Merk:</strong> Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p>\n<p><strong>Merk:</strong> Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
 			"type": "jaNei",
 			"kilde": [
-				"G143",
-				"F30"
+				"F30",
+				"G143"
 			],
 			"ruting": {
 				"ja": {
@@ -353,15 +350,15 @@
 					"delutfall": {
 						"nr": 0,
 						"fasit": "Nei",
-						"tekst": "CAPTCHA i form av bilde, manglar beskrivande identifikasjon av formålet."
+						"tekst": "Bilde-CAPTCHA har ikkje beskrivande identifikasjon av formålet."
 					}
 				}
 			}
 		},
 		{
 			"stegnr": "3.13",
-			"spm": "Er CAPTCHAen i form av eit logisk problem?",
-			"ht": "Eksempel på slik CAPTCHA er reknestykke eller ei gåte.",
+			"spm": "Er CAPTCHAen eit logisk problem?",
+			"ht": "<p>Eksempel på slik CAPTCHA er reknestykke eller ei gåte.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G144"
@@ -385,9 +382,8 @@
 		{
 			"stegnr": "3.14",
 			"spm": "Er den logiske CAPTCHAen koda som tekst?",
-			"ht": "<p>Teksten kan vere løpande tekst, tabell eller lignande.</p><p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden. </li></ul>",
+			"ht": "<p>Teksten kan vere løpande tekst, tabell eller lignande. Dette kan undersøkast på fleire måtar. </p>\n<ul>\n<li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst eller</li>\n<li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li>\n</ul>",
 			"type": "jaNei",
-			"kilde": [],
 			"ruting": {
 				"ja": {
 					"type": "regler",
@@ -399,7 +395,7 @@
 							"handling": {
 								"type": "avslutt",
 								"fasit": "Ja",
-								"utfall": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
+								"utfall": "CAPTCHA med fleire format, har beskrivande tekstalternativ."
 							}
 						},
 						"2": {
@@ -411,6 +407,20 @@
 								"steg": "3.15",
 								"delutfall": {
 									"nr": 1,
+									"fasit": "Ja",
+									"tekst": ""
+								}
+							}
+						},
+						"3": {
+							"type": "lik",
+							"sjekk": "3.14",
+							"verdi": "Ja",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.15",
+								"delutfall": {
+									"nr": 2,
 									"fasit": "Ja",
 									"tekst": ""
 								}
@@ -431,8 +441,8 @@
 		},
 		{
 			"stegnr": "3.15",
-			"spm": "Er CAPTCHAen i form av lyd?",
-			"ht": "Sjå om det finst ein playknapp, høgtalarikon eller liknande som syner at det handlar om ein CAPTCHA i form av lyd.",
+			"spm": "Er CAPTCHAen lyd?",
+			"ht": "<p>Sjå om det finst ein playknapp, høgtalarikon eller liknande som viser at det er ein lyd-CAPTCHA.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G144"
@@ -452,7 +462,7 @@
 							"handling": {
 								"type": "avslutt",
 								"fasit": "Nei",
-								"utfall": "CAPTCHA manglar alternativ utforming."
+								"utfall": "CAPTCHA har ikkje alternativt format."
 							}
 						},
 						"2": {
@@ -462,7 +472,7 @@
 							"handling": {
 								"type": "avslutt",
 								"fasit": "Nei",
-								"utfall": "CAPTCHA manglar alternativ utforming."
+								"utfall": "CAPTCHA har alternativt format."
 							}
 						},
 						"3": {
@@ -481,7 +491,7 @@
 											"fasit": "sjekkDelutfall",
 											"utfall": {
 												"nei": "#delutfall(0) #delutfall(1)",
-												"ja": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
+												"ja": "CAPTCHA med fleire format, har beskrivande tekstalternativ."
 											}
 										}
 									}
@@ -494,10 +504,9 @@
 		},
 		{
 			"stegnr": "3.16",
-			"spm": "Finst det ein mekanisme i form av tekst for å starte lyd-CAPTCHAen?",
-			"ht": "<p>Dette kan for eksempel vere ei lenke eller tekst på ein knapp.</p><p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden. </li></ul>",
+			"spm": "Finst det ein mekanisme i form av tekst, for å starte lyd-CAPTCHAen?",
+			"ht": "<p>Dette kan for eksempel vere ei lenke eller tekst på ein knapp. Dette kan undersøkast på fleire måtar. </p>\n<ul>\n<li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst.</li>\n<li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li>\n</ul>",
 			"type": "jaNei",
-			"kilde": [],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
@@ -511,8 +520,8 @@
 		},
 		{
 			"stegnr": "3.17",
-			"spm": "Gir teksten saman med konteksten ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
-			"ht": "<p>Teksten skal identifisere at det handlar om ein test, kode eller utfordring for å verifisere at brukaren er eit menneske.</p><p>Kontekst kan for eksempel vere tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</p><p>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p>",
+			"spm": "Gir teksten, saman med konteksten, ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
+			"ht": "<p>Gjer ei skjønnsmessig vurdering</p>\n<ul>\n<li>Innhaldet i attributtet skal identifisere at det er ein test for å verifisere at brukaren er eit menneske.</li>\n<li>Konteksten er for eksempel tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</li>\n</ul>\n<p><strong>Merk: </strong>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p>\n<p><strong>Merk: </strong>Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G143"
@@ -523,22 +532,21 @@
 					"fasit": "sjekkDelutfall",
 					"utfall": {
 						"nei": "#delutfall(0) #delutfall(1)",
-						"ja": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
+						"ja": "CAPTCHA med fleire format, har beskrivande tekstalternativ."
 					}
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "#delutfall(0) #delutfall(1) CAPTCHA i form av lyd, manglar tekstleg beskriving av formålet."
+					"utfall": "#delutfall(0) #delutfall(1) Lyd-CAPTCHA, har ikkje tekst som beskriv formålet."
 				}
 			}
 		},
 		{
 			"stegnr": "3.18",
-			"spm": "Finnes det en mekanisme i form av ikon/bilde for å starte lyd-CAPTCHAen?",
-			"ht": "Ikonet/bilde kan for eksempel ligge på ein knapp.",
+			"spm": "Finst det ein mekanisme i form av ikon/bilde, for å starte lyd-CAPTCHAen?",
+			"ht": "<p>Ikonet/bilde kan for eksempel ligge på ein knapp.</p>",
 			"type": "jaNei",
-			"kilde": [],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
@@ -547,23 +555,23 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "#delutfall(0) #delutfall(1) CAPTCHA i form av lyd, manglar mekanisme for å starte avspeling."
+					"utfall": "#delutfall(0) #delutfall(1) Lyd-CAPTCHA, har ikkje ein mekanisme for å starte avspeling."
 				}
 			}
 		},
 		{
 			"stegnr": "3.19",
-			"spm": "Gir teksten saman med konteksten ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
-			"ht": "<p>Teksten skal identifisere at det handlar om ein test, kode eller utfordring for å verifisere at brukaren er eit menneske.</p><p>Kontekst kan for eksempel vere tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</p><p>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p>",
+			"spm": "Gir teksten, saman med konteksten, ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
+			"ht": "<p>Gjer ei skjønnsmessig vurdering</p>\n<ul>\n<li>Innhaldet i attributtet skal identifisere at det er ein test for å verifisere at brukaren er eit menneske.</li>\n<li>Konteksten er for eksempel tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</li>\n</ul>\n<p> </p>\n<p><strong>Merk: </strong>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p>\n<p><strong>Merk:</strong> Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA6",
 				"ARIA10",
-				"G143",
-				"H37",
 				"F30",
 				"F38",
-				"F65"
+				"F65",
+				"G143",
+				"H37"
 			],
 			"ruting": {
 				"ja": {
@@ -571,13 +579,13 @@
 					"fasit": "sjekkDelutfall",
 					"utfall": {
 						"nei": "#delutfall(0) #delutfall(1)",
-						"ja": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
+						"ja": "CAPTCHA med fleire format, har beskrivande tekstalternativ."
 					}
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "#delutfall(0) #delutfall(1) CAPTCHA i form av lyd, manglar tekstleg beskriving av formålet."
+					"utfall": "#delutfall(0) #delutfall(1) Lyd-CAPTCHA, har ikkje tekst som beskriv formålet."
 				}
 			}
 		}
