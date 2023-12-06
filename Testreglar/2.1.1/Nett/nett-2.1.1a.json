@@ -124,7 +124,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Det er mogleg å nå og betene all funksjonalitet på nettsida via dokumentert, alternativ tastaturnavigasjon."
+					"utfall": "Innhald/funksjonalitet det er mogleg å nå og betene via dokumentert, alternativ tastaturnavigasjon."
 				},
 				"nei": {
 					"type": "gaaTil",
