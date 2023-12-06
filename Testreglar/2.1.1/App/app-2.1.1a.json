@@ -132,7 +132,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Det er innhald på appsida som ikkje er føremålsteneleg å betene med sveiping/dobbelttryk."
+					"utfall": "Innhald/funksjonalitet som det ikkje er føremålsteneleg å betene med sveiping/dobbelttryk."
 				},
 				"ja": {
 					"type": "gaaTil",
