@@ -156,7 +156,7 @@
 				"alle": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Det er ikkje mogleg å nå og betene alt innhald/funksjonalitet på appsida med sveiping/dobbelttrykk."
+					"utfall": "Innhald/funksjonalitet det ikkje er mogleg å nå og betene med sveiping/dobbelttrykk."
 				}
 			}
 		}
