@@ -66,8 +66,8 @@
 		},
 		{
 			"stegnr": "2.4",
-			"spm": "Får du indikasjon på at det finst minst ei sveipefelle på appsida?",
-			"ht": "<p>Sveip sakte for å navigere på appsida. </p>\n<ul>\n<li>Kontroller at du sveipar gjennom alt innhald og at du kjem tilbake til start.</li>\n<li>Hugs å opne menyar, modaler, og å gå inn i plugins med for eksempel mediaspelarar og kommentarfelt for å teste alt innhald. </li>\n</ul>\n<p><strong>Merk</strong>: Sveipefelle inneber at brukaren ikkje kan sveipe frem og tilbake mellom ulike elementer på appsida, utan å bli ståande fast i eit element</p>",
+			"spm": "Finst det minst ei sveipefelle på appsida?",
+			"ht": "<p>Sjekk om det er sveipefeller på appsida. Sveipefelle inneber at brukaren ikkje kan sveipe frem og tilbake mellom ulike elementer på appsida, utan å bli ståande fast i eit element. </p>\n<p><strong>Slik testar du: </strong></p>\n<p>Sveip sakte for å navigere på appsida. Kontroller at du sveiper appsida heilt ned og at du kjem tilbake til starten av appsida. </p>\n<ul>\n<li>Hugs å opne menyar, modaler, og å gå inn i plugins med for eksempel mediaspelarar og kommentarfelt for å teste alt innhald. </li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G21"
