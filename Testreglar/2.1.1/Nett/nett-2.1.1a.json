@@ -145,7 +145,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Innhald på nettsida som ikkje er føremålsteneleg å betene med tastatur."
+					"utfall": "Innhald/funksjonalitet på nettsida som ikkje er føremålsteneleg å betene med tastatur."
 				}
 			}
 		},
