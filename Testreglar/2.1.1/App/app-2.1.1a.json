@@ -1,6 +1,6 @@
 {
-	"namn": "App-2.1.1 Det er mogleg å nå innhald og bruke funksjonalitet med sveiping 2023",
-	"id": "app-2.1.1",
+	"namn": "App-2.1.1a Det er mogleg å nå innhald og bruke funksjonalitet med sveiping 2023",
+	"id": "app-2.1.1a",
 	"testlabId": 454,
 	"versjon": "1.0",
 	"type": "App",
@@ -31,7 +31,7 @@
 			"spm": "Kva appside testar du?",
 			"ht": "<p>Oppgi appside-ID.</p>",
 			"type": "tekst",
-			"label": "Skjermbilde:",
+			"label": "Appside:",
 			"datalist": "Sideutvalg",
 			"oblig": true,
 			"ruting": {
@@ -111,7 +111,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Kva innhald/funksjonalitet fekk du ikkje til å nå med sveiping eller aktivere med dobbelttrykk?",
-			"ht": "<p>Beskriv innhaldet med få stikkord.</p>",
+			"ht": "<p>Beskriv elementet, slik at det er mogleg å identifisere det i ettertid. Viss det gjeld fleire element, registrerer du eit og eit.</p>",
 			"type": "tekst",
 			"label": "Element:",
 			"multilinje": true,
@@ -132,7 +132,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Innhald som ikkje er føremålsteneleg å betene med sveiping/dobbelttryk."
+					"utfall": "Det er innhald på appsida som ikkje er føremålsteneleg å betene med sveiping/dobbelttryk."
 				},
 				"ja": {
 					"type": "gaaTil",
