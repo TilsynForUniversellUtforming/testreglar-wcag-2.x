@@ -132,7 +132,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Innhald/funksjonalitet som det ikkje er føremålsteneleg å betene med sveiping/dobbelttryk."
+					"utfall": "Innhald/funksjonalitet som det ikkje er føremålsteneleg å betene med sveiping/dobbelttrykk."
 				},
 				"ja": {
 					"type": "gaaTil",
