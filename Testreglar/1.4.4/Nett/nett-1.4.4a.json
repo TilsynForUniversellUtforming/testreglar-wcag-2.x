@@ -13,9 +13,6 @@
 			"title": "2.2"
 		},
 		{
-			"title": "3.1"
-		},
-		{
 			"title": "3.3"
 		},
 		{
@@ -28,13 +25,13 @@
 			"title": "3.6"
 		},
 		{
+			"title": "3.7"
+		},
+		{
 			"title": "3.8"
 		},
 		{
 			"title": "3.9"
-		},
-		{
-			"title": "3.10"
 		}
 	],
 	"steg": [
@@ -77,28 +74,9 @@
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
-					"steg": "3.1"
+					"steg": "3.2"
 				}
 			}
-		},
-		{
-			"stegnr": "3.1",
-			"spm": "Har nettlesaren ein funksjon for å zoome til minst 200 %?",
-			"ht": "<p><strong>Merk: </strong>Dette er funksjonalitet som zoomer alt innhaldet på nettsida, og ikkje berre teksten.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.2"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.5"
-				}
-			},
-			"kilde": [
-				"G142"
-			]
 		},
 		{
 			"stegnr": "3.2",
@@ -174,7 +152,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Er mekanismen for forstørring lett å finne på testsida?",
-			"ht": "<p>Lett å finne betyr at mekanismen er markert med større skrift, høg kontrast, anna farge eller liknande.</p>\n<p> </p>",
+			"ht": "<p>Lett å finne betyr at mekanismen er markert med større skrift, høg kontrast, anna farge eller liknande.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G178"
@@ -193,20 +171,8 @@
 		},
 		{
 			"stegnr": "3.7",
-			"spm": "Aktiver mekanismen for å forstørre teksten på nettsida.",
-			"ht": "",
-			"type": "instruksjon",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.8"
-				}
-			}
-		},
-		{
-			"stegnr": "3.8",
 			"spm": "Blir all teksten på nettsida forstørra når du aktiverer mekanismen?",
-			"ht": "<p><strong>Tips</strong>: Du kan opne nettsida i to faner for å gjere det lettare å samanlikne. </p>\n<p>All teksten på nettsida skal bli forstørra.</p>",
+			"ht": "<p>Aktiver mekanismen for å forstørre teksten på nettsida.</p>\n<p><strong>Tips</strong>: Du kan opne nettsida i to faner for å gjere det lettare å samanlikne. </p>\n<p>All teksten på nettsida skal bli forstørra.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G178"
@@ -214,7 +180,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.9"
+					"steg": "3.8"
 				},
 				"nei": {
 					"type": "avslutt",
@@ -224,7 +190,7 @@
 			}
 		},
 		{
-			"stegnr": "3.9",
+			"stegnr": "3.8",
 			"spm": "Får du tilgang til alt tekstleg innhald og funksjonalitet?",
 			"ht": "<p><strong>Tips</strong>: Du kan opne nettsida i to faner for å gjere det lettare å samanlikne. </p>\n<ul>\n<li>det er ok om du får tilgang til innhald/funksjonalitet ved å scrolle</li>\n<li>plassering av element på nettstaden treng ikkje vera likt</li>\n<li>trunkering er ok, så lenge du får tilgang til alt innhald eller funksjonalitet når innhaldet får fokus eller ved aktivering, for eksempel via</li>\n<li>hamburger-meny.</li>\n</ul>\n<p>Eksempel på at innhald eller funksjonalitet går tapt: </p>\n<ul>\n<li>tekst blir kutta av eller skjult</li>\n<li>tekst legg seg over annan tekst</li>\n<li>tekst ligg utanfor presentasjonsramma, og det er ikkje mogleg å scrolle for å få tak i innhaldet</li>\n<li>du får ikkje tilgang til ledetekstar, verktøytips eller skjemaelement</li>\n<li>du får ikkje tilgang til tekst eller funksjonalitet som er trunkert, når innhaldet får fokus eller blir aktivert</li>\n</ul>",
 			"type": "jaNei",
@@ -239,12 +205,12 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.10"
+					"steg": "3.9"
 				}
 			}
 		},
 		{
-			"stegnr": "3.10",
+			"stegnr": "3.9",
 			"spm": "Kva innhald og/eller funksjonalitet fekk du ikkje tilgang til?",
 			"ht": "<p>Registrer med stikkord.</p>",
 			"type": "tekst",
