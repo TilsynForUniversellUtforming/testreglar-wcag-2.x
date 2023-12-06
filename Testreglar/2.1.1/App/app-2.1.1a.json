@@ -44,7 +44,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har appsida innhald/funksjonalitet det er mogleg å sveipe til?",
-			"ht": "<p>Sveip sakte for å navigere i appen.</p>\n<p> </p>\n<p> </p>",
+			"ht": "<p>Sveip sakte for å navigere i appen.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
