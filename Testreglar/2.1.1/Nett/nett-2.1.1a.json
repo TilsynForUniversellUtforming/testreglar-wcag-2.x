@@ -165,7 +165,7 @@
 				"alle": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Det er ikkje mogleg å nå og betene alt innhald/funksjonalitet på nettsida med tastatur."
+					"utfall": "Innhald/funksjonalitet det ikkje er mogleg å nå og betene med tastatur."
 				}
 			}
 		}
