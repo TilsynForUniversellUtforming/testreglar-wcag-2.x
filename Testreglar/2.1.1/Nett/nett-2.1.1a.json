@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p class=\"MsoNormal\" style=\"margin-bottom: 6.0pt; margin-top: 0in; mso-margin-bottom-alt: 8.0pt; mso-margin-top-alt: 0in; mso-add-space: auto;\"><span style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\">All funksjonalitet på nettsiden kan nås og brukes med tastatur, uten at det er behov for tidsberegning av de enkelte tastetrykkene</span></p>\r\n<ul>\r\n<li><span style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\">Funksjonalitet på nettstedet som ikke er formålstjenlig å bruke med tastatur er unntatt</span></li>\r\n<li><!--[endif]--><span style=\"font-family: 'Arial',sans-serif; mso-bidi-font-family: 'Times New Roman';\">Dersom det er behov for noe bruk av noe annet enn standardmetoder for tastaturnavigasjon, får brukeren informasjon om hvilken metode som skal benyttes </span></li>\r\n</ul>",
+	"kravTilSamsvar": "<p>All funksjonalitet på nettsiden kan nås og brukes med tastatur, uten at det er behov for tidsberegning av de enkelte tastetrykkene</p>\r\n<ul>\r\n<li>Funksjonalitet på nettstedet som ikke er formålstjenlig å bruke med tastatur er unntatt</li>\r\n<li><!--[endif]-->Dersom det er behov for noe bruk av noe annet enn standardmetoder for tastaturnavigasjon, får brukeren informasjon om hvilken metode som skal benyttes </li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -52,7 +52,7 @@
 			"ruting": {
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testsida har ikkje innhald/funksjonalitet som er mogleg å nå/betene med tastatur."
+					"utfall": "Testsida har ikkje innhald/funksjonalitet det er mogleg å navigere til med tastatur."
 				},
 				"ja": {
 					"type": "gaaTil",
