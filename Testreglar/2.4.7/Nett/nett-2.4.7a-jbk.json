@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p class=\"MsoListParagraphCxSpFirst\" style=\"text-indent: -18.0pt; mso-list: l0 level1 lfo1;\"><!-- [if !supportLists]-->·     Alle elementer som det er mulig å navigere til med tastaturet, får synlig fokusmarkering og markeringen er ikke tidsbegrenset</p>\r\n<ul>\r\n<li>Dersom det kun er mulig å navigere til ett enkelt element på nettsiden med tastaturet, er kravet oppfylt.</li>\r\n</ul>\r\n<p class=\"MsoListParagraphCxSpFirst\" style=\"text-indent: -.25in; mso-list: l0 level1 lfo1;\"><!-- [if !supportLists]-->·</p>",
+	"kravTilSamsvar": "<p>Alle elementer som det er mulig å navigere til med tastaturet, får synlig fokusmarkering og markeringen er ikke tidsbegrenset</p>\r\n<ul>\r\n<li>Dersom det kun er mulig å navigere til ett enkelt element på nettsiden med tastaturet, er kravet oppfylt.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
