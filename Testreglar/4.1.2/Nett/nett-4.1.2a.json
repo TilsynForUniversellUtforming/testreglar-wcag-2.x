@@ -1,0 +1,489 @@
+{
+	"namn": "Nett-4.1.2a For skjemaelementer kan tilgjengelig navn, rolle og tilstand bestemmes programmatisk  2023",
+	"id": "nett-4.1.2a",
+	"testlabId": 435,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Det er flere måter å oppfylle kravet på.</p>\r\n<p>Navn og rolle:</p>\r\n<ul>\r\n<li>Alle skjemaelementer har et tilgjengelig navn, som beskriver formålet med det aktuelle elementet og </li>\r\n<li>Alle skjemaelementer har riktig rolle, som identifiserer funksjonen til det aktuelle elementet og</li>\r\n<li>Skjemaelementer som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen</li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>Når tilstander, egenskaper og verdier i skjemaelementer kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>Varsel om endringer i det aktuelle elementet er tilgjengelig for brukeragenter</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		},
+		{
+			"title": "3.6"
+		},
+		{
+			"title": "3.7"
+		},
+		{
+			"title": "3.8"
+		},
+		{
+			"title": "3.9"
+		},
+		{
+			"title": "3.10"
+		},
+		{
+			"title": "3.11"
+		},
+		{
+			"title": "3.12"
+		},
+		{
+			"title": "3.13"
+		},
+		{
+			"title": "3.14"
+		},
+		{
+			"title": "3.15"
+		},
+		{
+			"title": "3.16"
+		},
+		{
+			"title": "3.17"
+		},
+		{
+			"title": "3.18"
+		},
+		{
+			"title": "3.19"
+		},
+		{
+			"title": "3.20"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Gir verktøyet resultater under \"Form control has accessible name\"?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk verktøyet <a href=\"https://chrome.google.com/webstore/detail/qualweb-extension/ljgilomdnehokancdcbkmbndkkiggioc\" target=\"_blank\" rel=\"noopener\">QualWeb </a>i Chrome på testsiden\n<ul>\n<li>velg kun \"ACT Rules\"</li>\n<li>trykk på knappen \"Evaluate\"</li>\n<li>utvid \"Fliters\"</li>\n<li>fjern hake på \"Warning\"</li>\n</ul>\n</li>\n<li>Sjekk om det finnes resultater på \"Form control has accessible name\"<br>\n<ul>\n<li>trykk på \"Form control has accessible name\" for å vise aktuelle resultater\n<ul>\n<li>Dersom alternativene ikke kommer opp, har ikke QW funnet skjemaelementer</li>\n</ul>\n</li>\n<li>velg både Passed og Failed</li>\n<li>du kan bruke \"Highlight Element\" for å vise hvor aktuelle elementer ligger på siden\n<ul>\n<li>Bruk pilene for å navigere gjennom resultater for forskjellige elementer</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li><strong>Du skal ikke teste knapper. Knapper har egen testregel.</strong> \n<ul>\n<li>Knapper blir  for eksempel brukt til å aktivere en funksjon eller sende inn skjema. </li>\n</ul>\n</li>\n<li>Du skal teste både aktive og inaktive skjemaelementer.</li>\n<li>Hvis verktøyet ikke finner skjemaelementer, velger du \"Nei\" i dette steget</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.20"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilket skjemaelement tester du?",
+			"ht": "<p>Beskriv skjemaelement, slik at det er mulig å identifisere det i ettertid. Hvis verktøyet finner flere skjemaelementer, registrerer du et og et.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"label": "Skjemaelement:",
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Hvilket resultat gir verktøyet for dette skjemaelementet?",
+			"ht": "<p>Verktøyet gir resultat:</p>",
+			"type": "radio",
+			"ruting": {
+				"alt0": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementet har ikke et tilgjengelig navn."
+				},
+				"alt1": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			},
+			"svarArray": [
+				"Brudd (Failed)",
+				"Samsvar (Passed)"
+			]
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Hvilken type skjemaelement tester du?",
+			"ht": "<p>Velg type skjemaelement i listen.</p>",
+			"type": "radio",
+			"svarArray": [
+				"avkryssningsboks",
+				"nedtrekksliste",
+				"radioknapp",
+				"inndatafelt",
+				"søkefelt",
+				"switch",
+				"listeboks",
+				"annet"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Har skjemaelementet et tilgjengelig navn, som ikke er tomt?",
+			"ht": "<p>Slik tester du:</p>\n<p><strong>Alternativ 1:</strong></p>\n<ul>\n<li>Åpne DevTools i nettleseren (F12) Chrome</li>\n<li>Inspiser skjemaelementet med funksjonen \"inspiser element med mus\"\n<ul>\n<li>Klikk på pil-knappen i øvre venstre hjørne av vinduet, for å aktivere funksjonen</li>\n</ul>\n</li>\n<li>Hold musepekeren over skjemaelementet du tester</li>\n<li>En pop-up viser blant annet \"Name\" og \"Role\" under overskriften \"Accessibility\"</li>\n<li>Sjekk om informasjon under \"Name\" er ikke tomt</li>\n</ul>\n<p><strong>Alternativ 2:</strong></p>\n<ul>\n<li>Inspiser skjemaelementet i Chrome</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li>\n<li>Sjekk at informasjon under \"Name\" ikke er tomt.</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementet har ikke et tilgjengelig navn."
+				}
+			},
+			"kilde": [
+				"ARIA14",
+				"ARIA16",
+				"F68",
+				"F86",
+				"G108",
+				"H44",
+				"H65",
+				"H88",
+				"H91"
+			]
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Beskriver tilgjengelig navn formålet med skjemaelementet?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Ta utgangspunkt i det tilgjengelige navnet du fant i forrige steg.</li>\n<li>Sjekk om det tilgjengelige navnet beskriver formålet med skjemaelementet. Det er tilstrekkelig at det tilgjengelige navnet identifiserer skjemaelementet.</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementet har et tilgjengelig navn, som ikke beskriver formålet med elementet."
+				}
+			},
+			"kilde": [
+				"ARIA14"
+			]
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Hvilket attributt gir tilgjengelig navn til skjemaelementet?",
+			"ht": "<ul>\n<li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Checker</li>\n<li>Velg et alternativ</li>\n</ul>",
+			"type": "radio",
+			"svarArray": [
+				"aria-labelledby",
+				"aria-label",
+				"label",
+				"innhold",
+				"title",
+				"alt",
+				"value",
+				"annet"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Er skjemaelementet kodet med riktig rolle?",
+			"ht": "<p>Det er flere måter å kode et skjemaelement, men det skal alltid ha en rolle i Accessibility Tree, som identifiserer funksjonen til det aktuelle skjemaelementet.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Åpne Accessibility Checker i DevTools i nettleseren (F12) Chrome</li>\n<li>Sjekk om informasjon under \"Role\" er i samsvar med funksjonen til skjemaelementet</li>\n<li>Eksempler:  \n<ul>\n<li>avkryssingsboks: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#checkbox\" target=\"_blank\" rel=\"noopener\">checkbox</a></li>\n<li>nedtrekksliste: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#combobox\" target=\"_blank\" rel=\"noopener\">combobox</a></li>\n<li>radioknapp: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#radio\" target=\"_blank\" rel=\"noopener\">radio</a></li>\n<li>inndatafelt: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#textbox\" target=\"_blank\" rel=\"noopener\">textbox</a></li>\n<li>søkefelt: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#searchbox\" target=\"_blank\" rel=\"noopener\">searchbox</a></li>\n<li>switch: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#switch\" target=\"_blank\" rel=\"noopener\">switch</a></li>\n<li>listeboks: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#listbox\" target=\"_blank\" rel=\"noopener\">listbox</a></li>\n<li>annet: andre relevante roller i <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Roles</a></li>\n</ul>\n</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementet har tilgjengelig navn, men er ikke kodet med riktig rolle, som identifiserer funksjonen til det aktuelle elementet."
+				}
+			},
+			"kilde": [
+				"ARIA4",
+				"F59",
+				"G10"
+			]
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Må skjemaelementet være koblet til et annet skjemaelement for å gi mening?",
+			"ht": "<p>Eksempel på dette er at grupper av radioknapper eller avkryssingsbokser må leses i sammenheng med et overordnet spørsmål.</p>\n<p>Andre eksempler på gruppe er tekstfelt for telefonnummer med et felt for landskode og et felt for telefonnummer gruppert sammen i et element.</p>\n<p>En tommelfingerregel er at når en gruppe med skjemaelementer krever en egen overskrift, er det riktig å kode med fieldset og legend.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.16"
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Ligger skjemaelementet inne i et &lt;fieldset&gt;-element?",
+			"ht": "<p>Du kan bruke DevTools i nettleseren (F12) Chrome for å sjekke dette.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Ligger det et &lt;legend&gt;-element inne i &lt;fieldset&gt;-elementet?",
+			"ht": "<p>Du kan bruke DevTools i nettleseren (F12) Chrome for å sjekke dette.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Er &lt;legend&gt; det første elementet som ligger inne i &lt;fieldset&gt;?",
+			"ht": "<p>Du kan bruke DevTools i nettleseren (F12) Chrome for å sjekke dette.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				}
+			}
+		},
+		{
+			"stegnr": "3.12",
+			"spm": "Blir skjemaelementet identifisert av innholdet i &lt;legend&gt; kombinert med skjemaelementets tilgjengelig navn?",
+			"ht": "<p>Du skal vurdere skjemaelementets tilgjengelige navn og innholdet i <code>&lt;legend&gt;</code> samlet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.16"
+				}
+			}
+		},
+		{
+			"stegnr": "3.13",
+			"spm": "Ligger skjemaelementet inne i et annet element med attributtet role=\"group\"?",
+			"ht": "<p>Slik tester du:</p>\n<p>Element som starter framfor og blir avsluttet etter skjemaelementet du tester. Role-attributtet kan for eksempel ligge på en <code>&lt;div&gt;</code> eller <code>&lt;span&gt;</code>.</p>\n<ul>\n<li>Åpne Accessibility Checker i DevTools i nettleseren (F12) Chrome</li>\n<li>Sjekk om informasjon under \"Role\" er \"group\"</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementetet har tilgjengelig navn og er kodet med riktig rolle. Skjemaelementet er plassert i en gruppe som ikke er identifisert i koden."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.14"
+				}
+			}
+		},
+		{
+			"stegnr": "3.14",
+			"spm": "Har elementet med rolle group et tilgjengelig navn, som ikke er tomt?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Åpne Accessibility Checker i DevTools i nettleseren (F12) Chrome</li>\n<li>Sjekk at informasjon under \"Name\" ikke er tomt.</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.15"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementet har tilgjengelig navn og er kodet med riktig rolle. Skjemaelement er plassert i en gruppe som ikke har et tilgjengelig navn."
+				}
+			}
+		},
+		{
+			"stegnr": "3.15",
+			"spm": "Blir skjemaelementet identifisert av det tilgjengelige navnet for gruppen kombinert med skjemaelementets tilgjengelige navn?",
+			"ht": "<p>Du skal vurdere både skjemaelementets tilgjengelig navn og det tilgjengelige navnet for gruppen som skjemaelementet ligger inne i samlet. </p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.16"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementetet har tilgjengelig navn og er kodet med riktig rolle. Skjemaelementet er plassert i en gruppe som har et tilgjengelig navn, men det tilgjengelige navnet for gruppen identifiserer ikke formålet med skjemaelementet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.16",
+			"spm": "Har skjemaelementet mer enn en tilstand når brukeren samhandler med den?",
+			"ht": "<p>En tilstand er en dynamisk egenskap som endres når brukeren samhandler med skjemaelementet.</p>\n<p>Trykk på skjemaelementet og sjekk om elementet har minst en av disse tilstandene: </p>\n<ul>\n<li>avkryssingsboks eller radioknapp: checkbox eller radio - avkrysset eller ikke avkrysset</li>\n<li>nedtrekksliste: combobox - utvidet eller sammensluttet</li>\n<li>inndatafelt: textbox - utfylt eller ikke utfylt</li>\n<li>switch: switch - av/på</li>\n<li>annet: andre relevante tilstander (State) knyttet til <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Roles</a></li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Skjemaelementet har et tilgjengelig navn, og riktig rolle,  som beskriver formålet med det aktuelle elementet."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.17"
+				}
+			}
+		},
+		{
+			"stegnr": "3.17",
+			"spm": "Hvor mange tilstander har skjemaelementet? ",
+			"ht": "<p>Registrer antall tilstander.</p>\n<p>Eksempel: En avkryssingsboks kan ha to tilstander, avkrysset eller ikke avkrysset.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.18"
+				}
+			},
+			"label": "Antall tilstander:",
+			"filter": "tal"
+		},
+		{
+			"stegnr": "3.18",
+			"spm": "Hvor mange tilstander er ikke angitt programmatisk?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser skjemaelementet i Chrome</li>\n<li>Bruk Accessibility Checker</li>\n<li>Under ARIA-attributter eller Computed Properties, sjekk om det finnes:\n<ul>\n<li>avkryssingsboks eller radioknapp\n<ul>\n<li>hvis avkrysset: aria-checked: true eller Checked: true</li>\n<li>hvis ikke avkrysset: aria-checked: false eller Checked: false</li>\n</ul>\n</li>\n<li>nedtrekksliste<br>\n<ul>\n<li>hvis innholdet er sammensluttet: aria-expanded: false eller Expanded: false</li>\n<li>hvis innholdet er utvidet: aria-expanded: true eller Expanded: true</li>\n</ul>\n</li>\n<li>switch\n<ul>\n<li>hvis knappen er på: aria-pressed: true eller aria-checked: true</li>\n<li>hvis knappen er av: aria-pressed: false eller aria-checked: false</li>\n<li>hvis knappen har en mellomliggende tilstand mellom tilstander av og på: aria-pressed: mixed.</li>\n</ul>\n</li>\n<li>annet: andre relevante tilstander (State) knyttet til <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Roles</a></li>\n</ul>\n</li>\n<li>Registrer antall tilstander som ikke er angitt programmatisk.</li>\n</ul>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"type": "lik",
+							"sjekk": "3.18",
+							"verdi": "0",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Skjemaelementet har et tilgjengelig navn, og riktig rolle, som beskriver formålet med det aktuelle elementet. Tilstanden er angitt programmatisk."
+							}
+						},
+						"2": {
+							"type": "ulik",
+							"sjekk": "3.18",
+							"verdi": "0",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.19"
+							}
+						}
+					}
+				}
+			},
+			"kilde": [
+				"ARIA5",
+				"G10"
+			],
+			"label": "Antall tilstander:",
+			"filter": "tal"
+		},
+		{
+			"stegnr": "3.19",
+			"spm": "Hvilke tilstander er ikke angitt programmatisk?",
+			"ht": "<p>Beskriv tilstander som ikke er angitt programmatisk, slik at det er mulig å identifisere dem i ettertid.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementet har et tilgjengelig navn, og riktig rolle, som beskriver formålet med det aktuelle elementet. Tilstanden er ikke angitt programmatisk."
+				}
+			},
+			"label": "Tilstander:",
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.20",
+			"spm": "Har testsiden skjemaelementer som verktøyet ikke avdekker?",
+			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes flere skjemaelementer på testsiden.</p>\n<p>Begrensninger i verktøyet</p>\n<ul>\n<li>Det finner kun skjemaelementer som har en rolle fra <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Role</a></li>\n<li>Det finner ikke skjemaelementer kodet på andre måter, for eksempel <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code> eller lignende  </li>\n</ul>\n<p><strong>Skjemaelement:</strong> Eksempel på skjemaelementer er avkryssningsboks, nedtrekksliste, radioknapp, inndatafelt, søkefelt, switch og listeboks.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke skjemaelementer."
+				}
+			},
+			"kilde": [
+				"F20",
+				"F59"
+			]
+		}
+	]
+}
