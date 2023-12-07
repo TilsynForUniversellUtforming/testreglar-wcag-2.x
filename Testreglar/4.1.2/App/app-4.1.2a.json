@@ -1,128 +1,281 @@
 {
-    "namn": "App 4.1.2a Interaktive element er identifisert",
-    "id": "app-4.1.2a",
-    "testlabId": 266,
-    "versjon": "1.0",
-    "type": "App",
-    "spraak": "",
-    "kravTilSamsvar": "<p>For desse typane av interaktive element gjeld følgande:</p>\r\n<ul>\r\n<li>skjemaelement skal ha ledetekst som identifiserer skjemaelementet</li>\r\n<li>knappar skal ha ledetekst som identifiserer funksjonen til knappen</li>\r\n<li>lenka bilder skal ha alternativ tekst som beskriv lenkemålet</li>\r\n</ul>\r\n<p> </p>",
-    "side": "2.1",
-    "element": "3.1",
-    "kolonner": [
-        {
-            "title": "2.2"
-        },
-        {
-            "title": "3.2"
-        },
-        {
-            "title": "3.4"
-        }
-    ],
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Kva skjermbilde testar du på?",
-            "ht": "",
-            "type": "tekst",
-            "kilde": [],
-            "datalist": "Sideutvalg",
-            "label": "Skjermbilde:",
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Har skjermbilde interaktive element?",
-            "ht": "<p>Sjå over skjermbilde å sjå om det inneheld element du kan trykke på eller fylle inn informasjon i. Dette vil for eksempel vere:</p>\n<ul>\n<li>Inputfelt (Felt for å fylle inn tekst, tall dato osv...)</li>\n<li>Knappar</li>\n<li>Avkryssingsboksar</li>\n<li>Lenka bilde</li>\n</ul>",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Skjermbilde har ikkje interaktive element."
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Beskriv det interaktive elementet du testar?",
-            "ht": "<p>Skriv kort eller bruk stikkord for å identifisere elementet du testar.</p>",
-            "type": "tekst",
-            "kilde": [],
-            "label": "Interaktivt element:",
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            },
-            "multilinje": true
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Kva type interaktivt element testar du?",
-            "ht": "<p>Vel i lista.</p>\n<p>Inputfelt er her alle felt/element du kan fylle inn informasjon i. Dette kan for eksempel vere datoveljar, tekstfelt, felt for å fylle inn dato og tal.</p>",
-            "type": "radio",
-            "kilde": [],
-            "svarArray": [
-                "Knappar",
-                "Avkryssingsboks",
-                "Lenka bilder",
-                "Nedtrekksliste",
-                "Inputfelt",
-                "Anna"
-            ],
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Aktiver skjermlesar (opplesingsfunksjon).",
-            "ht": "<p>Trykk på det interaktive elementet for å få lest opp ledeteksten/den alternative teksten til elementet.</p>",
-            "type": "instruksjon",
-            "kilde": [],
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.4"
-                }
-            }
-        },
-        {
-            "stegnr": "3.4",
-            "spm": "Får det interaktive elementet du testar opplese ein ledetekst som identifiserer elementet?",
-            "ht": "<p>Sjekk at teksten du får opplest for:</p>\n<ul>\n<li>skjemaelement identifiserer skjemaelementet</li>\n<li>lenka bilder beskriv lenkemålet</li>\n<li>knappar identifiserer funksjonen til knappen.</li>\n</ul>",
-            "type": "jaNei",
-            "kilde": [
-                "G82",
-                "F89",
-                "G135"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Det interaktive elementet får lest opp ein ledetekst som identifiserer elementet."
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Det interaktive elementet får ikkje lest opp ein ledetekst som identifiserer elementet."
-                }
-            }
-        }
-    ]
+	"namn": "App-4.1.2a For brukergrensesnittkomponenter kan tilgjengelig navn, rolle og tilstand bestemmes programmatisk 2023",
+	"id": "app-4.1.2a",
+	"testlabId": 445,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Navn og rolle:</p>\r\n<ul>\r\n<li>Alle brukergrensesnittkomponenter har et tilgjengelig navn, som beskriver formålet med den aktuelle komponenten og</li>\r\n<li>Alle brukergrensesnittkomponenter har riktig rolle, som identifiserer funksjonen til den aktuelle komponenten og</li>\r\n<li>Brukergrensesnittkomponenter som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen</li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>Når tilstander, egenskaper og verdier i brukergrensesnittkomponenter kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>Varsel om endringer i den aktuelle komponenten er tilgjengelig for brukeragenter </li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		},
+		{
+			"title": "3.6"
+		},
+		{
+			"title": "3.7"
+		},
+		{
+			"title": "3.8"
+		},
+		{
+			"title": "3.9"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken appside tester du?",
+			"ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
+			"type": "tekst",
+			"label": "Appside:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsiden brukergrensesnittkomponenter?",
+			"ht": "<p>Gjør en visuell inspeksjon. Sjekk om minst én av disse komponentene finnes på appsiden:</p>\n<ul>\n<li>knapper</li>\n<li>avkryssingsbokser</li>\n<li>lenkede bilder</li>\n<li>menyer og menyelementer</li>\n<li>nedtrekkslister</li>\n<li>radioknapper</li>\n<li>slider</li>\n<li>inndatafelt</li>\n<li>søkefelt</li>\n<li>switch</li>\n</ul>\n<p><strong>Merk:</strong> Skjema i PDF, Word eller lignende, er ikke aktuelle testobjekt.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appsiden har ikke brukergrensesnittkomponenter."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Er det mulig å sveipe til minst én brukergrensesnittkomponent?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser\n<ul>\n<li> iOS: VoiceOver</li>\n<li>Android: Talkback</li>\n</ul>\n</li>\n<li>Åpne appsiden du tester</li>\n<li>Sjekk om det er mulig å sveipe til minst én komponent</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ikkje testbart",
+					"utfall": "Det er ikke mulig å sveipe til brukergrensesnittkomponenter på appsiden."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken brukergrensesnittkomponent tester du?",
+			"ht": "<p>Beskriv komponenten, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere komponenter, registrerer du en og en.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"label": "Brukergrensesnittkomponent:",
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Hvilken brukergrensesnittkomponent tester du?",
+			"ht": "<p>Velg type komponent i listen.</p>",
+			"type": "radio",
+			"svarArray": [
+				"knapp",
+				"avkryssningsboks",
+				"nedtrekksliste",
+				"meny og menyelement",
+				"radioknapp",
+				"slider",
+				"inndatafelt",
+				"søkefelt",
+				"switch",
+				"annet"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Har brukergrensesnittkomponenten et tilgjengelig navn, som ikke er tomt?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: Talkback </li>\n</ul>\n</li>\n<li>Sveip og trykk på brukergrensesnittkomponenten du tester</li>\n<li>Sjekk om skjermleser leser opp tilgjengelig navn\n<ul>\n<li>Merk at skjermleseren ofte leser opp tilleggsinformasjon som ikke er en del av det tilgjengelige navnet</li>\n<li>Vanligvis starter skjermleseren opplesningen med tilgjengelig navn, rolle rett etter det tilgjengelige navnet og deretter tilleggsbeskrivelse knyttet til brukergrensesnittkomponenten</li>\n<li>Du skal kun vurdere tilgjengelig navn her</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk: </strong>Noen brukergrensesnittkomponenter ligger i en gruppe, som må leses i sammenheng med et overordnet spørsmål. Dette spørsmålet er tilgjengelig navn til gruppen og du skal sjekke om skjermleser leser det opp i tillegg til tilgjengelig navn for den enkelte komponenten.</p>\n<p>Eksempel på elementer som ofte er knyttet til en gruppe: checkbox, combobox, listbox, menuitemcheckbox, menuitemradio, radio, searchbox, slider, spinbutton, switch, textbox.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Brukergrensesnittkomponenten har ikke et tilgjengelig navn."
+				}
+			},
+			"kilde": [
+				"G10",
+				"G135"
+			]
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Beskriver tilgjengelig navn formålet med brukergrensesnittkomponenten?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Ta utgangspunkt i det tilgjengelige navnet du fant i forrige steg.</li>\n<li>Sjekk om det tilgjengelige navnet beskriver formålet med skjemaelementet. Det er tilstrekkelig at det tilgjengelige navnet identifiserer skjemaelementet.</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn, som ikke beskriver formålet med komponenten."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Er brukergrensesnittkomponenten kodet med riktig rolle?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Sjekk hvilken funksjonalitet komponenten har ved å trykke på den</li>\n<li>Sjekk om rollen som leses opp identifiserer den aktuelle komponentens funksjon</li>\n</ul>\n<p>Det betyr at knapp skal leses opp som knapp, og tilsvarende for andre komponenter.</p>\n<p><strong>Merk:</strong> Noen brukergrensesnittkomponenter ligger i en gruppe, som må leses i sammenheng med et overordnet spørsmål. Gruppen skal ha rolle \"group\" og du skal sjekke om skjermleser leser det opp i tillegg til rollen for den enkelte komponenten.</p>\n<p>Eksempel på elementer som ofte er knyttet til en gruppe: checkbox, combobox, listbox, menuitemcheckbox, menuitemradio, radio, searchbox, slider, spinbutton, switch, textbox.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, men rollen identifiserer ikke komponentens funksjon."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				}
+			},
+			"kilde": [
+				"G10"
+			]
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Har brukergrensesnittkomponenten mer enn en tilstand når brukeren samhandler med den?",
+			"ht": "<p>En tilstand er en dynamisk egenskap som endres når brukeren samhandler med komponenten. Hvilke tilstander som er aktuelle vil variere med type komponent.</p>\n<p>Trykk eller dobbelttrykk (for å endre tilstand) på komponenten, og sjekk om den har minst én av disse tilstandene: </p>\n<ul>\n<li>av eller på</li>\n<li>spill av, pause, stopp</li>\n<li>aktivert eller deaktivert</li>\n<li>utvidet eller sammensluttet</li>\n<li>avkrysset eller ikke avkrysset</li>\n<li>markert eller ikke markert</li>\n<li>valgt eller ikke valgt</li>\n<li>nåværende</li>\n<li>gyldig eller ugyldig</li>\n<li>drag and drop</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, og rollen identifiserer komponentens funksjon."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Hvor mange tilstander har brukergrensesnittkomponenten? ",
+			"ht": "<p>Registrer antall tilstander.</p>\n<p>Eksempel: en avkryssingsboks kan ha to tilstander avkrysset eller ikke avkrysset</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				}
+			},
+			"label": "Antall tilstander:",
+			"filter": "tal"
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Hvor mange tilstander er ikke angitt programmatisk?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: Talkback </li>\n</ul>\n</li>\n<li>Trykk på komponenten du tester</li>\n<li>Sjekk om skjermleser leser opp nåværende tilstand\n<ul>\n<li>Vanligvis starter  opplesningen med tilgjengelig navn, rolle og deretter tilstanden.</li>\n<li>Du skal kun vurdere tilstanden her</li>\n</ul>\n</li>\n<li>Endre tilstanden med dobbelttrykk</li>\n<li>Sjekk om skjermleser leser opp endret tilstand</li>\n<li>Registrer antall tilstander som ikke er lest opp av skjermleser.</li>\n</ul>",
+			"type": "tekst",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, rollen identifiserer komponentens funksjon og komponentens tilstand er angitt programmatisk."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, rollen identifiserer komponentens funksjon, men komponentens tilstand er ikke angitt programmatisk."
+				},
+				"alle": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"type": "lik",
+							"sjekk": "3.8",
+							"verdi": "0",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, rollen identifiserer komponentens funksjon og komponentens tilstand er angitt programmatisk."
+							}
+						},
+						"2": {
+							"type": "ulik",
+							"sjekk": "3.8",
+							"verdi": "0",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.9"
+							}
+						}
+					}
+				}
+			},
+			"kilde": [
+				"G10"
+			],
+			"label": "Antall tilstander:",
+			"filter": "tal"
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Hvilke tilstander er ikke angitt programmatisk?",
+			"ht": "<p>Beskriv tilstander som ikke er angitt programmatisk, slik at det er mulig å identifisere dem i ettertid.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, rollen identifiserer komponentens funksjon, men komponentens tilstand er ikke angitt programmatisk."
+				}
+			},
+			"label": "Tilstander:",
+			"multilinje": true
+		}
+	]
 }
