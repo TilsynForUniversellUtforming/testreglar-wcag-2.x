@@ -1,0 +1,233 @@
+{
+	"namn": "Nett-4.1.2d For menyelementer kan tilgjengelig navn, rolle og tilstand bestemmes programmatisk 2023",
+	"id": "nett-4.1.2d",
+	"testlabId": 446,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>For menyer</p>\r\n<p>Navn og rolle:</p>\r\n<ul>\r\n<li>Menyelementer har et tilgjengelig navn, som beskriver formålet med det aktuelle elementet og </li>\r\n<li>Menyelementer har riktig rolle, som identifiserer funksjonen til det aktuelle elementet</li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>Når tilstander, egenskaper og verdier i menyelementer kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>Varsel om endringer i det aktuelle menyelementet er tilgjengelig for brukeragenter </li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "2.4"
+		},
+		{
+			"title": "2.5"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		},
+		{
+			"title": "3.5"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsiden meny?",
+			"ht": "<p><strong>Hovedmeny/primærmeny</strong></p>\n<p>Meny er innhold som er gjentatt på tvers av nettsidene på et nettsted, og er ofte en hovedmetode for å navigere på nettstedet. Den består vanligvis av en eller flere faste grupper av lenker til forskjellige nettsider, som tilhører samme nettsted. Menyen ligger normalt før hovedinnholdet på den aktuelle nettsiden. </p>\n<p>Menyer kan utformes på flere måter. De kan for eksempel være visuelt plassert på toppen, høyre eller venstre side av nettsiden, eller ligge under knapp eller lignende funksjonalitet som utvider og sammenslutter menyelementer (hamburger-meny).</p>\n<p><strong>Sekundærmeny</strong></p>\n<p>Et nettsted kan ha mer enn én meny. Sekundærmeny har ofte samme design på tvers av nettsidene på et nettsted, men har forskjellig innhold alt etter hvilken nettside du er på.</p>\n<p><strong>Merk:</strong> Menyen trenger ikke å gjentas på alle nettsider på nettstedet for å regnes som meny. </p>\n<p><strong>Du skal ikke teste: </strong></p>\n<ul>\n<li>bunntekst/footer på nettstedet</li>\n<li>innholdsfortegnelser i hovedinnholdet</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke meny."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Hvilken meny tester du?",
+			"ht": "<p>Beskriv menyen, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere menyer, registrerer du en og en.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			},
+			"label": "Meny:",
+			"multilinje": true
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Ligger hele menyen i et &lt;nav&gt; element eller et element som har role=\"navigation\"?",
+			"ht": "<p>Menyer kan kodes på flere måter. Den vanligste måten er å bruke liste elementer <code>&lt;ul&gt;</code> eller <code>&lt;ol&gt;</code> som meny.</p>\n<ul>\n<li>Der er <code>&lt;li&gt;</code> som menyelementer inne i et <code>&lt;nav&gt;</code> element</li>\n<li>Der er et element som har <code>role=\"navigation\"</code> , som parent-element for hele menyen.</li>\n</ul>\n<p>Slik tester du:</p>\n<ul>\n<li>Inspiser et menyelement i DevTools i nettleseren Chrome</li>\n<li>Sjekk i koden om\n<ul>\n<li>hele menyen ligger i et <code>&lt;nav&gt;</code> element eller</li>\n<li>et element som har <code>role=\"navigation\"</code>  som parent-element</li>\n</ul>\n</li>\n</ul>\n<p><strong>Tips: </strong>Når du holder musepekeren over elementet <code>&lt;nav&gt;</code> eller et element som har <code>role=\"navigation\"</code> i koden, markeres hele menyen.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "2.5"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			},
+			"kilde": [
+				"ARIA11",
+				"H97"
+			]
+		},
+		{
+			"stegnr": "2.5",
+			"spm": "Ligger menyen i et element med role=\"menu\" eller role=\"menubar\"?",
+			"ht": "<p>Menyer kan også kodes ved å bruke andre elementer som <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;ul&gt;</code> eller <code>&lt;ol&gt;</code> med <code>&lt;li&gt;</code>, men uten bruk av <code>&lt;nav&gt;</code> element.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Inspiser et menyelement i DevTools i nettleseren Chrome</li>\n<li>Sjekk i koden om menyen ligger i et parent-element som er kodet med attributtet <code>role=\"menu\"</code> eller <code>role=\"menubar\"</code>.\n<ul>\n<li>Eksempel: <code>&lt;div role=\"menu\" ...&gt;...&lt;/div&gt;</code>, <code>&lt;ul role=\"menu\" ...&gt;...&lt;/ul&gt;</code>, <code>&lt;ol role=\"menubar\" ...&gt;...&lt;/ol&gt;</code></li>\n</ul>\n</li>\n<li>Hvis menyen har flere menyelementer, skal du sjekke om parent-element til menyelementer er kodet med attributtet <code>role=\"menu\"</code>.\n<ul>\n<li>Eksempel: <code>&lt;div role=\"menu\" ...&gt;...&lt;/div&gt;</code>, <code>&lt;ul role=\"menu\" ...&gt;...&lt;/ul&gt;</code>, <code>&lt;ol role=\"menu\" ...&gt;...&lt;/ol&gt;</code></li>\n</ul>\n</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Menyen er ikke kodet med riktig rolle."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilket menyelement tester du?",
+			"ht": "<p>Beskriv menyelement du tester, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere elementer, registrerer et og et.</p>",
+			"type": "tekst",
+			"label": "Menyelement:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"type": "lik",
+							"sjekk": "2.4",
+							"verdi": "Ja",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.3"
+							}
+						},
+						"2": {
+							"type": "lik",
+							"sjekk": "2.4",
+							"verdi": "Nei",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.2"
+							}
+						}
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er menyelementet kodet med attributtet role=\"menyitem\"?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser et menyelement i DevTools i nettleseren Chrome</li>\n<li>Sjekk i koden om menyelementet ligger i et parent-element, som er kodet med attributtet <code>role=\"none\"</code> eller <code>role=\"presentation\" </code>og</li>\n</ul>\n<ul>\n<li style=\"list-style-type: none;\">\n<ul>\n<li>Eksempel: <code>&lt;div role=\"none\" ...&gt;...&lt;/div&gt;</code>, <code>&lt;ul role=\"presentation\" ...&gt;...&lt;/ul&gt;</code>, <code>&lt;ol role=\"presentation\" ...&gt;...&lt;/ol&gt;</code></li>\n</ul>\n</li>\n<li>Sjekk i koden om menyelementet er kodet med attributtet <code>role=\"menuitem\"</code>.\n<ul>\n<li>Eksempel: <code>&lt;a role=\"menuitem\" ...&gt;...&lt;/a&gt;</code></li>\n</ul>\n</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Menyelementet er ikke kodet med riktig rolle."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Har menyelementet et tilgjengelig navn?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser menyelementet i DevTools i nettleseren Chrome</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li>\n<li>Sjekk at informasjon under \"Name\" ikke er tomt.</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Menyelementet har ikke tilgjengelig navn."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			},
+			"kilde": [
+				"ARIA14",
+				"ARIA16"
+			]
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Beskriver tilgjengelig navn formålet med menyelementet?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Ta utgangspunkt i det tilgjengelige navnet du fant i forrige steg.</li>\n<li>Sjekk om det tilgjengelige navnet beskriver formålet med menyelementet.\n<ul>\n<li>Det er tilstrekkelig at det tilgjengelige navnet identifiserer menyelementet.</li>\n</ul>\n</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Tilgjengelig navn beskriver ikke formålet med menyelementet."
+				}
+			},
+			"kilde": [
+				"ARIA14"
+			]
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Er tilstanden til aktivt menyelementet, bestemt programmatisk?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Velg et menyelementet ved å klikke på det</li>\n<li>Inspiser menyelementet i DevTools i nettleseren Chrome.\n<ul>\n<li>Vanligvis er menyelementet kodet med <code>&lt;a&gt;</code> element</li>\n</ul>\n</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under ARIA-attributter eller Computed Properties, sjekk om det finnes:\n<ul>\n<li>aria-current: true eller aria-current: page</li>\n</ul>\n</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Menyelementet har tilgjengelig navn og riktig rolle. Tilstand er bestemt programmatisk."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Menyelementet har tilgjengelig navn og riktig rolle. Tilstand er ikke bestemt programmatisk."
+				}
+			},
+			"kilde": [
+				"ARIA5",
+				"G10"
+			]
+		}
+	]
+}
