@@ -1,0 +1,487 @@
+{
+    "namn": "3.3.2a Skjemaelement har instruksjon eller ledetekst",
+    "id": "3.3.2a",
+    "testlabId": 211,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nn",
+    "kravTilSamsvar": "<p>Alle skjemaelement har ledetekstar eller instruksjonar som set brukaren i stand til å betene skjemaet. Følgande skal vere oppfylt:</p>\r\n<ul>\r\n<li>Skjemaelementa har ein visuell identifikasjon i form av ledetekst, instruksjon eller ikon/symbol/bilde.</li>\r\n<li>Identifikasjonen er visuelt plassert i eller rett ved skjemaelementa.</li>\r\n<li>Identifikasjonen er alltid synleg når skjemaelementa er i fokus.</li>\r\n<li>Ikon/symbol/bilde er identifisert i koden.</li>\r\n<li>Det er opplyst om skjemaelementa er obligatoriske, eventuell merking med symbol skal vere forklart før det blir teke i bruk.</li>\r\n</ul>",
+    "side": "2.1",
+    "element": "3.1",
+    "kolonner": [
+        {
+            "title": "2.2"
+        },
+        {
+            "title": "2.3"
+        },
+        {
+            "title": "2.4"
+        },
+        {
+            "title": "2.5"
+        },
+        {
+            "title": "3.2"
+        },
+        {
+            "title": "3.3"
+        },
+        {
+            "title": "3.4"
+        },
+        {
+            "title": "3.5"
+        },
+        {
+            "title": "3.6"
+        },
+        {
+            "title": "3.7"
+        },
+        {
+            "title": "3.8"
+        },
+        {
+            "title": "3.9"
+        },
+        {
+            "title": "3.10"
+        },
+        {
+            "title": "3.11"
+        },
+        {
+            "title": "3.12"
+        },
+        {
+            "title": "3.13"
+        }
+    ],
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Kva side testar du på?",
+            "ht": "Oppgi url eller side-ID.",
+            "type": "tekst",
+            "label": "Url/Side:",
+            "datalist": "Sideutvalg",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har nettsida digitale/interaktive skjema/skjemaelement?",
+            "ht": "<strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt. ",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "2.3"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikkje skjema."
+                }
+            }
+        },
+        {
+            "stegnr": "2.3",
+            "spm": "Beskriv skjemaet/prosessen",
+            "ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast. Dersom sida har fleire skjema må du registere dei separat.",
+            "type": "tekst",
+            "label": "Skjema/prosess:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.4"
+                }
+            }
+        },
+        {
+            "stegnr": "2.4",
+            "spm": "Er skjemaet ein del av den globale søkefunksjonen?",
+            "ht": "Ein global søkefunksjon er ein navigasjonsmekanisme som let brukaren søke i alle sidene på nettstaden.",
+            "type": "jaNei",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.5"
+                }
+            }
+        },
+        {
+            "stegnr": "2.5",
+            "spm": "Inneheld skjemaet ein av følgjande:\n<ul>\n<li>berre eitt enkelt felt?</li>\n<li>tekstleg informasjon om at ALLE felt er obligatoriske?</li>\n</ul>",
+            "ht": "<p>I eit skjema som berre består av eitt enkelt skjemaelt, er feltet rekna som obligatorisk utan at det er behov for å merke det.</p>\n<p>Merk at dette gjeld ein situasjon der ALLE skjemafelt er obligatoriske. Informasjonen om obligatoriske felt skal vere plassert innleiingsvis i skjemaet. Situasjonen med at enkelte felt er obligatoriske, vert behandla seinare.</p>\n<p>Du kan for eksempel bruke Ctrl+F for å søke etter ord som obligatorisk og påkrevd.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                }
+            },
+            "kilde": []
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Beskriv skjemaelementet som skal vurderast.",
+            "ht": "Dersom skjemaet har fleire skjemaelement må du registere eit og eit. Beskriv skjemaelementet du skal teste.",
+            "type": "tekst",
+            "label": "Skjemaelement:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Har skjemaelementet ein tekstleg identifikasjon i form av ledetekst, tekst på knapp eller instruksjon?",
+            "ht": "<p>Merk at: Enkelte ledetekstar eller instruksjonar først kan bli synlege når du står i skjemaelementet.</p><p>Dersom det står ein knapp i direkte tilknyting til eit skjemafelt, og knappen skal brukast for å sende inn skjemaet, skal knappen beskrivande tekst. Knappen fungerer då som synleg ledetekst. Eksempel på slike skjema er: Melde på nyheitsbrev, globalt søk.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G131",
+                "G167",
+                "H44"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                }
+            }
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Er identifikasjonen visuelt plassert i eller rett ved skjemaelementet?",
+            "ht": "<p>Plasseringa kan for eksempel vere rett over eller rett ved sida av skjemaelementet. Ledetekststen eller instruksjonen kan også vere plassert i skjemaelementet.</p><p>Viss ledeteksten ikkje er tilstrekkeleg, skal utfyllande informasjon som er med på å identifisere søkeskjemaelementet, vere plassert rett ved skjemaelementet.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G162"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.5",
+                    "delutfall": {
+                        "nr": 0,
+                        "tekst": "<br>- tekst, som ikkje er plassert i/ved skjemaelementet",
+                        "fasit": "Nei"
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Er identifikasjonen alltid synleg når skjemaelementet er i fokus?",
+            "ht": "<p>Klikk i skjemaelementet, men ikkje skriv inn innhald eller velg alternativ.</p><p>Merk følgjande:</p><ul><li><strong>Placeholder:</strong> I enkelte tilfelle kan det vere slik at ledetekst/instruksjon som ligg i skjemaelementet (placeholder), forsvinn når elementet er i fokus. I så fall er ikkje ledeteksten eller instruksjonen alltid synleg.</li><li><strong>Title:</strong> I enkelte tilfelle kan ein få opp ein hjelpetekst når ein held musepeikaren over skjemaelementet. Dette er ikkje i samsvar med kravet om synleg ledetekst/instruksjon, fordi teksten ikkje visast ved bruk av tastatur.</li></ul>",
+            "type": "jaNei",
+            "kilde": [
+                "H44"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "2.5",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.9",
+                                "delutfall": {
+                                    "nr": 1,
+                                    "tekst": "identifikasjon i form av tekst",
+                                    "fasit": "Ja"
+                                }
+                            }
+                        },
+                        "2": {
+                            "sjekk": "2.5",
+                            "type": "lik",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Ja",
+                                "utfall": "Skjemaelement med identifikasjon i form av tekst. Skjema har tekstleg informasjon om at alle skjemaelement er obligatoriske."
+                            }
+                        }
+                    }
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.5",
+                    "delutfall": {
+                        "nr": 0,
+                        "tekst": "<br>- tekst, som ikkje alltid er synleg når elementet er i fokus",
+                        "fasit": "Nei"
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Har skjemaelementet ein visuell identifikasjon i form av ikon, symbol, bilde eller liknande?",
+            "ht": "<p>Du skal vurdere om ikonet/symbilet/bilde gir tilstrekkeleg identifikasjon.</p><p>Identifikasjon i form av ikon/symbol/bilde kan vere ikon som er allment brukt og kjente symbol for bestemt type informasjon, for eksempel eit forstørringsglas for å starte søk.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G131",
+                "H44"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                },
+                "nei": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "3.2",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Skjemaelement utan identifikasjon i form av tekst eller ikon/symbol/bilde."
+                            }
+                        },
+                        "2": {
+                            "sjekk": "3.2",
+                            "type": "lik",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei).<br> Skjemaelement har ikkje identifikasjon i form av ikon/symbol/bilde. "
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.6",
+            "spm": "Er ikonet/symbolet/bilde visuelt plassert i eller rett ved skjemaelementet?",
+            "ht": "Plasseringa kan for eksempel vere rett over eller rett ved sida av skjemaelementet.",
+            "type": "jaNei",
+            "kilde": [
+                "G162"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei)<br>- ikon/symbol/bilde, som ikkje er plassert i/ved skjemaelementet"
+                }
+            }
+        },
+        {
+            "stegnr": "3.7",
+            "spm": "Er ikonet/symbolet/bilde alltid synleg når skjemaelementet er i fokus?",
+            "ht": "Klikk i skjemaelementet, men ikkje skriv inn innhald eller velg alternativ.",
+            "type": "jaNei",
+            "kilde": [
+                "H44"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                },
+                "nei": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "3.4",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Skjemaelement med identifikasjon i form av tekst eller ikon/symbol/bilde som ikkje alltid er synleg når elementet er i fokus."
+                            }
+                        },
+                        "2": {
+                            "sjekk": "3.4",
+                            "type": "ulik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei)<br>- ikon/symbol/bilde, som ikkje alltid er synlege når elementet er i fokus."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.8",
+            "spm": "Vurder ikonet/symbolet/bilde i koden. Finst det informasjon i koden som set brukaren i stand til å identifisere skjemaelementet?",
+            "ht": "<p>Vurder om ikonet/symbolet/bilde er identifisert i koden i denne prioriterte rekkefølgja:</p><ol><li>aria-label</li><li>aria-labelledby</li><li>alt (finst helst på &#x3C;img&#x3E;, men kan og brukast på andre)</li><li>value (finst helst på skjemaelement)</li><li>tekst i ikon/symbol-elementet (for eksempel &#x3C;button&#x3E;Søk&#x3C;/button&#x3E;)</li><li>title</li></ol><p>Du skal vurdere om innhaldet i attributta set brukaren i stand til å identifisere skjemaelementet.</p>",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "2.5",
+                            "type": "lik",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.9",
+                                "delutfall": {
+                                    "nr": 1,
+                                    "tekst": "identifikasjon i form av ikon/symbol/bilde",
+                                    "fasit": "Ja"
+                                }
+                            }
+                        },
+                        "2": {
+                            "sjekk": "2.5",
+                            "type": "lik",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Ja",
+                                "utfall": "Skjemaelement med identifikasjon i form av ikon/symbol/bilete. Skjema har tekstleg informasjon om at alle skjemaelement er obligatoriske."
+                            }
+                        }
+                    }
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Skjemaelement med identifikasjon i form av: #delutfall(0,Nei)<br>- ikon/symbol/bilde, som ikkje er rett identifisert i koden."
+                }
+            }
+        },
+        {
+            "stegnr": "3.9",
+            "spm": "Er skjemaelementet obligatorisk?",
+            "ht": "<p>Handlingar brukaren skal utføre i skjemaet kan vere:</p><ul><li>legge inn data i eit felt</li><li>gjere val i nedtrekksmeny, radioknappar/andre knappar, avkryssingsboksar.</li></ul><p>Merk at du kanskje må fylle ut/forsøke å sende inn skjemaet for å finne ut om skjemaelementet er obligatorisk.</p>",
+            "type": "jaNei",
+            "kilde": [],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.10"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Skjemaelement med #delutfall(1,Ja)."
+                }
+            }
+        },
+        {
+            "stegnr": "3.10",
+            "spm": "Inneheld ledeteksten tekstleg informasjon om at skjemaelementet er obligatorisk? ",
+            "ht": "<p>Eksempel på tekstleg informasjon er </p><ul><li>obligatorisk</li><li>påkravd</li></ul><p>Du skal ikkje måtte scrolle bort frå skjemaelementet for å finne informasjonen.</p><p>Informasjon i eventuell feilmelding som dukkar opp etter at eit obligatorisk skjemaelement er fylt ut, er ikkje tilstrekkeleg. </p>",
+            "type": "jaNei",
+            "kilde": [
+                "G83",
+                "H90"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Skjemaelement med #delutfall(1,Ja). Informasjon om obligatoriske skjemaelement er i form av tekst."
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.11"
+                }
+            }
+        },
+        {
+            "stegnr": "3.11",
+            "spm": "Inneheld ledeteksten eit symbol/ikon som indikerer at skjemaelementet er obligatorisk?",
+            "ht": "<p>Eksempel på symbol/ikon er stjerne (*)</p><p>Informasjon i form av symbol/ikon som dukkar opp etter at eit obligatorisk skjemaelement er fylt ut, er ikkje tilstrekkeleg. </p>",
+            "type": "jaNei",
+            "kilde": [
+                "H90"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.12"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Skjema manglar informasjon om at skjemaelement er obligatoriske."
+                }
+            }
+        },
+        {
+            "stegnr": "3.12",
+            "spm": "Er symbolet tekstleg forklart?",
+            "ht": "",
+            "type": "jaNei",
+            "kilde": [
+                "H90"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.13"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Informasjon om obligatoriske skjemaelement er i form av ikon/symbol/bilde. Ikon/symbol/bilde er ikkje tekstleg forklart."
+                }
+            }
+        },
+        {
+            "stegnr": "3.13",
+            "spm": "Er forklaringa av symbolet plassert før merkinga er teken i bruk første gang?",
+            "ht": "",
+            "type": "jaNei",
+            "kilde": [
+                "H90"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Skjemaelement med #delutfall(1,Ja). Informasjon om obligatoriske skjemaelement er i form av ikon/symbol/bilde. Forklaring av ikon/symbol/bilde er plassert før skjemaelementet"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Informasjon om obligatoriske skjemaelement er i form av ikon/symbol/bilde. Forklaring av ikon/symbol/bilde er plassert etter skjemaelementet."
+                }
+            }
+        }
+    ]
+}
