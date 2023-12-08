@@ -1,11 +1,11 @@
 {
-	"namn": "2.4.6a Overskrifter beskriv innhaldet",
-	"id": "2.4.6a",
-	"testlabId": 209,
+	"namn": "Nett-2.4.6a Overskrifter beskriv innhaldet 2023",
+	"id": "nett-2.4.6a",
+	"testlabId": 467,
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Dersom det er brukt overskrifter, skal dei beskrive emne eller formål for innhaldet som høyrer til.</p>",
+	"kravTilSamsvar": "<p>For synlige overskrifter skal</p>\r\n<ul>\r\n<li>Overskrift beskrive emnet eller formålet med innholdet den hører til.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -22,8 +22,8 @@
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
@@ -37,8 +37,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har nettsida innhald som framstår som overskrift(er)?",
-			"ht": "<p>Merk at det ikkje er krav om at nettsider har overskrifter. <a class=\"aUnderLine\" href=\"https://uu.difi.no/krav-og-regelverk/wcag-20-standarden/246-overskrifter-og-ledetekster-niva-aa\" target=\"_blank\">I dette SK</a> skal det heller ikkje vurderast om overskrifter er koda som overskrifter.</p><p>Overkrifter kan ligge i hovudinnhald, meny, topptekst, botntekst, skjema, tabell og bilde.</p>",
+			"spm": "Har testsida synlege overskrifter?",
+			"ht": "<p>Overskrifter er kjenneteikna av at brukaren får kort informasjon om temaet for eller formålet med teksten, avsnittet, lista, skjemaet eller anna innhald som står etter overskrifta:</p>\n<ul>\n<li>Dei har ofte større eller utheva skrift, samanlikna med brødtekst. </li>\n<li>Overskrifter kan ligge i hovudinnhald, meny, topptekst, botntekst, skjema, tabell og bilde.</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Det er ikkje eit krav om at nettsider har overskrifter, men at dei skal beskriva innhaldet der dei er brukt</li>\n<li>Du skal  ikkje vurdera om overskrifter er koda som overskrifter, det er dekka av SK 1.3.1. </li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -47,16 +47,16 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje innhald som visuelt framstår som overskrifter."
+					"utfall": "Testside har ikkje synlege overskrifter."
 				}
 			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Referer overskrifta som er aktuell for test.",
-			"ht": "Du kan for eksempel kopiere inn overskrifta frå nettsida.",
+			"spm": "Kva overskrift testar du?",
+			"ht": "<p>Kopier overskrifta, slik at det er mogleg å identifisere den i ettertid. Om du finn fleire overskrifter, registrerer du ei og ei.</p>",
 			"type": "tekst",
-			"label": "Element:",
+			"label": "Overskrift:",
 			"multilinje": true,
 			"oblig": true,
 			"ruting": {
@@ -68,10 +68,10 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Gi ei stikkordsmessig beskriving av emne eller føremål med innhaldet som høyrer til den aktuelle overskrifta.",
-			"ht": "Legg vekt på å beskrive innhaldet med få ord. Merk at denne testen ikkje legg opp til inspeksjon av kode.",
+			"spm": "Gi ein kort beskrivelse av emne eller formål med innhaldet som høyrer til den aktuelle overskrifta.",
+			"ht": "<p>Beskriv innhaldet med få ord.</p>\n<p><strong>Merk:</strong> Du skal ikkje innspisere koden.</p>",
 			"type": "tekst",
-			"label": "Emne eller føremål med innhaldet:",
+			"label": "Emne eller formål med innhaldet:",
 			"multilinje": true,
 			"oblig": true,
 			"ruting": {
@@ -83,8 +83,8 @@
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Refererer overskrifta emne eller formål med innhaldet?",
-			"ht": "<p>Merk at overskrifter ikke treng å vere lange, men dei bør gjengi det viktigaste innhaldet som høyrer til overskrifta. </p><p>Eit ord eller et enkelt teikn kan være tilstrekkeleg, for eksempel ei alfabetisk liste.</p>",
+			"spm": "Beskriv overskrifta emnet eller formålet med innhaldet?",
+			"ht": "<p>Gjer ei skjønnsmesseg vurdering av om overskrifta beskriv emnet eller formålet med innhaldet den høyrer til.</p>\n<p><strong>Merk:</strong> Overskrifta treng ikkje å vere lang, men skal beskrive/oppsummere det viktigaste med innhaldet for brukaren.</p>\n<p>Eit ord eller et enkelt teikn kan være tilstrekkeleg, for eksempel ei alfabetisk liste.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G130"
@@ -93,12 +93,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Overskrift er beskrivande for emne eller formål med innhaldet."
+					"utfall": "Overskrift beskriv emne eller formål med innhaldet."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Overskrift er ikkje beskrivande for emne eller formål med innhaldet."
+					"utfall": "Overskrift beskriv ikkje emne eller formål med innhaldet."
 				}
 			}
 		}
