@@ -155,7 +155,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Testsida har tastaturfelle. Beskrive, alternativ tastaturnavigasjon fungerer ikkje."
+					"utfall": "Element med tastaturfelle. Beskrive, alternativ tastaturnavigasjon fungerer ikkje."
 				},
 				"ja": {
 					"type": "avslutt",
