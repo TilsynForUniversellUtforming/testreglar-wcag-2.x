@@ -121,7 +121,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Testsida har ikkje tastaturfelle."
+					"utfall": "Element det er mogeleg å navigere ut av med standardmetoder for tastaturnavigasjon."
 				},
 				"nei": {
 					"type": "gaaTil",
