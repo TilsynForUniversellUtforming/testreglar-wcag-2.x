@@ -108,7 +108,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Appsida har ikkje sveipefeller."
+					"utfall": "Elementet har ikkje sveipefelle."
 				},
 				"nei": {
 					"type": "avslutt",
