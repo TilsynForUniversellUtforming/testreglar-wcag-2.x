@@ -25,7 +25,7 @@
 			"spm": "Kva appside testar du?",
 			"ht": "<p>Beskriv appsida med få stikkord, eller vel i lista.</p>",
 			"type": "tekst",
-			"label": "Skjermbilde:",
+			"label": "Appside:",
 			"datalist": "Sideutvalg",
 			"oblig": true,
 			"ruting": {
