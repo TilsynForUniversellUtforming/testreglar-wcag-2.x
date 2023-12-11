@@ -1,0 +1,173 @@
+{
+	"namn": "Nett-2.1.1 Det er mogleg å nå innhald og bruke funksjonalitet med tastatur 2023",
+	"id": "nett-2.1.1",
+	"testlabId": 453,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>All funksjonalitet på nettsiden kan nås og brukes med tastatur, uten at det er behov for tidsberegning av de enkelte tastetrykkene</p>\r\n<ul>\r\n<li>Funksjonalitet på nettstedet som ikke er formålstjenlig å bruke med tastatur er unntatt</li>\r\n<li><!--[endif]-->Dersom det er behov for noe bruk av noe annet enn standardmetoder for tastaturnavigasjon, får brukeren informasjon om hvilken metode som skal benyttes </li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "2.4"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettsida innhald/funksjonalitet det er mogleg å navigere til med tastatur?",
+			"ht": "<p>Bruk tab-tasten for å navigere på nettsida.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsida har ikkje innhald/funksjonalitet det er mogleg å navigere til med tastatur."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Får du synleg fokusmarkering ved tastaturnavigering?",
+			"ht": "<p>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet. Du er avhengig av synleg fokusmarkør for å kunne gjennomføre testen. Den må vere såpass synleg at du kan følgje med på tastaturnavigasjonen. </p>\n<p><strong>Merk:</strong> Synleg fokusmarkering blir testa på suksesskriterium 2.4.7.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F55"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ikkje testbart",
+					"utfall": "Testsida har ikkje tilstrekkeleg fokusmarkering ved tastaturnavigasjon."
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Får du til å betene alle lenker, knappar og funksjonar med tastaturet, utan tidsberegning av dei enkelte tastetrykka?",
+			"ht": "<p>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet. </p>\n<ul>\n<li>Følg nøye med på navigasjonen og informasjonen i statuslinja i nettlesaren </li>\n<li>For å betene innhaldet kan du også bruke enter, mellom og pil.</li>\n<li>For å rygge med tastaturet, bruk Shift+Tab.</li>\n<li>Det kan vere at du må opne menyar og modaler for å teste alt innhald.</li>\n<li>For å sjekke om det er mogleg å betene lenker, kan du sjå om URL står statuslinja i nettlesaren. Det er ikkje nødvendig å aktivere lenka.</li>\n</ul>\n<p>Eksempel på tidsberegning er at brukaren må: </p>\n<ul>\n<li>utføre eller gjenta mange tastetrykk i løpet av ein kort periode.</li>\n<li>halde nede en tast i ein lengre periode før tastetrykket blir registret. </li>\n</ul>\n<p><strong>Merk:</strong> Dersom det er funksjonalitet som kan betenast på fleire måtar, er det tilstrekkeleg at ein av dei kan brukast med tastaturet. Eksempel på dette er datoveljar, kor brukaren både kan skrive inn dato, og velje dato frå ein kalendar.</p>\n<p><strong>Merk:</strong> Eventuell tastaturfelle, omlasting av sida eller kontekstendring påvirkar ikkje om det mogleg å betene innhaldet.</p>\n<p><strong>Merk: </strong>Handlingar som blir utført med mus, skal og kunne bli gjort med tastaturet. Eksempel på handlingar er å klikke, velge, flytte og forstørre.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G202"
+			],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det er mogleg å nå og betene alt innhald/funksjonalitet på nettsida med tastatur."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv elementet du ikkje nådde eller fekk til å betene med tastaturet",
+			"ht": "Beskriv elementet, slik at det er mogleg å identifisere det i ettertid. Viss det gjeld fleire element, registrerer du eit og eit.",
+			"type": "tekst",
+			"label": "Element:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er ein alternativ måte å navigere på, dokumentert i nærleiken av det aktuelle elementet?",
+			"ht": "<p>Dersom det er behov for å bruka noko anna enn standard pil- eller tabulatortaster eller andre standardmetoder for tastaturnavigering, får brukeren informasjon om metode som må brukast for å nå elementet.</p>\n<p><strong>Merk: </strong>Dette bygger på analogisk bruk av dokumentasjonskravet som står i ordlyden i 2.1.2 Ingen tastaturfelle.</p>\n<p><strong>Merk: </strong>Alternativ fremgangsmåte skal vere beskrevet i nærheten av det aktuelle elementet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Innhald/funksjonalitet det er mogleg å nå og betene via dokumentert, alternativ tastaturnavigasjon."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er elementet hensiktsmessig å betene med tastatur?",
+			"ht": "<p>Funksjonalitet som ikkje er hensiktsmessig å betene er for eksempel</p>\n<ul>\n<li>teikne- og maleverktøy</li>\n<li>inndata i form av handskrift</li>\n<li>styring av bil/helikopter eller liknande i spel</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Innhald/funksjonalitet på nettsida som ikkje er føremålsteneleg å betene med tastatur."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Kva type funksjonalitet er elementet en del av?",
+			"ht": "<p>Velg alternativ.</p>",
+			"type": "radio",
+			"svarArray": [
+				"Skjema",
+				"Mediaspelar",
+				"Meny",
+				"Modalvindauge",
+				"Anna"
+			],
+			"ruting": {
+				"alle": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Innhald/funksjonalitet det ikkje er mogleg å nå og betene med tastatur."
+				}
+			}
+		}
+	]
+}
