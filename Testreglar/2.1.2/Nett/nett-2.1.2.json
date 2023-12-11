@@ -1,0 +1,168 @@
+{
+	"namn": "Nett-2.1.2a Det finst ingen tastaturfeller på nettsida 2023",
+	"id": "nett-2.1.2a",
+	"testlabId": 456,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Det er mulig å navigere gjennom alt innhold på nettsiden som kan få tastaturfokus, uten å bli stående fast i et element.</p>\r\n<ul type=\"disc\">\r\n<li>Alternativ tastaturnavigasjon er beskrevet for brukeren, dersom standardmetoder ikke er brukt.</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "2.5",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "2.4"
+		},
+		{
+			"title": "2.6"
+		},
+		{
+			"title": "2.7"
+		},
+		{
+			"title": "2.8"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Finst det element på nettsida det er mogleg å navigere til med tastaturet?",
+			"ht": "<p>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Det finst ikkje element på nettsida som det er mogleg å navigere til med tastaturet."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Får du synleg fokusmarkering ved tastaturnavigering?",
+			"ht": "<p>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet. Du er avhengig av synleg fokusmarkør for å kunne gjennomføre testen. Den må vere såpass synleg at du kan følgje med på tastaturnavigasjonen. </p>\n<p><strong>Merk:</strong> Synleg fokusmarkering blir testa på suksesskriterium 2.4.7.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ikkje testbart",
+					"utfall": "Testsida har ikkje tilstrekkeleg fokusmarkering ved tastaturnavigasjon."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Finst det minst ei tastaturfelle på nettsida?",
+			"ht": "<p>Sjekk om det er tastaturfeller på nettsida. Ei tastaturfelle er at brukaren blir ståande fast i eit element som er mogleg å navigere til med tastaturet. Grunnen er at det ikkje er mogleg å navigere ut av/bort frå det aktuelle elementet berre med hjelp av tastaturet. </p>\n<p><strong>Slik testar du: </strong></p>\n<p>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet. Bruk standard tastaturnavigasjon. Kontroller at du scrollar nettsida heilt ned og at du kjem tilbake til starten av nettsida. </p>\n<ul>\n<li>For å betene innhaldet kan du også bruke enter, mellom og pil.</li>\n<li>For å rygge med tastaturet, bruk Shift+Tab.</li>\n<li>Det kan vere at du må opne menyar og modaler for å teste alt innhald.</li>\n</ul>\n<p>Meir informasjon om <a href=\"https://act-rules.github.io/rules/ebe86a#standard-keyboard-navigation\" target=\"_blank\" rel=\"noopener\">Standard tastaturnavigasjon.</a></p>",
+			"type": "jaNei",
+			"kilde": [
+				"G21"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Testsida har ikkje tastaturfelle."
+				}
+			}
+		},
+		{
+			"stegnr": "2.5",
+			"spm": "Beskriv elementet med tastaturfelle.",
+			"ht": "<p>Dersom det gjeld fleire element, registrerer du eit og eit. </p>",
+			"type": "tekst",
+			"label": "Element med tastaturfelle:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.6"
+				}
+			}
+		},
+		{
+			"stegnr": "2.6",
+			"spm": "Kan du navigere ut av elementet med standardmetoder for tastaturnavigasjon?",
+			"ht": "<p>Prøv å navigere ut av/bort frå det aktuelle elementet med standardmetodar for tastaturnavigasjon.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Element det er mogeleg å navigere ut av med standardmetoder for tastaturnavigasjon."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "2.7"
+				}
+			}
+		},
+		{
+			"stegnr": "2.7",
+			"spm": "Er det beskrive alternativ tastaturnavigasjon, i nærleiken av elementet?",
+			"ht": "<p>Sjekk om det står ein beskrivelse av korleis du navigerer ut av/bort frå elementet, i nærleiken av det aktuelle elementet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.8"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje beskrive alternativ tastaturnavigasjon i nærleiken av elementet."
+				}
+			}
+		},
+		{
+			"stegnr": "2.8",
+			"spm": "Kan du navigere vidare med alternativ tastaturnavigasjon?",
+			"ht": "<p>Følg beskrivelsen som du fann i forrige steg, og sjekk om den fungerer. </p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Element med tastaturfelle. Beskrive, alternativ tastaturnavigasjon fungerer ikkje."
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Element det er mogeleg å navigere ut av med beskrive alternativ tastaturnavigasjon."
+				}
+			}
+		}
+	]
+}
