@@ -1,0 +1,109 @@
+{
+	"namn": "Nett-2.4.7a Innhald som kan brukast med tastatur, får synleg fokusmarkering 2023",
+	"id": "nett-2.4.7a",
+	"testlabId": 455,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Alle elementer som det er mulig å navigere til med tastaturet, får synlig fokusmarkering og markeringen er ikke tidsbegrenset</p>\r\n<ul>\r\n<li>Dersom det kun er mulig å navigere til ett enkelt element på nettsiden med tastaturet, er kravet oppfylt.</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "2.4"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Finst det element det er mogleg å navigere til med tastaturet?",
+			"ht": "<p>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Nettsida har ikkje innhald som er mogleg å bruke med tastatur."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Finst det fleire enn eitt element det er mogleg å navigere til med tastaturet?",
+			"ht": "<p>Dersom det berre finst eitt element som kan brukast med tastaturet på nettsida, er suksesskriteriet oppfylt.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Nettsida har berre eitt element som kan brukast med tastaturet."
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Får du synleg fokusmarkering på alle element som er mogleg å bruke med tastaturet?",
+			"ht": "<ul>\n<li>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet.</li>\n<li>Det kan vere at du må opne menyar og modalvindauge for å teste alt innhald på nettsida.</li>\n<li>For å betene innhaldet kan du også bruke enter,  mellomrom og piltastane.</li>\n<li>For å rygge med tasttauret, bruk Shift+Tab.</li>\n</ul>\n<p><strong>Merk:</strong> Brukaren skal enkelt sjå kva element som er i fokus. Viss du ikkje gjer det, skal du registrere nei i dette steget. Verken ordlyden, ordlista til WCAG eller andre relevante kilder gir føringar for kva som kreves for at fokusmarkeringa skal vere «synlig». I grensetilfelle gjer du ei totalvurdering.</p>\n<p>Eksempel på synleg fokusmarkering</p>\n<ul>\n<li>ramme, linje eller understreking</li>\n<li>endra farge på bakgrunn eller tekst</li>\n<li>skyggelegging</li>\n<li>tekstmarkør (loddrett strek) eller markering av tekst i skjemafelt</li>\n<li>anna form for visuell endring</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [
+				"F78",
+				"G149"
+			],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Alle element som er mogleg å bruke med tastaturet, får synleg fokusmarkering."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv elementet utan synleg fokusmarkering.",
+			"ht": "",
+			"type": "tekst",
+			"label": "Element:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Element som er mogeleg å bruke med tastaturet, får ikkje synleg fokusmarkering"
+				}
+			}
+		}
+	]
+}
