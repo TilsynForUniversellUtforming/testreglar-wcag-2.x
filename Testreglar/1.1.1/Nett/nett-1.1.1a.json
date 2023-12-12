@@ -1,11 +1,11 @@
 {
-	"namn": "Nett-1.1.1a Bilde har tekstalternativ 2023",
+	"namn": "Nett-1.1.1a Ikke-lenkede bilder har tekstalternativ 2023",
 	"id": "nett-1.1.1a",
 	"testlabId": 449,
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>For bilder er ett av følgende punkter oppfylt:</p>\r\n<ul>\r\n<li>Bilder som er meningsbærende, har et kort tekstalternativ som gir same informasjon som bildet eller</li>\r\n<li>Komplekse, meningsbærende bilder, har både et kort og et langt tekstalternativ som gir samme informasjon som bildet og\r\n<ul>\r\n<li>Korte tekstalternativ har informasjon om plasseringen av langt tekstalternativ og</li>\r\n<li>Bildet er programmatisk knyttet til langt tekstalternativ og</li>\r\n<li>Langt tekstalternativ er kodet som tekst eller</li>\r\n</ul>\r\n</li>\r\n<li>Ikke-tekstlig innhold som er en test, har kort tekstalternativ med en beskrivende identifikasjon av testen eller </li>\r\n<li>Bilder der formålet er å skape et spesifikt sanseinntrykk, har tekstalternativ med en beskrivende identifikasjon av bildet eller </li>\r\n<li>Bilder som er ren dekorasjon, brukes utelukkende til visuell formatering eller ikke presenteres for brukerne, kodes det slik at det kan ignoreres av hjelpemiddelteknologi</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For ikke-lenkede bilder er ett av følgende punkter oppfylt:</p>\r\n<ul>\r\n<li>Bilder som er meningsbærende, har et kort tekstalternativ som gir same informasjon som bildet eller</li>\r\n<li>Komplekse, meningsbærende bilder, har både et kort og et langt tekstalternativ som gir samme informasjon som bildet og\r\n<ul>\r\n<li>Korte tekstalternativ har informasjon om plasseringen av langt tekstalternativ og</li>\r\n<li>Bildet er programmatisk knyttet til langt tekstalternativ og</li>\r\n<li>Langt tekstalternativ er kodet som tekst eller</li>\r\n</ul>\r\n</li>\r\n<li>Ikke-tekstlig innhold som er en test, har kort tekstalternativ med en beskrivende identifikasjon av testen eller </li>\r\n<li>Bilder der formålet er å skape et spesifikt sanseinntrykk, har tekstalternativ med en beskrivende identifikasjon av bildet eller </li>\r\n<li>Bilder som er ren dekorasjon, brukes utelukkende til visuell formatering eller ikke presenteres for brukerne, kodes det slik at det kan ignoreres av hjelpemiddelteknologi</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
