@@ -1,5 +1,5 @@
 # 3.3.3 Forslag ved feil (Nivå AA)
-## Om suksesskriterium 3.3.3 Forslag ved feil
+## Om suksesskriteriet
 
 -	**WAD**: Ja
 -	**WCAG versjon**: 2.0
@@ -74,7 +74,7 @@ Krav til samsvar
 
 
 ## EN 301 549
-## Brukerbehov  (funksjonell ytelsesevne)
+### Brukerbehov  (funksjonell ytelsesevne)
 Primær relasjon 
 -	Bruk uten syn 
 -	Bruk med nedsatt syn 
