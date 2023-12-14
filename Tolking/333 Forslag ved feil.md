@@ -17,13 +17,12 @@ Hensikten med kravet er at brukeren skal få hjelp gjennom forslag til å korrig
 ## Tolkning av suksesskriteriet
 ### Tilsynets tolkning
 Suksesskriteriet gjelder kun i situasjoner der inndatafeil blir oppdaget automatisk. Etter ordlyden skal forslag til hvordan inndatafeil kan rettes presenteres for brukeren
-Forutsetningen er etter ordlyden videre at det finnes en kjent måte å korrigere feilen på, for eksempel format eller verdi, som for eksempel gyldig format for e-post eller verdiene 1-12 for måneder
+Forutsetningen er etter ordlyden videre at det finnes en kjent måte å korrigere feilen på, for eksempel format eller verdi, som for eksempel gyldig format for e-post eller verdiene 1-12 for måneder.
 
 Etter ordlyden er det unntak dersom forslag til feilretting er en risiko for sikkerheten eller formålet med det aktuelle innholdet, for eksempel et passord eller svar i en quiz.
 Det er ikke spesifisert nærmere hva «oppdages automatisk» betyr. Etter tilsynets tolkning innebærer det at innholdet er programmert på en måte som avdekker feil inndata, uten at brukeren er involvert.
 
 Begrepet Inndatafeil er definert i WCAGs ordliste, og ifølge definisjonen er «inndatafeil informasjon angitt av brukeren, som ikke godkjennes.» Videre er det presisert i merknaden til definisjonen at inndatafeil blant annet inkluderer to situasjoner
-
 -	informasjon som nettsiden krever, men som brukeren har utelatt 
 -	informasjon som er gitt i feil dataformat eller med feil verdi.
 
@@ -48,7 +47,6 @@ Forslag til retting av feil kan ifølge forståartikkelen for eksempel være:
 -	et spørsmål på formen «Mente du…?» eller tilsvarende
 
 Forslag til retting kan etter teknikk G177 vises i form av tekst på flere måter, for eksempel
-
 -	i et modalvindu
 -	i ledeteksten til skjemaelementet, 
 -	annet sted i skjemaet eller på nettsiden, for eksempel på toppen
@@ -74,6 +72,7 @@ Det er flere måter å oppfylle kravet på.
 **Referanse til kravet i EN 301 549**: 9.3.3.3, 10.3.3.3 og 11.3.3.3
 
 **Brukerbehov (funksjonell ytelsesevne)**
+
 Primær relasjon: 
 -	Bruk uten syn 
 -	Bruk med nedsatt syn 
