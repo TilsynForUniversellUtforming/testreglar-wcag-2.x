@@ -47,7 +47,7 @@ Forslag til retting av feil kan ifølge forståartikkelen for eksempel være:
 Forslag til retting kan etter teknikk G177 vises i form av tekst på flere måter, for eksempel
 
 -	i et modalvindu
--	i ledeteksten til skjemaelementet, 
+  -	i ledeteksten til skjemaelementet, 
 -	annet sted i skjemaet eller på nettsiden, for eksempel på toppen
 
 Forslag til retting skal være tydelig og det skal være enkelt for brukeren å navigere til forslaget, jamfør teknikkene G48 og G85. Det er ikke nok å identifisere forslaget med for eksempel bare med et symbol i ledeteksten, bare med å endre farge eller bare visuell plassering av forslaget.
