@@ -1,21 +1,19 @@
 # 3.3.3 Forslag ved feil (Nivå AA)
 ## Om suksesskriteriet
-
--	**WAD**: Ja
--	**WCAG versjon**: 2.0
--	**Referanse til kravet i EN 301 549**: 9.3.3.3, 10.3.3.3 og 11.3.3.3
--	**Sist oppdatert:** 16.12.2022
--	**Nettadresse** (URL) norsk: https://www.w3.org/Translations/WCAG21-no/#error-suggestion 
--	**Kravet gjelder for:** Nettsteder, apper og dokumenter
--	**Forståartikkel:** https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html 
-
-### Suksesskriterium  (krav)
-Dersom en inndatafeil oppdages automatisk og det finnes forslag til hvordan den kan korrigeres, presenteres forslagene for brukeren, med mindre dette innebærer risiko for sikkerheten eller formålet med innholdet.
+**Kravet gjelder for:** Nettsteder, apper og dokumenter
+**Lenke til kravet på norsk:** https://www.w3.org/Translations/WCAG21-no/#error-suggestion 
+**Forståartikkel:** https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html 
+**Tolkning sist oppdatert:** dd.mm.åååå
 
 ### Formål
 Hensikten med kravet er at brukeren skal få hjelp gjennom forslag til å korrigere feil, når inndatafeil oppdages automatisk. 
 
-## Tolkning og presisering  av suksesskriteriet (kravet)
+## Brukerbehov
+- Personer med nedsatt kognisjon
+- Personer som er blinde eller har nedsatt syn
+- Personer med nedsatt motorikk
+
+## Tolkning av suksesskriteriet
 Suksesskriteriet gjelder kun i situasjoner der inndatafeil blir oppdaget automatisk. Etter ordlyden skal 
 -	forslag til hvordan inndatafeil kan rettes presenteres for brukeren
 Forutsetningen er etter ordlyden videre at 
@@ -44,10 +42,11 @@ Forslag til retting av feil kan ifølge forståartikkelen for eksempel være:
 -	forslag om tilsvarende tekst 
 -	beskrivelse av eller liste over hva som er rett inndata
 -	et spørsmål på formen «Mente du…?» eller tilsvarende
+
 Forslag til retting kan etter teknikk G177 vises i form av tekst på flere måter, for eksempel
 
 -	i et modalvindu
-  -	i ledeteksten til skjemaelementet, 
+-	i ledeteksten til skjemaelementet, 
 -	annet sted i skjemaet eller på nettsiden, for eksempel på toppen
 
 Forslag til retting skal være tydelig og det skal være enkelt for brukeren å navigere til forslaget, jamfør teknikkene G48 og G85. Det er ikke nok å identifisere forslaget med for eksempel bare med et symbol i ledeteksten, bare med å endre farge eller bare visuell plassering av forslaget.
@@ -57,7 +56,7 @@ Dette gjelder med mindre informasjonen er knyttet til personvern eller sikkerhet
 
 Det er flere måter å oppfylle kravet på.
 
-Krav til samsvar
+**Krav til samsvar**
 
 -	For alle inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting, får brukeren et forslag som gir tilstrekkelig informasjon om hvordan feil kan rettes og
 -	Forslaget er kodet som tekst og 
@@ -65,21 +64,15 @@ Krav til samsvar
 -	Informasjonen blir liggende i skjemaet, med mindre informasjonen er knyttet til personvern eller sikkerhet
 
 
-## Brukerbehov
-- Personer med nedsatt kognisjon
-- Personer som er blinde eller har nedsatt syn
-- Personer med nedsatt motorikk
-
-
-
-
 ## EN 301 549
-### Brukerbehov  (funksjonell ytelsesevne)
-Primær relasjon 
+**Referanse til kravet i EN 301 549**: 9.3.3.3, 10.3.3.3 og 11.3.3.3
+
+### Brukerbehov (funksjonell ytelsesevne)
+Primær relasjon: 
 -	Bruk uten syn 
 -	Bruk med nedsatt syn 
 -	Bruk med nedsatt kognisjon
-- Sekundær relasjon 
+Sekundær relasjon: 
 -	Bruk uten taleevne 
 -	Bruk med nedsatt bevegelighet eller styrke
 
