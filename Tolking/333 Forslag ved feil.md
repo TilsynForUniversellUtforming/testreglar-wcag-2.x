@@ -1,10 +1,10 @@
 # 3.3.3 Forslag ved feil (Nivå AA)
 
 ## Om suksesskriteriet
-**Kravet gjelder for:** Nettsteder, apper og dokumenter
-**Lenke til kravet på norsk:** https://www.w3.org/Translations/WCAG21-no/#error-suggestion 
-**Forståartikkel:** https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html 
-**Tolkning sist oppdatert:** dd.mm.åååå
+- **Kravet gjelder for:** Nettsteder, apper og dokumenter
+- **Lenke til kravet på norsk:** https://www.w3.org/Translations/WCAG21-no/#error-suggestion 
+- **Forståartikkel:** https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html 
+- **Tolkning sist oppdatert:** dd.mm.åååå
 
 ## Formål
 Hensikten med kravet er at brukeren skal få hjelp gjennom forslag til å korrigere feil, når inndatafeil oppdages automatisk. 
