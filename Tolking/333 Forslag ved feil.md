@@ -1,9 +1,9 @@
 # 3.3.3 Forslag ved feil 
   
 ## Om suksesskriteriet
-**Kravet gjelder for:** Nettsteder, apper og dokumenter
-**Kravet på norsk:** https://www.w3.org/Translations/WCAG21-no/#error-suggestion 
-**Forståartikkel:** https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html 
+- **Kravet gjelder for:** Nettsteder, apper og dokumenter
+- **Kravet på norsk:** https://www.w3.org/Translations/WCAG21-no/#error-suggestion 
+- **Forståartikkel:** https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html 
 
 ### Formål
 Hensikten med kravet er at brukeren skal få hjelp gjennom forslag til å korrigere feil, når inndatafeil oppdages automatisk. 
@@ -60,7 +60,6 @@ Dette gjelder med mindre informasjonen er knyttet til personvern eller sikkerhet
 Det er flere måter å oppfylle kravet på.
 
 #### Krav til samsvar
-
 -	For alle inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting, får brukeren et forslag som gir tilstrekkelig informasjon om hvordan feil kan rettes og
 -	Forslaget er kodet som tekst og 
 -	Det er enkelt for brukeren å navigere til feilen og
