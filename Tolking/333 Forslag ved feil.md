@@ -25,7 +25,9 @@ Det er ikke spesifisert nærmere hva «oppdages automatisk» betyr. Etter tilsyn
 Begrepet Inndatafeil er definert i WCAGs ordliste, og ifølge definisjonen er «inndatafeil informasjon angitt av brukeren, som ikke godkjennes.» Videre er det presisert i merknaden til definisjonen at inndatafeil blant annet inkluderer to situasjoner
 
 -	informasjon som nettsiden krever, men som brukeren har utelatt 
--	informasjon som er gitt i feil dataformat eller med feil verdi. Eksempel på inndatafeil med feil format eller feil verdi er
+-	informasjon som er gitt i feil dataformat eller med feil verdi.
+
+Eksempel på inndatafeil med feil format eller feil verdi er
   - Postnummer som inneholder bokstaver
   - Navn som inneholder tall eller spesialtegn
   - Ugyldig e-postformat
@@ -36,6 +38,7 @@ Forståartikkelen viser til teknikker for tre ulike situasjoner:
 -	Situasjon A: Brukeren har ikke fylt ut obligatoriske inndatafelt 
 -	Situasjon B: Inndatafeltet krever et bestemt dataformat
 -	Situasjon C: Brukeren har fylt ut informasjon med feil format eller verdi. 
+
 Ifølge forståartikkelen, kan forslaget til retting av feil enten gis av innholdsprodusenten eller av brukeragenten, basert på programmatisk bestemt informasjon. 
 
 Forslag til retting av feil kan ifølge forståartikkelen for eksempel være: 
