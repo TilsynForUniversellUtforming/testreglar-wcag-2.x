@@ -1,11 +1,12 @@
 # 3.3.3 Forslag ved feil (Nivå AA)
+
 ## Om suksesskriteriet
 **Kravet gjelder for:** Nettsteder, apper og dokumenter
 **Lenke til kravet på norsk:** https://www.w3.org/Translations/WCAG21-no/#error-suggestion 
 **Forståartikkel:** https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html 
 **Tolkning sist oppdatert:** dd.mm.åååå
 
-### Formål
+## Formål
 Hensikten med kravet er at brukeren skal få hjelp gjennom forslag til å korrigere feil, når inndatafeil oppdages automatisk. 
 
 ## Brukerbehov
@@ -63,15 +64,17 @@ Det er flere måter å oppfylle kravet på.
 -	Det er enkelt for brukeren å navigere til feilen og
 -	Informasjonen blir liggende i skjemaet, med mindre informasjonen er knyttet til personvern eller sikkerhet
 
-
+**Kommentar**
+(Tekst)
 ## EN 301 549
 **Referanse til kravet i EN 301 549**: 9.3.3.3, 10.3.3.3 og 11.3.3.3
 
-### Brukerbehov (funksjonell ytelsesevne)
+**Brukerbehov (funksjonell ytelsesevne)**
 Primær relasjon: 
 -	Bruk uten syn 
 -	Bruk med nedsatt syn 
 -	Bruk med nedsatt kognisjon
+
 Sekundær relasjon: 
 -	Bruk uten taleevne 
 -	Bruk med nedsatt bevegelighet eller styrke
