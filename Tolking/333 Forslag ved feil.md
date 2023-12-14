@@ -2,7 +2,7 @@
   
 ## Om suksesskriteriet
 - **Kravet gjelder for:** Nettsteder, apper og dokumenter
-- **Lenke til kravet på norsk:** https://www.w3.org/Translations/WCAG21-no/#error-suggestion 
+- **Kravet på norsk:** https://www.w3.org/Translations/WCAG21-no/#error-suggestion 
 - **Forståartikkel:** https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html 
 
 ### Formål
@@ -67,7 +67,7 @@ Det er flere måter å oppfylle kravet på.
 -	Informasjonen blir liggende i skjemaet, med mindre informasjonen er knyttet til personvern eller sikkerhet
 
 #### Kommentar
-(Tekst)
+
 
 ## Forholdet til EN 301 549
 **Referanse til kravet i EN 301 549**: 9.3.3.3, 10.3.3.3 og 11.3.3.3
