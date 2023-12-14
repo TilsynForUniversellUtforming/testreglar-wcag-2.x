@@ -1,4 +1,4 @@
-# 3.3.3 Forslag ved feil (Nivå AA)
+# 3.3.3 Forslag ved feil
 
 ## Om suksesskriteriet
 - **Kravet gjelder for:** Nettsteder, apper og dokumenter
@@ -19,6 +19,7 @@ Suksesskriteriet gjelder kun i situasjoner der inndatafeil blir oppdaget automat
 -	forslag til hvordan inndatafeil kan rettes presenteres for brukeren
 Forutsetningen er etter ordlyden videre at 
 -	det finnes en kjent måte å korrigere feilen på, for eksempel format eller verdi, som for eksempel gyldig format for e-post eller verdiene 1-12 for måneder
+
 Etter ordlyden er det unntak dersom forslag til feilretting er en risiko for sikkerheten eller formålet med det aktuelle innholdet, for eksempel et passord eller svar i en quiz.
 Det er ikke spesifisert nærmere hva «oppdages automatisk» betyr. Etter tilsynets tolkning innebærer det at innholdet er programmert på en måte som avdekker feil inndata, uten at brukeren er involvert.
 
@@ -66,6 +67,7 @@ Det er flere måter å oppfylle kravet på.
 
 **Kommentar**
 (Tekst)
+
 ## EN 301 549
 **Referanse til kravet i EN 301 549**: 9.3.3.3, 10.3.3.3 og 11.3.3.3
 
