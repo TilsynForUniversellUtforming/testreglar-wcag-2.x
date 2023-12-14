@@ -1,10 +1,9 @@
-# 3.3.3 Forslag ved feil
-
+# 3.3.3 Forslag ved feil 
+  
 ## Om suksesskriteriet
 - **Kravet gjelder for:** Nettsteder, apper og dokumenter
 - **Lenke til kravet på norsk:** https://www.w3.org/Translations/WCAG21-no/#error-suggestion 
 - **Forståartikkel:** https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html 
-- **Tolkning sist oppdatert:** dd.mm.åååå
 
 ### Formål
 Hensikten med kravet er at brukeren skal få hjelp gjennom forslag til å korrigere feil, når inndatafeil oppdages automatisk. 
@@ -15,6 +14,8 @@ Hensikten med kravet er at brukeren skal få hjelp gjennom forslag til å korrig
 - Personer med nedsatt motorikk
 
 ## Tolkning av suksesskriteriet
+- **Tolkning sist oppdatert:** dd.mm.åååå
+
 ### Tilsynets tolkning
 Suksesskriteriet gjelder kun i situasjoner der inndatafeil blir oppdaget automatisk. Etter ordlyden skal forslag til hvordan inndatafeil kan rettes presenteres for brukeren
 Forutsetningen er etter ordlyden videre at det finnes en kjent måte å korrigere feilen på, for eksempel format eller verdi, som for eksempel gyldig format for e-post eller verdiene 1-12 for måneder.
