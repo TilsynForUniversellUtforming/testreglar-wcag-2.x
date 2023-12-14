@@ -6,10 +6,10 @@
 - **Forståartikkel:** https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html 
 - **Tolkning sist oppdatert:** dd.mm.åååå
 
-## Formål
+### Formål
 Hensikten med kravet er at brukeren skal få hjelp gjennom forslag til å korrigere feil, når inndatafeil oppdages automatisk. 
 
-## Brukerbehov
+### Brukerbehov
 - Personer med nedsatt kognisjon
 - Personer som er blinde eller har nedsatt syn
 - Personer med nedsatt motorikk
@@ -64,7 +64,7 @@ Det er flere måter å oppfylle kravet på.
 -	Det er enkelt for brukeren å navigere til feilen og
 -	Informasjonen blir liggende i skjemaet, med mindre informasjonen er knyttet til personvern eller sikkerhet
 
-**Kommentar**
+#### Kommentar
 (Tekst)
 
 ## Forholdet til EN 301 549
