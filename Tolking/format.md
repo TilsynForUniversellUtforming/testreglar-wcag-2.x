@@ -1,4 +1,6 @@
 # 3.3.3 Forslag ved feil (Nivå AA)
+## Om suksesskriterium 3.3.3 Forslag ved feil
+
 -	**WAD**: Ja
 -	**WCAG versjon**: 2.0
 -	**Referanse til kravet i EN 301 549**: 9.3.3.3, 10.3.3.3 og 11.3.3.3
@@ -7,14 +9,11 @@
 -	**Kravet gjelder for:** Nettsteder, apper og dokumenter
 -	**Forståartikkel:** https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html 
 
-## Suksesskriterium  (krav)
+### Suksesskriterium  (krav)
 Dersom en inndatafeil oppdages automatisk og det finnes forslag til hvordan den kan korrigeres, presenteres forslagene for brukeren, med mindre dette innebærer risiko for sikkerheten eller formålet med innholdet.
 
-## Formål
+### Formål
 Hensikten med kravet er at brukeren skal få hjelp gjennom forslag til å korrigere feil, når inndatafeil oppdages automatisk. 
-**Jeg erd**
-
-
 
 ## Tolkning og presisering  av suksesskriteriet (kravet)
 Suksesskriteriet gjelder kun i situasjoner der inndatafeil blir oppdaget automatisk. Etter ordlyden skal 
@@ -43,13 +42,13 @@ Ifølge forståartikkelen, kan forslaget til retting av feil enten gis av innhol
 Forslag til retting av feil kan ifølge forståartikkelen for eksempel være: 
 - forslag om rett stavemåte eller rett format
 -	forslag om tilsvarende tekst 
-•	beskrivelse av eller liste over hva som er rett inndata
-•	et spørsmål på formen «Mente du…?» eller tilsvarende
+-	beskrivelse av eller liste over hva som er rett inndata
+-	et spørsmål på formen «Mente du…?» eller tilsvarende
 Forslag til retting kan etter teknikk G177 vises i form av tekst på flere måter, for eksempel
 
-•	i et modalvindu
-•	i ledeteksten til skjemaelementet, 
-•	annet sted i skjemaet eller på nettsiden, for eksempel på toppen
+-	i et modalvindu
+-	i ledeteksten til skjemaelementet, 
+-	annet sted i skjemaet eller på nettsiden, for eksempel på toppen
 
 Forslag til retting skal være tydelig og det skal være enkelt for brukeren å navigere til forslaget, jamfør teknikkene G48 og G85. Det er ikke nok å identifisere forslaget med for eksempel bare med et symbol i ledeteksten, bare med å endre farge eller bare visuell plassering av forslaget.
 
@@ -60,10 +59,10 @@ Det er flere måter å oppfylle kravet på.
 
 Krav til samsvar
 
-•	For alle inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting, får brukeren et forslag som gir tilstrekkelig informasjon om hvordan feil kan rettes og
-•	Forslaget er kodet som tekst og 
-•	Det er enkelt for brukeren å navigere til feilen og
-•	Informasjonen blir liggende i skjemaet, med mindre informasjonen er knyttet til personvern eller sikkerhet
+-	For alle inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting, får brukeren et forslag som gir tilstrekkelig informasjon om hvordan feil kan rettes og
+-	Forslaget er kodet som tekst og 
+-	Det er enkelt for brukeren å navigere til feilen og
+-	Informasjonen blir liggende i skjemaet, med mindre informasjonen er knyttet til personvern eller sikkerhet
 
 
 ## Brukerbehov
@@ -73,71 +72,14 @@ Krav til samsvar
 
 
 
+
+## EN 301 549
 ## Brukerbehov  (funksjonell ytelsesevne)
 Primær relasjon 
 -	Bruk uten syn 
 -	Bruk med nedsatt syn 
 -	Bruk med nedsatt kognisjon
-Sekundær relasjon 
+- Sekundær relasjon 
 -	Bruk uten taleevne 
 -	Bruk med nedsatt bevegelighet eller styrke
 
-
-## Liste med nummer
-
-1. First item
-2. Second item
-3. Third item
-4. Fourth item
-
-## Liste med punkt
-
-- First item
-- Second item
-- Third item
-- Fourth item
-
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-Here's our logo (hover to see the title text):
-
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Reference-style: 
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
-Here is a simple footnote[^1].
-
-A footnote can also have multiple lines[^2].  
-
-You can also use words, to fit your writing style more closely[^note].
-
-[^1]: My reference.
-[^2]: Every new line should be prefixed with 2 spaces.  
-  This allows you to have a footnote with multiple lines.
-[^note]:
-    Named footnotes will still render with numbers instead of the text but allow easier identification and linking.  
-    This footnote also has been made with a different syntax using 4 spaces for new lines.
