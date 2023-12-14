@@ -14,7 +14,7 @@ Hensikten med kravet er at brukeren skal få hjelp gjennom forslag til å korrig
 - Personer med nedsatt motorikk
 
 ## Tolkning av suksesskriteriet
-- **Tolkning sist oppdatert:** dd.mm.åååå
+**Tolkning sist oppdatert:** 13.12.2023
 
 ### Tilsynets tolkning
 Suksesskriteriet gjelder kun i situasjoner der inndatafeil blir oppdaget automatisk. Etter ordlyden skal forslag til hvordan inndatafeil kan rettes presenteres for brukeren
