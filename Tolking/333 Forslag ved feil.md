@@ -15,10 +15,9 @@ Hensikten med kravet er at brukeren skal få hjelp gjennom forslag til å korrig
 - Personer med nedsatt motorikk
 
 ## Tolkning av suksesskriteriet
-Suksesskriteriet gjelder kun i situasjoner der inndatafeil blir oppdaget automatisk. Etter ordlyden skal 
--	forslag til hvordan inndatafeil kan rettes presenteres for brukeren
-Forutsetningen er etter ordlyden videre at 
--	det finnes en kjent måte å korrigere feilen på, for eksempel format eller verdi, som for eksempel gyldig format for e-post eller verdiene 1-12 for måneder
+### Tilsynets tolkning
+Suksesskriteriet gjelder kun i situasjoner der inndatafeil blir oppdaget automatisk. Etter ordlyden skal forslag til hvordan inndatafeil kan rettes presenteres for brukeren
+Forutsetningen er etter ordlyden videre at det finnes en kjent måte å korrigere feilen på, for eksempel format eller verdi, som for eksempel gyldig format for e-post eller verdiene 1-12 for måneder
 
 Etter ordlyden er det unntak dersom forslag til feilretting er en risiko for sikkerheten eller formålet med det aktuelle innholdet, for eksempel et passord eller svar i en quiz.
 Det er ikke spesifisert nærmere hva «oppdages automatisk» betyr. Etter tilsynets tolkning innebærer det at innholdet er programmert på en måte som avdekker feil inndata, uten at brukeren er involvert.
@@ -58,7 +57,7 @@ Dette gjelder med mindre informasjonen er knyttet til personvern eller sikkerhet
 
 Det er flere måter å oppfylle kravet på.
 
-**Krav til samsvar**
+#### Krav til samsvar
 
 -	For alle inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting, får brukeren et forslag som gir tilstrekkelig informasjon om hvordan feil kan rettes og
 -	Forslaget er kodet som tekst og 
@@ -68,7 +67,7 @@ Det er flere måter å oppfylle kravet på.
 **Kommentar**
 (Tekst)
 
-## EN 301 549
+## Forholdet til EN 301 549
 **Referanse til kravet i EN 301 549**: 9.3.3.3, 10.3.3.3 og 11.3.3.3
 
 **Brukerbehov (funksjonell ytelsesevne)**
