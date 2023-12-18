@@ -99,7 +99,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Kva innhald har ulik tastaturrekkefølgje?",
-			"ht": "<p>Beskriv innhaldet, slik at det er mogleg å identifisere den i ettertid. </p>",
+			"ht": "<p>Beskriv innhaldet, slik at det er mogleg å identifisere den i ettertid. Viss det gjeld fleire element, registrer du eit og eit.</p>",
 			"type": "tekst",
 			"label": "Innhald:",
 			"multilinje": true,
