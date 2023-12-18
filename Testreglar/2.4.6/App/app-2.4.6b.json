@@ -122,7 +122,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Beskriv ledeteksten emnet eller formålet med skjemaelementet?",
-			"ht": "<p>Gjer ei skjønnsmesseg vurdering av om ledeteksten beskriv emnet eller formålet med skjemaelementet eller gruppa den høyrer til.</p>",
+			"ht": "<p>Gjer ei skjønnsmessig vurdering av om ledeteksten beskriv emnet eller formålet med skjemaelementet eller gruppa den høyrer til.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G131"
