@@ -75,7 +75,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Gi ein kort beskrivelse av emne eller formål med innhaldet på nettsida.",
-			"ht": "<p>Beskriv innhaldet på nettsida med få ord.</p>\n<p> </p>",
+			"ht": "<p>Beskriv innhaldet på nettsida med få ord.</p>",
 			"type": "tekst",
 			"label": "Emne eller formål med innhaldet:",
 			"multilinje": true,
