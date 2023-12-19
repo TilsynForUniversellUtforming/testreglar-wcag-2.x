@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For synlige ledetekster skal</p>\r\n<ul>\r\n<li>Ledetekst beskrive emnet eller formålet med brukergrensesnittkomponenten den hører til.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For synlige ledetekster skal ledetekst beskrive emnet eller formålet med brukergrensesnittkomponenten den hører til.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
