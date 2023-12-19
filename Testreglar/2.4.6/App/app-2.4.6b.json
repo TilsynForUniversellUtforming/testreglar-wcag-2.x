@@ -1,0 +1,144 @@
+{
+	"namn": "App-2.4.6b Ledetekstar beskriv skjemaelement 2023",
+	"id": "app-2.4.6b",
+	"testlabId": 466,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>For synlige ledetekster skal ledetekst beskrive emnet eller formålet med brukergrensesnittkomponenten den hører til.</p>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "2.3"
+		},
+		{
+			"title": "2.4"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva appside testar du?",
+			"ht": "<p>Beskriv appsida med få stikkord, eller vel i lista.</p>",
+			"type": "tekst",
+			"label": "Appsida:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsida skjema eller skjemaelement?",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om det finst minst eit skjemaelement på appsida.</p>\n<p><strong>Merk:</strong> Skjema i PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appside har ikkje skjema."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Kva skjema testar du?",
+			"ht": "<p>Beskriv skjemaet, slik at det er mogleg å identifisere det i ettertid. Om du finn fleire skjema, registrerer du eit og eit.</p>",
+			"type": "tekst",
+			"label": "Skjema:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Har skjemaet synlege ledetekstar?",
+			"ht": "<p>Ledetekstar omfattar all synlig tekst eller komponent med tekst, som blir brukt til å identifisere skjemaelement.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Skjema har ikkje synlege ledetekstar.",
+					"element": "2.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Kva ledetekst testar du?",
+			"ht": "<p>Beskriv ledeteksten, slik at det er mogleg å identifisere den i ettertid. Om du finn fleire ledetekstar, registrerer du ein og ein.</p>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Eit og same skjemaelement kan ha fleire ledetekstar, som til saman gir informasjon om emne eller formål</li>\n<li>Vi ser vekk frå kravet om at obligatoriske skjemafelt skal vere merka. Dette blir testa i SK 3.3.2</li>\n</ul>",
+			"type": "tekst",
+			"label": "Ledetekst:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Kva skjemaelementet høyrer ledeteksten til?",
+			"ht": "<p>Beskriv skjemaelementet som ledeteksten høyrer til, slik at det er mogleg å identifisere det i ettertid. Dersom skjemaelementet er del av ei gruppe, beskriv du gruppa.</p>",
+			"type": "tekst",
+			"label": "Skjemaelement:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Beskriv ledeteksten emnet eller formålet med skjemaelementet?",
+			"ht": "<p>Gjer ei skjønnsmessig vurdering av om ledeteksten beskriv emnet eller formålet med skjemaelementet eller gruppa den høyrer til.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G131"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Ledeteksten beskriv emnet eller formålet med skjemaelementet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Ledeteksten beskriv ikkje emnet eller formålet med skjemaelementet."
+				}
+			}
+		}
+	]
+}
