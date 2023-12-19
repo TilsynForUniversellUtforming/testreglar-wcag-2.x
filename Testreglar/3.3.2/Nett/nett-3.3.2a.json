@@ -1,11 +1,11 @@
 {
 	"namn": "Nett-3.3.2a Inndataelementer har instruksjon eller ledetekst 2023",
-	"id": "nett-3.3.2",
+	"id": "nett-3.3.2a",
 	"testlabId": 463,
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<ul>\r\n<li>Det viser identifikasjon i form av ledetekster eller instruksjoner, når innholdet krever inndata fra brukeren og\r\n<ul>\r\n<li>Ledetekst eller instruksjon er alltid synlig eller blir synlig når inndataelement er i fokus og</li>\r\n<li>Ledetekst eller instruksjon forblir synlig så lenge inndataelement er i fokus og</li>\r\n<li>Ledetekst eller instruksjon er plassert i eller rett ved inndataelement</li>\r\n</ul>\r\n</li>\r\n<li>Dersom skjemaet består av både obligatoriske og frivillige inndataelement, er det i tillegg\r\n<ul>\r\n<li>Opplyst hvilke inndataelement som er obligatoriske og</li>\r\n<li>Merking av obligatoriske inndataelement med ikon/symbol/bilde, er forklart før det blir tatt i bruk første gang </li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul>\r\n<li>Det viser ledetekster eller instruksjoner, når innholdet krever inndata fra brukeren og\r\n<ul>\r\n<li>Ledetekst eller instruksjon er alltid synlig eller blir synlig når inndataelement er i fokus og</li>\r\n<li>Ledetekst eller instruksjon forblir synlig så lenge inndataelement er i fokus og</li>\r\n<li>Ledetekst eller instruksjon er plassert i eller rett ved inndataelement</li>\r\n</ul>\r\n</li>\r\n<li>Dersom alle inndataelementer er obligatoriske, er det tilstrekkelig at det er opplyst om det i starten av skjemaet</li>\r\n<li>Dersom skjemaet består av både obligatoriske og frivillige inndataelement, er det i tillegg\r\n<ul>\r\n<li>Opplyst hvilke inndataelement som er obligatoriske og</li>\r\n<li>Merking av obligatoriske inndataelement med ikon/symbol/bilde, er forklart før det blir tatt i bruk første gang </li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -62,7 +62,7 @@
 		{
 			"stegnr": "2.1",
 			"spm": "Kva side testar du?",
-			"ht": "<p>Angi URL eller side-ID.</p>",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
@@ -76,7 +76,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsida skjema med inndataelement?",
-			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om det finst skjemaelement som krev inndata fra brukaren.</p>\n<p><strong>Merk:</strong>  Skjema i PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om det finst skjemaelement som krev inndata fra brukaren.</p>\n<p><strong>Inndataelement:</strong> Inndataelement er etter tilsynets oppfatning, nettinnhald som lar brukaren samhandla med data, som å legge inn, endra, legga til og stadfeste informasjon, når brukaren fyller ut eit skjema.</p>\n<p><strong>Merk:</strong> Skjema i PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -172,7 +172,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er identifikasjonen visuelt plassert i eller rett ved inndataelementet?",
-			"ht": "<p>Plasseringa kan for eksempel vere rett over eller rett ved sida av inndataelementet. Ledeteksten eller instruksjonen kan også vere plassert i sjølve inndataelementet, for eksempel ein floating label</p>\n<p>Viss ledeteksten aleine ikkje er tilstrekkeleg, skal utfyllande informasjon som er med på å identifisere inndataelementet, vere plassert rett ved inndataelementet.</p>",
+			"ht": "<p>Plasseringa kan for eksempel vere:</p>\n<ul>\n<li>rett over eller</li>\n<li>rett ved sida av inndataelementet eller</li>\n<li>i sjølve inndataelementet, for eksempel ein floating label</li>\n</ul>\n<p>Viss ledeteksten aleine ikkje er tilstrekkeleg, skal utfyllande informasjon som er med på å identifisere inndataelementet, vere plassert rett ved inndataelementet.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G162"
@@ -346,7 +346,7 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Har ikonet/symbolet/bildet tekstalternativ, som set brukaren i stand til å identifisere inndataelementet?",
-			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Inspiser ikonet/symbolet/bildet og bruk Accessibility Checker i nettlesaren</li>\n<li>Vurder om ikonet/symbolet/bildet har tekstalternativ i koden. Prioritert rekkefølgje er:\n<ol>\n<li><code>aria-label</code></li>\n<li><code>aria-labelledby</code></li>\n<li><code>alt</code>, finst helst på <code>&lt;img&gt;</code>, men kan og brukast på andre</li>\n<li><code>value</code> ,finst helst på skjemaelement</li>\n<li>tekst i ikon/symbol-elementet, for eksempel <code>&lt;button&gt;Søk&lt;/button&gt;</code>)</li>\n<li><code>title</code></li>\n</ol>\n</li>\n<li>Du skal vurdere om innhaldet i attributta set brukaren i stand til å identifisere inndataelementet.</li>\n</ul>",
+			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Inspiser ikonet/symbolet/bildet og bruk Accessibility Tree i nettlesaren</li>\n<li>Vurder om ikonet/symbolet/bildet har tekstalternativ i koden. Godkjente måter er:\n<ul>\n<li><code>aria-label</code></li>\n<li><code>aria-labelledby</code></li>\n<li><code>alt</code>, finst helst på <code>&lt;img&gt;</code>, men kan og brukast på andre</li>\n<li><code>value</code> ,finst helst på skjemaelement</li>\n<li>tekst i ikon/symbol-elementet, for eksempel <code>&lt;button&gt;Søk&lt;/button&gt;</code>)</li>\n<li><code>title</code></li>\n</ul>\n</li>\n<li>Du skal vurdere om innhaldet i attributta set brukaren i stand til å identifisere inndataelementet.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -388,7 +388,7 @@
 		{
 			"stegnr": "3.9",
 			"spm": "Er det aktuelle inndataelementet obligatorisk?",
-			"ht": "<p>Obligatorisk inneber at brukaren må fylle ut informasjon eller gjere valg, for å kome vidare i skjemaet, for eksempel</p>\n<ul>\n<li>fylle ut informasjon </li>\n<li>gjere val i nedtrekksmenyar, radioknappar, avkryssingsboksar.</li>\n</ul>\n<p><strong>Merk:</strong> Du må kanskje fylle ut eller prøve å sende inn skjemaet for å finne ut om inndataelementet er obligatorisk.</p>",
+			"ht": "<p>Obligatorisk inneber at brukaren må fylle ut informasjon eller gjere valg, for å kome vidare i skjemaet, for eksempel</p>\n<ul>\n<li>fylle ut informasjon </li>\n<li>gjere val i nedtrekksmenyar, radioknappar, avkryssingsboksar.</li>\n</ul>\n<p><strong>Tips:</strong> For å finne ut om inndataelementet er obligatorisk, kan du:</p>\n<ul>\n<li>fylle ut eller prøve å sende inn skjemaet eller</li>\n<li>sjekke koden for å se etter attributtet required eller tilsvarende</li>\n</ul>\n<p>.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
