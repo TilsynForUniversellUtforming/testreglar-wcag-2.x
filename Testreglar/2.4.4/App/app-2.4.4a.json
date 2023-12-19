@@ -47,7 +47,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har appsida lenker som inneheld tekst?",
-			"ht": "<p>Du skal bruke skjermlesar for å finne og teste lenker. </p>\n<p>Slik testar du:</p>\n<p><strong>iOS</strong></p>\n<ul>\n<li>Aktiver VoiceOver rotor \n<ul>\n<li>Innstillinger -&gt; Tilgjengelighet -&gt; VoiceOver -&gt;Roter</li>\n<li>Velg Lenker i Rotorobjekter</li>\n<li>Skru på Endre roter etter objekt</li>\n</ul>\n</li>\n<li>Aktiver VoiceOver</li>\n<li>Opne appsida</li>\n<li>Bruk rotoren for å navigere mellom lenker (koblinger)</li>\n</ul>\n<p><strong> Android</strong></p>\n<ul>\n<li>Aktiver TalkBack-menyen\n<ul>\n<li>Innstillinger -&gt; Tilgjengelighet -&gt; TalkBack-&gt;Innstillnger -&gt; Tilpass menyer -&gt;Tilpass lesekontrollene</li>\n<li>Velg Linker</li>\n</ul>\n</li>\n<li>Aktiver TalkBack</li>\n<li>Opne appsida</li>\n<li>Bruk TalkBack-menyer for å navigere mellom lenker (koblinger)</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Dersom skjermlesar ikkje les opp lenker, betyr det at appsida ikkje inneheld lenker. </li>\n<li>Lenkas plassering er utan betydning, og kan for eksempel ligge i meny, liste eller tabell.</li>\n<li>Du skal ikkje teste knappar eller lenker som inneheld berre bilde. Dette blir testa i SK 4.1.2 og 1.1.1.</li>\n</ul>",
+			"ht": "<p>Du skal bruke skjermlesar for å finne og teste lenker. </p>\n<p>Slik testar du:</p>\n<p><strong>iOS</strong></p>\n<ul>\n<li>Aktiver VoiceOver rotor \n<ul>\n<li>Innstillinger -&gt; Tilgjengelighet -&gt; VoiceOver -&gt;Rotor</li>\n<li>Velg Lenker i Rotorobjekter</li>\n<li>Skru på Endre rotor etter objekt</li>\n</ul>\n</li>\n<li>Aktiver VoiceOver</li>\n<li>Opne appsida</li>\n<li>Bruk rotoren for å navigere mellom lenker (koblinger)</li>\n</ul>\n<p><strong> Android</strong></p>\n<ul>\n<li>Aktiver TalkBack-menyen\n<ul>\n<li>Innstillinger -&gt; Tilgjengelighet -&gt; TalkBack-&gt;Innstillnger -&gt; Tilpass menyer -&gt;Tilpass lesekontrollene</li>\n<li>Velg Linker</li>\n</ul>\n</li>\n<li>Aktiver TalkBack</li>\n<li>Opne appsida</li>\n<li>Bruk TalkBack-menyer for å navigere mellom lenker (koblinger)</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Dersom skjermlesar ikkje les opp lenker, betyr det at appsida ikkje inneheld lenker. </li>\n<li>Lenkas plassering er utan betydning, og kan for eksempel ligge i meny, liste eller tabell.</li>\n<li>Du skal ikkje teste knappar eller lenker som inneheld berre bilde. Dette blir testa i SK 4.1.2 og 1.1.1.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -63,7 +63,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Kva lenke testar du?",
-			"ht": "<p>Beskriv lenka, slik at det er mogleg å identifisere den i ettertid. Om du finn fleire lenker registrerer du ei og ei.</p>\n<p><strong>Tips:</strong> Du kan skrive lenketekst, plassering på side, element som er i nærleiken eller liknande. </p>",
+			"ht": "<p>Beskriv lenka, slik at det er mogleg å identifisere den i ettertid. Viss det gjeld fleire lenker, registrerer du ei og ei.</p>\n<p><strong>Tips:</strong> Du kan skrive lenketekst, plassering på side, element som er i nærleiken eller liknande. </p>",
 			"type": "tekst",
 			"label": "Lenke:",
 			"multilinje": true,
