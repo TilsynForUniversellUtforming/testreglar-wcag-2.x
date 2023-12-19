@@ -52,7 +52,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Finnes det bilde med et eller flere klikkbare områder, på testsiden?",
-			"ht": "<p>Bruk kodeverktøyet i nettleseren og sjekk om det finnes et eller flere bilder som er kodet med <code>&lt;map&gt;</code>-elementet.</p>\n<p>Merk: Bildets plassering har ikke betydning. Det kan for eksempel ligge i en meny, liste, tabell eller lignende. </p>",
+			"ht": "<p>Bruk kodeverktøyet i nettleseren og sjekk om det finnes et eller flere bilder som er kodet med <code>&lt;map&gt;</code>-elementet.</p>\n<p><strong>Merk:</strong> Bildets plassering har ikke betydning. Det kan for eksempel ligge i en meny, liste, tabell eller lignende. </p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
