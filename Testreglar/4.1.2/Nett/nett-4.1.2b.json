@@ -35,12 +35,6 @@
 		},
 		{
 			"title": "3.9"
-		},
-		{
-			"title": "3.10"
-		},
-		{
-			"title": "3.11"
 		}
 	],
 	"steg": [
@@ -60,240 +54,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Gir verktøyet resultater under \"Button has accessible name\" og/eller \"Image button has accessible name\"?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk verktøyet <a href=\"https://chrome.google.com/webstore/detail/qualweb-extension/ljgilomdnehokancdcbkmbndkkiggioc\" target=\"_blank\" rel=\"noopener\">QualWeb </a>i Chrome på testsiden\n<ul>\n<li>velg kun \"ACT Rules\"</li>\n<li>trykk på knappen \"Evaluate\"</li>\n<li>utvid \"Fliters\"</li>\n<li>fjern hake på \"Warning\"</li>\n</ul>\n</li>\n<li>Sjekk om det finnes resultater på \"Button has accessible name\" og \"Image button has accessible name\"<br>\n<ul>\n<li>trykk på \"Button has accessible name\" og/eller \"Image button has accessible name\" for å vise aktuelle resultater\n<ul>\n<li>Dersom alternativene ikke kommer opp, har ikke QW funnet knapper</li>\n</ul>\n</li>\n<li>velg både Passed og Failed</li>\n<li>du kan bruke \"Highlight Element\" for å vise hvor aktuelle knapper ligger på siden\n<ul>\n<li>Bruk pilene for å navigere gjennom resultater for forskjellige knapper</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Hvis verktøyet ikke finner knapper, velger du \"Nei\" i dette steget</li>\n<li>Hvis en knapp har <a href=\"https://www.w3.org/TR/wai-aria-1.1/#switch\" target=\"_blank\" rel=\"noopener\">role=\"switch\"</a>, skal den testes i nett-4.1.2a</li>\n</ul>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.1"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.11"
-				}
-			}
-		},
-		{
-			"stegnr": "3.1",
-			"spm": "Hvilken knapp tester du?",
-			"ht": "<p>Beskriv knappen, slik at det er mulig å identifisere den i ettertid. Hvis verktøyet finner flere knapper, registrerer du en og en.</p>",
-			"type": "tekst",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.2"
-				}
-			},
-			"label": "Knapp:",
-			"multilinje": true
-		},
-		{
-			"stegnr": "3.2",
-			"spm": "Hvilket resultat gir verktøyet for dette skjemaelementet?",
-			"ht": "<p>Verktøyet gir resultat:</p>",
-			"type": "radio",
-			"ruting": {
-				"alt0": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Knappen har ikke et tilgjengelig navn."
-				},
-				"alt1": {
-					"type": "gaaTil",
-					"steg": "3.3"
-				},
-				"alt2": {
-					"type": "gaaTil",
-					"steg": "3.3"
-				}
-			},
-			"svarArray": [
-				"Brudd (Failed)",
-				"Samsvar (Passed)",
-				"Ingen"
-			]
-		},
-		{
-			"stegnr": "3.3",
-			"spm": "Er knappen kodet med role button?",
-			"ht": "<p>Slik tester du:</p>\n<p><strong>Alternativ 1:</strong></p>\n<ul>\n<li>Åpne DevTools i nettleseren (F12) Chrome</li>\n<li>Inspiser knappen med funksjonen \"inspiser element med mus\"\n<ul>\n<li>Klikk på pil-knappen i øvre venstre hjørne av vinduet, for å aktivere funksjonen</li>\n</ul>\n</li>\n<li>Hold musepekeren over knappen du tester</li>\n<li>En pop-up viser blant annet \"Name\" og \"Role\" under overskriften \"Accessibility\"</li>\n<li>Sjekk om informasjon under \"Role\" er \"button\"</li>\n</ul>\n<p><strong>Alternativ 2:</strong></p>\n<ul>\n<li>Inspiser knappen i Chrome</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li>\n<li>Sjekk om informasjon under \"Role\" er \"button\"</li>\n</ul>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.4"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Knappen er ikke kodet med role button."
-				}
-			},
-			"kilde": [
-				"ARIA4",
-				"F59",
-				"G10"
-			]
-		},
-		{
-			"stegnr": "3.4",
-			"spm": "Har knappen et tilgjengelig navn, som ikke er tomt?",
-			"ht": "<p>Bruk Accessibility Checker som beskrevet i tidligere steg</p>\n<p>Sjekk at informasjon under \"Name\" ikke er tomt.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.5"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Knappen har ikke et tilgjengelig navn."
-				}
-			},
-			"kilde": [
-				"ARIA14",
-				"ARIA16",
-				"F68",
-				"G108",
-				"H44",
-				"H65",
-				"H88",
-				"H91",
-				"F86"
-			]
-		},
-		{
-			"stegnr": "3.5",
-			"spm": "Beskriver tilgjengelig navn formålet med knappen?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Ta utgangspunkt i det tilgjengelige navnet du fant i forrige steg.</li>\n<li>Sjekk om det tilgjengelige navnet beskriver formålet med skjemaelementet. Det er tilstrekkelig at det tilgjengelige navnet identifiserer skjemaelementet.</li>\n</ul>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.6"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Knappen har et tilgjengelig navn, som ikke beskriver formålet med knappen."
-				}
-			},
-			"kilde": [
-				"ARIA14"
-			]
-		},
-		{
-			"stegnr": "3.6",
-			"spm": "Hvilket attributt gir tilgjengelig navn til knappen?",
-			"ht": "<ul>\n<li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Checker</li>\n<li>Velg et alternativ.</li>\n</ul>",
-			"type": "radio",
-			"svarArray": [
-				"aria-labelledby",
-				"aria-label",
-				"label",
-				"innhold",
-				"title",
-				"alt",
-				"value",
-				"annet"
-			],
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.7"
-				}
-			}
-		},
-		{
-			"stegnr": "3.7",
-			"spm": "Har knappen mer enn en tilstand når brukeren samhandler med den?",
-			"ht": "<p>En tilstand er en dynamisk egenskap som endres når brukeren samhandler med knappen.</p>\n<p>Trykk på knappen og sjekk om knappen har minst en av disse tilstandene: </p>\n<ul>\n<li>av/på knapp (toggle button)</li>\n<li>spill av og stopp knapp</li>\n<li>en knapp som utvider eller sammenslutter innhold, for eksempel en meny-knapp</li>\n</ul>",
-			"type": "jaNei",
-			"ruting": {
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Knappen har role button, og et tilgjengelig navn som beskriver formålet med knappen."
-				},
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.8"
-				}
-			}
-		},
-		{
-			"stegnr": "3.8",
-			"spm": "Hvor mange tilstander har knappen? ",
-			"ht": "<p>Registrer antall tilstander.</p>\n<p>Eksempel: En spill av og stopp knapp kan ha to tilstander, spill av eller stopp.</p>",
-			"type": "tekst",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.9"
-				}
-			},
-			"label": "Antall tilstander:",
-			"filter": "tal"
-		},
-		{
-			"stegnr": "3.9",
-			"spm": "Hvor mange tilstander er ikke angitt programmatisk?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser knappen i Chrome</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under ARIA-attributter eller Computed Properties, sjekk om det finnes:<br>\n<ul>\n<li>For av/på knapp (toggle button) og spill av og stopp knapp:<br>\n<ul>\n<li>hvis knappen er på: aria-pressed: true eller aria-checked: true</li>\n<li>hvis knappen er av: aria-pressed: false eller aria-checked: false</li>\n<li>hvis knappen har en mellomliggende tilstand mellom tilstander av og på: aria-pressed: mixed.</li>\n</ul>\n</li>\n<li>en knapp som utvider eller sammenslutter innhold<br>\n<ul>\n<li>hvis innholdet er sammensluttet: aria-expanded: false</li>\n<li>hvis innholdet er utvidet: aria-expanded: true</li>\n<li>har attributtet: aria-haspopup: true </li>\n<li>har attributtet:  aria-controls: \"IDREF\"\n<ul>\n<li>IDREF refererer til verdien i attributtet \"id\" til elementet med menyen som styres av meny-knappen.</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Registrer antall tilstander som ikke er angitt programmatisk.</li>\n</ul>",
-			"type": "tekst",
-			"ruting": {
-				"alle": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"type": "lik",
-							"sjekk": "3.9",
-							"verdi": "0",
-							"handling": {
-								"type": "avslutt",
-								"fasit": "Ja",
-								"utfall": "Knappen har role button, et tilgjengelig navn som beskriver formålet med knappen og tilstanden er angitt programmatisk."
-							}
-						},
-						"2": {
-							"type": "ulik",
-							"sjekk": "3.9",
-							"verdi": "0",
-							"handling": {
-								"type": "gaaTil",
-								"steg": "3.10"
-							}
-						}
-					}
-				}
-			},
-			"kilde": [
-				"ARIA5",
-				"G10"
-			],
-			"label": "Antall tilstander:",
-			"filter": "tal"
-		},
-		{
-			"stegnr": "3.10",
-			"spm": "Hvilke tilstander er ikke angitt programmatisk?",
-			"ht": "<p>Beskriv tilstander som ikke er angitt programmatisk, slik at det er mulig å identifisere dem i ettertid.</p>",
-			"type": "tekst",
-			"ruting": {
-				"alle": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Knappen har role button og et tilgjengelig navn som beskriver formålet med knappen, men tilstanden er ikke angitt programmatisk."
-				}
-			},
-			"label": "Tilstander:",
-			"multilinje": true
-		},
-		{
-			"stegnr": "3.11",
-			"spm": "Har testsiden knapper som verktøyet ikke avdekker?",
-			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes komponenter på testsiden som ser ut en knapp.</p>\n<p>Begrensninger i verktøyet</p>\n<ul>\n<li>Det finner kun knapper som har role button</li>\n<li>Det finner ikke knapper kodet på andre måter, for eksempel <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code> eller lignende  </li>\n</ul>\n<p><strong>Knapp:</strong> Knapper tillater enkle brukerutløste handlinger, for eksempel å lagre, gå videre til neste side uten å åpne en ny URL, sende inn et skjema eller sette i gang et søk.</p>\n<p><strong>Merk</strong>: Knapper som består av et bilde og knapper som er kodet som lenker skal også testes her. </p>\n<p> </p>",
+			"spm": "Har testsiden knapper?",
+			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes komponenter på testsiden som ser ut en knapp.</p>\n<p><strong>Knapp:</strong> Knapper tillater enkle brukerutløste handlinger, for eksempel å lagre, gå videre til neste side uten å åpne en ny URL, sende inn et skjema eller sette i gang et søk.</p>\n<p><strong>Merk</strong>: Knapper som består av et bilde og knapper som er kodet som lenker skal også testes her. </p>\n<p> </p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -309,6 +71,196 @@
 				"F20",
 				"F59"
 			]
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken knapp tester du?",
+			"ht": "<p>Beskriv knappen, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere knapper, registrerer du en og en.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"label": "Knapp:",
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er knappen kodet med role button?",
+			"ht": "<p>Slik tester du:</p>\n<p><strong>Alternativ 1:</strong></p>\n<ul>\n<li>Åpne DevTools i nettleseren (F12) Chrome</li>\n<li>Inspiser knappen med funksjonen \"inspiser element med mus\"\n<ul>\n<li>Klikk på pil-knappen i øvre venstre hjørne av vinduet, for å aktivere funksjonen</li>\n</ul>\n</li>\n<li>Hold musepekeren over knappen du tester</li>\n<li>En pop-up viser blant annet \"Name\" og \"Role\" under overskriften \"Accessibility\"</li>\n<li>Sjekk om informasjon under \"Role\" er \"button\"</li>\n</ul>\n<p><strong>Alternativ 2:</strong></p>\n<ul>\n<li>Inspiser knappen i Chrome</li>\n<li>Bruk Accessibility Tree i inspiser</li>\n<li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li>\n<li>Sjekk om informasjon under \"Role\" er \"button\"</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Knappen er ikke kodet med role button."
+				}
+			},
+			"kilde": [
+				"ARIA4",
+				"F59",
+				"G10"
+			]
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Har knappen et tilgjengelig navn, som ikke er tomt?",
+			"ht": "<p>Bruk Accessibility Tree som beskrevet i tidligere steg</p>\n<p>Sjekk at informasjon under \"Name\" ikke er tomt.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Knappen har ikke et tilgjengelig navn."
+				}
+			},
+			"kilde": [
+				"ARIA14",
+				"ARIA16",
+				"F68",
+				"F86",
+				"G108",
+				"H44",
+				"H65",
+				"H88",
+				"H91"
+			]
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Beskriver tilgjengelig navn formålet med knappen?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Ta utgangspunkt i det tilgjengelige navnet du fant i forrige steg.</li>\n<li>Sjekk om det tilgjengelige navnet beskriver formålet med skjemaelementet. Det er tilstrekkelig at det tilgjengelige navnet identifiserer skjemaelementet.</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Knappen har et tilgjengelig navn, som ikke beskriver formålet med knappen."
+				}
+			},
+			"kilde": [
+				"ARIA14"
+			]
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Hvilket attributt gir tilgjengelig navn til knappen?",
+			"ht": "<ul>\n<li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Tree</li>\n<li>Velg et alternativ.</li>\n</ul>",
+			"type": "radio",
+			"svarArray": [
+				"aria-labelledby",
+				"aria-label",
+				"label",
+				"innhold",
+				"title",
+				"alt",
+				"value",
+				"annet"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Har knappen mer enn en tilstand når brukeren samhandler med den?",
+			"ht": "<p>En tilstand er en dynamisk egenskap som endres når brukeren samhandler med knappen.</p>\n<p>Trykk på knappen og sjekk om knappen har minst en av disse tilstandene: </p>\n<ul>\n<li>av/på knapp (toggle button)</li>\n<li>spill av og stopp knapp</li>\n<li>en knapp som utvider eller sammenslutter innhold, for eksempel en meny-knapp</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Knappen har role button, og et tilgjengelig navn som beskriver formålet med knappen."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Hvor mange tilstander har knappen? ",
+			"ht": "<p>Registrer antall tilstander.</p>\n<p>Eksempel: En spill av og stopp knapp kan ha to tilstander, spill av eller stopp.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				}
+			},
+			"label": "Antall tilstander:",
+			"filter": "tal"
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Hvor mange tilstander er ikke angitt programmatisk?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser knappen i Chrome</li>\n<li>Bruk Accessibility Tree i inspiser</li>\n<li>Under ARIA-attributter eller Computed Properties, sjekk om det finnes:<br>\n<ul>\n<li>For av/på knapp (toggle button) og spill av og stopp knapp:<br>\n<ul>\n<li>hvis knappen er på: aria-pressed: true eller aria-checked: true</li>\n<li>hvis knappen er av: aria-pressed: false eller aria-checked: false</li>\n<li>hvis knappen har en mellomliggende tilstand mellom tilstander av og på: aria-pressed: mixed.</li>\n</ul>\n</li>\n<li>en knapp som utvider eller sammenslutter innhold<br>\n<ul>\n<li>hvis innholdet er sammensluttet: aria-expanded: false</li>\n<li>hvis innholdet er utvidet: aria-expanded: true</li>\n<li>har attributtet: aria-haspopup: true </li>\n<li>har attributtet:  aria-controls: \"IDREF\"\n<ul>\n<li>IDREF refererer til verdien i attributtet \"id\" til elementet med menyen som styres av meny-knappen.</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Registrer antall tilstander som ikke er angitt programmatisk.</li>\n</ul>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"type": "lik",
+							"sjekk": "3.8",
+							"verdi": "0",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Knappen har role button, et tilgjengelig navn som beskriver formålet med knappen og tilstanden er angitt programmatisk."
+							}
+						},
+						"2": {
+							"type": "ulik",
+							"sjekk": "3.8",
+							"verdi": "0",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.9"
+							}
+						}
+					}
+				}
+			},
+			"kilde": [
+				"ARIA5",
+				"G10"
+			],
+			"label": "Antall tilstander:",
+			"filter": "tal"
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Hvilke tilstander er ikke angitt programmatisk?",
+			"ht": "<p>Beskriv tilstander som ikke er angitt programmatisk, slik at det er mulig å identifisere dem i ettertid.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Knappen har role button og et tilgjengelig navn som beskriver formålet med knappen, men tilstanden er ikke angitt programmatisk."
+				}
+			},
+			"label": "Tilstander:",
+			"multilinje": true
 		}
 	]
 }
