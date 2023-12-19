@@ -26,12 +26,6 @@
 		},
 		{
 			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
 		}
 	],
 	"steg": [
@@ -53,7 +47,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsida lenker som inneheld tekst?",
-			"ht": "<p>Gjer ein visuell inspeksjon, og sjekk om det finst lenker med tekst på testsida.</p>\n<p><strong>Merk: </strong></p>\n<ul>\n<li>Lenkas plassering er utan betydning, den kan for eksempel ligge i ein meny, liste eller tabell.</li>\n<li>Du skal ikkje teste knappar eller lenker som berre inneheld bilde. Dette blir testa i SK 4.1.2 og SK 1.1.1.</li>\n</ul>",
+			"ht": "<p>Gjer ein visuell inspeksjon, og sjekk om det finst lenker på testsida.</p>\n<p><strong>Merk: </strong></p>\n<ul>\n<li>Lenkas plassering er utan betydning, den kan for eksempel ligge i ein meny, liste eller tabell.</li>\n<li>Du skal ikkje teste knappar eller lenker som berre inneheld bilde. Dette blir testa i SK 4.1.2 og SK 1.1.1.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -69,7 +63,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Kva lenke testar du?",
-			"ht": "<p>Beskriv lenka, slik at det er mogleg å identifisere den i ettertid. Om du finn fleire lenker registrerer du ei og ei.</p>\n<p><strong>Tips:</strong> Du kan skrive lenketekst, plassering på side, element som er i nærleiken eller liknande. </p>",
+			"ht": "<p>Beskriv lenka, slik at det er mogleg å identifisere den i ettertid. Viss det gjeld fleire lenker, registrerer du ei og ei.</p>\n<p><strong>Tips:</strong> Du kan skrive lenketekst, plassering på side, element som er i nærleiken eller liknande. </p>",
 			"type": "tekst",
 			"label": "Lenke:",
 			"multilinje": true,
@@ -119,8 +113,8 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Har lenkeelementet attributtet \"aria-label\"?",
-			"ht": "<p>Inspiser lenka, <code>&lt;a&gt;</code>-elementet, og sjekk om det finst attributtet <code>aria-label</code>.</p>\n<p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
+			"spm": "Har lenka et tilgjengelig navn, som ikke er tomt?",
+			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Inspiser lenka, <code>&lt;a&gt;</code>-elementet</li>\n<li>Bruk Accessibility Tree i nettleseren</li>\n<li>Sjekk at informasjon under \"Name\" ikkje er tomt.</li>\n</ul>\n<p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA8"
@@ -128,7 +122,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.8"
+					"steg": "3.6"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -138,46 +132,8 @@
 		},
 		{
 			"stegnr": "3.5",
-			"spm": "Har lenkeelementet attributtet \"aria-labelledby\"?",
-			"ht": "<p>Inspiser lenka, <code>&lt;a&gt;</code>-elementet, og sjekk om det finst attributtet <code>aria-labelledby</code>.</p>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Ein <code>aria-labelledby</code> kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (<code>aria-labelledby=\"id1 id2\"</code>)</li>\n<li>Du skal ikkje vurdere kvaliteten på teksten.</li>\n</ul>",
-			"type": "jaNei",
-			"kilde": [
-				"ARIA7"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.6"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.7"
-				}
-			}
-		},
-		{
-			"stegnr": "3.6",
-			"spm": "Er aria-labelledby attributtet kopla til annan tekst på sida (lenkekontekst)?",
-			"ht": "<p>Gjer eit søk i koden på id i <code>aria-labelledby</code>. Dersom det finst fleire id-ar, skal du undersøke alle.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"ARIA7"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.8"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.7"
-				}
-			}
-		},
-		{
-			"stegnr": "3.7",
 			"spm": "Har lenka programmatisk bestemt lenkekontekst?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Sjekk om lenketeksten er supplert med programmatisk bestemt lenkekontekst med eit av følgjande alternativ:  \n<ul>\n<li>tekstalternativ til grafikk koblet til det same <code>&lt;a&gt;</code>-elementet</li>\n<li>teksten i det same <code>&lt;p&gt;</code>-elementet. <code>&lt;div&gt;</code>-elementet behandles som <code>&lt;p&gt;</code> her</li>\n<li>teksten i same listepunkt, <code>&lt;li&gt;</code>-elementet eller forrige listepunkt i einøsta liste</li>\n<li>i same tabell, det vil seie tekst i same datacelle <code>&lt;td&gt;</code>-elementet og/eller tekst som ligg i tilknytta overskriftsceller <code>&lt;th&gt;</code>-elementet)</li>\n<li>teksten til forrige overskrift <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>-elementet</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Vi godkjenner ikkje anna type koding, for eksempel <code>&lt;div&gt;</code> eller <code>&lt;span&gt;</code>.</li>\n<li>Du skal ikkje vurdere kvaliteten på teksten.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Sjekk om lenketeksten er supplert med programmatisk bestemt lenkekontekst med eit av følgjande alternativ:  \n<ul>\n<li>tekstalternativ til grafikk koblet til det same <code>&lt;a&gt;</code>-elementet (du kan bruke Accessibility Tree)</li>\n<li>teksten i det same <code>&lt;p&gt;</code>-elementet. <code>&lt;div&gt;</code>-elementet behandles som <code>&lt;p&gt;</code> her</li>\n<li>teksten i same listepunkt, <code>&lt;li&gt;</code>-elementet eller forrige listepunkt i einøsta liste</li>\n<li>i same tabell, det vil seie tekst i same datacelle <code>&lt;td&gt;</code>-elementet og/eller tekst som ligg i tilknytta overskriftsceller <code>&lt;th&gt;</code>-elementet)</li>\n<li>teksten til forrige overskrift <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>-elementet</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Vi godkjenner ikkje anna type koding, for eksempel <code>&lt;div&gt;</code> eller <code>&lt;span&gt;</code>.</li>\n<li>Du skal ikkje vurdere kvaliteten på teksten.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"F63",
@@ -190,7 +146,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.8"
+					"steg": "3.6"
 				},
 				"nei": {
 					"type": "avslutt",
@@ -200,7 +156,7 @@
 			}
 		},
 		{
-			"stegnr": "3.8",
+			"stegnr": "3.6",
 			"spm": "Er lenketeksten, i kombinasjon med programmatisk bestemt lenkekontekst, beskrivande for formålet med lenka?",
 			"ht": "<p>Gjer ei skjønnsmessig vurdering av om innhaldet i lenka og programmatisk bestemt lenkekontekst samla, gir tilstrekkeleg informasjon om kva som er lenkemålet.</p>\n<p>Lenkemålet treng ikkje å vere heilt presist, så lenge du får informasjon som er dekkande for kor du kjem. </p>",
 			"type": "jaNei",
