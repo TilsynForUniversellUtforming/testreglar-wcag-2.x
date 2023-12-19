@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For synlige overskrifter skal</p>\r\n<ul>\r\n<li>Overskrift beskrive emnet eller formålet med innholdet den hører til.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For synlige overskrifter skal overskrift beskrive emnet eller formålet med innholdet den hører til.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
