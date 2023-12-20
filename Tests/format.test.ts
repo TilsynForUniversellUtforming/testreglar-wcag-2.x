@@ -58,9 +58,6 @@ function sjekk_format(file:string): boolean {
             } else if (typeof (testregel.namn) !== "string") {
                 console.log("Filen " + file + " mangler feltet namn");
                 return false
-            } else if (!Array.isArray(testregel.kolonner)) {
-                console.log("Filen " + file + " mangler feltet kolonner");
-                return false
             } else if (!Array.isArray(testregel.steg)) {
                 console.log("Filen " + file + " mangler feltet steg");
                 return false
