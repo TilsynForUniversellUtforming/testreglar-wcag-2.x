@@ -81,7 +81,5 @@ type Testregel = {
     kravTilSamsvar: string;
     side: string;
     element: string;
-    kolonner: Array<string>;
     steg: Array<object>;
-
 }
