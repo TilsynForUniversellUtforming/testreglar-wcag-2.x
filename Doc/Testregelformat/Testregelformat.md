@@ -11,7 +11,6 @@ Generell info om testreglar
 - Språk
 - Side
 - Element
-- Kolonner
 
 ## Namn
 Namn på testregel.
@@ -75,21 +74,6 @@ Dersom det er sida som er elementet skriv "Side"
 ### Eksempel
 ```json
 "element": "2.1"
-```
-
-## Kolonner
-Kva steg som skal visast i resultat-tabellen.
-### Eksempel
-```json
-"kolonner": [
-        {
-            "title": "2.2"
-        },
-        
-        {
-            "title": "3.2"
-        }
-        ]
 ```
 
 Steg
