@@ -1,11 +1,11 @@
 {
-	"namn": "3.3.3a Skjema gir forslag til retting, viss feil i inndata blir oppdaga automatisk ",
-	"id": "3.3.3a",
-	"testlabId": 219,
+	"namn": "Nett-3.3.3a Skjema gir forslag til retting, hvis inndatafeil blir oppdaget automatisk 2023 ",
+	"id": "nett-3.3.3a",
+	"testlabId": 477,
 	"versjon": "1.0",
 	"type": "Nett",
-	"spraak": "nn",
-	"kravTilSamsvar": "<p>For alle skjemaelement der inndatafeil blir oppdaga automatisk, får brukaren eit forslag som gir tilstrekkeleg informasjon om korleis feil kan rettast.</p>",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>For inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting får brukeren</p>\r\n<ul>\r\n<li>et forslag med informasjon om hvordan feil kan rettes og</li>\r\n<li>forslaget er kodet som tekst og</li>\r\n<li>det er enkelt for brukeren å navigere til feilen og</li>\r\n<li>inndata blir liggende i inndataelementet, med mindre informasjonen er knyttet til personvern eller sikkerhet</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"kolonner": [
@@ -19,9 +19,6 @@
 			"title": "2.4"
 		},
 		{
-			"title": "2.5"
-		},
-		{
 			"title": "3.2"
 		},
 		{
@@ -32,12 +29,15 @@
 		},
 		{
 			"title": "3.5"
+		},
+		{
+			"title": "3.6"
 		}
 	],
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
+			"spm": "Hvilken side tester du?",
 			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
@@ -52,8 +52,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har nettsida digitale/interaktive skjema/skjemaelement?",
-			"ht": "<strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt. ",
+			"spm": "Har testsiden skjema/skjemaelement?",
+			"ht": "<p><strong>Merk:</strong> Du skal ikke teste skjema i PDF, Word eller lignende.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -62,14 +62,14 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje skjema."
+					"utfall": "Testsiden har ikke skjema/skjemaelement."
 				}
 			}
 		},
 		{
 			"stegnr": "2.3",
-			"spm": "Beskriv skjemaet/prosessen.",
-			"ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
+			"spm": "Hvilket skjema/skjemaelement tester du?",
+			"ht": "<p>Beskriv skjema/skjemaelement, slik at det er mulig å identifisere det i ettertid. </p>\n<p><strong>Merk:</strong> Hvis skjema/skjemaelement inngår i en prosess skal du også beskrive prosessen.</p>",
 			"type": "tekst",
 			"label": "Skjema/prosess:",
 			"multilinje": true,
@@ -83,46 +83,25 @@
 		},
 		{
 			"stegnr": "2.4",
-			"spm": "Får du sende inn eit skjema der du har fyllt inn data i feil format eller verdi?",
-			"ht": "<p>Legg inn feil inndata i alle skjemaelement. Fullfør eller send inn skjemaet.</p><p>Eksempel på datafeil er:</p><ul><li>Postnummer som inneheld bokstavar.</li><li>Namn som inneheld tal eller spesialteikn.</li><li>Ugyldig e-postformat.</li><li>Ugyldig datoformat.</li><li>Data utanfor grenseverdi, for eksempel månad 14 i ein dato.</li></ul>",
+			"spm": "Oppdager skjemaet automatisk at utfylt inndata har feil format eller verdi?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Legg inn feil inndata i alle skjemaelement\n<ul>\n<li>Hvis skjemaelementer er forhåndsutfylt, endre forhåndsutfylt informasjon til feil inndata format eller verdi der det er mulig.</li>\n<li>Forhåndsutfylt informasjon betyr at det allerede står inndata i skjemaet når testsiden er lastet inn.</li>\n<li>I sitasjon nettsiden krever informasjon, men som brukeren har utelatt, for eksempel du ikke har krysset av i en avkryssingsboks</li>\n</ul>\n</li>\n<li>Prøv deretter å fullføre/sende inn eller gå videre i skjemaet.</li>\n</ul>\n<p><strong>Merk:</strong> Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes.</p>\n<p>Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut informasjon rett format eller verdi, indikerer at brukeren har fylt ut inndata som faller utenfor påkrevd dataformat eller verdier, og at dette oppdages automatisk, uten at brukeren er involvert.</p>\n<p>Eksempel på feil inndata er:</p>\n<ul>\n<li>Postnummer som inneholder bokstaver.</li>\n<li>Navn som inneholder tall eller spesialtegn.</li>\n<li>Ugyldig e-postformat.</li>\n<li>Ugyldig datoformat.</li>\n<li>Ugyldig telefonnummer.</li>\n<li>Data utenfor grenseverdi, for eksempel måned 14 i en dato. </li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
-				"ja": {
+				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Skjema uten automatisk oppdaging av feil.",
+					"utfall": "Skjema oppdager ikke automatisk at utfylt inndata har feil format eller verdi.",
 					"element": "2.3"
 				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "2.5"
-				}
-			}
-		},
-		{
-			"stegnr": "2.5",
-			"spm": "Får du feilmelding(ar) i form av tekst?",
-			"ht": "<p>Meldinga kan visast for eksempel 1) i eit modalvindauge, 2) i ledeteksten til skjemaelementa, 3) eller ein eller annan stad i skjemaet/sida, for eksempel på toppen.</p><p><strong>Merk:</strong> Feilmeldinga må vere synleg utan at brukaren må gjere ekstra handlingar, som for eksempel å navigere til skjemaelementet.</p><p>Det er ikkje nok å identifisere feilen med for eksempel berre eit symbol i ledeteksten, berre med å endre farge eller berre visuell plassering av feilmeldinga.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"G84",
-				"G85"
-			],
-			"ruting": {
 				"ja": {
 					"type": "gaaTil",
 					"steg": "3.1"
-				},
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Skjema har ikkje feilmeldingar i form av tekst.",
-					"element": "2.5"
 				}
 			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Beskriv skjemaelementet med feilmelding som skal vurderast.",
-			"ht": "<p>Du skal registrere og legge til data for kvart skjemaelementet med feilmelding.</p><p>Beskriv skjemaelementet kortfatta eller med stikkord.</p>",
+			"spm": "Hvilket skjemaelement tester du?",
+			"ht": "<p>Beskriv elementet, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere elementer, registrerer du et og et.</p>",
 			"type": "tekst",
 			"label": "Skjemaelement:",
 			"multilinje": true,
@@ -136,8 +115,8 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Er informasjonen du har fylt inn fortsatt i skjemaelementet?",
-			"ht": "<p>Sensitiv informasjon treng ikkje å fortsatt ligge i skjemaet etter innsendt skjema.</p><p>Det er OK at inndata blir korrigert automatisk.</p>",
+			"spm": "Blir informasjonen du har fylt ut liggende i skjemaelementet?",
+			"ht": "<p>Hovedregelen er at informasjon som er fylt ut skal bli liggende i skjemaet, selv om det blir oppdaget inndatafeil. Unntaket er dersom informasjonen er knyttet til personvern eller sikkerhet (sensitiv informasjon). </p>\n<p><strong>Merk:</strong> Det er ok at feil inndata blir korrigert automatisk.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G83",
@@ -152,20 +131,18 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "I skjemaelement der feil utfylling vert oppdaga automatisk, forsvinn inndata når feil vert oppdaga."
+					"utfall": "I skjemaelement der inndatafeil blir oppdaget automatisk, forsvinner inndata fra skjemaelementet."
 				}
 			}
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Får du eit forslag til korleis feilen kan rettast?",
-			"ht": "<p>Forslag til retting av feil kan:</p><ul><li>Stå i direkte tilknytning til skjemaelementet, for eksempel i ledeteksten eller feilmeldinga til skjemaelementet.</li><li>Stå ein eller annan stad på nettsida.</li><li>Vere lenka til på ei anna nettside. Slike lenker skal stå i nærleiken av skjemaelementet der feilen har oppstått.</li></ul><p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på forslaget.</p>",
+			"spm": "Får du tekstlig forslag til retting av inndatafeil?",
+			"ht": "<p>Forslag til retting av inndatafeil kan for eksempel vises</p>\n<ul>\n<li>i et modalvindu</li>\n<li>i ledeteksten til skjemaelement</li>\n<li>et annet sted i skjemaet/på siden, for eksempel på toppen</li>\n<li>når du navigerer i skjemaet</li>\n</ul>\n<p>Forslag til retting av inndatafeil kan for eksempel</p>\n<ul>\n<li>stå i direkte tilknytning til skjemaelementet, for eksempel i ledeteksten </li>\n<li>stå et annet sted på nettsiden</li>\n<li>være lenket til på en annen nettside. Slike lenker skal stå i nærheten av inndataelementet der feilen har oppstått.</li>\n</ul>\n<p><strong>Merk:</strong> Du skal ikke vurdere kvaliteten på forslaget.</p>\n<p>Det er ikke nok å identifisere feilen utelukkende med for eksempel </p>\n<ul>\n<li>et symbol i ledeteksten</li>\n<li>ved å endre farge</li>\n<li>visuell plassering av feilmeldingen</li>\n<li>deaktivert knapp for å sende inn eller gå videre i skjemaet</li>\n<li>lignende ikke-tekstlige indikatorer</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
-				"G83",
 				"G84",
-				"G85",
-				"G177"
+				"G85"
 			],
 			"ruting": {
 				"ja": {
@@ -174,14 +151,31 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.5"
+					"steg": "3.6"
 				}
 			}
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Gir forslaget tilstrekkeleg informasjon om korleis du kan rette feilen?",
-			"ht": "<p>Dersom skjemaelementet krev inndata i eit spesifikt format, skal alle elementa som inngår i formatet, stå i meldinga. Når det gjeld for eksempel epost, er det ikkje tilstrekkeleg å berre oppgi at formatet krev @, når formatet er på forma a@b.no.</p><p>Forslag til retting av feil kan for eksempel vere</p><ul><li>forslag om rett stavemåte</li><li>forslag om tilsvarande tekst eller omgrep</li><li>beskriving av kva som er rett inndata</li><li>ei liste med kva som er rett inndata</li><li>eit spørsmål på formen «meinte du …?» eller tilsvarande</li></ul>",
+			"spm": "Er forlaget til retting kodet som tekst?",
+			"ht": "<p>Dette kan du sjekke på flere måter:</p>\n<p>Alternativ 1:</p>\n<ul>\n<li>Prøv å markere teksten med mus eller tastatur. Dette indikerer at testen er kodet som tekst, og ikke er et bilde av tekst.</li>\n</ul>\n<p>Alternativ 2:</p>\n<ul>\n<li>Åpne kodeverktøyet i nettleseren.</li>\n<li>Bruk \"select\" funksjonen i verktøyet og marker teksten.</li>\n<li>Sjekk at teksten er kodet som tekst, ved å se om du finner igjen teksten i koden.</li>\n</ul>\n<p>Alternativ 3:</p>\n<ul>\n<li>Dersom skjemaelementet har attributtet \"required\" eller aria-required=\"true\", kommer det fram en melding i nettleseren. Denne meldingen er kodet som tekst.</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får forslag til retting som ikke er kodet som tekst."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Gir forslaget tilstrekkelig informasjon om hvordan du kan rette inndatafeilen?",
+			"ht": "<p>Hvis elementet krever inndata i et bestemt format, skal alle element som inngår i formatet, stå i forslaget. Når det gjelder for eksempel e-post, er det ikke tilstrekkelig bare å oppgi at formatet forutsetter @, når formatet er på formen a@b.no.</p>\n<p>Forslag til retting av inndatafeil kan for eksempel være</p>\n<ul>\n<li>forslag om rett stavemåte</li>\n<li>forslag om tilsvarende tekst eller begrep</li>\n<li>beskrivelse av hva som er rett inndata</li>\n<li>liste med hva som er rett inndata</li>\n<li>spørsmål på formen «mente du …?» eller tilsvarende</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G177"
@@ -190,29 +184,28 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Feilmelding ved inndatafeil, med tilstrekkeleg informasjon om korleis inndatafeil kan rettast."
+					"utfall": "Skjemalemenet der inndatafeil blir oppdaget automatisk, får forslag med tilstrekkelig informasjon om hvordan inndatafeil kan rettes."
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.5"
+					"steg": "3.6"
 				}
 			}
 		},
 		{
-			"stegnr": "3.5",
-			"spm": "Finst det kjente forslag til korleis feilen kan rettast?",
-			"ht": "<p>Kjente forslag er for eksempel</p><ul><li>forslag om rett stavemåte</li><li>forslag om tilsvarande tekst eller omgrep</li><li>beskriving av kva som er rett inndata</li><li>ei liste med kva som er rett inndata</li><li>eit spørsmål på formen «meinte du …?» eller tilsvarande</li></ul><p>Det finst for eksempel kjente forslag for følgjande</p><ul><li>e-post, postnummer, fødselsdato, telefonnummer osv.</li></ul><p>Det er ikkje nødvendig å gi forslag til retting av feil dersom</p><ul><li>det gjeld skjemaelement knytta til sikkerhet, for eksempel passord</li><li>forslag til retting undergrev formålet, for eksempel svar i en quiz</li></ul>",
+			"stegnr": "3.6",
+			"spm": "Finnes det kjente forslag til hvordan inndatafeilen kan rettes?",
+			"ht": "<p>Kjente forslag er for eksempel</p>\n<ul>\n<li>forslag om rett stavemåte</li>\n<li>forslag om tilsvarende tekst eller begrep</li>\n<li>beskrivelse av hva som er rett inndata</li>\n<li>liste med hva som er rett inndata</li>\n<li>spørsmål på formen «mente du …?» eller tilsvarende</li>\n</ul>\n<p>Det finnes for eksempel kjente forslag for følgende</p>\n<ul>\n<li>e-post, postnummer, fødselsdato, telefonnummer osv</li>\n</ul>\n<p>Det er ikke nødvendig å gi forslag til retting av feil dersom</p>\n<ul>\n<li>det gjelder skjemaelement knyttet til sikkerhet, for eksempel passord</li>\n<li>forslag til retting undergarver formålet, for eksempel svar i en quiz</li>\n</ul>",
 			"type": "jaNei",
-			"kilde": [],
 			"ruting": {
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Feilmelding ved inndatafeil, med mangelfull informasjon om korleis inndatafeil kan rettast."
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får forslag med mangelfull informasjon om hvordan inndatafeil kan rettes."
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Skjemaelement der feil utfylling vert oppdaga automatisk, har ikkje kjente forslag til korleis feilen kan rettast."
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, har ikke kjente forslag til hvordan inndatafeilen kan rettes."
 				}
 			}
 		}
