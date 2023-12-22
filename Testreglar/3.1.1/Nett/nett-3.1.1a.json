@@ -1,11 +1,11 @@
 {
-	"namn": "3.1.1a Hovudspråket på nettsida er rett koda",
-	"id": "3.1.1a",
-	"testlabId": 251,
+	"namn": "Nett-3.1.1a Hovudspråket på nettsida er programmatisk bestemt 2023",
+	"id": "Nett-3.1.1a",
+	"testlabId": 479,
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<ul>\r\n<li>Nettsida har ein gyldig språkkode i HTML koden.</li>\r\n<li>Språkkoden samsvarar med hovudspråket på nettsida.</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul>\r\n<li>Nettsiden har en gyldig språkkode i HTML og</li>\r\n<li>Språkkoden som er angitt stemmer med hovedspråket på den aktuelle nettsiden</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "Side",
 	"kolonner": [
@@ -46,8 +46,8 @@
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
@@ -62,7 +62,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Er nettsida koda i HTML 4 eller HTML 5?",
-			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette.</p><p>Dette finn du i <code>&#x3C;!DOCTYPE&#x3E;</code>-elementet, som er det første elementet i koden.</p><ul><li>HTML5 er koda som  <code>&#x3C;!DOCTYPE html&#x3E;</code></li><li>Viss nettsida er koda i HTML 4, er det mogleg å lese \"HTML 4.01\" ein stad i <code>&#x3C;!DOCTYPE&#x3E;</code>-elementet.</li></ul><p><strong>Merk:</strong> HTML-elementet kan innehalde annan tekst før avsluttande &#x3E; i elementet &#x3C;DOCTYPE&#x3E;.</p>",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette.</p>\n<p>Dette finn du i <code>&lt;!DOCTYPE&gt;</code>-elementet, som er det første elementet i koden.</p>\n<ul>\n<li>HTML5 er koda som <code>&lt;!DOCTYPE html&gt;</code></li>\n<li>Viss nettsida er koda i HTML 4, er det mogleg å lese \"HTML 4.01\" ein stad i <code>&lt;!DOCTYPE&gt;</code>-elementet.</li>\n</ul>\n<p><strong>Merk:</strong> HTML-elementet kan innehalde annan tekst før avsluttande &gt; i elementet &lt;DOCTYPE&gt;.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -78,7 +78,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Er nettsida koda i XHTML 1.0?",
-			"ht": "<p>Dette finn du i <code>&#x3C;!DOCTYPE&#x3E;</code>-elementet, som er det første elementet i koden.</p><ul><li>Viss nettsida er koda i XHTML 1.0, er det mogleg å lese \"XHTML 1.0\" ein stad i <code>&#x3C;!DOCTYPE&#x3E;</code>-elementet.</li></ul><p><strong>Merk:</strong> HTML-elementet kan innehalde annan tekst før avsluttande &#x3E; i elementet &#x3C;DOCTYPE&#x3E;.</p>",
+			"ht": "<p>Dette finn du i <code>&lt;!DOCTYPE&gt;</code>-elementet, som er det første elementet i koden.</p>\n<ul>\n<li>Viss nettsida er koda i XHTML 1.0, er det mogleg å lese \"XHTML 1.0\" ein stad i <code>&lt;!DOCTYPE&gt;</code>-elementet.</li>\n</ul>\n<p><strong>Merk:</strong> HTML-elementet kan innehalde annan tekst før avsluttande &gt; i elementet &lt;DOCTYPE&gt;.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -123,7 +123,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Språkdeklarering er koda feil."
+					"utfall": "Hovudspråk på nettsida er ikkje programmatisk bestemt."
 				}
 			}
 		},
@@ -143,7 +143,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Språkdeklarering er koda feil."
+					"utfall": "Hovudspråk på nettsida er ikkje programmatisk bestemt."
 				}
 			}
 		},
@@ -163,18 +163,17 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Språkdeklarering er koda feil."
+					"utfall": "Hovudspråk på nettsida er ikkje programmatisk bestemt."
 				}
 			}
 		},
 		{
 			"stegnr": "3.7",
 			"spm": "Er språket koda med ein gyldig språkkode?",
-			"ht": "<p>Sjå på lang-attributtet. Språkkoden består av to bokstavar. Viss språkkoden har ein sekundær språkkode, for eksempel på formen no-nb, skal du berre sjå på koden som ligg før bindestreken.</p><p>Eksempel på gyldige språkkodar er:</p><ul><li>norsk: no, nb, nn</li><li>samisk: smi, se, sma, smj</li><li>engelsk: en</li></ul><p>For andre språkkodar, sjå <a target=\"_blank\" href=\"https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry\">iana-lista (opnar i nytt vindauge)</a>.</p>",
+			"ht": "<p>Sjå på lang-attributtet. Språkkoden består av to bokstavar.</p>\n<p><strong>Merk: </strong>Viss språkkoden har ein sekundær språkkode, for eksempel no-nb, skal du berre sjå på koden som ligg før bindestreken.</p>\n<p>Eksempel på gyldige språkkodar er:</p>\n<ul>\n<li>norsk: no, nb, nn</li>\n<li>samisk: smi, se, sma, smj</li>\n<li>engelsk: en</li>\n</ul>\n<p>For andre språkkodar, sjå <a href=\"https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry\" target=\"_blank\" rel=\"noopener\">iana-lista (opnar i nytt vindauge)</a>.</p>",
 			"type": "jaNei",
 			"kilde": [
-				"H57",
-				"IANA"
+				"H57"
 			],
 			"ruting": {
 				"ja": {
@@ -184,17 +183,16 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Gyldig språkkode manglar."
+					"utfall": "Nettsida har ikkje gyldig språkkode."
 				}
 			}
 		},
 		{
 			"stegnr": "3.8",
 			"spm": "Kva er språkkoden?",
-			"ht": "<p>Skriv inn språkkoden som ligg i lang-attributtet. Viss språkkoden har ein sekundær språkkode, for eksempel på formen no-nb, skal du berre skrive inn koden som ligg før bindestreken.</p><p><strong>Merk:</strong> Bruk små bokstavar.</p>",
+			"ht": "<p>Skriv inn språkkoden som ligg i lang-attributtet.</p>\n<p><strong>Merk: </strong></p>\n<ul>\n<li>Viss språkkoden har ein sekundær språkkode, for eksempel no-nb, skal du berre skrive inn koden som ligg før bindestreken.</li>\n<li>Bruk små bokstavar.</li>\n</ul>",
 			"type": "tekst",
 			"label": "Språkkode:",
-			"kilde": [],
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
@@ -204,8 +202,8 @@
 		},
 		{
 			"stegnr": "3.9",
-			"spm": "Kva er hovudspråket på sida?",
-			"ht": "<p>Vel namnet på språket som alt eller størsteparten av innhaldet på nettsida er skrive i. Dersom det er vanskeleg å avgjere kva språk som er mest brukt, reknast hovudspråket som det språket som er brukt først.</p><p>Dersom språket ikkje finst i lista, vel du alternativet  \"anna\" og går vidare.</p>",
+			"spm": "Kva er hovudspråket på testsida?",
+			"ht": "<p>Vel det språket som alt eller størsteparten av innhaldet på nettsida har. </p>\n<ul>\n<li>Dersom det er vanskeleg å vurdere kva språk som er mest brukt, er hovudspråket som det språket som er brukt først.</li>\n<li>Dersom språket ikkje står i lista, vel du alternativet Anna og går vidare.</li>\n</ul>",
 			"type": "radio",
 			"svarArray": [
 				"Bokmål",
@@ -216,8 +214,6 @@
 				"Engelsk",
 				"Anna"
 			],
-			"label": "Språkkode:",
-			"kilde": [],
 			"ruting": {
 				"alle": {
 					"type": "regler",
@@ -260,8 +256,8 @@
 		},
 		{
 			"stegnr": "3.11",
-			"spm": "Samsvarer språkkoden med hovudspråket på nettsida?",
-			"ht": "<p>Samanlikn språket på sida med språkkoden du fann (Steg 3.8).</p><p>Språkkoden skal stemme over ens med hovudspråket på sida. Bruk av generell språkkode er tilstrekkeleg:</p><ul><li>no for både bokmål og nynorsk</li><li>smi for både nordsamisk, sørsamisk og lulesamisk</li><li>en for både britisk og amerikansk engelsk</li></ul><p>Bruk av for eksempel nynorsk språkkode på ei nettside med bokmål som hovudspråk, er ikkje tilstrekkeleg.</p>",
+			"spm": "Samsvarar språkkoden med hovudspråket på nettsida?",
+			"ht": "<p>Samanlikn språket på nettssida med språkkoden du fann i Steg 3.8.</p>\n<p>Språkkoden skal stemme  med hovudspråket på sida.</p>\n<p>Bruk av generell språkkode er tilstrekkeleg:</p>\n<ul>\n<li>no for både bokmål og nynorsk</li>\n<li>smi for både nordsamisk, sørsamisk og lulesamisk</li>\n<li>en for både britisk og amerikansk engelsk</li>\n</ul>\n<p>Bruk av for eksempel nynorsk språkkode på ei nettside med bokmål som hovudspråk, er ikkje tilstrekkeleg, og omvendt</p>",
 			"type": "jaNei",
 			"kilde": [
 				"H57"
@@ -270,12 +266,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Språkkode samsvarar med hovudspråket på nettsida."
+					"utfall": "Språkkoden samsvarar med hovudspråket på nettsida."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Språkkode samsvarar ikkje med hovudspråket på nettsida."
+					"utfall": "Språkkoden samsvarar ikkje med hovudspråket på nettsida."
 				}
 			}
 		}
