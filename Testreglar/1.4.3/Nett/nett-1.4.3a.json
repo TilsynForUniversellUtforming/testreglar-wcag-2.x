@@ -8,20 +8,6 @@
 	"kravTilSamsvar": "<p>For nettsider med tekst gjelder følgende:</p>\r\n<ul>\r\n<li>Tekst har kontrast på minst 4,5:1 mot bakgrunnen</li>\r\n<li>Stor tekst har kontrast på minst 3,0:1 mot bakgrunnen</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

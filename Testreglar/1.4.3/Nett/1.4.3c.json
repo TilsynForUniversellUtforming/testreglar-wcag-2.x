@@ -8,14 +8,6 @@
 	"kravTilSamsvar": "<p>Verktøyet rapporterer ingen kontrastfeil på sida.</p>",
 	"side": "2.1",
 	"element": "Side",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.1"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
