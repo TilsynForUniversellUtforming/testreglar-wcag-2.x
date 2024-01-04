@@ -8,17 +8,6 @@
 	"kravTilSamsvar": "<p>Tekst skal ha kontrast mot bakgrunnen på minst 4,5:1.</p>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.4"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
