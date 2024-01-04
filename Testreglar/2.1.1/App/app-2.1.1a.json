@@ -8,23 +8,6 @@
 	"kravTilSamsvar": "<p>All funksjonalitet i appen kan nås og brukes med sveiping og dobbelttrykk, når skjermleser er aktivert</p>\r\n<ul>\r\n<li>Funksjonalitet i appen som ikke er formålstjenlig å bruke med sveiping og dobbelttrykk er unntatt</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "2.5"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
