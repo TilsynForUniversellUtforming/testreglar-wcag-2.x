@@ -8,20 +8,6 @@
 	"kravTilSamsvar": "<p>Det er flere måter å oppfylle kravet på:</p>\r\n<ul>\r\n<li>Det er mulig å vise og bruke innholdet både i stående og liggende retning, med mindre en bestemt visningsretning er avgjørende </li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.4",
-	"kolonner": [
-		{
-			"title": "3.1"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.5"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
