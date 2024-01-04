@@ -8,20 +8,6 @@
 	"kravTilSamsvar": "<p>For bilete er ein av følgjande er oppfylt:</p>\r\n<ul>\r\n<li>Bilete som er pynt er koda på ein slik måte at dei ikkje er til støy.</li>\r\n<li>Bilete som er ei sanseoppleving eller ein test har eit kort tekstalternativ som gir ein beskrivande identifikasjon.</li>\r\n<li>Bilete som er meiningsberande har eit kort tekstalternativ som gjengir same informasjon som biletet.</li>\r\n<li>Bilete som er komplekse har både eit kort tekstalternativ og eit utfyllande tekstalternativ.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

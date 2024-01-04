@@ -8,49 +8,11 @@
 	"kravTilSamsvar": "<p>Informasjon om lenkemålet for klikkbare område i bilde går fram av tekstalternativet.</p>",
 	"side": "2.1",
 	"element": "3.3",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.1"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		},
-		{
-			"title": "3.10"
-		},
-		{
-			"title": "3.11"
-		},
-		{
-			"title": "3.12"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
 			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
