@@ -8,23 +8,6 @@
 	"kravTilSamsvar": "<p>Den visuelle presentasjonen har et kontrastforhold på minst 3:1 mot farge(r) som ligger ved siden av for</p>\r\n<ul>\r\n<li>Deler av grafikk som kreves for å forstå innholdet\r\n<ul>\r\n<li>Med mindre en bestemt presentasjon er avgjørende for informasjonen som blir formidlet</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
