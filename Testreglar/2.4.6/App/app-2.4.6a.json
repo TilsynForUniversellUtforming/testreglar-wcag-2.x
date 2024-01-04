@@ -8,17 +8,6 @@
 	"kravTilSamsvar": "<p>For synlige overskrifter skal overskrift beskrive emnet eller formålet med innholdet den hører til.</p>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
