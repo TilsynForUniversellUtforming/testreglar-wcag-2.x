@@ -8,53 +8,6 @@
 	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<p>Førehandsinnspelt video utan lyd, som ikkje er eit alternativ til tekst eller lyd har alternativ i form av tekst eller lyd.</p>\r\n<p>Alternativ i form av tekst eller lyd er:</p>\r\n<ul>\r\n<li>Visuelt plassert nær videoklippet, eller kan nåast via ein mekanisme (lenke, knapp eller liknande) nær videoklippet.</li>\r\n<li>Formidlar det same hovudinnhaldet som videoklippet, i same rekkefølge.</li>\r\n</ul>\r\n<p>Alternativ i form av lyd skal i tillegg</p>\r\n<ul>\r\n<li>vere mogleg å spele av</li>\r\n</ul>\r\n<p>Alternativ i form av tekst skal i tillegg</p>\r\n<ul>\r\n<li>vere koda som tekst</li>\r\n</ul>\r\n<p>Det er ikkje krav om eksakt attgiving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		},
-		{
-			"title": "3.10"
-		},
-		{
-			"title": "3.11"
-		},
-		{
-			"title": "3.12"
-		},
-		{
-			"title": "3.13"
-		},
-		{
-			"title": "3.14"
-		},
-		{
-			"title": "3.15"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
