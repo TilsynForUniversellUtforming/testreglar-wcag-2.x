@@ -8,17 +8,6 @@
 	"kravTilSamsvar": "<p>All tekst kan forstørres opp til minst 200 % visning uten at innhold eller funksjonalitet går tapt.</p>",
 	"side": "2.1",
 	"element": "Side",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "2.5"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
