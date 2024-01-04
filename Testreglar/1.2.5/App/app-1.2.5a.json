@@ -8,35 +8,6 @@
 	"kravTilSamsvar": "<p>Det gis tilgang til synstolking for forhåndsinnspilt <br>video med lyd i synkroniserte medier, der</p>\r\n<ul>\r\n<li>Viktig visuell informasjon blir formidlet i det originale lydsporet i videoen eller</li>\r\n<li>Viktig visuell informasjon blir formidlet i et separat lydspor til videoen og\r\n<ul>\r\n<li>Det er mulig å spille av, samt slå på og av synstolkingen og</li>\r\n<li>Viktig visuell informasjon er tilstrekkelig beskrevet, i rett rekkefølge og</li>\r\n<li>Synstolkingen forstyrrer ikke den originale lyden i videoen eller</li>\r\n</ul>\r\n</li>\r\n<li>Viktig visuell informasjon blir formidlet med en kombinasjon av ulike typer synstolking og\r\n<ul>\r\n<li>Det er mulig å spille av, samt slå på og av synstolkingen og</li>\r\n<li>Viktig visuell informasjon er tilstrekkelig beskrevet, i rett rekkefølge og</li>\r\n<li>Synstolkingen forstyrrer ikke den originale lyden i videoen</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
