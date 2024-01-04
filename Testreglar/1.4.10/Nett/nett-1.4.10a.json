@@ -8,26 +8,6 @@
 	"kravTilSamsvar": "<p>Kravet kan oppfylles på flere måter:</p>\r\n<ul>\r\n<li>\r\n<p>Brukeren får tilgang til samme informasjon og funksjonalitet, uten å måtte scrolle i to dimensjoner.</p>\r\n<ul>\r\n<li>\r\n<p>innhold som ruller loddrett med en bredde som tilsvarer 320 CSS-piksler (tilsvarer desktop nettleservindu (viewport) satt til en bredde på 1280 CSS-piksler ved 400 prosent forstørrelse) og</p>\r\n</li>\r\n<li>\r\n<p>alt innhold og funksjonalitet kan nås og brukes </p>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<p>eller</p>\r\n<ul>\r\n<li style=\"list-style-type: none;\">\r\n<ul>\r\n<li>\r\n<p>innhold som ruller vannrett med en høyde som tilsvarer 256 CSS-piksler (tilsvarer desktop nettleservindu (viewport) satt til en høyde på 1024 CSS-piksler ved 400 prosent forstørrelse) og</p>\r\n</li>\r\n<li>\r\n<p>alt innhold og funksjonalitet kan nås og brukes <br>eller</p>\r\n</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p>Brukeren får tilgang til samme informasjon og funksjonalitet i en alternativ versjon av nettsiden, via en mekanisme og</p>\r\n<ul>\r\n<li>\r\n<p>Mekanismen for å endre visning (layout) ligger på samme nettside og</p>\r\n</li>\r\n<li>\r\n<p>Mekanismen endrer visning (layout) av nettsiden og</p>\r\n</li>\r\n<li>\r\n<p>Alternativ versjon krever ikke at brukeren scroller i to dimensjoner</p>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<div style=\"mso-element: comment-list;\">\r\n<div style=\"mso-element: comment;\">\r\n<div id=\"_com_2\" class=\"msocomtxt\"><!-- [if !supportAnnotations]--></div>\r\n<!--[endif]--></div>\r\n</div>",
 	"side": "2.1",
 	"element": "3.3",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

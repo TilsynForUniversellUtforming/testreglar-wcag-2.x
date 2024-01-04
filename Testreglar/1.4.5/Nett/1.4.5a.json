@@ -1,5 +1,5 @@
 {
-	"namn": "1.4.5a Bilde av tekst er ikkje brukt unødvendig ",
+	"namn": "1.4.5a Bilde av tekst er ikkje brukt unødvendig",
 	"id": "1.4.5a",
 	"testlabId": 152,
 	"versjon": "1.0",
@@ -8,23 +8,6 @@
 	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar. </p>\r\n<ul>\r\n<li>Bilde av tekst er ikkje i bruk med mindre:\r\n<ul>\r\n<li>bilde av tekst kan tilpassast brukaren sine krav eller</li>\r\n<li>bilde av tekst er nødvendig for å presentere informasjon</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
