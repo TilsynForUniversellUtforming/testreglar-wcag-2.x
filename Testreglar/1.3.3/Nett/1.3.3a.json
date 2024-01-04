@@ -8,47 +8,6 @@
 	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>Instruksjonar som inneheld informasjon om komponentars sensoriske eigenskapar (form, størrelse, visuell plassering på sida, orientering eller lyd), inneheld også annan informasjon som let brukaren finne og betene komponenten.</li>\r\n<li>Kravet kan og vere oppfylt viss noko av det følgande er ivareteke:<br>I instruksjonen er det brukt ord som i språket er naturleg for å referere ei leserekkefølge og denne rekkefølga er den same i koden.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.10"
-		},
-		{
-			"title": "3.11"
-		},
-		{
-			"title": "3.12"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
