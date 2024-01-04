@@ -8,23 +8,6 @@
 	"kravTilSamsvar": "<p>Den visuelle presentasjonen av det følgjande har eit kontrastforhold på minst 3:1 mot farge(ar) som ligg ved sidan av:</p>\r\n<ul>\r\n<li>Visuell informasjon som naudsynt for å identifisere brukergrensesnittkomponentar og tilstandar, unntatt inaktive komponentar eller der utsjånaden på komponenten er bestemt av brukeragenten og ikkje endra av produsentar av webinnhald.</li>\r\n<li>Deler av grafikk som er naudsynt for å forstå innhaldet, unntatt tilfelle der ein bestemt presentasjon av grafikk er naudsynt for informasjonen som blir formidla.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

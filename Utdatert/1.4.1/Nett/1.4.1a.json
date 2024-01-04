@@ -8,29 +8,6 @@
 	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar. </p>\r\n<ul>\r\n<li>Lenker i løpande tekst oppfyller eitt av alternativa under:\r\n<ul>\r\n<li>Lenker som er markerte med farge, skil seg frå nærliggande ikkje-lenka tekst med meir enn berre farge, for eksempel skrifttype, skriftstørrelse, understreking, utheva skrift, ramme eller ikon.</li>\r\n<li>Lenker som er markerte med berre farge har ein kontrast på minst 3:1 mot nærliggande ikkje-lenka tekst, og får synleg markering med meir enn berre farge, både ved mouseover og tastaturnavigasjon. Endring av musepeikaren og standard fokusmarkering ved tastaturnavigasjon, er ikkje tilstrekkeleg markering.</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
