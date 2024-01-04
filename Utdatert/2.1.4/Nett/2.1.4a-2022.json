@@ -1,34 +1,17 @@
 {
-	"namn": "2.1.4a Hurtigtastar som består av eit tegn",
+	"namn": "2.1.4a Hurtigtastar som bestÃ¥r av eit tegn",
 	"id": "2.1.4a-2022",
 	"testlabId": 287,
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For hurtigtastar som består av eit teikn er ein av følgjande er oppfylt:</p>\r\n<ul>\r\n<li>Slå av: Det finnast ein mekanisme for å slå av hurtigtasten.</li>\r\n<li>Omadressere: Det finnast ein mekanisme for å omadressere hurtigtasten til å bruke ein eller flere modifiseringstaster.</li>\r\n<li>Aktiv berre ved fokus: Hurtigtasten for ein brukergrensesnittkomponent er berre aktiv når komponenten kjem i fokus.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For hurtigtastar som bestÃ¥r av eit teikn er ein av fÃ¸lgjande er oppfylt:</p>\r\n<ul>\r\n<li>SlÃ¥ av: Det finnast ein mekanisme for Ã¥ slÃ¥ av hurtigtasten.</li>\r\n<li>Omadressere: DetÂ finnast ein mekanisme for Ã¥ omadressere hurtigtasten til Ã¥ bruke ein eller flere modifiseringstaster.</li>\r\n<li>AktivÂ berre ved fokus: Hurtigtasten for ein brukergrensesnittkomponent erÂ berre aktiv nÃ¥r komponenten kjem i fokus.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
+			"spm": "Kva side testar du pÃ¥?",
 			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
@@ -45,7 +28,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har nettsida innhald som blir aktivert av hurtigtastar?",
-			"ht": "<p>Undersøk nettsida for å sjå om det finnes innhald som blir aktivert av hurtigtastar/tastatursnarvegar.</p>",
+			"ht": "<p>UndersÃ¸k nettsida for Ã¥ sjÃ¥ om det finnes innhald som blir aktivert av hurtigtastar/tastatursnarvegar.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -62,7 +45,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Beskriv innhaldet som har hurtigtastar.",
-			"ht": "<p>Beskriv innhaldet som har hurtigtastar. Dersom det er fleire element må du registrere dei kvar for seg. </p>",
+			"ht": "<p>Beskriv innhaldet som har hurtigtastar. Dersom det er fleire element mÃ¥ du registrere dei kvar for seg.Â </p>",
 			"type": "tekst",
 			"kilde": [],
 			"label": "Innhald som har hurtigtastar",
@@ -76,14 +59,14 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Består tastatursnarvegen av berre eit teikn?",
-			"ht": "<p>Sjekk om tastatursnarvegen består av berre eit enkelt teikn.</p>\n<p><strong>Merk:</strong> Dette omfattar store bokstaver, små bokstaver, teiknsetting, siffer og symbol.</p>",
+			"spm": "BestÃ¥r tastatursnarvegen av berre eit teikn?",
+			"ht": "<p>Sjekk om tastatursnarvegen bestÃ¥r av berre eit enkelt teikn.</p>\n<p><strong>Merk:</strong>Â Dette omfattar store bokstaver, smÃ¥ bokstaver, teiknsetting, siffer og symbol.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Tastatursnarvegen består av meir enn eit teikn."
+					"utfall": "Tastatursnarvegen bestÃ¥r av meir enn eit teikn."
 				},
 				"ja": {
 					"type": "gaaTil",
@@ -93,8 +76,8 @@
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Finnast det ein måte å slå av tastatursnarvegen?",
-			"ht": "<p>Sjekk om det finast ein måte å slå av/ deaktivere tastatursnarvegen.</p>",
+			"spm": "Finnast det ein mÃ¥te Ã¥ slÃ¥ av tastatursnarvegen?",
+			"ht": "<p>Sjekk om det finast ein mÃ¥te Ã¥ slÃ¥ av/ deaktivere tastatursnarvegen.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G217",
@@ -104,7 +87,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Tastatursnarveg som det er mogeleg å deaktivere."
+					"utfall": "Tastatursnarveg som det er mogeleg Ã¥ deaktivere."
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -114,8 +97,8 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Er det mogeleg for brukaren å omadressere (remap) tastatursnarvegen, slik at den brukar ein eller fleire modifiseringstastar?",
-			"ht": "<p>Eksempel på modifiseringstastar kan være Ctrl, Shift eller Alt i kombinasjon med den opphavlege hurtigtasten.</p>",
+			"spm": "Er det mogeleg for brukaren Ã¥ omadressere (remap) tastatursnarvegen, slik at den brukar ein eller fleire modifiseringstastar?",
+			"ht": "<p>Eksempel pÃ¥ modifiseringstastar kan vÃ¦re Ctrl, Shift eller Alt i kombinasjon med den opphavlege hurtigtasten.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G217",
@@ -125,7 +108,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Tastatursnarveg som let seg omadressere til å bruke ein eller fleire modifiseringstastar. "
+					"utfall": "Tastatursnarveg som let seg omadressere til Ã¥ bruke ein eller fleire modifiseringstastar. "
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -136,19 +119,19 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Er hurtigtasten berre aktiv ved fokus?",
-			"ht": "<p>Sjekk om hurtigtasten berre er aktiv når den tilhøyrande brukargrensesnittkomponenten kjem i fokus.</p>",
+			"ht": "<p>Sjekk om hurtigtasten berre er aktiv nÃ¥r den tilhÃ¸yrande brukargrensesnittkomponenten kjem i fokus.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Hurtigtasten som berre er aktiv når den tilhøyrande brukargrensesnittkomponenten kjem i fokus."
+					"utfall": "Hurtigtasten som berre er aktiv nÃ¥r den tilhÃ¸yrande brukargrensesnittkomponenten kjem i fokus."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Hurtigtast beståande av eit teikn som ikkje let seg slå av, omadressere eller er aktiv utan fokus."
+					"utfall": "Hurtigtast bestÃ¥ande av eit teikn som ikkje let seg slÃ¥ av, omadressere eller er aktiv utan fokus."
 				}
 			}
 		}

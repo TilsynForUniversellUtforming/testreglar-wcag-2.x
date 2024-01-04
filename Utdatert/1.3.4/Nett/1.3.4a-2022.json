@@ -1,18 +1,11 @@
 {
+	"namn": "1.3.4a Visningsretning 2022",
 	"id": "1.3.4a-2022",
+	"testlabId": 274,
 	"versjon": "1.0",
-	"type": "web",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		}
-	],
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Det er mogeleg å vise nettsida i både ståande og liggande visning utan tap av innhald med unntak av:</p>\r\n<ul>\r\n<li>innhald der ei bestemt visingsretning er naudsynt for at informasjon og funksjonalitet skal fungere</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -104,6 +97,5 @@
 				}
 			}
 		}
-	],
-	"kravTilSamsvar": "<p>Det er mogeleg å vise nettsida i både ståande og liggande visning utan tap av innhald med unntak av:</p>\r\n<ul>\r\n<li>innhald der ei bestemt visingsretning er naudsynt for at informasjon og funksjonalitet skal fungere</li>\r\n</ul>"
+	]
 }

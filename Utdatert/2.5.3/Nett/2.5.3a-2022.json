@@ -8,44 +8,6 @@
 	"kravTilSamsvar": "<p>Skjemaelement, lenker og knappar har ein ledetekst i koden som:</p>\r\n<ul>\r\n<li>er identisk med den synlege ledeteksten, eller</li>\r\n<li>inneheld den synlege ledeteksten på ein eller annan måte, og dei orda som er i den synlege ledeteksten er sammenhengande og kjem i same rekkjefølgje</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		},
-		{
-			"title": "3.10"
-		},
-		{
-			"title": "3.11"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
