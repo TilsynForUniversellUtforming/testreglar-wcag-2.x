@@ -8,29 +8,6 @@
 	"kravTilSamsvar": "<p>Lyd som startar automatisk og ikkje stoppar innan 3 sekund har ein mekanisme for styring av lyd som: </p>\r\n<ul>\r\n<li>er visuelt plassert nær starten av sida</li>\r\n<li>kan brukast med tastatur</li>\r\n<li>er tidleg i tab-rekkefølga (maksimalt 5 tabsteg)</li>\r\n<li>har visuell markering i form av tekst eller symbol</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "Side",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "3.1"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
