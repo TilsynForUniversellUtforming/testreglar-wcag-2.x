@@ -1,131 +1,117 @@
 {
-    "namn": "Nett-2.5.1a Flerpunkts- eller stibaserte gester kan betjenes med en enkelt pekerbevegelse 2023",
-    "id": "nett-2.5.1a",
-    "testlabId": 397,
-    "versjon": "1.0",
-    "type": "Nett",
-    "spraak": "nb",
-    "kravTilSamsvar": "<p>All funksjonalitet som krever at brukeren benytter flerpunktsgest eller stibasert gest, skal kunne betjenes med en enkelt pekerbevegelse</p>\r\n<ul>\r\n<li>Med mindre flerpunktgest eller stibasert gest er avgjørende</li>\r\n</ul>",
-    "side": "2.1",
-    "element": "3.1",
-    "kolonner": [
-        {
-            "title": "2.2"
-        },
-        {
-            "title": "3.2"
-        },
-        {
-            "title": "3.3"
-        },
-        {
-            "title": "3.4"
-        }
-    ],
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Hvilken side tester du?",
-            "ht": "<p>Angi URL eller side-ID.</p>",
-            "type": "tekst",
-            "kilde": [],
-            "label": "URL/Side-ID:",
-            "datalist": "Sideutvalg",
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Finnes det funksjonalitet som krever at brukeren benytter flerpunkts- eller stibasert gest?",
-            "ht": "<p>Du skal åpne testsiden på en enhet med berøringsskjerm f.eks. smarttelefon eller nettbrett.</p>\n<p>Eksempler på flerpunkts- eller stibasert gest er:</p>\n<ul>\n<li>Flerpunktsgest: funksjonalitet for å zoome ved å knipe fingrene på berøringsskjerm, trykk med to eller tre fingre, tegne en \"Z\" på skjermen angrer siste handling.</li>\n<li>Stibasert gest: sveiping i en bestemt retning eller tegning av en bestemt form, f.eks. bilde-karuseller, glide-brytere eller sveiping for å utføre handling.</li>\n</ul>\n<p><strong>Slik identifiserer du en funksjonalitet som krever at brukeren benytter flerpunkts- eller stibasert gest:</strong></p>\n<ul>\n<li>Slå av skjermleser og andre andre tilgjengelighetsfunksjoner, hvis det er aktivert på enheten.\n<ul>\n<li>Dette gjelder både hjelpemiddelteknologi og innstillinger i operativsystemet.</li>\n</ul>\n</li>\n<li>Åpne appsiden</li>\n<li>Gjør en visuell inspeksjon for å identifisere funksjonalitet der det kan være aktuelt at innholdet krever at brukeren trykker flere steder på skjermen samtidig eller beveger pekeren i bestemte mønster<br>Finn funksjonalitet og sjekk om innholdet bruker flerpunkts- eller stibaserte gester </li>\n</ul>\n<p><strong>Du skal ikke teste:</strong></p>\n<ul>\n<li>Frihåndsbevegelser der startpunkt til sluttpunkt ikke krever at brukeren er innom et bestemt mellompunkt på veien, det vil si at brukeren følger en bestemt retning eller et mønster\n<ul>\n<li>Dra og slipp-funksjonalitet</li>\n<li>Dra- og slipp-funksjonalitet som krever at pekeren flyttes i en bestemt retning eller rekkefølge (opp, ned, høyre eller venstre) er omfattet</li>\n</ul>\n</li>\n<li>Bruk med tastatur. Dette testes i 2.1.1</li>\n</ul>",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Testsiden har ikke funksjonalitet som krever flerpunkts- eller stibasert gest."
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Hvilken funksjonalitet tester du?",
-            "ht": "<p>Beskriv funksjonaliteten, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere funksjoner, registrerer du en og en.</p>",
-            "type": "tekst",
-            "kilde": [],
-            "label": "Funksjonalitet:",
-            "multilinje": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            }
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Er den aktuelle flerpunkts- eller stibaserte gesten bestemt av innholdsprodusenten?",
-            "ht": "<p> </p>\n<p>Kravet gjelder ikke for standard pekerbevegelser for å betjene brukeragenter eller operativsystemer. For eksempel</p>\n<ul>\n<li>Brukeragent: horisontal sveiping for å flytte gjennom nettlesers historie eller vertikal sveiping for å bla gjennom sidens innhold</li>\n<li>Operativsystem: bevegelser for å skifte mellom åpne apper, eller hente frem kontekstuelle menyer med hjelpemiddelteknologier når disse er aktivert</li>\n</ul>\n<p>Sjekk om flerpunkts bevegelsen eller stibasert gest er bestemt av innholdsprodusenten.</p>",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Flerpunkts- eller stibasert gest er bestemt av brukeragenten."
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Er flerpunkts- eller stibasert gest avgjørende?",
-            "ht": "<p>Dersom avgjørende elementer fjernes, vil det medføre en grunnleggende endring av informasjonen eller funksjonaliteten i innholdet, <strong>og </strong>informasjonen og funksjonaliteten vil ikke kunne gjenskapes på en annen måte som samsvarer med kravene.</p>\n<p>Eksempler er en signatur eller frihåndstegning.</p>",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.4"
-                },
-                "ja": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Flerpunkts- eller stibasert gest er avgjørende for å betjene funksjonlateten."
-                }
-            }
-        },
-        {
-            "stegnr": "3.4",
-            "spm": "Kan funksjonaliteten betjenes med en enkelt pekerbevegelse, uten stibasert gest?",
-            "ht": "<p>Enkelt pekerbevegelse (single pointer) er pekerinndata som fungerer med ett kontaktpunkt med skjermen, herunder:</p>\n<ul>\n<li>enkelttrykk og -klikk,</li>\n<li>dobbelttrykk og -klikk,</li>\n<li>lange trykk</li>\n</ul>\n<p>Eksempler:</p>\n<ul>\n<li>Karuseller, sveipe gjennom oppgaver: At det finnes piler, knapper e.l. som kan betjenes med enkelttrykk og -klikk for å bla gjennom bilder og oppgaver\n<ul>\n<li>Det kan også være mulig at det ikke finnes en visuell synlig mekanisme, men bilder eller oppgaver kan sveipes med en enkelt trykk handling på venstre eller høyre siden av elementet.</li>\n</ul>\n</li>\n<li>Glidebryter: At det finnes knapper som kan betjenes med enkelttrykk og -klikk for å øke eller redusere verdier<br>Hold og vis-zooming: At det finnes \"lange trykk\", \"dobbelttrykk\" eller \"hold og vis\" for å vise en stor versjon av et bilde</li>\n<li>Å tegne \"Z\" for å angre en handling: Det finnes en \"angre\"-knapp</li>\n<li>Kanban-brett f.eks. Jira: Dra og slipp for å endre status på oppgaven. Status kan også endres via en nedtrekksliste</li>\n</ul>",
-            "type": "jaNei",
-            "kilde": [
-                "G216",
-                "G215",
-                "F105"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Flerpunkts- eller stibaserte gester kan betjenes med en enkelt pekerbevegelse."
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Flerpunkts- eller stibaserte gester kan ikke betjenes med en enkelt pekerbevegelse."
-                }
-            }
-        }
-    ]
+	"namn": "Nett-2.5.1a Flerpunkts- eller stibaserte gester kan betjenes med en enkelt pekerbevegelse 2023",
+	"id": "nett-2.5.1a",
+	"testlabId": 397,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>All funksjonalitet som krever at brukeren benytter flerpunktsgest eller stibasert gest, skal kunne betjenes med en enkelt pekerbevegelse</p>\r\n<ul>\r\n<li>Med mindre flerpunktgest eller stibasert gest er avgjørende</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "URL/Side-ID:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Finnes det funksjonalitet som krever at brukeren benytter flerpunkts- eller stibasert gest?",
+			"ht": "<p>Du skal åpne testsiden på en enhet med berøringsskjerm f.eks. smarttelefon eller nettbrett.</p>\n<p>Eksempler på flerpunkts- eller stibasert gest er:</p>\n<ul>\n<li>Flerpunktsgest: funksjonalitet for å zoome ved å knipe fingrene på berøringsskjerm, trykk med to eller tre fingre, tegne en \"Z\" på skjermen angrer siste handling.</li>\n<li>Stibasert gest: sveiping i en bestemt retning eller tegning av en bestemt form, f.eks. bilde-karuseller, glide-brytere eller sveiping for å utføre handling.</li>\n</ul>\n<p><strong>Slik identifiserer du en funksjonalitet som krever at brukeren benytter flerpunkts- eller stibasert gest:</strong></p>\n<ul>\n<li>Slå av skjermleser og andre andre tilgjengelighetsfunksjoner, hvis det er aktivert på enheten.\n<ul>\n<li>Dette gjelder både hjelpemiddelteknologi og innstillinger i operativsystemet.</li>\n</ul>\n</li>\n<li>Åpne appsiden</li>\n<li>Gjør en visuell inspeksjon for å identifisere funksjonalitet der det kan være aktuelt at innholdet krever at brukeren trykker flere steder på skjermen samtidig eller beveger pekeren i bestemte mønster<br>Finn funksjonalitet og sjekk om innholdet bruker flerpunkts- eller stibaserte gester </li>\n</ul>\n<p><strong>Du skal ikke teste:</strong></p>\n<ul>\n<li>Frihåndsbevegelser der startpunkt til sluttpunkt ikke krever at brukeren er innom et bestemt mellompunkt på veien, det vil si at brukeren følger en bestemt retning eller et mønster\n<ul>\n<li>Dra og slipp-funksjonalitet</li>\n<li>Dra- og slipp-funksjonalitet som krever at pekeren flyttes i en bestemt retning eller rekkefølge (opp, ned, høyre eller venstre) er omfattet</li>\n</ul>\n</li>\n<li>Bruk med tastatur. Dette testes i 2.1.1</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke funksjonalitet som krever flerpunkts- eller stibasert gest."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken funksjonalitet tester du?",
+			"ht": "<p>Beskriv funksjonaliteten, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere funksjoner, registrerer du en og en.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "Funksjonalitet:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er den aktuelle flerpunkts- eller stibaserte gesten bestemt av innholdsprodusenten?",
+			"ht": "<p> </p>\n<p>Kravet gjelder ikke for standard pekerbevegelser for å betjene brukeragenter eller operativsystemer. For eksempel</p>\n<ul>\n<li>Brukeragent: horisontal sveiping for å flytte gjennom nettlesers historie eller vertikal sveiping for å bla gjennom sidens innhold</li>\n<li>Operativsystem: bevegelser for å skifte mellom åpne apper, eller hente frem kontekstuelle menyer med hjelpemiddelteknologier når disse er aktivert</li>\n</ul>\n<p>Sjekk om flerpunkts bevegelsen eller stibasert gest er bestemt av innholdsprodusenten.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Flerpunkts- eller stibasert gest er bestemt av brukeragenten."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er flerpunkts- eller stibasert gest avgjørende?",
+			"ht": "<p>Dersom avgjørende elementer fjernes, vil det medføre en grunnleggende endring av informasjonen eller funksjonaliteten i innholdet, <strong>og </strong>informasjonen og funksjonaliteten vil ikke kunne gjenskapes på en annen måte som samsvarer med kravene.</p>\n<p>Eksempler er en signatur eller frihåndstegning.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Flerpunkts- eller stibasert gest er avgjørende for å betjene funksjonlateten."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Kan funksjonaliteten betjenes med en enkelt pekerbevegelse, uten stibasert gest?",
+			"ht": "<p>Enkelt pekerbevegelse (single pointer) er pekerinndata som fungerer med ett kontaktpunkt med skjermen, herunder:</p>\n<ul>\n<li>enkelttrykk og -klikk,</li>\n<li>dobbelttrykk og -klikk,</li>\n<li>lange trykk</li>\n</ul>\n<p>Eksempler:</p>\n<ul>\n<li>Karuseller, sveipe gjennom oppgaver: At det finnes piler, knapper e.l. som kan betjenes med enkelttrykk og -klikk for å bla gjennom bilder og oppgaver\n<ul>\n<li>Det kan også være mulig at det ikke finnes en visuell synlig mekanisme, men bilder eller oppgaver kan sveipes med en enkelt trykk handling på venstre eller høyre siden av elementet.</li>\n</ul>\n</li>\n<li>Glidebryter: At det finnes knapper som kan betjenes med enkelttrykk og -klikk for å øke eller redusere verdier<br>Hold og vis-zooming: At det finnes \"lange trykk\", \"dobbelttrykk\" eller \"hold og vis\" for å vise en stor versjon av et bilde</li>\n<li>Å tegne \"Z\" for å angre en handling: Det finnes en \"angre\"-knapp</li>\n<li>Kanban-brett f.eks. Jira: Dra og slipp for å endre status på oppgaven. Status kan også endres via en nedtrekksliste</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G216",
+				"G215",
+				"F105"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Flerpunkts- eller stibaserte gester kan betjenes med en enkelt pekerbevegelse."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Flerpunkts- eller stibaserte gester kan ikke betjenes med en enkelt pekerbevegelse."
+				}
+			}
+		}
+	]
 }
