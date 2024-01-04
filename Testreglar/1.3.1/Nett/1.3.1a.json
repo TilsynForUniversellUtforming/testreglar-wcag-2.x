@@ -8,29 +8,6 @@
 	"kravTilSamsvar": "<ul>\r\n<li>Visuelle overskrifter er koda som overskrift.</li>\r\n<li>Overskrifter som inngår i eit visuelt overskriftshierarki, er koda med rett overskriftsnivå.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

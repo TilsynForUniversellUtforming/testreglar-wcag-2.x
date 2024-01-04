@@ -8,41 +8,6 @@
 	"kravTilSamsvar": "<p>Visuelle lister er koda på følgande måte:</p>\r\n<ul>\r\n<li>Nummererte lister er koda som nummerert liste.</li>\r\n<li>Unummererte lister er koda som unummerert liste.</li>\r\n<li>Beskrivande lister (lister som har to nivå og gir utfyllande forklaringar) er koda som beskrivande lister.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		},
-		{
-			"title": "3.10"
-		},
-		{
-			"title": "3.11"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
