@@ -8,17 +8,6 @@
 	"kravTilSamsvar": "<p>Det er mulig å navigere gjennom alt innhold i appen som kan få tastaturfokus, uten å bli stående fast i et element.</p>",
 	"side": "2.1",
 	"element": "2.5",
-	"kolonner": [
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "2.6"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

@@ -8,26 +8,6 @@
 	"kravTilSamsvar": "<p>Det er mulig å navigere gjennom alt innhold på nettsiden som kan få tastaturfokus, uten å bli stående fast i et element.</p>\r\n<ul type=\"disc\">\r\n<li>Alternativ tastaturnavigasjon er beskrevet for brukeren, dersom standardmetoder ikke er brukt.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "2.5",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "2.6"
-		},
-		{
-			"title": "2.7"
-		},
-		{
-			"title": "2.8"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
