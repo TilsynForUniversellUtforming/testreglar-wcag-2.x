@@ -1,348 +1,304 @@
 {
-    "namn": "2.2.1a Det er mogleg å slå av, justere eller forlenge tidsavgrensingar",
-    "id": "2.2.1a",
-    "testlabId": 228,
-    "versjon": "1.0",
-    "type": "Nett",
-    "spraak": "nn",
-    "kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>For nettsider som inneheld tidsavgrensing, er ein av følgande oppfylt:\r\n<ul>\r\n<li>Det er mogleg å slå av tidsavgrensing.</li>\r\n<li>Det er mogleg å justere tidsavgrensinga med minst 10 gonger standard varigheit. Mekanismen for å justere skal ligge før innhaldet som inneheld tidsavgrensingar.</li>\r\n<li>Det er mogleg å forlenge tidsavgrensinga seinast 20 sekund før den inntreff, ved å gjere ei mindre handling. Det skal vere mogleg å forlenge med minst 10 gonger standard varigheit.</li>\r\n</ul>\r\n</li>\r\n</ul>",
-    "side": "2.1",
-    "element": "3.1",
-    "kolonner": [
-        {
-            "title": "2.2"
-        },
-        {
-            "title": "2.3"
-        },
-        {
-            "title": "2.4"
-        },
-        {
-            "title": "3.2"
-        },
-        {
-            "title": "3.3"
-        },
-        {
-            "title": "3.4"
-        },
-        {
-            "title": "3.5"
-        },
-        {
-            "title": "3.6"
-        },
-        {
-            "title": "3.7"
-        },
-        {
-            "title": "3.8"
-        },
-        {
-            "title": "3.9"
-        },
-        {
-            "title": "3.10"
-        },
-        {
-            "title": "3.11"
-        },
-        {
-            "title": "3.12"
-        }
-    ],
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Kva side testar du på?",
-            "ht": "Oppgi URL eller side-ID.",
-            "type": "tekst",
-            "label": "URL/Side:",
-            "datalist": "Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Gjer ein visuell inspeksjon. Finst det informasjon på nettsida som tilseier at det finst ei tidsavgrensing?",
-            "ht": "",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "2.3"
-                }
-            }
-        },
-        {
-            "stegnr": "2.3",
-            "spm": "Sjå i koden. Ligg dei ein meta-tag på formen meta http-equiv=\"refresh\" content i koden?",
-            "ht": "<p>Meta-kodinga ligg som regel i &#x3C;head&#x3E;-elementet på starten av HTML-koden.</p><p>Denne kodinga betyr at nettsida laster på nytt eller omadresserer automatisk.</p>",
-            "type": "jaNei",
-            "kilde": [
-                "F41"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.4"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Testside har ikkje innhald med tidsavgrensing."
-                }
-            }
-        },
-        {
-            "stegnr": "2.4",
-            "spm": "Har content-attributtet i meta-taggen ein verdi på minst 72 000?",
-            "ht": "Tidsavgrensingar på minst 20 timar er unnateke kravet.",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "ja": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Testside har berre innhald med tidsavgrensing som er unnateke kravet."
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Beskriv innhaldet som har tidsavgrensing.",
-            "ht": "Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.",
-            "type": "tekst",
-            "label": "Innhald som har tidsavgrensing:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            }
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Ligg tidsavgrensinga i eit skjema?",
-            "ht": "Vi spør om skjema på grunn av statistikkformål.",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Er tidsavgrensinga unnteke kravet?",
-            "ht": "<p>Følgjande er unnateke kravet:</p><ul><li>Sanntid: Tidsavgrensinga er en nødvendig del av ei hending i sanntid, og det finst ikkje noko alternativ til tidsavgrensinga. Eksempel på dette er nettauksjonar og tidsavgrensa kampanjetilbud. </li></ul><ul><li>Nødvendig unntak: Tidsavgrensinga er nødvendig, og en forlenging vil gjere handlinga ugyldig.</li></ul><ul><li>Tidsavgrensingar som varer 20 timar eller meir.</li></ul>",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "ja": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Innhald med tidsavgrensing som er unnateke kravet."
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.4"
-                }
-            }
-        },
-        {
-            "stegnr": "3.4",
-            "spm": "Er det mogleg å slå av tidsavgrensinga?",
-            "ht": "Slik funksjonalitet skal ligge på starten av sida, og du skal ikkje måtte scrolle for å finne den. Den kan for eksempel ligge i ein meny.",
-            "type": "jaNei",
-            "kilde": [
-                "G4",
-                "G198"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Det er mogleg å slå av, justere eller forlenge innhald som har tidsavgrensing."
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.5"
-                }
-            }
-        },
-        {
-            "stegnr": "3.5",
-            "spm": "Finst det ein mekanisme som let brukaren bestemme varigheita på tidsavgrensinga sjølv?",
-            "ht": "<p>Eksempel på ein slik mekanisme er</p><ul><li>moglegheit for å endre brukarinnstillingar</li><li>knapp</li><li>avkryssingsboks</li><li>glidebrytar</li><li>nedtrekksliste</li></ul>",
-            "type": "jaNei",
-            "kilde": [
-                "G133"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.6"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.9",
-                    "delutfall": {
-                        "nr": 0,
-                        "fasit": "ikkjeForekomst",
-                        "tekst": ""
-                    }
-                }
-            }
-        },
-        {
-            "stegnr": "3.6",
-            "spm": "Ligg mekanismen før innhaldet som inneheld tidsavgrensing?",
-            "ht": "",
-            "type": "jaNei",
-            "kilde": [
-                "G180"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.7"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.9",
-                    "delutfall": {
-                        "nr": 0,
-                        "fasit": "Nei",
-                        "tekst": ""
-                    }
-                }
-            }
-        },
-        {
-            "stegnr": "3.7",
-            "spm": "Kor lang er standard varigheit på tidsavgrensinga?",
-            "ht": "<p>Standard varigheit er den førehandsdefinerte tidsperioden som er angitt i innhaldet på nettsida.</p><p>Det kan hende at du må måle varigheita med stoppeklokke.</p><p>Skriv inn varigheit i sekund.</p>",
-            "type": "tekst",
-            "filter": "tal",
-            "label": "Varigheit i sekund:",
-            "kilde": [],
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.8"
-                }
-            }
-        },
-        {
-            "stegnr": "3.8",
-            "spm": "Er det mogleg å bestemme varigheita på tidsavgrensinga til minst 10 gonger standard varigheit?",
-            "ht": "",
-            "type": "jaNei",
-            "kilde": [
-                "G180"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Det er mogleg å slå av, justere eller forlenge innhald som har tidsavgrensing."
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.9",
-                    "delutfall": {
-                        "nr": 0,
-                        "fasit": "Nei",
-                        "tekst": "Mekanisme for styring av tidsavgrensing, let ikkje brukaren styre varigheit på tidsavgrensing."
-                    }
-                }
-            }
-        },
-        {
-            "stegnr": "3.9",
-            "spm": "Er det mogleg å forlenge tidsavgrensinga seinast 20 sekund før den inntreff?",
-            "ht": "Brukaren skal få beskjed om mogleg forlenging seinast 20 sekund før den inntreff.",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.10"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald som har tidsavgrensing. #delutfall(0)"
-                }
-            }
-        },
-        {
-            "stegnr": "3.10",
-            "spm": "Treng du berre å gjere ei mindre handling for å forlenge tidsavgrensinga?",
-            "ht": "<p>Eksempel på mindre handling er</p><ul><li>eit museklikk</li><li>eit tastetrykk</li></ul>",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.11"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald som har tidsavgrensing. #delutfall(0)"
-                }
-            }
-        },
-        {
-            "stegnr": "3.11",
-            "spm": "Kor lang er standard varigheit på tidsavgrensinga?",
-            "ht": "<p>Standard varigheit er den førehandsdefinerte tidsperioden som er angitt i innhaldet på nettsida.</p><p>Det kan hende at du må måle varigheita med stoppeklokke.</p><p>Skriv inn varigheit i sekund.</p>",
-            "type": "tekst",
-            "filter": "tal",
-            "label": "Varigheit i sekund:",
-            "kilde": [],
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.12"
-                }
-            }
-        },
-        {
-            "stegnr": "3.12",
-            "spm": "Er det mogleg å forlenge varigheita på tidsavgrensinga til minst 10 gonger standard varigheit?",
-            "ht": "",
-            "type": "jaNei",
-            "kilde": [],
-            "ruting": {
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald som har tidsavgrensing. #delutfall(0)"
-                },
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Det er mogleg å slå av, justere eller forlenge innhald som har tidsavgrensing."
-                }
-            }
-        }
-    ]
+	"namn": "2.2.1a Det er mogleg å slå av, justere eller forlenge tidsavgrensingar",
+	"id": "2.2.1a",
+	"testlabId": 228,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>For nettsider som inneheld tidsavgrensing, er ein av følgande oppfylt:\r\n<ul>\r\n<li>Det er mogleg å slå av tidsavgrensing.</li>\r\n<li>Det er mogleg å justere tidsavgrensinga med minst 10 gonger standard varigheit. Mekanismen for å justere skal ligge før innhaldet som inneheld tidsavgrensingar.</li>\r\n<li>Det er mogleg å forlenge tidsavgrensinga seinast 20 sekund før den inntreff, ved å gjere ei mindre handling. Det skal vere mogleg å forlenge med minst 10 gonger standard varigheit.</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi URL eller side-ID.",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Gjer ein visuell inspeksjon. Finst det informasjon på nettsida som tilseier at det finst ei tidsavgrensing?",
+			"ht": "",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Sjå i koden. Ligg dei ein meta-tag på formen meta http-equiv=\"refresh\" content i koden?",
+			"ht": "<p>Meta-kodinga ligg som regel i &#x3C;head&#x3E;-elementet på starten av HTML-koden.</p><p>Denne kodinga betyr at nettsida laster på nytt eller omadresserer automatisk.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F41"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje innhald med tidsavgrensing."
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Har content-attributtet i meta-taggen ein verdi på minst 72 000?",
+			"ht": "Tidsavgrensingar på minst 20 timar er unnateke kravet.",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har berre innhald med tidsavgrensing som er unnateke kravet."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv innhaldet som har tidsavgrensing.",
+			"ht": "Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast.",
+			"type": "tekst",
+			"label": "Innhald som har tidsavgrensing:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Ligg tidsavgrensinga i eit skjema?",
+			"ht": "Vi spør om skjema på grunn av statistikkformål.",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er tidsavgrensinga unnteke kravet?",
+			"ht": "<p>Følgjande er unnateke kravet:</p><ul><li>Sanntid: Tidsavgrensinga er en nødvendig del av ei hending i sanntid, og det finst ikkje noko alternativ til tidsavgrensinga. Eksempel på dette er nettauksjonar og tidsavgrensa kampanjetilbud. </li></ul><ul><li>Nødvendig unntak: Tidsavgrensinga er nødvendig, og en forlenging vil gjere handlinga ugyldig.</li></ul><ul><li>Tidsavgrensingar som varer 20 timar eller meir.</li></ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Innhald med tidsavgrensing som er unnateke kravet."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er det mogleg å slå av tidsavgrensinga?",
+			"ht": "Slik funksjonalitet skal ligge på starten av sida, og du skal ikkje måtte scrolle for å finne den. Den kan for eksempel ligge i ein meny.",
+			"type": "jaNei",
+			"kilde": [
+				"G4",
+				"G198"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det er mogleg å slå av, justere eller forlenge innhald som har tidsavgrensing."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Finst det ein mekanisme som let brukaren bestemme varigheita på tidsavgrensinga sjølv?",
+			"ht": "<p>Eksempel på ein slik mekanisme er</p><ul><li>moglegheit for å endre brukarinnstillingar</li><li>knapp</li><li>avkryssingsboks</li><li>glidebrytar</li><li>nedtrekksliste</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G133"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9",
+					"delutfall": {
+						"nr": 0,
+						"fasit": "ikkjeForekomst",
+						"tekst": ""
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Ligg mekanismen før innhaldet som inneheld tidsavgrensing?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"G180"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9",
+					"delutfall": {
+						"nr": 0,
+						"fasit": "Nei",
+						"tekst": ""
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Kor lang er standard varigheit på tidsavgrensinga?",
+			"ht": "<p>Standard varigheit er den førehandsdefinerte tidsperioden som er angitt i innhaldet på nettsida.</p><p>Det kan hende at du må måle varigheita med stoppeklokke.</p><p>Skriv inn varigheit i sekund.</p>",
+			"type": "tekst",
+			"filter": "tal",
+			"label": "Varigheit i sekund:",
+			"kilde": [],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Er det mogleg å bestemme varigheita på tidsavgrensinga til minst 10 gonger standard varigheit?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"G180"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det er mogleg å slå av, justere eller forlenge innhald som har tidsavgrensing."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9",
+					"delutfall": {
+						"nr": 0,
+						"fasit": "Nei",
+						"tekst": "Mekanisme for styring av tidsavgrensing, let ikkje brukaren styre varigheit på tidsavgrensing."
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Er det mogleg å forlenge tidsavgrensinga seinast 20 sekund før den inntreff?",
+			"ht": "Brukaren skal få beskjed om mogleg forlenging seinast 20 sekund før den inntreff.",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald som har tidsavgrensing. #delutfall(0)"
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Treng du berre å gjere ei mindre handling for å forlenge tidsavgrensinga?",
+			"ht": "<p>Eksempel på mindre handling er</p><ul><li>eit museklikk</li><li>eit tastetrykk</li></ul>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald som har tidsavgrensing. #delutfall(0)"
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Kor lang er standard varigheit på tidsavgrensinga?",
+			"ht": "<p>Standard varigheit er den førehandsdefinerte tidsperioden som er angitt i innhaldet på nettsida.</p><p>Det kan hende at du må måle varigheita med stoppeklokke.</p><p>Skriv inn varigheit i sekund.</p>",
+			"type": "tekst",
+			"filter": "tal",
+			"label": "Varigheit i sekund:",
+			"kilde": [],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				}
+			}
+		},
+		{
+			"stegnr": "3.12",
+			"spm": "Er det mogleg å forlenge varigheita på tidsavgrensinga til minst 10 gonger standard varigheit?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald som har tidsavgrensing. #delutfall(0)"
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det er mogleg å slå av, justere eller forlenge innhald som har tidsavgrensing."
+				}
+			}
+		}
+	]
 }
