@@ -5,59 +5,9 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<ul>\r\n<li>Det viser ledetekster eller instruksjoner, når innholdet krever inndata fra brukeren og\r\n<ul>\r\n<li>Ledetekst eller instruksjon er alltid synlig eller blir synlig når inndataelement er i fokus og</li>\r\n<li>Ledetekst eller instruksjon forblir synlig så lenge inndataelement er i fokus og</li>\r\n<li>Ledetekst eller instruksjon er plassert i eller rett ved inndataelement</li>\r\n</ul>\r\n</li>\r\n<li>Dersom alle inndataelementer er obligatoriske, er det tilstrekkelig at det er opplyst om det i starten av skjemaet</li>\r\n<li>Dersom skjemaet består av både obligatoriske og frivillige inndataelement, er det i tillegg\r\n<ul>\r\n<li>Opplyst hvilke inndataelement som er obligatoriske og</li>\r\n<li>Merking av obligatoriske inndataelement med ikon/symbol/bilde, er forklart før det blir tatt i bruk første gang </li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul>\r\n<li>Det vises ledetekster eller instruksjoner, når innholdet krever inndata fra brukeren og\r\n<ul>\r\n<li>Ledetekst eller instruksjon er alltid synlig eller blir synlig når inndataelement er i fokus og</li>\r\n<li>Ledetekst eller instruksjon forblir synlig så lenge inndataelement er i fokus og</li>\r\n<li>Ledetekst eller instruksjon er plassert i eller rett ved inndataelement</li>\r\n</ul>\r\n</li>\r\n<li>Dersom alle inndataelementer er obligatoriske, er det tilstrekkelig at det er opplyst om det i starten av skjemaet</li>\r\n<li>Dersom skjemaet består av både obligatoriske og frivillige inndataelement, er det i tillegg\r\n<ul>\r\n<li>Opplyst hvilke inndataelement som er obligatoriske og</li>\r\n<li>Merking av obligatoriske inndataelement med ikon/symbol/bilde, er forklart før det blir tatt i bruk første gang </li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "2.5"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		},
-		{
-			"title": "3.10"
-		},
-		{
-			"title": "3.11"
-		},
-		{
-			"title": "3.12"
-		},
-		{
-			"title": "3.13"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
