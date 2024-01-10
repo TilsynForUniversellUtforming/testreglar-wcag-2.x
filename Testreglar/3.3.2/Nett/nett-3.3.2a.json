@@ -1,0 +1,438 @@
+{
+	"namn": "Nett-3.3.2a Inndataelementer har instruksjon eller ledetekst 2023",
+	"id": "nett-3.3.2a",
+	"testlabId": 463,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<ul>\r\n<li>Det vises ledetekster eller instruksjoner, når innholdet krever inndata fra brukeren og\r\n<ul>\r\n<li>Ledetekst eller instruksjon er alltid synlig eller blir synlig når inndataelement er i fokus og</li>\r\n<li>Ledetekst eller instruksjon forblir synlig så lenge inndataelement er i fokus og</li>\r\n<li>Ledetekst eller instruksjon er plassert i eller rett ved inndataelement</li>\r\n</ul>\r\n</li>\r\n<li>Dersom alle inndataelementer er obligatoriske, er det tilstrekkelig at det er opplyst om det i starten av skjemaet</li>\r\n<li>Dersom skjemaet består av både obligatoriske og frivillige inndataelement, er det i tillegg\r\n<ul>\r\n<li>Opplyst hvilke inndataelement som er obligatoriske og</li>\r\n<li>Merking av obligatoriske inndataelement med ikon/symbol/bilde, er forklart før det blir tatt i bruk første gang </li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsida skjema med inndataelement?",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om det finst skjemaelement som krev inndata fra brukaren.</p>\n<p><strong>Inndataelement:</strong> Inndataelement er etter tilsynets oppfatning, nettinnhald som lar brukaren samhandla med data, som å legge inn, endra, legga til og stadfeste informasjon, når brukaren fyller ut eit skjema.</p>\n<p><strong>Merk:</strong> Skjema i PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsida har ikkje skjema med inndataelement."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Kva skjema testar du?",
+			"ht": "<p>Beskriv skjemaet, slik at det er mogleg å identifisere det i ettertid. Om du finn fleire skjema, registrerer du eit og eit.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			},
+			"label": "Skjema:",
+			"multilinje": true
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Er skjemaet ein del av den globale søkefunksjonen?",
+			"ht": "<p>Ein global søkefunksjon er ein navigasjonsmekanisme som lar brukaren søke i alle sidene på nettstaden.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.5"
+				}
+			}
+		},
+		{
+			"stegnr": "2.5",
+			"spm": "Består skjemaet kun av eit enkelt inndataelement, eller er det tekstleg informasjon om at alle inndataelement i skjemaet er obligatoriske?",
+			"ht": "<p>I eit skjema som berre består av eitt enkelt skjemaelement, er elementet rekna som obligatorisk utan at det er behov for å merke det.</p>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Dette gjeld ein situasjon der alle skjemafelt er obligatoriske. Informasjonen om obligatoriske felt skal vere plassert innleiingsvis i skjemaet. </li>\n<li>Situasjonen med at nokre felt er obligatoriske, er behandla seinare.</li>\n</ul>\n<p><strong>Tips:</strong> Du kan for eksempel bruke Ctrl+F for å søke etter ord som obligatorisk, påkrevd, må fyllast ut. </p>",
+			"type": "jaNei",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Kva inndataelement testar du?",
+			"ht": "<p>Beskriv inndataelement, slik at det er mogleg å identifisere det i ettertid. Om du finn fleire inndataelement, registrerer du eit og eit.</p>",
+			"type": "tekst",
+			"label": "Inndataelement:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Har inndataelementet ein synlig identifikasjon, i form av ledetekst, tekst på knapp eller annan tekstlig identifikasjon?",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om inndataelementet har ledetekst eller instruksjon </p>\n<ul>\n<li>som alltid er synlig  </li>\n<li>som blir synlig ved fokus \n<ul>\n<li>enkelte ledetekstar eller instruksjonar blir først synleg når inndataelementet er i fokus.</li>\n</ul>\n</li>\n<li>knapp i direkte tilknyting til eit inndataelement\n<ul>\n<li>Dersom det er ein knapp i direkte tilknyting til eit inndataelement, og knappen sender inn skjemaet, reknast teksten på knappen som synleg ledetekst for inndataelementet.</li>\n<li>Eksempel på slike skjema eller inndataelement er: Melde på nyheitsbrev, globalt søk.</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong> Knappar med ikon, symbol, bilde eller liknande skal testast i steg 3.5. Det vil seie at du skal velge  Nei her.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G131",
+				"G167",
+				"H44"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			},
+			"svarArray": [
+				"alltid synlig: ledetekst eller instruksjon som alltid er synlig eller",
+				"synlig ved fokus: enkelte ledetekstar eller instruksjonar blir først synleg når inndataelementet er i fokus.",
+				"knapp i direkte tilknyting til eit inndataelement: Dersom det er ein knapp i direkte tilknyting til eit inndataelement, og knappen sender inn skjemaet, reknast teksten, ikon, symbol, bilde eller liknande på knappen som synleg ledetekst for inndataelementet. Eksempel på slike skjema eller inndataelement er: Melde på nyheitsbrev, globalt søk.",
+				"Ingen synlig identifikasjon"
+			]
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er identifikasjonen visuelt plassert i eller rett ved inndataelementet?",
+			"ht": "<p>Plasseringa kan for eksempel vere:</p>\n<ul>\n<li>rett over eller</li>\n<li>rett ved sida av inndataelementet eller</li>\n<li>i sjølve inndataelementet, for eksempel ein floating label</li>\n</ul>\n<p>Viss ledeteksten aleine ikkje er tilstrekkeleg, skal utfyllande informasjon som er med på å identifisere inndataelementet, vere plassert rett ved inndataelementet.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G162"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "<br>- tekst, som ikkje er plassert i eller rett ved inndataelement",
+						"fasit": "Nei"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er identifikasjonen alltid synleg, når inndataelementet er i fokus?",
+			"ht": "<p>Klikk i inndataelementet, og skriv inn innhald eller velg alternativ.</p>\n<p><strong>Merk:</strong></p>\n<ul>\n<li><strong>Placeholder:</strong> I enkelte tilfelle kan ledetekst/instruksjon som ligg i skjemaelementet (placeholder), forsvinne når elementet er i fokus eller det skrives inn innhald. I så fall er ikkje ledeteksten eller instruksjonen alltid synleg.</li>\n<li><strong>Title:</strong> I enkelte tilfelle får ein opp hjelpetekst når ein held musepeikaren over skjemaelementet. Dette er ikkje i samsvar med kravet om synleg ledetekst/instruksjon, fordi teksten ikkje viser ved bruk av tastatur.</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [
+				"H44"
+			],
+			"ruting": {
+				"ja": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "2.5",
+							"type": "lik",
+							"verdi": "Nei",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.9",
+								"delutfall": {
+									"nr": 1,
+									"tekst": "identifikasjon i form av tekst",
+									"fasit": "Ja"
+								}
+							}
+						},
+						"2": {
+							"sjekk": "2.5",
+							"type": "lik",
+							"verdi": "Ja",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Skjema består av eit enkelt inndataelement, eller det er tekstleg informasjon om at alle inndataelement i skjemaet er obligatoriske."
+							}
+						}
+					}
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "<br>- tekst, som ikkje alltid er synleg når inndataelement er i fokus",
+						"fasit": "Nei"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Har inndataelementet visuell identifikasjon i form av ikon, symbol, bilde eller liknande?",
+			"ht": "<p>Du skal vurdere om ikonet/symbilet/bilde gir tilstrekkeleg identifikasjon.</p>\n<p>Identifikasjon i form av ikon/symbol/bilde kan vere ikon som er allment brukt eller kjente symbol for bestemt type informasjon. Eksempel er forstørrelsesglass for å starte søk.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G131",
+				"H44"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "3.2",
+							"type": "lik",
+							"verdi": "Nei",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "Inndataelement har ikkje identifikasjon i form av tekst eller ikon/symbol/bilde."
+							}
+						},
+						"2": {
+							"sjekk": "3.2",
+							"type": "lik",
+							"verdi": "Ja",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "Inndataelement har identifikasjon i form av: #delutfall(0,Nei).<br> - inndataelement har ikkje identifikasjon i form av ikon/symbol/bilde. "
+							}
+						}
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Er ikonet/symbolet/bilde visuelt plassert i eller rett ved inndataelementet?",
+			"ht": "<p>Plasseringa kan for eksempel vere rett over eller rett ved sida av inndataelementet.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G162"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Inndataelement har identifikasjon i form av: #delutfall(0,Nei)<br>- ikon/symbol/bilde, som ikkje er plassert i eller ved inndataelementet"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Er ikonet/symbolet/bilde alltid synleg, når inndataelementet er i fokus?",
+			"ht": "<p>Klikk i inndataelementet, men ikkje skriv inn innhald eller velg alternativ.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"H44"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"nei": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "3.4",
+							"type": "lik",
+							"verdi": "Nei",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "Inndataelement har identifikasjon i form av tekst eller ikon/symbol/bilde som ikkje alltid er synleg når inndataelementet er i fokus."
+							}
+						},
+						"2": {
+							"sjekk": "3.4",
+							"type": "ulik",
+							"verdi": "Nei",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "Inndataelement har identifikasjon i form av: #delutfall(0,Nei)<br>- ikon/symbol/bilde, som ikkje alltid er synlege når inndataelementet er i fokus"
+							}
+						}
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Har ikonet/symbolet/bildet tekstalternativ, som set brukaren i stand til å identifisere inndataelementet?",
+			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Inspiser ikonet/symbolet/bildet og bruk Accessibility Tree i nettlesaren</li>\n<li>Vurder om ikonet/symbolet/bildet har tekstalternativ i koden. Godkjente måter er:\n<ul>\n<li><code>aria-label</code></li>\n<li><code>aria-labelledby</code></li>\n<li><code>alt</code>, finst helst på <code>&lt;img&gt;</code>, men kan og brukast på andre</li>\n<li><code>value</code> ,finst helst på skjemaelement</li>\n<li>tekst i ikon/symbol-elementet, for eksempel <code>&lt;button&gt;Søk&lt;/button&gt;</code>)</li>\n<li><code>title</code></li>\n</ul>\n</li>\n<li>Du skal vurdere om innhaldet i attributta set brukaren i stand til å identifisere inndataelementet.</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "2.5",
+							"type": "lik",
+							"verdi": "Nei",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.9",
+								"delutfall": {
+									"nr": 1,
+									"tekst": "identifikasjon i form av ikon/symbol/bilde",
+									"fasit": "Ja"
+								}
+							}
+						},
+						"2": {
+							"sjekk": "2.5",
+							"type": "lik",
+							"verdi": "Ja",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Inndataelement har identifikasjon i form av ikon/symbol/bilete. Skjema har tekstleg informasjon om at alle inndataelementer er obligatoriske."
+							}
+						}
+					}
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Inndataelement med identifikasjon i form av: #delutfall(0,Nei)<br>- ikon/symbol/bilde, som ikkje er identifisert i koden."
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Er det aktuelle inndataelementet obligatorisk?",
+			"ht": "<p>Obligatorisk inneber at brukaren må fylle ut informasjon eller gjere valg, for å kome vidare i skjemaet, for eksempel</p>\n<ul>\n<li>fylle ut informasjon </li>\n<li>gjere val i nedtrekksmenyar, radioknappar, avkryssingsboksar.</li>\n</ul>\n<p><strong>Tips:</strong> For å finne ut om inndataelementet er obligatorisk, kan du:</p>\n<ul>\n<li>fylle ut eller prøve å sende inn skjemaet eller</li>\n<li>sjekke koden for å se etter attributtet required eller tilsvarende</li>\n</ul>\n<p>.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Inndataelement med #delutfall(1,Ja)."
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Inneheld ledeteksten tekstleg informasjon om at inndataelementet er obligatorisk?",
+			"ht": "<p>Eksempel på tekstleg informasjon er</p>\n<ul>\n<li>obligatorisk</li>\n<li>påkrevd</li>\n<li>må fyllast ut</li>\n</ul>\n<p>Du skal ikkje måtte scrolle bort frå inndataelementet for å finne informasjonen.</p>\n<p><strong>Merk:</strong> Eventuell feilmelding, som dukkar opp <strong>etter </strong>at eit obligatorisk inndataelement ikkje er fylt ut, er ikkje tilstrekkeleg. Brukaren skal få informasjon på førehand. </p>",
+			"type": "jaNei",
+			"kilde": [
+				"G83",
+				"H90"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Inndataelement med #delutfall(1,Ja). Informasjon om obligatoriske inndataelement er tekst."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Inneheld ledeteksten symbol/ikon som viser at inndataelementet er obligatorisk?",
+			"ht": "<p>Eksempel på symbol/ikon er stjerne (*)</p>\n<p><strong>Merk:</strong> Informasjon i form av symbol/ikon som dukkar opp <strong>etter</strong> at eit obligatorisk inndataelementet ikkje er fylt ut, er ikkje tilstrekkeleg.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"H90"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjema har ikkje informasjon om at inndataelementer er obligatoriske."
+				}
+			}
+		},
+		{
+			"stegnr": "3.12",
+			"spm": "Er symbolet/ikonet tekstleg forklart?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"H90"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Informasjon om obligatoriske inndataelement er i form av symbol/ikon. Symbol/ikon er ikkje tekstleg forklart."
+				}
+			}
+		},
+		{
+			"stegnr": "3.13",
+			"spm": "Er forklaringa av symbolet/ikonet plassert før merkinga er tatt i bruk første gang?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"H90"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Inndataelement med #delutfall(1,Ja). Informasjon om obligatoriske inndataelement er i form av symbol/ikon. Symbol/ikon er forklart før det er tatt i bruk første gang."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Informasjon om obligatoriske inndataelement er i form av symbol/ikon. Symbol/ikon er ikke forklart før det er tatt i bruk første gang."
+				}
+			}
+		}
+	]
+}
