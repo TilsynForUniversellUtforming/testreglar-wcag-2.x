@@ -8,20 +8,6 @@
 	"kravTilSamsvar": "<p>Det er mulig å navigere gjennom nettsiden uten automatisk kontekstendring når brukergrensesnittkomponenter får fokus.</p>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "3.2"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
