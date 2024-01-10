@@ -1,0 +1,170 @@
+{
+	"namn": "App 1.1.1a Bilde har alt-tekst som beskriv formålet",
+	"id": "app-1.1.1a-2022",
+	"testlabId": 265,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>For bilete er ein av følgjande er oppfylt:</p>\r\n<ul>\r\n<li>Bilete som er pynt er koda på ein slik måte at dei ikkje er til støy.</li>\r\n<li>Bilete som er ei sanseoppleving eller ein test har eit kort tekstalternativ som gir ein beskrivande identifikasjon.</li>\r\n<li>Bilete som er meiningsberande har eit kort tekstalternativ som gjengir same informasjon som biletet.</li>\r\n<li>Bilete som er komplekse har både eit kort tekstalternativ og eit utfyllande tekstalternativ.</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"kolonner": [
+		{
+			"title": "2.2"
+		},
+		{
+			"title": "3.2"
+		},
+		{
+			"title": "3.3"
+		},
+		{
+			"title": "3.4"
+		}
+	],
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva skjermbilde testar du på?",
+			"ht": "<p>Beskriv skjermbildet med få stikkord, eller vel i lista.</p>",
+			"type": "tekst",
+			"datalist": "Sideutvalg",
+			"kilde": [],
+			"label": "Skjermbilde:",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Innheld skjermbilde bilder?",
+			"ht": "<p>Bla gjennom skjermbildet og sjå etter bilder. Merk at du i denne testregelen kun skal teste bilder som ikkje er klikkbare. </p>\n<p>Du kan teste dette med å forsøke å trykke på bildet. Kan du trykke på bildet og det utfører ein handling, er bildet en del av en knapp og skal ikkje testast. Om det ikkje utfører ein handling, er det eit bilde som skal testast.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Skjermbilde inneheld ikkje bilde."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv bildet som skal vurderast.",
+			"ht": "<p>Beskriv bildet med få stikkord.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"label": "Bilde:",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er bildet meint å vere pynt/dekor?",
+			"ht": "<p>Eksempel på bilde som er pynt/dekor: usynlige bilde, gjennomsiktige bilde, pyntebilde og border. Slike bilde er meint å vere pynt og gir ikkje informasjon.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Aktiver skjermlesar (opplesingsfunksjon). Trykk på bildet. Får du lest opp informasjon når du veljer bildet?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "3.2",
+							"type": "lik",
+							"verdi": "Ja",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "Bilde som er pynt/dekor er koda på ein slik måte at det er til støy."
+							}
+						},
+						"2": {
+							"sjekk": "3.2",
+							"type": "lik",
+							"verdi": "Nei",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.4"
+							}
+						}
+					}
+				},
+				"nei": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "3.2",
+							"type": "lik",
+							"verdi": "Ja",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Bilde som er pynt/dekor er ikkje koda på ein slik måte at det er til støy."
+							}
+						},
+						"2": {
+							"sjekk": "3.2",
+							"type": "lik",
+							"verdi": "Nei",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "Meiningsberande bilde har ikkje tekstalternativ som beskriver bildet."
+							}
+						}
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er informasjonen som blir lest opp, i samsvar med formålet med bildet?",
+			"ht": "<p>For bilde er ein av følgjande er oppfylt:</p>\n<ul>\n<li>Bilde som er ei sanseoppleving eller ein test har eit kort tekstalternativ som gir ein beskrivande identifikasjon.</li>\n<li>Bilde som er meiningsberande har eit kort tekstalternativ som gjengir same informasjon som bilde.</li>\n<li>Bilde som er komplekse har både eit kort tekstalternativ og eit utfyllande tekstalternativ.</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [
+				"F67",
+				"G74",
+				"G73",
+				"G94",
+				"F30"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Meiningsberande bilde har tekstalternativ som beskriv formålet med bilde."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Meiningsberande bilde har ikkje tekstalternativ som beskriv formålet med bilde."
+				}
+			}
+		}
+	]
+}
