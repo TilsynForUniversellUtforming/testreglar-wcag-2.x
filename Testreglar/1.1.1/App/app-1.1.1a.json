@@ -8,53 +8,6 @@
 	"kravTilSamsvar": "<p>For bilder som ikke er trykkbare er ett av følgende punkter oppfylt:</p>\r\n<ul>\r\n<li>Bilder som er meningsbærende, har et kort tekstalternativ som gir same informasjon som bildet eller</li>\r\n<li>Komplekse, meningsbærende bilder, har både et kort og et langt tekstalternativ som gir samme informasjon som bildet og\r\n<ul>\r\n<li>Kort tekstalternativ har informasjon om plasseringen av langt tekstalternativ og</li>\r\n<li>Bildet er programmatisk knyttet til langt tekstalternativ og</li>\r\n<li>Langt tekstalternativ er kodet som tekst eller</li>\r\n</ul>\r\n</li>\r\n<li>Ikke-tekstlig innhold som er en test, har kort tekstalternativ med en beskrivende identifikasjon av testen eller</li>\r\n<li>Bilder der formålet er å skape et spesifikt sanseinntrykk, har tekstalternativ med en beskrivende identifikasjon av bildet eller</li>\r\n<li>Bilder som er ren dekorasjon, brukes utelukkende til visuell formatering eller ikke presenteres for brukerne, kodes det slik at det kan ignoreres av hjelpemiddelteknologi</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		},
-		{
-			"title": "3.10"
-		},
-		{
-			"title": "3.11"
-		},
-		{
-			"title": "3.12"
-		},
-		{
-			"title": "3.13"
-		},
-		{
-			"title": "3.14"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
@@ -131,7 +84,10 @@
 					"type": "gaaTil",
 					"steg": "3.3"
 				}
-			}
+			},
+			"kilde": [
+				"wcag:ordliste"
+			]
 		},
 		{
 			"stegnr": "3.3",
