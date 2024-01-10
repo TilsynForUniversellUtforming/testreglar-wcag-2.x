@@ -8,35 +8,6 @@
 	"kravTilSamsvar": "<p>Navn og rolle:</p>\r\n<ul>\r\n<li>knapper har et tilgjengelig navn, som beskriver formålet med den aktuelle knappen og</li>\r\n<li>knapper har riktig rolle, som identifiserer funksjonen til den aktuelle knappen </li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>når tilstander, egenskaper og verdier ved knappen kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>varsel om endringer i den aktuelle knappen er tilgjengelig for brukeragenter </li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
@@ -55,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsiden knapper?",
-			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes komponenter på testsiden som ser ut en knapp.</p>\n<p><strong>Knapp:</strong> Knapper tillater enkle brukerutløste handlinger, for eksempel å lagre, gå videre til neste side uten å åpne en ny URL, sende inn et skjema eller sette i gang et søk.</p>\n<p><strong>Merk</strong>: Knapper som består av et bilde og knapper som er kodet som lenker skal også testes her. </p>\n<p> </p>",
+			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes komponenter på testsiden som ser ut en knapp.</p>\n<p><strong>Knapp:</strong> Knapper tillater enkle brukerutløste handlinger, for eksempel å lagre, gå videre til neste side uten å åpne en ny URL, sende inn et skjema eller sette i gang et søk.</p>\n<p><strong>Merk</strong>: Knapper som består av et bilde og knapper som er kodet som lenker skal også testes her.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -181,7 +152,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Har knappen mer enn en tilstand når brukeren samhandler med den?",
-			"ht": "<p>En tilstand er en dynamisk egenskap som endres når brukeren samhandler med knappen.</p>\n<p>Trykk på knappen og sjekk om knappen har minst en av disse tilstandene: </p>\n<ul>\n<li>av/på knapp (toggle button)</li>\n<li>spill av og stopp knapp</li>\n<li>en knapp som utvider eller sammenslutter innhold, for eksempel en meny-knapp</li>\n</ul>",
+			"ht": "<p>En tilstand er en dynamisk egenskap som endres når brukeren samhandler med knappen.</p>\n<p>Trykk på knappen og sjekk om knappen har minst en av disse tilstandene:</p>\n<ul>\n<li>av/på knapp (toggle button)</li>\n<li>spill av og stopp knapp</li>\n<li>en knapp som utvider eller sammenslutter innhold, for eksempel en meny-knapp</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
@@ -197,7 +168,7 @@
 		},
 		{
 			"stegnr": "3.7",
-			"spm": "Hvor mange tilstander har knappen? ",
+			"spm": "Hvor mange tilstander har knappen?",
 			"ht": "<p>Registrer antall tilstander.</p>\n<p>Eksempel: En spill av og stopp knapp kan ha to tilstander, spill av eller stopp.</p>",
 			"type": "tekst",
 			"ruting": {
@@ -212,7 +183,7 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Hvor mange tilstander er ikke angitt programmatisk?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser knappen i Chrome</li>\n<li>Bruk Accessibility Tree i inspiser</li>\n<li>Under ARIA-attributter eller Computed Properties, sjekk om det finnes:<br>\n<ul>\n<li>For av/på knapp (toggle button) og spill av og stopp knapp:<br>\n<ul>\n<li>hvis knappen er på: aria-pressed: true eller aria-checked: true</li>\n<li>hvis knappen er av: aria-pressed: false eller aria-checked: false</li>\n<li>hvis knappen har en mellomliggende tilstand mellom tilstander av og på: aria-pressed: mixed.</li>\n</ul>\n</li>\n<li>en knapp som utvider eller sammenslutter innhold<br>\n<ul>\n<li>hvis innholdet er sammensluttet: aria-expanded: false</li>\n<li>hvis innholdet er utvidet: aria-expanded: true</li>\n<li>har attributtet: aria-haspopup: true </li>\n<li>har attributtet:  aria-controls: \"IDREF\"\n<ul>\n<li>IDREF refererer til verdien i attributtet \"id\" til elementet med menyen som styres av meny-knappen.</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Registrer antall tilstander som ikke er angitt programmatisk.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser knappen i Chrome</li>\n<li>Bruk Accessibility Tree i inspiser</li>\n<li>Under ARIA-attributter eller Computed Properties, sjekk om det finnes:<br>\n<ul>\n<li>For av/på knapp (toggle button) og spill av og stopp knapp:<br>\n<ul>\n<li>hvis knappen er på: aria-pressed: true eller aria-checked: true</li>\n<li>hvis knappen er av: aria-pressed: false eller aria-checked: false</li>\n<li>hvis knappen har en mellomliggende tilstand mellom tilstander av og på: aria-pressed: mixed.</li>\n</ul>\n</li>\n<li>en knapp som utvider eller sammenslutter innhold<br>\n<ul>\n<li>hvis innholdet er sammensluttet: aria-expanded: false</li>\n<li>hvis innholdet er utvidet: aria-expanded: true</li>\n<li>har attributtet: aria-haspopup: true</li>\n<li>har attributtet: aria-controls: \"IDREF\"\n<ul>\n<li>IDREF refererer til verdien i attributtet \"id\" til elementet med menyen som styres av meny-knappen.</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Registrer antall tilstander som ikke er angitt programmatisk.</li>\n</ul>",
 			"type": "tekst",
 			"ruting": {
 				"alle": {
