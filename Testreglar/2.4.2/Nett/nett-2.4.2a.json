@@ -8,20 +8,6 @@
 	"kravTilSamsvar": "<ul>\r\n<li>Sidetittelen er korrekt kodet i det oppmerkingsspråket som er brukt og</li>\r\n<li>Sidetittelen gir en relevant beskrivelse av sidens tema eller formål</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "Side",
-	"kolonner": [
-		{
-			"title": "3.1"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
