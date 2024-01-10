@@ -1,18 +1,18 @@
 {
-	"namn": "1.3.1a Overskrifter er rett koda",
-	"id": "1.3.1a",
-	"testlabId": 242,
+	"namn": "Nett-1.3.1a Visuelle overskrifter er korrekt kodet 2023",
+	"id": "nett-1.3.1a",
+	"testlabId": 482,
 	"versjon": "1.0",
 	"type": "Nett",
-	"spraak": "nn",
-	"kravTilSamsvar": "<ul>\r\n<li>Visuelle overskrifter er koda som overskrift.</li>\r\n<li>Overskrifter som inngår i eit visuelt overskriftshierarki, er koda med rett overskriftsnivå.</li>\r\n</ul>",
+	"spraak": "nb",
+	"kravTilSamsvar": "<ul>\r\n<li>Visuelle overskrifter er korrekt kodet som overskrifter</li>\r\n<li>Visuelle overskrifter som inngår i et overskriftshierarki, er kodet med rett overskriftsnivå</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
@@ -26,8 +26,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har nettsida visuelle overskrifter?",
-			"ht": "Ei overskrift skil seg visuelt frå teksten som kjem under, med for eksempel større skrift, feit eller kursiv markering",
+			"spm": "Har nettsiden visuelle overskrifter?",
+			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes visuelle overskrifter på testsiden. En overskrift skiller seg visuelt fra teksten som hører til, med for eksempel større skrift, feit eller kursiv markering.</p>\n<p>Overskrifter gjør at brukeren får informasjon om temaet for eller formålet med teksten, avsnittet, listen, skjemaet eller annet innhold som kommer etter overskriften.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -36,16 +36,16 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje visuelle overskrifter."
+					"utfall": "Testsiden har ikke visuelle overskrifter."
 				}
 			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Beskriv overskrifta som skal vurderast.",
-			"ht": "Legg inn overskrift, eller andre stikkord som er slik at innhaldet kan identifiserast. Overskrifter gir struktur og meining til nettsida og innhaldet ved å gje namn til dei ulike delane av innhaldet. Ei overskrift skil seg visuelt frå teksten som kjem under, med for eksempel større skrift, feit eller kursiv markering.",
+			"spm": "Hvilken overskrift tester du?",
+			"ht": "<p>Beskriv overskriften, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere overskrifter, registrerer du en og en.</p>",
 			"type": "tekst",
-			"label": "Overskrift",
+			"label": "Overskrift:",
 			"multilinje": true,
 			"oblig": true,
 			"ruting": {
@@ -57,17 +57,17 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Er den visuelle overskrifta koda som overskrift med H-elementet i HTML?",
-			"ht": "Du kan bruke kodeverkt&#xF8;yet i nettlesaren til &#xE5; sjekke dette. Du kan ogs&#xE5; bruke testverkt&#xF8;y som for eksempel Web Accessibility Toolbar eller WAVE. I standard HTML: Overskriftene er koda med elementa &#x3C;h1&#x3E; til &#x3C;h6&#x3E;.",
+			"spm": "Er den visuelle overskriften kodet som overskrift med H-elementet i HTML?",
+			"ht": "<p>Du kan bruke:</p>\n<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Kodeverktøyet i nettleseren til å sjekke dette</li>\n<li>I standard HTML: Overskriftene er kodet med elementene <code>&lt;h1&gt;</code> til <code>&lt;h6&gt;</code></li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<ul>\n<li>Chrome-extension <a href=\"https://chromewebstore.google.com/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi\" target=\"_blank\" rel=\"noopener\">headingsMap</a> eller</li>\n<li>Dra og slipp bokmerket <a href=\"javascript:(function()%7Bvar%20f=new%20Array(%7Bn:%22H1%22,c:%22#ff0000%22,p:0%7D,%7Bn:%22H2%22,c:%22#713939%22,p:0%7D,%7Bn:%22H3%22,c:%22#00aa00%22,p:0%7D,%7Bn:%22H4%22,c:%22#054164%22,p:0%7D,%7Bn:%22H5%22,c:%22#7F0A7F%22,p:0%7D,%7Bn:%22H6%22,c:%22#01D901%22,p:0%7D,%7Bn:%22P%22,c:%22#1515C0%22,p:0%7D,%7Bn:%22B%22,c:%22#00D400%22,p:0%7D,%7Bn:%22I%22,c:%22#5A005A%22,p:0%7D,%7Bn:%22EM%22,c:%22#4E6401%22,p:0%7D,%7Bn:%22TABLE%22,c:%22#365F5F%22,p:1%7D,%7Bn:%22LEGEND%22,c:%22#28025D%22,p:0%7D,%7Bn:%22STRONG%22,c:%22#DE1A00%22,p:0%7D,%7Bn:%22FIELDSET%22,c:%22#800000%22,p:1%7D);function%20p(n,e,r)%7Bvar%20t=n.document.createElement(%22span%22),c=t.style,c=(c.color=e.c,c.backgroundColor=%22#fff%22,c.backgroundImage=%22none%22,c.fontSize=%2214px%22,c.fontWeight=%22bold%22,n.document.createTextNode(%22%20%5B%22+r+e.n+%22%5D%20%22));return%20t.insertBefore(c,t.firstChild),t%7D!function%20n(e)%7Btry%7Bfor(var%20r=0;r%3Cf.length;r++)%7Ba=o=c=t=void%200;for(var%20t=e,c=f%5Br%5D,o=t.document.getElementsByTagName(c.n),a=0;a%3Co.length;a++)0==c.p?(o%5Ba%5D.insertBefore(p(t,c,%22%22),o%5Ba%5D.firstChild),o%5Ba%5D.appendChild(p(t,c,%22/%22))):(o%5Ba%5D.parentNode.insertBefore(p(t,c,%22%22),o%5Ba%5D),o%5Ba%5D.parentNode.insertBefore(p(t,c,%22/%22),o%5Ba%5D.nextSibling))%7Dfor(r=0;r%3Ce.frames.length;r++)n(e.frames%5Br%5D)%7Dcatch(n)%7B%7D%7D(window)%7D)();\">Inhalte Gegliedert</a> til bokmerker før du bruker det på testsiden.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
-				"H42",
-				"F2"
+				"F2",
+				"H42"
 			],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.5"
+					"steg": "3.8"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -77,8 +77,8 @@
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Er den visuelle overskrifta koda med attributtet role=\"heading\"?",
-			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+			"spm": "Er den visuelle overskriften kodet med attributtet role=\"heading\"?",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettleseren til å sjekke dette.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA12",
@@ -87,7 +87,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.5"
+					"steg": "3.8"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -97,12 +97,12 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Er den visuelle overskrifta koda med noko anna som ivaretek den visuelle presentasjonen?",
-			"ht": "<p>Eksempel p&#xE5; koding er:</p><ul><li>unummerert liste, koda med &#x3C;ul&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>nummerert liste, koda med &#x3C;ol&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>deskriptiv liste, koda med &#x3C;dl&#x3E;, &#x3C;dd&#x3E; og &#x3C;dt&#x3E;</li><li>Ledetekst koda som &#x3C;label&#x3E;</ul>",
+			"spm": "Er den visuelle overskriften kodet på en annen måte, som ivaretar den visuelle presentasjonen?",
+			"ht": "<p>Eksempel på koding er:</p>\n<ul>\n<li>unummerert liste, kodet med <code>&lt;ul&gt;</code> og <code>&lt;li&gt;</code> for hvert listepunkt</li>\n<li>nummerert liste, kodet med <code>&lt;ol&gt;</code> og <code>&lt;li&gt;</code> for hvert listepunkt</li>\n<li>deskriptiv liste, kodet med <code>&lt;dl&gt;</code>, <code>&lt;dd&gt;</code> og <code>&lt;dt&gt;</code></li>\n<li>Ledetekst kodet som <code>&lt;label&gt;</code></li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
-				"G115",
-				"F2"
+				"F2",
+				"G115"
 			],
 			"ruting": {
 				"ja": {
@@ -111,14 +111,14 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Visuell overskrift er ikkje koda som overskrift."
+					"utfall": "Visuell overskrift er ikke kodet som overskrift."
 				}
 			}
 		},
 		{
 			"stegnr": "3.5",
-			"spm": "Inngår den visuelle overskrifta i eit tydeleg overskriftshierarki?",
-			"ht": "Dersom det er tydeleg at deler av innhaldet er presentert gjennom eit hierarki av visuelle overskrifter, skal dette vere ivareteke i koden. Eksempel på dette er hovudinnhaldet i ein artikkel. Merk: Du skal ikkje vurdere hierarkiet på overskriftene for heile nettsida samla, men berre på delane av sida som er delt opp med eit visuelt overskriftshierarki.",
+			"spm": "Inngår den visuelle overskriften i et tydelig overskriftshierarki?",
+			"ht": "<p>Hvis det er tydelig at deler av innholdet er presentert med et hierarki av visuelle overskrifter, skal dette også ivaretas i koden. Eksempel på dette er hovedinnholdet i en artikkel.</p>\n<p><strong>Merk:</strong> Du skal ikke vurdere hierarkiet på overskriftene for hele nettsiden samlet, men bare de delene av nettsidene som er delt opp med et visuelt overskriftshierarki.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -128,14 +128,14 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Visuell overskrift er koda som overskrift."
+					"utfall": "Visuell overskrift er kodet som overskrift."
 				}
 			}
 		},
 		{
 			"stegnr": "3.6",
-			"spm": "Kva er nivået på overskrifta visuelt sett?",
-			"ht": "Samanlign nivået på den visuelle overskrifta med dei føregåande overskriftene. Start på toppen av overskriftshierarkiet og tel deg nedover. Hugs at det kan vere fleire overskrifter på same nivå etter kvarandre. Merk: Nivået på overskrifta er bestemt av fleire ulike ting i tillegg til storleiken på teksten, for eksempel innhaldet i teksten, plassering, tegnsetting og gruppering.",
+			"spm": "Hva er nivået på overskriften, visuelt sett?",
+			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Sammenlign nivået på den visuelle overskriften med de forrige overskriftene.</li>\n<li>Start på toppen av overskriftshierarkiet og tell deg nedover.</li>\n<li>Husk at det kan være flere overskrifter på samme nivå etter hverandre</li>\n</ul>\n<p><strong>Merk:</strong> Nivået på overskrifter bestemmes av flere ulike ting, i tillegg til størrelsen på teksten, for eksempel innholdet i teksten, plassering, tegnsetting og gruppering.</p>",
 			"type": "radio",
 			"svarArray": [
 				"Nivå 1",
@@ -156,8 +156,8 @@
 		},
 		{
 			"stegnr": "3.7",
-			"spm": "Er nivået i koden det same som det visuelle nivået?",
-			"ht": "<p>Du kan bruke kodeverkt&#xF8;yet i nettlesaren til &#xE5; sjekke dette. Overskriftene skal vere koda med rett niv&#xE5;:</p><ul><li>I standard HTML er overskriftene er koda med elementa &#x3C;h1&#x3E; til &#x3C;h6&#x3E;.</li><li>Med WAI-ARIA er overskriftene er koda med attributtet aria-level=\"1\" til aria-level=\"7\".</li></ul>",
+			"spm": "Er nivået i koden det samme som det visuelle nivået?",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettleseren eller Chrome-extension headingsMap til å sjekke dette.</p>\n<p>Overskriftene skal være kodet med rett nivå:</p>\n<ul>\n<li>I standard HTML er overskriftene er kodet med elementene<code>&lt;h1&gt;</code> til <code>&lt;h6&gt;</code>.</li>\n<li>Med WAI-ARIA er overskriftene er kodet med attributtene <code>aria-level=\"1\"</code> til <code>aria-level=\"6\"</code>.</li>\n</ul>\n<p><strong>Merk:</strong> <code>&lt;h1&gt;</code> kan brukes mer enn en gang på samme side, dersom innhold på siden er delt inn i mer enn en blokk.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G115"
@@ -166,14 +166,34 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Visuelt overskriftsnivå samsvarar ikkje med koda overskriftsnivå."
+					"utfall": "Visuell overskrift er kodet som overskrift. Visuelt overskriftsnivå samsvarer ikke med kodet overskriftsnivå."
 				},
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Visuell overskrift er koda som overskrift. Visuelt overskriftsnivå samsvarar med koda overskriftsnivå."
+					"utfall": "Visuell overskrift er kodet som overskrift. Visuelt overskriftsnivå samsvarer med kodet overskriftsnivå."
 				}
 			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Er overskriften kodet slik at den ignoreres av hjelpemiddelteknologi?",
+			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser overskriften i nettleseren</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Checker</li>\n<li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om overskriften er kodet med et av følgende attributter:</p>\n<ul>\n<li>role=\"presentation\"</li>\n<li>role=\"none\"</li>\n<li>aria-hidden=\"true\"</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Overskrift er kodet slik at den ignoreres av hjelpemiddelteknologi."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			},
+			"kilde": [
+				"F92"
+			]
 		}
 	]
 }
