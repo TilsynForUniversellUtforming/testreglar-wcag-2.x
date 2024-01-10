@@ -8,26 +8,6 @@
 	"kravTilSamsvar": "<p>For innhold som får fokus ved tastaturnavigasjon og må navigeres i en bestemt rekkefølge, er ett av følgende alternativ oppfylt:</p>\r\n<ul>\r\n<li>tastaturrekkefølge og visuell rekkefølge er lik eller</li>\r\n<li>tastaturrekkefølge og visuell rekkefølge er ulik, men det er likevel mulig å forstå og bruke innholdet</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
