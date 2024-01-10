@@ -8,26 +8,6 @@
 	"kravTilSamsvar": "<p>Informasjon om lenkemålet for et lenket bilde går frem av ett av følgende alternativer:</p>\r\n<ul>\r\n<li>Lenketeksten til bildet</li>\r\n<li>Tekstalternativet til bildet</li>\r\n<li>Lenketeksten kombinert med tekstalternativet til bildet</li>\r\n<li>Tittel-attributtet til bildet</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
@@ -109,7 +89,7 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Hvilket tekstalternativ tester du?",
+			"spm": "Hva er det lenkede bildet sitt tilgjengelig navn?",
 			"ht": "<p>Registrer det tilgjengelige navnet du fant i forrige steg.</p>\n<p>Kopier innholdet i attributtet \"Name\" under Computed Properties i Accessibility Tree.</p>",
 			"type": "tekst",
 			"label": "Tekstalternativ:",
