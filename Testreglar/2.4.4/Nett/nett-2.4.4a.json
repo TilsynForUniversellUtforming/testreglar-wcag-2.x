@@ -8,26 +8,6 @@
 	"kravTilSamsvar": "<p>Lenker som inneholder tekst oppfyller kravet dersom:</p>\r\n<ul>\r\n<li>Lenketeksten alene beskriver formålet med lenken eller</li>\r\n<li>Lenketeksten sammen med programmeringsmessig bestemt lenkekontekst beskriver formålet med lenken. For programmatisk bestemt lenkekontekst vurderes tekst som står i\r\n<ul>\r\n<li>samme avsnitt, liste eller celle i en tabell som lenken gjør eller tilsvarende eller</li>\r\n<li>en tabelloverskrift som er knyttet til tabellcellen som lenken står i eller tilsvarende</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
