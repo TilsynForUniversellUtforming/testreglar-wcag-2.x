@@ -8,26 +8,6 @@
 	"kravTilSamsvar": "<ul>\r\n<li>Dersom endring av innstillinger i brukergrensesnittkomponenter fører til automatisk kontekstendring, informeres brukeren på forhånd og</li>\r\n<li>Informasjonen er plassert i tråd med ett av følgende alternativer:\r\n<ul>\r\n<li>På starten av siden med komponenten eller</li>\r\n<li>På samme steg i prosessen som inneholder komponenten eller</li>\r\n<li>Rett før den aktuelle komponenten i leserekkefølgen</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
