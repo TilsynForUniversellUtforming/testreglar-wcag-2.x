@@ -1,0 +1,98 @@
+{
+	"namn": "Nett-2.4.2a Nettsida har beskrivande sidetittel 2023",
+	"id": "nett-2.4.2a",
+	"testlabId": 472,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<ul>\r\n<li>Sidetittelen er korrekt kodet i det oppmerkingsspråket som er brukt og</li>\r\n<li>Sidetittelen gir en relevant beskrivelse av sidens tema eller formål</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "Side",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Har nettsida ein sidetittel?",
+			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Sjekk i koden (inspiser) om sidetittelen står i <code>&lt;title&gt;</code>-elementet, som er nøsta i <code>&lt;head&gt;</code>-elementet på starten av HTML-koden.</li>\n</ul>\n<p><strong>Merk:</strong> <code>&lt;title&gt;</code>-elementet ikkje er det same som title-attributt. <code>&lt;title&gt;</code>-elementet er obligatorisk og finst berre ei gong per nettside.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"H25"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Nettsida har ikkje sidetittel."
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Kva sidetittel testar du?",
+			"ht": "<p>Kopier sidetittel og registrer.</p>\n<p><strong>Merk:</strong> Sidetittel ikkje er det same som hovudoverskrift på sida.</p>",
+			"type": "tekst",
+			"label": "Sidetittel:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Gi ein kort beskrivelse av emne eller formål med innhaldet på nettsida.",
+			"ht": "<p>Beskriv innhaldet på nettsida med få ord.</p>",
+			"type": "tekst",
+			"label": "Emne eller formål med innhaldet:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Gir sidetittelen ein relevant beskrivelse av emnet eller formålet med nettsida?",
+			"ht": "<p>Sidetittelen skal vere relevant for emne eller formål med sida. Namnet på sida/dokumentet er nok til å gi ein beskrivande sidetittel, men det er ikkje noko krav om å bruke namnet på sida/dokumentet.</p>\n<p>Eksempel på sidetitlar som ikkje er beskrivande:</p>\n<ul>\n<li>Skriv inn navnet på HTML-dokumentet her</li>\n<li>Dokument uten tittel</li>\n<li>Ingen tittel</li>\n<li>Filnavn som ikkje er beskrivende aleine, for eksempel Rapport.html</li>\n<li>Nettsida har sidetittel Forstå suksesskriterium 2.4.3 Fokus rekkefølge, men innhaldet på sida er forstå suksesskriterium 2.4.4 Formål med lenke(i kontekst)</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [
+				"F25",
+				"G88"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Sidetittel er beskrivande for innhaldet på nettsida."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Sidetittel er ikkje beskrivande for innhaldet på nettsida."
+				}
+			}
+		}
+	]
+}
