@@ -222,7 +222,12 @@
 				},
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.13"
+					"steg": "3.13",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "Tabell er koda slik at alle dataceller er korrekt kopla til overskriftceller.",
+						"fasit": "Ja"
+					}
 				}
 			}
 		},
