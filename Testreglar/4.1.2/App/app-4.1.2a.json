@@ -8,38 +8,6 @@
 	"kravTilSamsvar": "<p>Navn og rolle:</p>\r\n<ul>\r\n<li>Alle brukergrensesnittkomponenter har et tilgjengelig navn, som beskriver formålet med den aktuelle komponenten og</li>\r\n<li>Alle brukergrensesnittkomponenter har riktig rolle, som identifiserer funksjonen til den aktuelle komponenten og</li>\r\n<li>Brukergrensesnittkomponenter som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen</li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>Når tilstander, egenskaper og verdier i brukergrensesnittkomponenter kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>Varsel om endringer i den aktuelle komponenten er tilgjengelig for brukeragenter </li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

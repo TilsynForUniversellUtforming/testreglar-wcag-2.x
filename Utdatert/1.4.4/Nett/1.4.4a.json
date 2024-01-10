@@ -8,53 +8,6 @@
 	"kravTilSamsvar": "<p>All tekst kan forstørrast opp til minst 200 % visning utan tap av innhald eller funksjonalitet.</p>",
 	"side": "2.1",
 	"element": "Side",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "3.1"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.9"
-		},
-		{
-			"title": "3.10"
-		},
-		{
-			"title": "3.11"
-		},
-		{
-			"title": "3.12"
-		},
-		{
-			"title": "3.14"
-		},
-		{
-			"title": "3.16"
-		},
-		{
-			"title": "3.17"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

@@ -8,29 +8,6 @@
 	"kravTilSamsvar": "<p>Kravet kan oppfylles på flere måter.</p>\r\n<ul>\r\n<li>\r\n<p>Lenker i løpende tekst oppfyller et av alternativer under:</p>\r\n<ul>\r\n<li>\r\n<p>Lenker markerte med farge, skiller seg ut fra nærliggende ikke-lenket tekst med mer enn bare farge.</p>\r\n<ul>\r\n<li>\r\n<p>Eksempel på visuelle kjennetegn er endring i skrifttype, skriftgruppe, skriftstørrelse, understreking, uthevet skrift, ramme eller ikon.</p>\r\n</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p>Lenker markerte med bare farge har kontrast på minst 3:1, mot nærliggende ikke lenket tekst og får synlig markering i tillegg til farge ved mouseover og tastaturfokus</p>\r\n<ul>\r\n<li>\r\n<p>Endring av muspekeren og standard fokusmarkering er ikke tilstrekkelig markering</p>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

@@ -1,218 +1,192 @@
 {
-    "namn": "3.3.1b Skjema gir feilmelding viss feil inndata blir oppdaga automatisk",
-    "id": "3.3.1b",
-    "testlabId": 217,
-    "versjon": "1.0",
-    "type": "Nett",
-    "spraak": "nn",
-    "kravTilSamsvar": "<p>For alle skjemaelement der inndatafeil blir oppdaga automatisk, er følgande oppfylt:</p>\r\n<ul>\r\n<li>Brukaren får ei tekstleg feilmelding</li>\r\n<li>Feilmeldinga er koda som tekst</li>\r\n<li>Feilmeldinga identifiserer skjemaelementet der feilen oppstod</li>\r\n<li>Feilmeldinga beskriv feilen</li>\r\n</ul>\r\n<p>Med unntak for skjemaelement med sensitivt innhald, ligg informasjonen som er fylt inn framleis i skjemaelementet.</p>",
-    "side": "2.1",
-    "element": "3.1",
-    "kolonner": [
-        {
-            "title": "2.2"
-        },
-        {
-            "title": "2.3"
-        },
-        {
-            "title": "2.4"
-        },
-        {
-            "title": "3.2"
-        },
-        {
-            "title": "3.3"
-        },
-        {
-            "title": "3.4"
-        },
-        {
-            "title": "3.5"
-        },
-        {
-            "title": "3.6"
-        }
-    ],
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Kva side testar du på?",
-            "ht": "Oppgi URL eller side-ID.",
-            "type": "tekst",
-            "label": "URL/Side:",
-            "datalist": "Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Har nettsida digitale/interaktive skjema/skjemaelement?",
-            "ht": "<strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt. ",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.3"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Testside har ikkje skjema."
-                }
-            }
-        },
-        {
-            "stegnr": "2.3",
-            "spm": "Beskriv skjemaet/prosessen.",
-            "ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
-            "type": "tekst",
-            "label": "Skjema/prosess:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.4"
-                }
-            }
-        },
-        {
-            "stegnr": "2.4",
-            "spm": "Får du sende inn eit skjema der du har fyllt inn data i feil format eller verdi?",
-            "ht": "<p>Legg inn feil inndata i alle skjemaelement. Fullfør eller send inn skjemaet.</p><p>Eksempel på datafeil er:</p><ul><li>Postnummer som inneheld bokstavar.</li><li>Namn som inneheld tal eller spesialteikn.</li><li>Ugyldig e-postformat.</li><li>Ugyldig datoformat.</li><li>Data utanfor grenseverdi, for eksempel månad 14 i ein dato.</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Skjema uten automatisk oppdaging av feil.",
-                    "element": "2.3"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Beskriv skjemaelementet med feilmelding som skal vurderast.",
-            "ht": "<p>Du skal registrere og legge til data for kvart skjemaelementet med feilmelding som følger av feil format.</p><p>Beskriv skjemaelementet kortfatta eller med stikkord.</p>",
-            "type": "tekst",
-            "label": "Skjemaelement:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            }
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Er informasjonen du har fylt inn fortsatt i skjemaelementet?",
-            "ht": "<p>Sensitiv informasjon treng ikkje å fortsatt ligge i skjemaet etter innsendt skjema.</p><p>Det er OK at inndata blir korrigert automatisk.</p>",
-            "type": "jaNei",
-            "kilde": [
-                "G84",
-                "G85"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "I skjemaelement der feil utfylling vert oppdaga automatisk, forsvinn inndata når feil vert oppdaga."
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Får du ei tekstleg feilmelding?",
-            "ht": "<p>Meldinga kan visast for eksempel 1) i eit modalvindauge, 2) i ledeteksten til skjemaelementa, 3) eller ein eller annan stad i skjemaet/sida, for eksempel på toppen.</p>\n<p>Merk: Feilmeldinga må vere synleg utan at brukaren må gjere ekstra handlingar, som for eksempel å navigere til skjemaelementet.</p>\n<p>Det er ikkje nok å identifisere feilen med for eksempel berre eit symbol i ledeteksten, berre med å endre farge eller berre visuell plassering av feilmeldinga.</p>",
-            "type": "jaNei",
-            "kilde": [
-                "G84",
-                "G85"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.4"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelement der feil utfylling vert oppdaga automatisk, gir ikkje tekstleg feilmelding."
-                }
-            }
-        },
-        {
-            "stegnr": "3.4",
-            "spm": "Er feilmeldinga koda som tekst?",
-            "ht": "<p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Opne kodeverktøyet i nettlesaren.</li><li>Bruk \"select\" funksjonen i verktøyet og marker teksten.</li><li>Sjekk at teksten er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul><p>Alternativ 3:</p><ul><li>Dersom skjemaelementet har attributtet \"required\" eller aria-required=\"true\", kjem det fram ei melding i nettlesaren. Denne meldinga er koda som tekst.</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.5"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje er koda som tekst."
-                }
-            }
-        },
-        {
-            "stegnr": "3.5",
-            "spm": "Inneheld feilmeldinga tekst som identifiserer kvar feilen har oppstått?",
-            "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt.",
-            "type": "jaNei",
-            "kilde": [
-                "G83"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.6"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje identifiserer kvar feilen er oppstått."
-                }
-            }
-        },
-        {
-            "stegnr": "3.6",
-            "spm": "Inneheld feilmeldinga tekst som beskriv feilen?",
-            "ht": "Feilmeldinga gir informasjon om kva feilen består i, slik at brukaren kan finne ut kva som har gått feil, for eksempel \"Fornavn må fyllast ut\". Det er ikkje krav om at feilmeldinga skal innehalde forslag til korleis feil skal rettast. Dette er omfatta av suksesskriterium 3.3.3.",
-            "type": "jaNei",
-            "kilde": [
-                "G84",
-                "G85"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som:<br>- tekstleg beskriv feilen <br>- identifiserer kvar feilen er oppstått <br>- er koda som tekst"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje beskriv feilen."
-                }
-            }
-        }
-    ]
+	"namn": "3.3.1b Skjema gir feilmelding viss feil inndata blir oppdaga automatisk",
+	"id": "3.3.1b",
+	"testlabId": 217,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>For alle skjemaelement der inndatafeil blir oppdaga automatisk, er følgande oppfylt:</p>\r\n<ul>\r\n<li>Brukaren får ei tekstleg feilmelding</li>\r\n<li>Feilmeldinga er koda som tekst</li>\r\n<li>Feilmeldinga identifiserer skjemaelementet der feilen oppstod</li>\r\n<li>Feilmeldinga beskriv feilen</li>\r\n</ul>\r\n<p>Med unntak for skjemaelement med sensitivt innhald, ligg informasjonen som er fylt inn framleis i skjemaelementet.</p>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi URL eller side-ID.",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettsida digitale/interaktive skjema/skjemaelement?",
+			"ht": "<strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt. ",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje skjema."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Beskriv skjemaet/prosessen.",
+			"ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
+			"type": "tekst",
+			"label": "Skjema/prosess:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Får du sende inn eit skjema der du har fyllt inn data i feil format eller verdi?",
+			"ht": "<p>Legg inn feil inndata i alle skjemaelement. Fullfør eller send inn skjemaet.</p><p>Eksempel på datafeil er:</p><ul><li>Postnummer som inneheld bokstavar.</li><li>Namn som inneheld tal eller spesialteikn.</li><li>Ugyldig e-postformat.</li><li>Ugyldig datoformat.</li><li>Data utanfor grenseverdi, for eksempel månad 14 i ein dato.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Skjema uten automatisk oppdaging av feil.",
+					"element": "2.3"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv skjemaelementet med feilmelding som skal vurderast.",
+			"ht": "<p>Du skal registrere og legge til data for kvart skjemaelementet med feilmelding som følger av feil format.</p><p>Beskriv skjemaelementet kortfatta eller med stikkord.</p>",
+			"type": "tekst",
+			"label": "Skjemaelement:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er informasjonen du har fylt inn fortsatt i skjemaelementet?",
+			"ht": "<p>Sensitiv informasjon treng ikkje å fortsatt ligge i skjemaet etter innsendt skjema.</p><p>Det er OK at inndata blir korrigert automatisk.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G84",
+				"G85"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "I skjemaelement der feil utfylling vert oppdaga automatisk, forsvinn inndata når feil vert oppdaga."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Får du ei tekstleg feilmelding?",
+			"ht": "<p>Meldinga kan visast for eksempel 1) i eit modalvindauge, 2) i ledeteksten til skjemaelementa, 3) eller ein eller annan stad i skjemaet/sida, for eksempel på toppen.</p>\n<p>Merk: Feilmeldinga må vere synleg utan at brukaren må gjere ekstra handlingar, som for eksempel å navigere til skjemaelementet.</p>\n<p>Det er ikkje nok å identifisere feilen med for eksempel berre eit symbol i ledeteksten, berre med å endre farge eller berre visuell plassering av feilmeldinga.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G84",
+				"G85"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelement der feil utfylling vert oppdaga automatisk, gir ikkje tekstleg feilmelding."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er feilmeldinga koda som tekst?",
+			"ht": "<p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Opne kodeverktøyet i nettlesaren.</li><li>Bruk \"select\" funksjonen i verktøyet og marker teksten.</li><li>Sjekk at teksten er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul><p>Alternativ 3:</p><ul><li>Dersom skjemaelementet har attributtet \"required\" eller aria-required=\"true\", kjem det fram ei melding i nettlesaren. Denne meldinga er koda som tekst.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje er koda som tekst."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Inneheld feilmeldinga tekst som identifiserer kvar feilen har oppstått?",
+			"ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt.",
+			"type": "jaNei",
+			"kilde": [
+				"G83"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje identifiserer kvar feilen er oppstått."
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Inneheld feilmeldinga tekst som beskriv feilen?",
+			"ht": "Feilmeldinga gir informasjon om kva feilen består i, slik at brukaren kan finne ut kva som har gått feil, for eksempel \"Fornavn må fyllast ut\". Det er ikkje krav om at feilmeldinga skal innehalde forslag til korleis feil skal rettast. Dette er omfatta av suksesskriterium 3.3.3.",
+			"type": "jaNei",
+			"kilde": [
+				"G84",
+				"G85"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som:<br>- tekstleg beskriv feilen <br>- identifiserer kvar feilen er oppstått <br>- er koda som tekst"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje beskriv feilen."
+				}
+			}
+		}
+	]
 }

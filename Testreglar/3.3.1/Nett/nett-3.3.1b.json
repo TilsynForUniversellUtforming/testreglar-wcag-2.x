@@ -8,32 +8,6 @@
 	"kravTilSamsvar": "<p>For skjemaelementer der inndatafeil blir oppdaget automatisk, er følgende punkter oppfylt:</p>\r\n<ul>\r\n<li>Skjemaelementet der feilen oppstod identifiseres og</li>\r\n<li>Brukeren får en presis tekstlig beskrivelse av feilen</li>\r\n<li>Feilmeldingen er kodet som tekst og</li>\r\n<li>Informasjonen blir liggende i skjemaet, med mindre informasjonen er knyttet til personvern eller sikkerhet</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

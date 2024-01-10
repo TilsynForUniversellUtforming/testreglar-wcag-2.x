@@ -1,0 +1,91 @@
+{
+	"namn": "App-1.4.4a Tekst kan forstørrast til minst 200% uten tap av innhold og funksjonalitet 2023",
+	"id": "app-1.4.4a",
+	"testlabId": 452,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>All tekst kan forstørres opp til minst 200 % visning uten at innhold eller funksjonalitet går tapt.</p>",
+	"side": "2.1",
+	"element": "Side",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva appside testar du?",
+			"ht": "<p>Oppgi appside-ID</p>",
+			"type": "tekst",
+			"label": "Skjermbilde:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsida tekst?",
+			"ht": "<p> Tekst som i følgje kravet er unntatt:</p>\n<ul>\n<li>Teksting i video</li>\n<li>Bilde av tekst</li>\n</ul>\n<p><strong>Merk</strong>: Du skal ikkje teste vidare i appar utan tekst. </p>\n<p><strong>Merk:</strong> For appar verifiserer vi ikkje om det finst mekanisme for forstørring på appsida.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appsida har ikkje tekst."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Aktiver funksjon for forstørra tekst på enheten",
+			"ht": "<p><strong>iOS</strong><br>Innstillinger &gt;Skjerm og lysstyrke &gt;Tekststørrelse &gt;Dra glidebryter til maksimal skriftstørrelse</p>\n<p><strong>Android</strong><br>Innstillinger &gt;Tilgjengelighet &gt;Synlighetsforbedringer &gt;Skriftstørrelse og -stil &gt;Dra glidebryter til maksimal  skriftstørrelse</p>\n<p><strong>Merk: </strong>Ved å sette på maksimal skriftstørrelse på enheten legg vi til grunn at forstørring er ca 200%, og at dette er godkjent.</p>",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Har appsida same tekstlege innhald og funksjonalitet i 200 % visning, som i 100 % visning?",
+			"ht": "<p><strong>Tips: </strong>Du kan sammenligne ved å skru innstillingene i forrige steg av og på.</p>\n<ul>\n<li>det er ok om du får tilgang til innhald/funksjonalitet ved å scrolle</li>\n<li>plassering av element på appsida treng ikkje vera likt</li>\n<li>trunkering er ok, så lenge du får tilgang til alt innhald eller funksjonalitet når innhaldet får fokus eller ved aktivering, for eksempel via hamburger-meny.</li>\n</ul>\n<p>Eksempel på at innhald eller funksjonalitet går tapt: </p>\n<ul>\n<li>tekst blir kutta av eller skjult</li>\n<li>tekst legg seg over annan tekst</li>\n<li>tekst ligg utanfor presentasjonsramma, og det er ikkje mogleg å scrolle for å få tak i innhaldet</li>\n<li>du får ikkje tilgang til ledetekstar, verktøytips eller skjemaelement</li>\n<li>du får ikkje tilgang til tekst eller funksjonalitet som er trunkert, når innhaldet får fokus eller blir aktivert </li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Tekst på appsida kan forstørrast til minst 200 %, utan tap av innhald eller funksjonalitet."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "2.5"
+				}
+			},
+			"kilde": [
+				"G146"
+			]
+		},
+		{
+			"stegnr": "2.5",
+			"spm": "Kva innhald og/eller funksjonalitet fekk du ikkje tilgang til?",
+			"ht": "<p>Beskriv innhaldet eller funksjonaliteten. Viss det gjeld fleire element eller funksjonalitet, registrerer du eit og eit.</p>",
+			"type": "tekst",
+			"label": "Registrer med stikkord",
+			"ruting": {
+				"alle": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Tekst på appsida blir ikkje forstørra til minst 200 %, utan tap av innhald eller funksjonalitet."
+				}
+			},
+			"multilinje": true
+		}
+	]
+}

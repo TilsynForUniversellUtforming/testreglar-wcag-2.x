@@ -8,23 +8,6 @@
 	"kravTilSamsvar": "<p>Skjemaelement, instruksjonar og feilmeldingar som brukar farge til å</p>\r\n<ul>\r\n<li>formidle informasjon</li>\r\n<li>vise ei handling</li>\r\n<li>be om respons</li>\r\n<li>eller skilje ut eit visuelt element</li>\r\n</ul>\r\n<p>er merka med meir enn berre farge. Merkinga må vere visuell.</p>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.5"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

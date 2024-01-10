@@ -8,23 +8,6 @@
 	"kravTilSamsvar": "<p>Der skjemaelement, instruksjoner eller feilmeldinger bruker farge for å</p>\r\n<ul>\r\n<li>formidle informasjon</li>\r\n<li>vise en handling</li>\r\n<li>be om respons</li>\r\n<li>skille ut et visuelt element</li>\r\n</ul>\r\n<p>er de merket med mer enn bare fagre, og markeringen er visuell. </p>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

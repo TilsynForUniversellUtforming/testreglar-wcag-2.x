@@ -8,23 +8,6 @@
 	"kravTilSamsvar": "<p>Innhald kan presenterast uten tap av informasjon eller funksjonalitet og uten at brukaren må rulle i to dimensjoner ved:</p>\r\n<ul>\r\n<li>innhald som rullar loddrett med ei bredde som tilsvarar 320 CSS-piksler</li>\r\n<li>innhald som rullar vassrett med ei høgde som tilsvarar 256 CSS-piksler</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.5",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",

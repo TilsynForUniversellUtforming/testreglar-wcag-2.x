@@ -1,172 +1,152 @@
 {
-    "namn": "App 3.3.1a Feilmelding til tomme obligatoriske skjemaelement",
-    "id": "app-3.3.1a-2022",
-    "testlabId": 262,
-    "versjon": "1.0",
-    "type": "App",
-    "spraak": "nn",
-    "kravTilSamsvar": "<p>Dersom det blir oppdaga automatisk at obligatoriske skjemaelement ikkje er fylt ut, gjeld følgande:</p>\r\n<ul>\r\n<li>Brukaren får ei tekstleg feilmelding\r\n<ul>\r\n<li>Feilmeldinga blir lest opp med skjermlesar</li>\r\n<li>Feilmeldinga identifiserer skjemaelementet der feilen oppstod</li>\r\n<li>Feilmeldinga beskriv feilen</li>\r\n</ul>\r\n</li>\r\n</ul>",
-    "side": "2.1",
-    "element": "3.1",
-    "kolonner": [
-        {
-            "title": "2.2"
-        },
-        {
-            "title": "2.3"
-        },
-        {
-            "title": "2.4"
-        },
-        {
-            "title": "3.2"
-        },
-        {
-            "title": "3.3"
-        },
-        {
-            "title": "3.5"
-        }
-    ],
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Kva skjermbilde testar du på?",
-            "ht": "Beskriv skjermbildet med få stikkord, eller velg i lista.",
-            "type": "tekst",
-            "label": "Skjermbilde:",
-            "datalist": "Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Har skjermbilde skjemaelement?",
-            "ht": "Sjekk om det finst skjemaelement i skjermbilde.",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.3"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Skjermbilde har ikkje skjemaelement."
-                }
-            }
-        },
-        {
-            "stegnr": "2.3",
-            "spm": "Beskriv skjemaet som skal vurderast",
-            "ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
-            "type": "tekst",
-            "label": "Skjema/prosess:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.4"
-                }
-            }
-        },
-        {
-            "stegnr": "2.4",
-            "spm": "Er det mogleg å sende inn skjemaet utan å fylle ut noko?",
-            "ht": "Ikkje fyll ut noko i skjemaet (ha eit tomt skjema). Fullfør eller send inn skjemaet.",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Skjema uten automatisk oppdaging av feil.",
-                    "element": "2.3"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Beskriv skjemaelementet som skal vurderast.",
-            "ht": "Beskriv skjemaelementet du skal teste. Dersom det finst skjemaelement i skjembilde må du registrere dei kvar for seg.",
-            "type": "tekst",
-            "label": "Skjemaelement:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            }
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Blir feilmeldinga lest opp med skjermlesar?",
-            "ht": "<p>Aktiver skjermlesar (opplesingsfunksjon). Trykk på feilmeldinga. Blir feilmeldinga lest opp med skjermlesaren?</p>",
-            "type": "jaNei",
-            "kilde": [
-                "G83"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje blir lest opp med skjermlesar."
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Inneheld feilmeldinga tekst som identifiserer kvar feilen har oppstått?",
-            "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt.",
-            "type": "jaNei",
-            "kilde": [
-                "G83"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.5"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje identifiserer kvar feilen er oppstått."
-                }
-            }
-        },
-        {
-            "stegnr": "3.5",
-            "spm": "Inneheld feilmeldinga tekst som beskriv feilen?",
-            "ht": "Feilmeldinga gir informasjon om kva feilen består i, slik at brukaren kan finne ut kva som har gått feil, for eksempel \"Fornavn må fyllast ut\". Det er ikkje krav om at feilmeldinga skal innehalde forslag til korleis feil skal rettast. Dette er omfatta av suksesskriterium 3.3.3.",
-            "type": "jaNei",
-            "kilde": [
-                "G83"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som:<br/>- tekstleg beskriv feilen<br/>- identifiserer kvar feilen er oppstått<br/>- blir lest opp med skjermlesar"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje beskriv feilen."
-                }
-            }
-        }
-    ]
+	"namn": "App 3.3.1a Feilmelding til tomme obligatoriske skjemaelement",
+	"id": "app-3.3.1a-2022",
+	"testlabId": 262,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Dersom det blir oppdaga automatisk at obligatoriske skjemaelement ikkje er fylt ut, gjeld følgande:</p>\r\n<ul>\r\n<li>Brukaren får ei tekstleg feilmelding\r\n<ul>\r\n<li>Feilmeldinga blir lest opp med skjermlesar</li>\r\n<li>Feilmeldinga identifiserer skjemaelementet der feilen oppstod</li>\r\n<li>Feilmeldinga beskriv feilen</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva skjermbilde testar du på?",
+			"ht": "Beskriv skjermbildet med få stikkord, eller velg i lista.",
+			"type": "tekst",
+			"label": "Skjermbilde:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har skjermbilde skjemaelement?",
+			"ht": "Sjekk om det finst skjemaelement i skjermbilde.",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Skjermbilde har ikkje skjemaelement."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Beskriv skjemaet som skal vurderast",
+			"ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
+			"type": "tekst",
+			"label": "Skjema/prosess:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Er det mogleg å sende inn skjemaet utan å fylle ut noko?",
+			"ht": "Ikkje fyll ut noko i skjemaet (ha eit tomt skjema). Fullfør eller send inn skjemaet.",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Skjema uten automatisk oppdaging av feil.",
+					"element": "2.3"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv skjemaelementet som skal vurderast.",
+			"ht": "Beskriv skjemaelementet du skal teste. Dersom det finst skjemaelement i skjembilde må du registrere dei kvar for seg.",
+			"type": "tekst",
+			"label": "Skjemaelement:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Blir feilmeldinga lest opp med skjermlesar?",
+			"ht": "<p>Aktiver skjermlesar (opplesingsfunksjon). Trykk på feilmeldinga. Blir feilmeldinga lest opp med skjermlesaren?</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G83"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje blir lest opp med skjermlesar."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Inneheld feilmeldinga tekst som identifiserer kvar feilen har oppstått?",
+			"ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt.",
+			"type": "jaNei",
+			"kilde": [
+				"G83"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje identifiserer kvar feilen er oppstått."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Inneheld feilmeldinga tekst som beskriv feilen?",
+			"ht": "Feilmeldinga gir informasjon om kva feilen består i, slik at brukaren kan finne ut kva som har gått feil, for eksempel \"Fornavn må fyllast ut\". Det er ikkje krav om at feilmeldinga skal innehalde forslag til korleis feil skal rettast. Dette er omfatta av suksesskriterium 3.3.3.",
+			"type": "jaNei",
+			"kilde": [
+				"G83"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som:<br/>- tekstleg beskriv feilen<br/>- identifiserer kvar feilen er oppstått<br/>- blir lest opp med skjermlesar"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Obligatoriske skjemaelement der feil utfylling vert oppdaga automatisk, gir feilmelding som ikkje beskriv feilen."
+				}
+			}
+		}
+	]
 }
