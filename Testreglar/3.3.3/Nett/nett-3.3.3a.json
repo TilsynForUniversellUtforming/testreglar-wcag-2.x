@@ -1,5 +1,5 @@
 {
-	"namn": "Nett-3.3.3a Skjema gir forslag til retting, hvis inndatafeil blir oppdaget automatisk 2023 ",
+	"namn": "Nett-3.3.3a Skjema gir forslag til retting, hvis inndatafeil blir oppdaget automatisk 2023",
 	"id": "nett-3.3.3a",
 	"testlabId": 477,
 	"versjon": "1.0",
@@ -8,32 +8,6 @@
 	"kravTilSamsvar": "<p>For inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting får brukeren</p>\r\n<ul>\r\n<li>et forslag med informasjon om hvordan feil kan rettes og</li>\r\n<li>forslaget er kodet som tekst og</li>\r\n<li>det er enkelt for brukeren å navigere til feilen og</li>\r\n<li>inndata blir liggende i inndataelementet, med mindre informasjonen er knyttet til personvern eller sikkerhet</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
@@ -158,7 +132,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er forlaget til retting kodet som tekst?",
-			"ht": "<p>Dette kan du sjekke på flere måter:</p>\n<p>Alternativ 1:</p>\n<ul>\n<li>Prøv å markere teksten med mus eller tastatur. Dette indikerer at testen er kodet som tekst, og ikke er et bilde av tekst.</li>\n</ul>\n<p>Alternativ 2:</p>\n<ul>\n<li>Åpne kodeverktøyet i nettleseren.</li>\n<li>Bruk \"select\" funksjonen i verktøyet og marker teksten.</li>\n<li>Sjekk at teksten er kodet som tekst, ved å se om du finner igjen teksten i koden.</li>\n</ul>\n<p>Alternativ 3:</p>\n<ul>\n<li>Dersom skjemaelementet har attributtet \"required\" eller aria-required=\"true\", kommer det fram en melding i nettleseren. Denne meldingen er kodet som tekst.</li>\n</ul>",
+			"ht": "<p>Dette kan du sjekke på flere måter:</p>\n<p><strong>Alternativ 1:</strong></p>\n<ul>\n<li>Prøv å markere teksten med mus eller tastatur. Dette indikerer at testen er kodet som tekst, og ikke er et bilde av tekst.</li>\n</ul>\n<p><strong>Alternativ 2:</strong></p>\n<ul>\n<li>Åpne kodeverktøyet i nettleseren.</li>\n<li>Bruk \"select\" funksjonen i verktøyet og marker teksten.</li>\n<li>Sjekk at teksten er kodet som tekst, ved å se om du finner igjen teksten i koden.</li>\n</ul>\n<p><strong>Merk:</strong> Dersom skjemaelementet har attributtet \"required\" eller aria-required=\"true\", kommer det fram en melding i nettleseren. Denne meldingen er kodet som tekst.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -195,7 +169,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Finnes det kjente forslag til hvordan inndatafeilen kan rettes?",
-			"ht": "<p>Kjente forslag er for eksempel</p>\n<ul>\n<li>forslag om rett stavemåte</li>\n<li>forslag om tilsvarende tekst eller begrep</li>\n<li>beskrivelse av hva som er rett inndata</li>\n<li>liste med hva som er rett inndata</li>\n<li>spørsmål på formen «mente du …?» eller tilsvarende</li>\n</ul>\n<p>Det finnes for eksempel kjente forslag for følgende</p>\n<ul>\n<li>e-post, postnummer, fødselsdato, telefonnummer osv</li>\n</ul>\n<p>Det er ikke nødvendig å gi forslag til retting av feil dersom</p>\n<ul>\n<li>det gjelder skjemaelement knyttet til sikkerhet, for eksempel passord</li>\n<li>forslag til retting undergarver formålet, for eksempel svar i en quiz</li>\n</ul>",
+			"ht": "<p>Kjente forslag er for eksempel</p>\n<ul>\n<li>forslag om rett stavemåte</li>\n<li>forslag om tilsvarende tekst eller begrep</li>\n<li>beskrivelse av hva som er rett inndata</li>\n<li>liste med hva som er rett inndata</li>\n<li>spørsmål på formen «mente du …?» eller tilsvarende</li>\n</ul>\n<p>Det finnes for eksempel kjente forslag for følgende</p>\n<ul>\n<li>e-post, postnummer, fødselsdato, telefonnummer osv</li>\n</ul>\n<p>Det er ikke nødvendig å gi forslag til retting av feil dersom</p>\n<ul>\n<li>det gjelder skjemaelement knyttet til sikkerhet, for eksempel passord</li>\n<li>forslag til retting undergraver formålet, for eksempel svar i en quiz</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
