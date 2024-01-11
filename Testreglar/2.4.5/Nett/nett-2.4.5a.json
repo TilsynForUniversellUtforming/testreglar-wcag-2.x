@@ -8,44 +8,6 @@
 	"kravTilSamsvar": "<p>Det er minst to måter å finne og navigere til innhold innenfor et sett av nettsider og brukeren kan finne og nå det aktuelle innholdet.</p>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "2.5"
-		},
-		{
-			"title": "2.6"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		},
-		{
-			"title": "3.8"
-		},
-		{
-			"title": "3.9"
-		},
-		{
-			"title": "3.10"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
@@ -250,7 +212,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Prøv å finne aktuell testside ved å navigere i meny eller lenkesamling.",
-			"ht": "",
+			"ht": "<p>Gjer ein visuell inspeksjon og gå gjennom meny eller lenkesamling for å sjå om du finn igjen aktuell testside.</p>",
 			"type": "instruksjon",
 			"kilde": [
 				"G125",
@@ -266,7 +228,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Kjem du til forventa side ved å navigere i meny eller lenkesamling?",
-			"ht": "",
+			"ht": "<p>Opne testsida du fann i forrige steg og sjekk om du kjem til same side.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G125",
