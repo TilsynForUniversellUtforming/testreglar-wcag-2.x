@@ -69,7 +69,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Kva er hovudspråket på testsida?",
-			"ht": "<p>Vel namnet på språket som alt eller størsteparten av innhaldet på nettsida er skrive i. Dersom det er vanskeleg å avgjere kva språk som er mest brukt, reknast hovudspråket som det språket som er brukt først.</p>\n<p>Dersom språket ikkje finst i lista, vel du alternativet \"anna\" og går vidare.</p>",
+			"ht": "<p>Vel namnet på språket som alt eller størsteparten av innhaldet på nettsida er skrive på. Dersom det er vanskeleg å avgjere kva språk som er mest brukt, reknast hovudspråket som det språket som er brukt først.</p>\n<p>Dersom språket ikkje finst i lista, vel du alternativet \"anna\" og går vidare.</p>",
 			"type": "radio",
 			"ruting": {
 				"alle": {
@@ -90,7 +90,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Kva innhald/element har eit anna språk?",
-			"ht": "<p>Beskriv innhaldet er skrive på eit anna språk, enn hovedspråket, slik at det er mogleg å identifisere det i ettertid. Viss det gjeld fleire element, registrerer du eit og eit.</p>\n<p><strong>Merk:</strong> Følgjande innhald er unnateke kravet:</p>\n<ul>\n<li>eigennamn</li>\n<li>teknisk term</li>\n<li>ord av ubestemmelig språklig opphav</li>\n<li>ord eller uttrykk frå andre språk som er ein del av språket i den omkringliggande teksten.</li>\n</ul>",
+			"ht": "<p>Beskriv innhaldet som er skrive på eit anna språk, enn hovedspråket, slik at det er mogleg å identifisere det i ettertid. Viss det gjeld fleire element, registrerer du eit og eit.</p>\n<p><strong>Merk:</strong> Følgjande innhald er unnateke kravet:</p>\n<ul>\n<li>eigennamn</li>\n<li>teknisk term</li>\n<li>ord av ubestemmelig språklig opphav</li>\n<li>ord eller uttrykk frå andre språk som er ein del av språket i den omkringliggande teksten.</li>\n</ul>",
 			"type": "tekst",
 			"label": "Innhold som er skrive i eit anna språk:",
 			"multilinje": true,
@@ -158,7 +158,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Kva språk er innholdet skrive i?",
-			"ht": "<p>Vel namnet på språket som innholdet er skrive i.</p>\n<p>Dersom språket ikkje finst i lista, vel du alternativet \"anna\" og går vidare.</p>",
+			"ht": "<p>Vel namnet på språket som innholdet er skrive på.</p>\n<p>Dersom språket ikkje finst i lista, vel du alternativet \"anna\" og går vidare.</p>",
 			"type": "radio",
 			"svarArray": [
 				"Bokmål",
@@ -210,8 +210,8 @@
 		},
 		{
 			"stegnr": "3.7",
-			"spm": "Samsvarar språkkoden med språket som innhaldet er skrive i?",
-			"ht": "<p>Samanlikn språket i innholdet med språkkoden du fann i steg 3.4. </p>\n<p>Sjekk at språkkoden stemmer med språket i innhalkdet.</p>\n<p>Bruk av generell språkkode er tilstrekkeleg:</p>\n<ul>\n<li>no for både bokmål og nynorsk</li>\n<li>smi for både nordsamisk, sørsamisk og lulesamisk</li>\n<li>en for både britisk og amerikansk engelsk</li>\n</ul>\n<p>Bruk av for eksempel nynorsk språkkode på ei innhold med bokmål, er ikkje tilstrekkeleg, og omvendt</p>",
+			"spm": "Samsvarar språkkoden med språket som innhaldet er skrive på?",
+			"ht": "<p>Samanlikn språket på innhaldet med språkkoden du fann i steg 3.4. </p>\n<p>Sjekk at språkkoden stemmer med språket på innhalkdet.</p>\n<p>Bruk av generell språkkode er tilstrekkeleg:</p>\n<ul>\n<li>no for både bokmål og nynorsk</li>\n<li>smi for både nordsamisk, sørsamisk og lulesamisk</li>\n<li>en for både britisk og amerikansk engelsk</li>\n</ul>\n<p>Bruk av for eksempel nynorsk språkkode på ei innhold med bokmål, er ikkje tilstrekkeleg, og omvendt</p>",
 			"type": "jaNei",
 			"kilde": [
 				"H58"
