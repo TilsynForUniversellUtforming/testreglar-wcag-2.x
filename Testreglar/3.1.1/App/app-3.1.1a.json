@@ -93,12 +93,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Hovudspråket på appsiden er programmatisk bestemt."
+					"utfall": "Hovedspråket på appsiden er programmatisk bestemt."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Hovudspråket på appsiden er ikke programmatisk bestemt."
+					"utfall": "Hovedspråket på appsiden er ikke programmatisk bestemt."
 				}
 			}
 		}
