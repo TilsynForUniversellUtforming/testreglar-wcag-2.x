@@ -1,42 +1,13 @@
 {
-	"namn": "App-3.3.3a Skjema gir forslag til retting, hvis inndatafeil blir oppdaget automatisk 2023 ",
+	"namn": "App-3.3.3a Skjema gir forslag til retting, hvis inndatafeil blir oppdaget automatisk 2023",
 	"id": "app-3.3.3a",
 	"testlabId": 478,
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>For inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting får brukeren</p>\r\n<ul>\r\n<li>et forslag med informasjon om hvordan feil kan rettes og</li>\r\n<li>forslaget er kodet som tekst og</li>\r\n<li>det er enkelt for brukeren å navigere til feilen og</li>\r\n<li>inndata blir liggende i inndataelementet, med mindre informasjonen er</li>\r\n<li>knyttet til personvern eller sikkerhet</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting får brukeren</p>\r\n<ul>\r\n<li>et forslag med informasjon om hvordan feil kan rettes og</li>\r\n<li>forslaget er kodet som tekst og</li>\r\n<li>det er enkelt for brukeren å navigere til feilen og</li>\r\n<li>inndata blir liggende i inndataelementet, med mindre informasjonen er</li>\r\n<li>knyttet til sikkerhet</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.4"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "2.5"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
@@ -136,7 +107,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Blir informasjonen du har fylt ut liggende i skjemaelementet?",
-			"ht": "<p>Hovedregelen er at informasjon som er fylt ut skal bli liggende i skjemaet, selv om det blir oppdaget inndatafeil. Unntaket er dersom informasjonen er knyttet til personvern eller sikkerhet (sensitiv informasjon). </p>\n<p><strong>Merk:</strong> Det er ok at feil inndata blir korrigert automatisk.</p>",
+			"ht": "<p>Hovedregelen er at informasjon som er fylt ut skal bli liggende i skjemaet, selv om det blir oppdaget inndatafeil. Unntaket er dersom informasjonen er knyttet til sikkerhet. </p>\n<p><strong>Merk:</strong> Det er ok at feil inndata blir korrigert automatisk.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G83",
