@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>For inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting får brukeren</p>\r\n<ul>\r\n<li>et forslag med informasjon om hvordan feil kan rettes og</li>\r\n<li>forslaget er kodet som tekst og</li>\r\n<li>det er enkelt for brukeren å navigere til feilen og</li>\r\n<li>inndata blir liggende i inndataelementet, med mindre informasjonen er knyttet til personvern eller sikkerhet</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting får brukeren</p>\r\n<ul>\r\n<li>et forslag med informasjon om hvordan feil kan rettes og</li>\r\n<li>forslaget er kodet som tekst og</li>\r\n<li>det er enkelt for brukeren å navigere til feilen og</li>\r\n<li>inndata blir liggende i inndataelementet, med mindre informasjonen er knyttet til sikkerhet</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -90,7 +90,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Blir informasjonen du har fylt ut liggende i skjemaelementet?",
-			"ht": "<p>Hovedregelen er at informasjon som er fylt ut skal bli liggende i skjemaet, selv om det blir oppdaget inndatafeil. Unntaket er dersom informasjonen er knyttet til personvern eller sikkerhet (sensitiv informasjon). </p>\n<p><strong>Merk:</strong> Det er ok at feil inndata blir korrigert automatisk.</p>",
+			"ht": "<p>Hovedregelen er at informasjon som er fylt ut skal bli liggende i skjemaet, selv om det blir oppdaget inndatafeil. Unntaket er dersom informasjonen er knyttet til sikkerhet.</p>\n<p><strong>Merk:</strong> Det er ok at feil inndata blir korrigert automatisk.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G83",
