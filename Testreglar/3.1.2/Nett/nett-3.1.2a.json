@@ -8,32 +8,6 @@
 	"kravTilSamsvar": "<ul>\r\n<li>Deler av innhold som er på et annet språk enn hovedspråket på nettsiden har en gyldig språkkode i koden og</li>\r\n<li>Valgt språkkode samsvarer med språket som den aktuelle delen av innholdet er skrevet på.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
-	"kolonner": [
-		{
-			"title": "2.2"
-		},
-		{
-			"title": "2.3"
-		},
-		{
-			"title": "3.2"
-		},
-		{
-			"title": "3.3"
-		},
-		{
-			"title": "3.4"
-		},
-		{
-			"title": "3.5"
-		},
-		{
-			"title": "3.6"
-		},
-		{
-			"title": "3.7"
-		}
-	],
 	"steg": [
 		{
 			"stegnr": "2.1",
@@ -125,7 +99,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er språket på innhaldet koda med ein gyldig språkkode?",
-			"ht": "<p>Sjå på lang-attributtet. Språkkoden består av to bokstavar. Viss språkkoden har ein sekundær språkkode, for eksempel på formen no-nb, skal du berre sjå på koden som ligg før bindestreken.</p>\n<p>Eksempel på gyldige språkkodar er:</p>\n<ul>\n<li>norsk: no, nb, nn</li>\n<li>samisk: smi, se, sma, smj</li>\n<li>engelsk: en</li>\n</ul>\n<p>For andre språkkodar, sjå <a href=\"https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry\" target=\"_blank\" rel=\"noopener\">IANA (opnar i nytt vindauge)</a>.</p>",
+			"ht": "<p>Sjå på lang-attributtet. Språkkoden består av to bokstavar. Viss språkkoden har ein sekundær språkkode, for eksempel på formen <code>no-nb</code>, skal du berre sjå på koden som ligg før bindestreken.</p>\n<p>Eksempel på gyldige språkkodar er:</p>\n<ul>\n<li>norsk: <code>no, nb, nn</code></li>\n<li>samisk: <code>smi, se, sma, smj</code></li>\n<li>engelsk: <code>en</code></li>\n</ul>\n<p>For andre språkkodar, sjå <a href=\"https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry\" target=\"_blank\" rel=\"noopener\">IANA (opnar i nytt vindauge)</a>.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"H58"
@@ -145,7 +119,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Kva er språkkoden?",
-			"ht": "<p>Skriv inn språkkoden som ligg i lang-attributtet.</p>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Viss språkkoden har ein sekundær språkkode , for eksempel no-nb, skal du berre skrive inn koden som ligg før bindestreken.</li>\n<li>Bruk små bokstavar.</li>\n</ul>",
+			"ht": "<p>Skriv inn språkkoden som ligg i <code>lang</code>-attributtet.</p>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Viss språkkoden har ein sekundær språkkode , for eksempel <code>no-nb</code>, skal du berre skrive inn koden som ligg før bindestreken.</li>\n<li>Bruk små bokstavar.</li>\n</ul>",
 			"type": "tekst",
 			"label": "Språkkode:",
 			"ruting": {
@@ -211,7 +185,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Samsvarar språkkoden med språket som innhaldet er skrive på?",
-			"ht": "<p>Samanlikn språket på innhaldet med språkkoden du fann i steg 3.4. </p>\n<p>Sjekk at språkkoden stemmer med språket på innhaldet.</p>\n<p>Bruk av generell språkkode er tilstrekkeleg:</p>\n<ul>\n<li>no for både bokmål og nynorsk</li>\n<li>smi for både nordsamisk, sørsamisk og lulesamisk</li>\n<li>en for både britisk og amerikansk engelsk</li>\n</ul>\n<p>Bruk av for eksempel nynorsk språkkode på ei innhold med bokmål, er ikkje tilstrekkeleg, og omvendt</p>",
+			"ht": "<p>Samanlikn språket på innhaldet med språkkoden du fann i steg 3.4. </p>\n<p>Sjekk at språkkoden stemmer med språket på innhaldet.</p>\n<p>Bruk av generell språkkode er tilstrekkeleg:</p>\n<ul>\n<li><code>no</code> for både bokmål og nynorsk</li>\n<li><code>smi</code> for både nordsamisk, sørsamisk og lulesamisk</li>\n<li><code>en</code> for både britisk og amerikansk engelsk</li>\n</ul>\n<p>Bruk av for eksempel nynorsk språkkode på ei innhold med bokmål, er ikkje tilstrekkeleg, og omvendt.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"H58"
