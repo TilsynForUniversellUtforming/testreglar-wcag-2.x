@@ -1,12 +1,12 @@
 import * as fs from 'fs';
-import * as path from 'path' ;
-import * as glob from 'glob' ;
+import * as path from 'path';
+import * as glob from 'glob';
 
 // Få listen over JSON-filer rekursivt i mappen
 const dataFolder = './Testreglar';
 const excludeFolder: string = 'felles/**';
 const files = glob.sync('**/*.json', { cwd: dataFolder, ignore: [excludeFolder] });
-const spraakoder: Array<string> = ['nb', 'nn', 'en'];
+
 
 test('Sjekker at Testregelmappe finnes', () => {
   expect(fs.existsSync("./Testreglar")).toBe(true);
@@ -33,7 +33,7 @@ files.forEach(file => {
 
   test(`${file} har definert et språk`, () => {
     expect(testregel.spraak).toBeDefined();
-    expect(spraakoder).toContain(testregel.spraak);
+    expect(testregel.spraak).toMatch(/(nb|nn|en)/i)
   });
 
   test(`${file} har et krav til samsvar`, () => {
@@ -53,16 +53,15 @@ files.forEach(file => {
     expect(testregel.steg.length).toBeGreaterThan(1);
   });
 
-  
-    testregel.steg.forEach(steg => {
-      test(`${file} har gyldig steg ${steg.stegnr}`, () => {      
-        expect(steg.stegnr.length).toBeGreaterThan(0);
-        expect(steg.spm.length).toBeGreaterThan(0);
-        expect(steg.ht).toBeDefined();
-        expect(steg.type).toBeDefined();
-        expect(Object.keys(steg.ruting).length).toBeGreaterThan(0);
-      });
+  testregel.steg.forEach(steg => {
+    test(`${file} har gyldig steg ${steg.stegnr}`, () => {
+      expect(steg.stegnr.length).toBeGreaterThan(0);
+      expect(steg.spm.length).toBeGreaterThan(0);
+      expect(steg.ht).toBeDefined();
+      expect(steg.type).toBeDefined();
+      expect(Object.keys(steg.ruting).length).toBeGreaterThan(0);
     });
+  });
 });
 
 
@@ -78,10 +77,10 @@ type Testregel = {
 }
 
 type Steg = {
-  stegnr:string,
-  spm:string,
-  ht:string,
-  type:string,
-  ruting:object
+  stegnr: string,
+  spm: string,
+  ht: string,
+  type: string,
+  ruting: object
 }
 
