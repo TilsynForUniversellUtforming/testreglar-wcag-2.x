@@ -58,6 +58,8 @@ files.forEach(file => {
       test(`${file} har gyldig steg ${steg.stegnr}`, () => {      
         expect(steg.stegnr.length).toBeGreaterThan(0);
         expect(steg.spm.length).toBeGreaterThan(0);
+        expect(steg.ht).toBeDefined();
+        expect(steg.type).toBeDefined();
         expect(Object.keys(steg.ruting).length).toBeGreaterThan(0);
       });
     });
@@ -65,7 +67,7 @@ files.forEach(file => {
 
 
 type Testregel = {
-  namn: string;
+  namn: string,
   id: string;
   type: string;
   spraak: string;
@@ -78,6 +80,8 @@ type Testregel = {
 type Steg = {
   stegnr:string,
   spm:string,
+  ht:string,
+  type:string,
   ruting:object
 }
 
