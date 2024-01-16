@@ -59,7 +59,14 @@ files.forEach(file => {
       expect(steg.spm.length).toBeGreaterThan(0);
       expect(steg.ht).toBeDefined();
       expect(steg.type).toBeDefined();
+      expect(steg.type).toMatch(/(jaNei|radio|tekst|instruksjon)/i)
       expect(Object.keys(steg.ruting).length).toBeGreaterThan(0);
+
+      if(steg.type==="tekst") {
+        expect(steg.label).toBeDefined();
+        expect(steg.label.length).toBeGreaterThan(0) ;
+      }
+
     });
   });
 });
@@ -81,6 +88,7 @@ type Steg = {
   spm: string,
   ht: string,
   type: string,
+  label: string,
   ruting: object
 }
 
