@@ -1,85 +1,86 @@
 import * as fs from 'fs';
-import { glob } from 'glob'
+import * as path from 'path';
+import * as glob from 'glob';
 
-
-let filer;
-
-beforeAll(async () => {
-    filer = await hentFiler();
-});
+// Få listen over JSON-filer rekursivt i mappen
+const dataFolder = './Testreglar';
+const excludeFolder: string = 'felles/**';
+const files = glob.sync('**/*.json', { cwd: dataFolder, ignore: [excludeFolder] });
 
 
 test('Sjekker at Testregelmappe finnes', () => {
-    expect(fs.existsSync("./Testreglar")).toBe(true);
+  expect(fs.existsSync("./Testreglar")).toBe(true);
 });
 
 
-test('Testregelformat er korrekt', async () => {
-    let format_sjekk = true;
+// Iterer gjennom hver JSON-fil
+files.forEach(file => {
+  const filePath = path.join(dataFolder, file);
+  const testregel: Testregel = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
-    filer.forEach((f: string) => {
-        if (!sjekk_format(f)) {
-            format_sjekk = false;
-        }
+  // Lag tester for hver JSON-fil
+  test(`${file} har definert et namn`, () => {
+    expect(testregel.namn).toBeDefined();
+  });
+
+  test(`${file} har definert en id`, () => {
+    expect(testregel.namn).toBeDefined();
+  });
+
+  test(`${file} har definert en type`, () => {
+    expect(testregel.type).toBeDefined();
+  });
+
+  test(`${file} har definert et språk`, () => {
+    expect(testregel.spraak).toBeDefined();
+    expect(testregel.spraak).toMatch(/(nb|nn|en)/i)
+  });
+
+  test(`${file} har et krav til samsvar`, () => {
+    expect(testregel.kravTilSamsvar.length).toBeGreaterThan(0);
+  });
+
+  test(`${file} har satt et steg for side`, () => {
+    expect(testregel.side.length).toBeGreaterThan(0);
+  });
+
+  test(`${file} har satt ett test element`, () => {
+    expect(testregel.element.length).toBeGreaterThan(0);
+  });
+
+  test(`${file} har steg`, () => {
+    expect(testregel.steg).toBeDefined();
+    expect(testregel.steg.length).toBeGreaterThan(1);
+  });
+
+  testregel.steg.forEach(steg => {
+    test(`${file} har gyldig steg ${steg.stegnr}`, () => {
+      expect(steg.stegnr.length).toBeGreaterThan(0);
+      expect(steg.spm.length).toBeGreaterThan(0);
+      expect(steg.ht).toBeDefined();
+      expect(steg.type).toBeDefined();
+      expect(Object.keys(steg.ruting).length).toBeGreaterThan(0);
     });
-    expect(format_sjekk).toEqual(true);
+  });
 });
-
-
-
-async function hentFiler() {
-    filer = await glob('Testreglar/**/*.json');
-    return filer;
-}
-
-
-function sjekk_format(file:string): boolean {
-    if (!file.includes("felles")) {
-        try{
-            const testregel:Testregel = JSON.parse(fs.readFileSync(file, 'utf8'));
-            if (typeof (testregel.id) !== "string") {
-                console.log("Filen " + file + " mangler id-felt");
-                return false
-            } else if (typeof (testregel.type) !== "string") {
-                console.log("Filen " + file + " mangler type felt");
-                return false
-            } else if (typeof (testregel.spraak) !== "string") {
-                console.log("Filen " + file + " mangler spraak felt");
-                return false
-            } else if (typeof (testregel.kravTilSamsvar) !== "string") {
-                console.log("Filen " + file + " mangler feltet kravTilSamsvar");
-                return false
-            } else if (typeof (testregel.side) !== "string") {
-                console.log("Filen " + file + " mangler feltet side");
-                return false
-            } else if (typeof (testregel.element) !== "string") {
-                console.log("Filen " + file + " mangler feltet side");
-                return false
-            } else if (typeof (testregel.namn) !== "string") {
-                console.log("Filen " + file + " mangler feltet namn");
-                return false
-            } else if (!Array.isArray(testregel.steg)) {
-                console.log("Filen " + file + " mangler feltet steg");
-                return false
-            }
-        } catch {
-            console.log("Filen " + file + " inneholder ikke gyldig JSON");
-            return false
-        }
-      
-    }
-
-    return true;
-}
 
 
 type Testregel = {
-    namn: string;
-    id: string;
-    type: string;
-    spraak: string;
-    kravTilSamsvar: string;
-    side: string;
-    element: string;
-    steg: Array<object>;
+  namn: string,
+  id: string;
+  type: string;
+  spraak: string;
+  kravTilSamsvar: string;
+  side: string;
+  element: string;
+  steg: Array<Steg>;
 }
+
+type Steg = {
+  stegnr: string,
+  spm: string,
+  ht: string,
+  type: string,
+  ruting: object
+}
+

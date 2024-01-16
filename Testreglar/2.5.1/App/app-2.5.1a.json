@@ -4,7 +4,7 @@
 	"testlabId": 398,
 	"versjon": "1.0",
 	"type": "App",
-	"spraak": "",
+	"spraak": "nb",
 	"kravTilSamsvar": "<p>All funksjonalitet som krever at brukeren benytter flerpunktgest eller stibasert gest, skal kunne betjenes med en enkelt pekerbevegelse</p>\r\n<ul>\r\n<li>Med mindre flerpunktgest eller stibasert gest er avgjørende</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
