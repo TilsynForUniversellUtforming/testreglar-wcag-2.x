@@ -321,7 +321,9 @@ Delutfalla blir brukt for å lage ferdige/fullstendige utfall. Delutfalle blir l
 
 #### Bruke delutfall til å sette fasit
 
-Ved å sette `"fasit": "sjekkDelutfall"` i ei ruting av typen "avslutt" kan du bruke delutfallen til å bestemme fasit. Den sjekkar då alle delutfalla med "Ja" og "Nei" som fasit og set fasit til "Ja" dersom alle delutfall er "Ja" og "Nei" dersom eit eller fleire delutfall har fasit "Nei".
+Ved å sette `"fasit": "sjekkDelutfall"` i ei ruting av typen "avslutt" kan du bruke delutfalla til å bestemme fasit. Alle delutfall med "Ja" og "Nei" blir då vurdert og fasit blir set til:
+- "Ja" dersom alle delutfalla er "Ja"
+- "Nei" dersom eit eller fleire delutfall har fasit "Nei".
 
 #### Eksempel på delutfall til å sette fasit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
