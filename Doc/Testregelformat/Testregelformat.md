@@ -282,7 +282,7 @@ Delutfall er når du har behov får lage et mellombels resultat som du til slutt
 
 ### Sette delutfall
 
-Delutfall settes gjennom å legge til et delutfall-objekt på rutingen.
+Delutfall blir lagt til gjennom å legge til eit delutfall-objekt på rutingen.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {
 			"stegnr": "3.8",
