@@ -14,14 +14,13 @@
 			"spm": "Hvilken side tester du?",
 			"ht": "<p>Angi URL eller side-ID.</p>",
 			"type": "tekst",
-			"kilde": [],
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
 					"steg": "2.2"
 				}
 			},
-			"label": "",
+			"label": "URL/Side-ID:",
 			"datalist": "Sideutvalg"
 		},
 		{
@@ -79,8 +78,7 @@
 			"spm": "Hvilket innhold og/eller funksjonalitet fikk du ikke tilgang til?",
 			"ht": "<p>Beskriv elementet eller funksjonaliteten. Hvis det gjelder flere elementer eller funksjonalitet, registrerer du en og en.</p>",
 			"type": "tekst",
-			"kilde": [],
-			"label": "",
+			"label": "Innhold og funksjonlaitet:",
 			"multilinje": true,
 			"ruting": {
 				"alle": {

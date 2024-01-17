@@ -46,14 +46,13 @@
 			"spm": "Skriv inn tittel på videoen",
 			"ht": "<p>Legg inn tittel på video eller stikkord om innholdet, dersom tittel mangler. Hvis det gjelder flere elementer, registrerer du et og et.</p>",
 			"type": "tekst",
-			"kilde": [],
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
 					"steg": "3.2"
 				}
 			},
-			"label": "",
+			"label": "Tittel på video:",
 			"multilinje": true
 		},
 		{
@@ -95,14 +94,13 @@
 			"spm": "Registrer stikkprøvene du skal teste med tidsstempel.",
 			"ht": "<p>Du skal ta minst to stikkprøver, for eksempel en i starten, samt en midten eller en slutten av videoen. Du vurderer selv hvor lange stikkprøvene bør være, ut fra lengden på den aktuelle videoen. </p>\n<p>Registrer en og en stikkprøve med tidsstempel (mm:ss), for eksempel 05:30-06:25. Dette er fordi det er nyttig å vite hvilke deler av videoen som er testet/vurdert. </p>",
 			"type": "tekst",
-			"kilde": [],
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
 					"steg": "3.5"
 				}
 			},
-			"label": "",
+			"label": "Stikkprøver:",
 			"multilinje": true
 		},
 		{
