@@ -305,6 +305,25 @@ Delutfall settes gjennom å legge til et delutfall-objekt på rutingen.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### Bruke delutfall
+
+Delutfalla blir brukt for å lage ferdige/fullstendige utfall. Delutfalle blir lagt til i utfallet ved å bruke #dellutfall(nr på delutfall), for eksempel `#delutfall(0)`. `#delutfall(0)` blir da erstatta av den faktiske teksten til delutfall 0.  
+
+#### Eksempel på delutfall i utfall
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(0) #delutfall(1) CAPTCHA i form av lyd, manglar tekstleg beskriving av formålet."
+				}
+			}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#### Bruke delutfall til å sette fasit
+
+Ved å sette `"fasit": "sjekkDelutfall"` i ei ruting av typen "avslutt" kan du bruke delutfallen til å bestemme fasit. Den sjekkar då alle delutfalla med "Ja" og "Nei" som fasit og set fasit til "Ja" dersom alle delutfall er "Ja" og "Nei" dersom eit eller fleire delutfall har fasit "Nei".
+
+#### Eksempel på delutfall til å sette fasit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {
 			"stegnr": "3.19",
