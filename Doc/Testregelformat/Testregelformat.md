@@ -271,7 +271,86 @@ Ved ruting frå radioboks vil rutinga vere basert på kva alternativ du vel. Dei
 Det kan òg nyttast reglar til å gje ein meir kraftig ruting. [Meir om dei ulike ruting-reglane finn du her](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md).
 
 
-(c) 2018-2023 Tilsyn for universell utforming
+## Delutfall
+Delutfall er når du har behov får lage et mellombels resultat som du til slutt set saman til eit endeleg utfall. Dette er særleg aktuelt der det er mange måtar å oppfylle kravet på og alle skal verifiserast i same testregel. 
+
+| Felt |Omtale   | Eksempel |
+|---|---|---|
+|  nr |  Unikt tal for delutfall. Dersom det samme talet brukes i flere etterfølgende steg skal delutfallet overskrives. |  `"nr": 0`|
+|  fasit | Fasit for delutfallet. {Ja, Nei,Ikkje testbart, Ikkje forekomst} |  `"fasit": "Ja"`|
+|  tekst | Innhald / tekstleg omtalte av delutfallet. |  `"tekst": "Bilde-CAPTCHA har ikkje alt-attributt."`|
+
+### Sette delutfall
+
+Delutfall blir lagt til gjennom å legge til eit delutfall-objekt på rutingen.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{
+			"stegnr": "3.8",
+			"spm": "Har bilde eit alt-attributt?",
+			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.13",
+					"delutfall": {
+						"nr": 0,
+						"fasit": "Nei",
+						"tekst": "CAPTCHA i form av bilde, manglar alt-attributt."
+					}
+				}
+			}
+		}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+### Bruke delutfall
+
+Delutfalla blir brukt for å lage ferdige/fullstendige utfall. Delutfalle blir lagt til i utfallet ved å bruke #dellutfall(nr på delutfall), for eksempel `#delutfall(0)`. `#delutfall(0)` blir da erstatta av den faktiske teksten til delutfall 0.  
+
+#### Eksempel på delutfall i utfall
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(0) #delutfall(1) CAPTCHA i form av lyd, manglar tekstleg beskriving av formålet."
+				}
+			}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#### Bruke delutfall til å sette fasit
+
+Ved å sette `"fasit": "sjekkDelutfall"` i ei ruting av typen "avslutt" kan du bruke delutfalla til å bestemme fasit. Alle delutfall med "Ja" og "Nei" blir då vurdert og fasit blir set til:
+- "Ja" dersom alle delutfalla er "Ja"
+- "Nei" dersom eit eller fleire delutfall har fasit "Nei".
+
+#### Eksempel på delutfall til å sette fasit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{
+			"stegnr": "3.19",
+			"spm": "Gir teksten saman med konteksten ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
+			"ht": "<p>Teksten skal identifisere at det handlar om ein test, kode eller utfordring for å verifisere at brukaren er eit menneske.</p><p>Kontekst kan for eksempel vere tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</p><p>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p>",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "sjekkDelutfall",
+					"utfall": {
+						"nei": "#delutfall(0) #delutfall(1)",
+						"ja": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
+					}
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(0) #delutfall(1) CAPTCHA i form av lyd, manglar tekstleg beskriving av formålet."
+				}
+			}
+		}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(c) 2018-2024 Tilsyn for universell utforming
 
 
 
