@@ -98,15 +98,16 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er den visuelle overskrifta koda med noko anna som ivaretek den visuelle presentasjonen?",
-			"ht": "<p>Eksempel p&#xE5; koding er:</p><ul><li>unummerert liste, koda med &#x3C;ul&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>nummerert liste, koda med &#x3C;ol&#x3E; og &#x3C;li&#x3E; for kvart listepunkt</li><li>deskriptiv liste, koda med &#x3C;dl&#x3E;, &#x3C;dd&#x3E; og &#x3C;dt&#x3E;</li><li>Ledetekst koda som &#x3C;label&#x3E;</ul>",
+			"ht": "<p>Eksempel på koding er:</p>\n<ul>\n<li>unummerert liste, koda med &lt;ul&gt; og &lt;li&gt; for kvart listepunkt</li>\n<li>nummerert liste, koda med &lt;ol&gt; og &lt;li&gt; for kvart listepunkt</li>\n<li>deskriptiv liste, koda med &lt;dl&gt;, &lt;dd&gt; og &lt;dt&gt;</li>\n<li>Ledetekst koda som &lt;label&gt;</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
-				"G115",
-				"F2"
+				"F2",
+				"G115"
 			],
 			"ruting": {
 				"ja": {
-					"type": "ikkjeForekomst"
+					"type": "ikkjeForekomst",
+					"utfall": "Visuelle overskrift koda med anna gyldig måten som ivaretek den visuelle presentasjonen."
 				},
 				"nei": {
 					"type": "avslutt",
