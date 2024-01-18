@@ -106,7 +106,8 @@
 			],
 			"ruting": {
 				"ja": {
-					"type": "ikkjeForekomst"
+					"type": "ikkjeForekomst",
+					"utfall":"Visuelle overskrift er kodet med en annen gyldig måten som ivaretar den visuelle presentasjonen."
 				},
 				"nei": {
 					"type": "avslutt",
