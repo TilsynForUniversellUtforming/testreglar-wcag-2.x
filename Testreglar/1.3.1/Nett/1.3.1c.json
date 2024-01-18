@@ -201,7 +201,8 @@
 							"type": "lik",
 							"verdi": "Nei",
 							"handling": {
-								"type": "ikkjeForekomst"
+								"type": "ikkjeForekomst",
+								"utfall": "Testside har ikkje visuelle lister."
 							}
 						}
 					}
