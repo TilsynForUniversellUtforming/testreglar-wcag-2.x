@@ -89,6 +89,8 @@ files.forEach(file => {
           vurderRegel(ruting[1].regler, testregel.steg);
         } else if (ruting[1].type === "avslutt") {
           vurderRutingAvslutt(ruting[1]);
+        } else if (ruting[1].type === "ikkjeForekomst") {
+          vurderRutingIkkjeForekomst(ruting[1]);
         }
 
       });
@@ -119,6 +121,8 @@ function vurderRegel(reglar, testregelSteg: Array<Steg>) {
       vurderRegel(regel.handling.regler, testregelSteg);
     } else if (regel.handling.type === "avslutt") {
       vurderRutingAvslutt(regel.handling);
+    } else if(regel.handling.type ==="ikkjeForekomst"){
+      vurderRutingIkkjeForekomst(regel.handling);
     }
   });
 }
@@ -140,21 +144,30 @@ function stegFinst(stegnr: string, TestregelSteg: Array<Steg>) {
 }
 
 /**
- * Sjekker en rutingAvsluttning
- * @param rutningAvslutt 
+ * Sjekker ruting av typen avslutt
+ * @param rutningAvslutt  Ruting av typen avslutt
  */
-function vurderRutingAvslutt(rutningAvslutt){
+function vurderRutingAvslutt(rutningAvslutt) {
   expect(rutningAvslutt.fasit).toBeDefined();
   expect(rutningAvslutt.fasit).toMatch(/(Ja|Nei|Ikkje testbart|sjekkDelutfall)/i);
   expect(rutningAvslutt.utfall).toBeDefined();
-  if(typeof(rutningAvslutt.utfall)==="string") {
+  if (typeof (rutningAvslutt.utfall) === "string") {
     expect(rutningAvslutt.utfall.length).toBeGreaterThan(0);
-  } else if(typeof(rutningAvslutt.utfall)==="object") {
+  } else if (typeof (rutningAvslutt.utfall) === "object") {
     expect(rutningAvslutt.utfall.ja).toBeDefined();
     expect(rutningAvslutt.utfall.ja.length).toBeGreaterThan(0);
     expect(rutningAvslutt.utfall.nei).toBeDefined();
     expect(rutningAvslutt.utfall.nei.length).toBeGreaterThan(0);
   }
+}
+
+/**
+ * Sjekker ruting av typen ikkje forekomst
+ * @param runtingIkkjeForekomst  Ruting av typen ikkje forekomst
+ */
+function vurderRutingIkkjeForekomst(runtingIkkjeForekomst) {
+  expect(runtingIkkjeForekomst.utfall).toBeDefined();
+  expect(runtingIkkjeForekomst.utfall.length).toBeGreaterThan(0);
 }
 
 type Testregel = {
