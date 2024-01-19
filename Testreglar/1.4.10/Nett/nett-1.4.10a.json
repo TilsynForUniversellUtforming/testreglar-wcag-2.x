@@ -78,7 +78,7 @@
 			"spm": "Hvilket innhold og/eller funksjonalitet fikk du ikke tilgang til?",
 			"ht": "<p>Beskriv elementet eller funksjonaliteten. Hvis det gjelder flere elementer eller funksjonalitet, registrerer du en og en.</p>",
 			"type": "tekst",
-			"label": "Innhold og funksjonalitet:",
+			"label": "Innhold eller funksjonalitet:",
 			"multilinje": true,
 			"ruting": {
 				"alle": {
