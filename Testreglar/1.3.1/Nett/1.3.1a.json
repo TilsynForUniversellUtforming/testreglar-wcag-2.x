@@ -107,7 +107,7 @@
 			"ruting": {
 				"ja": {
 					"type": "ikkjeForekomst",
-					"utfall": "Visuelle overskrift koda med anna gyldig måten som ivaretek den visuelle presentasjonen."
+					"utfall": "Visuell overskrift er koda på anna måte som ivaretek den visuelle presentasjonen."
 				},
 				"nei": {
 					"type": "avslutt",
