@@ -61,7 +61,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Beskriv den lenka du testar",
-			"ht": "<p>Merk at du ikkje skal teste alle lenkene på testsida. Du skal berre teste dei du har identifisert som aktuelle testobjekt etter visuell inspeksjon. Dette gjeld lenker som ligg i løpande tekst og som er merka med farge.</p>\n<p>Legg inn lenketekst, plassering eller andre stikkord, slik at lenka kan identifiserast.</p>\n<p> </p>",
+			"ht": "<p>Merk at du ikkje skal teste alle lenkene på testsida. Du skal berre teste dei du har identifisert som aktuelle testobjekt etter visuell inspeksjon. Dette gjeld lenker som ligg i løpande tekst og som er merka med farge.</p>\n<p>Legg inn lenketekst, plassering eller andre stikkord, slik at lenka kan identifiserast.</p>",
 			"type": "tekst",
 			"label": "Lenke:",
 			"multilinje": true,
@@ -71,8 +71,7 @@
 					"type": "gaaTil",
 					"steg": "3.2"
 				}
-			},
-			"kilde": []
+			}
 		},
 		{
 			"stegnr": "3.2",
@@ -113,7 +112,7 @@
 			}
 		},
 		{
-			"stegnr": "3.3",
+			"stegnr": "3.4",
 			"spm": "Mål og registrer kontrast mellom farge på tekst i lenka og farge på omkringliggande ikkje-lenka løpande tekst.",
 			"ht": "<p>Kontrast skal registrerast med desimaltal (For eksempel 4.5).</p>\n<p>Tips:</p>\n<ul>\n<li>Ta skjermbilde som innheld elementet du testar.</li>\n<li>Skjermbildet må overførast til PC for å kunne ta i bruk verktøy for kontrastmåling. Vurder om det same skjermbildet kan brukast til å verifisere fleire testelement.</li>\n<li>Bruk verktøyet <a href=\"https://www.tpgi.com/color-contrast-checker/\" target=\"_blank\" rel=\"noopener\">Colour Contrast Analyser</a>.</li>\n<li>Du kan zoome eller forstørre skjermbildet av testsida for å gjere det enklare å måle kontrasten på den identifiserte lenka og farge på omkringliggande ikkje-lenka løpande tekst.</li>\n<li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li>\n<li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li>\n<li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li>\n</ul>",
 			"type": "tekst",
@@ -127,7 +126,7 @@
 					"type": "regler",
 					"regler": {
 						"1": {
-							"sjekk": "3.3",
+							"sjekk": "3.4",
 							"type": "mellom",
 							"verdi": 0,
 							"verdi2": 2.94,
@@ -138,7 +137,7 @@
 							}
 						},
 						"2": {
-							"sjekk": "3.3",
+							"sjekk": "3.4",
 							"type": "mellom",
 							"verdi": 2.95,
 							"verdi2": 200,

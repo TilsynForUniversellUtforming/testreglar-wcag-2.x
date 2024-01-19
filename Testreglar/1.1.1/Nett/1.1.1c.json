@@ -57,8 +57,8 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Finst det &#x3C;area&#x3E; element inne i &#x3C;map&#x3E;-elementet?",
-			"ht": "<p>Fell ut &#x3C;map&#x3E;-elementet og sjå om du finn &#x3C;area&#x3E;-element som er nøsta under &#x3C;map&#x3E;-elementet i koden.</p>",
+			"spm": "Finst det &lt;area&gt; element inne i &lt;map&gt;-elementet?",
+			"ht": "<p>Fell ut &lt;map&gt;-elementet og sjå om du finn &lt;area&gt;-element som er nøsta under &lt;map&gt;-elementet i koden.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -67,6 +67,7 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
+					"utfall": "Det finst ikkje klikkbart område i bilde.",
 					"element": "3.1"
 				}
 			}
