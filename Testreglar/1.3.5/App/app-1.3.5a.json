@@ -64,14 +64,13 @@
 			"spm": "Beskriv skjemaelementet (inndatafeltet) du tester",
 			"ht": "<p><span lang=\"NO-BOK\">Legg inn ledetekst, plassering eller andre stikkord, slik at inndatafeltet kan identifiseres.</span></p>",
 			"type": "tekst",
-			"kilde": [],
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
 					"steg": "3.2"
 				}
 			},
-			"label": "",
+			"label": "Skjemaelementet:",
 			"multilinje": true
 		},
 		{
