@@ -1,7 +1,5 @@
 Testregelformat
 ===============
-Generell info om testreglar
----------------------------
 
 <table>
 <tr>
@@ -28,6 +26,12 @@ Generell info om testreglar
  	<td>TestlabId er ein unik id i tilsynets system for testing.</td>
  	<td><pre lang="json">"testlabId": 153</pre></td>	
 </tr>
+<tr>
+ 	<td>versjon</td>
+ 	<td>string</td>
+ 	<td>Kva versjon av testregelen det er snakk om.</td>
+ 	<td><pre lang="json">"versjon": "1.0"</pre></td>	
+</tr>
  <tr>
 	 <td>type</td>
 	 <td>string</td>
@@ -40,14 +44,7 @@ Generell info om testreglar
 	 </ul>
  	<td><pre lang="json">"type": "web"</pre></td>	 	 
 </tr>
-</tr>
- <tr>
- <td>versjon</td>
- <td>string</td>
- <td>Kva versjon av testregelen det er snakk om.</td>
- <td><pre lang="json">"versjon": "1.0"</pre></td>	
-</tr>
- <tr>
+<tr>
 	 <td>spraak</td>
 	 <td>string</td>
 	 <td><p>Språket i testregelen (ISO 639-1).</p>
@@ -59,24 +56,31 @@ Generell info om testreglar
 	 </td>
 	 <td><pre lang="json">"spraak": "1.4.2a"</pre></td>	
 </tr>
+	<tr>
+	 <td>kravTilSamsvar</td>
+	 <td>string[HTML]</td>
+  	 <td>Definisjon av testregelen sitt krav til samsvar.</td>
+         <td><pre lang="json">"kravTilSamsvar": "Visuelle overskrifter koda."</pre></td>	
+</tr>
  <tr>
 	 <td>side</td>
 	 <td>string</td>
   	 <td>Referanse til kva steg (stegnr) som registerer informasjon om side.</td>
          <td><pre lang="json">"side": "2.1"</pre></td>	
 </tr>
- <tr>
+	<tr>
 	 <td>element</td>
 	 <td>string</td>
   	 <td>Referanse til kva steg (stegnr) som registerer informasjon om element. 
 Dersom det er sida som er elementet skriv "Side"</td>
          <td><pre lang="json">"element": "2.1"</pre></td>	
 </tr>
+	<tr>
 		 <td>steg</td>
 	 <td>Array[Steg]</td>
   	 <td>Array med stega i testregelen.</td>
          <td><pre lang="json">"steg":[]</pre></td>	
-</tr>
+</tr>	 
 </table>
 
 Steg
@@ -106,7 +110,7 @@ være unik innanfor same testregel og skal vere på formatet «tal.tal»</td>
  <tr>
  	<td>type</td>
 	<td>stringr</td>
- 	<td><p></p>Type steg. Et steg kan vere av desse typane :</p><ul>
+ 	<td><p><a href="#type">Type steg.</a> Et steg kan vere av desse typane :</p><ul>
 		<li>jaNei</li>
 		<li>radio</li>
 		<li>tekst</li>
@@ -117,7 +121,7 @@ være unik innanfor same testregel og skal vere på formatet «tal.tal»</td>
 </tr>
 <tr>
  	<td>kilde</td>
-	<td>Array</td>
+	<td>Array[string]</td>
  	<td>Kilde er kva kjelder eit steg bygger på. Eit steg kan bygge på fleire
 kjelder.</td>
  	<td><pre lang="json">"kilde": ["G131", "G167", "H44"]</pre></td>	
@@ -126,7 +130,7 @@ kjelder.</td>
  <tr>
  <td>ruting</td>
  <td>Ruting</td>
- <td><a href="#ruting">ruting</a></td>
+ <td>Steget sin <a href="#ruting">ruting.</a></td>
  <td><pre lang="json">"ruting": {
               "ja": {
                     "type": "gaaTil",
@@ -141,24 +145,13 @@ kjelder.</td>
 
 </table>
 
-Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire
-underelement: 
-- [stegnr](#stegnr)
-- [spm](#spørsmål--instruksjon) 
-- [ht - Hjelpetekst](#hjelpetekst)
-- [type](#type) 
-- [kilde](#kilde)
-- [ruting](#ruting)
-
 I tilegg finnes desse spesialfelta:
 - label
 - image
 - svararray
 
 
-Dei ulike typane er forklart under.
-
-Eksempel på steg
+## Eksempel på steg
 
 ```json
 {
@@ -302,11 +295,11 @@ Det kan òg nyttast reglar til å gje ein meir kraftig ruting. [Meir om dei ulik
 ## Delutfall
 Delutfall er når du har behov får lage et mellombels resultat som du til slutt set saman til eit endeleg utfall. Dette er særleg aktuelt der det er mange måtar å oppfylle kravet på og alle skal verifiserast i same testregel. 
 
-| Felt |Omtale   | Eksempel |
-|---|---|---|
-|  nr |  Unikt tal for delutfall. Dersom det samme talet brukes i flere etterfølgende steg skal delutfallet overskrives. |  `"nr": 0`|
-|  fasit | Fasit for delutfallet. {Ja, Nei,Ikkje testbart, Ikkje forekomst} |  `"fasit": "Ja"`|
-|  tekst | Innhald / tekstleg omtalte av delutfallet. |  `"tekst": "Bilde-CAPTCHA har ikkje alt-attributt."`|
+| Felt  | Type | Omtale | Eksempel |
+|---|---|---|---|
+|  nr     | number |  Unikt tal for delutfall. Dersom det samme talet brukes i flere etterfølgende steg skal delutfallet overskrives. |  <pre lang="json">"nr": 0</pre>|
+|  fasit  | string | Fasit for delutfallet. {Ja, Nei,Ikkje testbart, Ikkje forekomst} |  <pre lang="json">"fasit": "Ja"</pre>|
+|  tekst  | string | Innhald / tekstleg omtalte av delutfallet. | <pre lang="json">"tekst": "Bilde-CAPTCHA har ikkje alt-attributt."</pre>|
 
 ### Sette delutfall
 
