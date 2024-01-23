@@ -16,29 +16,25 @@ jobs:
           script: |
             const prNumber = context.payload.pull_request.number;
 
-            if (!context.github || !context.github.pulls) {
-              console.error('Unable to access context.github.pulls. Exiting.');
-              process.exit(1);
-            }
-
-            const { data: reviews } = await context.github.pulls.listReviews({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: prNumber,
-            });
-
-            const requiredApprovals = 3;
-
-            if (reviews.length >= requiredApprovals) {
-              if (!context.github.issues || !context.github.issues.addLabels) {
-                console.error('Unable to access context.github.issues.addLabels. Exiting.');
-                process.exit(1);
-              }
-
-              await context.github.issues.addLabels({
+            try {
+              const octokit = new github.getOctokit(context.token);
+              const reviews = await octokit.pulls.listReviews({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                issue_number: prNumber,
-                labels: ['Kvalitetssikring er gjennomført'],
+                pull_number: prNumber,
               });
+
+              const requiredApprovals = 3;
+
+              if (reviews.data.length >= requiredApprovals) {
+                await octokit.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: prNumber,
+                  labels: ['Kvalitetssikring er gjennomført'],
+                });
+              }
+            } catch (error) {
+              console.error('Error accessing GitHub API:', error.message);
+              process.exit(1);
             }
