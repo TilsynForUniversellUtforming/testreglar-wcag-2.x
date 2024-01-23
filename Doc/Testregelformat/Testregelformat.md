@@ -109,7 +109,7 @@ være unik innanfor same testregel og skal vere på formatet «tal.tal»</td>
 </tr>
  <tr>
  	<td>type</td>
-	<td>stringr</td>
+	<td>string</td>
  	<td><p><a href="#type">Type steg.</a> Et steg kan vere av desse typane :</p><ul>
 		<li>jaNei</li>
 		<li>radio</li>
