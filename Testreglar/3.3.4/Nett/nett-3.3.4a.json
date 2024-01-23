@@ -1,22 +1,21 @@
 {
-	"namn": "3.3.4a Skjema med viktig formål let brukaren kontrollere og endre informasjon, eller angre innsending (2018)",
-	"id": "3.3.4a-2018",
-	"testlabId": 222,
+	"namn": "Nett-3.3.4a Skjema med juridisk eller økonomisk formål lar brukeren angre eller kontrollere, rette og bekrefte informasjon 2023",
+	"id": "Nett-3.3.4a",
+	"testlabId": 491,
 	"versjon": "1.0",
 	"type": "Nett",
-	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar:</p>\r\n<p>Det skal vere mogleg å anten gjennomgå og endre før innsending eller angre etter innsending av skjema med viktige formål.</p>\r\n<p>Ein av følgande må vere oppfylt:</p>\r\n<ul>\r\n<li>Før innsending får brukaren oppfordring om å gjennomgå informasjonen som er lagt inn</li>\r\n<li>Moglegheit til endre all informasjon før innsending</li>\r\n<li>Krav om å bekrefte at informasjonen er korrekt</li>\r\n<li>Etter innsending får brukaren beskjed om korleis dei kan angre innsending av skjemaet og det let seg gjere å angre innsendinga</li>\r\n</ul>",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p><strong>Alternativ 1: Brukeren kan angre (reversere)</strong></p>\r\n<ul>\r\n<li>Etter innsending får brukeren informasjon om hvordan en kan reversere innsendingen, og innsending blir reversert.</li>\r\n</ul>\r\n<p><strong>Alternativ 2: Nettsiden sjekker for inndatafeil og brukeren kan rette feil</strong></p>\r\n<ul>\r\n<li>Før innsending kontrollerer nettsiden om informasjon brukeren angir har inndatafeil og brukeren får korrigere inndatafeil.</li>\r\n</ul>\r\n<p><strong>Alternativ 3: Brukeren kan gjennomgå, rette feil og bekrefte informasjon med mekanisme</strong></p>\r\n<ul>\r\n<li>Før innsending har nettsiden en mekanisme som\r\n<ul>\r\n<li>lar brukeren gjennomgå, korrigere og bekrefte informasjon og</li>\r\n<li>er separat fra innsending og</li>\r\n<li>er et obligatorisk inndataelement</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
-	"element": "3.1",
+	"element": "",
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
-			"oblig": true,
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
@@ -26,8 +25,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har nettsida digitale/interaktive skjema/skjemaelement?",
-			"ht": "<strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt.",
+			"spm": "Har testsiden skjema eller skjemaelement?",
+			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes minst et skjemaelement på testsiden.</p>\n<p><strong>Merk:</strong> Skjema i PDF, Word eller lignende, er ikke aktuelle testobjekt.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -36,14 +35,14 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje skjema."
+					"utfall": "Testside har ikke skjema."
 				}
 			}
 		},
 		{
 			"stegnr": "2.3",
-			"spm": "Er skjemaet i ein eller fleire av kategoriane under?<ul><li>Type 1: Skjema som medfører juridiske og/eller økonomiske plikter for brukaren.</li><li>Type 2: Skjema som endrar eller slettar brukarstyrte data i datalagringssystem.</li><li>Type 3: Skjema som sender svar på testar utført av brukaren.</li></ul>",
-			"ht": "<p>Eksempel på typar av skjema:</p><ul><li>Type 1: kjøp av vare eller billett, inngåing av avtale som medfører plikter med mer, betingelser for å opprette brukerkonto.</li><li>Type 2: Endringer i kontoopplysingar, sletting av brukarkonto. Brukarstyrte data er informasjon som brukaren sjølv skriv inn.</li><li>Type 3: Spørreskjema eller liknande.</li></ul><p>Skjema som ikkje er aktuelle for test er for eksempel søkefelt, oppretting av brukarkonto, abonnering på nyheitsbrev og andre skjema som ikkje medførar juridiske eller økonomiske plikter.</p>",
+			"spm": "Medfører skjemaet juridiske forpliktelser eller økonomiske transaksjoner for brukeren?",
+			"ht": "<p>Vurder om skjemaet medfører juridiske forpliktelser eller krever økonomiske transaksjoner fra brukeren</p>\n<p>Eksempel på typer skjema som kravet gjelder for:</p>\n<ul>\n<li>kjøp av varer, billetter og tjenester</li>\n<li>betaling av regninger, forsikring, fond</li>\n<li>andre avtaler som gir rettigheter og plikter</li>\n<li>svar på tester/prøver, som for eksempel førerprøven, eksamen</li>\n<li>sletting av brukerkonto eller profil, for eksempel hos SoMe eller reiseselskap. Brukerstyrte data er informasjon som brukeren kan samhandle med og endre selv.</li>\n</ul>\n<p><strong>Merk:</strong> Du skal ikke teste for eksempel søkefelt, abonnement på nyhetsbrev eller andre skjema som ikke gir juridiske eller økonomiske plikter.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -52,16 +51,16 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje skjema som medfører juridiske plikter, økonomiske transaksjonar eller endrar/slettar brukarstyrte data."
+					"utfall": "Testside har ikke skjema som medfører juridiske forpliktelser eller økonomiske transaksjoner for brukeren."
 				}
 			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Beskriv skjemaet/prosessen.",
-			"ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
+			"spm": "Hvilket skjema tester du?",
+			"ht": "<p>Beskriv skjemaet, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere skjemaer, registrerer du et og et.</p>",
 			"type": "tekst",
-			"label": "Skjema/prosess:",
+			"label": "Skjema:",
 			"multilinje": true,
 			"oblig": true,
 			"ruting": {
@@ -73,44 +72,54 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Fyll ut skjemaet med reelle testdata.",
-			"ht": "<p>Fyll ut skjema eller gjennomfør kjøpsprosess heilt til du kjem til steget for å sende inn.</p><p>Opplys gjerne at det handlar om testformål, dersom skjemaet blir sendt inn.</p>",
-			"type": "instruksjon",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.3"
-				}
-			}
-		},
-		{
-			"stegnr": "3.3",
-			"spm": "Får du ei oppfordring om å gjennomgå inndata i skjemaet før innsending?",
-			"ht": "<p>Ei oppfordring kan vere for eksempel på formen:</p><ul><li>Ei formulering som \"Hugs å lese gjennom all informasjon før du sender inn\" eller \"Gjennomgå og bekreft at informasjonen er korrekt\".</li><li>At du får presentert all innskreve informasjon i skjemaet før innsending.</li><li>At inndatafeil blir oppdaga automatisk og brukaren får beskjed.</li></ul>",
+			"spm": "Oppdager skjemaet automatisk inndatafeil? ",
+			"ht": "<p><strong>Kontroll</strong></p>\n<p>I tilfeller der skjemaet avdekker at brukeren ikke har fylt ut obligatoriske skjemaelement, eller har lagt inn informasjon med feil format eller verdi, skal brukeren få mulighet til korrigere feil, før innsending. </p>\n<p><strong>Slik tester du:</strong></p>\n<ul>\n<li>Legg inn feil inndata i alle skjemaelement</li>\n<li>Prøv deretter å fullføre eller gå videre i skjemaet.</li>\n</ul>\n<p>Eksempel på feil inndata er:</p>\n<ul>\n<li>La obligatoriske felt være tomme</li>\n<li>Postnummer som inneholder bokstaver</li>\n<li>Navn som inneholder tall eller spesialtegn</li>\n<li>Ugyldig e-postformat</li>\n<li>Ugyldig datoformat</li>\n<li>Ugyldig telefonnummer</li>\n<li>Data utenfor grenseverdi, for eksempel måned 14 i en dato</li>\n</ul>",
 			"type": "jaNei",
-			"kilde": [
-				"G98"
-			],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.4"
+					"steg": "3.3"
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.9",
+					"steg": "3.4",
 					"delutfall": {
 						"nr": 1,
 						"fasit": "Nei",
-						"tekst": "Skjema oppfordrar ikkje brukar om å gjennomgå og bekrefte informasjon lagt inn i skjema, før innsending."
+						"tekst": "Skjemaet oppdager ikke automatisk inndatafeil."
+					}
+				}
+			},
+			"kilde": [
+				"G98"
+			]
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Får du mulighet til å rette (korrigere) inndatafeil?",
+			"ht": "<p><strong>Kontroll</strong></p>\n<p>Sjekk om du får mulighet til å rette feil i skjemaet, enten direkte eller ved å aktivere redigering av informasjonen. </p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Skjemaet oppdager automatisk inndatafeil. Brukeren kan rette (korrigere) inndatafeil som avdekkes automatisk, før innsending av skjemaet."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.4",
+					"delutfall": {
+						"nr": 1,
+						"fasit": "Nei",
+						"tekst": "Skjemaet oppdager automatisk inndatafeil. Brukeren kan ikke rette (korrigere) inndatafeil som avdekkes automatisk, før innsending av skjemaet."
 					}
 				}
 			}
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Kan du gjennomgå all inndata i skjemaet før innsending?",
-			"ht": "<p>Skjemaet kan vere på ei side eller ligge over fleire sider. </p><p>Du kan gjennomgå inndata i skjemaet på ulike måtar:</p><ul><li>Skjemaet går berre over ei side.</li><li>Det er mogleg å bla mellom sidene i skjemaet. Viss skjemaet ligg over fleire sider, skal inndata fortsatt ligge i skjemaet når du navigerer fram og tilbake i skjemaet.</li><li>Du får ei oppsummering av all inndata i skjemaet dersom skjemaet går over fleire sider.</li></ul>",
+			"spm": "Får du mulighet til å gå gjennom all inndata i skjemaet, før innsending?",
+			"ht": "<p><strong>Gjennomgå, korrigere og bekrefte</strong></p>\n<p>Formuleringer som \"Husk å lese gjennom informasjon i skjemaet før du sender inn\" eller \"Gjennomgå, korriger og bekreft at informasjonen er korrekt\".</p>\n<p>Sjekk om du kan se over all inndata i skjemaet, før innsending. Eksempel på dette kan være at du:</p>\n<ul>\n<li>har tilgang til all informasjon du har lagt inn i skjemaet (skjema på en side)</li>\n<li>kan bla mellom sidene i skjemaet og inndata blir liggende når du navigerer fram og tilbake (skjema over flere sider)</li>\n<li>får en samlet oppsummering av inndata i skjemaet (skjema over flere sider)</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G98"
@@ -123,23 +132,19 @@
 				"nei": {
 					"type": "gaaTil",
 					"steg": "3.9",
-					"nr": 1,
 					"delutfall": {
 						"nr": 1,
 						"fasit": "Nei",
-						"tekst": "Det er ikkje mogleg å gjennomgå informasjon lagt inn i skjema, før innsending."
+						"tekst": "Brukeren har ikke mulighet til å gjennomgå informasjon i skjema, før innsending."
 					}
 				}
 			}
 		},
 		{
 			"stegnr": "3.5",
-			"spm": "Kan du endre all inndata i skjemaet før innsending?",
-			"ht": "Det skal vere mogleg å oppdatere/endre all informasjonen som er lagt inn i dei ulike skjemafelta.",
+			"spm": "Kan du korrigere all inndata i skjemaet, før innsending?",
+			"ht": "<p><strong>Gjennomgå, korrigere og bekrefte</strong></p>\n<p>Sik tester du:</p>\n<ul>\n<li>Prøv å endre (korrigere) alle inndata som du har lagt inn i de ulike skjemafeltene, før innsending.</li>\n</ul>",
 			"type": "jaNei",
-			"kilde": [
-				"SK"
-			],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
@@ -148,19 +153,18 @@
 				"nei": {
 					"type": "gaaTil",
 					"steg": "3.9",
-					"nr": 1,
 					"delutfall": {
 						"nr": 1,
 						"fasit": "Nei",
-						"tekst": "Det er ikkje mogleg å endre informasjon lagt inn i skjema."
+						"tekst": "Brukeren har ikke mulighet til å korrigere all informasjon som er lagt inn i skjema, før innsending."
 					}
 				}
 			}
 		},
 		{
 			"stegnr": "3.6",
-			"spm": "Finst det ein egen mekanisme for å bekrefte at du har lest gjennom informasjonen du skreiv inn og er klar til å sende inn skjemaet?",
-			"ht": "<p>Mekanismen kan vere for eksempel ein avkryssingsboks eller lignande, eller ein eigen knapp for å fortsette innsending.</p><p>Ledeteksten til mekanismen kan for eksempel vere:</p><ul><li>\"Eg bekreftar at informasjonen er korrekt\"</li><li>\"Eg forstår betingelsene\"</li><li>\"Fortsett\"</li></ul>",
+			"spm": "Har nettsiden en mekanisme for å bekrefte at informasjon er korrekt, før innsending?",
+			"ht": "<p><strong>Gjennomgå, korrigere og bekrefte</strong></p>\n<p>Slik tester du</p>\n<p>Mekanismen kan være en avkryssingsboks eller lignende funksjonalitet. Ledeteksten kan for eksempel være:</p>\n<ul>\n<li>Jeg bekrefter at informasjonen er korrekt</li>\n<li>Jeg forstår betingelsene</li>\n<li>Fortsett</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G155",
@@ -178,15 +182,15 @@
 					"delutfall": {
 						"nr": 1,
 						"fasit": "Nei",
-						"tekst": "Skjema har ingen mekanisme for å bekrefte informasjon før innsending."
+						"tekst": "Testsiden har ikke mekanisme for å bekrefte informasjon i skjemaet, før innsending."
 					}
 				}
 			}
 		},
 		{
 			"stegnr": "3.7",
-			"spm": "Er mekanismen separat frå knappen for å sende inn skjemaet?",
-			"ht": "<p>Mekanismen og knappen for å sende inn skal vere to separate element. Det er ikkje mogleg å kombinere desse to, og ein knapp med teksten for eksempel «Godkjenn og send inn» er ikkje tilstrekkeleg.</p>",
+			"spm": "Er mekanismen separat fra elementet for å sende inn skjemaet?",
+			"ht": "<p><strong>Gjennomgå, korrigere og bekrefte</strong></p>\n<p>Mekanismen og elementet for å sende inn skjemaet, skal være to separate skjemaelement.</p>\n<p>Slik tester du</p>\n<ul>\n<li>Sjekk at mekanismen for å bekrefte at informasjonen i skjema er korrekt, er separat fra knappen for å sende inn.</li>\n</ul>\n<p><strong>Merk: </strong>En kombinasjon av mekanisme og send inn, er ikke godkjent. Eksempelvis er en knapp «Godkjenn og send inn» er ikke tilstrekkelig.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G155"
@@ -203,15 +207,15 @@
 					"delutfall": {
 						"nr": 1,
 						"fasit": "Nei",
-						"tekst": "Skjema har mekanisme for å bekrefte informasjon før innsending, som ikkje er skilt frå innsendingsknappen."
+						"tekst": "Mekanismen for å bekrefte informasjon, er ikke separat fra elementet for sende inn skjemaet."
 					}
 				}
 			}
 		},
 		{
 			"stegnr": "3.8",
-			"spm": "Får du til å sende inn skjemaet utan å krysse av/velje mekanismen?",
-			"ht": "Viss du ikkje får til å sende inn skjemaet uten å krysse av betyr det at mekanismen fungerar.",
+			"spm": "Kan du sende inn skjemaet, uten å bruke mekanismen?",
+			"ht": "<p><strong>Gjennomgå, korrigere og bekrefte</strong></p>\n<p>Mekanismen for å bekrefte at informasjonen i skjemaet er korrekt, skal være et obligatorisk skjemaelement.</p>\n<p>Slik tester du</p>\n<ul>\n<li>Prøv å sende inn skjemaet, uten å aktivere/bruke mekanismen for å bekrefte.</li>\n<li><strong>Merk:</strong> Hvis du ikke får sende inn skjemaet, uten å krysse av eller tilsvarende, betyr det at mekanismen fungerer som den skal (er obligatorisk).</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G155"
@@ -224,20 +228,20 @@
 					"delutfall": {
 						"nr": 1,
 						"fasit": "Nei",
-						"tekst": "Skjema har mekanisme for å bekrefte informasjon før innsending. Skjema kan sendast inn utan å krysse av/velje innsending."
+						"tekst": "Mekansimen for å bekrefte at informasjon i skjemaet er ikke obligatorisk."
 					}
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Skjema oppfordrar brukar om å gjennomgå og bekrefte informasjon lagt inn i skjema, før innsending. Det er mogleg å endre all informasjon lagt inn i skjema. Brukaren må bekrefte informasjonen før innsending av skjemaet."
+					"utfall": "Brukeren har mulighet til å gjennomgå, korrigere og bekrefte informasjon lagt inn i skjema, før innsending."
 				}
 			}
 		},
 		{
 			"stegnr": "3.9",
 			"spm": "Send inn skjemaet",
-			"ht": "Fyll ut skjemaet med korrekt informasjon og send inn.",
+			"ht": "<p><strong>Angre (reversere)</strong></p>\n<p>Fyll ut skjemaet med korrekt informasjon og send inn.</p>",
 			"type": "instruksjon",
 			"ruting": {
 				"alle": {
@@ -248,8 +252,8 @@
 		},
 		{
 			"stegnr": "3.10",
-			"spm": "Får du beskjed om korleis du kan endre eller angre innsendinga?",
-			"ht": "<p>Beskjeden kan vere ein eigen tekst med utfyllande informasjon, eller ein mekanisme/knapp som seier for eksempel</p><ul><li>\"Avbestill\"</li><li>\"Kanseller\"</li><li>\"Endre bestilling\"</li><li>\"Angre\"</li><li>\"Ring oss for å avbestille\"</li></ul><p>Beskjeden finnast eller vere lenka til på nettsida, og det er ikkje tilstrekkeleg at det blir tilsendt i ein e-post.</p>",
+			"spm": "Kan du angre (reversere) fullføringen av skjemaet, etter innsending?",
+			"ht": "<p><strong>Angre (reversere)</strong></p>\n<p>Slik tester du:</p>\n<ul>\n<li>Gjør en visuell inspeksjon, og sjekk om du får informasjon om du kan angre/reversere fullføringen av skjemaet. </li>\n<li>Det kan for eksempel være en knapp, lenke eller lignende med Avbestill, Kanseller, Endre bestilling, Angre osv.</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G164"
@@ -257,43 +261,58 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.11"
+					"steg": "3.12"
 				},
 				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "#delutfall(1) Det er ingen informasjon om korleis informasjon kan endrast eller innsending angrast."
+					"type": "gaaTil",
+					"steg": "3.11"
 				}
 			}
 		},
 		{
 			"stegnr": "3.11",
-			"spm": "Angre innsending av skjemaet.",
-			"ht": "Bruk mekanismen, eller følg ei eventuell rutine for å angre innsendinga.",
-			"type": "instruksjon",
+			"spm": "Får du informasjon på nettsiden om prosessen for angre/reversere?",
+			"ht": "<p><strong>Angre (reversere)</strong></p>\n<p>Informasjon om prosessen for angre/avbestille or endre kan:</p>\n<ul>\n<li>stå eller være lenket fra samme nettside</li>\n<li>bli tilsendt til en e-post </li>\n<li>være et telefonnummer</li>\n</ul>\n<p><strong>Merk: </strong>Suksesskriteriet krever ikke at selve prosessen for å angre/reversere juridiske forpliktelser eller økonomiske transaksjoner, trenger ikke være digital. </p>",
+			"type": "jaNei",
 			"ruting": {
-				"alle": {
+				"ja": {
 					"type": "gaaTil",
 					"steg": "3.12"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(1) Brukeren får ikke informasjon på nettsiden om hvordan den juridiske forpliktelsen eller økonomiske transaksjonen kan angres."
 				}
 			}
 		},
 		{
 			"stegnr": "3.12",
-			"spm": "Fikk du til å angre innsendinga?",
-			"ht": "Sjekk om det let seg gjere å angre innsendinga.",
+			"spm": "Angre innsending av skjemaet.",
+			"ht": "<p><strong>Angre (reversere)</strong></p>\n<p>Bruk mekanismen eller annen informasjon om prosessen, for å angre innsendingen.</p>",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				}
+			}
+		},
+		{
+			"stegnr": "3.13",
+			"spm": "Får du til å angre (reversere) innsendingen av skjemaet?",
+			"ht": "<p><strong>Angre (reversere)</strong></p>\n<p>Slik tester du:</p>\n<p>Sjekk om du faktisk kan angre/endre (reversere) innsendingen av skjemaet, ved å følge informasjonen du får på nettsiden. </p>",
 			"type": "jaNei",
-			"kilde": [],
 			"ruting": {
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Skjema har informasjon om korleis innsending av skjema kan avbrytast. Det er mogleg å angre innsending av skjema."
+					"utfall": "Testsiden har informasjon om hvordan brukeren kan angre den juridiske forpliktelsen eller økonomiske transaskjonen. Det er mulig å angre innsending av skjemaet."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "#delutfall(1) Det er ikkje mogleg å angre innsending av skjema."
+					"utfall": "#delutfall(1) Det er ikke mulig å angre innsending av skjemaet."
 				}
 			}
 		}
