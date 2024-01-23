@@ -1,0 +1,33 @@
+name: Label PR on Approvals
+
+on:
+  pull_request_review:
+    types:
+      - submitted
+
+jobs:
+  label_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check approvals and label PR
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const prNumber = context.payload.pull_request.number;
+            const reviews = await github.pulls.listReviews({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: prNumber,
+            });
+
+            const requiredApprovals = 3; // Endre dette til ønsket antall godkjenninger
+
+            if (reviews.data.length >= requiredApprovals) {
+              await github.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                labels: ['Kvalitetssikring er gjennomført'], // Endre dette til ønsket etikett
+              });
+            }
