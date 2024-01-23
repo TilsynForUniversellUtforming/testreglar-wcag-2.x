@@ -14,20 +14,21 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const github = context.github;
             const prNumber = context.payload.pull_request.number;
-            const reviews = await github.pulls.listReviews({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            pull_number: prNumber,
+            const { data: reviews } = await github.pulls.listReviews({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: prNumber,
             });
 
-            const requiredApprovals = 3; // Endre dette til ønsket antall godkjenninger
+            const requiredApprovals = 3;
 
-            if (reviews.data.length >= requiredApprovals) {
+            if (reviews.length >= requiredApprovals) {
               await github.issues.addLabels({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: prNumber,
-                labels: ['Kvalitetssikring er gjennomført'], // Endre dette til ønsket etikett
+                labels: ['Kvalitetssikring er gjennomført'],
               });
             }
