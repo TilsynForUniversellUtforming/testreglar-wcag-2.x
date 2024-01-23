@@ -198,17 +198,6 @@ Type: string
 |---|---|---|
 |  Sideutvalg |  Tekstfeltet skal ha autocomplete på sideutvalg. |  `"datalist": "Sideutvalg"`|
 
-### Kilde
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"kilde": ["G131", "G167", "H44"]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Type: Array
-
-Kilde er kva kjelder eit steg bygger på. Eit steg kan bygge på fleire
-kjelder.
-
 ### Ruting
 Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, som er nærare omtalt i dette kapitelet.
 #### Eksempel
