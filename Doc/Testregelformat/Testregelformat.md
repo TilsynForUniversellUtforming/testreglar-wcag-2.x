@@ -38,13 +38,7 @@ Generell info om testreglar
 		 <li>Dokument</li>
 		 <li>Nett</li>
 	 </ul>
- <td> 
-	 
-```json
-"type": "web"
-```
-
- </td>	
+ 	<td><pre lang="json">"type": "web"</pre></td>	 	 
 </tr>
 </tr>
  <tr>
@@ -78,10 +72,74 @@ Generell info om testreglar
 Dersom det er sida som er elementet skriv "Side"</td>
          <td><pre lang="json">"element": "2.1"</pre></td>	
 </tr>
+		 <td>steg</td>
+	 <td>Array[Steg]</td>
+  	 <td>Array med stega i testregelen.</td>
+         <td><pre lang="json">"steg":[]</pre></td>	
+</tr>
 </table>
 
 Steg
 ----
+Eit steg er kvar instruksjon i test-prosedyren.
+
+<table>
+<tr>
+	<th>Felt</th>
+	<th>Type</th>
+	<th>Omtale</th>
+	<th>Eksempel</th>
+</tr>
+<tr>
+ 	<td>stegnr</td>
+	<td>string</td>
+ 	<td>Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må
+være unik innanfor same testregel og skal vere på formatet «tal.tal»</td>
+ 	<td><pre lang="json">"stegnr": "3.1"</pre></td>	
+</tr>
+ <tr>
+ 	<td>spm</td>
+	<td>string</td>
+ 	<td>Spørsmål / instruksjon forklarar kva testaren skal svare på eller gjere.</td>
+ 	<td><pre lang="json">"spm": "Inneheld feilmeldinga tekst?"</pre></td>	
+</tr>
+ <tr>
+ 	<td>type</td>
+	<td>stringr</td>
+ 	<td><p></p>Type steg. Et steg kan vere av desse typane :</p><ul>
+		<li>jaNei</li>
+		<li>radio</li>
+		<li>tekst</li>
+		<li>instruksjon</li>
+	</ul> 
+</td>
+ 	<td><pre lang="json">"type": "jaNei"</pre></td>	
+</tr>
+<tr>
+ 	<td>kilde</td>
+	<td>Array</td>
+ 	<td>Kilde er kva kjelder eit steg bygger på. Eit steg kan bygge på fleire
+kjelder.</td>
+ 	<td><pre lang="json">"kilde": ["G131", "G167", "H44"]</pre></td>	
+</tr>
+</tr>
+ <tr>
+ <td>ruting</td>
+ <td>Ruting</td>
+ <td><a href="#ruting">ruting</a></td>
+ <td><pre lang="json">"ruting": {
+              "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+               "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }</pre></td>	
+</tr>
+
+</table>
 
 Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire
 underelement: 
@@ -122,43 +180,9 @@ Eksempel på steg
 }
 ```
 
-### Stegnr
-Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må
-være unik innanfor same testregel og skal vere på formatet «tal.tal»
-#### Eksempel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"stegnr": "3.1"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Spørsmål / Instruksjon
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"spm": "Inneheld feilmeldinga tekst som identifiserer kvar feilen har oppstått?"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Spørsmål / instruksjon forklarar kva testaren skal svare på eller gjere.
-
-### Hjelpetekst
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt."
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Hjelpetekst er støtte eller inneheld oppklarande informasjon til spørsmål /
-instruksjon på eit steg.
 
 ### Type
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"type": "jaNei"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Type steg. Et steg kan vere av desse typane : 
-- jaNei 
-- radio 
-- tekst 
-- instruksjon
-
 #### Ekstra eigenskapar for type tekst
 ##### Multilinje
 Type: boolean
