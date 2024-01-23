@@ -3,78 +3,82 @@ Testregelformat
 Generell info om testreglar
 ---------------------------
 
-- Namn
-- Id
-- TestlabId
-- Type
-- Versjon
-- Språk
-- Side
-- Element
-
-## Namn
-Namn på testregel.
-### Eksempel
-```json
-"namn": "1.1.1a Bilde har tekstalternativ"
-```
-## Id
-Id er ein unik identifikator for kvar testregel.
-### Eksempel
-```json
-"id": "1.4.2a"
-```
-
-## TestlabId
-TestlabId er ein unik id i tilsynets system for testing.
-### Eksempel
-```json
-"testlabId": 153
-```
-
-## Type
-Type er kategori av testregel. Dei aktuelle typane er: 
-- App
-- Automat
-- Dokument
-- Nett
-### Eksempel
-
+<table>
+<tr>
+	<th>Felt</th>
+	<th>Type</th>
+	<th>Omtale</th>
+	<th>Eksempel</th>
+</tr>
+<tr>
+ 	<td>namn</td>
+	<td>string</td>
+ 	<td>Namn på testregel.</td>
+ 	<td><pre lang="json">"namn": "1.1.1a Bilde har tekstalternativ"</pre></td>	
+</tr>
+ <tr>
+ 	<td>id</td>
+	<td>string</td>
+ 	<td>Id er ein unik identifikator for kvar testregel.</td>
+ 	<td><pre lang="json">"id": "1.4.2a"</pre></td>	
+</tr>
+ <tr>
+ 	<td>testlabId</td>
+	<td>number</td>
+ 	<td>TestlabId er ein unik id i tilsynets system for testing.</td>
+ 	<td><pre lang="json">"testlabId": 153</pre></td>	
+</tr>
+ <tr>
+	 <td>type</td>
+	 <td>string</td>
+	 <td><p>Type er kategori av testregel. Dei aktuelle typane er: </p>
+	 <ul>
+		 <li>App</li>
+		 <li>Automat</li>
+		 <li>Dokument</li>
+		 <li>Nett</li>
+	 </ul>
+ <td> 
+	 
 ```json
 "type": "web"
 ```
 
-## Versjon
-Kva versjon av testregelen det er snakk om.
-### Eksempel
-```json
-"versjon": "1.0"
-```
-
-## Språk
-Språket i testregelen (ISO 639-1).
-- nb - Bokmål
-- nn - Nynorsk
-- en - Engelsk
-### Eksempel
-```json
-"spraak" : "nn"
-```
-
-## Side
-Referanse til kva steg (stegnr) som registerer informasjon om side.
-### Eksempel
-```json
-"side": "2.1"
-```
-
-## Element
-Referanse til kva steg (stegnr) som registerer informasjon om element. 
-Dersom det er sida som er elementet skriv "Side"
-### Eksempel
-```json
-"element": "2.1"
-```
+ </td>	
+</tr>
+</tr>
+ <tr>
+ <td>versjon</td>
+ <td>string</td>
+ <td>Kva versjon av testregelen det er snakk om.</td>
+ <td><pre lang="json">"versjon": "1.0"</pre></td>	
+</tr>
+ <tr>
+	 <td>spraak</td>
+	 <td>string</td>
+	 <td><p>Språket i testregelen (ISO 639-1).</p>
+	<ul>
+		 <li>nb - Bokmål</li>
+		 <li>nn - Nynorsk</li>
+		 <li>en - Engelsk.</li>
+	</ul>
+	 </td>
+	 <td><pre lang="json">"spraak": "1.4.2a"</pre></td>	
+</tr>
+ <tr>
+	 <td>side</td>
+	 <td>string</td>
+  	 <td>Referanse til kva steg (stegnr) som registerer informasjon om side.</td>
+         <td><pre lang="json">"side": "2.1"</pre></td>	
+</tr>
+ <tr>
+	 <td>element</td>
+	 <td>string</td>
+  	 <td>Referanse til kva steg (stegnr) som registerer informasjon om element. 
+Dersom det er sida som er elementet skriv "Side"</td>
+         <td><pre lang="json">"element": "2.1"</pre></td>	
+</tr>
+</table>
 
 Steg
 ----
