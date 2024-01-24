@@ -26,9 +26,11 @@ jobs:
               });
 
               const uniqueApprovers = new Set(reviews.map(review => review.user.login));
+              const approvedApprovers = new Set(reviews.filter(review => review.state === 'APPROVED').map(review => review.user.login));
               const requiredUniqueApprovals = 3;
 
-              if (uniqueApprovers.size >= requiredUniqueApprovals) {
+              // Sjekk at det er minst 3 unike godkjenninger
+              if (uniqueApprovers.size >= requiredUniqueApprovals && approvedApprovers.size >= requiredUniqueApprovals) {
                 // Legg til ny label
                 await github.rest.issues.addLabels({
                   owner: context.repo.owner,
