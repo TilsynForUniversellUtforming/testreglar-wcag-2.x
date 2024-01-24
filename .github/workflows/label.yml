@@ -17,8 +17,7 @@ jobs:
             const prNumber = context.payload.pull_request.number;
 
             try {
-              const octokit = new github.getOctokit(context.token);
-              const reviews = await octokit.pulls.listReviews({
+              const { data: reviews } = await github.rest.pulls.listReviews({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 pull_number: prNumber,
@@ -26,8 +25,8 @@ jobs:
 
               const requiredApprovals = 3;
 
-              if (reviews.data.length >= requiredApprovals) {
-                await octokit.issues.addLabels({
+              if (reviews.length >= requiredApprovals) {
+                await github.rest.issues.addLabels({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   issue_number: prNumber,
