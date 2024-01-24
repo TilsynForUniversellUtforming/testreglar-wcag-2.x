@@ -1,4 +1,4 @@
-name: Label PR on Approvals
+name: Label PR on Unique Approvals
 
 on:
   pull_request_review:
@@ -9,12 +9,14 @@ jobs:
   label_pr:
     runs-on: ubuntu-latest
     steps:
-      - name: Check approvals and label PR
+      - name: Check unique approvals and label PR
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const prNumber = context.payload.pull_request.number;
+            const newLabel = 'Kvalitetssikring er gjennomført';
+            const existingLabel = 'Klar for kvalitetssikring';
 
             try {
               const { data: reviews } = await github.rest.pulls.listReviews({
@@ -23,14 +25,24 @@ jobs:
                 pull_number: prNumber,
               });
 
-              const requiredApprovals = 3;
+              const uniqueApprovers = new Set(reviews.map(review => review.user.login));
+              const requiredUniqueApprovals = 3;
 
-              if (reviews.length >= requiredApprovals) {
+              if (uniqueApprovers.size >= requiredUniqueApprovals) {
+                // Legg til ny label
                 await github.rest.issues.addLabels({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   issue_number: prNumber,
-                  labels: ['Kvalitetssikring er gjennomført'],
+                  labels: [newLabel],
+                });
+
+                // Fjern eksisterende label hvis det finnes
+                await github.rest.issues.removeLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: prNumber,
+                  name: existingLabel,
                 });
               }
             } catch (error) {
