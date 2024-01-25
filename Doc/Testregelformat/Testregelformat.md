@@ -78,7 +78,7 @@ Dersom det er sida som er elementet skriv "Side"</td>
 </tr>
 	<tr>
 		 <td>steg</td>
-	 <td>Array[<a href="steg#">Steg</a>]</td>
+	 <td>Array[<a href="#steg">Steg</a>]</td>
   	 <td>Array med stega i testregelen.</td>
          <td><pre lang="json">"steg":[]</pre></td>	
 </tr>	 
