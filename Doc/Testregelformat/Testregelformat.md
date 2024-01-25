@@ -1,92 +1,150 @@
 Testregelformat
 ===============
-Generell info om testreglar
----------------------------
+Format for testreglar. 
 
-- Namn
-- Id
-- TestlabId
-- Type
-- Versjon
-- Språk
-- Side
-- Element
-
-## Namn
-Namn på testregel.
-### Eksempel
-```json
-"namn": "1.1.1a Bilde har tekstalternativ"
-```
-## Id
-Id er ein unik identifikator for kvar testregel.
-### Eksempel
-```json
-"id": "1.4.2a"
-```
-
-## TestlabId
-TestlabId er ein unik id i tilsynets system for testing.
-### Eksempel
-```json
-"testlabId": 153
-```
-
-## Type
-Type er kategori av testregel. Dei aktuelle typane er: 
-- App
-- Automat
-- Dokument
-- Nett
-### Eksempel
-
-```json
-"type": "web"
-```
-
-## Versjon
-Kva versjon av testregelen det er snakk om.
-### Eksempel
-```json
-"versjon": "1.0"
-```
-
-## Språk
-Språket i testregelen (ISO 639-1).
-- nb - Bokmål
-- nn - Nynorsk
-- en - Engelsk
-### Eksempel
-```json
-"spraak" : "nn"
-```
-
-## Side
-Referanse til kva steg (stegnr) som registerer informasjon om side.
-### Eksempel
-```json
-"side": "2.1"
-```
-
-## Element
-Referanse til kva steg (stegnr) som registerer informasjon om element. 
-Dersom det er sida som er elementet skriv "Side"
-### Eksempel
-```json
-"element": "2.1"
-```
+<table>
+<tr>
+	<th>Felt</th>
+	<th>Type</th>
+	<th>Omtale</th>
+	<th>Eksempel</th>
+</tr>
+<tr>
+ 	<td>namn</td>
+	<td>string</td>
+ 	<td>Namn på testregel.</td>
+ 	<td><pre lang="json">"namn": "1.1.1a Bilde har tekstalternativ"</pre></td>	
+</tr>
+ <tr>
+ 	<td>id</td>
+	<td>string</td>
+ 	<td>Id er ein unik identifikator for kvar testregel.</td>
+ 	<td><pre lang="json">"id": "1.4.2a"</pre></td>	
+</tr>
+ <tr>
+ 	<td>testlabId</td>
+	<td>number</td>
+ 	<td>TestlabId er ein unik id i tilsynets system for testing.</td>
+ 	<td><pre lang="json">"testlabId": 153</pre></td>	
+</tr>
+<tr>
+ 	<td>versjon</td>
+ 	<td>string</td>
+ 	<td>Kva versjon av testregelen det er snakk om.</td>
+ 	<td><pre lang="json">"versjon": "1.0"</pre></td>	
+</tr>
+ <tr>
+	 <td>type</td>
+	 <td>string</td>
+	 <td><p>Type er kategori av testregel. Dei aktuelle typane er: </p>
+	 <ul>
+		 <li>App</li>
+		 <li>Automat</li>
+		 <li>Dokument</li>
+		 <li>Nett</li>
+	 </ul>
+ 	<td><pre lang="json">"type": "web"</pre></td>	 	 
+</tr>
+<tr>
+	 <td>spraak</td>
+	 <td>string</td>
+	 <td><p>Språket i testregelen (ISO 639-1).</p>
+	<ul>
+		 <li>nb - Bokmål</li>
+		 <li>nn - Nynorsk</li>
+		 <li>en - Engelsk.</li>
+	</ul>
+	 </td>
+	 <td><pre lang="json">"spraak": "1.4.2a"</pre></td>	
+</tr>
+	<tr>
+	 <td>kravTilSamsvar</td>
+	 <td>string[HTML]</td>
+  	 <td>Definisjon av testregelen sitt krav til samsvar.</td>
+         <td><pre lang="json">"kravTilSamsvar": "Visuelle overskrifter koda."</pre></td>	
+</tr>
+ <tr>
+	 <td>side</td>
+	 <td>string</td>
+  	 <td>Referanse til kva steg (stegnr) som registerer informasjon om side.</td>
+         <td><pre lang="json">"side": "2.1"</pre></td>	
+</tr>
+	<tr>
+	 <td>element</td>
+	 <td>string</td>
+  	 <td>Referanse til kva steg (stegnr) som registerer informasjon om element. 
+Dersom det er sida som er elementet skriv "Side"</td>
+         <td><pre lang="json">"element": "2.1"</pre></td>	
+</tr>
+	<tr>
+		 <td>steg</td>
+	 <td>Array[<a href="#steg">Steg</a>]</td>
+  	 <td>Array med stega i testregelen.</td>
+         <td><pre lang="json">"steg":[{"stegnr":"3.1"}]</pre></td>	
+</tr>	 
+</table>
 
 Steg
 ----
+Eit steg er kvar instruksjon i test-prosedyren.
 
-Eit steg er kvar instruksjon i test-prosedyren. Den består av fleire
-underelement: 
-- [stegnr](#stegnr)
-- [spm](#spørsmål--instruksjon) 
-- [ht - Hjelpetekst](#hjelpetekst)
-- [type](#type) 
-- [kilde](#kilde)
-- [ruting](#ruting)
+<table>
+<tr>
+	<th>Felt</th>
+	<th>Type</th>
+	<th>Omtale</th>
+	<th>Eksempel</th>
+</tr>
+<tr>
+ 	<td>stegnr</td>
+	<td>string</td>
+ 	<td>Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må
+være unik innanfor same testregel og skal vere på formatet «tal.tal»</td>
+ 	<td><pre lang="json">"stegnr": "3.1"</pre></td>	
+</tr>
+ <tr>
+ 	<td>spm</td>
+	<td>string</td>
+ 	<td>Spørsmål / instruksjon forklarar kva testaren skal svare på eller gjere.</td>
+ 	<td><pre lang="json">"spm": "Inneheld feilmeldinga tekst?"</pre></td>	
+</tr>
+ <tr>
+ 	<td>type</td>
+	<td>string</td>
+ 	<td><p><a href="#type">Type steg.</a> Et steg kan vere av desse typane :</p><ul>
+		<li>jaNei</li>
+		<li>radio</li>
+		<li>tekst</li>
+		<li>instruksjon</li>
+	</ul> 
+</td>
+ 	<td><pre lang="json">"type": "jaNei"</pre></td>	
+</tr>
+<tr>
+ 	<td>kilde</td>
+	<td>Array[string]</td>
+ 	<td>Kilde er kva kjelder eit steg bygger på. Eit steg kan bygge på fleire
+kjelder.</td>
+ 	<td><pre lang="json">"kilde": ["G131", "G167", "H44"]</pre></td>	
+</tr>
+</tr>
+ <tr>
+ <td>ruting</td>
+ <td>Ruting</td>
+ <td>Steget sin <a href="#ruting">ruting.</a></td>
+ <td><pre lang="json">"ruting": {
+              "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+               "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }</pre></td>	
+</tr>
+
+</table>
 
 I tilegg finnes desse spesialfelta:
 - label
@@ -94,9 +152,7 @@ I tilegg finnes desse spesialfelta:
 - svararray
 
 
-Dei ulike typane er forklart under.
-
-Eksempel på steg
+## Eksempel på steg
 
 ```json
 {
@@ -118,43 +174,9 @@ Eksempel på steg
 }
 ```
 
-### Stegnr
-Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må
-være unik innanfor same testregel og skal vere på formatet «tal.tal»
-#### Eksempel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"stegnr": "3.1"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-### Spørsmål / Instruksjon
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"spm": "Inneheld feilmeldinga tekst som identifiserer kvar feilen har oppstått?"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Spørsmål / instruksjon forklarar kva testaren skal svare på eller gjere.
-
-### Hjelpetekst
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- "ht": "Feilmeldinga må innehalde informasjon som identifiserer skjemaelementet som feilutfylt."
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Hjelpetekst er støtte eller inneheld oppklarande informasjon til spørsmål /
-instruksjon på eit steg.
 
 ### Type
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"type": "jaNei"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Type steg. Et steg kan vere av desse typane : 
-- jaNei 
-- radio 
-- tekst 
-- instruksjon
-
 #### Ekstra eigenskapar for type tekst
 ##### Multilinje
 Type: boolean
@@ -176,17 +198,6 @@ Type: string
 | Verdi |Omtale   | Eksempel |
 |---|---|---|
 |  Sideutvalg |  Tekstfeltet skal ha autocomplete på sideutvalg. |  `"datalist": "Sideutvalg"`|
-
-### Kilde
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"kilde": ["G131", "G167", "H44"]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Type: Array
-
-Kilde er kva kjelder eit steg bygger på. Eit steg kan bygge på fleire
-kjelder.
 
 ### Ruting
 Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, som er nærare omtalt i dette kapitelet.
@@ -274,11 +285,11 @@ Det kan òg nyttast reglar til å gje ein meir kraftig ruting. [Meir om dei ulik
 ## Delutfall
 Delutfall er når du har behov får lage et mellombels resultat som du til slutt set saman til eit endeleg utfall. Dette er særleg aktuelt der det er mange måtar å oppfylle kravet på og alle skal verifiserast i same testregel. 
 
-| Felt |Omtale   | Eksempel |
-|---|---|---|
-|  nr |  Unikt tal for delutfall. Dersom det samme talet brukes i flere etterfølgende steg skal delutfallet overskrives. |  `"nr": 0`|
-|  fasit | Fasit for delutfallet. {Ja, Nei,Ikkje testbart, Ikkje forekomst} |  `"fasit": "Ja"`|
-|  tekst | Innhald / tekstleg omtalte av delutfallet. |  `"tekst": "Bilde-CAPTCHA har ikkje alt-attributt."`|
+| Felt  | Type | Omtale | Eksempel |
+|---|---|---|---|
+|  nr     | number |  Unikt tal for delutfall. Dersom det samme talet brukes i flere etterfølgende steg skal delutfallet overskrives. |  <pre lang="json">"nr": 0</pre>|
+|  fasit  | string | Fasit for delutfallet. {Ja, Nei,Ikkje testbart, Ikkje forekomst} |  <pre lang="json">"fasit": "Ja"</pre>|
+|  tekst  | string | Innhald / tekstleg omtalte av delutfallet. | <pre lang="json">"tekst": "Bilde-CAPTCHA har ikkje alt-attributt."</pre>|
 
 ### Sette delutfall
 
