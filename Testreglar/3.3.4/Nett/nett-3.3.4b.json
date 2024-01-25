@@ -1,0 +1,210 @@
+{
+	"namn": "3.3.4b Brukaren kan bekrefte eller angre sletting av lagra informasjon",
+	"id": "3.3.4b",
+	"testlabId": 223,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar:</p>\r\n<p>Det skal vere mogleg å</p>\r\n<ul>\r\n<li>anten bekrefte sletting</li>\r\n<li>eller angre etter sletting av lagra informasjon frå skjema med viktige formål.</li>\r\n</ul>\r\n<p>Ein av følgande må vere oppfylt: </p>\r\n<ul>\r\n<li>Før sletting får brukaren krav om å stadfeste at ein har til formål å slette informasjonen.</li>\r\n<li>Etter innsending let det seg gjere å angre slettinga.</li>\r\n</ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du på?",
+			"ht": "Oppgi URL eller side-ID.",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettsida fuksjonalitet for sletting av brukarstyrt data?",
+			"ht": "Testsida skal innehalde funksjonalitet for å slette brukarstyrte data.",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje skjema med funksjonalitet for sletting av brukarstyrte data."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv skjemaet/prosessen",
+			"ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
+			"type": "tekst",
+			"label": "Skjema/prosess:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Prøv å slette lagra informasjon.",
+			"ht": "Prøv å slette lagra informasjon fra skjemaet/området.",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Finst det ein eigen mekanisme for å bekrefte at du har til hensikt å slette informasjonen?",
+			"ht": "Førespurnaden om å bekrefte skal informere brukaren om kva handling dei er i ferd med å gjennomføre og kva konsekvensar det vil få. Mekanismen kan vere for eksempel ein avkryssingsboks eller lignande eller ein eigen knapp for å fortsette sletting.Ledeteksten til mekanismen kan for eksempel vere\"Eg bekreftar sletting\"\"Eg ønskjer å slette informasjonen\"\"Fortsett\"",
+			"type": "jaNei",
+			"kilde": [
+				"G155",
+				"G168"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.6",
+					"delutfall": {
+						"nr": 1,
+						"fasit": "Nei",
+						"tekst": "Skjema/område manglar mekanisme for å bekrefte sletting av informasjon."
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er mekanismen separat frå knappen for å gjennomføre sletting?",
+			"ht": "Mekanismen og knappen for å slette skal vere to separate element. Det er ikkje mogleg å kombinere desse to, og ein knapp med teksten for eksempel «bekreft og slett» er ikkje tilstrekkeleg. ",
+			"type": "jaNei",
+			"kilde": [
+				"G155"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.6",
+					"nr": 1,
+					"delutfall": {
+						"nr": 1,
+						"fasit": "Nei",
+						"tekst": "Skjema/område har ein mekanisme for å bekrefte sletting av informasjon, som ikkje er skilt frå mekanismen for å gjennomføre sletting."
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Får du til å slette utan å krysse av/velje mekanismen?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"G155"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6",
+					"nr": 1,
+					"delutfall": {
+						"nr": 1,
+						"fasit": "Nei",
+						"tekst": "Skjema/område har funksjonalitet for sletting av data som brukaren har lagt inn. Sletting av data kan gjennomførast utan bekrefting."
+					}
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Skjema/område har funksjonalitet for sletting av data som brukaren har lagt inn. Sletting av data kan ikkje gjennomførast utan bekrefting."
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Gjennomfør sletting av informasjonen.",
+			"ht": "",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Finst det ein mekanisme for å angre sletting?",
+			"ht": "Mekanismen kan vere for eksempel ein eigen knapp for å angre sletting.",
+			"type": "jaNei",
+			"kilde": [
+				"G99"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(1) Det er ikkje mogleg å angre sletting av data."
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Angre sletting.",
+			"ht": "Bruk mekanismen, eller følg ei eventuell rutine for å angre sletting.",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				}
+			}
+		},
+		{
+			"stegnr": "3.12",
+			"spm": "Vart informasjonen gjenoppretta?",
+			"ht": "Kontroller at du fikk gjenskapt same informasjon som du sletta i utgangspunktet.",
+			"type": "jaNei",
+			"kilde": [],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Skjema/område har funksjonalitet for sletting av data som brukaren har lagt inn. Det er mogleg å angre sletting av data."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(1) Mekanisme for å angre sletting av data fungerer ikkje."
+				}
+			}
+		}
+	]
+}
