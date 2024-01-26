@@ -74,7 +74,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Er den visuelle overskriften kodet som overskrift?",
-			"ht": "<p>Bruk skjermleser for å sjekke om den visuelle overskriften kodet som overskrift.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser</li>\n<li>Åpne appsiden</li>\n<li>Trykk på overskriften du tester</li>\n<li>Sjekk om skjermleser leser den opp som overskrift</li>\n</ul>\n<p><strong>Merk: </strong>Dersom teksten ikke leses opp som overskrift, er den ikke kodet som overskrift.</p>\n<p></p>",
+			"ht": "<p>Bruk skjermleser for å sjekke om den visuelle overskriften kodet som overskrift.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser</li>\n<li>Åpne appsiden</li>\n<li>Trykk på eller sveip til overskriften du tester</li>\n<li>Sjekk om skjermleser leser den opp som overskrift</li>\n</ul>\n<p><strong>Merk: </strong>Dersom teksten ikke leses opp som overskrift, er den ikke kodet som overskrift.</p>\n<p> </p>",
 			"type": "jaNei",
 			"kilde": [
 				"F2",
