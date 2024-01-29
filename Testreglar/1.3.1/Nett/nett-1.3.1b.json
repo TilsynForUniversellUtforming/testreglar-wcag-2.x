@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Innhold og relasjoner i visuelle tabeller er korrekt kodet med:</p>\r\n<ul>\r\n<li>Rolle tabell</li>\r\n<li>Tabelltittel</li>\r\n<li>Overskriftsceller\r\n<ul>\r\n<li>Tabeller med overskrift i kun en rad eller kolonne</li>\r\n<li>Tabeller med overskriftsceller i både kolonne og rad</li>\r\n<li>Tabeller med overskriftsceller som er felles for flere kolonner og/eller rader inne i samme tabell</li>\r\n</ul>\r\n</li>\r\n<li>Tabell brukt til layout skal kodes slik at den ignoreres av hjelpemiddelteknologi</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul>\r\n<li>Innhold og relasjoner i visuelle datatabeller er korrekt kodet med rolle tabell, samt tabelltittel og overskriftsceller, der dette finnes</li>\r\n<li>Tabeller brukt til layout skal kodes slik at de ignoreres av hjelpemiddelteknologi</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -446,13 +446,13 @@
 		{
 			"stegnr": "3.20",
 			"spm": "Er tabellen kodet slik at den ignoreres av hjelpemiddelteknologi?",
-			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser tabellen i nettleseren</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Checker\n<ul>\n<li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li>\n</ul>\n</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om tabellen er kodet med et av følgende attributter:</p>\n<ul>\n<li><code>role=\"presentation\"</code></li>\n<li><code>role=\"none\"</code></li>\n<li><code>aria-hidden=\"true\"</code></li>\n</ul>\n<p></p>",
+			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser tabellen i nettleseren</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Checker\n<ul>\n<li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li>\n</ul>\n</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om tabellen er kodet med et av følgende attributter:</p>\n<ul>\n<li><code>role=\"presentation\"</code></li>\n<li><code>role=\"none\"</code></li>\n<li><code>aria-hidden=\"true\"</code></li>\n</ul>\n<p> </p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Tabell er kodet slik at den ignoreres av hjelpemiddelteknologi."
+					"utfall": "Datatabell er kodet slik at den ignoreres av hjelpemiddelteknologi."
 				},
 				"nei": {
 					"type": "gaaTil",
