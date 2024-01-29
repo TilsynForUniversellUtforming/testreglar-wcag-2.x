@@ -65,6 +65,7 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
+					"utfall": "Det finnes ikke klikkbart område i bilde.",
 					"element": "3.1"
 				}
 			}

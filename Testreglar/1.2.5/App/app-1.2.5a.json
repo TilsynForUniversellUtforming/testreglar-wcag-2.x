@@ -4,7 +4,7 @@
 	"testlabId": 407,
 	"versjon": "1.0",
 	"type": "App",
-	"spraak": "",
+	"spraak": "nb",
 	"kravTilSamsvar": "<p>Det gis tilgang til synstolking for forhåndsinnspilt <br>video med lyd i synkroniserte medier, der</p>\r\n<ul>\r\n<li>Viktig visuell informasjon blir formidlet i det originale lydsporet i videoen eller</li>\r\n<li>Viktig visuell informasjon blir formidlet i et separat lydspor til videoen og\r\n<ul>\r\n<li>Det er mulig å spille av, samt slå på og av synstolkingen og</li>\r\n<li>Viktig visuell informasjon er tilstrekkelig beskrevet, i rett rekkefølge og</li>\r\n<li>Synstolkingen forstyrrer ikke den originale lyden i videoen eller</li>\r\n</ul>\r\n</li>\r\n<li>Viktig visuell informasjon blir formidlet med en kombinasjon av ulike typer synstolking og\r\n<ul>\r\n<li>Det er mulig å spille av, samt slå på og av synstolkingen og</li>\r\n<li>Viktig visuell informasjon er tilstrekkelig beskrevet, i rett rekkefølge og</li>\r\n<li>Synstolkingen forstyrrer ikke den originale lyden i videoen</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
@@ -46,14 +46,13 @@
 			"spm": "Skriv inn tittel på videoen",
 			"ht": "<p>Legg inn tittel på video eller stikkord om innholdet, dersom tittel mangler. Hvis det gjelder flere elementer, registrerer du et og et.</p>",
 			"type": "tekst",
-			"kilde": [],
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
 					"steg": "3.2"
 				}
 			},
-			"label": "",
+			"label": "Tittel på video:",
 			"multilinje": true
 		},
 		{
@@ -95,14 +94,13 @@
 			"spm": "Registrer stikkprøvene du skal teste med tidsstempel.",
 			"ht": "<p>Du skal ta minst to stikkprøver, for eksempel en i starten, samt en midten eller en slutten av videoen. Du vurderer selv hvor lange stikkprøvene bør være, ut fra lengden på den aktuelle videoen. </p>\n<p>Registrer en og en stikkprøve med tidsstempel (mm:ss), for eksempel 05:30-06:25. Dette er fordi det er nyttig å vite hvilke deler av videoen som er testet/vurdert. </p>",
 			"type": "tekst",
-			"kilde": [],
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
 					"steg": "3.5"
 				}
 			},
-			"label": "",
+			"label": "Stikkprøver:",
 			"multilinje": true
 		},
 		{
