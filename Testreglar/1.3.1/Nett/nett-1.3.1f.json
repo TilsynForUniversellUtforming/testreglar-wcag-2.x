@@ -340,12 +340,12 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Visuell datakode er korrekt kodet."
+					"utfall": "Visuell datakode er kodet korrekt."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Visuell datakode er ikke korrekt kodet."
+					"utfall": "Visuell datakode er ikke kodet korrekt."
 				}
 			}
 		}
