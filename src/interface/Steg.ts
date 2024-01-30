@@ -1,34 +1,30 @@
-import { Handling } from "./Handling"
+import { RutingTriggere } from "./RutingTriggere"
 
 export interface Steg  {
+  /** Stegnr */
   stegnr: string,
+  /** Spørsmål på steget*/
   spm: string,
+  /** Hjelpetekst */
   ht: string,
+  /** Type steg */
   type: StegType,
+  /** Ruting  */
   ruting: RutingTriggere
+  /** Label (For felt som trenger label) */
   label?: string,
+  /** Svar array for radioknapper / steg med egendefinerte valg */
   svararray?:Array<string>,
+  /** url til bilde (For bilde som hjelp) */
   image?:string,
+  /** Multilinje (For steg av typen tekst som krever lengre innput) */
   multilinje?:boolean,
+  /** Filter for tekstinput */
   filter?:string,
-  datalist?:string
+  /** For å koble tekstfelt til en dataliste */
+  datalist?:DataListeTyper
 }
 
 export type StegType = "jaNei" | "radio" | "tekst" | "instruksjon"
-
-export type RutingTriggere = {
-  ja:Handling,
-  nei:Handling,
-  alle:Handling,
-  alt0:Handling,
-  alt1:Handling,
-  alt2:Handling,
-  alt3:Handling,
-  alt4:Handling,
-  alt5:Handling,
-  alt6:Handling,
-  alt7:Handling,
-  alt8:Handling,
-  alt9:Handling,
-  alt10:Handling
-}
+export type DataListeTyper = "Sideutvalg" ;
+export type FilterTyper = "tal" ;
