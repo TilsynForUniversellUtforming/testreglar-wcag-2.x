@@ -1,6 +1,11 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as glob from 'glob';
+import { Testregel } from '../src/interface/Testregel' ;
+import { Steg } from '../src/interface/Steg';
+import { Regel } from '../src/interface/Regel';
+import { Handling } from '../src/interface/Handling';
+
 
 // Få listen over JSON-filer rekursivt i mappen
 const dataFolder = './Testreglar';
@@ -73,24 +78,28 @@ files.forEach(file => {
 
       if (steg.type === "tekst") {
         expect(steg.label).toBeDefined();
-        expect(steg.label.length).toBeGreaterThan(0);
+        expect(steg.label?.length).toBeGreaterThan(0);
       }
     });
 
     test(`${file} har gyldig ruting på steg ${steg.stegnr}`, () => {
       expect(Object.keys(steg.ruting).length).toBeGreaterThan(0);
 
-      Object.entries(steg.ruting).forEach((ruting) => {
-        expect(ruting[1].type).toMatch(/(gaaTil|regler|avslutt|ikkjeForekomst)/i);
-        if (ruting[1].type === "gaaTil") {
-          expect(stegFinst(ruting[1].steg, testregel.steg)).toBe(true);
-        } else if (ruting[1].type === "regler") {
-          expect(ruting[1].regler).toBeDefined();
-          vurderRegel(ruting[1].regler, testregel.steg);
-        } else if (ruting[1].type === "avslutt") {
-          vurderRutingAvslutt(ruting[1]);
-        } else if (ruting[1].type === "ikkjeForekomst") {
-          vurderRutingIkkjeForekomst(ruting[1]);
+      Object.entries(steg.ruting).forEach((ruting:[string,Handling]) => {
+        const handling:Handling = ruting[1] ;
+        expect(handling.type).toMatch(/(gaaTil|regler|avslutt|ikkjeForekomst)/i);
+        if (handling.type === "gaaTil") {
+          expect(handling.steg).toBeDefined;
+          if(typeof(handling.steg)!=="undefined"){
+            expect(stegFinst(handling.steg, testregel.steg)).toBe(true);
+          }
+        } else if (handling.type === "regler") {
+          expect(handling.regler).toBeDefined();
+          vurderRegel(handling.regler, testregel.steg);
+        } else if (handling.type === "avslutt") {
+          vurderRutingAvslutt(handling);
+        } else if (handling.type === "ikkjeForekomst") {
+          vurderRutingIkkjeForekomst(handling);
         }
 
       });
@@ -108,20 +117,25 @@ function vurderRegel(reglar, testregelSteg: Array<Steg>) {
   const reglarArray: Array<Regel> = Object.values(reglar);
   expect(reglarArray.length).toBeGreaterThan(0);
   reglarArray.forEach((regel: Regel) => {
+    expect(regel.type).toBeDefined();
+    expect(regel.type).toMatch(/(lik|ulik|mellom|talDersom|vurderDelutfall)/i);
     expect(regel.handling).toBeDefined();
     expect(regel.handling.type).toBeDefined();
     expect(regel.handling.type).toMatch(/(gaaTil|regler|avslutt|ikkjeForekomst)/i);
 
+
     if (regel.handling.type === "gaaTil") {
       expect(regel.handling.steg).toBeDefined();
-      expect(regel.handling.steg.length).toBeGreaterThan(0);
-      expect(stegFinst(regel.handling.steg, testregelSteg)).toBe(true);
+      if(typeof(regel.handling.steg)!=="undefined"){
+        expect(regel.handling.steg.length).toBeGreaterThan(0);
+        expect(stegFinst(regel.handling.steg, testregelSteg)).toBe(true);
+      }
     } else if (regel.handling.type === "regler") {
       expect(regel.handling.regler).toBeDefined();
       vurderRegel(regel.handling.regler, testregelSteg);
     } else if (regel.handling.type === "avslutt") {
       vurderRutingAvslutt(regel.handling);
-    } else if(regel.handling.type ==="ikkjeForekomst"){
+    } else if (regel.handling.type === "ikkjeForekomst") {
       vurderRutingIkkjeForekomst(regel.handling);
     }
   });
@@ -168,38 +182,4 @@ function vurderRutingAvslutt(rutningAvslutt) {
 function vurderRutingIkkjeForekomst(runtingIkkjeForekomst) {
   expect(runtingIkkjeForekomst.utfall).toBeDefined();
   expect(runtingIkkjeForekomst.utfall.length).toBeGreaterThan(0);
-}
-
-type Testregel = {
-  namn: string,
-  id: string;
-  testlabId: number,
-  type: string;
-  spraak: string;
-  kravTilSamsvar: string;
-  side: string;
-  element: string;
-  steg: Array<Steg>;
-}
-
-type Steg = {
-  stegnr: string,
-  spm: string,
-  ht: string,
-  type: string,
-  label: string,
-  ruting: object
-}
-
-type Regel = {
-  type: string
-  handling: Handling
-  regler: Array<Regel>
-}
-
-type Handling = {
-  type: string
-  gaaTil: string
-  regler: Array<Regel>
-  steg: string
 }
