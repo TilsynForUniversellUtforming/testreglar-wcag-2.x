@@ -7,6 +7,7 @@ Reglar for ruting er reglar du kan nytte i ein testregel for å legge på vilkå
 - [Ulik](#ulik)
 - [Mellom](#mellom)
 - [Tal dersom](#tal-dersom)
+- [Vurder delutfall](#vurder-delutfall)
 
 ## Lik
 Ein lik regel sjekkar om eit svar frå eit Steg.svar er lik ein gitt verdi (sann) og utfører då ei handling.
@@ -143,6 +144,45 @@ Følgjande parameter må settast.
 - "mellom2" :tall svar Den høgaste veriden av tal svar som ska utløyse regelen.
 - "handling" : ["Handling"] Kva handling som regelen, dersom tal steg med lik verdi er mellom "mellom1" og "mellom2"
 
+## Vurder delutfall
+
+Sjekkar eit delutfall og utfører handling basert på det. 
+
+### Eksempel
+```Json
+"ruting": {
+				"ja": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"type": "vurderDelutfall",
+							"id": 0,
+							"verdi": "Nei",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Nei",
+								"utfall": "#delutfall(0)"
+							}
+						},
+						"2": {
+							"type": "vurderDelutfall",
+							"id": 0,
+							"verdi": "Ja",
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Tabelltittel identifiserer innhaldet i tabellen. #delutfall(0)"
+							}
+						}
+					}
+				},
+```
+
+### Parameter
+- "type": "vurderDelutfall"
+- "id" :  id til delutfall som skal vurderast
+- "verdi": Kva verdi delutfall skal matchast opp i mot. (Ja,Nei,Ikkje testbart, Ikkje forekomst)
+- "handling" : ["Handling"] Kva handling som regelen, dersom sann, skal uløyse.
 
 # Eksempel med fleire ruting-reglar
 ```JSON
