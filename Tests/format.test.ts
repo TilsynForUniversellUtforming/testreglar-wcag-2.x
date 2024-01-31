@@ -108,7 +108,9 @@ files.forEach(file => {
           }
         } else if (handling.type === "regler") {
           expect(handling.regler).toBeDefined();
+          if(typeof(handling.regler)==="object"){
           vurderRegel(handling.regler, testregel.steg);
+          }
         } else if (handling.type === "avslutt") {
           vurderRutingAvslutt(handling);
         } else if (handling.type === "ikkjeForekomst") {
@@ -125,7 +127,7 @@ files.forEach(file => {
  * @param reglar Reglar
  * @param testregelSteg Steg i testregel
  */
-function vurderRegel(reglar, testregelSteg: Array<Steg>) {
+function vurderRegel(reglar:{[regelnr:number]:Regel}, testregelSteg: Array<Steg>) {
   expect(reglar).toBeDefined;
   const reglarArray: Array<Regel> = Object.values(reglar);
   expect(reglarArray.length).toBeGreaterThan(0);
@@ -145,7 +147,9 @@ function vurderRegel(reglar, testregelSteg: Array<Steg>) {
       }
     } else if (regel.handling.type === "regler") {
       expect(regel.handling.regler).toBeDefined();
-      vurderRegel(regel.handling.regler, testregelSteg);
+      if(typeof(regel.handling.regler)==="object"){
+        vurderRegel(regel.handling.regler, testregelSteg);
+      }
     } else if (regel.handling.type === "avslutt") {
       vurderRutingAvslutt(regel.handling);
     } else if (regel.handling.type === "ikkjeForekomst") {
