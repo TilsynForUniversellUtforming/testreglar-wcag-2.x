@@ -1,8 +1,6 @@
 import { Delutfall } from "./Delutfall";
 import { Regel } from "./Regel"
 
-
-
 export type Handling = HandlingGaaTil | HandlingikkjeForekomst | HandlingAvslutt | HandlingRegler;
 
 /**

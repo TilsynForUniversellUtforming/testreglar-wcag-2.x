@@ -1,6 +1,9 @@
 import { DelutfallFasitTyper } from "./Delutfall";
 import { Handling } from "./Handling"
 
+/**
+ * Regler for ruting
+ */
 export type Regel = RegelLik | RegelUlik | RegelMellom | RegelTalDersom | RegelVurderDelutfall;
 
 /**  Ein lik regel sjekkar om eit svar frå eit Steg.svar er lik ein gitt verdi (sann) og utfører då ei handling. */
@@ -52,7 +55,7 @@ export interface RegelTalDersom {
     /** Den lågaste verdien av tal svar som skal utløyse regelen. */
     mellom1: number
     /** Den høgaste verdien av tal svar som ska utløyse regelen. */
-    mellom2_number
+    mellom2: number
     /** Handling som skal utløses av reglen */
     handling: Handling
 }
