@@ -98,7 +98,7 @@ files.forEach(file => {
 
       Object.entries(steg.ruting).forEach((ruting: [string, Handling]) => {
         const rutingTrigger = ruting[0];
-        expect(rutingTrigger).toMatch(/(ja|nei|alle|alt0|alt1|alt2|alt3|alt4|alt5|alt5|alt6|alt7|alt8|alt9|alt10)/i);
+        expect(rutingTrigger).toMatch(/(ja|nei|alle|alt0|alt1|alt2|alt3|alt4|alt5|alt5|alt6|alt7|alt8|alt9|alt10|alt11|alt12)/i);
 
         const handling: Handling = ruting[1];
         expect(handling.type).toMatch(/(gaaTil|regler|avslutt|ikkjeForekomst)/i);
