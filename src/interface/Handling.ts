@@ -26,19 +26,19 @@ export interface HandlingikkjeForekomst {
 }
 
 /**
- * Handling for avslutte
+ * Handling for å avslutte / oppsummere ein test
  */
 export interface HandlingAvslutt {
     /** Type handling */
     type: "avslutt"
     /** Fasit */
     fasit: HandlingFasitTyper
-    /** Tekstleg utfall */
+    /** Utfall */
     utfall: HandlingUtfallTyper
 }
 
 /**
- * Handling for å vurder input med regler
+ * Handling for å vurdere input med regler
  */
 export interface HandlingRegler {
     /** Type handling */
@@ -48,7 +48,7 @@ export interface HandlingRegler {
 }
 
 /**
- * For HandlingAvslut som skal ha eget utfall etter ja og nei på delutfall.
+ * For HandlingAvslutt som skal ha eget utfall etter ja og nei på delutfall.
  */
 export interface HandlingUtfallTJaNeiTyper {
     /** Utfall når fasit er ja*/
