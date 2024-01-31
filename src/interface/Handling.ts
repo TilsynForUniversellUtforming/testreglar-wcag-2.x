@@ -7,6 +7,7 @@ export type Handling = HandlingGaaTil | HandlingikkjeForekomst | HandlingAvslutt
  * Handling for å gå til steg
  */
 export interface HandlingGaaTil {
+    /** Type handling */
     type: "gaaTil"
     /** Referanse til stegnr det skal rutes til */
     steg: string,
@@ -18,6 +19,7 @@ export interface HandlingGaaTil {
  * Handling for å sette ikkje forekomst
  */
 export interface HandlingikkjeForekomst {
+    /** Type handling */
     type: "ikkjeForekomst"
     /** Tekstleg utfall */
     utfall: string
@@ -27,20 +29,33 @@ export interface HandlingikkjeForekomst {
  * Handling for avslutte
  */
 export interface HandlingAvslutt {
+    /** Type handling */
     type: "avslutt"
     /** Fasit */
-    fasit: FasitTyperHandling
+    fasit: HandlingFasitTyper
     /** Tekstleg utfall */
-    utfall: string
+    utfall: HandlingUtfallTyper
 }
 
 /**
  * Handling for å vurder input med regler
  */
 export interface HandlingRegler {
+    /** Type handling */
     type: "regler"
     /** Regler */
     regler: { [regelId: string]: Regel }
 }
 
-export type FasitTyperHandling = "Ja" | "Nei" | "Ikkje testbart";
+/**
+ * For HandlingAvslut som skal ha eget utfall etter ja og nei på delutfall.
+ */
+export interface HandlingUtfallTJaNeiTyper {
+    /** Utfall når fasit er ja*/
+    ja: string,
+    /** Utfall når fasit er nei */
+    nei: string
+}
+
+export type HandlingFasitTyper = "Ja" | "Nei" | "Ikkje testbart" | "sjekkDelutfall";
+export type HandlingUtfallTyper = string | HandlingUtfallTJaNeiTyper ;
