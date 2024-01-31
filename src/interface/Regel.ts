@@ -52,7 +52,7 @@ export interface RegelTalDersom {
     /** Den lågaste verdien av tal svar som skal utløyse regelen. */
     mellom1: number
     /** Den høgaste verdien av tal svar som ska utløyse regelen. */
-    mellom2_number
+    mellom2: number
     /** Handling som skal utløses av reglen */
     handling: Handling
 }
