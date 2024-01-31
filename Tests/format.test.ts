@@ -80,12 +80,25 @@ files.forEach(file => {
         expect(steg.label).toBeDefined();
         expect(steg.label?.length).toBeGreaterThan(0);
       }
+
+      if(typeof(steg.filter)!=="undefined"){
+        expect(steg.filter).toMatch(/(tal)/i);
+      }
+
+      if(typeof(steg.datalist)!=="undefined"){
+        expect(steg.datalist).toMatch(/(side)/i);
+      }
+
+
     });
 
     test(`${file} har gyldig ruting på steg ${steg.stegnr}`, () => {
       expect(Object.keys(steg.ruting).length).toBeGreaterThan(0);
 
       Object.entries(steg.ruting).forEach((ruting:[string,Handling]) => {
+        const rutingTrigger = ruting[0] ;
+        expect(rutingTrigger).toMatch(/(ja|nei|alle|alt0|alt1|alt2|alt3|alt4|alt5|alt5|alt6|alt7|alt8|alt9|alt10)/i); 
+
         const handling:Handling = ruting[1] ;
         expect(handling.type).toMatch(/(gaaTil|regler|avslutt|ikkjeForekomst)/i);
         if (handling.type === "gaaTil") {
@@ -95,7 +108,9 @@ files.forEach(file => {
           }
         } else if (handling.type === "regler") {
           expect(handling.regler).toBeDefined();
+          if(typeof(handling.regler)==="object"){
           vurderRegel(handling.regler, testregel.steg);
+          }
         } else if (handling.type === "avslutt") {
           vurderRutingAvslutt(handling);
         } else if (handling.type === "ikkjeForekomst") {
@@ -112,7 +127,7 @@ files.forEach(file => {
  * @param reglar Reglar
  * @param testregelSteg Steg i testregel
  */
-function vurderRegel(reglar, testregelSteg: Array<Steg>) {
+function vurderRegel(reglar:{[regelnr:number]:Regel}, testregelSteg: Array<Steg>) {
   expect(reglar).toBeDefined;
   const reglarArray: Array<Regel> = Object.values(reglar);
   expect(reglarArray.length).toBeGreaterThan(0);
@@ -132,7 +147,9 @@ function vurderRegel(reglar, testregelSteg: Array<Steg>) {
       }
     } else if (regel.handling.type === "regler") {
       expect(regel.handling.regler).toBeDefined();
-      vurderRegel(regel.handling.regler, testregelSteg);
+      if(typeof(regel.handling.regler)==="object"){
+        vurderRegel(regel.handling.regler, testregelSteg);
+      }
     } else if (regel.handling.type === "avslutt") {
       vurderRutingAvslutt(regel.handling);
     } else if (regel.handling.type === "ikkjeForekomst") {

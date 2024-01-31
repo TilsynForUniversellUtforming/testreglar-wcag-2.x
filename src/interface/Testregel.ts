@@ -4,24 +4,24 @@ import { Steg } from "./Steg";
  * Testregel
  */
 export interface Testregel {
-  // Namn på testreglen
+  /**  Namn på testreglen */ 
   namn: string,
-  // Id på testreglen
+  /** Id på testreglen */
   id: string;
-  // TestlabId
+  /** TestlabId */
   testlabId: number,
-  // Versjon
+  /** Versjon */
   versjon:string,
-  // Type
+  /** Type */
   type: string;
-  // Språk
+  /** Språk */
   spraak: string;
-  // Krav til samsvar
+  /** Krav til samsvar */
   kravTilSamsvar: string;
-  // Stegreferanse til element med side
+  /** Stegreferanse til element med side */
   side: string;
-  // Stegreferanse til element med side
+  /** Stegreferanse til element med side */
   element: string;
-  // Steg
+  /** Samling med Steg */
   steg: Array<Steg>;
 }
