@@ -141,7 +141,7 @@ Følgjande parameter må settast.
 - "type" : "talDersom" Spesifiserer at det er snakk om ein "tal dersom"-regel.
 - "verdi" : Verdi som svar skal vere lik for å teljast med.
 - "mellom1" :tal svar  Den lågaste verdien av tal svar som skal utløyse regelen.
-- "mellom2" :tall svar Den høgaste veriden av tal svar som ska utløyse regelen.
+- "mellom2" :tall svar Den høgaste verdien av tal svar som ska utløyse regelen.
 - "handling" : ["Handling"] Kva handling som regelen, dersom tal steg med lik verdi er mellom "mellom1" og "mellom2"
 
 ## Vurder delutfall
