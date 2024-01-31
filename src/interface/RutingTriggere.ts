@@ -22,4 +22,6 @@ export interface RutingTriggere  {
   alt8?:Handling,
   alt9?:Handling,
   alt10?:Handling
+  alt11?:Handling
+  alt12?:Handling
 }
