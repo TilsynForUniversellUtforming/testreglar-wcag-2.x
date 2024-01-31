@@ -1,5 +1,8 @@
 import { Handling } from "./Handling";
 
+/**
+ * Ruting-triggere i et steg
+ */
 export interface RutingTriggere  {
   // Ja
   ja?:Handling,

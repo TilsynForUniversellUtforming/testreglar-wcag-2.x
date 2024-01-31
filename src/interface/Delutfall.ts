@@ -1,3 +1,6 @@
+/**
+ * Delutfall i en testregel
+ */
 export interface Delutfall {
     /** Nummer på delutfall (unik) */
     nr:number

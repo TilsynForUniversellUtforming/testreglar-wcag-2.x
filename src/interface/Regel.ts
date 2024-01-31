@@ -1,6 +1,9 @@
 import { DelutfallFasitTyper } from "./Delutfall";
 import { Handling } from "./Handling"
 
+/**
+ * Regler for ruting
+ */
 export type Regel = RegelLik | RegelUlik | RegelMellom | RegelTalDersom | RegelVurderDelutfall;
 
 /**  Ein lik regel sjekkar om eit svar frå eit Steg.svar er lik ein gitt verdi (sann) og utfører då ei handling. */
