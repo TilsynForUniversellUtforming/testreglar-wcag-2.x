@@ -76,20 +76,21 @@ files.forEach(file => {
       expect(steg.type).toBeDefined();
       expect(steg.type).toMatch(/(jaNei|radio|tekst|instruksjon)/i);
 
+      if(typeof(steg.kilde)!=="undefined") {
+        expect(typeof(steg.kilde)).toEqual("object");
+      }
+
       if (steg.type === "tekst") {
         expect(steg.label).toBeDefined();
         expect(steg.label?.length).toBeGreaterThan(0);
+        if (typeof (steg.filter) !== "undefined") {
+          expect(steg.filter).toMatch(/(tal)/i);
+        }
+
+        if (typeof (steg.datalist) !== "undefined") {
+          expect(steg.datalist).toMatch(/(side)/i);
+        }
       }
-
-      if (typeof (steg.filter) !== "undefined") {
-        expect(steg.filter).toMatch(/(tal)/i);
-      }
-
-      if (typeof (steg.datalist) !== "undefined") {
-        expect(steg.datalist).toMatch(/(side)/i);
-      }
-
-
     });
 
     test(`${file} har gyldig ruting på steg ${steg.stegnr}`, () => {
@@ -108,7 +109,9 @@ files.forEach(file => {
           }
         } else if (handling.type === "regler") {
           expect(handling.regler).toBeDefined();
+          expect(handling.regler).toBeInstanceOf(Object);
           if (typeof (handling.regler) === "object") {
+            expect(Object.keys(handling.regler).length).toBeGreaterThan(0);
             vurderRegel(handling.regler, testregel.steg);
           }
         } else if (handling.type === "avslutt") {
