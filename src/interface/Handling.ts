@@ -38,7 +38,7 @@ export type Handling = HandlingGaaTil | HandlingikkjeForekomst | HandlingAvslutt
    */
   export interface HandlingRegler  {
     type: "regler"
-    regler:{[regelnr:number]:Regel}
+    regler:{[regelId:string]:Regel}
   }
 
   export type FasitTyperHandling = "Ja" | "Nei" | "Ikkje testbart";

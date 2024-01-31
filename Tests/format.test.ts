@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as glob from 'glob';
-import { Testregel } from '../src/interface/Testregel' ;
+import { Testregel } from '../src/interface/Testregel';
 import { Steg } from '../src/interface/Steg';
 import { Regel } from '../src/interface/Regel';
 import { Handling } from '../src/interface/Handling';
@@ -81,11 +81,11 @@ files.forEach(file => {
         expect(steg.label?.length).toBeGreaterThan(0);
       }
 
-      if(typeof(steg.filter)!=="undefined"){
+      if (typeof (steg.filter) !== "undefined") {
         expect(steg.filter).toMatch(/(tal)/i);
       }
 
-      if(typeof(steg.datalist)!=="undefined"){
+      if (typeof (steg.datalist) !== "undefined") {
         expect(steg.datalist).toMatch(/(side)/i);
       }
 
@@ -95,21 +95,21 @@ files.forEach(file => {
     test(`${file} har gyldig ruting på steg ${steg.stegnr}`, () => {
       expect(Object.keys(steg.ruting).length).toBeGreaterThan(0);
 
-      Object.entries(steg.ruting).forEach((ruting:[string,Handling]) => {
-        const rutingTrigger = ruting[0] ;
-        expect(rutingTrigger).toMatch(/(ja|nei|alle|alt0|alt1|alt2|alt3|alt4|alt5|alt5|alt6|alt7|alt8|alt9|alt10)/i); 
+      Object.entries(steg.ruting).forEach((ruting: [string, Handling]) => {
+        const rutingTrigger = ruting[0];
+        expect(rutingTrigger).toMatch(/(ja|nei|alle|alt0|alt1|alt2|alt3|alt4|alt5|alt5|alt6|alt7|alt8|alt9|alt10)/i);
 
-        const handling:Handling = ruting[1] ;
+        const handling: Handling = ruting[1];
         expect(handling.type).toMatch(/(gaaTil|regler|avslutt|ikkjeForekomst)/i);
         if (handling.type === "gaaTil") {
           expect(handling.steg).toBeDefined;
-          if(typeof(handling.steg)!=="undefined"){
+          if (typeof (handling.steg) !== "undefined") {
             expect(stegFinst(handling.steg, testregel.steg)).toBe(true);
           }
         } else if (handling.type === "regler") {
           expect(handling.regler).toBeDefined();
-          if(typeof(handling.regler)==="object"){
-          vurderRegel(handling.regler, testregel.steg);
+          if (typeof (handling.regler) === "object") {
+            vurderRegel(handling.regler, testregel.steg);
           }
         } else if (handling.type === "avslutt") {
           vurderRutingAvslutt(handling);
@@ -127,7 +127,7 @@ files.forEach(file => {
  * @param reglar Reglar
  * @param testregelSteg Steg i testregel
  */
-function vurderRegel(reglar:{[regelnr:number]:Regel}, testregelSteg: Array<Steg>) {
+function vurderRegel(reglar: { [regelId: string]: Regel }, testregelSteg: Array<Steg>) {
   expect(reglar).toBeDefined;
   const reglarArray: Array<Regel> = Object.values(reglar);
   expect(reglarArray.length).toBeGreaterThan(0);
@@ -141,13 +141,13 @@ function vurderRegel(reglar:{[regelnr:number]:Regel}, testregelSteg: Array<Steg>
 
     if (regel.handling.type === "gaaTil") {
       expect(regel.handling.steg).toBeDefined();
-      if(typeof(regel.handling.steg)!=="undefined"){
+      if (typeof (regel.handling.steg) !== "undefined") {
         expect(regel.handling.steg.length).toBeGreaterThan(0);
         expect(stegFinst(regel.handling.steg, testregelSteg)).toBe(true);
       }
     } else if (regel.handling.type === "regler") {
       expect(regel.handling.regler).toBeDefined();
-      if(typeof(regel.handling.regler)==="object"){
+      if (typeof (regel.handling.regler) === "object") {
         vurderRegel(regel.handling.regler, testregelSteg);
       }
     } else if (regel.handling.type === "avslutt") {
