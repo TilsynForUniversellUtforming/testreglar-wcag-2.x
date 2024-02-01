@@ -1,4 +1,5 @@
 import { Delutfall } from "./Delutfall";
+import { LangElement } from "./LangElement";
 import { Regel } from "./Regel"
 
 export type Handling = HandlingGaaTil | HandlingikkjeForekomst | HandlingAvslutt | HandlingRegler;
@@ -22,7 +23,7 @@ export interface HandlingikkjeForekomst {
     /** Type handling */
     type: "ikkjeForekomst"
     /** Tekstleg utfall */
-    utfall: string
+    utfall: string | LangElement
 }
 
 /**
@@ -52,10 +53,10 @@ export interface HandlingRegler {
  */
 export interface HandlingUtfallTJaNeiTyper {
     /** Utfall når fasit er ja*/
-    ja: string,
+    ja: string | LangElement,
     /** Utfall når fasit er nei */
-    nei: string
+    nei: string | LangElement
 }
 
 export type HandlingFasitTyper = "Ja" | "Nei" | "Ikkje testbart" | "sjekkDelutfall";
-export type HandlingUtfallTyper = string | HandlingUtfallTJaNeiTyper ;
+export type HandlingUtfallTyper = string | HandlingUtfallTJaNeiTyper | LangElement ;

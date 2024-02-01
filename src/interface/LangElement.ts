@@ -1,7 +1,7 @@
 /**
  * Interface for oversetting
  */
-interface LangElement {
+export interface LangElement {
     // Tekst på nynorsk
     nn:string
     // Tekst på bokmål
