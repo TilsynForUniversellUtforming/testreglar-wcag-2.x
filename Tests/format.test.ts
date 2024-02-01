@@ -20,6 +20,7 @@ test('Sjekker at Testregelmappe finnes', () => {
 files.forEach(file => {
   const filePath = path.join(dataFolder, file);
   const testregel: Testregel = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  
 
   // Lag tester for hver JSON-fil
   test(`${file} har definert eit namn`, () => {
@@ -29,6 +30,11 @@ files.forEach(file => {
   test(`${file} har definert ein id`, () => {
     expect(testregel.id).toBeDefined();
     expect(testregel.id.length).toBeGreaterThan(0);
+  });
+
+  test (`${file} har testregel.id som filnamn`, () => {
+    const filenamn =  (file.substring(file.lastIndexOf("\\") + 1)).replace(".json","");
+    expect(filenamn).toEqual(testregel.id);
   });
 
   test(`${file} har definert ein testlab-id`, () => {
