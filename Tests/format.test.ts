@@ -33,8 +33,7 @@ files.forEach(file => {
   });
 
   test (`${file} har testregel.id som filnamn`, () => {
-    const filenamn =  (file.substring(file.lastIndexOf("\\") + 1)).replace(".json","");
-    expect(filenamn).toEqual(testregel.id);
+    expect(path.basename(file).replace(".json","")).toEqual(testregel.id);
   });
 
   test(`${file} har definert ein testlab-id`, () => {
