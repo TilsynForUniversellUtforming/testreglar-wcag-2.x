@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Visuelle lister, med eller uten nummerering eller kulepunkter, er korrekt kodet, basert på type liste.</p>\r\n<ul>\r\n<li>Nummererte lister er kodet som nummerert liste</li>\r\n<li>Unummererte lister er kodet som unummerert liste</li>\r\n<li>Beskrivende lister, det vil si lister som har to nivå og gir utfyllende forklaringer, er kodet som beskrivende lister</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Visuelle lister er korrekt kodet, basert på type liste:</p>\r\n<ul>\r\n<li>Nummererte lister er kodet som nummerert liste</li>\r\n<li>Unummererte lister er kodet som unummerert liste</li>\r\n<li>Beskrivende lister, det vil si lister som har to nivå og gir utfyllende forklaringer, er kodet som beskrivende lister</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
