@@ -5,6 +5,7 @@ import { Testregel } from '../src/interface/Testregel';
 import { Steg } from '../src/interface/Steg';
 import { Regel } from '../src/interface/Regel';
 import { Handling } from '../src/interface/Handling';
+import { Delutfall } from '../src/interface/Delutfall';
 
 
 // Få listen over JSON-filer rekursivt i mappen
@@ -20,7 +21,7 @@ test('Sjekker at Testregelmappe finnes', () => {
 files.forEach(file => {
   const filePath = path.join(dataFolder, file);
   const testregel: Testregel = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  
+
 
   // Lag tester for hver JSON-fil
   test(`${file} har definert eit namn`, () => {
@@ -32,8 +33,8 @@ files.forEach(file => {
     expect(testregel.id.length).toBeGreaterThan(0);
   });
 
-  test (`${file} har testregel.id som filnamn`, () => {
-    expect(path.basename(file).replace(".json","")).toEqual(testregel.id);
+  test(`${file} har testregel.id som filnamn`, () => {
+    expect(path.basename(file).replace(".json", "")).toEqual(testregel.id);
   });
 
   test(`${file} har definert ein testlab-id`, () => {
@@ -81,8 +82,8 @@ files.forEach(file => {
       expect(steg.type).toBeDefined();
       expect(steg.type).toMatch(/(jaNei|radio|tekst|instruksjon)/i);
 
-      if(typeof(steg.kilde)!=="undefined") {
-        expect(typeof(steg.kilde)).toEqual("object");
+      if (typeof (steg.kilde) !== "undefined") {
+        expect(typeof (steg.kilde)).toEqual("object");
       }
 
       if (steg.type === "tekst") {
@@ -111,6 +112,9 @@ files.forEach(file => {
           expect(handling.steg).toBeDefined;
           if (typeof (handling.steg) !== "undefined") {
             expect(stegFinst(handling.steg, testregel.steg)).toBe(true);
+            if (typeof (handling.delutfall) !== "undefined") {
+              vurderDelutfall(handling.delutfall);
+            }
           }
         } else if (handling.type === "regler") {
           expect(handling.regler).toBeDefined();
@@ -152,6 +156,9 @@ function vurderRegel(reglar: { [regelId: string]: Regel }, testregelSteg: Array<
       if (typeof (regel.handling.steg) !== "undefined") {
         expect(regel.handling.steg.length).toBeGreaterThan(0);
         expect(stegFinst(regel.handling.steg, testregelSteg)).toBe(true);
+        if (typeof (regel.handling.delutfall) !== "undefined") {
+          vurderDelutfall(regel.handling.delutfall);
+        }
       }
     } else if (regel.handling.type === "regler") {
       expect(regel.handling.regler).toBeDefined();
@@ -207,4 +214,24 @@ function vurderRutingAvslutt(rutningAvslutt) {
 function vurderRutingIkkjeForekomst(runtingIkkjeForekomst) {
   expect(runtingIkkjeForekomst.utfall).toBeDefined();
   expect(runtingIkkjeForekomst.utfall.length).toBeGreaterThan(0);
+}
+
+/**
+ * Sjekker delutfall
+ * @param delutfall 
+ */
+function vurderDelutfall(delutfall: Delutfall) {
+  expect(delutfall).toBeInstanceOf(Object);
+  if (typeof (delutfall) === "object") {
+    expect(delutfall.nr).toBeDefined();
+    expect(typeof(delutfall.nr)).toEqual("number");
+    expect(delutfall.fasit).toBeDefined();
+    expect(typeof(delutfall.fasit)).toEqual("string");
+    expect(delutfall.fasit).toMatch(/(Ja|Nei|Ikkje testbart|Ikkje forekomst)/i);
+    expect(delutfall.tekst).toBeDefined();
+    
+
+  }
+
+
 }
