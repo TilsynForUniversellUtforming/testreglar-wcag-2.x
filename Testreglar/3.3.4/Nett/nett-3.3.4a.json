@@ -47,23 +47,11 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "2.4"
+					"steg": "3.1"
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
 					"utfall": "Testside har ikke skjema som medfører juridiske forpliktelser eller økonomiske transaksjoner for brukeren."
-				}
-			}
-		},
-		{
-			"stegnr": "2.4",
-			"spm": "Det tilstrekkelig at ett av alternativene i kravet er oppfylt. Hvert alternativ har sitt eget sett med krav til samsvar. ",
-			"ht": "<p>Alternativene som etter ordlyden skal vurderes er</p>\n<ul>\n<li>Kontroll før fullføring/innsending</li>\n<li>Bekreftelse før fullføring/innsending</li>\n<li>Reserverbarhet/angremulighet etter fullføring/innsending</li>\n</ul>",
-			"type": "instruksjon",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.1"
 				}
 			}
 		},
