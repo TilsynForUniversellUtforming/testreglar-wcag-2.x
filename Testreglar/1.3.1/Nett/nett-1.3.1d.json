@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Visuell inndeling av innhold i regioner er korrekt kodet som landemerke</p>",
+	"kravTilSamsvar": "<p>Visuell inndeling av innhold i regioner er korrekt kodet som landemerke.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsiden visuell inndeling av innhold i regioner?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Zoom ut nettsiden og gjør en visuell inspeksjon av nettsidens layout</li>\n<li>Sjekk om testsiden har visuell inndeling av innhold i ulike deler/regioner</li>\n<li>Eksempel på visuell inndeling i deler/regioner er \n<ul>\n<li>logo og navn</li>\n<li>meny</li>\n<li>hovedinnhold</li>\n<li>reklame, annonser eller lignende</li>\n<li>andre seksjoner av innhold</li>\n<li>sidebar</li>\n<li>kontaktinformasjon, personvernerklæring eller lignende</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong> Det er kreves ikke at nettsiden har visuell inndeling av innhold i regioner, men der det finnes, skal det bestemmes programmatisk.</p>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Zoom ut nettsiden og gjør en visuell inspeksjon av nettsidens layout</li>\n<li>Sjekk om testsiden har visuell inndeling av innhold i ulike deler/regioner</li>\n<li>Eksempel på visuell inndeling i deler/regioner er \n<ul>\n<li>logo og navn (header eller banner)</li>\n<li>meny (nav eller navigation)</li>\n<li>hovedinnhold (main)</li>\n<li>andre seksjoner av innhold (section eller region)</li>\n<li>sidebar (aside eller complementary)</li>\n<li>kontaktinformasjon eller lignende (footer eller contentinfo)</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong> Det er kreves ikke at nettsiden har visuell inndeling av innhold i regioner, men der det finnes, skal det bestemmes programmatisk.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -59,13 +59,12 @@
 			"ht": "<p>Velg type visuell inndeling i region.</p>",
 			"type": "radio",
 			"svarArray": [
-				"Nettstedets logo og navn",
-				"Meny",
-				"Hovedinnhold",
-				"Reklame, annonser eller lignende",
-				"Andre seksjoner av innhold",
-				"Sidebar",
-				"Kontaktinformasjon, personvernerklæring eller lignende",
+				"Logo og navn (header eller banner)",
+				"Meny (nav eller navigation)",
+				"Hovedinnhold (main)",
+				"Andre seksjoner av innhold (section eller region)",
+				"Sidebar (aside eller complementary)",
+				"Kontaktinformasjon eller lignende (footer eller contentinfo)",
 				"Annet"
 			],
 			"ruting": {
@@ -87,21 +86,20 @@
 				},
 				"alt4": {
 					"type": "gaaTil",
-					"steg": "3.6"
+					"steg": "3.9"
 				},
 				"alt5": {
 					"type": "gaaTil",
-					"steg": "3.9"
+					"steg": "3.10"
 				},
 				"alt6": {
 					"type": "gaaTil",
-					"steg": "3.10"
-				},
-				"alt7": {
-					"type": "gaaTil",
 					"steg": "3.6"
 				}
-			}
+			},
+			"kilde": [
+				"ARIA11"
+			]
 		},
 		{
 			"stegnr": "3.3",
@@ -127,7 +125,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er regionen kodet med &lt;nav&gt;-element eller role=\"navigation\"?",
-			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser regionen i nettleseren dvs. parent-element til regionen</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Checker\n<ul>\n<li>Sjekk om det finnes attributtet <em>Role: navigation</em></li>\n</ul>\n</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om regionen er kodet med et av følgende:</p>\n<ul>\n<li><code>role=\"navigation\"</code></li>\n<li><code>&lt;nav&gt;</code>-element</li>\n</ul>",
+			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser regionen i nettleseren dvs. parent-element til regionen</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Checker\n<ul>\n<li>Sjekk om det finnes attributtet <em>Role: navigation</em></li>\n</ul>\n</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om regionen er kodet med et av følgende:</p>\n<ul>\n<li><code>&lt;nav&gt;</code>-element</li>\n<li><code>role=\"navigation\"</code></li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
