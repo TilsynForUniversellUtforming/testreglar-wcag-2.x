@@ -149,7 +149,7 @@ kjelder.</td>
 I tilegg finnes desse spesialfelta:
 - label
 - image
-- svararray
+- svarArray
 
 
 ## Eksempel på steg
