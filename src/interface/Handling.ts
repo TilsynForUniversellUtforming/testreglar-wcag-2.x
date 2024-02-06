@@ -9,11 +9,11 @@ export type Handling = HandlingGaaTil | HandlingikkjeForekomst | HandlingAvslutt
  */
 export interface HandlingGaaTil {
     /** Type handling */
-    type: "gaaTil"
+    type: "gaaTil";
     /** Referanse til stegnr det skal rutes til */
-    steg: string,
+    steg: string;
     /** Setting av delutfall dersom aktuelt */
-    delutfall?: Delutfall
+    delutfall?: Delutfall;
 }
 
 /**
@@ -21,9 +21,9 @@ export interface HandlingGaaTil {
  */
 export interface HandlingikkjeForekomst {
     /** Type handling */
-    type: "ikkjeForekomst"
+    type: "ikkjeForekomst";
     /** Tekstleg utfall */
-    utfall: string | LangElement
+    utfall: string | LangElement;
 }
 
 /**
@@ -31,11 +31,11 @@ export interface HandlingikkjeForekomst {
  */
 export interface HandlingAvslutt {
     /** Type handling */
-    type: "avslutt"
+    type: "avslutt";
     /** Fasit */
-    fasit: HandlingFasitTyper
+    fasit: HandlingFasitTyper;
     /** Utfall */
-    utfall: HandlingUtfallTyper
+    utfall: HandlingUtfallTyper;
 }
 
 /**
@@ -43,9 +43,9 @@ export interface HandlingAvslutt {
  */
 export interface HandlingRegler {
     /** Type handling */
-    type: "regler"
+    type: "regler";
     /** Regler */
-    regler: { [regelId: string]: Regel }
+    regler: { [regelId: string]: Regel };
 }
 
 /**
@@ -53,9 +53,9 @@ export interface HandlingRegler {
  */
 export interface HandlingUtfallTJaNeiTyper {
     /** Utfall når fasit er ja*/
-    ja: string | LangElement,
+    ja: string | LangElement;
     /** Utfall når fasit er nei */
-    nei: string | LangElement
+    nei: string | LangElement;
 }
 
 export type HandlingFasitTyper = "Ja" | "Nei" | "Ikkje testbart" | "sjekkDelutfall";

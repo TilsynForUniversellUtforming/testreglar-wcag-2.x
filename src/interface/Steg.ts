@@ -36,7 +36,7 @@ export interface StegRadio {
   ht: string;
   /** Ruting  */
   ruting: RutingTriggere;
-  /** Label (For felt som trenger label) */
+  /** Liste med svar-alternativ for radio-knapper */
   svarArray?: Array<string>;
   /** Liste med kildehenvisninger (feks ["G12"]) */
   kilde?: Array<string>;

@@ -3,7 +3,7 @@
  */
 export interface LangElement {
     // Tekst på nynorsk
-    nn:string
+    nn:string;
     // Tekst på bokmål
-    nb:string
+    nb:string;
 }

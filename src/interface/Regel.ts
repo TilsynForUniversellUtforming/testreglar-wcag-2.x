@@ -47,27 +47,27 @@ export interface RegelMellom {
 /** Tal dersom sjekkar kor mange Steg.svar som samsvarar med ein gitt verdi.  */
 export interface RegelTalDersom {
     /** Type regel */
-    type: "talDersom"
+    type: "talDersom";
     /** Matrise med referansar stegid-ar som som skal sjekkast  */
-    sjekk: Array<string>
+    sjekk: Array<string>;
     /** Verdi som svar skal vere lik for å teljast med. */
-    verdi: number
+    verdi: number;
     /** Den lågaste verdien av tal svar som skal utløyse regelen. */
-    mellom1: number
+    mellom1: number;
     /** Den høgaste verdien av tal svar som ska utløyse regelen. */
     mellom2: number
     /** Handling som skal utløses av reglen */
-    handling: Handling
+    handling: Handling;
 }
 
 /** Sjekkar eit delutfall og utfører handling basert på det. */
 export interface RegelVurderDelutfall {
     /** Type regel */
-    type: "vurderDelutfall"
+    type: "vurderDelutfall";
      /** Id for delutfall */
-    id: number
+    id: number;
     /** Kva verdi delutfall skal matchast opp i mot. (Ja,Nei,Ikkje testbart, Ikkje forekomst)  */
-    verdi: DelutfallFasitTyper
+    verdi: DelutfallFasitTyper;
     /** Handling som skal utløses av reglen */
-    handling: Handling
+    handling: Handling;
 }
