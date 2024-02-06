@@ -1,27 +1,28 @@
-import * as fs from 'fs';
-import * as path from 'path';
-import * as glob from 'glob';
-import { Testregel } from '../src/interface/Testregel';
-import { Steg } from '../src/interface/Steg';
-import { Regel } from '../src/interface/Regel';
-import { Handling } from '../src/interface/Handling';
-import { Delutfall } from '../src/interface/Delutfall';
-
+import * as fs from "fs";
+import * as path from "path";
+import * as glob from "glob";
+import { Testregel } from "../src/interface/Testregel";
+import { Steg } from "../src/interface/Steg";
+import { Regel } from "../src/interface/Regel";
+import { Handling } from "../src/interface/Handling";
+import { Delutfall } from "../src/interface/Delutfall";
 
 // Få listen over JSON-filer rekursivt i mappen
-const dataFolder = './Testreglar';
-const excludeFolder: string = 'felles/**';
-const files = glob.sync('**/*.json', { cwd: dataFolder, ignore: [excludeFolder] });
+const dataFolder = "./Testreglar";
+const excludeFolder: string = "felles/**";
+const files = glob.sync("**/*.json", {
+  cwd: dataFolder,
+  ignore: [excludeFolder],
+});
 
-test('Sjekker at Testregelmappe finnes', () => {
+test("Sjekker at Testregelmappe finnes", () => {
   expect(fs.existsSync("./Testreglar")).toBe(true);
 });
 
 // Iterer gjennom hver JSON-fil
-files.forEach(file => {
+files.forEach((file) => {
   const filePath = path.join(dataFolder, file);
-  const testregel: Testregel = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-
+  const testregel: Testregel = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
   // Lag tester for hver JSON-fil
   test(`${file} har definert eit namn`, () => {
@@ -49,7 +50,7 @@ files.forEach(file => {
 
   test(`${file} har definert eit gyldig språk`, () => {
     expect(testregel.spraak).toBeDefined();
-    expect(testregel.spraak).toMatch(/(nb|nn|en)/i)
+    expect(testregel.spraak).toMatch(/(nb|nn|en)/i);
   });
 
   test(`${file} har eit krav til samsvar`, () => {
@@ -66,7 +67,6 @@ files.forEach(file => {
     if (testregel.element !== "Side") {
       expect(stegFinst(testregel.element, testregel.steg)).toBe(true);
     }
-
   });
 
   test(`${file} har steg`, () => {
@@ -74,7 +74,7 @@ files.forEach(file => {
     expect(testregel.steg.length).toBeGreaterThan(1);
   });
 
-  testregel.steg.forEach(steg => {
+  testregel.steg.forEach((steg) => {
     test(`${file} har gyldig steg ${steg.stegnr}`, () => {
       expect(steg.stegnr.length).toBeGreaterThan(0);
       expect(steg.spm.length).toBeGreaterThan(0);
@@ -82,20 +82,25 @@ files.forEach(file => {
       expect(steg.type).toBeDefined();
       expect(steg.type).toMatch(/(jaNei|radio|tekst|instruksjon)/i);
 
-      if (typeof (steg.kilde) !== "undefined") {
-        expect(typeof (steg.kilde)).toEqual("object");
+      if (typeof steg.kilde !== "undefined") {
+        expect(typeof steg.kilde).toEqual("object");
       }
 
       if (steg.type === "tekst") {
         expect(steg.label).toBeDefined();
         expect(steg.label?.length).toBeGreaterThan(0);
-        if (typeof (steg.filter) !== "undefined") {
+        if (typeof steg.filter !== "undefined") {
           expect(steg.filter).toMatch(/(tal)/i);
         }
 
-        if (typeof (steg.datalist) !== "undefined") {
+        if (typeof steg.datalist !== "undefined") {
           expect(steg.datalist).toMatch(/(side)/i);
         }
+      }
+
+      if (steg.type === "radio") {
+        expect(steg.svarArray).toBeDefined();
+        expect(steg?.svarArray?.length).toBeGreaterThan(1);
       }
     });
 
@@ -104,22 +109,26 @@ files.forEach(file => {
 
       Object.entries(steg.ruting).forEach((ruting: [string, Handling]) => {
         const rutingTrigger = ruting[0];
-        expect(rutingTrigger).toMatch(/(ja|nei|alle|alt0|alt1|alt2|alt3|alt4|alt5|alt5|alt6|alt7|alt8|alt9|alt10|alt11|alt12)/i);
+        expect(rutingTrigger).toMatch(
+          /(ja|nei|alle|alt0|alt1|alt2|alt3|alt4|alt5|alt5|alt6|alt7|alt8|alt9|alt10|alt11|alt12)/i
+        );
 
         const handling: Handling = ruting[1];
-        expect(handling.type).toMatch(/(gaaTil|regler|avslutt|ikkjeForekomst)/i);
+        expect(handling.type).toMatch(
+          /(gaaTil|regler|avslutt|ikkjeForekomst)/i
+        );
         if (handling.type === "gaaTil") {
           expect(handling.steg).toBeDefined;
-          if (typeof (handling.steg) !== "undefined") {
+          if (typeof handling.steg !== "undefined") {
             expect(stegFinst(handling.steg, testregel.steg)).toBe(true);
-            if (typeof (handling.delutfall) !== "undefined") {
+            if (typeof handling.delutfall !== "undefined") {
               vurderDelutfall(handling.delutfall);
             }
           }
         } else if (handling.type === "regler") {
           expect(handling.regler).toBeDefined();
           expect(handling.regler).toBeInstanceOf(Object);
-          if (typeof (handling.regler) === "object") {
+          if (typeof handling.regler === "object") {
             expect(Object.keys(handling.regler).length).toBeGreaterThan(0);
             vurderRegel(handling.regler, testregel.steg);
           }
@@ -128,7 +137,6 @@ files.forEach(file => {
         } else if (handling.type === "ikkjeForekomst") {
           vurderRutingIkkjeForekomst(handling);
         }
-
       });
     });
   });
@@ -139,7 +147,10 @@ files.forEach(file => {
  * @param reglar Reglar
  * @param testregelSteg Steg i testregel
  */
-function vurderRegel(reglar: { [regelId: string]: Regel }, testregelSteg: Array<Steg>) {
+function vurderRegel(
+  reglar: { [regelId: string]: Regel },
+  testregelSteg: Array<Steg>
+) {
   expect(reglar).toBeDefined;
   const reglarArray: Array<Regel> = Object.values(reglar);
   expect(reglarArray.length).toBeGreaterThan(0);
@@ -148,21 +159,22 @@ function vurderRegel(reglar: { [regelId: string]: Regel }, testregelSteg: Array<
     expect(regel.type).toMatch(/(lik|ulik|mellom|talDersom|vurderDelutfall)/i);
     expect(regel.handling).toBeDefined();
     expect(regel.handling.type).toBeDefined();
-    expect(regel.handling.type).toMatch(/(gaaTil|regler|avslutt|ikkjeForekomst)/i);
-
+    expect(regel.handling.type).toMatch(
+      /(gaaTil|regler|avslutt|ikkjeForekomst)/i
+    );
 
     if (regel.handling.type === "gaaTil") {
       expect(regel.handling.steg).toBeDefined();
-      if (typeof (regel.handling.steg) !== "undefined") {
+      if (typeof regel.handling.steg !== "undefined") {
         expect(regel.handling.steg.length).toBeGreaterThan(0);
         expect(stegFinst(regel.handling.steg, testregelSteg)).toBe(true);
-        if (typeof (regel.handling.delutfall) !== "undefined") {
+        if (typeof regel.handling.delutfall !== "undefined") {
           vurderDelutfall(regel.handling.delutfall);
         }
       }
     } else if (regel.handling.type === "regler") {
       expect(regel.handling.regler).toBeDefined();
-      if (typeof (regel.handling.regler) === "object") {
+      if (typeof regel.handling.regler === "object") {
         vurderRegel(regel.handling.regler, testregelSteg);
       }
     } else if (regel.handling.type === "avslutt") {
@@ -174,7 +186,7 @@ function vurderRegel(reglar: { [regelId: string]: Regel }, testregelSteg: Array<
 }
 
 /**
- * 
+ *
  * @param stegnr Stegnr som skal sjekkast
  * @param TestregelSteg Samling med testregelsteg
  * @returns Om steget finnes
@@ -195,11 +207,13 @@ function stegFinst(stegnr: string, TestregelSteg: Array<Steg>) {
  */
 function vurderRutingAvslutt(rutningAvslutt) {
   expect(rutningAvslutt.fasit).toBeDefined();
-  expect(rutningAvslutt.fasit).toMatch(/(Ja|Nei|Ikkje testbart|sjekkDelutfall)/i);
+  expect(rutningAvslutt.fasit).toMatch(
+    /(Ja|Nei|Ikkje testbart|sjekkDelutfall)/i
+  );
   expect(rutningAvslutt.utfall).toBeDefined();
-  if (typeof (rutningAvslutt.utfall) === "string") {
+  if (typeof rutningAvslutt.utfall === "string") {
     expect(rutningAvslutt.utfall.length).toBeGreaterThan(0);
-  } else if (typeof (rutningAvslutt.utfall) === "object") {
+  } else if (typeof rutningAvslutt.utfall === "object") {
     expect(rutningAvslutt.utfall.ja).toBeDefined();
     expect(rutningAvslutt.utfall.ja.length).toBeGreaterThan(0);
     expect(rutningAvslutt.utfall.nei).toBeDefined();
@@ -218,20 +232,16 @@ function vurderRutingIkkjeForekomst(runtingIkkjeForekomst) {
 
 /**
  * Sjekker delutfall
- * @param delutfall 
+ * @param delutfall
  */
 function vurderDelutfall(delutfall: Delutfall) {
   expect(delutfall).toBeInstanceOf(Object);
-  if (typeof (delutfall) === "object") {
+  if (typeof delutfall === "object") {
     expect(delutfall.nr).toBeDefined();
-    expect(typeof(delutfall.nr)).toEqual("number");
+    expect(typeof delutfall.nr).toEqual("number");
     expect(delutfall.fasit).toBeDefined();
-    expect(typeof(delutfall.fasit)).toEqual("string");
+    expect(typeof delutfall.fasit).toEqual("string");
     expect(delutfall.fasit).toMatch(/(Ja|Nei|Ikkje testbart|Ikkje forekomst)/i);
     expect(delutfall.tekst).toBeDefined();
-    
-
   }
-
-
 }

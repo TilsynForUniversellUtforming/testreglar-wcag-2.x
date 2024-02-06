@@ -1,4 +1,4 @@
-import { RutingTriggere } from "./RutingTriggere"
+import { RutingTriggere } from "./RutingTriggere";
 
 /** Steg i Testregel */
 export type Steg = StegJaNei | StegRadio | StegTekst | StegInstruksjon;
@@ -8,80 +8,80 @@ export type Steg = StegJaNei | StegRadio | StegTekst | StegInstruksjon;
  */
 export interface StegJaNei {
   /** Type steg */
-  type: "jaNei",
+  type: "jaNei";
   /** Stegnr */
-  stegnr: string,
+  stegnr: string;
   /** Spørsmål på steget*/
-  spm: string,
+  spm: string;
   /** Hjelpetekst */
-  ht: string,
+  ht: string;
   /** Ruting  */
-  ruting: RutingTriggere
+  ruting: RutingTriggere;
   /** Liste med kildehenvisninger (feks ["G12"]) */
-  kilde?: Array<string>,
+  kilde?: Array<string>;
   /** url til bilde (For bilde som hjelp) */
-  image?: string,
+  image?: string;
 }
 
 /**
  * Steg med egendefinerte radioknapper
  */
 export interface StegRadio {
-  type: "radio",
+  type: "radio";
   /** Stegnr */
-  stegnr: string,
+  stegnr: string;
   /** Spørsmål på steget*/
-  spm: string,
+  spm: string;
   /** Hjelpetekst */
-  ht: string,
+  ht: string;
   /** Ruting  */
-  ruting: RutingTriggere
+  ruting: RutingTriggere;
   /** Label (For felt som trenger label) */
-  svararray?: Array<string>
+  svarArray?: Array<string>;
   /** Liste med kildehenvisninger (feks ["G12"]) */
-  kilde?: Array<string>
+  kilde?: Array<string>;
   /** url til bilde (For bilde som hjelp) */
-  image?: string,
+  image?: string;
 }
 
 export interface StegTekst {
-  type: "tekst",
+  type: "tekst";
   /** Stegnr */
-  stegnr: string
+  stegnr: string;
   /** Spørsmål på steget*/
-  spm: string,
+  spm: string;
   /** Hjelpetekst */
-  ht: string
+  ht: string;
   /** Ruting  */
-  ruting: RutingTriggere
+  ruting: RutingTriggere;
   /** Label (For felt som trenger label) */
-  label: string
+  label: string;
   /** Liste med kildehenvisninger (feks ["G12"]) */
-  kilde?: Array<string>
+  kilde?: Array<string>;
   /** url til bilde (For bilde som hjelp) */
-  image?: string
+  image?: string;
   /** Multilinje (For steg av typen tekst som krever lengre innput) */
-  multilinje?: boolean,
+  multilinje?: boolean;
   /** Filter for tekstinput */
-  filter?: string
+  filter?: string;
   /** For å koble tekstfelt til en dataliste */
-  datalist?: DataListeTyper
+  datalist?: DataListeTyper;
 }
 
 export interface StegInstruksjon {
-  type: "instruksjon"
+  type: "instruksjon";
   /** Stegnr */
-  stegnr: string
+  stegnr: string;
   /** Spørsmål på steget*/
-  spm: string
+  spm: string;
   /** Hjelpetekst */
-  ht: string
+  ht: string;
   /** Ruting  */
-  ruting: RutingTriggere
+  ruting: RutingTriggere;
   /** Liste med kildehenvisninger (feks ["G12"]) */
-  kilde?: Array<string>
+  kilde?: Array<string>;
   /** url til bilde (For bilde som hjelp) */
-  image?: string
+  image?: string;
 }
 
 export type DataListeTyper = "Sideutvalg";
