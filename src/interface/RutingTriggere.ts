@@ -5,23 +5,23 @@ import { Handling } from "./Handling";
  */
 export interface RutingTriggere  {
   // Ja
-  ja?:Handling,
+  ja?:Handling;
   // Nei
-  nei?:Handling,
+  nei?:Handling;
   // Alle
-  alle?:Handling,
+  alle?:Handling;
   // For radioknapper egendefinert
-  alt0?:Handling,
-  alt1?:Handling,
-  alt2?:Handling,
-  alt3?:Handling,
-  alt4?:Handling,
-  alt5?:Handling,
-  alt6?:Handling,
-  alt7?:Handling,
-  alt8?:Handling,
-  alt9?:Handling,
-  alt10?:Handling
-  alt11?:Handling
-  alt12?:Handling
+  alt0?:Handling;
+  alt1?:Handling;
+  alt2?:Handling;
+  alt3?:Handling;
+  alt4?:Handling;
+  alt5?:Handling;
+  alt6?:Handling;
+  alt7?:Handling;
+  alt8?:Handling;
+  alt9?:Handling;
+  alt10?:Handling;
+  alt11?:Handling;
+  alt12?:Handling;
 }

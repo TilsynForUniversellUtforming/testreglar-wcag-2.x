@@ -74,7 +74,7 @@ files.forEach((file) => {
     expect(testregel.steg.length).toBeGreaterThan(1);
   });
 
-  testregel.steg.forEach((steg) => {
+  testregel.steg.forEach((steg:Steg) => {
     test(`${file} har gyldig steg ${steg.stegnr}`, () => {
       expect(steg.stegnr.length).toBeGreaterThan(0);
       expect(steg.spm.length).toBeGreaterThan(0);

@@ -5,13 +5,13 @@ import { Steg } from "./Steg";
  */
 export interface Testregel {
   /**  Namn på testreglen */ 
-  namn: string,
+  namn: string;
   /** Id på testreglen */
   id: string;
   /** TestlabId */
   testlabId: number,
   /** Versjon */
-  versjon:string,
+  versjon:string;
   /** Type */
   type: string;
   /** Språk */

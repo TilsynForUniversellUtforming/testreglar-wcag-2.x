@@ -3,11 +3,11 @@
  */
 export interface Delutfall {
     /** Nummer på delutfall (unik) */
-    nr:number
+    nr:number;
     /** Delutfall i tekst */
-    tekst:string
+    tekst:string;
     /** Fasit på delutfall */
-    fasit:DelutfallFasitTyper
+    fasit:DelutfallFasitTyper;
 }
 
 export type DelutfallFasitTyper = "Ja" | "Nei" | "Ikkje testbart" | "Ikkje forekomst" ;
