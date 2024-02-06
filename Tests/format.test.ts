@@ -100,7 +100,7 @@ files.forEach((file) => {
 
       if (steg.type === "radio") {
         expect(steg.svarArray).toBeDefined();
-        expect(steg?.svarArray?.length).toBeGreaterThan(1);
+        expect(steg.svarArray?.length).toBeGreaterThan(1);
       }
     });
 
