@@ -86,15 +86,78 @@ Dersom det er sida som er elementet skriv "Side"</td>
 
 Steg
 ----
-Eit steg er kvar instruksjon i test-prosedyren.
+Eit steg er kvar instruksjon i test-prosedyren. Eit steg kan vere av desse typane:
+- jaNei
+- radio
+- tekst
+- instruksjon
+
+## Steg av typen jaNei
+Steg som bare skal ha Ja og Nei som sine mulige valg
 
 <table>
-<tr>
-	<th>Felt</th>
+	<tr>
+        <th>Felt</th>
 	<th>Type</th>
+	<th>Obligatorisk</th>
 	<th>Omtale</th>
 	<th>Eksempel</th>
+		</tr>
+ <tr>
+ 	<td>stegnr</td>
+	<td>string</td>
+	<td>Ja</td>
+ 	<td>Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må
+            være unik innanfor same testregel og skal vere på formatet «tal.tal»</td>
+ 	<td><pre lang="json">"stegnr": "3.1"</pre></td>	
 </tr>
+ <tr>
+ 	<td>type</td>
+	<td>"jaNei"</td>
+	<td>Ja</td>
+ 	<td>Deninsjon av stegtype jaNei.</td>
+ 	<td><pre lang="json">"type": "jaNei"</pre></td>	
+</tr>
+<tr>
+ 	<td>spm</td>
+	<td>string</td>
+	<td>Ja</td>
+ 	<td>Spørsmål som kan svarast på med Ja og Nei som alternativ.</td>
+ 	<td><pre lang="json">"spm": "Inneheld feilmeldinga tekst?"</pre></td>	
+</tr>
+<tr>
+ 	<td>ht</td>
+	<td>string</td>
+	<td>Ja</td>
+ 	<td>Spørsmål som kan svarast på med Ja og Nei som alternativ.</td>
+ 	<td><pre lang="json">"spm": "Inneheld feilmeldinga tekst?"</pre></td>	
+</tr>
+<tr>
+ 	<td>ruting</td>
+	<td>string</td>
+	<td>Ja</td>
+ 	<td>Spørsmål som kan svarast på med Ja og Nei som alternativ.</td>
+ 	<td><pre lang="json">"spm": "Inneheld feilmeldinga tekst?"</pre></td>	
+</tr>
+<tr>
+ 	<td>kilde</td>
+	<td>string</td>
+	<td>Ja</td>
+ 	<td>Spørsmål som kan svarast på med Ja og Nei som alternativ.</td>
+ 	<td><pre lang="json">"spm": "Inneheld feilmeldinga tekst?"</pre></td>	
+</tr>
+<tr>
+ 	<td>image</td>
+	<td>string</td>
+	<td>Nei</td>
+ 	<td>Spørsmål som kan svarast på med Ja og Nei som alternativ.</td>
+ 	<td><pre lang="json">"image": "/.jpg"</pre></td>	
+</tr>
+		
+</table>
+
+<table>
+
 <tr>
  	<td>stegnr</td>
 	<td>string</td>
@@ -105,7 +168,7 @@ være unik innanfor same testregel og skal vere på formatet «tal.tal»</td>
  <tr>
  	<td>spm</td>
 	<td>string</td>
- 	<td>Spørsmål / instruksjon forklarar kva testaren skal svare på eller gjere.</td>
+ 	<td>Spørsmål som kan svarast på med Ja og Nei som alternativ.</td>
  	<td><pre lang="json">"spm": "Inneheld feilmeldinga tekst?"</pre></td>	
 </tr>
  <tr>
