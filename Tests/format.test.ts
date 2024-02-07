@@ -74,7 +74,7 @@ files.forEach((file) => {
     expect(testregel.steg.length).toBeGreaterThan(1);
   });
 
-  testregel.steg.forEach((steg:Steg) => {
+  testregel.steg.forEach((steg: Steg) => {
     test(`${file} har gyldig steg ${steg.stegnr}`, () => {
       expect(steg.stegnr.length).toBeGreaterThan(0);
       expect(steg.spm.length).toBeGreaterThan(0);
@@ -162,6 +162,38 @@ function vurderRegel(
     expect(regel.handling.type).toMatch(
       /(gaaTil|regler|avslutt|ikkjeForekomst)/i
     );
+
+    if (regel.type === "lik" || regel.type === "ulik" ) {
+      expect(typeof regel.sjekk).toBe("string");
+      expect(regel.sjekk?.length).toBeGreaterThan(0);
+      expect(typeof regel.verdi).toBe("string");
+      expect(regel.verdi?.length).toBeGreaterThan(0);
+    }
+
+    if (regel.type === "mellom" ) {
+      expect(typeof regel.sjekk).toBe("string");
+      expect(regel.sjekk?.length).toBeGreaterThan(0);
+      expect(typeof regel.verdi).toBe("number");
+      expect(typeof regel.verdi2).toBe("number");
+    }
+
+    if (regel.type === "talDersom") {
+      expect (Array.isArray(regel.sjekk)).toBe(true);
+      expect (regel.sjekk?.length).toBeGreaterThan(0);
+      expect(typeof regel.verdi).toBe("string");
+      expect(regel.verdi?.length).toBeGreaterThan(0);
+      expect(typeof regel.mellom1).toBe("number");
+      expect(regel.mellom1).toBeGreaterThanOrEqual(0);
+      expect(typeof regel.mellom2).toBe("number");
+      expect(regel.mellom2).toBeGreaterThanOrEqual(0);
+    }
+
+    if (regel.type === "vurderDelutfall") {
+      expect (typeof regel.id).toBe("number");
+      expect (typeof regel.verdi).toBe("string");
+      expect(regel.verdi).toMatch(/(Ja|Nei|Ikkje testbart|Ikkje forekomst)/i);
+    
+    }
 
     if (regel.handling.type === "gaaTil") {
       expect(regel.handling.steg).toBeDefined();
