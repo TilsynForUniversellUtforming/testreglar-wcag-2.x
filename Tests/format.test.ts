@@ -178,7 +178,7 @@ function vurderRegel(
     }
 
     if (regel.type === "talDersom") {
-      expect (typeof regel.sjekk).toBe("object");
+      expect (Array.isArray(regel.sjekk)).toBe(true);
       expect (regel.sjekk?.length).toBeGreaterThan(0);
       expect(typeof regel.verdi).toBe("string");
       expect(regel.verdi?.length).toBeGreaterThan(0);
