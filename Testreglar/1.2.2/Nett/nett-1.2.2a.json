@@ -1,22 +1,21 @@
 {
-	"namn": "1.2.2a Førehandsinnspelt video med lyd, er teksta",
-	"id": "1.2.2a",
-	"testlabId": 13,
+	"namn": "Nett-1.2.2a Forhåndsinnspilt video med lyd har teksting eller tekstalternativ 2023",
+	"id": "nett-1.2.2a",
+	"testlabId": 496,
 	"versjon": "1.0",
 	"type": "Nett",
-	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<p>Førehandsinnspelt video med lyd, som ikkje er eit mediealternativ til tekst, har alternativ i form av teksting eller tekstalternativ.</p>\r\n<p>Teksting, som anten ligg fast (open teksting) eller som kan slåast på (skjult teksting) skal:</p>\r\n<ul>\r\n<li>Formidle innhaldet i lyd og bilde.</li>\r\n<li>Innhalde følgande element: Tale og dialog med markering av kven som snakkar, og lydinnhald som er viktig for å forstå videoen.</li>\r\n<li>Vere visuelt synleg, men ikkje forstyrre viktig innhald i videoen.</li>\r\n</ul>\r\n<p>Tekstalternativ, alternativ kan videoen ha eit tekstalternativ som er visuelt plassert nær videoklippet, eller kan nåast via ein mekanisme (lenke, knapp eller liknande).</p>\r\n<p>Tekstalternativet skal</p>\r\n<ul>\r\n<li>vere koda som tekst.</li>\r\n<li>formidle innhaldet i lyd og bilde og innehalde følgande element: Tale og dialog med markering av kven som snakkar og lydinnhald som er viktig for å forstå videoen.</li>\r\n</ul>\r\n<p>Det er ikkje krav om eksakt attgiving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</p>",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Forhåndsinnspilt video med lyd har teksting eller tekstalternativ.</p>\r\n<ul>\r\n<li>Teksting skal formidle tale og lyd som er viktig for å forstå videoen. I dialog skal det markeres hvem som snakker. Teksting skal ikke forstyrre viktig innhold i videoen.\r\n<ul>\r\n<li>Skjult teksting har en mekanisme for å slå teksting på og av</li>\r\n</ul>\r\n</li>\r\n<li>Tekstalternativ skal formidle tale og lyd som er viktig for å forstå videoen. I dialog skal det markeres hvem som snakker. Tekstalternativ kan gis på en av følgende måter:\r\n<ul>\r\n<li>langt tekstalternativ kombinert med kort tekstalternativ, plassert nær videoen. Kort tekstalternativ angir hvor langt tekstalternativ er plassert</li>\r\n<li>langt tekstalternativ gis via en mekanisme plassert nær videoen</li>\r\n<li>tekstalternativet er kodet som tekst</li>\r\n</ul>\r\n</li>\r\n<li>Video har et tilgjengelig navn som gir beskrivende identifikasjon av videoen</li>\r\n<li>Forhåndsinnspilt video med lyd, som er mediealternativ til tekst, er unntatt. For å være mediealternativ skal videoen\r\n<ul>\r\n<li>ikke presentere mer informasjon enn det som gis via tekst eller lyd og</li>\r\n<li>være tydelig merket, det vil si, plassert i direkte tilknytning til aktuell tekst og gi informasjon som indikerer at det er et mediealternativ</li>\r\n</ul>\r\n</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi url eller side-ID.",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
 			"type": "tekst",
-			"label": "Url/Side:",
+			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
-			"oblig": true,
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
@@ -26,8 +25,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har nettsida videoklipp?",
-			"ht": "Sjå over nettsida og sjå om ho inneheld videoklipp.",
+			"spm": "Har testsiden video med lyd?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Gjør en visuell inspeksjon, og sjekk om testsiden har video med lyd</li>\n<li>Hvis videoen er lang, tar du stikkprøver på minst to steder </li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -36,16 +35,16 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje video."
+					"utfall": "Testside har ikke video med lyd."
 				}
 			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Skriv inn tittel på videoklippet",
-			"ht": "Legg inn tittel på videoklippet/videofila eller bruk stikkord om innhaldet, dersom tittel manglar.",
+			"spm": "Hvilken video tester du?",
+			"ht": "<p>Beskriv videoen, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere videoer, registrerer du en og en.</p>",
 			"type": "tekst",
-			"label": "Videoklipp:",
+			"label": "Video:",
 			"multilinje": true,
 			"oblig": true,
 			"ruting": {
@@ -57,8 +56,8 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Har videoen lyd?",
-			"ht": "<p>Sett i gang videoen og høyr etter om det er lyd i videoen. Dersom videoen er lang, kan du ta stikkprøvar på ulike stader i videoen.</p> <p><strong>MERK:</strong> Med lyd meinest alle former for lyd, også lyd som ikkje er meiningsbærande eller vesentleg for å formidle innhaldet i videoen. </p>",
+			"spm": "Er videoen forhåndsinnspilt (opptak)?",
+			"ht": "<p>Aktuelle metoder for å sjekke dette</p>\n<ul>\n<li>Start videoen og se om avspillingen begynner på starten og/eller at varigheten viser.</li>\n<li>Se om du finner informasjon om når videoen er publisert.</li>\n<li>Se etter informasjon som tilsier at videoen er direkte, for eksempel et rødt felt med \"Live\" eller at du ikke kan spole</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -67,35 +66,38 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Videoklipp utan lyd."
+					"utfall": "Video er direkte/live."
 				}
 			}
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Er videoen førehandsinnspelt?",
-			"ht": "<p>Aktuelle metodar for å finne ut dette er:</p> <ul> <li>Prøv å starte videoklippet og sjå om avspelinga startar frå byrjinga av fila og om det finst informasjon om varigheiten på klippet.</li> <li>Sjå etter informasjon om når klippet er publisert.</li> <li>Sjå etter informasjon som tilseier at klippet er live/direkte.</li> </ul> <p>Dette kan for eksempel vere: Rødt felt med teksten \"live\" eller at det ikkje er mogeleg å spole i klippet.</p>",
+			"spm": "Er videoen et mediealternativ til tekst, og tydelig merket som det?",
+			"ht": "<p>For å være mediealternativ skal videoen:</p>\n<ul>\n<li>ikke presentere mer informasjon enn det som gis via tekst og</li>\n<li>være tydelig merket. Det vil si\n<ul>\n<li>være plassert i direkte tilknytning til aktuell tekst og </li>\n<li>gi informasjon som viser at det er et mediealternativ</li>\n</ul>\n</li>\n</ul>\n<p>Slik tester du:</p>\n<ul>\n<li>Undersøk om det i tilknytning til videoen, er en tekst som fremstår som hovedformatet for formidling av informasjonen</li>\n<li>Momenter videoen som tilsier at videoen er et mediealternativ til tekst kan være:\n<ul>\n<li>Ikon, for eksempel kamera-ikon</li>\n<li>Lenke med lenketekst som viser til en video, for eksempel \"Se opptak\", \"Animasjon\"</li>\n</ul>\n</li>\n<li>Sjekk at videoen ikke presenterer mer informasjon enn det som gis via teksten</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
-					"type": "gaaTil",
-					"steg": "3.4"
+					"type": "ikkjeForekomst",
+					"utfall": "Video er mediealternativ til tekst."
 				},
 				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Videoklipp er direkte/live (ikkje førehandsinnspelte)."
+					"type": "gaaTil",
+					"steg": "3.4"
 				}
 			}
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Er videoen eit mediealternativ til tekst og tydeleg merka som det?",
-			"ht": "<p>Undersøk om det i tilknytning til videoen finst ein tekst som visuelt står fram som hovudformatet for formidling av informasjonen.</p> <p>Indikasjonar på at videoen er eit mediealternativ til tekst kan vere:</p> <ul> <li>Ikon (for eksempel filmkameraikon) som indikerar at det er eit alternativ til ein nærliggande tekst.</li> <li>Lenke med lenketekst der det går fram at det er eit videoklipp (til dømes \"sjå opptak\", \"animasjon\").</li> <li>Eit mediealternativ til tekst er tydeleg merka når det er presentert i direkte nærleik til ein tekst og det ikkje er tvil om at det er et alternativ til den aktuelle teksten.</li> </ul>",
+			"spm": "Er videoen tekstet?",
+			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Start videoen</li>\n<li>Ta stikkprøve på minst to steder</li>\n<li>Sjekk om videoen har teksting</li>\n</ul>",
 			"type": "jaNei",
+			"kilde": [
+				"G93"
+			],
 			"ruting": {
 				"ja": {
-					"type": "ikkjeForekomst",
-					"utfall": "Videoklipp er mediealternativ til tekst/lyd."
+					"type": "gaaTil",
+					"steg": "3.6"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -105,27 +107,8 @@
 		},
 		{
 			"stegnr": "3.5",
-			"spm": "Er videoen teksta ?",
-			"ht": "<p>Start videoklippet og sjekk om videoen har teksting.</p> <p>Teksting blir òg omtala som undertekst.</p>",
-			"type": "jaNei",
-			"kilde": [
-				"G93"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.7"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.6"
-				}
-			}
-		},
-		{
-			"stegnr": "3.6",
-			"spm": "Er det mogeleg å slå på teksting i videoen?",
-			"ht": "<p>Sjå etter om det finst ein knapp eller mekanisme i spelaren for å slå på/av teksting.</p> <p>Merk at du ofte må føre musepeikar over videoen for å få fram handlingsalternativ (t.d. aktivere tekst).</p> <p> Teksting kan aktiverast ved:</p> <ul> <li>Knapp med til dømes CC (closed caption).</li> <li>Knapp med linje/strek eller liknande som indikerer at du kan aktivere tekst.</li> </ul>",
+			"spm": "Kan du slå på teksting av videoen?",
+			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Se om det er en knapp eller lignende i videospilleren, som slår på/av teksting</li>\n</ul>\n<p><strong>Merk:</strong> Du ofte må føre musepeker over videoen for å få fram alternativ.</p>\n<p><strong>Tips: </strong>Skjult teksting kan ofte slås på med knapp med \"CC\" (closed captions) eller linje som indikerer at du kan aktivere teksting</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G87"
@@ -133,19 +116,49 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.7",
+					"steg": "3.6",
 					"delutfall": {
 						"nr": 0,
-						"tekst": "Videoklipp har teksting.",
+						"tekst": "Video har teksting.",
 						"fasit": "Ja"
 					}
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.10",
+					"steg": "3.9",
 					"delutfall": {
 						"nr": 0,
-						"tekst": "Videoklipp har ikkje teksting.",
+						"tekst": "Video har ikke teksting.",
+						"fasit": "Nei"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Er tekstingen leselig?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Start videoen</li>\n<li>Gjør en visuell inspeksjon av tekstingen, og og sjekk om tekstingen lesbar</li>\n<li>Ta minst to stikkprøver i ulike deler av videoen</li>\n</ul>\n<p>Du skal vurdere tekstingen mot bakgrunnen i videoen. Eksempel på teksting som ikke er lesbar:</p>\n<ul>\n<li>Teksting som overlapper annen tekst</li>\n<li>Teksting som omtrent lik farge som bakgrunnen</li>\n</ul>\n<p><strong>Merk: </strong>Du skal ikke måle kontrast mellom tekst og bakgrunn. Dette testes i SK 143 Kontrast (minimum).</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G87",
+				"G93"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "Video har lesbar teksting.",
+						"fasit": "Ja"
+					}
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "Video har ikke lesbar teksting.",
 						"fasit": "Nei"
 					}
 				}
@@ -153,10 +166,12 @@
 		},
 		{
 			"stegnr": "3.7",
-			"spm": "Er tekstinga lesbar/visuelt synleg?",
-			"ht": "<p>Gjer ein visuell inspeksjon av teksten. </p> <p>Vurder om teksten er tilstrekkeleg synleg/lesbar. </p> <p>Du skal her vurder teksting mot bakgrunn, altså videoen. Døme på lite lesbar tekst er:</p> <ul> <li>Teksting som ligg oppå annan tekst.</li> <li>Teksting som har tilnærma same farge som bakgrunnen/videoen.</li> </ul>",
+			"spm": "Samsvarer informasjonen i tekstingen, med det som blir formidlet via lyd og bilde i videoen?",
+			"ht": "<p><strong>Merk:</strong> Det er teksting og bilde til sammen, som skal formidle informasjon gitt via bilde og lyd i videoen.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Se gjennom de første et min av videoen og sammenlign innholdet i videoen med det som er formidlet i tekstingen</li>\n<li>Ta minst to stikkprøver til, på ulike steder i videoen</li>\n<li>Vi krever ikke at tekstingen nøyaktig gjengir innholdet i lyd og bilde, men at følgende er dekket\n<ul>\n<li>tale/dialog</li>\n<li>annen lyd som er viktig for å forstå videoen, for eksempel\n<ul>\n<li>lydeffekter</li>\n<li>musikk/latter</li>\n<li>sted/plassering</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk: </strong>I <strong>dialog</strong> (når to eller flere snakker sammen) skal det markeres hvem som snakker, dersom dette er viktig for å forstå innholdet i videoen.</p>",
 			"type": "jaNei",
 			"kilde": [
+				"F8",
+				"F75",
 				"G87",
 				"G93"
 			],
@@ -166,16 +181,16 @@
 					"steg": "3.8",
 					"delutfall": {
 						"nr": 0,
-						"tekst": "Videoklipp har teksting som er mogleg å lese.",
+						"tekst": " Video har teksting, som formidler samme informasjon som lyd og bilde.",
 						"fasit": "Ja"
 					}
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.10",
+					"steg": "3.9",
 					"delutfall": {
 						"nr": 0,
-						"tekst": "Videoklipp har teksting som ikkje er mogleg å lese.",
+						"tekst": "Video har teksting, som ikke formidler samme informasjon som lyd og bilde.",
 						"fasit": "Nei"
 					}
 				}
@@ -183,62 +198,53 @@
 		},
 		{
 			"stegnr": "3.8",
-			"spm": "Er informasjonen/innhaldet som blir formidla i tekstinga i samsvar med informasjon som blir formidla via lyd og bilde i videoen?",
-			"ht": "<p>Sjå gjennom dei første minuttane av videoklippet og samanlikn innhaldet i videoklippet med det som vert formidla i tekstinga. </p> <p>Merk at teksting og bilde tilsaman skal formidle informasjon som vert gitt via bilde og lyd i videoen.</p> <p><strong>MERK:</strong> Vi krev ikkje at tekstinga eksakt formidlar innhaldet i lyd og bilde, men at følgjande element er dekka: </p> <ul> <li>Tale og dialog med markering av kven som snakkar (dersom du kan forstå kven som snakkar ut frå den visuelle infomasjonen i videoen, treng ikkje teksten å formidle dette).</li> <li>Viktige lydeffektar.</li> </ul>",
+			"spm": "Forstyrrer eller skjuler tekstingen viktig visuell informasjon i videoen?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Sjekk om tekstingen forstyrrer viktig visuell informasjon i videoen.</li>\n</ul>\n<p><strong>Merk:</strong> Korte eller ubetydelige forstyrrelser er ok.</p>",
 			"type": "jaNei",
-			"kilde": [
-				"G87",
-				"G93",
-				"F75",
-				"F8"
-			],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
 					"steg": "3.9",
 					"delutfall": {
 						"nr": 0,
-						"tekst": "Videoklipp har teksting som formidlar same bodskap som lyd og bilde.",
-						"fasit": "Ja"
+						"tekst": "Video har tekstning, men den forstyrrer eller skjuler viktig visuell informasjon.",
+						"fasit": "Nei"
 					}
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.10",
+					"steg": "3.13",
 					"delutfall": {
 						"nr": 0,
-						"tekst": "Videoklipp har teksting som ikkje formidlar same bodskap som lyd og bilde. ",
-						"fasit": "Nei"
+						"tekst": "Video har lesbar teksting, som ikke forstyrrer eller skjuler viktig visuell informasjon og tekstingen formidler samme informasjon som lyd og bilde.",
+						"fasit": "Ja"
 					}
 				}
 			}
 		},
 		{
 			"stegnr": "3.9",
-			"spm": "Forstyrrar eller skjuler tekstinga viktig informasjon i videoen?",
-			"ht": "Vurder den visuelle plasseringa av teksten i videoen. Korte forstyrringar eller ubetydelige forstyrringar er ok. ",
+			"spm": "Ligger det et tekstalternativ i nærheten av videoen?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Gjør en visuell inspeksjon</li>\n<li>Sjekk om du finner et tekstalternativ nær videoen (på samme nettside), for eksempel rett over eller under videoen. </li>\n</ul>\n<p><strong>Merk:</strong> Du skal ikke ta stilling til kvaliteten på teksten i dette steget. </p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.10",
-					"delutfall": {
-						"nr": 0,
-						"tekst": "Videoklipp har teksting som forstyrrar eller skjuler viktig informasjon i videoen.",
-						"fasit": "Nei"
-					}
+					"steg": "3.11"
 				},
 				"nei": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Videoklippet har teksting som er lesbar/visuelt synleg, utan forstyrringar og som gir same bodskap som videoklippet."
+					"type": "gaaTil",
+					"steg": "3.10"
 				}
-			}
+			},
+			"kilde": [
+				"G74"
+			]
 		},
 		{
 			"stegnr": "3.10",
-			"spm": "Finst det ein tekst visuelt plassert nær videoklippet/avspelaren som omtaler klippet?",
-			"ht": "<p>I dette steget skal du ikkje ta stilling til kvaliteten på teksten. Det er nok at teksten ligg nær klippet, den kan for eksempel ligge over eller under videoklippet.</p> <p>Du skal ikkje måtte scrolle vekk frå videoklippet for å finne teksten. (Du kan scrolle på sida, men videoklippet skal fortsatt vere synleg i nettlesaren).</p> <p>Merk at det er ok at du må scrolle for å lese gjennom teksten.</p>",
+			"spm": "Ligger det en mekanisme i nærheten av videoen, som går til et tekstalternativ for videoen?",
+			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Gjør en visuell inspeksjon</li>\n<li>Sjekk om det ligger mekanisme (lenke, knapp eller lignende) i nærheten av videoen som går til tekstalternativet\n<ul>\n<li>Eksempel på plassering: rett over eller under videoen.</li>\n</ul>\n</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -246,71 +252,71 @@
 					"steg": "3.11",
 					"delutfall": {
 						"nr": 1,
-						"tekst": "Videoklipp har tekstalternativ.",
+						"tekst": "Video har et tekstalternativ.",
 						"fasit": "Ja"
 					}
 				},
 				"nei": {
-					"type": "gaaTil",
-					"steg": "3.13",
-					"delutfall": {
-						"nr": 1,
-						"tekst": "Videoklipp har ikkje tekstalternativ.",
-						"fasit": "Nei"
-					}
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(0,Nei) #delutfall(1,Nei) Video har ikke et tekstalternativ."
 				}
-			}
+			},
+			"kilde": [
+				"G73"
+			]
 		},
 		{
 			"stegnr": "3.11",
-			"spm": "Er tekstalternativet koda som tekst?",
-			"ht": "<p>Dette kan undersøkast på fleire måtar:</p> <p>Alternativ 1:</p> <ul> <li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilete av tekst.</li> </ul> <p>Alternativ 2:</p> <ul> <li>Opne kodeverktøyet i nettlesaren.</li> <li>Bruk \"select\" funksjonen i verktøyet og markere et område i tekstalternativet.</li> <li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li> </ul>",
+			"spm": "Er tekstalternativet kodet som tekst?",
+			"ht": "<p>Slik tester du</p>\n<p><strong>Alternativ 1:</strong></p>\n<ul>\n<li>Prøv å markere teksten med mus eller tastatur.\n<ul>\n<li>Hvis det går, indikerer det at teksten er koda som tekst, og ikke er et bilde av tekst</li>\n</ul>\n</li>\n</ul>\n<p><strong>Alternativ 2:</strong></p>\n<ul>\n<li>Åpne kodeverktøyet i nettleseren.</li>\n<li>Bruk \"Select\" funksjonen og marker deler av tekstalternativet.</li>\n<li>Sjekk at tekstalternativet er kodet som tekst, ved å se om du finner igjen teksten i koden.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.12"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.13",
+					"steg": "3.12",
 					"delutfall": {
 						"nr": 1,
-						"tekst": "Videoklipp har tekstalternativ som ikkje er koda som tekst.",
-						"fasit": "Nei"
+						"tekst": "Video har et tekstalternativ, som er kodet som tekst.",
+						"fasit": "Ja"
 					}
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(0,Nei) #delutfall(1,Nei) Video har et tekstalternativ, men det er ikke kodet som tekst."
 				}
 			}
 		},
 		{
 			"stegnr": "3.12",
-			"spm": "Er informasjonen/innhaldet som blir formidla i videoklippet i samsvar med informasjon som blir formidla i teksten?",
-			"ht": "<p>Samanlikn tekstalternativet med innhaldet i videoklippet:</p> <ul> <li>Gå gjennom dei første minuttane av videoklippet.</li> <li>Vurder om videoklipp og tekstalternativ formidlar det same hovudinnhaldet i lik rekkefølge. </li> <li><Strong>MERK:</Strong> Vi krev ikkje eksakt attgjeving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge.</li> </ul> <p>Dersom du allereie i starten av videoklippet avdekkar at det ikkje er samsvar mellom videoklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
+			"spm": "Samsvarer informasjonen i tekstalternativet, med det som blir formidlet via lyd og bilde i videoen?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Sammenlign tekstalternativet med innholdet i videoen. </li>\n<li>Gå gjennom de første to min av videoen.</li>\n<li>Sjekk om video og tekstalternativ formidler hovedinnholdet i lyd og bilde, i lik rekkefølge.</li>\n<li>Vi krever ikke nøyaktig gjengivelse av innholdet, men at viktig innhold er tatt med i rett rekkefølge.</li>\n</ul>\n<p><strong>Merk:</strong> Tekstalternativet og bilde skal til sammen formidle informasjon som gis via bilde og lyd i videoen. </p>\n<p><strong>Tips: </strong>Hvis du allerede i starten av videoen ser at det ikke er samsvar mellom video og tekstalternativ, kan du stoppe gjennomgangen.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F75"
 			],
 			"ruting": {
 				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Videoklipp har tekstalternativ som formidlar same bodskap som lyd og bilde. Tekstalternativ kan nåast og er koda som tekst."
-				},
-				"nei": {
 					"type": "gaaTil",
 					"steg": "3.13",
 					"delutfall": {
 						"nr": 1,
-						"tekst": "Videoklipp har tekstalternativ som ikkje formidlar same bodskap som lyd og bilde.",
-						"fasit": "Nei"
+						"tekst": "Video har et tekstalternativ, som er kodet som tekst og det formidler samme informasjon som lyd og bilde.",
+						"fasit": "Ja"
 					}
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(0,Nei) #delutfall(1,Nei) Video har et tekstalternativ, som er kodet som tekst, men det formidler ikke samme informasjon som lyd og bilde."
 				}
 			}
 		},
 		{
 			"stegnr": "3.13",
-			"spm": "Finst det ein mekanisme (lenke, knapp eller liknande) nær videoklippet som tilseier at du vert leia til eit tekstalternativ til videoklippet?",
-			"ht": "<p>Du skal ikkje måtte scrolle vekk frå videoklippet for å sjå at det finst ein mekanisme.</p> <p>Merk at det er ok at du må scrolle for å lese gjennom tekstalternativet. (Du kan scrolle på sida, men videoklippet skal fortsatt vere synleg i nettlesaren).</p>",
+			"spm": "Har videoen et tilgjengelig navn, som ikke er tomt?",
+			"ht": "<p><span style=\"white-space: pre;\">Slik tester du</span></p>\n<ul>\n<li><span style=\"white-space: pre;\">Inspiser videoen</span>\n<ul>\n<li><span style=\"white-space: pre;\">video-element er ofte nøstet under et annet parent-element som gir et tilgjengelig navn til videoen. </span>\n<ul>\n<li><span style=\"white-space: pre;\">For eksempel en iframe</span></li>\n</ul>\n</li>\n<li><span style=\"white-space: pre;\">undersøk i koden og finn det riktige elementet før du sjekker om videoen har et tilgjengelig navn </span></li>\n</ul>\n</li>\n<li><span style=\"white-space: pre;\">Bruk Accessibility Checker i nettleseren</span></li>\n<li><span style=\"white-space: pre;\">Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</span></li>\n</ul>\n<p><span style=\"white-space: pre;\"><strong>Merk:</strong> Du kan ved behov bruke skjermleser for å sjekke dette.</span></p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -320,64 +326,32 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "#delutfall(0,Nei) #delutfall(1,Nei)"
+					"utfall": "#delutfall(0,Ja) #delutfall(1,Ja) Videoen har ikke et tilgjengelig navn."
 				}
-			}
+			},
+			"kilde": [
+				"G100"
+			]
 		},
 		{
 			"stegnr": "3.14",
-			"spm": "Start tastaturnavigeringa frå klippet. Kor mange tab-steg treng du for å nå mekanismen (lenka/knappen eller liknande)?",
-			"ht": "<p>Merk at mekanismen (knappen/lenka eller liknande) kan anten ligge før eller etter i tab-rekkefølgja og at begge plasseringar er godkjende.</p> <p>Registrer ved hjelp av svaralternativa kor mange tabsteg du treng for å nå mekanismen som leiar til tekstalternativet. Stopp om du treng meir enn 10 tab-steg, ref. svaralternativa.</p>",
-			"type": "radio",
-			"svarArray": [
-				"1-5 tabsteg",
-				"6-10 tabsteg",
-				"Fleire enn 10 tabsteg",
-				"Når ikkje mekanisme med tastatur",
-				"Ikkje mogleg å verifisere"
-			],
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.15"
-				}
-			}
-		},
-		{
-			"stegnr": "3.15",
-			"spm": "Er tekstalternativet koda som tekst?",
-			"ht": "<p>Dette kan undersøkast på fleire måtar:</p> <p>Alternativ 1:</p> <ul> <li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at testen er koda som tekst og ikkje er eit bilde av tekst.</li> </ul> <p>Alternativ 2:</p> <ul> <li>Opne kodeverktøyet i nettlesaren.</li> <li>Bruk \"select\" funksjonen i verktøyet og markere et område i tekstalternativet.</li> <li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li> </ul>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.16"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "#delutfall(0,Nei) #delutfall(1,Nei) Videoklipp har tekstalternativ via ein mekanisme. Tekstalternativ er ikkje koda som tekst."
-				}
-			}
-		},
-		{
-			"stegnr": "3.16",
-			"spm": "Er informasjonen/innhaldet som blir formidla i videoklippet i samsvar med informasjon som blir formidla i teksten?",
-			"ht": "<p>Samanlikn tekstalternativet med innhaldet i videoklippet:</p><p>Gå gjennom for eksempel dei første 5 minuttane av videoklippet og vurder om videoklippet og tekstalternativet formidlar det same hovudinnhaldet i lik rekkefølge og sjekk at følgande elemenet er dekka:</#p> <ul><li>Tale og dialog.</li> <li>Viktige lydeffektar.</li> <li>Markering av kven som snakkar.</li> </ul> <p><Strong>MERK:</Strong> Vi krev ikkje eksakt attgjeving av innhaldet, men at alt vesentleg innhald er teke med i rett rekkefølge</p> <p>Dersom du allereie i starten av videoklippet avdekkar at det ikkje er samsvar mellom videoklipp og tekstalternativ, kan du stoppe gjennomgangen.</p>",
+			"spm": "Gir det tilgjengelige navnet en beskrivende identifikasjon av videoen?",
+			"ht": "<p>Gjør en skjønnsmessig vurdering av om det tilgjengelige navnet:</p>\n<ul>\n<li>identifiserer innholdet i videoen og\n<ul>\n<li>Videoens tittel er vanligvis tilstrekkelig identifikasjon</li>\n</ul>\n</li>\n<li>dersom videoen er tekstet ved hjelp av tekstalternativ, sjekk om det tilgjengelige navnet\n<ul>\n<li>angir plasseringen av langt tekstalternativ, det vil si hvor brukeren finner det lange tekstalternativet</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong> Å angi plassering av langt tekstalternativ er ikke nødvendig, dersom videoen har teksting.</p>\n<p><strong>Merk:</strong> Dette steget er gjelder til SK 1.1.1 Ikke-tekstlig innhold, jamfør kulepunktet om tidsbaserte medier. Vi har inkludert det her, fremfor å ha en egen testregel knyttet til SK 1.1.1.</p>",
 			"type": "jaNei",
 			"kilde": [
-				"F75"
+				"G74",
+				"G100"
 			],
 			"ruting": {
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Videoklipp har tekstalternativ som formidlar same bodskap som lyd og bilde."
+					"utfall": "#delutfall(0,Ja) #delutfall(1,Ja) Videoen har et tilgjengelig navn som gir en beskrivende identifikasjon."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "#delutfall(0,Nei) #delutfall(1,Nei) Videoklipp har tekstalternativ via ein mekanisme. Tekstalternativ formidlar ikkje same bodskap som lyd og bilde."
+					"utfall": "#delutfall(0,Ja) #delutfall(1,Ja) Videoen har et tilgjengelig navn som ikke gir en beskrivende identifikasjon."
 				}
 			}
 		}
