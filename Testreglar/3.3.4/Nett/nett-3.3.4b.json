@@ -43,7 +43,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Er det mulig å slette brukerstyrt data?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Gjør en visuell inspeksjon</li>\n<li>Sjekk om testsiden har funksjonalitet for sletting av brukerstyrte data.</li>\n</ul>\n<p><strong>Merk: </strong>Hensikten med denne delen av kravet, er å forhindre tap/sletting av store datamengder. Eksempler er at brukeren kan slette:</p>\n<ul>\n<li>oversikt over fakturaer</li>\n<li>en hel fil</li>\n<li>eksamensbesvarelse</li>\n<li>facebook-profil</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Gjør en visuell inspeksjon</li>\n<li>Sjekk om testsiden har funksjonalitet for sletting av brukerstyrte data.</li>\n</ul>\n<p><strong>Merk: </strong>Hensikten med denne delen av kravet, er å forhindre tap/sletting av store datamengder. Eksempler er at brukeren kan slette:</p>\n<ul>\n<li>oversikt over fakturaer</li>\n<li>en hel fil</li>\n<li>eksamensbesvarelse</li>\n<li>Facebook-profil</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -136,7 +136,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Er mekanismen for å bekrefte sletting av data obligatorisk?",
-			"ht": "<p>Mekanismen for å bekrefte sletting av data, skal være et obligatorisk skjemaelement.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Prøv å sette data, uten å bruke mekanismen for å bekrefte.</li>\n<li><strong>Merk:</strong> Hvis du ikke får slettet data, uten å krysse av eller tilsvarende, betyr det at mekanismen fungerer som den skal (er obligatorisk).</li>\n</ul>",
+			"ht": "<p>Mekanismen for å bekrefte sletting av data, skal være et obligatorisk skjemaelement.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Prøv å slette data, uten å bruke mekanismen for å bekrefte.</li>\n<li><strong>Merk:</strong> Hvis du ikke får slettet data, uten å krysse av eller tilsvarende, betyr det at mekanismen fungerer som den skal (er obligatorisk).</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G155"
