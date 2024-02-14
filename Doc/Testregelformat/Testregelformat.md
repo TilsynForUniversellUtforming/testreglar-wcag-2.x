@@ -88,9 +88,9 @@ Steg
 ----
 Eit steg er kvar instruksjon i test-prosedyren. Eit steg kan vere av desse typane:
 - [jaNei](#steg-av-typen-janei)
-- radio
-- tekst
-- instruksjon
+- [radio](#steg-av-typen-radio)
+- [tekst](#steg-av-typen-tekst)
+- [instruksjon](#steg-av-typen-instruksjon)
 
 
 ### Steg av typen jaNei
@@ -308,7 +308,7 @@ Steg med egendefinerte valg i form av radio-knapper.
 ```
 
 
-### Steg av typen StegTekst
+### Steg av typen tekst
 Steg med input i form av tekst eller tall.
 <table>
 	<tr>
@@ -429,7 +429,7 @@ Steg med input i form av tekst eller tall.
 }
 ```
 
-### Steg av typen StegInstruksjon
+### Steg av typen instruksjon
 Steg med ein instruksjon som skal gjennomføres uten at det skal registeres data.
 <table>
 	<tr>
