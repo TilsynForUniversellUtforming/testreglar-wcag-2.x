@@ -643,10 +643,7 @@ Delutfall blir lagt til gjennom å legge til eit delutfall-objekt på rutingen.
 
 Når du skal skrive ut deleutfall brukes følgende syntaks #delutfall(nr,filter) eller #delutfal(nr).
 - nr - Nummer på delutfallet
-- filter - (frivillig parameter)  Kan settes til "Ja" eller Nei, og betyr at delutfallet bare skal skrives ut dersom fasit på delutfallet matcher filteret. 
-
-
-
+- filter - (frivillig parameter)  Kan settes til "Ja" eller "Nei", og betyr at delutfallet **bare skal skrives ut** dersom fasit på delutfallet matcher filteret. 
 
 
 #### Eksempel på delutfall i utfall
@@ -660,31 +657,31 @@ Når du skal skrive ut deleutfall brukes følgende syntaks #delutfall(nr,filter)
 
 #### Bruke delutfall til å sette fasit
 
-Ved å sette `"fasit": "sjekkDelutfall"` i ei ruting av typen "avslutt" kan du bruke delutfalla til å bestemme fasit. Alle delutfall med "Ja" og "Nei" blir då vurdert og fasit blir set til:
+Ved å sette `"fasit": "sjekkDelutfall"` i ei ruting av typen "avslutt" kan du bruke fasit på delutfalla til å bestemme fasit. Alle delutfall med "Ja" og "Nei" blir då vurdert og fasit blir set til:
 - "Ja" dersom alle delutfalla er "Ja"
 - "Nei" dersom eit eller fleire delutfall har fasit "Nei".
 
 #### Eksempel på delutfall til å sette fasit
 ```json
 {
-			"stegnr": "3.19",
-			"spm": "Gir teksten saman med konteksten ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
-			"ht": "<p>Teksten skal identifisere at det handlar om ein test, kode eller utfordring for å verifisere at brukaren er eit menneske.</p><p>Kontekst kan for eksempel vere tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</p><p>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p>",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "sjekkDelutfall",
-					"utfall": {
-						"nei": "#delutfall(0) #delutfall(1)",
-						"ja": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
-					}
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "#delutfall(0) #delutfall(1) CAPTCHA i form av lyd, manglar tekstleg beskriving av formålet."
+	"stegnr": "3.19",
+	"spm": "Gir teksten saman med konteksten ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
+	"ht": "<p>Teksten skal identifisere at det handlar om ein test, kode eller utfordring for å verifisere at brukaren er eit menneske.</p><p>Kontekst kan for eksempel vere tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</p><p>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p>",
+	"type": "jaNei",
+	"kilde": [],
+	ruting": {
+		"ja": {
+		"type": "avslutt",
+		"fasit": "sjekkDelutfall",
+		"utfall": {
+			"nei": "#delutfall(0) #delutfall(1)",
+			"ja": "CAPTCHA med fleire utformingar, har beskrivande tekstalternativ."
+			}
+		},
+		"nei": {
+			"type": "avslutt",
+			"fasit": "Nei",
+			"utfall": "#delutfall(0) #delutfall(1) CAPTCHA i form av lyd, manglar tekstleg beskriving av formålet."
 				}
 			}
 		}
