@@ -37,7 +37,7 @@ export interface StegRadio {
   /** Ruting  */
   ruting: RutingTriggere;
   /** Liste med svar-alternativ for radio-knapper */
-  svarArray?: Array<string>;
+  svarArray: Array<string>;
   /** Liste med kildehenvisninger (feks ["G12"]) */
   kilde?: Array<string>;
   /** url til bilde (For bilde som hjelp) */
@@ -63,7 +63,7 @@ export interface StegTekst {
   /** Multilinje (For steg av typen tekst som krever lengre innput) */
   multilinje?: boolean;
   /** Filter for tekstinput */
-  filter?: string;
+  filter?: FilterTyper;
   /** For å koble tekstfelt til en dataliste */
   datalist?: DataListeTyper;
 }
