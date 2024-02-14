@@ -1,6 +1,6 @@
 Testregelformat
 ===============
-Format for testreglar Tilsynet for universell utforming. 
+Format for testreglar Tilsynet for universell utforming av ikt. 
 
 <table>
 <tr>
