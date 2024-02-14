@@ -151,7 +151,7 @@ Steg som bare skal ha Ja og Nei som sine mulige valg.
 <tr>
  	<td>kilde</td>
 	<td>string</td>
-	<td>Ja</td>
+	<td>Nei</td>
  	<td>Kilde er kva kjelder eit steg bygger på. Eit steg kan bygge på fleire
             kjelder.</td>
  	<td><pre lang="json">"kilde": ["G131", "G167", "H44"]</pre></td>	
@@ -166,7 +166,7 @@ Steg som bare skal ha Ja og Nei som sine mulige valg.
 		
 </table>
 
-### Steg av typen StegRadio
+### Steg av typen radio
 Steg med egendefinerte valg i form av radio-knapper.
 <table>
 	<tr>
@@ -178,10 +178,10 @@ Steg med egendefinerte valg i form av radio-knapper.
 	</tr>
 	<tr>
  		<td>type</td>
-		<td>"jaNei"</td>
+		<td>"radio"</td>
 		<td>Ja</td>
- 		<td>Deninsjon av stegtype jaNei.</td>
- 		<td><pre lang="json">"type": "jaNei"</pre></td>	
+ 		<td>Deninsjon av stegtype radio.</td>
+ 		<td><pre lang="json">"type": "radio"</pre></td>	
        </tr>
  	<tr>
  		<td>stegnr</td>
@@ -224,7 +224,7 @@ Steg med egendefinerte valg i form av radio-knapper.
 	</tr>
 	<tr>
  		<td>svarArray</td>
-		<td>string</td>
+		<td>Array[string]</td>
 		<td>Ja</td>
  		<td>Liste med svar-alternativ for radio-knapper.</td>
  		<td><pre lang="json">"svarArray": ["Skjema","Mediaspelar","Meny"]</pre></td>	
@@ -232,7 +232,162 @@ Steg med egendefinerte valg i form av radio-knapper.
 	<tr>
  		<td>kilde</td>
 		<td>string</td>
+		<td>Nei</td>
+ 		<td>Kilde er kva kjelder eit steg bygger på. Eit steg kan bygge på fleire
+            kjelder.</td>
+ 		<td><pre lang="json">"kilde": ["G131", "G167", "H44"]</pre></td>	
+	</tr>
+	<tr>
+ 		<td>image</td>
+		<td>string</td>
+		<td>Nei</td>
+ 		<td>Valgfritt bilde som kan brukes til hjelp på steget.</td>
+ 		<td><pre lang="json">"image": "/.jpg"</pre></td>	
+	</tr>
+		
+</table>
+
+### Steg av typen StegTekst
+Steg med egendefinerte valg i form av radio-knapper.
+<table>
+	<tr>
+        	<th>Felt</th>
+		<th>Type</th>
+		<th>Obligatorisk</th>
+		<th>Omtale</th>
+		<th>Eksempel</th>
+	</tr>
+	<tr>
+ 		<td>type</td>
+		<td>"tekst"</td>
 		<td>Ja</td>
+ 		<td>Deninsjon av stegtype tekst.</td>
+ 		<td><pre lang="json">"type": "tekst"</pre></td>	
+       </tr>
+ 	<tr>
+ 		<td>stegnr</td>
+		<td>string</td>
+		<td>Ja</td>
+ 		<td>Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må
+            	være unik innanfor same testregel og skal vere på formatet «tal.tal»</td>
+ 		<td><pre lang="json">"stegnr": "3.1"</pre></td>	
+	</tr>
+	<tr>
+ 		<td>spm</td>
+		<td>string</td>
+		<td>Ja</td>
+ 		<td>Spørsmål som kan svarast på i form av tekst eller tall.</td>
+ 		<td><pre lang="json">"spm": "Kva element testar du?"</pre></td>	
+	</tr>
+	<tr>
+ 		<td>ht</td>
+		<td>string[HTML]</td>
+		<td>Ja</td>
+ 		<td>Steget sin hjelpetekst</td>
+ 		<td><pre lang="json">"ht": "&lt;p&gt;Beskriv elementet.;/p&gt;"</pre></td>	
+	</tr>
+		<tr>
+ 		<td>ruting</td>
+		<td>string</td>
+		<td>Ja</td>
+ 		<td>Steget sin <a href="#ruting">ruting.</a></td>
+ 	 <td><pre lang="json">"ruting": {
+              "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+               "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }</pre></td>	
+		</td>	
+	</tr>
+	<tr>
+ 		<td>label</td>
+		<td>string</td>
+		<td>Ja</td>
+ 		<td>Label (Ledetekst) til tekstfeltet.</td>
+ 		<td><pre lang="json">"label": "Element:"</pre></td>	
+	</tr>
+	<tr>
+ 		<td>kilde</td>
+		<td>string</td>
+		<td>Nei</td>
+ 		<td>Kilde er kva kjelder eit steg bygger på. Eit steg kan bygge på fleire
+            kjelder.</td>
+ 		<td><pre lang="json">"kilde": ["G131", "G167", "H44"]</pre></td>	
+	</tr>
+	<tr>
+ 		<td>image</td>
+		<td>string</td>
+		<td>Nei</td>
+ 		<td>Valgfritt bilde som kan brukes til hjelp på steget.</td>
+ 		<td><pre lang="json">"image": "/.jpg"</pre></td>	
+	</tr>
+		
+</table>
+
+### Steg av typen StegInstruksjon
+Steg med egendefinerte valg i form av radio-knapper.
+<table>
+	<tr>
+        	<th>Felt</th>
+		<th>Type</th>
+		<th>Obligatorisk</th>
+		<th>Omtale</th>
+		<th>Eksempel</th>
+	</tr>
+	<tr>
+ 		<td>type</td>
+		<td>"instruksjon"</td>
+		<td>Ja</td>
+ 		<td>Deninsjon av stegtype instruksjon.</td>
+ 		<td><pre lang="json">"type": "instruksjon"</pre></td>	
+       </tr>
+ 	<tr>
+ 		<td>stegnr</td>
+		<td>string</td>
+		<td>Ja</td>
+ 		<td>Stegnummeret er ein identifikator for eit steg innanfor ein testregel. Den må
+            	være unik innanfor same testregel og skal vere på formatet «tal.tal»</td>
+ 		<td><pre lang="json">"stegnr": "3.1"</pre></td>	
+	</tr>
+	<tr>
+ 		<td>spm</td>
+		<td>string</td>
+		<td>Ja</td>
+ 		<td>Spørsmål som kan svarast på med radioknappar som alternativ.</td>
+ 		<td><pre lang="json">"spm": "Kva type funksjonalitet er elementet ein del av?"</pre></td>	
+	</tr>
+	<tr>
+ 		<td>ht</td>
+		<td>string[HTML]</td>
+		<td>Ja</td>
+ 		<td>Steget sin hjelpetekst</td>
+ 		<td><pre lang="json">"ht": "&lt;p&gt;Velg frå alternativa under.&lt;/p&gt;"</pre></td>	
+	</tr>
+		<tr>
+ 		<td>ruting</td>
+		<td>string</td>
+		<td>Ja</td>
+ 		<td>Steget sin <a href="#ruting">ruting.</a></td>
+ 	 <td><pre lang="json">"ruting": {
+              "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+               "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }</pre></td>	
+		</td>	
+	</tr>
+	<tr>
+ 		<td>kilde</td>
+		<td>string</td>
+		<td>Nei</td>
  		<td>Kilde er kva kjelder eit steg bygger på. Eit steg kan bygge på fleire
             kjelder.</td>
  		<td><pre lang="json">"kilde": ["G131", "G167", "H44"]</pre></td>	
