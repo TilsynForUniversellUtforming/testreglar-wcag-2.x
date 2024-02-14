@@ -620,39 +620,43 @@ Delutfall er når du har behov får lage et mellombels resultat som du til slutt
 Delutfall blir lagt til gjennom å legge til eit delutfall-objekt på rutingen.
 ```json
 {
-			"stegnr": "3.8",
-			"spm": "Har bilde eit alt-attributt?",
-			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
-			"type": "jaNei",
-			"kilde": [],
-			"ruting": {
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.13",
-					"delutfall": {
-						"nr": 0,
-						"fasit": "Nei",
-						"tekst": "CAPTCHA i form av bilde, manglar alt-attributt."
-					}
-				}
+	"stegnr": "3.8",
+	"spm": "Har bilde eit alt-attributt?",
+	"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+	"type": "jaNei",
+	"kilde": [],
+	"ruting": {
+		"nei": {
+			"type": "gaaTil",
+			"steg": "3.13",
+			"delutfall": {
+				"nr": 0,
+				"fasit": "Nei",
+				"tekst": "CAPTCHA i form av bilde, manglar alt-attributt."
 			}
 		}
+	}
+}
 ```
 
 ### Bruke delutfall
 
-Delutfalla blir brukt for å lage ferdige/fullstendige utfall. Delutfalle blir lagt til i utfallet ved å bruke #dellutfall(nr på delutfall), for eksempel `#delutfall(0)`. `#delutfall(0)` blir da erstatta av den faktiske teksten til delutfall 0.  
+Når du skal skrive ut deleutfall brukes følgende syntaks #delutfall(nr,filter) eller #delutfal(nr).
+- nr - Nummer på delutfallet
+- filter - (frivillig parameter)  Kan settes til "Ja" eller Nei, og betyr at delutfallet bare skal skrives ut dersom fasit på delutfallet matcher filteret. 
+
+
+
+
 
 #### Eksempel på delutfall i utfall
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-"ruting": {
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "#delutfall(0) #delutfall(1) CAPTCHA i form av lyd, manglar tekstleg beskriving av formålet."
-				}
-			}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
+"utfall": "#delutfall(0) #delutfall(1) CAPTCHA i form av lyd, manglar tekstleg beskriving av formålet."
+```
+
+```json
+"utfall": "Visuell tabelltittel er ikkje koda med &#x3C;caption&#x3E;. #delutfall(0,Nei)"
+```
 
 #### Bruke delutfall til å sette fasit
 
