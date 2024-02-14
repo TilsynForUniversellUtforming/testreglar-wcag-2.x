@@ -1,7 +1,7 @@
 Testregelformat
 ===============
 Format for testreglar Tilsynet for universell utforming av ikt. 
-
+## Testregel
 <table>
 <tr>
 	<th>Felt</th>
@@ -108,7 +108,7 @@ Steg som bare skal ha Ja og Nei som sine mulige valg.
  	<td>type</td>
 	<td>"jaNei"</td>
 	<td>Ja</td>
- 	<td>Deninsjon av stegtype jaNei.</td>
+ 	<td>Set stegtype til jaNei.</td>
  	<td><pre lang="json">"type": "jaNei"</pre></td>	
 </tr>
  <tr>
@@ -201,7 +201,7 @@ Steg med egendefinerte valg i form av radio-knapper.
  		<td>type</td>
 		<td>"radio"</td>
 		<td>Ja</td>
- 		<td>Deninsjon av stegtype radio.</td>
+ 		<td>Set stegtypen til radio.</td>
  		<td><pre lang="json">"type": "radio"</pre></td>	
        </tr>
  	<tr>
@@ -307,7 +307,6 @@ Steg med egendefinerte valg i form av radio-knapper.
 }
 ```
 
-
 ### Steg av typen tekst
 Steg med input i form av tekst eller tall.
 <table>
@@ -322,7 +321,7 @@ Steg med input i form av tekst eller tall.
  		<td>type</td>
 		<td>"tekst"</td>
 		<td>Ja</td>
- 		<td>Deninsjon av stegtype tekst.</td>
+ 		<td>Set stegtypen til tekst.</td>
  		<td><pre lang="json">"type": "tekst"</pre></td>	
        </tr>
  	<tr>
@@ -443,7 +442,7 @@ Steg med ein instruksjon som skal gjennomføres uten at det skal registeres data
  		<td>type</td>
 		<td>"instruksjon"</td>
 		<td>Ja</td>
- 		<td>Deninsjon av stegtype instruksjon.</td>
+ 		<td>Set stegtypen til instruksjon.</td>
  		<td><pre lang="json">"type": "instruksjon"</pre></td>	
        </tr>
  	<tr>
