@@ -169,22 +169,23 @@ Steg som bare skal ha Ja og Nei som sine mulige valg.
 
 #### Eksempel på jaNei
 ```json
-	{
-			"stegnr": "3.6",
-			"spm": "Er det meningsbærende bildet en test eller et sanseinntrykk?",
-			"ht": "<p><strong>Test:</strong> Bilde som er en del av en test eller prøve, er bilde der innholdet vil bli ugyldig dersom det blir presentert som tekst. Hensikten med testen forsvinner dersom svaret gis av tekstalternativet.</p>\n<p><strong>Merk:</strong> Hvis dette er et komplekst bilde, så testes det i steg 3.9.</p>\n<p><strong>Sanseinntrykk:</strong> Bilde som skal gi et sanseinntrykk er for eksempel et maleri eller andre typer kunst.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.7"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.8"
-				}
+{
+	"stegnr": "3.6",
+	"spm": "Er det meningsbærende bildet en test eller et sanseinntrykk?",
+	"ht": "<p><strong>Test:</strong> Bilde som er en del av en test eller prøve, er bilde der innholdet vil bli ugyldig dersom det blir presentert som tekst. Hensikten med testen forsvinner dersom svaret gis av tekstalternativet. 
+               </p>\n<p><strong>Merk:</strong> Hvis dette er et komplekst bilde, så testes det i steg 3.9.</p>\n<p><strong>Sanseinntrykk:</strong> Bilde som skal gi et sanseinntrykk er for eksempel et maleri eller andre typer kunst.</p>",
+	"type": "jaNei",
+	"ruting": {
+		"ja": {
+			"type": "gaaTil",
+			"steg": "3.7"
+			},
+		"nei": {
+			"type": "gaaTil",
+			"steg": "3.8"
 			}
 		}
+}
 ```
 
 ### Steg av typen radio
@@ -304,7 +305,7 @@ Steg med egendefinerte valg i form av radio-knapper.
 			"XHTML 1.1",
 			"Anna"
 			]
-		}
+}
 ```
 
 
