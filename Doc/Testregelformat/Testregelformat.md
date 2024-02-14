@@ -213,11 +213,11 @@ Steg med egendefinerte valg i form av radio-knapper.
 		<td>Ja</td>
  		<td>Steget sin <a href="#ruting">ruting.</a></td>
  	 <td><pre lang="json">"ruting": {
-              "ja": {
+              "alt0": {
                     "type": "gaaTil",
-                    "steg": "3.3"
+                    "steg": "3.5"
                 },
-               "nei": {
+               "alt1": {
                     "type": "gaaTil",
                     "steg": "3.6"
                 }
@@ -295,13 +295,9 @@ Steg med egendefinerte valg i form av radio-knapper.
 		<td>Ja</td>
  		<td>Steget sin <a href="#ruting">ruting.</a></td>
  	 <td><pre lang="json">"ruting": {
-              "ja": {
+              "alle": {
                     "type": "gaaTil",
                     "steg": "3.3"
-                },
-               "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.6"
                 }
             }</pre></td>	
 		</td>	
@@ -327,6 +323,32 @@ Steg med egendefinerte valg i form av radio-knapper.
 		<td>Nei</td>
  		<td>Valgfritt bilde som kan brukes til hjelp på steget.</td>
  		<td><pre lang="json">"image": "/.jpg"</pre></td>	
+	</tr>
+ <tr>
+ 		<td>multilinje</td>
+		<td>boolean</td>
+		<td>Nei</td>
+ 		<td>Valgfritt parameter for om tekstfeltet skal gå over fleire linjer</td>
+ 		<td><pre lang="json">"multilinje": true</pre></td>	
+	</tr>
+ <tr>
+ 		<td>filter</td>
+		<td>string</td>
+		<td>Nei</td>
+ 		<td>Valgfritt filter på tekst-feltet.<ul>
+			<li>tal - Tekstfeltet skal bare godta tall.</li>
+		</ul>
+		</td>
+ 		<td><pre lang="json">"filter": "tal"</pre></td>	
+	</tr>
+ <tr>
+ 		<td>datalist</td>
+		<td>string</td>
+		<td>Nei</td>
+ 		<td>Valgfritt felt for å koble på en datalist.<ul>
+			<li>Sideutvalg - datalist med sideutvalg.</li>
+		</ul></td>
+ 		<td><pre lang="json">"datalist": "Sideutvalg"</pre></td>	
 	</tr>
 		
 </table>
