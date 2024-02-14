@@ -287,7 +287,7 @@ Steg med egendefinerte valg i form av radio-knapper.
 		<td>string[HTML]</td>
 		<td>Ja</td>
  		<td>Steget sin hjelpetekst</td>
- 		<td><pre lang="json">"ht": "&lt;p&gt;Beskriv elementet.;/p&gt;"</pre></td>	
+ 		<td><pre lang="json">"ht": "&lt;p&gt;Beskriv elementet.&lt;/p&gt;"</pre></td>	
 	</tr>
 		<tr>
  		<td>ruting</td>
@@ -333,7 +333,7 @@ Steg med egendefinerte valg i form av radio-knapper.
 
 
 ### Steg av typen StegInstruksjon
-Steg med ein intstuksjon som skal gjennomføres uten at det skal registeres data.
+Steg med ein instruksjon som skal gjennomføres uten at det skal registeres data.
 <table>
 	<tr>
         	<th>Felt</th>
