@@ -329,7 +329,7 @@ Steg med egendefinerte valg i form av radio-knapper.
 </table>
 
 ### Steg av typen StegInstruksjon
-Steg med egendefinerte valg i form av radio-knapper.
+Steg med ein intstuksjon som skal gjennomføres uten at det skal registeres data.
 <table>
 	<tr>
         	<th>Felt</th>
@@ -358,14 +358,14 @@ Steg med egendefinerte valg i form av radio-knapper.
 		<td>string</td>
 		<td>Ja</td>
  		<td>Spørsmål som kan svarast på med radioknappar som alternativ.</td>
- 		<td><pre lang="json">"spm": "Kva type funksjonalitet er elementet ein del av?"</pre></td>	
+ 		<td><pre lang="json">"spm": "Opne nettsida i eit nytt nettlesarvindauge."</pre></td>	
 	</tr>
 	<tr>
  		<td>ht</td>
 		<td>string[HTML]</td>
 		<td>Ja</td>
  		<td>Steget sin hjelpetekst</td>
- 		<td><pre lang="json">"ht": "&lt;p&gt;Velg frå alternativa under.&lt;/p&gt;"</pre></td>	
+ 		<td><pre lang="json">"ht": "&lt;p&gt;Du kan holde ned CTRL-tasten og klikke (Windows).&lt;/p&gt;"</pre></td>	
 	</tr>
 		<tr>
  		<td>ruting</td>
@@ -402,13 +402,7 @@ Steg med egendefinerte valg i form av radio-knapper.
 		
 </table>
 
-I tilegg finnes desse spesialfelta:
-- label
-- image
-- svarArray
-
-
-## Eksempel på steg
+### Eksempel på steg
 
 ```json
 {
