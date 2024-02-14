@@ -167,6 +167,25 @@ Steg som bare skal ha Ja og Nei som sine mulige valg.
 		
 </table>
 
+#### Eksempel på jaNei
+```json
+	{
+			"stegnr": "3.6",
+			"spm": "Er det meningsbærende bildet en test eller et sanseinntrykk?",
+			"ht": "<p><strong>Test:</strong> Bilde som er en del av en test eller prøve, er bilde der innholdet vil bli ugyldig dersom det blir presentert som tekst. Hensikten med testen forsvinner dersom svaret gis av tekstalternativet.</p>\n<p><strong>Merk:</strong> Hvis dette er et komplekst bilde, så testes det i steg 3.9.</p>\n<p><strong>Sanseinntrykk:</strong> Bilde som skal gi et sanseinntrykk er for eksempel et maleri eller andre typer kunst.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				}
+			}
+		}
+```
 
 ### Steg av typen radio
 Steg med egendefinerte valg i form av radio-knapper.
@@ -249,9 +268,48 @@ Steg med egendefinerte valg i form av radio-knapper.
 		
 </table>
 
+#### Eksempel på type radio
+```json
+{
+	"stegnr": "3.1",
+	"spm": "Korleis er nettsida koda?",
+	"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette. Du finn det i <code>&lt;!DOCTYPE&gt;</code>-elementet, som er det første elementet i koden.</p>\n<ul>\n<li>HTML5 er koda som <code>&lt;!DOCTYPE html&gt;</code></li>\n<li>I HTML 4, står det \"HTML 4.01\" ein stad i <code>&lt;!DOCTYPE&gt;</code>-elementet.</li>\n<li>I XHTML 1.0, står det \"XHTML 1.0\" ein stad i <code>&lt;!DOCTYPE&gt;</code>-elementet.</li>\n<li>I XHTML 1.1, står det \"XHTML 1.1\" eller \"XHTML Basic 1.1\" ein stad i <code>&lt;!DOCTYPE&gt;</code>-elementet.</li>\n</ul>\n<p><strong>Merk:</strong> HTML-elementet kan innehalde annan tekst før avsluttande &gt; i elementet <code>&lt;!DOCTYPE&gt;</code>.</p>",
+	"type": "radio",
+	"ruting": {
+		"alt0": {
+			"type": "gaaTil",
+			"steg": "3.2"
+			},
+		"alt1": {
+			"type": "gaaTil",
+			"steg": "3.2"
+			},
+		"alt2": {
+			"type": "gaaTil",
+			"steg": "3.3"
+			},
+		"alt3": {
+			"type": "gaaTil",
+			"steg": "3.4"
+			},
+		"alt4": {
+			"type": "gaaTil",
+			"steg": "3.3"
+			}
+		},
+		"svarArray": [
+			"HTML 5",
+			"HTML 4",
+			"XHTML 1.0",
+			"XHTML 1.1",
+			"Anna"
+			]
+		}
+```
+
 
 ### Steg av typen StegTekst
-Steg med egendefinerte valg i form av radio-knapper.
+Steg med input i form av tekst eller tall.
 <table>
 	<tr>
         	<th>Felt</th>
@@ -328,7 +386,7 @@ Steg med egendefinerte valg i form av radio-knapper.
  		<td>multilinje</td>
 		<td>boolean</td>
 		<td>Nei</td>
- 		<td>Valgfritt parameter for om tekstfeltet skal gå over fleire linjer</td>
+ 		<td>Valgfritt parameter for om tekstfeltet skal gå over fleire linjer. Dersom den ikke er angitt vil den som standard vere sett til false.</td>
  		<td><pre lang="json">"multilinje": true</pre></td>	
 	</tr>
  <tr>
@@ -353,6 +411,23 @@ Steg med egendefinerte valg i form av radio-knapper.
 		
 </table>
 
+#### Eksempel på type tekst
+```json
+{
+	"stegnr": "3.7",
+	"spm": "Hvor mange tilstander har brukergrensesnittkomponenten? ",
+	"ht": "<p>Registrer antall tilstander.</p>\n<p>Eksempel: en avkryssingsboks kan ha to tilstander avkrysset eller ikke avkrysset</p>",
+	"type": "tekst",
+	"ruting": {
+		"alle": {
+			"type": "gaaTil",
+			"steg": "3.8"
+			}
+		},
+	"label": "Antall tilstander:",
+	"filter": "tal"
+}
+```
 
 ### Steg av typen StegInstruksjon
 Steg med ein instruksjon som skal gjennomføres uten at det skal registeres data.
@@ -451,30 +526,6 @@ Steg med ein instruksjon som skal gjennomføres uten at det skal registeres data
 }
 ```
 
-
-
-### Type
-#### Ekstra eigenskapar for type tekst
-##### Multilinje
-Type: boolean
-
-Set om eit tekstfelt skal gå over fleire linjer. Dersom den ikke er angitt vil den som standard vere sett til false.
-~~~~~~~~~~~~~~~~~~
-"multilinje": true
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-##### Filter
-Type: string
-
-Set tekstfeltet til eit bestemt filter.
-| Verdi |Omtale   | Eksempel |
-|---|---|---|
-|  tal |  Tekstfelt skal berre akseptere tal. |  `"filter": "tall"`|
-
-##### datalist
-Type: string
-| Verdi |Omtale   | Eksempel |
-|---|---|---|
-|  Sideutvalg |  Tekstfeltet skal ha autocomplete på sideutvalg. |  `"datalist": "Sideutvalg"`|
 
 ### Ruting
 Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, som er nærare omtalt i dette kapitelet.
