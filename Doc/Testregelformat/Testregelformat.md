@@ -538,13 +538,13 @@ Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, so
                 }
             }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-### Typar Ruting
+### Typar Ruting triggere
 
-"Ruting til" er det øverste nivået i en ruting. Den vanlege alternativa er  
+En ruting kan bli trigga av:
 -   [Alle](#ruting-alle)
 -   [Ja/Nei](#ruting-ja-og-nei)
 -   [Alternativ frå radioboks](#ruting-frå-radioboks)
--  [Reglar](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md).
+-   [Reglar](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md).
 
 ### Ruting Alle
 Ruting alle betyr at den valte rutinga skal nyttast ved alle svar. 
