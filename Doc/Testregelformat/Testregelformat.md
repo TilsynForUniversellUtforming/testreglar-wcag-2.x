@@ -526,7 +526,7 @@ Steg med ein instruksjon som skal gjennomføres uten at det skal registeres data
 # Ruting
 Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, som er nærare omtalt i dette kapitelet.
 #### Eksempel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
 "ruting": {
               "ja": {
                     "type": "gaaTil",
@@ -537,7 +537,7 @@ Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, so
                     "steg": "3.6"
                 }
             }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 ### Typar Ruting triggere
 
 En ruting kan bli trigga av:
@@ -549,34 +549,34 @@ En ruting kan bli trigga av:
 ### Ruting Alle
 Ruting alle betyr at den valte rutinga skal nyttast ved alle svar. 
 #### Eksempel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
 "ruting": {
               "alle": {
                     "type": "gaaTil",
                     "steg": "3.3"
                 }
             }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 ### Ruting Ja og nei
 Ruting Ja og  Nei gjer ulik ruting for Ja og Nei spørsmål.
 #### Eksempel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
 "ruting": {
-              "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
+	"ja": {
+		"type": "gaaTil",
+		"steg": "3.3"
                 },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.8"
+	"nei": {
+		"type": "gaaTil",
+		"steg": "3.8"
                 }
-            }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	}
+```
 
 ### Ruting frå radioboks
 Ved ruting frå radioboks vil rutinga vere basert på kva alternativ du vel. Dei ulike alternativa skal spesifiserast i matrisa "svarArray", og blir referert til frå 0 til tal alternativ (For eksempel "alt0" vil då vise til det fyrste elementet i matrisa)
 #### Eksempel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
             "svarArray": ["1-5 tabsteg", "6-10 tabsteg", "Fleire enn 10 tabsteg", "Når ikkje mekanisme med tastatur"],
             "ruting": {
                 "alt0": {
@@ -599,7 +599,7 @@ Ved ruting frå radioboks vil rutinga vere basert på kva alternativ du vel. Dei
                     "utfall": "Ved tastaturnavigasjon, er det ikkje mogleg å slå av eller regulere lyd som startar automatisk på nettsida."
                 }
             }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 
 ### Reglar for ruting
@@ -618,7 +618,7 @@ Delutfall er når du har behov får lage et mellombels resultat som du til slutt
 ### Sette delutfall
 
 Delutfall blir lagt til gjennom å legge til eit delutfall-objekt på rutingen.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
 {
 			"stegnr": "3.8",
 			"spm": "Har bilde eit alt-attributt?",
@@ -637,7 +637,7 @@ Delutfall blir lagt til gjennom å legge til eit delutfall-objekt på rutingen.
 				}
 			}
 		}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ### Bruke delutfall
 
@@ -661,7 +661,7 @@ Ved å sette `"fasit": "sjekkDelutfall"` i ei ruting av typen "avslutt" kan du b
 - "Nei" dersom eit eller fleire delutfall har fasit "Nei".
 
 #### Eksempel på delutfall til å sette fasit
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
 {
 			"stegnr": "3.19",
 			"spm": "Gir teksten saman med konteksten ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
@@ -684,7 +684,7 @@ Ved å sette `"fasit": "sjekkDelutfall"` i ei ruting av typen "avslutt" kan du b
 				}
 			}
 		}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 (c) 2018-2024 Tilsyn for universell utforming
 
 
