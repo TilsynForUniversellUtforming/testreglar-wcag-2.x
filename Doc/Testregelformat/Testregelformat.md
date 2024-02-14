@@ -92,7 +92,7 @@ Eit steg er kvar instruksjon i test-prosedyren. Eit steg kan vere av desse typan
 - tekst
 - instruksjon
 
-## Steg av typen jaNei
+### Steg av typen jaNei
 Steg som bare skal ha Ja og Nei som sine mulige valg
 
 <table>
@@ -166,7 +166,7 @@ Steg som bare skal ha Ja og Nei som sine mulige valg
 		
 </table>
 
-## Steg av typen StegRadio
+### Steg av typen StegRadio
 
 <table>
 
