@@ -87,7 +87,7 @@ Dersom det er sida som er elementet skriv "Side"</td>
 Steg
 ----
 Eit steg er kvar instruksjon i test-prosedyren. Eit steg kan vere av desse typane:
-- jaNei
+- [jaNei](steg-av-typen-janei)
 - radio
 - tekst
 - instruksjon
