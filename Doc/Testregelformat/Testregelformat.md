@@ -669,7 +669,7 @@ Ved å sette `"fasit": "sjekkDelutfall"` i ei ruting av typen "avslutt" kan du b
 	"ht": "<p>Teksten skal identifisere at det handlar om ein test, kode eller utfordring for å verifisere at brukaren er eit menneske.</p><p>Kontekst kan for eksempel vere tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</p><p>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p>",
 	"type": "jaNei",
 	"kilde": [],
-	ruting": {
+	"ruting": {
 		"ja": {
 		"type": "avslutt",
 		"fasit": "sjekkDelutfall",
@@ -682,9 +682,9 @@ Ved å sette `"fasit": "sjekkDelutfall"` i ei ruting av typen "avslutt" kan du b
 			"type": "avslutt",
 			"fasit": "Nei",
 			"utfall": "#delutfall(0) #delutfall(1) CAPTCHA i form av lyd, manglar tekstleg beskriving av formålet."
-				}
-			}
 		}
+	}
+}
 ```
 (c) 2018-2024 Tilsyn for universell utforming
 
