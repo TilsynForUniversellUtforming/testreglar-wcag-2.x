@@ -135,7 +135,7 @@ Steg som bare skal ha Ja og Nei som sine mulige valg.
 </tr>
 <tr>
  	<td>ruting</td>
-	<td>string</td>
+	<td>[string, Handling]</td>
 	<td>Ja</td>
  	<td>Steget sin <a href="#ruting">ruting.</a></td>
  	 <td><pre lang="json">"ruting": {
@@ -228,7 +228,7 @@ Steg med egendefinerte valg i form av radio-knapper.
 	</tr>
 		<tr>
  		<td>ruting</td>
-		<td>string</td>
+		<td>[string, Handling]</td>
 		<td>Ja</td>
  		<td>Steget sin <a href="#ruting">ruting.</a></td>
  	 <td><pre lang="json">"ruting": {
@@ -349,7 +349,7 @@ Steg med input i form av tekst eller tall.
 	</tr>
 		<tr>
  		<td>ruting</td>
-		<td>string</td>
+		<td>[string, Handling]</td>
 		<td>Ja</td>
  		<td>Steget sin <a href="#ruting">ruting.</a></td>
  	 <td><pre lang="json">"ruting": {
@@ -470,7 +470,7 @@ Steg med ein instruksjon som skal gjennomføres uten at det skal registeres data
 	</tr>
 		<tr>
  		<td>ruting</td>
-		<td>string</td>
+		<td>[string, Handling]</td>
 		<td>Ja</td>
  		<td>Steget sin <a href="#ruting">ruting.</a></td>
  	 <td><pre lang="json">"ruting": {
@@ -544,7 +544,7 @@ En ruting kan bli trigga av:
 -   [Alle](#ruting-alle)
 -   [Ja/Nei](#ruting-ja-og-nei)
 -   [Alternativ frå radioboks](#ruting-frå-radioboks)
--   [Reglar](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md).
+-   [Reglar](https://github.com/TilsynForUniversellUtforming/Testregler-2.1/blob/master/Doc/Testregelformat/Rutingreglar.md)
 
 ### Ruting Alle
 Ruting alle betyr at den valte rutinga skal nyttast ved alle svar. 
