@@ -523,7 +523,7 @@ Steg med ein instruksjon som skal gjennomføres uten at det skal registeres data
 ```
 
 
-### Ruting
+# Ruting
 Ruting er logikk for kva som skjer etter svar. Ruting har fleire underetypar, som er nærare omtalt i dette kapitelet.
 #### Eksempel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
