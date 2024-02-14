@@ -167,13 +167,12 @@ Steg som bare skal ha Ja og Nei som sine mulige valg.
 		
 </table>
 
-#### Eksempel på jaNei
+#### Eksempel på steg av typen jaNei
 ```json
 {
 	"stegnr": "3.6",
 	"spm": "Er det meningsbærende bildet en test eller et sanseinntrykk?",
-	"ht": "<p><strong>Test:</strong> Bilde som er en del av en test eller prøve, er bilde der innholdet vil bli ugyldig dersom det blir presentert som tekst. Hensikten med testen forsvinner dersom svaret gis av tekstalternativet. 
-               </p>\n<p><strong>Merk:</strong> Hvis dette er et komplekst bilde, så testes det i steg 3.9.</p>\n<p><strong>Sanseinntrykk:</strong> Bilde som skal gi et sanseinntrykk er for eksempel et maleri eller andre typer kunst.</p>",
+	"ht": "<p><strong>Test:</strong> Bilde som er en del av en test eller prøve, er bilde der innholdet vil bli ugyldig dersom det blir presentert som tekst. Hensikten med testen forsvinner dersom svaret gis av tekstalternativet </p>\n<p><strong>Merk:</strong> Hvis dette er et komplekst bilde, så testes det i steg 3.9.</p>\n<p><strong>Sanseinntrykk:</strong> Bilde som skal gi et sanseinntrykk er for eksempel et maleri eller andre typer kunst.</p>",
 	"type": "jaNei",
 	"ruting": {
 		"ja": {
@@ -269,7 +268,7 @@ Steg med egendefinerte valg i form av radio-knapper.
 		
 </table>
 
-#### Eksempel på type radio
+#### Eksempel på steg av typen radio
 ```json
 {
 	"stegnr": "3.1",
@@ -412,7 +411,7 @@ Steg med input i form av tekst eller tall.
 		
 </table>
 
-#### Eksempel på type tekst
+#### Eksempel på steg av typen tekst
 ```json
 {
 	"stegnr": "3.7",
@@ -505,25 +504,21 @@ Steg med ein instruksjon som skal gjennomføres uten at det skal registeres data
 </table>
 
 
-### Eksempel på steg
+#### Eksempel på steg av typen instruksjon
 
 ```json
 {
-  "stegnr": "3.2",
-  "spm": "Har skjemaelementet ein tekstleg identifikasjon i form av ledetekst, tekst på knapp eller instruksjon?",
-   "ht": "Dersom det står ein knapp i direkte tilknyting til eit skjemafelt, og knappen skal brukast for å sende inn skjemaet, skal knappen beskrivande tekst.Knappen fungerer då som synleg ledetekst. Eksempel på slike skjema er: Melde på nyheitsbrev, globalt søk.</p>",
-   "type": "jaNei",
-   "kilde": ["G131", "G167", "H44"],
-   "ruting": {
-              "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                },
-               "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.6"
-                }
-            }
+	"stegnr": "3.9",
+	"spm": "Finn/identifiser elementet i koden.",
+	"ht": "<p>Sjå i koden og finn det aktuelle elementet.</p><p>Elementet kan for eksempel vere koda som</p><ul><li>&#x3C;img&#x3E;</li><li>&#x3C;i&#x3E;</li><li>&#x3C;span&#x3E;</li><li>&#x3C;div&#x3E;</li></ul>",
+	"type": "instruksjon",
+	"kilde": [],
+	"ruting": {
+		"alle": {
+			"type": "gaaTil",
+			"steg": "3.10"
+			}
+		}
 }
 ```
 
