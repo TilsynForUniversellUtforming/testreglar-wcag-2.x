@@ -39,15 +39,26 @@ jobs:
                   labels: [newLabel],
                 });
 
-                // Fjern eksisterende label hvis det finnes
-                await github.rest.issues.removeLabel({
+                // Sjekk om eksisterende label finnes før du prøver å fjerne den
+                const existingLabels = await github.rest.issues.listLabelsOnIssue({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   issue_number: prNumber,
-                  name: existingLabel,
                 });
+
+                const existingLabelNames = existingLabels.data.map(label => label.name);
+
+                if (existingLabelNames.includes(existingLabel)) {
+                  // Fjern eksisterende label
+                  await github.rest.issues.removeLabel({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: prNumber,
+                    name: existingLabel,
+                  });
+                }
               }
             } catch (error) {
               console.error('Error accessing GitHub API:', error.message);
-              process.exit(1);
+              process.exit(0);
             }
