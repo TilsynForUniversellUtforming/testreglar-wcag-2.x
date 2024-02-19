@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsiden video med lyd?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Gjør en visuell inspeksjon, og sjekk om testsiden har video med lyd</li>\n<li>Hvis videoen er lang, tar du stikkprøver på minst to steder </li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Gjør en visuell inspeksjon, og sjekk om testsiden har video med lyd</li>\n<li>Hvis videoen er over 5 minutter, tar du stikkprøver på minst tre steder </li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -88,8 +88,8 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Er videoen tekstet?",
-			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Start videoen</li>\n<li>Ta stikkprøve på minst to steder</li>\n<li>Sjekk om videoen har teksting</li>\n</ul>",
+			"spm": "Har videoen innbrent teksting (open captions)? ",
+			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Start videoen</li>\n<li>Sjekk om videoen har innbrent teksting (open catpions)</li>\n<li>Ta stikkprøver minst tre steder</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G93"
@@ -107,8 +107,8 @@
 		},
 		{
 			"stegnr": "3.5",
-			"spm": "Kan du slå på teksting av videoen?",
-			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Se om det er en knapp eller lignende i videospilleren, som slår på/av teksting</li>\n</ul>\n<p><strong>Merk:</strong> Du ofte må føre musepeker over videoen for å få fram alternativ.</p>\n<p><strong>Tips: </strong>Skjult teksting kan ofte slås på med knapp med \"CC\" (closed captions) eller linje som indikerer at du kan aktivere teksting</p>",
+			"spm": "Kan du slå på teksting (closed captions) av videoen?",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Se om det er en knapp eller lignende i videospilleren, som slår på/av teksting.</li>\n</ul>\n<p><strong>Merk:</strong> Du må ofte føre musepeker over videoen for å få fram alternativ.</p>\n<p><strong>Tips: </strong>Skjult teksting kan ofte slås på med knapp med \"CC\" (closed captions) eller linje som indikerer at du kan aktivere teksting.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G87"
@@ -137,7 +137,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Er tekstingen leselig?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Start videoen</li>\n<li>Gjør en visuell inspeksjon av tekstingen, og og sjekk om tekstingen lesbar</li>\n<li>Ta minst to stikkprøver i ulike deler av videoen</li>\n</ul>\n<p>Du skal vurdere tekstingen mot bakgrunnen i videoen. Eksempel på teksting som ikke er lesbar:</p>\n<ul>\n<li>Teksting som overlapper annen tekst</li>\n<li>Teksting som omtrent lik farge som bakgrunnen</li>\n</ul>\n<p><strong>Merk: </strong>Du skal ikke måle kontrast mellom tekst og bakgrunn. Dette testes i SK 143 Kontrast (minimum).</p>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Start videoen</li>\n<li>Gjør en visuell inspeksjon av tekstingen, og og sjekk om tekstingen lesbar</li>\n<li>Ta minst tre stikkprøver i ulike deler av videoen</li>\n</ul>\n<p>Du skal vurdere tekstingen mot bakgrunnen i videoen. Eksempel på teksting som ikke er lesbar:</p>\n<ul>\n<li>Teksting som overlapper annen tekst</li>\n<li>Teksting som omtrent lik farge som bakgrunnen</li>\n</ul>\n<p><strong>Merk: </strong>Du skal ikke måle kontrast mellom tekst og bakgrunn. Dette testes i SK 143 Kontrast (minimum).</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G87",
@@ -167,7 +167,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Samsvarer informasjonen i tekstingen, med det som blir formidlet via lyd og bilde i videoen?",
-			"ht": "<p><strong>Merk:</strong> Det er teksting og bilde til sammen, som skal formidle informasjon gitt via bilde og lyd i videoen.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Se gjennom de første et min av videoen og sammenlign innholdet i videoen med det som er formidlet i tekstingen</li>\n<li>Ta minst to stikkprøver til, på ulike steder i videoen</li>\n<li>Vi krever ikke at tekstingen nøyaktig gjengir innholdet i lyd og bilde, men at følgende er dekket\n<ul>\n<li>tale/dialog</li>\n<li>annen lyd som er viktig for å forstå videoen, for eksempel\n<ul>\n<li>lydeffekter</li>\n<li>musikk/latter</li>\n<li>sted/plassering</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk: </strong>I <strong>dialog</strong> (når to eller flere snakker sammen) skal det markeres hvem som snakker, dersom dette er viktig for å forstå innholdet i videoen.</p>",
+			"ht": "<p><strong>Merk:</strong> Det er teksting og bilde til sammen, som skal formidle informasjon gitt via bilde og lyd i videoen.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Se gjennom de første et min av videoen og sammenlign innholdet i videoen med det som er formidlet i tekstingen</li>\n<li>Ta minst tre stikkprøver til, på ulike steder i videoen</li>\n<li>Vi krever ikke at tekstingen nøyaktig gjengir innholdet i lyd og bilde, men at følgende er dekket\n<ul>\n<li>tale/dialog</li>\n<li>annen lyd som er viktig for å forstå videoen, for eksempel\n<ul>\n<li>lydeffekter</li>\n<li>musikk/latter</li>\n<li>sted/plassering</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk: </strong>I <strong>dialog</strong> (når to eller flere snakker sammen) skal det markeres hvem som snakker, dersom dette er viktig for å forstå innholdet i videoen.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F8",
@@ -316,7 +316,7 @@
 		{
 			"stegnr": "3.13",
 			"spm": "Har videoen et tilgjengelig navn, som ikke er tomt?",
-			"ht": "<p><span style=\"white-space: pre;\">Slik tester du</span></p>\n<ul>\n<li><span style=\"white-space: pre;\">Inspiser videoen</span>\n<ul>\n<li><span style=\"white-space: pre;\">video-element er ofte nøstet under et annet parent-element som gir et tilgjengelig navn til videoen. </span>\n<ul>\n<li><span style=\"white-space: pre;\">For eksempel en iframe</span></li>\n</ul>\n</li>\n<li><span style=\"white-space: pre;\">undersøk i koden og finn det riktige elementet før du sjekker om videoen har et tilgjengelig navn </span></li>\n</ul>\n</li>\n<li><span style=\"white-space: pre;\">Bruk Accessibility Checker i nettleseren</span></li>\n<li><span style=\"white-space: pre;\">Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</span></li>\n</ul>\n<p><span style=\"white-space: pre;\"><strong>Merk:</strong> Du kan ved behov bruke skjermleser for å sjekke dette.</span></p>",
+			"ht": "<p><span style=\"white-space: pre;\">Slik tester du</span></p>\n<ul>\n<li><span style=\"white-space: pre;\">Inspiser videoen</span>\n<ul>\n<li><span style=\"white-space: pre;\">video-element er ofte nøstet under et annet parent-element som gir et tilgjengelig navn til videoen. </span>\n<ul>\n<li><span style=\"white-space: pre;\">For eksempel en iframe</span></li>\n</ul>\n</li>\n<li><span style=\"white-space: pre;\">undersøk i koden og finn det riktige elementet før du sjekker om videoen har et tilgjengelig navn </span></li>\n</ul>\n</li>\n<li><span style=\"white-space: pre;\">Bruk Accessibility Checker i nettleseren</span></li>\n<li><span style=\"white-space: pre;\">Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</span></li>\n</ul>\n<p><span style=\"white-space: pre;\"><strong>Tips:</strong> Du kan ved behov bruke skjermleser for å sjekke dette.,</span></p>\n<p><span style=\"white-space: pre;\"><strong>Merk:</strong> Dette steget er gjelder til SK 1.1.1 Ikke-tekstlig innhold, jamfør kulepunktet om tidsbaserte medier. Vi har inkludert det her, fremfor å ha en egen testregel knyttet til SK 1.1.1.</span></p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -326,7 +326,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "#delutfall(0,Ja) #delutfall(1,Ja) Videoen har ikke et tilgjengelig navn."
+					"utfall": "Video har ikke et tilgjengelig navn."
 				}
 			},
 			"kilde": [
@@ -336,7 +336,7 @@
 		{
 			"stegnr": "3.14",
 			"spm": "Gir det tilgjengelige navnet en beskrivende identifikasjon av videoen?",
-			"ht": "<p>Gjør en skjønnsmessig vurdering av om det tilgjengelige navnet:</p>\n<ul>\n<li>identifiserer innholdet i videoen og\n<ul>\n<li>Videoens tittel er vanligvis tilstrekkelig identifikasjon</li>\n</ul>\n</li>\n<li>dersom videoen er tekstet ved hjelp av tekstalternativ, sjekk om det tilgjengelige navnet\n<ul>\n<li>angir plasseringen av langt tekstalternativ, det vil si hvor brukeren finner det lange tekstalternativet</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong> Å angi plassering av langt tekstalternativ er ikke nødvendig, dersom videoen har teksting.</p>\n<p><strong>Merk:</strong> Dette steget er gjelder til SK 1.1.1 Ikke-tekstlig innhold, jamfør kulepunktet om tidsbaserte medier. Vi har inkludert det her, fremfor å ha en egen testregel knyttet til SK 1.1.1.</p>",
+			"ht": "<p>Gjør en skjønnsmessig vurdering av om det tilgjengelige navnet:</p>\n<ul>\n<li>identifiserer innholdet i videoen og\n<ul>\n<li>Videoens tittel er vanligvis tilstrekkelig identifikasjon</li>\n</ul>\n</li>\n<li>dersom videoen er tekstet ved hjelp av tekstalternativ, sjekk om det tilgjengelige navnet\n<ul>\n<li>angir plasseringen av langt tekstalternativ, det vil si hvor brukeren finner det lange tekstalternativet</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong> Å angi plassering av langt tekstalternativ er ikke nødvendig, dersom videoen har teksting.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G74",
@@ -351,7 +351,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "#delutfall(0,Ja) #delutfall(1,Ja) Videoen har et tilgjengelig navn som ikke gir en beskrivende identifikasjon."
+					"utfall": "Video har et tilgjengelig navn som ikke gir en beskrivende identifikasjon."
 				}
 			}
 		}
