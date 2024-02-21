@@ -1,18 +1,18 @@
 {
-	"namn": "1.3.3a Instruksjonar for betening av skjema, er ikkje utelukkande avhengige av sensoriske eigenskapar",
-	"id": "1.3.3a",
-	"testlabId": 148,
+	"namn": "Nett-1.3.3a Instruksjonar for forstå og betene skjema, er ikkje utelukkande avhengig av sensoriske eigenskapar 2023",
+	"id": "nett-1.3.3a",
+	"testlabId": 498,
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>Instruksjonar som inneheld informasjon om komponentars sensoriske eigenskapar (form, størrelse, visuell plassering på sida, orientering eller lyd), inneheld også annan informasjon som let brukaren finne og betene komponenten.</li>\r\n<li>Kravet kan og vere oppfylt viss noko av det følgande er ivareteke:<br>I instruksjonen er det brukt ord som i språket er naturleg for å referere ei leserekkefølge og denne rekkefølga er den same i koden.</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul>\r\n<li>Skjemainstruksjon som viser til sensoriske egenskaper (form, størrelse, visuell plassering, orientering eller lyd), har også annen informasjon, som lar brukeren forstå og betjene komponenten eller</li>\r\n<li>I skjemainstruksjon brukes det ord som er vanlige for å vise leserekkefølge, og rekkefølgen er den samme i koden.</li>\r\n</ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID.",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
 			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
@@ -26,10 +26,9 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har nettsida digitale/interaktive skjema/skjemaelement?",
-			"ht": "Gjennomgå nettsida og sjå etter digitale/interaktive skjema.",
+			"spm": "Har testsida interaktive skjema/skjemaelement?",
+			"ht": "<p>Gjer ein visuell inspeksjon av testsida, sjå etter interaktive skjema/skjemaelement.</p>\n<p>Dette kan for eksempel vere:</p>\n<ul>\n<li>Inndataelement</li>\n<li>Knappar</li>\n<li>Avkryssingsboksar</li>\n</ul>\n<p><strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>\n<p> </p>",
 			"type": "jaNei",
-			"kilde": [],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
@@ -37,14 +36,14 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testside har ikkje skjema."
+					"utfall": "Testside har ikkje interaktive skjema."
 				}
 			}
 		},
 		{
 			"stegnr": "2.3",
-			"spm": "Beskriv skjemaet/prosessen",
-			"ht": "Legg inn overskrift, eller andre stikkord som er slik at skjemaet kan identifiserast.",
+			"spm": "Beskriv skjemaet/prosessen.",
+			"ht": "<p>Legg inn overskrift eller andre stikkord, slik at skjemaet kan identifiserast.</p>",
 			"type": "tekst",
 			"label": "Skjema/prosess:",
 			"oblig": true,
@@ -58,10 +57,9 @@
 		},
 		{
 			"stegnr": "2.4",
-			"spm": "Inneheld skjemaet instruksjonar for betening?",
-			"ht": "Gjennomgå skjemaet og sjå etter om skjemaet inneheld instruksjon for utfylling eller betening av skjemaelement.",
+			"spm": "Har skjemaet instruksjonar for å forstå eller betene skjemaelement?",
+			"ht": "<p>Gjer ein visuell inspeksjon av skjemaet, sjå etter instruksjonar for å forstå eller betene skjemaelement.</p>",
 			"type": "jaNei",
-			"kilde": [],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
@@ -69,15 +67,15 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Skjema har ikkje instruksjonar for betening.",
+					"utfall": "Skjema har ikkje instruksjonar for å forstå eller betene skjemaelement.",
 					"element": "2.3"
 				}
 			}
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Beskriv den tekstlege instruksjonen som skal testast.",
-			"ht": "<p>Du skal registrere og legge til data for kvar enkelt instruksjon for betening.</p> <p>Legg inn stikkord eller kopier inn den tekstlege instruksjonen, slik at han kan identifiserast.</p>",
+			"spm": "Beskriv instruksjonen du testar.",
+			"ht": "<p>Beskriv instruksjon, slik at det er mogleg å identifisere den i ettertid. Om det er fleire instruksjonar, registrerer du ein og ein.</p>\n<p><strong>Tips:</strong> Du kan kopiere og lime inn instruksjonen. Dersom den er lang, skriv du inn stikkord. </p>",
 			"type": "tekst",
 			"label": "Instruksjon:",
 			"multilinje": true,
@@ -91,8 +89,8 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Inneheld instruksjonen tilvising til sensoriske eigenskapar ved skjemaelementet?",
-			"ht": "<p>Sjekk om det fins tilvising til</p><ul><li>form</li><li>størrelse</li><li>lyd</li><li>symbol/ikon</li><li>orientering/plassering på sida</li></ul>",
+			"spm": "Viser instruksjonen til sensoriske eigenskapar ved skjemaelementet?",
+			"ht": "<p>Sensoriske eigenskapar er eigenskapar ved innhaldet som brukaren oppfattar med sansane (syn, høyrsel, føle, smak, lukt).</p>\n<p>Sjekk om instruksjonen viser til</p>\n<ul>\n<li>form</li>\n<li>størrelse</li>\n<li>visuell plassering eller orientering på sida</li>\n<li>lyd</li>\n</ul>\n<p><strong>Merk:</strong> Instruksjonar gitt ved bruk av farge, er dekka og blir testa som del av suksesskriterium 1.4.1.</p>\n<p><strong>Tips:</strong> W3Cs ACT-gruppe har utarbeida ei <a href=\"https://act-rules.github.io/rules/9bd38c#visual-reference-words\" target=\"_blank\" rel=\"noopener\">liste med eksempel på ord som refererer til sensoriske egenskaper </a>(Engelsk).</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -101,14 +99,14 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Tekstlege instruksjon utan tilvising til sensoriske eigenskapar."
+					"utfall": "Skjemainstruksjon viser ikkje til sensoriske eigenskapar."
 				}
 			}
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Inneheld instruksjonen tilvising til form på skjemaelement?",
-			"ht": "Merk at form ikkje omfattar symbol/ikon/grafisk presentasjon. Desse er tema i punkt 3.6. ",
+			"spm": "Viser instruksjonen til form på skjemaelement?",
+			"ht": "<p>Eksempel på form er:</p>\n<ul>\n<li>Sirkel</li>\n<li>Firkant</li>\n<li>Stjerne</li>\n</ul>\n<p><strong>Merk:</strong> Form ikkje omfattar symbol/ikon/grafisk presentasjon. Desse blir testa i steg 3.6.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"alle": {
@@ -119,8 +117,8 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Inneheld instruksjonen tilvising til størrelse på skjemaelement?",
-			"ht": "",
+			"spm": "Viser instruksjonen til størrelsen på skjemaelement?",
+			"ht": "<p>Eksempler på størrelse er:</p>\n<ul>\n<li>Minste</li>\n<li>Mellomste</li>\n<li>Største</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"alle": {
@@ -131,8 +129,8 @@
 		},
 		{
 			"stegnr": "3.5",
-			"spm": "Inneheld instruksjonen tilvising til eventuell lyd i skjemaelement?",
-			"ht": "",
+			"spm": "Viser instruksjonen til lyd i skjemaelement?",
+			"ht": "<p>Eksempel på lyd er:</p>\n<ul>\n<li>Pip</li>\n<li>Pling</li>\n<li>Anna lyd</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"alle": {
@@ -143,8 +141,8 @@
 		},
 		{
 			"stegnr": "3.6",
-			"spm": "Inneheld instruksjonen tilvisingar til sensoriske eigenskapar som for eksempel symbol/ikon/grafiske presentasjonar av utsjånaden på skjemaelementet?",
-			"ht": "",
+			"spm": "Viser instruksjonen til utsjånaden på skjemaelementet?",
+			"ht": "<p>Eksempel på utsjånaden på skjemaelementet er:</p>\n<ul>\n<li>Symbol: !, #, %, &amp;, x, *</li>\n<li>Ikon: Kake, smilefjes, forstørrelsesglass</li>\n<li>Grafiske presentasjonar: bilde av dyr, kart, diagram</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"alle": {
@@ -155,8 +153,8 @@
 		},
 		{
 			"stegnr": "3.7",
-			"spm": "Inneheld instruksjonen tilvising til skjemaelements  orientering eller plassering på sida?",
-			"ht": "",
+			"spm": "Viser instruksjonen til skjemaelement si plassering eller orientering på nettsida?",
+			"ht": "<p>Eksempel på plassering eller orientering på nettsida er:</p>\n<ul>\n<li>over</li>\n<li>under</li>\n<li>høgre</li>\n<li>venstre</li>\n<li>ved sida av </li>\n<li>øverst </li>\n<li>nederst</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"alle": {
@@ -196,7 +194,7 @@
 																			"verdi": "Nei",
 																			"handling": {
 																				"type": "ikkjeForekomst",
-																				"utfall": "Tekstlege instruksjon utan tilvising til sensoriske eigenskapar."
+																				"utfall": "Skjemainstruksjon viser ikkje til sensoriske eigenskapar."
 																			}
 																		},
 																		"2": {
@@ -262,18 +260,18 @@
 		},
 		{
 			"stegnr": "3.8",
-			"spm": "Gir instruksjonen den same informasjonen utan tilvising til sensoriske eigenskapar?",
-			"ht": "<p>Sjå på teksten i instruksjonen og utelat referansar til sensoriske eigenskapar ved elementet. </p><p>Eksempel 1:</p><ul><li>Instruksjonen seier \"Trykk på den store runde knappen for å sende inn skjemaet\".</li><li>Dersom ein tek vekk referansen til dei sensoriske eigenskapane ved knappen, (her: \"stor\"/størrelse og \"rund\"/form) vil intruksjonen seie \"Trykk på knappen\".</li></ul><p>Eksempel 2:</p><ul><li>Teksten til elementet det blir vist til, blir gjenteke i instruksjonen.</li></ul><p><strong>Merk:</strong> Teksten i instruksjonen treng ikkje å vere identisk med teksten til elementet</p>",
+			"spm": "Gir instruksjonen den same informasjonen, utan å vise til sensoriske eigenskapar?",
+			"ht": "<p>Les instruksjonen og utelat referansar til sensoriske eigenskapar ved skjemaelementet.</p>\n<p>Eksempel 1:</p>\n<ul>\n<li>Instruksjonen er \"Trykk på den store, runde send knappen for å fullføre skjemaet\".</li>\n<li>Dersom du utelèt referansen til dei sensoriske eigenskapane ved knappen, (her: \"stor\"/størrelse og \"rund\"/form) vil instruksjonen seie \"Trykk på send knappen for å fullføre skjemaet \".</li>\n</ul>\n<p>Eksempel 2:</p>\n<ul>\n<li>Teksten til skjemaelementet det blir vist til, blir gjenteke i instruksjonen.</li>\n</ul>\n<p><strong>Merk:</strong> Teksten i instruksjonen treng ikkje å vere identisk med teksten til elementet. </p>",
 			"type": "jaNei",
 			"kilde": [
-				"G96",
-				"F14"
+				"F14",
+				"G96"
 			],
 			"ruting": {
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Instruksjon for betening av skjema, som viser til skjemakomponentane sine sensoriske eigenskapar (form, størrelse, visuell plassering på sida, orientering, eller lyd), inneheld også annan informasjon slik at brukaren kan finne og betene komponenten."
+					"utfall": "Skjemainstruksjon som viser til sensoriske eigenskapar har også anna informasjon, som lar brukaren forstå og betene skjemaelement."
 				},
 				"nei": {
 					"type": "regler",
@@ -310,7 +308,7 @@
 										"handling": {
 											"type": "avslutt",
 											"fasit": "Nei",
-											"utfall": "Instruksjon for betening av skjema, som viser til skjemakomponentane sine sensoriske eigenskapar (form, størrelse, visuell plassering på sida, orientering, eller lyd), inneheld ikkje annan informasjon slik at brukaren kan finne og betene komponenten."
+											"utfall": "Skjemainstruksjon som viser til sensoriske eigenskapar har ikkje anna informasjon, som lar brukaren forstå og betene skjemaelement."
 										}
 									}
 								}
@@ -322,10 +320,9 @@
 		},
 		{
 			"stegnr": "3.9",
-			"spm": "Finn/identifiser elementet i koden.",
-			"ht": "<p>Sjå i koden og finn det aktuelle elementet.</p><p>Elementet kan for eksempel vere koda som</p><ul><li>&#x3C;img&#x3E;</li><li>&#x3C;i&#x3E;</li><li>&#x3C;span&#x3E;</li><li>&#x3C;div&#x3E;</li></ul>",
+			"spm": "Inspiser elementet som inneheld symbol, ikon eller grafisk presentasjon i koden.",
+			"ht": "<p>Gjer ein visuell inspeksjon i koden og finn det aktuelle elementet. </p>\n<p>Elementet kan for eksempel vere koda som</p>\n<ul>\n<li><code>&lt;img&gt;</code></li>\n<li><code>&lt;i&gt;</code></li>\n<li><code>&lt;span&gt;</code></li>\n<li><code>&lt;div&gt;</code></li>\n</ul>",
 			"type": "instruksjon",
-			"kilde": [],
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
@@ -335,14 +332,14 @@
 		},
 		{
 			"stegnr": "3.10",
-			"spm": "Er symbolet/ikonet/den grafiske presentasjonen identifisert i koden som bilde?",
-			"ht": "<p>Sjå i koden, finn det aktuelle elementet og undersøk om det er koda som bilde (&#x3C;img&#x3E;).</p>",
+			"spm": "Er symbolet, ikonet, eller grafisk presentasjon identifisert i koden?",
+			"ht": "<p>Sjekk i koden om symbolet, ikonet eller grafisk presentasjon er:</p>\n<ul>\n<li>koda som bilde, <code>&lt;img&gt;</code> eller <code>role=\"image\"</code>, og</li>\n<li>har eit tilgjengelig navn som identifiserer symbolet, ikonet, eller den grafiske presentasjonen</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Instruksjon for betening av skjema, som viser til skjemakomponentane sine sensoriske eigenskapar (form, størrelse, visuell plassering på sida, orientering, eller lyd), inneheld også annan informasjon slik at brukaren kan finne og betene komponenten."
+					"utfall": "Skjemainstruksjon som viser til sensoriske eigenskapar, har også anna informasjon, som lar brukaren forstå og betene skjemaelement."
 				},
 				"nei": {
 					"type": "regler",
@@ -363,17 +360,20 @@
 							"handling": {
 								"type": "avslutt",
 								"fasit": "Nei",
-								"utfall": "Instruksjon for betening av skjema, som viser til skjemakomponentane sine sensoriske eigenskapar (form, størrelse, visuell plassering på sida, orientering, eller lyd), er ikkje koda slik at brukaren kan finne og betene komponenten."
+								"utfall": "Skjemainstruksjon som viser til sensoriske eigenskapar, har ikkje anna informasjon, som lar brukaren forstå og betene skjemaelement."
 							}
 						}
 					}
 				}
-			}
+			},
+			"kilde": [
+				"F26"
+			]
 		},
 		{
 			"stegnr": "3.11",
-			"spm": "Inneheld den tekstlege instruksjonen ord som er vanlege for å vise til plassering eller rekkefølge for innhald i nettsider?",
-			"ht": "<p>Eksempel på ord som er vanlege i norsk språk for å vise til innhald</p><ul><li>over</li><li>under</li><li>før</li><li>etter</li><li>følgjande</li><li>føregåande </li></ul>",
+			"spm": "Inneheld instruksjonen ord som er vanlege for å vise til plassering eller rekkefølge for innhald på nettsider?",
+			"ht": "<p>Eksempel på ord som er vanlege i norsk språk for å vise til rekkefølge for innhald på nettsider er</p>\n<ul>\n<li>over</li>\n<li>under</li>\n<li>før</li>\n<li>etter</li>\n<li>følgjande</li>\n<li>forrige</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -383,25 +383,25 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Instruksjon for betening av skjema, som viser til skjemakomponentane sine sensoriske eigenskapar (form, størrelse, visuell plassering på sida, orientering, eller lyd), er ikkje koda slik at brukaren kan finne og betene komponenten. Instruksjon inneheld ikkje ord som er vanlege for å vise til plassering eller rekkefølge for innhald på nettsider."
+					"utfall": "Skjemainstruksjon som viser til sensoriske eigenskapar, har ikkje anna informasjon, som lar brukaren forstå og betene skjemaelement."
 				}
 			}
 		},
 		{
 			"stegnr": "3.12",
-			"spm": "Er rekkefølgja det vert vist til i instruksjonen, den same som leserekkefølgja i koden?",
-			"ht": "Slå av stilark (CSS) og kontroller om rekkefølgja det vert vist til i instruksjonen, samsvarar med leserekkefølgje i koden.",
+			"spm": "Er rekkefølga det blir vist til i instruksjonen, den same som leserekkefølga i koden?",
+			"ht": "<p>Slå av stilarket (CSS) og kontroller om leserekkefølga er den same som det blir vist til i instruksjonen.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Instruksjon for betening av skjema, som viser til skjemakomponentane sine sensoriske eigenskapar (form, størrelse, visuell plassering på sida, orientering, eller lyd), inneheld også annan informasjon slik at brukaren kan finne og betene komponenten."
+					"utfall": "Skjemainstruksjon som viser til sensoriske eigenskapar, brukar ord som er vanlege for å vise til plassering eller rekkefølge for innhald på nettsida, og det samsvarer med leserekkefølga i koden."
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Instruksjon for betening av skjema, som viser til skjemakomponentane sine sensoriske eigenskapar (form, størrelse, visuell plassering på sida, orientering, eller lyd), er ikkje koda slik at brukaren kan finne og betene komponenten."
+					"utfall": "Skjemainstruksjon som viser til sensoriske eigenskapar, brukar ord som er vanlege for å vise til plassering eller rekkefølge for innhald på nettsida, men det samsvarer ikkje med leserekkefølga i koden."
 				}
 			}
 		}
