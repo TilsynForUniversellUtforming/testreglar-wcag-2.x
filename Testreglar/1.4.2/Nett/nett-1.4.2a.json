@@ -1,20 +1,20 @@
 {
-	"namn": "1.4.2a Det er mogleg å styre lyd som startar automatisk og ikkje stoppar innan 3 sekund",
-	"id": "1.4.2a",
-	"testlabId": 29,
+	"namn": "Nett-1.4.2a Det er mogleg å styre lyd som startar automatisk og ikkje stoppar innan 3 sekund",
+	"id": "nett-1.4.2a",
+	"testlabId": 502,
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Lyd som startar automatisk og ikkje stoppar innan 3 sekund har ein mekanisme for styring av lyd som: </p>\r\n<ul>\r\n<li>er visuelt plassert nær starten av sida</li>\r\n<li>kan brukast med tastatur</li>\r\n<li>er tidleg i tab-rekkefølga (maksimalt 5 tabsteg)</li>\r\n<li>har visuell markering i form av tekst eller symbol</li>\r\n</ul>",
-	"side": "2.1",
-	"element": "Side",
+	"kravTilSamsvar": "<ul>\r\n<li>Lyd som starter automatisk, og varer mer enn 3 sekunder, har en mekanisme for styring av lyd, som regulerer lydstyrken, uavhengig av systemvolumet eller</li>\r\n<li>En mekanisme for å slå av lyden permanent eller midlertidig, uavhengig av systemvolumet. Mekanismen\r\n<ul>\r\n<li>er plassert nær starten av siden</li>\r\n<li>kan brukes med tastatur</li>\r\n<li>ligger innenfor de 5 første tab-stegene på nettsiden og</li>\r\n<li>har tydelig visuell markering i form av ledetekst eller symbol</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"side": "3.1",
+	"element": "3.1",
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Kva side testar du på?",
-			"ht": "Oppgi URL eller side-ID",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
-			"label": "Url/Side:",
+			"label": "URL/Side:",
 			"datalist": "Sideutvalg",
 			"oblig": true,
 			"ruting": {
@@ -26,8 +26,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har nettsida lyd som startar automatisk?",
-			"ht": "Med automatisk starta lyd meinar vi at lyden startar utan at brukaren aktivt aktiverer avspeling av lyd. Merk at du kanskje må prøve i fleire nettlesarar for å sjekke om lyd startar automatisk.",
+			"spm": "Har testsida lyd som startar automatisk?",
+			"ht": "<p>Slik testar du: </p>\n<ul>\n<li>Opne testsida</li>\n<li>Høyr etter om det er lyd som startar automatisk. </li>\n</ul>\n<p><strong>Merk: </strong>Automatisk betyr at lyden startar utan at brukaren sjøl aktiverer avspeling av lyd.</p>\n<p>Sjekk at automatisk avspeling av lyd er på i nettlesaren. I Chrome:</p>\n<ul>\n<li>Gå til Innstillinger&gt;Personvern og sikkerhet&gt;Nettstedsinnstillinger&gt;Flere innholdsinnstillinger&gt;Lyd</li>\n<li>Velg \"Nettsteder kan spille av lyd\" som standardatferd</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -43,12 +43,12 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Stoppar den automatisk starta lyden innan 3 sekund?",
-			"ht": "Finn fram stoppeklokke, nedteljingsur eller liknande. Last sida på nytt. Dette kan du gjere ved å trykke \"F5\"-tasten. Ta tida og kontroller om den automatisk starta lyden stoppar innan 3 sekund.",
+			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Finn fram stoppeklokke</li>\n<li>Last sida på nytt. Dette kan du gjera ved å trykke på F5</li>\n<li>Ta tida og sjekk om lyden stoppar innan 3 sekund</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testside har lyd som startar automatisk og stoppar innan 3 sekund."
+					"utfall": "Testside har lyd som startar automatisk, men den stoppar innan 3 sekund."
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -58,30 +58,23 @@
 		},
 		{
 			"stegnr": "3.1",
-			"spm": "Finst det ein mekanisme for å styre lyden på nettsida?",
-			"ht": "<p>Eksempel på mekanisme for styring av lyd kan vere:</p><ul><li>play/pauseknapp</li><li>stopp/playknapp</li><li>volumkontroll i avspelaren som kan ta volumet til null</li><li>muteknapp som tek volumet til null</li></ul><p>MERK: Du skal ikkje ta omsyn til eller nytte volumkontroll i operativsystemet, som for eksempel volumkontrollen på pcen.</p>",
-			"type": "jaNei",
+			"spm": "Kva element testar du?",
+			"ht": "<p>Beskriv elementet, slik at det er mogleg å identifisere det i ettertid. Viss det gjeld fleire element, registrerer du eit og eit.</p>",
+			"type": "tekst",
+			"label": "Lyd som starta automatisk:",
 			"ruting": {
-				"ja": {
+				"alle": {
 					"type": "gaaTil",
 					"steg": "3.2"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Det finst ingen mekanisme for å stoppe lyd som startar automatisk på nettsida."
 				}
-			}
+			},
+			"multilinje": true
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Er mekanismen visuelt plassert nær starten av sida?",
-			"ht": "Gjer ein visuell inspeksjon og vurder om mekanismen er plassert nær starten av sida. Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen for styring av lyd.",
+			"spm": "Finst det ein mekanisme for å styre lyden, som er uavhengig av systemvolumet?",
+			"ht": "<p>Eksempel på mekanisme for styring av lyd:</p>\n<ul>\n<li>play/pauseknapp</li>\n<li>stopp/playknapp</li>\n<li>volumkontroll i avspelaren som kan ta volumet til null</li>\n<li>muteknapp som tek volumet til null</li>\n</ul>\n<p><strong>Merk:</strong> Du skal ikkje bruke volumkontrollen i operativsystemet, for eksempel volumkontrollen på PCen.</p>",
 			"type": "jaNei",
-			"kilde": [
-				"G170",
-				"F23"
-			],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
@@ -90,16 +83,17 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Mekanisme for styring av lyd som startar automatisk på nettsida, er ikkje visuelt plassert nær starten av sida."
+					"utfall": "Det finst ikkje ein mekanisme for å styre lyd som startar automatisk, som er uavhengig av systemvolumet."
 				}
 			}
 		},
 		{
 			"stegnr": "3.3",
-			"spm": "Er mekanismen for styring av lyd visuelt markert?",
-			"ht": "<p>Visuell markering er for eksempel</p><ul><li>ein tekst som seier \"Pause, Stopp, Slå av lyden, Sett filmen på pause…\", og / eller </li><li>eit ikon for volum eller \"stopp\" symbol.</li></ul>",
+			"spm": "Er mekanismen for å styre lyden, visuelt plassert nær starten av testsida?",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om mekanismen er plassert nær starten av testsida.</p>\n<p><strong>Merk:</strong> Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen for styring av lyd.</p>",
 			"type": "jaNei",
 			"kilde": [
+				"F23",
 				"G170"
 			],
 			"ruting": {
@@ -110,50 +104,54 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Mekanisme for styring av lyd som startar automatisk på nettsida, har ikkje tydeleg visuell markering."
+					"utfall": "Mekanisme for styring av lyd som startar automatisk, er ikkje visuelt plassert nær starten av testsida."
 				}
 			}
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Kor mange tabsteg treng du for å nå mekanismen (lenka/knappen eller liknande) frå lydklippet?",
-			"ht": "Start på toppen av sida og verifiser kor mange tabsteg ein må gjennom for å aktivere mekanismen som stoppar/skrur av lyden. Registrer ved hjelp av svaralternativa kor mange tabsteg du treng. Stopp om du treng meir enn 10 tabsteg, ref. svaralternativa.",
-			"type": "radio",
+			"spm": "Kjem du til mekanismen for å styre lyden innan dei 5 første tab-stega på testsida?",
+			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Start på toppen av testsida</li>\n<li>Trykk sakte på tab-tasten for å navigera på testsida med tastaturet</li>\n<li>Sjekk om du når mekanismen for å styre lyden innan dei 5 første tab-stega</li>\n</ul>",
+			"type": "jaNei",
 			"kilde": [
 				"G170"
 			],
-			"svarArray": [
-				"1-5 tabsteg",
-				"6-10 tabsteg",
-				"Fleire enn 10 tabsteg",
-				"Når ikkje mekanisme med tastatur"
-			],
 			"ruting": {
-				"alt0": {
+				"ja": {
 					"type": "gaaTil",
 					"steg": "3.5"
 				},
-				"alt1": {
+				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Ved tastaturnavigasjon, krevst det meir enn fem tabsteg for å nå mekanisme for styring av lyd som startar automatisk på nettsida."
-				},
-				"alt2": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Ved tastaturnavigasjon, krevst det meir enn fem tabsteg for å nå mekanisme for styring av lyd som startar automatisk på nettsida."
-				},
-				"alt3": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Ved tastaturnavigasjon, er det ikkje mogleg å slå av eller regulere lyd som startar automatisk på nettsida."
+					"utfall": "Mekanisme for styring av lyd som startar automatisk, er ikkje innanfor dei fem første tab-stega på testsida."
 				}
 			}
 		},
 		{
 			"stegnr": "3.5",
-			"spm": "Er det mogleg å slå av lyd eller regulere lydstyrke til null ved hjelp av tastatur?",
-			"ht": "Ved tastaturnavigasjon kan du bruke entertast, piltastar, eller mellomromtast for å aktivere mekanismen for å skru av eller regulere volumet.",
+			"spm": "Er mekanismen for å styre lyden visuelt markert, i form av ledetekst eller symbol?",
+			"ht": "<p>Slik testar du:</p>\n<p>Gjer ein visuell inspeksjon og sjekk om mekanismen har visuell markering.</p>\n<p>Eksempel er</p>\n<ul>\n<li>tekst \"Pause, Stopp, Slå av lyden, Sett filmen på pause…\"</li>\n<li>ikon for volum eller stopp</li>\n</ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G170"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Mekanisme for styring av lyd som startar automatisk, har ikkje visuell markering i form av ledetekst eller symbol."
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Kan du bruke mekanismen med tastaturet, for å slå av lyden eller regulere lydstyrken til null?",
+			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Bruk tastaturet for å nå mekanismen</li>\n<li>Sjekk at du kan bruke tastaturet å skru av eller regulere volumet til null </li>\n<li>Sjekk at lyden blir slått av eller sett til null</li>\n</ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G170"
@@ -162,12 +160,12 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Ved tastaturnavigasjon, er det ikkje mogleg å slå av eller regulere lyd som startar automatisk på nettsida."
+					"utfall": "Det er ikkje mogleg å bruke mekanismen for å slå av eller regulere lyd som startar automatisk med tastatur."
 				},
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Mekanisme for styring av lyd som startar automatisk på nettsida, fungerer og er tydeleg visuelt markert."
+					"utfall": "Det er mogleg å bruke mekanismen for å slå av eller regulere lyd som startar automatisk med tastatur."
 				}
 			}
 		}
