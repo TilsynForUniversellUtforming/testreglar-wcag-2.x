@@ -373,7 +373,7 @@
 		{
 			"stegnr": "3.11",
 			"spm": "Inneheld instruksjonen ord som er vanlege for å vise til plassering eller rekkefølge for innhald på nettsider?",
-			"ht": "<p>Eksempel på ord som er vanlege i norsk språk for å vise til rekkefølge for innhald på nettsider er</p>\n<ul>\n<li>over</li>\n<li>under</li>\n<li>før</li>\n<li>etter</li>\n<li>følgjande</li>\n<li>forrige</li>\n</ul>",
+			"ht": "<p>Eksempel på ord som er vanlege i norsk språk for å vise til rekkefølge for innhald på nettsider er</p><ul><li>over</li><li>under</li><li>før</li><li>etter</li><li>følgjande</li><li>forrige</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -385,7 +385,10 @@
 					"fasit": "Nei",
 					"utfall": "Skjemainstruksjon som viser til sensoriske eigenskapar, har ikkje anna informasjon, som lar brukaren forstå og betene skjemaelement."
 				}
-			}
+			},
+			"kilde": [
+				"wcag:forstaaartikkel"
+			]
 		},
 		{
 			"stegnr": "3.12",
@@ -403,7 +406,10 @@
 					"fasit": "Nei",
 					"utfall": "Skjemainstruksjon som viser til sensoriske eigenskapar, brukar ord som er vanlege for å vise til plassering eller rekkefølge for innhald på nettsida, men det samsvarer ikkje med leserekkefølga i koden."
 				}
-			}
+			},
+			"kilde": [
+				"wcag:forstaaartikkel"
+			]
 		}
 	]
 }
