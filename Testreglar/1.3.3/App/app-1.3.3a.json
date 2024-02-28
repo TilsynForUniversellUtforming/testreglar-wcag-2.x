@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nn",
-	"kravTilSamsvar": "<ul>\r\n<li>Skjemainstruksjon som viser til sensoriske egenskaper (form, størrelse, visuell plassering, orientering eller lyd), har også annen informasjon, som lar brukeren forstå og betjene komponenten eller</li>\r\n<li>I skjemainstruksjon brukes det ord som er vanlige for å vise leserekkefølge, og rekkefølgen er den samme ved sveiping.</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul><li>Skjemainstruksjon som viser til sensoriske egenskaper (form, størrelse, visuell plassering, orientering eller lyd), har også annen informasjon, som lar brukeren forstå og betjene komponenten eller</li><li>I skjemainstruksjon brukes det ord som er vanlige for å vise leserekkefølge, og rekkefølgen er den samme ved sveiping.</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har appsida interaktive skjema/skjemaelement?",
-			"ht": "<p>Gjer ein visuell inspeksjon av appsida, sjå etter interaktive skjema/skjemaelement.</p>\n<p>Dette kan for eksempel vere:</p>\n<ul>\n<li>Inndataelement</li>\n<li>Knappar</li>\n<li>Avkryssingsboksar</li>\n</ul>\n<p><strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
+			"ht": "<p>Gjer ein visuell inspeksjon av appsida, sjå etter interaktive skjema/skjemaelement.</p><p>Dette kan for eksempel vere:</p><ul><li>Inndataelement</li><li>Knappar</li><li>Avkryssingsboksar</li></ul><p><strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -43,7 +43,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Er det mogleg å sveipe til skjemaelement?",
-			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Aktiver skjermlesar (opplesningsfunksjon)\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: Talkback</li>\n</ul>\n</li>\n<li>Opne appsida du testar</li>\n<li>Sjekk om det er mogleg å sveipe til minst eit skjemaelement</li>\n</ul>",
+			"ht": "<p>Slik testar du:</p><ul><li>Aktiver skjermlesar (opplesningsfunksjon)<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>Opne appsida du testar</li><li>Sjekk om det er mogleg å sveipe til minst eit skjemaelement</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -390,7 +390,7 @@
 		{
 			"stegnr": "3.11",
 			"spm": "Inneheld instruksjonen ord som er vanlege for å vise til plassering eller rekkefølge for innhald på appsider?",
-			"ht": "<p>Eksempel på ord som er vanlege i norsk språk for å vise til rekkefølge for innhald på appsider er</p>\n<ul>\n<li>over</li>\n<li>under</li>\n<li>før</li>\n<li>etter</li>\n<li>følgjande</li>\n<li>forrige</li>\n</ul>",
+			"ht": "<p>Eksempel på ord som er vanlege i norsk språk for å vise til rekkefølge for innhald på appsider er</p><ul><li>over</li><li>under</li><li>før</li><li>etter</li><li>følgjande</li><li>forrige</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -402,12 +402,15 @@
 					"fasit": "Nei",
 					"utfall": "Skjemainstruksjon som viser til sensoriske eigenskapar, har ikkje anna informasjon, som lar brukaren forstå og betene skjemaelement."
 				}
-			}
+			},
+			"kilde": [
+				"wcag:forstaaartikkel"
+			]
 		},
 		{
 			"stegnr": "3.12",
 			"spm": "Er rekkefølga det blir vist til i instruksjonen, den same som rekkefølga ved sveiping?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>aktiver skjermlesar\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: Talkback</li>\n</ul>\n</li>\n<li>opne appsida</li>\n<li>følg instruksjonen og sjekk om du kommer til aktuell elementet med sveiping</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>aktiver skjermlesar<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>opne appsida</li><li>følg instruksjonen og sjekk om du kommer til aktuell elementet med sveiping</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -420,7 +423,10 @@
 					"fasit": "Nei",
 					"utfall": "Skjemainstruksjon som viser til sensoriske eigenskapar, brukar ord som er vanlege for å vise til plassering eller rekkefølge for innhald på appsida, men det samsvarer ikkje med rekkefølga ved sveiping."
 				}
-			}
+			},
+			"kilde": [
+				"wcag:forstaaartikkel"
+			]
 		}
 	]
 }
