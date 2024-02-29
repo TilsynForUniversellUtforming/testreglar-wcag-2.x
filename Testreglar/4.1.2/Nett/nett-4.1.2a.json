@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Det er flere måter å oppfylle kravet på.</p>\r\n<p>Navn og rolle:</p>\r\n<ul>\r\n<li>Alle skjemaelementer har et tilgjengelig navn, som beskriver formålet med det aktuelle elementet og </li>\r\n<li>Alle skjemaelementer har riktig rolle, som identifiserer funksjonen til det aktuelle elementet og</li>\r\n<li>Skjemaelementer som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen</li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>Når tilstander, egenskaper og verdier i skjemaelementer kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>Varsel om endringer i det aktuelle elementet er tilgjengelig for brukeragenter</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Navn og rolle:</p><ul><li>Alle skjemaelementer har et tilgjengelig navn, som beskriver formålet med det aktuelle elementet og</li><li>Alle skjemaelementer har riktig rolle, som identifiserer funksjonen til det aktuelle elementet og</li><li>Skjemaelementer som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen</li></ul><p>Tilstander, egenskaper og verdier:</p><ul><li>Når tilstander, egenskaper og verdier i skjemaelementer kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li><li>Varsel om endringer i det aktuelle elementet er tilgjengelig for brukeragenter</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Gir verktøyet resultater under \"Form control has accessible name\"?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk verktøyet <a href=\"https://chrome.google.com/webstore/detail/qualweb-extension/ljgilomdnehokancdcbkmbndkkiggioc\" target=\"_blank\" rel=\"noopener\">QualWeb </a>i Chrome på testsiden\n<ul>\n<li>velg kun \"ACT Rules\"</li>\n<li>trykk på knappen \"Evaluate\"</li>\n<li>utvid \"Fliters\"</li>\n<li>fjern hake på \"Warning\"</li>\n</ul>\n</li>\n<li>Sjekk om det finnes resultater på \"Form control has accessible name\"<br>\n<ul>\n<li>trykk på \"Form control has accessible name\" for å vise aktuelle resultater\n<ul>\n<li>Dersom alternativene ikke kommer opp, har ikke QW funnet skjemaelementer</li>\n</ul>\n</li>\n<li>velg både Passed og Failed</li>\n<li>du kan bruke \"Highlight Element\" for å vise hvor aktuelle elementer ligger på siden\n<ul>\n<li>Bruk pilene for å navigere gjennom resultater for forskjellige elementer</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li><strong>Du skal ikke teste knapper. Knapper har egen testregel.</strong> \n<ul>\n<li>Knapper blir  for eksempel brukt til å aktivere en funksjon eller sende inn skjema. </li>\n</ul>\n</li>\n<li>Du skal teste både aktive og inaktive skjemaelementer.</li>\n<li>Hvis verktøyet ikke finner skjemaelementer, velger du \"Nei\" i dette steget</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk verktøyet <a href=\"https://chrome.google.com/webstore/detail/qualweb-extension/ljgilomdnehokancdcbkmbndkkiggioc\" target=\"_blank\" rel=\"noopener\">QualWeb </a>i Chrome på testsiden\n<ul>\n<li>velg kun \"ACT Rules\"</li>\n<li>trykk på knappen \"Evaluate\"</li>\n<li>utvid \"Fliters\"</li>\n<li>fjern hake på \"Warning\"</li>\n</ul>\n</li>\n<li>Sjekk om det finnes resultater på \"Form control has accessible name\"<br>\n<ul>\n<li>trykk på \"Form control has accessible name\" for å vise aktuelle resultater\n<ul>\n<li>Dersom alternativene ikke kommer opp, har ikke QW funnet skjemaelementer</li>\n</ul>\n</li>\n<li>velg både Passed og Failed</li>\n<li>du kan bruke \"Highlight Element\" for å vise hvor aktuelle elementer ligger på siden\n<ul>\n<li>Bruk pilene for å navigere gjennom resultater for forskjellige elementer</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li><strong>Du skal ikke teste knapper. Knapper har egen testregel.</strong>\n<ul>\n<li>Knapper blir for eksempel brukt til å aktivere en funksjon eller sende inn skjema.</li>\n</ul>\n</li>\n<li>Du skal teste både aktive og inaktive skjemaelementer.</li>\n<li>Hvis verktøyet ikke finner skjemaelementer, velger du \"Nei\" i dette steget</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -305,7 +305,7 @@
 		{
 			"stegnr": "3.15",
 			"spm": "Blir skjemaelementet identifisert av det tilgjengelige navnet for gruppen kombinert med skjemaelementets tilgjengelige navn?",
-			"ht": "<p>Du skal vurdere både skjemaelementets tilgjengelig navn og det tilgjengelige navnet for gruppen som skjemaelementet ligger inne i samlet. </p>",
+			"ht": "<p>Du skal vurdere både skjemaelementets tilgjengelig navn og det tilgjengelige navnet for gruppen som skjemaelementet ligger inne i samlet.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -338,7 +338,7 @@
 		},
 		{
 			"stegnr": "3.17",
-			"spm": "Hvor mange tilstander har skjemaelementet? ",
+			"spm": "Hvor mange tilstander har skjemaelementet?",
 			"ht": "<p>Registrer antall tilstander.</p>\n<p>Eksempel: En avkryssingsboks kan ha to tilstander, avkrysset eller ikke avkrysset.</p>",
 			"type": "tekst",
 			"ruting": {

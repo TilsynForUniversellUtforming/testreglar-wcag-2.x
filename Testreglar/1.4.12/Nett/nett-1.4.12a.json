@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p><span lang=\"NO-BOK\">Det er flere måter å oppfylle kravet på:</span></p>\r\n<ul>\r\n<li>Tekst har eller kan settes til følgende fire tekstegenskaper samtidig, uten tap av innhold eller funksjonalitet:\r\n<ul>\r\n<li><span lang=\"NO-BOK\">Linjehøyde (linjeavstand) minst 1,5 ganger skriftstørrelsen</span></li>\r\n<li><span lang=\"NO-BOK\">Avstand etter avsnitt minst 2 ganger skriftstørrelsen</span></li>\r\n<li><span lang=\"NO-BOK\">Avstanden mellom bokstaver i blokker av tekst (sperring) minst 0,12 ganger skriftstørrelsen</span></li>\r\n<li><span lang=\"NO-BOK\">Avstanden mellom ord minst 0,16 ganger skriftstørrelsen og</span></li>\r\n</ul>\r\n</li>\r\n<li>Andre stilegenskaper blir ikke endret som følge av justert tekstavstand</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul><li>Tekst har eller kan settes til følgende fire tekstegenskaper samtidig, uten tap av innhold eller funksjonalitet:<ul><li><span lang=\"NO-BOK\">Linjehøyde (linjeavstand) minst 1,5 ganger skriftstørrelsen</span></li><li><span lang=\"NO-BOK\">Avstand etter avsnitt minst 2 ganger skriftstørrelsen</span></li><li><span lang=\"NO-BOK\">Avstanden mellom bokstaver i blokker av tekst (sperring) minst 0,12 ganger skriftstørrelsen</span></li><li><span lang=\"NO-BOK\">Avstanden mellom ord minst 0,16 ganger skriftstørrelsen og</span></li></ul></li><li>Andre stilegenskaper blir ikke endret som følge av justert tekstavstand</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
