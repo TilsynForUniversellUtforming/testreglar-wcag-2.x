@@ -280,7 +280,7 @@
 		{
 			"stegnr": "3.12",
 			"spm": "Er listen slik at den ignoreres av hjelpemiddelteknologi?",
-			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser listen i nettleseren</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Checker</li>\n<li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om listen er kodet med et av følgende attributter:</p>\n<ul>\n<li><code>role=\"presentation\"</code></li>\n<li><code>role=\"none\"</code></li>\n<li><code>aria-hidden=\"true\"</code></li>\n</ul>",
+			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser listen i nettleseren</li>\n<li>Bruk Accessibility Tree verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Tree</li>\n<li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om listen er kodet med et av følgende attributter:</p>\n<ul>\n<li><code>role=\"presentation\"</code></li>\n<li><code>role=\"none\"</code></li>\n<li><code>aria-hidden=\"true\"</code></li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {

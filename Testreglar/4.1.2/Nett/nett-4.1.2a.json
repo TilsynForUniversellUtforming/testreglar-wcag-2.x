@@ -99,7 +99,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Har skjemaelementet et tilgjengelig navn, som ikke er tomt?",
-			"ht": "<p>Slik tester du:</p>\n<p><strong>Alternativ 1:</strong></p>\n<ul>\n<li>Åpne DevTools i nettleseren (F12) Chrome</li>\n<li>Inspiser skjemaelementet med funksjonen \"inspiser element med mus\"\n<ul>\n<li>Klikk på pil-knappen i øvre venstre hjørne av vinduet, for å aktivere funksjonen</li>\n</ul>\n</li>\n<li>Hold musepekeren over skjemaelementet du tester</li>\n<li>En pop-up viser blant annet \"Name\" og \"Role\" under overskriften \"Accessibility\"</li>\n<li>Sjekk om informasjon under \"Name\" er ikke tomt</li>\n</ul>\n<p><strong>Alternativ 2:</strong></p>\n<ul>\n<li>Inspiser skjemaelementet i Chrome</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li>\n<li>Sjekk at informasjon under \"Name\" ikke er tomt.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<p><strong>Alternativ 1:</strong></p>\n<ul>\n<li>Åpne DevTools i nettleseren (F12) Chrome</li>\n<li>Inspiser skjemaelementet med funksjonen \"inspiser element med mus\"\n<ul>\n<li>Klikk på pil-knappen i øvre venstre hjørne av vinduet, for å aktivere funksjonen</li>\n</ul>\n</li>\n<li>Hold musepekeren over skjemaelementet du tester</li>\n<li>En pop-up viser blant annet \"Name\" og \"Role\" under overskriften \"Accessibility\"</li>\n<li>Sjekk om informasjon under \"Name\" er ikke tomt</li>\n</ul>\n<p><strong>Alternativ 2:</strong></p>\n<ul>\n<li>Inspiser skjemaelementet i Chrome</li>\n<li>Bruk Accessibility Tree verktøy i inspiser</li>\n<li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li>\n<li>Sjekk at informasjon under \"Name\" ikke er tomt.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -147,7 +147,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Hvilket attributt gir tilgjengelig navn til skjemaelementet?",
-			"ht": "<ul>\n<li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Checker</li>\n<li>Velg et alternativ</li>\n</ul>",
+			"ht": "<ul>\n<li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Tree</li>\n<li>Velg et alternativ</li>\n</ul>",
 			"type": "radio",
 			"svarArray": [
 				"aria-labelledby",
@@ -169,7 +169,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Er skjemaelementet kodet med riktig rolle?",
-			"ht": "<p>Det er flere måter å kode et skjemaelement, men det skal alltid ha en rolle i Accessibility Tree, som identifiserer funksjonen til det aktuelle skjemaelementet.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Åpne Accessibility Checker i DevTools i nettleseren (F12) Chrome</li>\n<li>Sjekk om informasjon under \"Role\" er i samsvar med funksjonen til skjemaelementet</li>\n<li>Eksempler:  \n<ul>\n<li>avkryssingsboks: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#checkbox\" target=\"_blank\" rel=\"noopener\">checkbox</a></li>\n<li>nedtrekksliste: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#combobox\" target=\"_blank\" rel=\"noopener\">combobox</a></li>\n<li>radioknapp: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#radio\" target=\"_blank\" rel=\"noopener\">radio</a></li>\n<li>inndatafelt: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#textbox\" target=\"_blank\" rel=\"noopener\">textbox</a></li>\n<li>søkefelt: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#searchbox\" target=\"_blank\" rel=\"noopener\">searchbox</a></li>\n<li>switch: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#switch\" target=\"_blank\" rel=\"noopener\">switch</a></li>\n<li>listeboks: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#listbox\" target=\"_blank\" rel=\"noopener\">listbox</a></li>\n<li>annet: andre relevante roller i <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Roles</a></li>\n</ul>\n</li>\n</ul>",
+			"ht": "<p>Det er flere måter å kode et skjemaelement, men det skal alltid ha en rolle i Accessibility Tree, som identifiserer funksjonen til det aktuelle skjemaelementet.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Åpne Accessibility Tree i DevTools i nettleseren (F12) Chrome</li>\n<li>Sjekk om informasjon under \"Role\" er i samsvar med funksjonen til skjemaelementet</li>\n<li>Eksempler:  \n<ul>\n<li>avkryssingsboks: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#checkbox\" target=\"_blank\" rel=\"noopener\">checkbox</a></li>\n<li>nedtrekksliste: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#combobox\" target=\"_blank\" rel=\"noopener\">combobox</a></li>\n<li>radioknapp: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#radio\" target=\"_blank\" rel=\"noopener\">radio</a></li>\n<li>inndatafelt: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#textbox\" target=\"_blank\" rel=\"noopener\">textbox</a></li>\n<li>søkefelt: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#searchbox\" target=\"_blank\" rel=\"noopener\">searchbox</a></li>\n<li>switch: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#switch\" target=\"_blank\" rel=\"noopener\">switch</a></li>\n<li>listeboks: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#listbox\" target=\"_blank\" rel=\"noopener\">listbox</a></li>\n<li>annet: andre relevante roller i <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Roles</a></li>\n</ul>\n</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -271,7 +271,7 @@
 		{
 			"stegnr": "3.13",
 			"spm": "Ligger skjemaelementet inne i et annet element med attributtet role=\"group\"?",
-			"ht": "<p>Slik tester du:</p>\n<p>Element som starter framfor og blir avsluttet etter skjemaelementet du tester. Role-attributtet kan for eksempel ligge på en <code>&lt;div&gt;</code> eller <code>&lt;span&gt;</code>.</p>\n<ul>\n<li>Åpne Accessibility Checker i DevTools i nettleseren (F12) Chrome</li>\n<li>Sjekk om informasjon under \"Role\" er \"group\"</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<p>Element som starter framfor og blir avsluttet etter skjemaelementet du tester. Role-attributtet kan for eksempel ligge på en <code>&lt;div&gt;</code> eller <code>&lt;span&gt;</code>.</p>\n<ul>\n<li>Åpne Accessibility Tree i DevTools i nettleseren (F12) Chrome</li>\n<li>Sjekk om informasjon under \"Role\" er \"group\"</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
@@ -288,7 +288,7 @@
 		{
 			"stegnr": "3.14",
 			"spm": "Har elementet med rolle group et tilgjengelig navn, som ikke er tomt?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Åpne Accessibility Checker i DevTools i nettleseren (F12) Chrome</li>\n<li>Sjekk at informasjon under \"Name\" ikke er tomt.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Åpne Accessibility Tree i DevTools i nettleseren (F12) Chrome</li>\n<li>Sjekk at informasjon under \"Name\" ikke er tomt.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -353,7 +353,7 @@
 		{
 			"stegnr": "3.18",
 			"spm": "Hvor mange tilstander er ikke angitt programmatisk?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser skjemaelementet i Chrome</li>\n<li>Bruk Accessibility Checker</li>\n<li>Under ARIA-attributter eller Computed Properties, sjekk om det finnes:\n<ul>\n<li>avkryssingsboks eller radioknapp\n<ul>\n<li>hvis avkrysset: aria-checked: true eller Checked: true</li>\n<li>hvis ikke avkrysset: aria-checked: false eller Checked: false</li>\n</ul>\n</li>\n<li>nedtrekksliste<br>\n<ul>\n<li>hvis innholdet er sammensluttet: aria-expanded: false eller Expanded: false</li>\n<li>hvis innholdet er utvidet: aria-expanded: true eller Expanded: true</li>\n</ul>\n</li>\n<li>switch\n<ul>\n<li>hvis knappen er på: aria-pressed: true eller aria-checked: true</li>\n<li>hvis knappen er av: aria-pressed: false eller aria-checked: false</li>\n<li>hvis knappen har en mellomliggende tilstand mellom tilstander av og på: aria-pressed: mixed.</li>\n</ul>\n</li>\n<li>annet: andre relevante tilstander (State) knyttet til <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Roles</a></li>\n</ul>\n</li>\n<li>Registrer antall tilstander som ikke er angitt programmatisk.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser skjemaelementet i Chrome</li>\n<li>Bruk Accessibility Tree</li>\n<li>Under ARIA-attributter eller Computed Properties, sjekk om det finnes:\n<ul>\n<li>avkryssingsboks eller radioknapp\n<ul>\n<li>hvis avkrysset: aria-checked: true eller Checked: true</li>\n<li>hvis ikke avkrysset: aria-checked: false eller Checked: false</li>\n</ul>\n</li>\n<li>nedtrekksliste<br>\n<ul>\n<li>hvis innholdet er sammensluttet: aria-expanded: false eller Expanded: false</li>\n<li>hvis innholdet er utvidet: aria-expanded: true eller Expanded: true</li>\n</ul>\n</li>\n<li>switch\n<ul>\n<li>hvis knappen er på: aria-pressed: true eller aria-checked: true</li>\n<li>hvis knappen er av: aria-pressed: false eller aria-checked: false</li>\n<li>hvis knappen har en mellomliggende tilstand mellom tilstander av og på: aria-pressed: mixed.</li>\n</ul>\n</li>\n<li>annet: andre relevante tilstander (State) knyttet til <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Roles</a></li>\n</ul>\n</li>\n<li>Registrer antall tilstander som ikke er angitt programmatisk.</li>\n</ul>",
 			"type": "tekst",
 			"ruting": {
 				"alle": {

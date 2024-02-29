@@ -58,7 +58,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Har &lt;iframe&gt;-elementet et tilgjengelig navn?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser <code>&lt;iframe&gt;</code>-elementet i Chrome</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li>\n<li>Sjekk om informasjon under \"Name\" ikke er tomt</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser <code>&lt;iframe&gt;</code>-elementet i Chrome</li>\n<li>Bruk Accessibility Tree verktøy i inspiser</li>\n<li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li>\n<li>Sjekk om informasjon under \"Name\" ikke er tomt</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
@@ -80,7 +80,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Hvilket attributt gir tilgjengelig navn til iframe?",
-			"ht": "<ul>\n<li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Checker</li>\n<li>Velg et alternativ.</li>\n</ul>",
+			"ht": "<ul>\n<li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Tree</li>\n<li>Velg et alternativ.</li>\n</ul>",
 			"type": "radio",
 			"svarArray": [
 				"aria-labelledby",
