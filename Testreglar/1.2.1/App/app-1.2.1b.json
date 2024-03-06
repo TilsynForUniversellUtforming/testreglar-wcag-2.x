@@ -1,0 +1,249 @@
+{
+	"namn": "App-1.2.1b Forhåndsinnspilt video utan lyd, har alternativ i form av tekst eller lyd 2023",
+	"id": "app-1.2.1b",
+	"testlabId": 514,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Video uten lyd</p><ul><li>Forhåndsinnspilt video uten lyd, har alternativ i form av tekst eller lyd, og tekst- eller lydalternativet er visuelt plassert i nær tilknytning til videoklippet, eller kan nås via en mekanisme i direkte tilknytning til videoklippet. Tekstalternativet<ul><li>formidler det samme som videoen i rett rekkefølge og</li><li>er kodet som tekst eller lydalternativet være mulig å spille av og stoppe</li></ul></li><li>Forhåndsinnspilt video uten lyd, som er mediealternativ til tekst, er unntatt. For å være mediealternativ skal videoen<ul><li>ikke presentere mer informasjon enn det som gis via tekst og</li><li>være tydelig merket, det vil si, plassert i direkte tilknytning til videoen og gi informasjon som indikerer at det er et mediealternativ</li></ul></li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken appside tester du?",
+			"ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
+			"type": "tekst",
+			"label": "Appside:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsiden video?",
+			"ht": "<p>Slik tester du:</p><ul><li>Gjør en visuell inspeksjon og sjekk om det finnes en play-knapp eller lignende på appsiden eller</li><li>Bruk internt søk på appen om det finnes</li></ul><p><strong>Tips:</strong> Aktuelle søkeord kan være: \"Video\", \"Animasjon\", \"YouTube\", \"Viemo\", \"opptak\", \"H264\", \"mpeg4\".</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appside har ikkje video."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken video tester du?",
+			"ht": "<p>Beskriv videoen, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere videoer, registrerer du en og en.</p>",
+			"type": "tekst",
+			"label": "Video:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er videoen uten lyd?",
+			"ht": "<p>Slik tester du: </p><ul><li>Husk å sette på lyd før du starter</li><li>Start videoen og hør etter om videoen har lyd</li><li>Dersom den ikke har lyd i begynnelsen, tar du inntil tre stikkprøver på 10 sekunder ulike steder i videoen</li><li>Hvis videoen har lyd, trenger du ikke ta flere stikkprøver</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Video med lyd."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er videoen forhåndsinnspilt (opptak)?",
+			"ht": "<p>Aktuelle metoder for å sjekke dette: </p><ul><li>Start videoen og se om avspillingen begynner på starten og/eller at varigheten viser.</li><li>Se om du finner informasjon om når videoen er publisert.</li><li>Se etter informasjon som tilsier at videoen er direkte, for eksempel et rødt felt med \"Live\" eller at du ikke kan spole</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Video er direkte/live."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er videoen et mediealternativ til tekst, og tydelig merket som det?",
+			"ht": "<p>For å være mediealternativ skal videoen:</p><ul><li>ikke presentere mer informasjon enn det som gis via tekst og</li><li>være tydelig merket. Det vil si<ul><li>være plassert i direkte tilknytning til aktuell tekst og</li><li>gi informasjon som viser at det er et mediealternativ</li></ul></li></ul><p>Slik tester du:</p><ul><li>Undersøk om det i tilknytning til videoen, er en tekst som fremstår som hovedformatet for formidling av informasjonen</li><li>Momenter som tilsier at videoen er et mediealternativ til tekst kan være:<ul><li>Ikon, for eksempel kamera-ikon</li><li>Lenke med lenketekst som viser til en video, for eksempel \"Se opptak\", \"Animasjon\"</li></ul></li><li>Sjekk at videoen ikke presenterer mer informasjon enn det som gis via teksten</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Video uten lyd er mediealternativ til tekst."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Er det en tekst visuelt plassert nær videoen/avspilleren som omtaler videoen?",
+			"ht": "<p>Slik tester du:</p><ul><li>Gjør en visuell inspeksjon</li><li>Sjekk om du finner et tekstalternativ nær videoen (på samme appside), for eksempel rett over eller under videoen.</li></ul><p><strong>Merk:</strong> Du skal ikke ta stilling til kvaliteten på teksten i dette steget.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Ligger det en mekanisme i nærheten av videoen, som går til et tekstalternativ for videoen?",
+			"ht": "<p>Slik tester du:</p><ul><li>Gjør en visuell inspeksjon</li><li>Sjekk om det ligger mekanisme (lenke, knapp eller lignende) i nærheten av videoen som går til tekstalternativet<ul><li>Eksempel på plassering er rett over eller under videoen</li></ul></li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "Video uten lyd har ikke tekstalternativ.",
+						"fasit": "Nei"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Er tekstalternativet kodet som tekst?",
+			"ht": "<p>Slik tester du:</p><ul><li>Aktiver skjermleser (opplesingsfunksjon)<ul><li>iOS: VoiceOver</li><li>Android: TalkBack</li></ul></li><li>Trykk på eller sveip til tekstalternativet du tester, og sjekk om det blir lest opp</li></ul><p><strong>Merk:</strong> Hvis tekstalternativet ikke blir lest opp, antar vi at det ikke er kodet som tekst.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G159"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "Video uten lyd har tekstalternativ, men det er ikke kodet som tekst.",
+						"fasit": "Nei"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Samsvarer informasjonen i tekstalternativet, med det som blir formidlet via videoen?",
+			"ht": "<p>Slik tester du:</p><ul><li>Sammenlign tekstalternativet med innholdet i videoen.</li><li>Gå gjennom de første to min av videoen.</li><li>Sjekk om tekstalternativ formidler hovedinnholdet i videoen, i lik rekkefølge.</li><li>Vi krever ikke nøyaktig gjengivelse av innholdet, men at viktig innhold er tatt med i rett rekkefølge.</li></ul><p><strong>Tips:</strong> Hvis du allerede i starten av videoen ser at det ikke er samsvar mellom innholdet i videoen og tekstalternativ, kan du stoppe gjennomgangen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F30",
+				"F67",
+				"G159"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Videoklipp uten lyd har tekstalternativ, som er kodet som tekst, og formidler samme informasjon som videoen."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9",
+					"delutfall": {
+						"nr": 0,
+						"tekst": "Videoklipp uten lyd har tekstalternativ, men formidler ikke samme informasjon som videoen.",
+						"fasit": "Nei"
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Ligger det en mekanisme i nærheten av videoen, som går til et alternativ i form av lydklipp for videoen?",
+			"ht": "<p>Slik tester du:</p><ul><li>Gjør en visuell inspeksjon</li><li>Sjekk om det ligger mekanisme (lenke, knapp eller lignende) i nærheten av videoen, som går til et alternativ i form av lydklipp for videoen<ul><li>Eksempel på plassering er rett over eller under videoen</li></ul></li></ul><p>Kjennetegn på et lydklipp kan være:</p><ul><li>et høytaler-ikon</li><li>en play-knapp</li><li>en lenke med lenketekst som for eksempel \"lydklipp\", \"lydalternativ\"</li></ul><p><strong>Merk:</strong> Du skal ikke teste lytt til teksten-funksjonalitet. Du skal teste lyd som gjengir innholdet til video.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(0) Video uten lyd har ikke lydalternativ."
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Er det mulig å spille av lydalternativet?",
+			"ht": "<p>Slik tester du:</p><ul><li>Start lydalternativet</li><li>Hør om det er lyd</li></ul><p><strong>Merk:</strong> Du skal ikke ta stilling til kvaliteten på alternativet i dette steget.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(0) Video uten lyd har lydalternativ, men det er ikke mulig å spille av."
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Samsvarer informasjonen i lydalternativet, med det som blir formidlet via innholdet i videoen?",
+			"ht": "<p>Slik tester du:</p><ul><li>Sammenlign informasjonen i lydalternativet med innholdet i videoen.</li><li>Gå gjennom de første to min av videoen og lydalternativet.</li><li>Sjekk om lydalternativet formidler hovedinnholdet i videoen, i lik rekkefølge.</li><li>Vi krever ikke nøyaktig gjengivelse av innholdet, men at viktig innhold er tatt med i rett rekkefølge.</li></ul><p><strong>Tips:</strong> Hvis du allerede i starten av videoen hører at det ikke er samsvar mellom innholdet i videoen og lydalternativet, kan du stoppe gjennomgangen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G166"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Video uten lyd har lydlaternativ, som formidler samme informasjon som videoen."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "#delutfall(0) Video uten lyd har lydlaternativ, men det formidler ikke samme informasjon som videoen."
+				}
+			}
+		}
+	]
+}
