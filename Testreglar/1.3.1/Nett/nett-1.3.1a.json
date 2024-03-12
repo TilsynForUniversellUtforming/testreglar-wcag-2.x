@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<ul>\r\n<li>Visuelle overskrifter er korrekt kodet som overskrifter</li>\r\n<li>Visuelle overskrifter som inngår i et overskriftshierarki, er kodet med rett overskriftsnivå</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul><li>Visuelle overskrifter er korrekt kodet som overskrifter</li><li>Visuelle overskrifter som inngår i et overskriftshierarki, er kodet med rett overskriftsnivå</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -58,7 +58,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Er den visuelle overskriften kodet som overskrift med H-elementet i HTML?",
-			"ht": "<p>Du kan bruke:</p>\n<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Kodeverktøyet i nettleseren til å sjekke dette</li>\n<li>I standard HTML: Overskriftene er kodet med elementene <code>&lt;h1&gt;</code> til <code>&lt;h6&gt;</code></li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<ul>\n<li>Chrome-extension <a href=\"https://chromewebstore.google.com/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi\" target=\"_blank\" rel=\"noopener\">headingsMap</a> eller</li>\n<li>Dra og slipp bokmerket <a href=\"javascript:(function()%7Bvar%20f=new%20Array(%7Bn:%22H1%22,c:%22#ff0000%22,p:0%7D,%7Bn:%22H2%22,c:%22#713939%22,p:0%7D,%7Bn:%22H3%22,c:%22#00aa00%22,p:0%7D,%7Bn:%22H4%22,c:%22#054164%22,p:0%7D,%7Bn:%22H5%22,c:%22#7F0A7F%22,p:0%7D,%7Bn:%22H6%22,c:%22#01D901%22,p:0%7D,%7Bn:%22P%22,c:%22#1515C0%22,p:0%7D,%7Bn:%22B%22,c:%22#00D400%22,p:0%7D,%7Bn:%22I%22,c:%22#5A005A%22,p:0%7D,%7Bn:%22EM%22,c:%22#4E6401%22,p:0%7D,%7Bn:%22TABLE%22,c:%22#365F5F%22,p:1%7D,%7Bn:%22LEGEND%22,c:%22#28025D%22,p:0%7D,%7Bn:%22STRONG%22,c:%22#DE1A00%22,p:0%7D,%7Bn:%22FIELDSET%22,c:%22#800000%22,p:1%7D);function%20p(n,e,r)%7Bvar%20t=n.document.createElement(%22span%22),c=t.style,c=(c.color=e.c,c.backgroundColor=%22#fff%22,c.backgroundImage=%22none%22,c.fontSize=%2214px%22,c.fontWeight=%22bold%22,n.document.createTextNode(%22%20%5B%22+r+e.n+%22%5D%20%22));return%20t.insertBefore(c,t.firstChild),t%7D!function%20n(e)%7Btry%7Bfor(var%20r=0;r%3Cf.length;r++)%7Ba=o=c=t=void%200;for(var%20t=e,c=f%5Br%5D,o=t.document.getElementsByTagName(c.n),a=0;a%3Co.length;a++)0==c.p?(o%5Ba%5D.insertBefore(p(t,c,%22%22),o%5Ba%5D.firstChild),o%5Ba%5D.appendChild(p(t,c,%22/%22))):(o%5Ba%5D.parentNode.insertBefore(p(t,c,%22%22),o%5Ba%5D),o%5Ba%5D.parentNode.insertBefore(p(t,c,%22/%22),o%5Ba%5D.nextSibling))%7Dfor(r=0;r%3Ce.frames.length;r++)n(e.frames%5Br%5D)%7Dcatch(n)%7B%7D%7D(window)%7D)();\">Inhalte Gegliedert</a> til bokmerker før du bruker det på testsiden.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Bruk kodeverktøyet i nettleseren til å sjekke dette</li><li>I standard HTML: Overskriftene er kodet med elementene <code>&lt;h1&gt;</code> til <code>&lt;h6&gt;</code></li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"F2",
@@ -158,7 +158,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Er nivået i koden det samme som det visuelle nivået?",
-			"ht": "<p>Du kan bruke kodeverktøyet i nettleseren eller Chrome-extension headingsMap til å sjekke dette.</p>\n<p>Overskriftene skal være kodet med rett nivå:</p>\n<ul>\n<li>I standard HTML er overskriftene er kodet med elementene<code>&lt;h1&gt;</code> til <code>&lt;h6&gt;</code>.</li>\n<li>Med WAI-ARIA er overskriftene er kodet med attributtene <code>aria-level=\"1\"</code> til <code>aria-level=\"6\"</code>.</li>\n</ul>\n<p><strong>Merk:</strong> <code>&lt;h1&gt;</code> kan brukes mer enn en gang på samme side, dersom innhold på siden er delt inn i mer enn en blokk.</p>",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettleseren til å sjekke dette.</p>\n<p>Overskriftene skal være kodet med rett nivå:</p>\n<ul>\n<li>I standard HTML er overskriftene er kodet med elementene<code>&lt;h1&gt;</code> til <code>&lt;h6&gt;</code>.</li>\n<li>Med WAI-ARIA er overskriftene er kodet med attributtene <code>aria-level=\"1\"</code> til <code>aria-level=\"6\"</code>.</li>\n</ul>\n<p><strong>Merk:</strong> <code>&lt;h1&gt;</code> kan brukes mer enn en gang på samme side, dersom innhold på siden er delt inn i mer enn en blokk.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G115"
