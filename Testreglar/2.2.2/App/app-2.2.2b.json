@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For innhold som oppdateres automatisk, uten å bevege seg, gjelder følgende</p><ul><li>Det er en mekanisme for å pause, stoppe eller skjule innholdet eller styre oppdateringsfrekvensen og<ul><li>Mekanismen ligger enten på starten av appsiden eller i direkte tilknytning til innholdet eller</li></ul></li><li>Det finnes en dokumentert tastatursnarvei for å pause, stoppe eller skjule innholdet eller styre oppdateringsfrekvensen</li></ul>",
+	"kravTilSamsvar": "<p>For innhold som oppdateres automatisk, uten å bevege seg, og viser samtidig med annet innhold, gjelder følgende</p><ul><li>Det er en mekanisme for å pause, stoppe eller skjule innholdet eller styre oppdateringsfrekvensen og<ul><li>Mekanismen ligger enten på starten av appsiden eller i direkte tilknytning til innholdet eller</li></ul></li><li>Det finnes en dokumentert tastatursnarvei for å pause, stoppe eller skjule innholdet eller styre oppdateringsfrekvensen</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
