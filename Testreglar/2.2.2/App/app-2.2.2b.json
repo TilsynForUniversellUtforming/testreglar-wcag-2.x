@@ -58,7 +58,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Har innhaldet som blir oppdatert automatisk ein form for bevegelse, blinking eller rulling som varar i meir enn fem sekund?",
-			"ht": "<p>Automatisk oppdatert innhald som begevar seg, blinkar eller rullar i meir enn fem sekund blir testa i testregel App-2.2.2a.</p>",
+			"ht": "<p>Automatisk oppdatert innhald som begevar seg, blinkar eller rullar i meir enn fem sekund blir testa i testregel App-2.2.2a.</p><p>For eksempel, eit banner som rullar i ein nyhetssak som seier \"Akkurat nå\", \"Direkte\", \"Siste nytt\" eller reklamer eller annonser på nett.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
