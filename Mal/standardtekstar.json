@@ -35,12 +35,12 @@
             "bm": "Beskriv elementet, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere elementer, registrerer du et og et."
         },
         "app_skjermleser_spm": {
-            "nn":"Er det mogleg å sveipe til skjemaelement?",
-            "bm":"Er det mulig å sveipe til skjemaelementer?"
+            "nn": "Er det mogleg å sveipe til skjemaelement?",
+            "bm": "Er det mulig å sveipe til skjemaelementer?"
         },
         "app_skjermleser_ht": {
-            "nn": "Slik testar du:\n<ul>\n<li>Aktiver skjermlesar (opplesningsfunksjon)\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: Talkback</li>\n</ul>\n</li>\n<li>Opne appsida du testar</li>\n<li>Sjekk om det er mogleg å sveipe til minst eit skjemaelement</li>\n</ul>",
-            "bm": "Slik tester du:\n<ul>\n<li>Aktiver skjermleser (opplesningsfunksjon)\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: Talkback</li>\n</ul>\n</li>\n<li>Åpne appsiden du tester</li>\n<li>Sjekk om det er mulig å sveipe til minst et skjemaelement</li>\n</ul>"
+            "nn": "Slik testar du:<ul><li>Aktiver skjermlesar (opplesningsfunksjon)<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>Opne appsida du testar</li><li>Sjekk om det er mogleg å sveipe til minst eit skjemaelement</li></ul>",
+            "bm": "Slik tester du:<ul><li>Aktiver skjermleser (opplesningsfunksjon)<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>Åpne appsiden du tester</li><li>Sjekk om det er mulig å sveipe til minst et skjemaelement</li></ul>"
         }
     }
 }
