@@ -79,6 +79,7 @@ files.forEach((file) => {
       expect(steg.stegnr.length).toBeGreaterThan(0);
       expect(steg.spm.length).toBeGreaterThan(0);
       expect(steg.ht).toBeDefined();
+      expect(steg.ht.includes("javascript:")).toBeFalsy();
       expect(steg.type).toBeDefined();
       expect(steg.type).toMatch(/(jaNei|radio|tekst|instruksjon)/i);
 
