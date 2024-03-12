@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For innhold som automatisk beveger seg, blinker, ruller, der handlingen ikke er avgjørende, gjelder følgende</p><ul><li>Det er en mekanisme for å pause, stoppe eller skjule innholdet eller laste nettsiden på nytt uten slikt innhold og<ul><li>Mekanismen ligger enten på starten av nettsiden eller i direkte tilknytning til innholdet eller</li></ul></li><li>Det finnes en dokumentert tastatursnarvei for å pause, stoppe eller skjule innholdet eller laste nettsiden på nytt uten slikt innhold og<ul><li>Innholdet som er satt på pause blir gjenopptatt på samme sted eller i sanntid</li></ul></li></ul>",
+	"kravTilSamsvar": "<p>For innhold som automatisk beveger seg, blinker, ruller, og viser samtidig med annet innhold, der handlingen ikke er avgjørende, gjelder følgende</p><ul><li>Det er en mekanisme for å pause, stoppe eller skjule innholdet eller laste appsiden på nytt uten slikt innhold og<ul><li>Mekanismen ligger enten på starten av appsiden eller i direkte tilknytning til innholdet eller</li></ul></li><li>Det finnes en dokumentert tastatursnarvei for å pause, stoppe eller skjule innholdet eller laste appsiden på nytt uten slikt innhold og<ul><li>Innholdet som er satt på pause blir gjenopptatt på samme sted eller i sanntid</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -109,7 +109,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Finst det ein mekanisme på appsida, for å pause, stoppa eller skjula innhaldet som beveger seg, blinkar eller rullar?",
-			"ht": "<p>Mekanismen kan for eksempel vere ein stopp- eller pauseknapp.</p><p><strong>Merk:</strong> Det er ikkje tilstrekkeleg at innhaldet pauser/stoppar berre når det er i fokus.</p>",
+			"ht": "<p>Mekanismen kan for eksempel vere ein stopp- eller pauseknapp eller dersom du kan stoppe innhaldet, ved å trykke på sjølve animasjonen, er dette tilstrekkeleg.</p><p><strong>Merk:</strong> Det er ikkje tilstrekkeleg at innhaldet pauser/stoppar berre når det er i fokus.</p><p> </p>",
 			"type": "jaNei",
 			"kilde": [
 				"G4",
@@ -131,7 +131,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Ligg mekanismen i direkte tilknytning til innhaldet som beveger seg, blinkar, rullar?",
-			"ht": "<p>Plasseringa kan for eksempel vere rett over eller rett ved sida av innhaldet.</p>",
+			"ht": "<p>Plasseringa kan for eksempel vere rett over eller rett ved sida av innhaldet.</p><p><strong>Merk:</strong> Dersom du kan stoppe innhaldet, ved å trykke på sjølve animasjonen, er dette tilstrekkeleg.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G186"
