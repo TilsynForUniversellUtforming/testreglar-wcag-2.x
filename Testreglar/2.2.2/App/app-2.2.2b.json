@@ -160,7 +160,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som automatisk bevegar seg, blinkar eller rullar."
+					"utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som blir oppdatert automatisk."
 				}
 			}
 		},
@@ -192,7 +192,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som automatisk bevegar seg, blinkar eller rullar."
+					"utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som blir oppdatert automatisk."
 				}
 			}
 		},
@@ -208,7 +208,7 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som automatisk bevegar seg, blinkar eller rullar."
+					"utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som blir oppdatert automatisk."
 				},
 				"nei": {
 					"type": "avslutt",
