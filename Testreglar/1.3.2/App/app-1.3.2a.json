@@ -1,0 +1,157 @@
+{
+	"namn": "App-1.3.2a Meiningsfylt leserekkefølge er programmatisk bestemt 2023",
+	"id": "app-1.3.2a",
+	"testlabId": 516,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Dersom meningsinnholdet, på hele eller deler av appsiden, påvirkes av rekkefølgen som innholdet presenteres i, er minst én korrekt leserekkefølge programmatisk bestemt og</p><ul><li>Programmatisk bestemt leserekkefølge er den samme som visuell leserekkefølge eller</li><li>Programmatisk bestemt leserekkefølge er ulik visuell leserekkefølge, men leserekkefølgen ivaretar likevel meningsinnholdet</li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva appside testar du?",
+			"ht": "<p>Beskriv appsida med få stikkord, eller vel i lista.</p>",
+			"type": "tekst",
+			"label": "Appside:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsida innhald, der meininga blir påvirka av rekkefølgen innhaldet blir presentert i?",
+			"ht": "<ul><li>Ei rekkefølge er meiningsfull dersom rekkefølgen på innhaldet ikkje kan endrast utan å endre meininga til innhaldet.<ul><li>Eksempel på innhald med i ei meiningsfylt rekkefølgje er tekst, matematiske formlar, tabellar og nummererte lister.</li></ul></li></ul><p><strong>Merk:</strong> Unummererte lister har ikkje ei meiningsfylt rekkefølgje.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appside har ikkje innhald der meininga blir påvirka av rekkefølgen det blir presentert i."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Er det mogleg å sveipe til alt innhald på appsida?",
+			"ht": "<p>Viss det er ikkje mogleg å sveipe til alt innhold, kan du ikkkje testa leserekefølgen for innhaldet på appsida.</p><p>Slik testar du:</p><ul><li>Aktiver skjermlesar (opplesningsfunksjon)<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>Opne appsida du testar</li><li>Sjekk om det er mogleg å sveipe til alt innhald </li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ikkje testbart",
+					"utfall": "Det er ikkje mogleg å sveipe til alt innhald på appsida."
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Er visuell og programmatisk bestemt leserekkefølge på appsida lik?",
+			"ht": "<p>Vi brukar skjermlesar for å sjekke programmatisk bestemt leserekkefølge. </p><p>Slik testar du:</p><ul><li>Åpne appsida og få innhaldet lest opp med skjermlesar<ul><li>Sveip til høgre for å lese opp innhald</li><li>Sveip til venstre dersom du treng å gå tilbake i innhaldet</li></ul></li><li> Samanlikn visuell leserekkefølge på appsida, med opplesinga frå skjermlesaren.<ul><li>Les appsida frå toppen og nedover, frå venstre mot høgre.</li><li>Dette gjeld også der innhald er delt opp i blokker. Les blokkene frå toppen og ned, frå venstre mot høgre.</li><li>Det kan vera at du må opne menyar, modaler og liknande, for å teste alt innhald.</li></ul></li><li>Sjekk om innhaldet har same rekkefølgje visuelt og med bruk av skjermlesar</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"C27"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell og programmatisk bestemt leserekkefølge på appsida er lik."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Registrer innhald/element der visuell og programmatisk bestemt leserekkefølge er ulik.",
+			"ht": "<p>Beskriv innhald/element kor rekkefølgen er ulik, slik at det er mogleg å identifisere det i ettertid.</p><p>Viss det gjeld fleire element, registrerer du eit og eit.</p>",
+			"type": "tekst",
+			"label": "Innhald kor rekkefølgje er ulik:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Kva type funksjonalitet er elementet ein del av?",
+			"ht": "<p>Velg frå alternativa under.</p>",
+			"type": "radio",
+			"svarArray": [
+				"Skjema",
+				"Tabell",
+				"Meny",
+				"Modal",
+				"Liste",
+				"Hovudinnhald",
+				"Anna"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Påverkar rekkefølgen det blir presentert i, meininga med innhaldet?",
+			"ht": "<p>Gjer ei vurdering av om innhaldet må bli presentert i ei bestemt rekkefølge, for at brukeren skal kunne forstå det.</p><p><strong>Merk:</strong> Det kan vere fleire rekkefølger som gir same mening.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Rekkefølgen som innhaldet blir presentert i, påverkar ikkje meininga med innhaldet."
+				}
+			},
+			"kilde": [
+				"F34"
+			]
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Forstår brukaren meiningsinnhaldet, sjøl om visuell og programmatisk bestemt leserekkefølge er ulik?",
+			"ht": "<p>Slik testar du: </p><ul><li>Gjer ein visuell inspeksjon, samtidig  som du høyrer på opplesninga fra skjermlesar.</li><li>Sjekk om du forstår innhaldet, sjøl om visuell og programmatisk bestemt rekkefølge er ulik</li></ul><p><strong>Merk:</strong> Rekkefølgen treng ikkje vere identisk, så lenge meininga er den same (ikkje blir påverka). </p><p><strong>Eksempel:</strong> Viss ei appside har fleire tekstar/saker blir betydninga/meininga normalt ikkje påverka av rekkefølgen du les tekstane/sakene i.</p><p>Unntaket er dersom innhald frå to eller fleire forskjellige tekstar/saker blir blanda saman.</p>",
+			"kilde": [
+				"F1",
+				"G57"
+			],
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "For innhald der visuell leserekkefølge påverkar meiningsinnhald, er korrekt leserekkefølge programmatisk bestemt."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "For innhald der visuell leserekkefølge påverkar meiningsinnhald, er korrekt leserekkefølge ikkje programmatisk bestemt."
+				}
+			}
+		}
+	]
+}
