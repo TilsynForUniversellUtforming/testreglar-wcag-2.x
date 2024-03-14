@@ -1,0 +1,328 @@
+{
+	"namn": "Nett-2.2.2a Det er mogleg å pause, stoppe eller skjule innhald som automatisk bevegar seg, blinkar eller rullar 2023",
+	"id": "nett-2.2.2a",
+	"testlabId": 500,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>For innhold som automatisk beveger seg, blinker, ruller, der handlingen ikke er avgjørende, gjelder følgende</p><ul><li>Det er en mekanisme for å pause, stoppe eller skjule innholdet eller laste nettsiden på nytt uten slikt innhold og<ul><li>Mekanismen ligger enten på starten av nettsiden eller i direkte tilknytning til innholdet eller</li></ul></li><li>Det finnes en dokumentert tastatursnarvei for å pause, stoppe eller skjule innholdet eller laste nettsiden på nytt uten slikt innhold og<ul><li>Innholdet som er satt på pause blir gjenopptatt på samme sted eller i sanntid</li></ul></li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsida innhald som automatisk beveger seg, blinkar eller rullar?",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om det finst innhald på testsida som automatisk beveger seg, blinkar eller rullar.</p><p>Eksempel på denne typen innhald er video, animasjonar, spel og rullande børsnoteringar.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje innhald som automatisk beveger seg, blinkar eller rullar."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Kva innhald testar du?",
+			"ht": "<p>Beskriv innhaldet som beveger seg, blinkar eller rullar, slik at det er mogleg å identifisere det i ettertid.</p><p>Viss det gjeld fleire element, registrerer du eit og eit.</p>",
+			"type": "tekst",
+			"label": "Innhald som beveger seg, blinkar, rullar:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Varer bevegelsen, blinkinga eller rullinga i meir enn 5 sekund?",
+			"ht": "<p>Bruk stoppeklokke eller lignande for å ta tida.</p><p><strong>Merk:</strong> Video eller anna innhald som beveger seg, blinkar eller rullar, men varar kortere enn 5 sekund, er likevel omfatta viss det går i loop.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G11"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Innhald beveger seg, blinkar eller rullar i mindre enn 5 sekund."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Viser bevegelsen, blinkinga eller rullinga samtidig med anna innhald?",
+			"ht": "<p><strong>Merk: </strong>Kravet gjeld etter ordlyden berre for innhald som beveger seg, blinkar eller rullar samtidig som anna innhald som blir vist på testsida.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Innhald beveger seg, blinkar eller rullar, utan å bli vist samtidig med anna innhald."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er bevegelsen, blinkinga eller rullinga del av ei handling som er avgjerande?",
+			"ht": "<p>Avgjerande (nødvendige) handlingar er typisk noko som skjer i sanntid, og kor det å pause/stoppe/skjule vil gjere handlinga ugyldig.</p><p>Eksempel kan vere handel på børs, aksjon, klokke og liknande situasjonar der brukaren treng live-oppdateringar.</p><p><strong>Merk:</strong> Merknad 4 til suksesskriteriet lyder slik: \"En animasjon som inngår i forhåndsinnlasting eller lignende, kan anses som avgjørende dersom det ikke kan forekomme interaksjon for noen brukere i denne fasen, og dersom mangel på en framdriftsindikator kunne forvirre brukerne og skape inntrykk av at innholdet er enten frosset eller ødelagt.\"</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Innhald som beveger seg, blinkar eller rullar er del av ei handling som er avgjerande."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Finst det ein mekanisme på testsida, for å pause, stoppa eller skjula innhaldet som beveger seg, blinkar eller rullar?",
+			"ht": "<p>Mekanismen kan for eksempel vere ein stopp- eller pauseknapp.</p><p><strong>Merk:</strong> Det er ikkje tilstrekkeleg at innhaldet pauser/stoppar berre når det er i fokus.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G4",
+				"G186",
+				"G187"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Ligg mekanismen i direkte tilknytning til innhaldet som beveger seg, blinkar, rullar?",
+			"ht": "<p>Plasseringa kan for eksempel vere rett over eller rett ved sida av innhaldet.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G186"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Ligg mekanismen på starten av testsida?",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om mekanismen er plassert nær starten av testsida.</p>\n<p><strong>Merk:</strong> Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G186"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Vert innhaldet sett på pause, stoppa eller skjult når mekanismen aktiverast?",
+			"ht": "<p>Aktiver mekanismen og sjekk at innhaldet faktisk blir sett på pause, stoppa eller skjult.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G186"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Startar innhaldet å bevege seg, blinka eller rulle, av seg sjølv igjen, før det har gått 1 minutt?",
+			"ht": "<p>Av praktiske grunnar, avgrensar vi testen til 1 minutt.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F16"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det er mogleg å pause, stoppe eller skjule innhald som automatisk bevegar seg, blinkar eller rullar."
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Står det på testsida at det er mogleg å stoppa, pause eller skjula innhaldet som beveger seg, blinkar eller rullar, ved å bruke ein tastatursnarveg?",
+			"ht": "<p>Dokumentasjon av tastatursnarvegen skal anten ligge på starten av nettsida, eller i direkte tilknytning til det aktuelle innhaldet. Ein tastatursnarveg kan for eksempel vere:</p><ul><li>Esc-tasten</li><li>Ein kombinasjon av Ctrl og ein annan tast</li></ul><p>Det viktige er at brukaren får informasjon om snarvegen og kva den gjer.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G4",
+				"G187"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Vert innhaldet sett på pause, stoppa eller skjult når tastatursnarvegen aktiverast?",
+			"ht": "<p>Aktiver tastatursnarvegen, og sjekk om innhaldet faktisk blir sett på pause, stoppa eller skjult.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G187"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				}
+			}
+		},
+		{
+			"stegnr": "3.12",
+			"spm": "Startar innhaldet å bevege seg, blinka eller rulle, av seg sjølv igjen, før det har gått 1 minutt?",
+			"ht": "<p>Av praktiske grunnar, avgrensar vi testen til 1 minutt. </p>",
+			"type": "jaNei",
+			"kilde": [
+				"F16"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det er mogleg å pause, stoppe eller skjule innhald som automatisk bevegar seg, blinkar eller rullar."
+				}
+			}
+		},
+		{
+			"stegnr": "3.13",
+			"spm": "Finst det en mekanisme nær starten av nettsida, for å laste sida på nytt, utan innhald som automatisk bevegar seg, blinkar eller rullar?",
+			"ht": "<p>Gjer ein visuell inspeksjon, og sjekk om det finst en mekanisme nær starten av nettsida for å laste sida på nytt, utan innhald som automatisk bevegar seg, blinkar eller rullar.</p>\n<p><strong>Merk:</strong> Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G191"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.14"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som automatisk bevegar seg, blinkar eller rullar."
+				}
+			}
+		},
+		{
+			"stegnr": "3.14",
+			"spm": "Aktiver mekanismen og sjekk om testsida lastar på nytt uten innhald som automatisk bevegar seg, blinkar eller rullar. ",
+			"ht": "<p>Testsida skal laste på nytt, utan innhald som automatisk bevegar seg, blinkar eller rullar. </p>\n<p><strong>Merk:</strong> Du kan anten bli teke til same side eller ei anna side som har tilsvarande innhald.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G191"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.15"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som automatisk beveger seg, blinkar eller rullar."
+				}
+			}
+		},
+		{
+			"stegnr": "3.15",
+			"spm": "Startar innhaldet å bevege seg, blinka eller rulle, av seg sjølv igjen, før det har gått 1 minutt?",
+			"ht": "<p>Av praktiske grunnar, avgrensar vi testen til 1 minutt. </p>",
+			"type": "jaNei",
+			"kilde": [
+				"F16"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å pause, stoppe eller skjule innhald som automatisk bevegar seg, blinkar eller rullar."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det er mogleg å pause, stoppe eller skjule innhald som automatisk bevegar seg, blinkar eller rullar."
+				}
+			}
+		}
+	]
+}
