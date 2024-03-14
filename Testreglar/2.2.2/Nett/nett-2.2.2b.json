@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For innhold som oppdateres automatisk, uten å bevege seg, gjelder følgende</p>\r\n<ul>\r\n<li>Det er en mekanisme for å pause, stoppe eller skjule innholdet eller styre oppdateringsfrekvensen og\r\n<ul>\r\n<li>Mekanismen ligger enten på starten av nettsiden eller i direkte tilknytning til innholdet eller</li>\r\n</ul>\r\n</li>\r\n<li>Det finnes en dokumentert tastatursnarvei for å pause, stoppe eller skjule innholdet eller styre oppdateringsfrekvensen</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For innhold som oppdateres automatisk, uten å bevege seg, og viser samtidig med annet innhold, gjelder følgende</p><ul><li>Det er en mekanisme for å pause, stoppe eller skjule innholdet eller styre oppdateringsfrekvensen og<ul><li>Mekanismen ligger enten på starten av nettsiden eller i direkte tilknytning til innholdet eller</li></ul></li><li>Det finnes en dokumentert tastatursnarvei for å pause, stoppe eller skjule innholdet eller styre oppdateringsfrekvensen</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsida innhald som blir oppdatert automatisk?",
-			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om det finst innhald som blir oppdatert automatisk.</p>\n<p>Eksempel på denne typen innhald er</p>\n<ul>\n<li>børsoppdateringar i sanntid</li>\n<li>vêrmeldingar</li>\n<li>nyheitsstraumar</li>\n</ul>",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om det finst innhald som blir oppdatert automatisk.</p><p>Eksempel på denne typen innhald er</p><ul><li>børsoppdateringar i sanntid</li><li>vêrmeldingar</li><li>nyheitsstraumar</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -58,7 +58,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Har innhaldet som blir oppdatert automatisk ein form for bevegelse, blinking eller rulling som varar i meir enn fem sekund?",
-			"ht": "<p>Automatisk oppdatert innhald som begevar seg, blinkar eller rullar i meir enn fem sekund blir testa i testregel Nett-2.2.2a.</p>",
+			"ht": "<p>Automatisk oppdatert innhald som begevar seg, blinkar eller rullar i meir enn fem sekund blir testa i testregel Nett-2.2.2a.</p><p>For eksempel, eit banner som rullar i ein nyhetssak som seier \"Akkurat nå\", \"Direkte\", \"Siste nytt\" eller reklamer eller annonser på nett.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -90,7 +90,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er den automatiske oppdateringa del av ei handling som er avgjerande?",
-			"ht": "<p>Avgjerande (nødvendige) handlingar er typisk noko som skjer i sanntid, og kor det å pause/stoppe/skjule vil gjere handlinga ugyldig.</p>\n<p>Eksempel kan vere handel på børs, aksjon, klokke og liknande situasjonar der brukaren treng live-oppdateringar.</p>",
+			"ht": "<p>Avgjerande (nødvendige) handlingar er typisk noko som skjer i sanntid, og kor det å pause/stoppe/skjule vil gjere handlinga ugyldig.</p><p>Eksempel kan vere handel på børs, aksjon, klokke og liknande situasjonar der brukaren treng live-oppdateringar.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -106,7 +106,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Finst det ein mekanisme på testsida, for å pause, stoppa, skjula eller endra oppdateringsfrekvens for innhaldet?",
-			"ht": "<p>Mekanismen kan for eksempel vere ein stopp- eller pauseknapp. Mekanisme for å endre oppdateringsfrekvensen, kan for eksempel vere ei nedtrekksliste med ulike oppdateringsalternativ.</p>\n<p><strong>Merk:</strong> Det er ikkje tilstrekkeleg at innhaldet pauser/stoppar berre når det er i fokus. </p>",
+			"ht": "<p>Mekanismen kan for eksempel vere ein stopp- eller pauseknapp. Mekanisme for å endre oppdateringsfrekvensen, kan for eksempel vere ei nedtrekksliste med ulike oppdateringsalternativ.</p><p><strong>Merk:</strong> Det er ikkje tilstrekkeleg at innhaldet pauser/stoppar berre når det er i fokus.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G4",
@@ -146,7 +146,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Ligg mekanismen på starten av testsida?",
-			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om mekanismen er plassert nær starten av testsida.</p>\n<p><strong>Merk:</strong> Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om mekanismen er plassert nær starten av testsida.</p><p><strong>Merk:</strong> Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G186"
@@ -165,7 +165,7 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Aktiver mekanismen, og sjekk om innhaldet blir sett på pause, stoppa, skjult eller at oppdateringsfrekvensen blir endra.",
-			"ht": "<p>Aktiver mekanismen og sjekk at innhaldet faktisk blir sett på pause, stoppa, skjult eller at frekvensen endra. Viss det finst ein mekanisme for å justera oppdateringsfrekvensen, skal du sette frekvensen til over 1 minutt. </p>",
+			"ht": "<p>Aktiver mekanismen og sjekk at innhaldet faktisk blir sett på pause, stoppa, skjult eller at frekvensen endra. Viss det finst ein mekanisme for å justera oppdateringsfrekvensen, skal du sette frekvensen til over 1 minutt.</p>",
 			"type": "instruksjon",
 			"ruting": {
 				"alle": {
@@ -216,7 +216,7 @@
 		{
 			"stegnr": "3.11",
 			"spm": "Står det på testsida at det er mogleg å stoppa, pause, skjula eller endre oppdateringsfrekvens for innhaldet som blir oppdatert automatisk, ved å bruke ein tastatursnarveg?",
-			"ht": "<p>Dokumentasjon av tastatursnarvegen skal anten ligge på starten av nettsida, eller i direkte tilknytning til det aktuelle innhaldet. Ein tastatursnarveg kan for eksempel vere:</p>\n<ul>\n<li>Esc-tasten</li>\n<li>Ein kombinasjon av Ctrl og ein annan tast</li>\n</ul>\n<p>Det viktige er at brukaren får informasjon om snarvegen og kva den gjer. </p>",
+			"ht": "<p>Dokumentasjon av tastatursnarvegen skal anten ligge på starten av nettsida, eller i direkte tilknytning til det aktuelle innhaldet. Ein tastatursnarveg kan for eksempel vere:</p><ul><li>Esc-tasten</li><li>Ein kombinasjon av Ctrl og ein annan tast</li></ul><p>Det viktige er at brukaren får informasjon om snarvegen og kva den gjer.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -233,7 +233,7 @@
 		{
 			"stegnr": "3.12",
 			"spm": "Aktiver tastatursnarvegen, og sjekk om innhaldet blir sett på pause, stoppa, skjult eller at oppdateringsfrekvensen blir endra.",
-			"ht": "<p>Aktiver mekanismen og sjekk at innhaldet faktisk blir sett på pause, stoppa, skjult eller oppdatert.</p>\n<p>Viss det finst ein mekanisme for å justera oppdateringsfrekvensen, skal du sette frekvensen til over 1 minutt. </p>",
+			"ht": "<p>Aktiver mekanismen og sjekk at innhaldet faktisk blir sett på pause, stoppa, skjult eller oppdatert.</p><p>Viss det finst ein mekanisme for å justera oppdateringsfrekvensen, skal du sette frekvensen til over 1 minutt.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G4",
