@@ -131,7 +131,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Er mekanismen for å styre lyden visuelt markert, i form av ledetekst eller symbol?",
-			"ht": "<p>Slik testar du:</p><p>Gjer ein visuell inspeksjon og sjekk om mekanismen har visuell markering.</p><p>Eksempel er</p><ul><li>tekst \"Pause, Stopp, Slå av lyden, Sett filmen på pause…\"</li><li>ikon for volum eller stopp</li></ul>>",
+			"ht": "<p>Slik testar du:</p><p>Gjer ein visuell inspeksjon og sjekk om mekanismen har visuell markering.</p><p>Eksempel er</p><ul><li>tekst \"Pause, Stopp, Slå av lyden, Sett filmen på pause…\"</li><li>ikon for volum eller stopp</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G170"
