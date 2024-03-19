@@ -1,0 +1,173 @@
+{
+	"namn": "App-1.4.2a Det er mogleg å styre lyd som startar automatisk og ikkje stoppar innan 3 sekund",
+	"id": "app-1.4.2a",
+	"testlabId": 505,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nn",
+	"kravTilSamsvar": "<ul><li>Lyd som starter automatisk, og varer mer enn 3 sekunder, har en mekanisme for styring av lyd, som regulerer lydstyrken, uavhengig av systemvolumet eller</li><li>En mekanisme for å slå av lyden permanent eller midlertidig, uavhengig av systemvolumet. Mekanismen<ul><li>er plassert nær starten av siden</li><li>kan brukes med sveiping</li><li>ligger innenfor de 5 første sveipe-stegene på siden og</li><li>har tydelig visuell markering i form av ledetekst eller symbol</li></ul></li></ul>",
+	"side": "3.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva appside testar du?",
+			"ht": "<p>Beskriv appsida med få stikkord, eller vel i lista.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsida lyd som startar automatisk?",
+			"ht": "<p>Slik testar du:</p><ul><li>Opne appsida</li><li>Høyr etter om det er lyd som startar automatisk. </li></ul><p><strong>Merk: </strong>Automatisk betyr at lyden startar utan at brukaren sjøl aktiverer avspeling av lyd.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appside har ikkje lyd som startar automatisk."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Stoppar den automatisk starta lyden innan 3 sekund?",
+			"ht": "<p>Slik testar du:</p><ul><li>Finn fram stoppeklokke</li><li>Last sida på nytt. Dette kan du gjera ved å trykke på F5</li><li>Ta tida og sjekk om lyden stoppar innan 3 sekund</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appside har lyd som startar automatisk, men den stoppar innan 3 sekund."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Kva element testar du?",
+			"ht": "<p>Beskriv elementet, slik at det er mogleg å identifisere det i ettertid. Viss det gjeld fleire element, registrerer du eit og eit.</p>",
+			"type": "tekst",
+			"label": "Lyd som starta automatisk:",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Finst det ein mekanisme for å styre lyden, som er uavhengig av systemvolumet?",
+			"ht": "<p>Eksempel på mekanisme for styring av lyd:</p><ul><li>play/pauseknapp</li><li>stopp/playknapp</li><li>volumkontroll i avspelaren som kan ta volumet til null</li><li>muteknapp som tek volumet til null</li></ul><p><strong>Merk:</strong> Du skal ikkje bruke volumkontrollen i operativsystemet, for eksempel volumkontrollen på enheten.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det finst ikkje ein mekanisme for å styre lyd som startar automatisk, som er uavhengig av systemvolumet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er mekanismen for å styre lyden, visuelt plassert nær starten av appsida?",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om mekanismen er plassert nær starten av appsida.</p>\n<p><strong>Merk:</strong> Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen for styring av lyd.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F23",
+				"G170"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Mekanisme for styring av lyd som startar automatisk, er ikkje visuelt plassert nær starten av appsida."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Kjem du til mekanismen for å styre lyden innan dei 5 første sveipe-stega på appsida?",
+			"ht": "<p>Slik testar du:</p><ul><li>Aktiver skjermleser<ul><li>iOS: Voiceover</li><li>Android: Talkback</li></ul></li><li>Start sveiping på toppen av appsida</li><li>Sveip sakte for å navigera på appsida</li><li>Sjekk om du når mekanismen for å styre lyden innan dei 5 første sveipe-stega</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G170"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Mekanisme for styring av lyd som startar automatisk, er ikkje innanfor dei fem første sveipe-stega på appsida."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Er mekanismen for å styre lyden visuelt markert, i form av ledetekst eller symbol?",
+			"ht": "<p>Slik testar du:</p><p>Gjer ein visuell inspeksjon og sjekk om mekanismen har visuell markering.</p><p>Eksempel er</p><ul><li>tekst \"Pause, Stopp, Slå av lyden, Sett filmen på pause…\" </li><li>ikon for volum eller stopp</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G170"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Mekanisme for styring av lyd som startar automatisk, har ikkje visuell markering i form av ledetekst eller symbol."
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Kan du bruke mekanismen med sveiping, for å slå av lyden eller regulere lydstyrken til null?",
+			"ht": "<p>Slik testar du:</p><ul><li>Sveip for å nå mekanismen</li><li>Aktiver mekanismen for å skru av eller regulere volumet til null </li><li>Sjekk at lyden blir slått av eller sett til null</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G170"
+			],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å bruke mekanismen for å slå av eller regulere lyd som startar automatisk med sveiping."
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det er mogleg å bruke mekanismen for å slå av eller regulere lyd som startar automatisk med sveiping."
+				}
+			}
+		}
+	]
+}
