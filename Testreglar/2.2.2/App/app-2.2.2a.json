@@ -109,7 +109,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Finst det ein mekanisme på appsida, for å pause, stoppa eller skjula innhaldet som beveger seg, blinkar eller rullar?",
-			"ht": "<p>Mekanismen kan for eksempel vere ein stopp- eller pauseknapp eller dersom du kan stoppe innhaldet, ved å trykke på sjølve animasjonen, er dette tilstrekkeleg.</p><p><strong>Merk:</strong> Det er ikkje tilstrekkeleg at innhaldet pauser/stoppar berre når det er i fokus.</p><p> </p>",
+			"ht": "<p>Mekanismen kan for eksempel vere ein stopp- eller pauseknapp eller dersom du kan stoppe innhaldet, ved å trykke på sjølve animasjonen, er dette tilstrekkeleg.</p><p><strong>Merk:</strong> Det er ikkje tilstrekkeleg at innhaldet pauser/stoppar berre når det er i fokus.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G4",
