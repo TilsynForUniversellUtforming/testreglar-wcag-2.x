@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For innhold som automatisk beveger seg, blinker, ruller, der handlingen ikke er avgjørende, gjelder følgende</p><ul><li>Det er en mekanisme for å pause, stoppe eller skjule innholdet eller laste nettsiden på nytt uten slikt innhold og<ul><li>Mekanismen ligger enten på starten av nettsiden eller i direkte tilknytning til innholdet eller</li></ul></li><li>Det finnes en dokumentert tastatursnarvei for å pause, stoppe eller skjule innholdet eller laste nettsiden på nytt uten slikt innhold og<ul><li>Innholdet som er satt på pause blir gjenopptatt på samme sted eller i sanntid</li></ul></li></ul>",
+	"kravTilSamsvar": "<p>For innhold som automatisk beveger seg, blinker, ruller, og viser samtidig med annet innhold, der handlingen ikke er avgjørende, gjelder følgende</p><ul><li>Det er en mekanisme for å pause, stoppe eller skjule innholdet eller laste nettsiden på nytt uten slikt innhold og<ul><li>Mekanismen ligger enten på starten av nettsiden eller i direkte tilknytning til innholdet eller</li></ul></li><li>Det finnes en dokumentert tastatursnarvei for å pause, stoppe eller skjule innholdet eller laste nettsiden på nytt uten slikt innhold og<ul><li>Innholdet som er satt på pause blir gjenopptatt på samme sted eller i sanntid</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
