@@ -91,7 +91,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er bildet kodet slik at det kan ignoreres av hjelpemiddelteknologi?",
-			"ht": "<p>Ignoreres av hjelpemiddelteknologi betyr at bildet er kodet slik at det er fjernet fra Accessibility Tree.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Inspiser bildet i Chrome</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties, sjekk om det står informasjon \"Accessibility node not exposed\".</li>\n</ul>",
+			"ht": "<p>Ignoreres av hjelpemiddelteknologi betyr at bildet er kodet slik at det er fjernet fra Accessibility Tree.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Inspiser bildet i Chrome</li>\n<li>Bruk Accessibility Tree verktøy i inspiser</li>\n<li>Under Computed Properties, sjekk om det står informasjon \"Accessibility node not exposed\".</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -108,7 +108,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Hvordan er bildet som ble ignorert av hjelpemiddelteknologi, kodet?",
-			"ht": "<p>Bildet kan kodes på flere måter for at det skal ignoreres av hjelpemiddelteknologi.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Under Computed Properties i Accessibility Checker, sjekk om det står informasjon \"Element has/is \":</li>\n</ul>",
+			"ht": "<p>Bildet kan kodes på flere måter for at det skal ignoreres av hjelpemiddelteknologi.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Element has/is \":</li>\n</ul>",
 			"type": "radio",
 			"ruting": {
 				"alle": {
@@ -129,7 +129,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Er det meningsbærende bildet kodet slik at det ignoreres av hjelpemiddelteknologi?",
-			"ht": "<p>Meningsbærende bilder formidler informasjon eller funksjonalitet til brukeren. Dette er for eksempel grafer, diagrammer, illustrasjoner, bilde av personer, situasjoner og mønstre.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Inspiser bildet</li>\n<li>Under Computed Properties i Accessibility Checker, sjekk om det står informasjon \"Accessibility node not exposed\".</li>\n</ul>\n<p><strong>Merk:</strong> Nettbaserte kart og karttjenester er som hovedregel unntatt kravene til universell utforming.</p>\n<p>For kart ment for navigasjonsformål skal likevel nødvendig informasjon være tilgjengelig på annen måte. Dette kan for eksempel være et kart som viser besøksadressen til offentlige virksomheter eller en oversikt over stoppesteder for kollektivtransport.</p>",
+			"ht": "<p>Meningsbærende bilder formidler informasjon eller funksjonalitet til brukeren. Dette er for eksempel grafer, diagrammer, illustrasjoner, bilde av personer, situasjoner og mønstre.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Inspiser bildet</li>\n<li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Accessibility node not exposed\".</li>\n</ul>\n<p><strong>Merk:</strong> Nettbaserte kart og karttjenester er som hovedregel unntatt kravene til universell utforming.</p>\n<p>For kart ment for navigasjonsformål skal likevel nødvendig informasjon være tilgjengelig på annen måte. Dette kan for eksempel være et kart som viser besøksadressen til offentlige virksomheter eller en oversikt over stoppesteder for kollektivtransport.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -145,7 +145,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Hvordan er det meningsbærende bildet som ble ignorert av hjelpemiddelteknologi, kodet?",
-			"ht": "<p>Bildet kan kodes på flere måter, for at det skal ignoreres av hjelpemiddelteknologi.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Under Computed Properties i Accessibility Checker, sjekk om det står informasjon \"Element has/is \":</li>\n</ul>",
+			"ht": "<p>Bildet kan kodes på flere måter, for at det skal ignoreres av hjelpemiddelteknologi.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Element has/is \":</li>\n</ul>",
 			"type": "radio",
 			"ruting": {
 				"alle": {
@@ -166,7 +166,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Har det meningsbærende bildet et tekstalternativ (tilgjengelig navn)?",
-			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Under Computed Properties i Accessibility Checker, sjekk at \"Name\" ikke er tomt.</li>\n</ul>",
+			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -183,7 +183,7 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Hvilket tekstalternativ tester du?",
-			"ht": "<p>Registrer det tilgjengelige navnet du har funnet i forrige steg dvs. kopier innholdet i attributtet \"Name\" under Computed Properties i Accessibility Checker.</p>",
+			"ht": "<p>Registrer det tilgjengelige navnet du har funnet i forrige steg dvs. kopier innholdet i attributtet \"Name\" under Computed Properties i Accessibility Tree.</p>",
 			"type": "tekst",
 			"ruting": {
 				"alle": {
@@ -197,7 +197,7 @@
 		{
 			"stegnr": "3.9",
 			"spm": "Hvilket attributt gir tilgjengelig navn til det meningsbærende bildet?",
-			"ht": "<p>Sjekk dette under \"Name\" under Computed Properties i Accessibility Checker.</p>",
+			"ht": "<p>Sjekk dette under \"Name\" under Computed Properties i Accessibility Tree.</p>",
 			"type": "radio",
 			"ruting": {
 				"alle": {
@@ -326,7 +326,7 @@
 		{
 			"stegnr": "3.15",
 			"spm": "Har bildet attributtet \"aria-describedby\", som ikke er tomt?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser bildet i Chrome</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties, sjekk at attributtet Description ikke er tomt.</li>\n</ul>\n<p><strong>Merk: </strong>Du skal ikke vurdere kvaliteten på teksten i attributtet Description (aria-describedby).</p>",
+			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser bildet i Chrome</li>\n<li>Bruk Accessibility Tree verktøy i inspiser</li>\n<li>Under Computed Properties, sjekk at attributtet Description ikke er tomt.</li>\n</ul>\n<p><strong>Merk: </strong>Du skal ikke vurdere kvaliteten på teksten i attributtet Description (aria-describedby).</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {

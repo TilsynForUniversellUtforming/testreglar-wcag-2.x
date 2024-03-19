@@ -77,7 +77,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er layout-tabellen kodet slik at den ignoreres av hjelpemiddelteknologi?",
-			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser tabellen i nettleseren</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Checker\n<ul>\n<li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li>\n</ul>\n</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om layout-tabellen er kodet med en av følgende:</p>\n<ul>\n<li><code>role=\"presentation\"</code></li>\n<li><code>role=\"none\"</code></li>\n<li><code>aria-hidden=\"true\"</code></li>\n</ul>",
+			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser tabellen i nettleseren</li>\n<li>Bruk Accessibility Tree verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Tree\n<ul>\n<li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li>\n</ul>\n</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om layout-tabellen er kodet med en av følgende:</p>\n<ul>\n<li><code>role=\"presentation\"</code></li>\n<li><code>role=\"none\"</code></li>\n<li><code>aria-hidden=\"true\"</code></li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -446,7 +446,7 @@
 		{
 			"stegnr": "3.20",
 			"spm": "Er tabellen kodet slik at den ignoreres av hjelpemiddelteknologi?",
-			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser tabellen i nettleseren</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Checker\n<ul>\n<li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li>\n</ul>\n</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om tabellen er kodet med et av følgende attributter:</p>\n<ul>\n<li><code>role=\"presentation\"</code></li>\n<li><code>role=\"none\"</code></li>\n<li><code>aria-hidden=\"true\"</code></li>\n</ul>",
+			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser tabellen i nettleseren</li>\n<li>Bruk Accessibility Tree verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Tree\n<ul>\n<li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li>\n</ul>\n</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om tabellen er kodet med et av følgende attributter:</p>\n<ul>\n<li><code>role=\"presentation\"</code></li>\n<li><code>role=\"none\"</code></li>\n<li><code>aria-hidden=\"true\"</code></li>\n</ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
