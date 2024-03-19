@@ -43,7 +43,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Er det ein meta-tag i koden, på formen meta http-equiv=\"refresh\" content?",
-			"ht": "<p>Inspiser koden og sjekk om det ligg ein <code>&lt;meta&gt;</code>-tag på formen <code>&lt;meta http-equiv=\"refresh\" content=\"[verdi i sekunder]; url=[URL]\"/&gt;</code>.</p>\n<p>Det ligg ofte i <code>&lt;head&gt;</code>-elementet på starten av HTML-koden. Denne kodinga betyr at nettsida laster på nytt eller omadresserer automatisk.</p>\n<p><strong>Tips:</strong> Du kan søke etter <code>&lt;meta http-equiv=\"refresh\"</code> i koden.</p>",
+			"ht": "<p>Inspiser koden og sjekk om det ligg ein <code>&lt;meta&gt;</code>-tag på formen <code>&lt;meta http-equiv=\"refresh\" content=\"[verdi i sekunder]; url=[URL]\"/&gt;</code>.</p><p>Det ligg ofte i <code>&lt;head&gt;</code>-elementet på starten av HTML-koden. Denne kodinga betyr at nettsida laster på nytt eller omadresserer automatisk.</p><p><strong>Tips:</strong> Du kan søke etter <code>&lt;meta http-equiv=\"refresh\"</code> i koden.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F41"
@@ -105,7 +105,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er tidsavgrensinga unnteke kravet?",
-			"ht": "<p>Følgjande er unntatt etter ordlyden i kravet:</p>\n<blockquote>\n<ul>\n<li>\n<p>Sanntid: Tidsbegrensningen er en nødvendig del av en hendelse i sanntid (for eksempel en auksjon), og det finnes ikke noe alternativ til tidsbegrensningen, eller</p>\n</li>\n<li>\n<p>Avgjørende unntak: Tidsbegrensningen er avgjørende, og en forlengelse vil gjøre handlingen ugyldig, eller</p>\n</li>\n<li>\n<p>20-timers unntak: Dette har allerede blitt testet i steg 2.4</p>\n</li>\n</ul>\n</blockquote>",
+			"ht": "<p>Følgjande er unntatt etter ordlyden i kravet:</p><blockquote><ul><li><p>Sanntid: Tidsbegrensningen er en nødvendig del av en hendelse i sanntid (for eksempel en auksjon), og det finnes ikke noe alternativ til tidsbegrensningen, eller</p></li><li><p>Avgjørende unntak: Tidsbegrensningen er avgjørende, og en forlengelse vil gjøre handlingen ugyldig, eller</p></li><li><p>20-timers unntak: Dette har allerede blitt testet i steg 2.4</p></li></ul></blockquote>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -155,7 +155,7 @@
 					"delutfall": {
 						"nr": 0,
 						"fasit": "Nei",
-						"tekst": "<br>- Mekanismen for å slå av tidsavgrensinga, ligg etter innhaldet med tidsavgrensing."
+						"tekst": " Mekanismen for å slå av tidsavgrensinga, ligg etter innhaldet med tidsavgrensing."
 					}
 				}
 			}
@@ -198,7 +198,7 @@
 					"delutfall": {
 						"nr": 0,
 						"fasit": "Nei",
-						"tekst": "<br>- Mekanismen for å justere varigheit, ligg etter innhaldet med tidsavgrensing."
+						"tekst": " Mekanismen for å justere varigheit, ligg etter innhaldet med tidsavgrensing."
 					}
 				}
 			}
@@ -237,7 +237,7 @@
 					"delutfall": {
 						"nr": 0,
 						"fasit": "Nei",
-						"tekst": "<br>- Mekanismen for å justere varigheita på tidsavgrensinga lar ikkje brukaren justere varigheita på tidsavgrensinga til minst 10 gonger standard varigheit."
+						"tekst": " Mekanismen for å justere varigheita på tidsavgrensinga lar ikkje brukaren justere varigheita på tidsavgrensinga til minst 10 gonger standard varigheit."
 					}
 				}
 			}
