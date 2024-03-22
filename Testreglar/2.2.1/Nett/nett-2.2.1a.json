@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Det er mulig for brukeren å</p><ul><li>Slå av tidsavgrensningen, senest 20 sekunder før den skjer, ved å gjøre en enkel handling<ul><li>Mekanismen for å slå av skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li><li>Slå av innebærer å slå av tidsavgreningen permanent for det aktuelle besøket eller</li></ul></li><li>Justere tidsavgrensningen med minst 10 ganger standard varighet.<ul><li>Mekanismen for å justere skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger eller</li></ul></li><li>Forlenge tidsavgrensningen senest 20 sekunder før den inntreffer, ved å gjøre en enkel handling. Det skal være mulig å forlenge med minst 10 ganger standard varighet.<ul><li>Mekanismen for å forlenge skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li></ul></li></ul>",
+	"kravTilSamsvar": "<p>For hver tidsbegrensning som er angitt av innholdet, er det mulig for brukeren å gjøre minst ett av følgende alternativer:</p><ul><li>Slå av tidsavgrensningen, senest 20 sekunder før den skjer, ved å gjøre en enkel handling<ul><li>Mekanismen for å slå av skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li></ul></li><li>Justere tidsavgrensningen med minst 10 ganger standard varighet.<ul><li>Mekanismen for å justere skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li></ul></li><li>Forlenge tidsavgrensningen senest 20 sekunder før den inntreffer, ved å gjøre en enkel handling. Det skal være mulig å forlenge med minst 10 ganger standard varighet.<ul><li>Mekanismen for å forlenge skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Er det informasjon eller innhald på nettsida, som tilseier at det kan vera ei tidsavgrensing?",
-			"ht": "<p>Gjer ein visuell inspeksjon, og leit etter innhald som kan ha ei tidsavgrensing.</p><p>Tidsavgrensning kan for eksempel ligga i skjemafunksjonalitet, nyheiter, logg inn eller liknande.</p><p><strong>Merk:</strong> For å finne tidsavgrensningar som ikkje er synlige med ein gong, kan du opne appsida og start ei handling for eksempel bestilling av ei vare eller liknande, for deretter å vera inaktiv 20 minutt.</p>",
+			"ht": "<p>Gjer ein visuell inspeksjon, og leit etter innhald som kan ha ei tidsavgrensing.</p><p>Tidsavgrensning kan for eksempel ligga i skjemafunksjonalitet, nyheiter, logg inn eller liknande.</p><p><strong>Merk:</strong> For å finne tidsavgrensningar som ikkje er synlige med ein gong, kan du open nettsida og start ei handling for eksempel bestilling av ei vare eller liknande, for deretter å vera inaktiv 20 minutt.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -105,7 +105,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er tidsavgrensinga unnteke kravet?",
-			"ht": "<p>Følgjande er unntatt etter ordlyden i kravet:</p><blockquote><ul><li><p>Sanntid: Tidsbegrensningen er en nødvendig del av en hendelse i sanntid (for eksempel en auksjon), og det finnes ikke noe alternativ til tidsbegrensningen, eller</p></li><li><p>Avgjørende unntak: Tidsbegrensningen er avgjørende, og en forlengelse vil gjøre handlingen ugyldig, eller</p></li><li><p>20-timers unntak: Dette har allerede blitt testet i steg 2.4</p></li></ul></blockquote>",
+			"ht": "<p>Følgjande er unntatt etter ordlyden i kravet:</p><blockquote><ul><li><em>Sanntid: Tidsbegrensningen er en nødvendig del av en hendelse i sanntid (for eksempel en auksjon), og det finnes ikke noe alternativ til tidsbegrensningen, eller</em></li><li style=\"font-style: italic;\"><em>Avgjørende unntak: Tidsbegrensningen er avgjørende, og en forlengelse vil gjøre handlingen ugyldig, eller</em></li><li style=\"font-style: italic;\"><em>20-timers unntak: Dette har allerede blitt testet i steg 2.4</em></li></ul></blockquote>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -244,7 +244,7 @@
 		},
 		{
 			"stegnr": "3.10",
-			"spm": "Får brukaren varsel om du kan forlenge tida?",
+			"spm": "Får du varsel om at du kan forlenge tida?",
 			"ht": "<p>Sjekk om du får varsel om at det er mogleg å forlenga tida.</p><p>Eksempel på varsel kan vare ein dialogboks, statusbeskjed, lyd eller liknande.</p>",
 			"type": "jaNei",
 			"ruting": {
