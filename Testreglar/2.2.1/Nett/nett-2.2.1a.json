@@ -295,7 +295,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald med tidsavgrensing. Mekanismen for å forlenge varigheita på tidsavgrensinga, lar ikkje brukaren forelnge tidsavgrensinga med ei mindre handling."
+					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald med tidsavgrensing. Mekanismen for å forlenge varigheita på tidsavgrensinga, lar ikkje brukaren forlenge tidsavgrensinga med ei mindre handling."
 				}
 			}
 		},
