@@ -1,0 +1,167 @@
+{
+	"namn": "App-1.2.1a Forhåndsinnspilt lyd har alternativ i form av tekst 2023",
+	"id": "app-1.2.1a",
+	"testlabId": 512,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Lydklipp, som ikke er mediealternativ til tekst eller video uten lyd</p><ul><li>Forhåndsinnspilt lydklipp har tekstalternativ, som er visuelt plassert i nær tilknytning til lydklippet, eller kan nås via en mekanisme i direkte tilknytning til lydklippet. Tekstalternativet<br><ul><li>formidler det samme som lydklippet i rett rekkefølge og</li><li>er kodet som tekst</li></ul></li><li>Forhåndsinnspilt lydklipp, som er mediealternativ til tekst eller video uten lyd, er unntatt. For å være mediealternativ skal lydklippet<ul><li>ikke presentere mer informasjon enn det som gis via tekst eller video uten lyd og</li><li>være tydelig merket, det vil si, plassert i direkte tilknytning til teksten eller video uten lyd og gi informasjon som indikerer at det er et mediealternativ til lydklippet</li></ul></li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken appside tester du?",
+			"ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
+			"type": "tekst",
+			"label": "Appside:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsiden lydklipp?",
+			"ht": "<p>Slik tester du:</p><ul><li>Gjør en visuell inspeksjon og sjekk om det finnes en play-knapp eller lignende på appsiden eller</li><li>Bruk internt søk på appen om det finnes</li></ul><p><strong>Tips:</strong> Aktuelle søkeord kan være: \"Podcast\"/\"Podkast\", \"Lydklipp\", \"Lyd*\", \"Lydfil\", \"Lydopptak\", \"Hør her\", \"Høyr her\", \"Lytt\",\"mp3\".</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appside har ikke lydklipp."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilket lydklipp tester du?",
+			"ht": "<p>Beskriv lydklippet, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere lydklipp, registrerer du et og et.</p>",
+			"type": "tekst",
+			"label": "Lydklipp:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er lydklippet forhåndsinnspilt (opptak)?",
+			"ht": "<p>Slik tester du: </p><ul><li>Start lydklippet og sjekk om avspillingen begynner på starten og/eller at varigheten av klippet viser</li><li>Se etter informasjon om når klippet er publisert</li><li>Se etter informasjon som tilsier at klippet er live/direkte, for eksempel, rødt felt med teksten \"live\" eller at du ikke kan spole</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Lydklipp er direkte/live."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er lydklippet et mediealternativ til tekst eller video uten lyd og tydelig merket som det?",
+			"ht": "<p>For å være mediealternativ skal lydklippet:</p><ul><li>ikke presentere mer informasjon enn det som gis via tekst eller video uten lyd og</li><li>være tydelig merket. Det vil si<ul><li>være plassert i direkte tilknytning til aktuell tekst eller video uten lyd og</li><li>gi informasjon som viser at det er et mediealternativ</li></ul></li></ul><p>Slik tester du:</p><ul><li>Undersøk om det i tilknytning til lydklippet, er en tekst eller video uten lyd, som fremstår som hovedformatet for formidling av informasjonen</li><li>Momenter som tilsier at lydklippet er et mediealternativ til tekst eller video uten lyd kan være:<ul><li>Ikon, for eksempel lyd-ikon</li><li>Lenke med lenketekst som viser til en tekst eller video uten lyd, for eksempel \"lytt til teksten\" eller \"lytt til videoen\"</li></ul></li><li>Sjekk at lydklippet ikke presenterer mer informasjon enn det som gis via teksten eller videoen uten lyd</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Lydklipp er mediealternativ til tekst eller video uten lyd."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er det en tekst visuelt plassert nær lydklippet/avspilleren som omtaler klippet?",
+			"ht": "<p>Slik tester du:</p><ul><li>Gjør en visuell inspeksjon</li><li>Sjekk om du finner et tekstalternativ nær lydklippet (på samme appside), for eksempel rett over eller under lydklippet.</li></ul><p><strong>Merk:</strong> Du skal ikke ta stilling til kvaliteten på teksten i dette steget.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Ligger det en mekanisme i nærheten av lydklippet, som går til et tekstalternativ for klippet?",
+			"ht": "<p>Slik tester du:</p><ul><li>Gjør en visuell inspeksjon</li><li>Sjekk om det ligger mekanisme (lenke, knapp eller lignende) i nærheten av lydklippet som går til tekstalternativet<ul><li>Eksempel på plassering: rett over eller under lydklippet</li></ul></li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Lydklippet har ikke tekstalternativ, plassert nær klippet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Er tekstalternativet kodet som tekst?",
+			"ht": "<p>Slik tester du:</p><ul><li>Aktiver skjermleser (opplesingsfunksjon)<ul><li>iOS: VoiceOver</li><li>Android: TalkBack</li></ul></li><li>Trykk på eller sveip til tekstalternativet du tester, og sjekk om det blir lest opp</li></ul><p><strong>Merk:</strong> Hvis tekstalternativet ikke blir lest opp, antar vi at det ikke er kodet som tekst.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F30",
+				"G158"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Lydklippet har et tekstalternativ, men det er ikke kodet som tekst."
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Samsvarer informasjonen i tekstalternativet, med det som blir formidlet via lydklippet?",
+			"ht": "<p>Slik tester du:</p><ul><li>Sammenlign tekstalternativet med innholdet i lydklippet.</li><li>Gå gjennom de første to min av lydklippet.</li><li>Sjekk om lyd og tekstalternativ formidler hovedinnholdet i lydklippet, i lik rekkefølge.</li><li>Vi krever ikke nøyaktig gjengivelse av innholdet, men at viktig innhold er tatt med i rett rekkefølge.</li></ul><p><strong>Tips:</strong> Hvis du allerede i starten av lydklippet ser at det ikke er samsvar mellom lyd og tekstalternativ, kan du stoppe gjennomgangen.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F30",
+				"F67",
+				"G158"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Lydklippet har tekstalternativ, som er kodet som tekst, og formidler samme informasjon som lydklippet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Lydklippet har tekstalternativ, men det formidler ikke samme informasjon som lydklippet."
+				}
+			}
+		}
+	]
+}
