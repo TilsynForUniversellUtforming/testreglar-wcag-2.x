@@ -239,7 +239,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald med tidsavgrensing.<br>- Mekanismen for å forlenge tidsavgrensinga gir ikkje brukaren minst 20 sekund til å forlenge tida."
+					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald med tidsavgrensing. Mekanismen for å forlenge tidsavgrensinga gir ikkje brukaren minst 20 sekund til å forlenge tida."
 				}
 			},
 			"kilde": [
@@ -259,7 +259,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald med tidsavgrensing.<br>- Mekanismen for å forlenge varigheita på tidsavgrensinga, lar ikkje brukaren forelnge tidsavgrensinga med ei mindre handling."
+					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald med tidsavgrensing. Mekanismen for å forlenge varigheita på tidsavgrensinga, lar ikkje brukaren forelnge tidsavgrensinga med ei mindre handling."
 				}
 			}
 		},
@@ -286,7 +286,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald med tidsavgrensing.<br>- Mekanismen for å forlenge varigheita på tidsavgrensinga, lar ikkje brukaren justere varigheita på tidsavgrensinga til minst 10 gonger standard varigheit."
+					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald med tidsavgrensing. Mekanismen for å forlenge varigheita på tidsavgrensinga, lar ikkje brukaren justere varigheita på tidsavgrensinga til minst 10 gonger standard varigheit."
 				},
 				"ja": {
 					"type": "avslutt",
