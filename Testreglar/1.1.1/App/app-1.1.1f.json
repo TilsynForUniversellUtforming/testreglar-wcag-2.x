@@ -1,11 +1,11 @@
 {
-	"namn": "App-1.1.1f Tidsbaserte medier har tekstalternativ 2023",
+	"namn": "App-1.1.1f Video eller lydklipp har et tilgjengelig navn med en beskrivende identifikasjon 2023",
 	"id": "app-1.1.1f",
 	"testlabId": 509,
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Ikke-tekstlig innhold som er tidsbaserte medier, har kort tekstalternativ med en beskrivende identifikasjon av det tidsbaserte mediet.</p>",
+	"kravTilSamsvar": "<p>Forhåndsinnspilte video og lydklipp har et tilgjengelig navn med en beskrivende identifikasjon.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -72,7 +72,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Har videoen eller lydklippet et tilgjengelig navn, som ikke er tomt?",
-			"ht": "<p>Slik tester du:</p><ul><li>Aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Andoird: Talkback</li></ul></li><li>Åpne appsiden på nytt</li><li>Sveip og trykk på videoen eller lydklippet du tester</li><li>Sjekk at skjermleser leser opp tekstalternativ (tilgjengelig navn) når du trykker på  videoen eller lydklippet</li></ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Andoird: Talkback</li></ul></li><li>Åpne appsiden på nytt</li><li>Sveip og trykk på videoen eller lydklippet du tester</li><li>Sjekk at skjermleser leser opp tekstalternativ (tilgjengelig navn) når du trykker på videoen eller lydklippet</li></ul><p><strong>Merk:</strong> Dersom skjermleser leser opp preview title, så godtar vi det.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
