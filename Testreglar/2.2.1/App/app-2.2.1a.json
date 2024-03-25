@@ -1,0 +1,299 @@
+{
+	"namn": "App-2.2.1a Det er mogleg å slå av, justere eller forlenge tidsavgrensingar 2023",
+	"id": "app-2.2.1a",
+	"testlabId": 507,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>For hver tidsbegrensning som er angitt av innholdet, er det mulig for brukeren å gjøre minst ett av følgende alternativer:</p><ul><li>Slå av tidsavgrensningen, senest 20 sekunder før den skjer, ved å gjøre en enkel handling<ul><li>Mekanismen for å slå av skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li></ul></li><li>Justere tidsavgrensningen med minst 10 ganger standard varighet.<ul><li>Mekanismen for å justere skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li></ul></li><li>Forlenge tidsavgrensningen senest 20 sekunder før den inntreffer, ved å gjøre en enkel handling. Det skal være mulig å forlenge med minst 10 ganger standard varighet.<ul><li>Mekanismen for å forlenge skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li></ul></li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva appside testar du?",
+			"ht": "<p>Beskriv appsida med få stikkord, eller vel i lista.</p>",
+			"type": "tekst",
+			"label": "Appside:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Er det informasjon eller innhald på appsida som tilseier at det kan vera ei tidsavgrensing?",
+			"ht": "<p>Gjer ein visuell inspeksjon, og leit etter innhald som kan ha ei tidsavgrensing.</p><p>Tidsavgrensning kan for eksempel ligga i skjemafunksjonalitet, nyheiter, logg inn eller liknande.</p><p><strong>Merk:</strong> For å finne tidsavgrensningar som ikkje er synlige med ein gong, kan du opne appsida og start ei handling for eksempel bestilling av ei vare eller liknande, for deretter å vera inaktiv 20 minutt.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appside har ikkje innhald med tidsavgrensing."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Kva element testar du?",
+			"ht": "<p>Beskriv elementet, slik at det er mogleg å identifisere det i ettertid. Viss det gjeld fleire element, registrerer du eit og eit.</p>",
+			"type": "tekst",
+			"label": "Innhald med tidsavgrensing:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Ligg tidsavgrensinga i eit skjema?",
+			"ht": "<p>Vi spør om skjema for informasjon til statistikkformål.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er tidsavgrensinga unnteke kravet?",
+			"ht": "<p>Følgjande er unntatt etter ordlyden i kravet:</p><blockquote><ul><li>Sanntid: Tidsbegrensningen er en nødvendig del av en hendelse i sanntid (for eksempel en auksjon), og det finnes ikke noe alternativ til tidsbegrensningen, eller</li><li>Avgjørende unntak: Tidsbegrensningen er avgjørende, og en forlengelse vil gjøre handlingen ugyldig, eller</li><li>20-timers unntak: Tidsbegrensningen varer lenger enn 20 timer.</li></ul></blockquote>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Innhald med tidsavgrensing som er unntatt etter ordlyden i kravet."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er det mogleg å slå av tidsavgrensinga, før den gjer seg gjeldande?",
+			"ht": "<p>Slik testar du:</p><ul><li>Gjer ein visuell inspeksjon<ul><li>Sjekk om det finst ein mekanisme for å slå av tidsavgresinga før den gjer seg gjeldande og at den ligg på starten av sida.</li><li>Du skal ikkje måtte scrolle for å finne mekanismen. Den kan for eksempel ligge i ein meny.</li></ul></li></ul><p><strong>Merk:</strong> Slå av innebærer å slå av tidsavgreningen permanent for det aktuelle besøket.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G4",
+				"G198"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Ligg mekanismen før innhaldet med tidsavgrensinga?",
+			"ht": "<p>Sjekk om mekanismen for å slå av tidsavgrensninga ligg før eller rett ved sida av innhaldet med tidsavgrensning.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det finst ein mekanisme som lar brukaren slå av tidsavgrensinga før den gjer seg gjeldande. Den ligg før innhaldet med tidsavgrensinga."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.6",
+					"delutfall": {
+						"nr": 0,
+						"fasit": "Nei",
+						"tekst": " Mekanismen for å slå av tidsavgrensinga, ligg etter innhaldet med tidsavgrensing."
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Finst det ein mekanisme som lar brukaren justera varigheita av tidsavgrensinga?",
+			"ht": "<p>Eksempel på ein slik mekanisme kan vera</p><ul><li>moglegheit for å endre brukarinnstillingar</li><li>knapp</li><li>avkryssingsboks</li><li>glidebrytar</li><li>nedtrekksliste</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G133"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Ligg mekanismen før innhaldet med tidsavgrensinga?",
+			"ht": "<p>Sjekk om mekanismen for å justere tida ligg før eller rett ved sida av innhaldet med tidsavgrensning.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G180"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.10",
+					"delutfall": {
+						"nr": 0,
+						"fasit": "Nei",
+						"tekst": " Mekanismen for å justere varigheit, ligg etter innhaldet med tidsavgrensing."
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Kor lang er standard varigheit for tidsavgrensinga?",
+			"ht": "<p>Standard varigheit er den førehandsdefinerte tidsperioden, som er gitt i innhaldet på appsiden.</p><p>Slik testar du:</p><ul><li>Bruk stoppeklokke eller lignande for å ta tida.</li><li>Skriv inn varigheit i sekund.</li></ul>",
+			"type": "tekst",
+			"filter": "tal",
+			"label": "Varigheit i sekund:",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Kan brukaren justere varigheita på tidsavgrensinga, til minst 10 gonger standard varigheit?",
+			"ht": "<p>Slik testar du:</p><ul><li>prøv å justere varigheita på tidsavgrensinga</li><li>sjekk om du kan justere den til minst 10 gonger standard varigheit</li></ul><p>Eksempel: Dersom standard varighet er 10 sekund, sjekkar du om du kan justera tidsavgrensinga til minst 100 sekund.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G180"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det finst ein mekanisme som lar brukaren justere varigheita på tidsavgrensinga, før den gjer seg gjeldende. Den ligg før innhaldet med tidsavgrensinga, og lar brukaren justere varigheita på tidsavgrensinga til minst 10 gonger standard varigheit."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.10",
+					"delutfall": {
+						"nr": 0,
+						"fasit": "Nei",
+						"tekst": " Mekanismen for å justere varigheita på tidsavgrensinga lar ikkje brukaren justere varigheita på tidsavgrensinga til minst 10 gonger standard varigheit."
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Får brukaren varsel om du kan forlenge tida?",
+			"ht": "<p>Sjekk om du får varsel om at det er mogleg å forlenga tida.</p><p>Eksempel på varsel kan vare ein dialogboks, statusbeskjed, lyd eller liknande.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald med tidsavgrensing. #delutfall(0)"
+				}
+			},
+			"kilde": [
+				"SCR16"
+			]
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Får brukaren minst 20 sekund til å forlenge tida?",
+			"ht": "<p>At brukaren skal ha minst 20 sekund går fram av ordlyden i kravet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald med tidsavgrensing. Mekanismen for å forlenge tidsavgrensinga gir ikkje brukaren minst 20 sekund til å forlenge tida."
+				}
+			},
+			"kilde": [
+				"SCR1"
+			]
+		},
+		{
+			"stegnr": "3.12",
+			"spm": "Kan brukaren gjere ei mindre handling, for å forlenge tidsavgrensinga?",
+			"ht": "<p>Eksempel på ei mindre handling er trykk, sveip eller liknande.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald med tidsavgrensing. Mekanismen for å forlenge varigheita på tidsavgrensinga, lar ikkje brukaren forelnge tidsavgrensinga med ei mindre handling."
+				}
+			}
+		},
+		{
+			"stegnr": "3.13",
+			"spm": "Kor lang er standard varigheit på tidsavgrensinga?",
+			"ht": "<p>Standard varigheit er den førehandsdefinerte tidsperioden som er gitt i innhaldet på appsiden.</p><p>Slik testar du:</p><ul><li>Bruk stoppeklokke eller lignande for å ta tida.</li><li>Skriv inn varigheit i sekund.</li></ul>",
+			"type": "tekst",
+			"filter": "tal",
+			"label": "Varigheit i sekund:",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.14"
+				}
+			}
+		},
+		{
+			"stegnr": "3.14",
+			"spm": "Kan brukaren forlenge varigheita på tidsavgrensinga, til minst 10 gonger standard varigheit?",
+			"ht": "<p>Slik testar du:</p><ul><li>prøv å justere varigheita på tidsavgrensinga</li><li>sjekk om du kan justere den til minst 10 gonger standard varigheit</li></ul><p>Eksempel: Dersom standard varighet er 10 sekund, sjekkar du om du kan justera tidsavgrensinga til minst 100 sekund.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Det er ikkje mogleg å slå av, justere eller forlenge innhald med tidsavgrensing. Mekanismen for å forlenge varigheita på tidsavgrensinga, lar ikkje brukaren justere varigheita på tidsavgrensinga til minst 10 gonger standard varigheit."
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det finst ein mekanisme som lar brukaren forlenge tidsavgrensinga, seinast 20 sekund før den inntreff. Brukaren kan gjere ei mindre handling for å forlenge tidsavgrensinga og handlinga forelenger varigheita på tidsavgrensinga til minst 10 gonger standard varigheit."
+				}
+			}
+		}
+	]
+}
