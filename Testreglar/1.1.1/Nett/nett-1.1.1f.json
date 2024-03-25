@@ -1,11 +1,11 @@
 {
-	"namn": "Nett-1.1.1f Tidsbaserte medier har tekstalternativ 2023",
+	"namn": "Nett-1.1.1f Video eller lydklipp har et tilgjengelig navn med en beskrivende identifikasjon 2023",
 	"id": "nett-1.1.1f",
 	"testlabId": 508,
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Ikke-tekstlig innhold som er tidsbaserte medier, har kort tekstalternativ med en beskrivende identifikasjon av det tidsbaserte mediet.</p>",
+	"kravTilSamsvar": "<p>Forhåndsinnspilte video og lydklipp har et tilgjengelig navn med en beskrivende identifikasjon.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Finnes det video eller lydklipp på testsiden?",
-			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes video eller lydklipp på testsiden.</p><p><strong>Merk:</strong> Både video med og uten lyd skal testes.</p>",
+			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes video eller lydklipp på testsiden. For eksempel <code>&lt;video&gt;</code> og <code>&lt;audio&gt;</code>-elementer.</p><p><strong>Merk:</strong> Både video med og uten lyd skal testes.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -72,7 +72,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Har videoen eller lydklippet et tilgjengelig navn, som ikke er tomt?",
-			"ht": "<p>Slik tester du</p><ul><li>Inspiser videoen eller lydklippet<ul><li>videoen eller lydklippet er ofte nøstet under et annet parent-element som gir et tilgjengelig navn til videoen eller lydklippet.<ul><li>For eksempel en iframe</li></ul></li><li>undersøk i koden og finn det riktige elementet før du sjekker om mediet har et tilgjengelig navn</li></ul></li><li>Bruk Accessibility Tree i nettleseren</li><li>Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</li></ul><p><strong>Tips:</strong> Du kan ved behov bruke skjermleser for å sjekke dette.</p>",
+			"ht": "<p>Slik tester du</p><ul><li>Inspiser videoen eller lydklippet<br><ul><li>Undersøk i koden og finn det riktige elementet, det vil si <code>&lt;video&gt;</code> eller <code>&lt;audio&gt;</code>-element, før du sjekker om mediet har et tilgjengelig navn</li><li><strong>Merk:</strong> videoen eller lydklippet er ofte nøstet under et annet parent-element som gir et tilgjengelig navn til videoen eller lydklippet</li></ul></li><li>Bruk Accessibility Tree i nettleseren</li><li>Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</li></ul><p><strong>Tips:</strong> Du kan ved behov bruke skjermleser for å sjekke dette.</p><p><strong>Merk:</strong> iframe skal testes i testregel nett-4.1.2c.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
