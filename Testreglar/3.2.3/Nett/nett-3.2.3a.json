@@ -1,0 +1,157 @@
+{
+	"namn": "Nett-3.2.3a Navigeringsmekanismar som blir gjentatt, har konsekvent rekkefølge 2023",
+	"id": "nett-3.2.3a",
+	"testlabId": 519,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Navigeringsmekanismer, som blir gjentatt på minst to nettsider innenfor et sett av nettsider, opptrer i samme relative rekkefølge på alle disse nettsidene. </p>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Angi URL eller side-ID</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsida navigeringsmekanismar, som blir gjentatt på minst tre nettsider, på nettstaden?",
+			"ht": "<p>Slik testar du:</p><ul><li>Opne tre ulike nettsider på nettstaden. Det vil seie<br><ul><li>testsida</li><li>to andre nettsider</li></ul></li><li>Gjer ein visuell inspeksjon og sjekk om det finst navigeringsmekanismar som blir gjentatt på dei tre nettsidene. Eksempel på navigeringsmekanismar er i følgje forståartikkelen<ul><li>topptekst</li><li>klikkbar logo</li><li>søkefelt</li><li>snarveglenke</li><li>meny</li><li>botntekst</li></ul></li></ul><p><strong>Tips:</strong> For å gjere det enklare å teste, kan du opne startsida på ein skjerm, for å samanlikne med andre nettsider på ein annan skjerm.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje navigeringsmekanismar som blir gjentatt på fleire nettsider på nettstaden."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Kva navigeringsmekanisme testar du?",
+			"ht": "<p>Beskriv navigeringsmekanismen, slik at det er mogleg å identifisere den i ettertid. Viss det gjeld fleire navigeringsmekanismar, registrerer du ein og ein.</p>",
+			"type": "tekst",
+			"label": "Navigeringsmekanisme :",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Opne ei anna nettside på nettstaden, som har same navigeringsmekanisme.",
+			"ht": "",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Registrer URL til nettsida.",
+			"ht": "<p>Kopier og og lim inn URL for den andre nettsida, der du identifiserte same navigeringsmekanisme.</p>",
+			"type": "tekst",
+			"label": "URL:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Har navigeringsmekanismen og/eller element i navigeringsmekanismen same relative rekkefølge?",
+			"ht": "<p>Same relative rekkefølge betyr</p><blockquote><em>Samme posisjon sett opp mot andre elementer. </em></blockquote><blockquote><em>MERKNAD: Elementer anses å ha samme relative rekkefølge selv om andre elementer settes inn i eller fjernes fra den opprinnelige rekkefølgen. I utvidbare navigasjonsmenyer kan det for eksempel settes inn et ekstra detaljnivå eller en sekundær navigasjonsdel i leserekkefølgen.</em></blockquote><p>Slik testar du:</p><ul><li>Gjer ein visuell inspeksjon</li><li>Sjekk om navigeringsmekanismen og/eller element i navigeringsmekanismen har same relative rekkefølge</li></ul><p><strong>Tips:</strong> For å gjere det enklare å teste, kan du opne startsida på ein skjerm for å samanlikne med andre nettsider på ein annan skjerm.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F66",
+				"G61",
+				"wcag:ordliste"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Navigeringsmekanisme og/eller element i navigeringsmekanismen, som blir gjentatt på fleire nettsider på nettstaden, har ikkje same relative rekkefølge."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Opne ei tredje nettside på nettstaden, som har same navigeringsmekanisme.",
+			"ht": "",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Registrer URL til nettsida.",
+			"ht": "<p>Kopier og lim inn URL for den tredje nettsida, der du identifiserte same navigeringsmekanisme.</p>",
+			"type": "tekst",
+			"label": "URL:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Har navigeringsmekanismen og/eller element i navigeringsmekanismen same relative rekkefølge?",
+			"ht": "<p>Samme relative rekkefølge betyr:</p><blockquote><em>Samme posisjon sett opp mot andre elementer. </em></blockquote><blockquote><em>MERKNAD: Elementer anses å ha samme relative rekkefølge selv om andre elementer settes inn i eller fjernes fra den opprinnelige rekkefølgen. I utvidbare navigasjonsmenyer kan det for eksempel settes inn et ekstra detaljnivå eller en sekundær navigasjonsdel i leserekkefølgen.</em></blockquote><p>Slik tester du:</p><ul><li>Gjer ein visuell inspeksjon</li><li>Sjekk om navigeringsmekanismen og/eller element i navigeringsmekanismen har same relative rekkefølge.</li></ul><p><strong>Tips:</strong> For å gjere det enklare å teste, kan du opne startsida på ein skjerm for å samanlikne med andre nettsider på ein annan skjerm.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F66",
+				"G61",
+				"wcag:ordliste"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Navigeringsmekanisme og/eller element i navigeringsmekanismen, som blir gjentatt på fleire nettsider på nettstaden, har same relative rekkefølge."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Navigeringsmekanisme og/eller element i navigeringsmekanismen, som blir gjentatt på fleire nettsider på nettstaden, har ikkje same relative rekkefølge."
+				}
+			}
+		}
+	]
+}
