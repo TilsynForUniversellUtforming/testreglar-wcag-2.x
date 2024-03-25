@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Det er mulig for brukeren å</p>\r\n<ul>\r\n<li>Slå av tidsavgrensningen, senest 20 sekunder før den skjer, ved å gjøre en enkel handling\r\n<ul>\r\n<li>Mekanismen for å slå av skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li>\r\n</ul>\r\n</li>\r\n<li>Slå av innebærer å slå av tidsavgreningen permanent for det aktuelle besøket eller\r\n<ul>\r\n<li>Justere tidsavgrensningen med minst 10 ganger standard varighet.<br>Mekanismen for å justere skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger eller</li>\r\n</ul>\r\n</li>\r\n<li>Forlenge tidsavgrensningen senest 20 sekunder før den inntreffer, ved å gjøre en enkel handling. Det skal være mulig å forlenge med minst 10 ganger standard varighet.\r\n<ul>\r\n<li>Mekanismen for å forlenge skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For hver tidsbegrensning som er angitt av innholdet, er det mulig for brukeren å gjøre minst ett av følgende alternativer:</p><ul><li>Slå av tidsavgrensningen, senest 20 sekunder før den skjer, ved å gjøre en enkel handling<ul><li>Mekanismen for å slå av skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li></ul></li><li>Justere tidsavgrensningen med minst 10 ganger standard varighet.<ul><li>Mekanismen for å justere skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li></ul></li><li>Forlenge tidsavgrensningen senest 20 sekunder før den inntreffer, ved å gjøre en enkel handling. Det skal være mulig å forlenge med minst 10 ganger standard varighet.<ul><li>Mekanismen for å forlenge skal ligge før eller rett ved siden av innholdet som inneholder tidsavgrensninger.</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -69,7 +69,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er tidsavgrensinga unnteke kravet?",
-			"ht": "<p>Følgjande er unntatt etter ordlyden i kravet:</p>\n<blockquote>\n<ul>\n<li>\n<p>Sanntid: Tidsbegrensningen er en nødvendig del av en hendelse i sanntid (for eksempel en auksjon), og det finnes ikke noe alternativ til tidsbegrensningen, eller</p>\n</li>\n<li>\n<p>Avgjørende unntak: Tidsbegrensningen er avgjørende, og en forlengelse vil gjøre handlingen ugyldig, eller</p>\n</li>\n<li>\n<p>20-timers unntak: Tidsbegrensningen varer lenger enn 20 timer.</p>\n</li>\n</ul>\n</blockquote>",
+			"ht": "<p>Følgjande er unntatt etter ordlyden i kravet:</p><blockquote><ul><li>Sanntid: Tidsbegrensningen er en nødvendig del av en hendelse i sanntid (for eksempel en auksjon), og det finnes ikke noe alternativ til tidsbegrensningen, eller</li><li>Avgjørende unntak: Tidsbegrensningen er avgjørende, og en forlengelse vil gjøre handlingen ugyldig, eller</li><li>20-timers unntak: Tidsbegrensningen varer lenger enn 20 timer.</li></ul></blockquote>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -119,7 +119,7 @@
 					"delutfall": {
 						"nr": 0,
 						"fasit": "Nei",
-						"tekst": "<br>- Mekanismen for å slå av tidsavgrensinga, ligg etter innhaldet med tidsavgrensing."
+						"tekst": " Mekanismen for å slå av tidsavgrensinga, ligg etter innhaldet med tidsavgrensing."
 					}
 				}
 			}
@@ -162,7 +162,7 @@
 					"delutfall": {
 						"nr": 0,
 						"fasit": "Nei",
-						"tekst": "<br>- Mekanismen for å justere varigheit, ligg etter innhaldet med tidsavgrensing."
+						"tekst": " Mekanismen for å justere varigheit, ligg etter innhaldet med tidsavgrensing."
 					}
 				}
 			}
@@ -201,7 +201,7 @@
 					"delutfall": {
 						"nr": 0,
 						"fasit": "Nei",
-						"tekst": "<br>- Mekanismen for å justere varigheita på tidsavgrensinga lar ikkje brukaren justere varigheita på tidsavgrensinga til minst 10 gonger standard varigheit."
+						"tekst": " Mekanismen for å justere varigheita på tidsavgrensinga lar ikkje brukaren justere varigheita på tidsavgrensinga til minst 10 gonger standard varigheit."
 					}
 				}
 			}
