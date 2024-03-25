@@ -1,0 +1,212 @@
+{
+	"namn": "Nett-2.3.1a Nettsida har ikkje innhald som glimtar",
+	"id": "nett-2.3.1a",
+	"testlabId": 521,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<ul><li>Nettsiden har ikke innhold som glimter eller</li><li>Nettsiden har innhold som glimter, og en av følgende oppfylt:<ul><li>Innholdet dekker mindre enn 21 824 kvadratpiksler (25% av skjermen)</li><li>Det er færre enn tre blink i sekundet</li></ul></li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Angi URL eller side-ID</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsida innhald som glimtar?",
+			"ht": "<p>Du skal vurdere alt innhald på nettsida. Dette omfattar også bilde, animasjonar og videoklipp.</p><p>Slik testar du:</p><ul><li>Gjer ein visuell inspeksjon og sjå etter innhald som glimtar<ul><li>Glimting er veksling mellom to visuelle tilstandar for å vekke merksemd.</li><li>Glimt er motsatte parvise skift i relativ lysstyrke som kan forårsake (epileptiske) anfall.</li></ul></li><li>Sørg for at nettsida har lasta inn fullstendig, før du går i gang med testen.</li></ul><p><strong>Merk:</strong></p><ul><li>Glimting på grunn av skjerm eller innlasting av nettsida skal ikkje testast.</li><li>Du skal ikkje teste videoklipp i fullskjermsvisning.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Testside har ikkje innhald som glimtar."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Sett oppløysinga på skjermen du brukar til 1024*768.",
+			"ht": "<p>Dette gjer du ved å endre innstillingane på skjermen i ditt operativsystem.</p>",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Kva innhald testar du?",
+			"ht": "<p>Beskriv innhaldet som glimtar, slik at det er mogleg å identifisere det i ettertid.</p><p>Viss det gjeld fleire innhald, registrerer du eit og eit.</p>",
+			"type": "tekst",
+			"multilinje": true,
+			"label": "Innhald som glimtar/glimptar:",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Kva type innhald er det som glimtar?",
+			"ht": "",
+			"type": "radio",
+			"svarArray": [
+				"Video",
+				"Bilde",
+				"Anna"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Mål størrelsen på innhaldet som glimtar.",
+			"ht": "<p>Slik testar du:</p><p>Bruk eit verktøy for å ta skjermbilde, for eksempel Snagit eller Windows utklippsverktøy</p><ul><li>I Windows utklippsverktøy, kan du bruke Window Paint for å måle størrelsen.<ul><li>Vel alternativet  Merket område &gt; Rektangel</li><li>Marker innhaldet som glimtar</li><li>I botn på venstre side viser størrelsen i pikslar</li></ul></li></ul><p><strong>Tips:</strong> Du kan zoome inn for å gjera det enklere å markere innhaldet som glimtar.</p><p><strong>Merk: </strong>Viss det er meir enn ein forekomst av innhald som glimtar, innafor same <strong>skjermhøgde</strong> på nettsida, skal du måle opp eit område som inneheld desse.</p>",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Kva er breidda på området i pikslar?",
+			"ht": "<p>Registrer breidda i pikslar.</p>",
+			"type": "tekst",
+			"filter": "tal",
+			"label": "Breidda på området:",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Kva er høgda på området i pikslar?",
+			"ht": "<p>Registrer høgda i pikslar.</p>",
+			"type": "tekst",
+			"filter": "tal",
+			"label": "Høgda på området:",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Størrelsen på området i kvadratpikslar.",
+			"ht": "<p>Blir rekna ut automatisk.</p>",
+			"type": "tekst",
+			"verdi": "#steg(3.4) * #steg(3.5)",
+			"filter": "tal",
+			"label": "Størrelsen på området i kvadratpikslar:",
+			"kilde": [
+				"G167"
+			],
+			"ruting": {
+				"alle": {
+					"type": "regler",
+					"regler": {
+						"1": {
+							"sjekk": "3.6",
+							"type": "mellom",
+							"verdi": 0,
+							"verdi2": 21824,
+							"handling": {
+								"type": "avslutt",
+								"fasit": "Ja",
+								"utfall": "Innhald som glimtar på testsida, dekker mindre enn 21 824 kvadratpikslar."
+							}
+						},
+						"2": {
+							"sjekk": "3.6",
+							"type": "mellom",
+							"verdi": 21825,
+							"verdi2": 99999999999,
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.7"
+							}
+						}
+					}
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Ta eit opptak av glimtinga, og lagre opptaket.",
+			"ht": "<p>Slik testar du:</p><ul><li>Bruk eit verktøy for å ta opptak av innhaldet, for eksempel<ul><li>Snagit eller Windows utklippsverktøy.</li></ul></li></ul>",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Opne og spel av skjermopptaket med låg hastigheit.",
+			"ht": "<p>Slik testar du:</p><ul><li>Still inn avspelingsfart til lågaste nivå i videospelaren du brukar.</li><li>Du kan for eksempel bruke avspelaren VLC.</li><li>I VLC gjer du følgjande:<ul><li>Vis statuslinja, for å få tilgang til mekanismen for å stille inn hastigheit.</li><li>Velg lågaste hastigheit.</li></ul></li></ul>",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Glimtar innhaldet med frekvens på meir enn tre glimt i sekundet?",
+			"ht": "<p>Slik testar du:</p><ul><li>Spel av videoen med låg hastigheit</li><li>Følg avspelingstid i sekund og tel tal gonger innhaldet glimtar</li><li>Sjekk om innhaldet glimtar med frekvens på meir enn tre glimt i sekundet</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G19"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Innhald glimtar med ein frekvens på meir enn tre glimt i sekundet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Innhald glimtar ikkje med ein frekvens på meir enn tre glimt i sekundet."
+				}
+			}
+		}
+	]
+}
