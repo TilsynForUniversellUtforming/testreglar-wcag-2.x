@@ -137,7 +137,7 @@ files.forEach((file) => {
           expect(handling.regler).toBeInstanceOf(Object);
           if (typeof handling.regler === "object") {
             expect(Object.keys(handling.regler).length).toBeGreaterThan(0);
-            vurderRegel(handling.regler, testregel.steg,steg);
+            vurderRegel(handling.regler, testregel.steg, steg);
           }
         } else if (handling.type === "avslutt") {
           vurderRutingAvslutt(handling);
@@ -157,7 +157,7 @@ files.forEach((file) => {
 function vurderRegel(
   reglar: { [regelId: string]: Regel },
   testregelSteg: Array<Steg>,
-  steg:Steg
+  steg: Steg
 ) {
   expect(reglar).toBeDefined;
   const reglarArray: Array<Regel> = Object.values(reglar);
@@ -208,7 +208,7 @@ function vurderRegel(
       if (typeof regel.handling.steg !== "undefined") {
         expect(regel.handling.steg.length).toBeGreaterThan(0);
         expect(stegFinst(regel.handling.steg, testregelSteg)).toBe(true);
-           // Sjekker at det blir referert til et steg lengre fremme
+        // Sjekker at det blir referert til et steg lengre fremme
         expect(stegnrErStorreEnn(regel.handling.steg, steg.stegnr)).toBeTruthy();
         if (typeof regel.handling.delutfall !== "undefined") {
           vurderDelutfall(regel.handling.delutfall);
@@ -217,7 +217,7 @@ function vurderRegel(
     } else if (regel.handling.type === "regler") {
       expect(regel.handling.regler).toBeDefined();
       if (typeof regel.handling.regler === "object") {
-        vurderRegel(regel.handling.regler, testregelSteg,steg);
+        vurderRegel(regel.handling.regler, testregelSteg, steg);
       }
     } else if (regel.handling.type === "avslutt") {
       vurderRutingAvslutt(regel.handling);
@@ -297,11 +297,15 @@ function vurderDelutfall(delutfall: Delutfall) {
  * @returns 
  */
 function stegnrErStorreEnn(stegNr1: string, stegNr2: string): boolean {
-  const [helTall1, des1] = stegNr1.split('.');
-  const [helTall2, des2] = stegNr2.split('.');
+  const regex = /^(\d+)\.(\d+)$/;
 
-  if (helTall1 === helTall2) {
-    return parseInt(des1) > parseInt(des2);
-  } else return (parseInt(helTall1) > parseInt(helTall2))
+  if (stegNr1.match(regex) && stegNr2.match(regex)) {
+    const [helTall1, des1] = stegNr1.split('.');
+    const [helTall2, des2] = stegNr2.split('.');
+    if (helTall1 === helTall2) {
+      return parseInt(des1) > parseInt(des2);
+    } else return (parseInt(helTall1) > parseInt(helTall2))
+  }
 
+  return false;
 }
