@@ -1,0 +1,155 @@
+{
+	"namn": "Nett-1.3.2a Meiningsfylt leserekkefølge er programmatisk bestemt 2023",
+	"id": "nett-1.3.2a",
+	"testlabId": 515,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nn",
+	"kravTilSamsvar": "<p>Dersom meningsinnholdet, på hele eller deler av nettsiden, påvirkes av rekkefølgen som innholdet presenteres i, er minst én korrekt leserekkefølge programmatisk bestemt og</p><ul><li>Programmatisk bestemt leserekkefølge er den samme som visuell leserekkefølge eller</li><li>Programmatisk bestemt leserekkefølge er ulik visuell leserekkefølge, men leserekkefølgen ivaretar likevel meningsinnholdet</li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Kva side testar du?",
+			"ht": "<p>Angi URL eller side-ID</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsida innhald, der meininga blir påvirka av rekkefølgen innhaldet blir presentert i?",
+			"ht": "<ul><li>Ei rekkefølge er meiningsfull dersom rekkefølgen på innhaldet ikkje kan endrast utan å endre meininga til innhaldet.<ul><li>Eksempel på innhald med i ei meiningsfylt rekkefølge er tekst, matematiske formlar, tabellar og nummererte lister.</li></ul></li></ul><p><strong>Merk:</strong> Unummererte lister har ikkje ei meiningsfylt rekkefølge.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikkje innhald der meininga blir påvirka av rekkefølgen innhaldet blir presentert i."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Slå av stilarket (CSS) på testsida.",
+			"ht": "<p>Åpne den same testsida i to faner</p><p>Slik slår du av stilarket:</p><ul><li>Bruk verktøyet <a href=\"https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm\" target=\"_blank\" rel=\"noopener\">Chrome Web Developer Plugin</a></li><li>Slå av CSS<ul><li>Gå til fanen CSS</li><li>Velg Disable All Styles</li></ul></li><li>Vis den same testsida i to nettlesarvindu<ul><li>ei fane med vanlig visning</li><li>ei fane med CSS slått av</li></ul></li></ul>",
+			"type": "instruksjon",
+			"kilde": [
+				"C6"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Er visuell leserekkefølge og programmatisk bestemt leserekkefølge på testsida lik?",
+			"ht": "<p>Slik testar du:</p><ul><li>Gjer ein visuell inspeksjon. Samanlikn testsida i vanleg visning med visning utan CSS.<ul><li>Les nettsida frå toppen og nedover, frå venstre mot høgre.</li><li>Dette gjeld også der innhald er delt opp i blokker. Les blokkene frå toppen og ned, frå venstre mot høgre.</li><li>Det kan vera at du må opne menyar, modaler og liknande, for å teste alt innhald.</li></ul></li><li>Sjekk om visell og programmatisk bestemt leserekkefølge av innholdet er samme.</li></ul><p><strong>Merk:</strong> I visninga utan CSS, kan det dukke opp innhald som er skjult i vanleg visning. Dette er ikkje eit brot på kravet, og du kan sjå bort frå det. Eksempel på slikt innhald er</p><ul><li>snarveglenker som blir synleg ved fokus</li><li>skjulte menypunkt</li><li>skjulte overskrifter</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"C27"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell og programmatisk bestemt leserekkefølge på testsida er lik."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Registrer innhald/element, der visuell og programmatisk bestemt leserekkefølge er ulik.",
+			"ht": "<p>Beskriv innhald/element kor rekkefølgen er ulik, slik at det er mogleg å identifisere det i ettertid.</p><p>Viss det gjeld fleire element, registrerer du eit og eit.</p>",
+			"type": "tekst",
+			"label": "Innhald kor visuell og programmatisk bestemt leserekkefølge er ulik:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Kva type funksjonalitet er elementet ein del av?",
+			"ht": "<p>Velg frå alternativa under.</p>",
+			"type": "radio",
+			"svarArray": [
+				"Skjema",
+				"Tabell",
+				"Meny",
+				"Modal",
+				"Liste",
+				"Hovudinnhald",
+				"Anna"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Påverkar rekkefølgen det blir presentert i, meininga med innhaldet?",
+			"ht": "<p>Gjer ei vurdering av om innhaldet må bli presentert i ei bestemt rekkefølge, for at brukaren skal kunne forstå det.</p><p><strong>Merk:</strong> Det kan vere fleire rekkefølger som gir same mening.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Rekkefølgen som innhaldet blir presentert i, påverkar ikkje meininga med innhaldet."
+				}
+			},
+			"kilde": [
+				"F34"
+			]
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Kan du forstå meiningsinnhaldet, sjøl om visuell og programmatisk bestemt leserekkefølge er ulik?",
+			"ht": "<ul><li>Gjer ein visuell inspeksjon av om innhaldet med CSS slått av</li><li>Sjekk om du forstår innhaldet, sjølv om visuell og programmatisk bestemt rekkefølge er ulik</li></ul><p><strong>Merk:</strong> Rekkefølgen treng ikkje vere identisk, så lenge meininga er den same. </p><p><strong>Eksempel:</strong> Viss ei nettside har fleire tekstar/saker blir betydninga/meininga normalt ikkje påverka av rekkefølgen du les tekstane/sakene i.</p><p>Unntaket er dersom innhald frå to eller fleire forskjellige tekstar/saker blir blanda saman når CSS er slått av.</p>",
+			"kilde": [
+				"F1",
+				"G57"
+			],
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "For innhald der visuell leserekkefølge påverkar meiningsinnhald, er korrekt leserekkefølge programmatisk bestemt."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "For innhald der visuell leserekkefølge påverkar meiningsinnhald, er korrekt leserekkefølge ikkje programmatisk bestemt."
+				}
+			}
+		}
+	]
+}
