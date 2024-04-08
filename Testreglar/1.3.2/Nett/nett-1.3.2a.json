@@ -131,8 +131,8 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Forstår brukaren meiningsinnhaldet, sjøl om visuell og programmatisk bestemt leserekkefølge er ulik?",
-			"ht": "<ul><li>Gjer ein visuell inspeksjon av om innhaldet med CSS slått av</li><li>Sjekk om du forstår innhaldet, sjøl om visuell og programmatisk bestemt rekkefølge er ulik</li></ul><p><strong>Merk:</strong> Rekkefølgen treng ikkje vere identisk, så lenge meininga er den same. </p><p><strong>Eksempel:</strong> Viss ei nettside har fleire tekstar/saker blir betydninga/meininga normalt ikkje påverka av rekkefølgen du les tekstane/sakene i.</p><p>Unntaket er dersom innhald frå to eller fleire forskjellige tekstar/saker blir blanda saman når CSS er slått av.</p>",
+			"spm": "Kan du forstå meiningsinnhaldet, sjøl om visuell og programmatisk bestemt leserekkefølge er ulik?",
+			"ht": "<ul><li>Gjer ein visuell inspeksjon av om innhaldet med CSS slått av</li><li>Sjekk om du forstår innhaldet, sjølv om visuell og programmatisk bestemt rekkefølge er ulik</li></ul><p><strong>Merk:</strong> Rekkefølgen treng ikkje vere identisk, så lenge meininga er den same. </p><p><strong>Eksempel:</strong> Viss ei nettside har fleire tekstar/saker blir betydninga/meininga normalt ikkje påverka av rekkefølgen du les tekstane/sakene i.</p><p>Unntaket er dersom innhald frå to eller fleire forskjellige tekstar/saker blir blanda saman når CSS er slått av.</p>",
 			"kilde": [
 				"F1",
 				"G57"
