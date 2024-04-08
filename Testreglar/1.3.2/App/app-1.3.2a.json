@@ -133,8 +133,8 @@
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Forstår brukaren meiningsinnhaldet, sjøl om visuell og programmatisk bestemt leserekkefølge er ulik?",
-			"ht": "<p>Slik testar du: </p><ul><li>Gjer ein visuell inspeksjon, samtidig  som du høyrer på opplesninga fra skjermlesar.</li><li>Sjekk om du forstår innhaldet, sjøl om visuell og programmatisk bestemt rekkefølge er ulik</li></ul><p><strong>Merk:</strong> Rekkefølgen treng ikkje vere identisk, så lenge meininga er den same (ikkje blir påverka). </p><p><strong>Eksempel:</strong> Viss ei appside har fleire tekstar/saker blir betydninga/meininga normalt ikkje påverka av rekkefølgen du les tekstane/sakene i.</p><p>Unntaket er dersom innhald frå to eller fleire forskjellige tekstar/saker blir blanda saman.</p>",
+			"spm": "Kan du forstå meiningsinnhaldet, sjølv om visuell og programmatisk bestemt leserekkefølge er ulik?",
+			"ht": "<p>Slik testar du: </p><ul><li>Gjer ein visuell inspeksjon, samtidig  som du høyrer på opplesninga fra skjermlesar.</li><li>Sjekk om du forstår innhaldet, sjølv om visuell og programmatisk bestemt rekkefølge er ulik</li></ul><p><strong>Merk:</strong> Rekkefølgen treng ikkje vere identisk, så lenge meininga er den same (ikkje blir påverka). </p><p><strong>Eksempel:</strong> Viss ei appside har fleire tekstar/saker blir betydninga/meininga normalt ikkje påverka av rekkefølgen du les tekstane/sakene i.</p><p>Unntaket er dersom innhald frå to eller fleire forskjellige tekstar/saker blir blanda saman.</p>",
 			"kilde": [
 				"F1",
 				"G57"
