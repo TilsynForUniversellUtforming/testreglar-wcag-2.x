@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsiden video?",
-			"ht": "<p>Slik tester du:</p><ul><li>Gjør en visuell inspeksjon og sjekk om det finnes en play-knapp eller lignende på testsiden eller</li><li>Bruk internt søk på nettstedet eller</li><li>Bruk Google (Du kan bruke \"site:urlnettsted søkeord\" for å bare søke på et bestemt nettsted).</li></ul><p><strong>Tips:</strong> Aktuelle søkeord kan være: \"Video\", \"Animasjon\", \"YouTube\", \"Viemo\", \"opptak\", \"H264\", \"mpeg4\".</p>",
+			"ht": "<p>Slik tester du:</p><ul><li>Gjør en visuell inspeksjon og sjekk om det finnes en play-knapp eller lignende på testsiden eller</li><li>Bruk internt søk på nettstedet eller</li><li>Bruk Google (Du kan bruke \"site:urlnettsted søkeord\" for å bare søke på et bestemt nettsted).</li></ul><p><strong>Tips:</strong> Aktuelle søkeord kan være: \"Video\", \"Animasjon\", \"YouTube\", \"Vimeo\", \"opptak\", \"H264\", \"mpeg4\".</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -56,15 +56,15 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Er videoen uten lyd?",
+			"spm": "Har videoen lyd?",
 			"ht": "<p>Slik tester du: </p><ul><li>Husk å sette på lyd før du starter</li><li>Start videoen og hør etter om videoen har lyd</li><li>Dersom den ikke har lyd i begynnelsen, tar du inntil tre stikkprøver på 10 sekunder ulike steder i videoen</li><li>Hvis videoen har lyd, trenger du ikke ta flere stikkprøver</li></ul>",
 			"type": "jaNei",
 			"ruting": {
-				"ja": {
+				"nei": {
 					"type": "gaaTil",
 					"steg": "3.3"
 				},
-				"nei": {
+				"ja": {
 					"type": "ikkjeForekomst",
 					"utfall": "Video med lyd."
 				}
