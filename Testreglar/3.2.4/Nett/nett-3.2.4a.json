@@ -1,0 +1,126 @@
+{
+	"namn": "Nett-3.2.4a Brukergrensesnittkomponenter med samme funksjonalitet, har konsekvent visuell utforming og tilgjengelig navn 2023",
+	"id": "nett-3.2.4a",
+	"testlabId": 520,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Alle brukergrensnittkomponenter, som har samme funksjonalitet, innenfor et sett av nettsider, identifiseres på en konsekvent måte.</p><ul><li>Konsekvent identifikasjon omfatter både synlig identifikasjon og tilgjengelig navn.</li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsiden brukergrensesnittkomponenter med samme funksjonalitet, som blir gjentatt på minst tre nettsider, på nettstedet?",
+			"ht": "<p>Slik tester du:</p><ul><li>Åpne tre ulike nettsider på nettstedet. Det vil si<ul><li>startstiden</li><li>to andre nettsider i tillegg</li></ul></li><li>Gjør en visuell inspeksjon og sjekk om det er brukergrensesnittkomponenter som<ul><li>har samme funksjonalitet og</li><li>blir gjentatt på de tre nettsidene. </li></ul></li></ul><p><strong>Tips:</strong> For å gjøre det enklere å teste, kan du åpne startsida på en skjerm, for å sammenligne med de to andre nettsidene på en annen skjerm.</p><p>Eksempel på brukergrensesnittkomponenter er: </p><ul><li>globalt søk</li><li>logg inn/ut</li><li>meny</li><li>avkryssingsboks for betingelser eller lignende</li><li>chat</li><li>funksjonalitet for å lagre, redigere, slette eller lignende</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikke brukergrensesnittkomponenter med samme funksjonalitet, som blir gjentatt på flere nettsider."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Register URL for de to testsidene du sammenligner med.",
+			"ht": "<p>Register URL for de to andre testsidene du sammenligner med, slik at det er mulig å identifisere de i ettertid.</p><p><strong>Merk:</strong> Bruk komma for å skille URL' ene fra hverandre.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			},
+			"label": "URL for de to testsidene (skilles med komma):",
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken brukergrensesnittkomponent tester du?",
+			"ht": "<p>Beskriv brukergrensesnittkomponenten, slik at det er mulig å identifisere den i ettertid. Hvis det gjelder flere komponenter, registrerer du en og en.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"label": "Brukergrensesnittkomponent:",
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Åpne de tre testsidene i tre nettleservinduer. <br><br>",
+			"ht": "<p>Dette gjør det enklere å sammenligne brukergrensesnittkomponenten på tvers av disse testsidene.</p>",
+			"type": "instruksjon",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Har brukergrensesnittkomponenten konsekvent visuell utforming, på tvers av testsidene?",
+			"ht": "<p>Slik tester du:</p><p>Gjør en visuell inspeksjon og sjekk om den samme brukergrensesnittkomponenten har konsekvent visuell utforming, på tvers av testsidene.</p><p><strong>Merk:</strong></p><ul><li>Komponentene trenger ikke å være helt identiske, men det skal ikke være tydelige visuelle forskjeller.</li><li>Eksempel: Dersom søkefeltet på startsiden har både visuell ledetekst og ikon, er det brudd hvis en av de mangler på de andre sidene du tester.</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"F31",
+				"G197"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Brukergrensesnittkomponenter med samme funksjonalitet, som blir gjentatt på flere sider har ikke konsekvent visuell utforming."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Har brukergrensesnittkomponenten konsekvent tilgjengelig navn, på tvers av testsidene?",
+			"ht": "<p>Slik tester du:</p><ul><li>Inspiser den samme brukergrensesnittkomponenten på alle tre testsidene</li><li>Bruk Accessibility Tree i nettleseren</li><li>Under Computed Properties i Accessibility Tree, sjekk at \"Name\" er konsekvent for komponenten på alle tre testsider</li></ul><p><strong>Merk:</strong></p><ul><li>Komponenten trenger ikke å ha helt identisk tilgjengelig navn, men det skal ikke være stor forskjell.<ul><li>Eksempel: Knapp med tilgjengelig navn \"side 1\", \"side 2\", \"side 3\" på testsidene er godkjent.</li></ul></li><li>Mangel på identifikasjon i form av tilgjengelig navn er godkjent hvis det er likt i alle tre tilfeller.<ul><li>Identifikasjon av brukergrensesnittkomponenter blir ellers testet i SK 4.1.2.</li></ul></li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"F31",
+				"G197"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Brukergrensesnittkomponenter med samme funksjonalitet, som blir gjentatt på flere sider har konsekvent visuell utforming og tilgjengelig navn."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Brukergrensesnittkomponenter med samme funksjonalitet, som blir gjentatt på flere sider har ikke konsekvent tilgjengelig navn."
+				}
+			}
+		}
+	]
+}
