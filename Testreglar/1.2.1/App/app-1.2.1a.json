@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Lydklipp</p><ul><li>Forhåndsinnspilt lydklipp har tekstalternativ, som er visuelt plassert i nær tilknytning til lydklippet, eller kan nås via en mekanisme i direkte tilknytning til lydklippet. Tekstalternativet<br><ul><li>formidler det samme som lydklippet i rett rekkefølge og</li><li>er kodet som tekst</li></ul></li><li>Forhåndsinnspilt lydklipp, som er mediealternativ til tekst eller video uten lyd, er unntatt. For å være mediealternativ skal lydklippet<ul><li>ikke presentere mer informasjon enn det som gis via tekst eller video uten lyd og</li><li>være tydelig merket, det vil si, plassert i direkte tilknytning til teksten eller video uten lyd og gi informasjon som indikerer at det er et mediealternativ til lydklippet</li></ul></li></ul>",
+	"kravTilSamsvar": "<p>Forhåndsinnspilt lydklipp:</p><ul><li>har tekstalternativ, som er visuelt plassert i nær tilknytning til lydklippet, eller kan nås via en mekanisme i direkte tilknytning til lydklippet. Tekstalternativet<br><ul><li>formidler det samme som lydklippet i rett rekkefølge og</li><li>er kodet som tekst</li></ul></li><li>som er mediealternativ til tekst eller video uten lyd, er unntatt. For å være mediealternativ skal lydklippet<ul><li>ikke presentere mer informasjon enn det som gis via tekst eller video uten lyd og</li><li>være tydelig merket, det vil si, plassert i direkte tilknytning til teksten eller video uten lyd og gi informasjon som indikerer at det er et mediealternativ til lydklippet</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
