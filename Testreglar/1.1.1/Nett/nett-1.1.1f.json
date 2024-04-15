@@ -56,7 +56,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Er videoen eller lydklippet forhåndsinnspilt (opptak)?",
-			"ht": "<p>Aktuelle metoder for å sjekke dette</p><ul><li>Start videoen eller lydklippet og se om avspillingen begynner på starten og/eller at varigheten viser.</li><li>Se om du finner informasjon om når videoen eller lydklippet er publisert.</li><li>Se etter informasjon som tilsier at videoen eller lydklippet er direkte, for eksempel et rødt felt med \"Live\" eller at du ikke kan spole</li></ul>",
+			"ht": "<p>Aktuelle metoder for å sjekke dette</p><ul><li>Start videoen eller lydklippet og se om avspillingen begynner på starten og/eller at varigheten viser.</li><li>Se om du finner informasjon om når videoen eller lydklippet er publisert.</li><li>Se etter informasjon som tilsier at videoen eller lydklippet er direkte, for eksempel et rødt felt med \"Live\" eller at du ikke kan spole</li></ul><p><strong>Merk:</strong> Suksesskriteriet gjelder etter ordlyden for alle video- og lydklipp. Vi avgrenser likevel testingen mot direktesendt video- og lydklipp.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
