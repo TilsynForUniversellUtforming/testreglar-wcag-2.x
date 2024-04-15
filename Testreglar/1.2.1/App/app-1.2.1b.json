@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Video uten lyd</p><ul><li>Forhåndsinnspilt video uten lyd, har alternativ i form av tekst eller lyd, og tekst- eller lydalternativet er visuelt plassert i nær tilknytning til videoklippet, eller kan nås via en mekanisme i direkte tilknytning til videoklippet. Tekstalternativet<ul><li>formidler det samme som videoen i rett rekkefølge og</li><li>er kodet som tekst eller lydalternativet være mulig å spille av og stoppe</li></ul></li><li>Forhåndsinnspilt video uten lyd, som er mediealternativ til tekst, er unntatt. For å være mediealternativ skal videoen<ul><li>ikke presentere mer informasjon enn det som gis via tekst og</li><li>være tydelig merket, det vil si, plassert i direkte tilknytning til videoen og gi informasjon som indikerer at det er et mediealternativ</li></ul></li></ul>",
+	"kravTilSamsvar": "<p>Forhåndsinnspilt video uten lyd</p><ul><li>har alternativ i form av tekst eller lyd, og tekst- eller lydalternativet er visuelt plassert i nær tilknytning til videoklippet, eller kan nås via en mekanisme i direkte tilknytning til videoklippet. Tekstalternativet<ul><li>formidler det samme som videoen i rett rekkefølge og</li><li>er kodet som tekst eller lydalternativet være mulig å spille av og stoppe</li></ul></li><li>som er mediealternativ til tekst, er unntatt. For å være mediealternativ skal videoen<ul><li>ikke presentere mer informasjon enn det som gis via tekst og</li><li>være tydelig merket, det vil si, plassert i direkte tilknytning til videoen og gi informasjon som indikerer at det er et mediealternativ</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
