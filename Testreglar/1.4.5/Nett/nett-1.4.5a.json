@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<ul><li>Bilde av tekst kan visuelt tilpasses brukerens krav<ul><li>skrifttype, størrelse, farge og bakgrunn kan endres</li></ul></li><li>Bilde av tekst er brukt fordi en bestemt presentasjon av innholdet er avgjørende</li></ul>",
+	"kravTilSamsvar": "<p>Bilde av tekst er bare brukt dersom:</p><ul><li>det kan visuelt tilpasses brukerens krav<ul><li>skrifttype, størrelse, farge og bakgrunn kan endres</li></ul></li><li>en bestemt presentasjon av innholdet er avgjørende</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -60,7 +60,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Er bruken av bilde av tekst avgjerande for informasjonen som blir formidla?",
-			"ht": "<blockquote><em>Avgjørende (essential): Dersom avgjørende elementer fjernes, vil det medføre en grunnleggende endring av informasjonen eller funksjonaliteten i innholdet, <strong>og</strong> informasjonen og funksjonaliteten vil ikke kunne gjenskapes på en annen måte som samsvarer med kravene</em></blockquote><p>Vurder om ein bestemt presentasjon er avgjerande (essensial) for informasjonen som blir formidla. </p><p>Eksempel: </p><ul><li>logo (tekst som utgjør en del av en logo eller et varemerkenavn), jamfør merknad til suksesskriteriet</li><li>bilde av eit produkt</li><li>tekst i grafiske element, for eksempel diagram og grafar </li></ul>",
+			"ht": "<blockquote><em>Avgjørende (essential): Dersom avgjørende elementer fjernes, vil det medføre en grunnleggende endring av informasjonen eller funksjonaliteten i innholdet, <strong>og</strong> informasjonen og funksjonaliteten vil ikke kunne gjenskapes på en annen måte som samsvarer med kravene.</em></blockquote><p>Vurder om ein bestemt presentasjon er avgjerande (essensial) for informasjonen som blir formidla.</p><p>Eksempel:</p><ul><li>logo (tekst som utgjør en del av en logo eller et varemerkenavn), jamfør merknad til suksesskriteriet</li><li>bilde av eit produkt</li><li>tekst i grafiske element, for eksempel diagram og grafar</li><li>situasjonar der screenshots er brukt for å dokumentera ein tilstand, for eksempel i mediesaker</li><li>bilde av tekst som inneheld sitat, utsagn eller oppmodingar, for eksempel i sosiale media</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
@@ -110,7 +110,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Går informasjon/funksjonalitet i presentasjonen tapt, viss bilde av tekst blir koda som tekst?",
-			"ht": "<p>Eksempel på situasjonar der bruk av bilde av tekst er nødvendig:</p><ul><li>Det ikkje er mogleg å formatere teksten for å oppnå same effekt.</li><li>Det ikkje er mogleg å presentere effekten i dei mest brukte nettlesarane.</li><li>Presentasjonen krev bruk av teknikkar/teknologi som ikkje oppfyller WCAG.</li></ul>",
+			"ht": "<p>Eksempel på situasjonar der bruk av bilde av tekst er nødvendig:</p><ul><li>Det ikkje er teknisk mogleg å formatere teksten for å oppnå same effekt.</li><li>Det ikkje er teknisk mogleg å presentere effekten i dei mest brukte nettlesarane.</li><li>Presentasjonen krev bruk av teknikkar/teknologi som ikkje oppfyller WCAG.</li></ul><p>Sjå elles ulike eksempel og forklaring i <a href=\"https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html\" target=\"_blank\" rel=\"noopener\">forståartikkelen til SK 1.4.5 Bilder av tekst</a>.</p>",
 			"kilde": [
 				"wcag:forstaaartikkel"
 			],
@@ -123,7 +123,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Bruk av bilde av tekst, er ikkje nødvendig fordi innhaldet kan kodast som tekst, utan at informasjon eller funksjonalitet går tapt."
+					"utfall": "Bruk av bilde av tekst, er ikkje nødvendig fordi innhaldet kan kodast som tekst, utan at informasjon/funksjonalitet går tapt."
 				}
 			}
 		}
