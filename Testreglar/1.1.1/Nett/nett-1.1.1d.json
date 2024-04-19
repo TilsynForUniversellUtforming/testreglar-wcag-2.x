@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For CAPTCHA skal tekstalternativet identifisere og beskrive hensikten. Følgende skal være oppfylt</p>\r\n<ul>\r\n<li>Tekstalternativet skal identifisere at det handler om en test, for å verifisere at brukeren er et menneske og</li>\r\n<li>Det tilbys minst to ulike typer CAPTCHA</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For CAPTCHA skal tekstalternativet identifisere og beskrive hensikten. Følgende skal være oppfylt</p><ul><li>Tekstalternativet skal identifisere at det handler om en test, for å verifisere at brukeren er et menneske og</li><li>Det tilbys minst to ulike typer CAPTCHA</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -42,7 +42,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Kva CAPTCHA testar du?",
-			"ht": "<p>Beskriv CAPTCHAen, slik at det er mogleg å identifisere den i ettertid. Viss det gjeld fleire CAPTCHA, registrerer du ein og ein. </p>\n<p><strong>Tips:</strong> CAPTCHA ligg ofte i tilknytning til skjema. Du kan for eksempel oppgi namn på skjema, plassering på sida, element som er i nærleiken.</p>",
+			"ht": "<p>Beskriv CAPTCHAen, slik at det er mogleg å identifisere den i ettertid. Viss det gjeld fleire CAPTCHA, registrerer du ein og ein.</p>\n<p><strong>Tips:</strong> CAPTCHA ligg ofte i tilknytning til skjema. Du kan for eksempel oppgi namn på skjema, plassering på sida, element som er i nærleiken.</p>",
 			"type": "tekst",
 			"label": "CAPTCHA:",
 			"multilinje": true,
@@ -57,7 +57,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Har CAPTCHAen du testar minst to ulike format?",
-			"ht": "<p>Ulike format kan vere;</p>\n<ul>\n<li>bilde</li>\n<li>lyd </li>\n<li>logisk oppgåve</li>\n<li>tekst</li>\n</ul>",
+			"ht": "<p>Ulike format kan vere;</p><ul><li>bilde</li><li>lyd</li><li>logisk oppgåve</li><li>tekst</li><li>annet</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G144"
@@ -86,12 +86,7 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.13",
-					"delutfall": {
-						"nr": 0,
-						"fasit": "Ikkje forekomst",
-						"tekst": ""
-					}
+					"steg": "3.13"
 				}
 			}
 		},
@@ -195,12 +190,7 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.13",
-					"delutfall": {
-						"nr": 0,
-						"fasit": "Nei",
-						"tekst": "Bilde-CAPTCHA har ikkje alt-attributt."
-					}
+					"steg": "3.10"
 				}
 			}
 		},
@@ -215,11 +205,11 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.11"
+					"steg": "3.12"
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.13"
+					"steg": "3.10"
 				}
 			}
 		},
@@ -234,7 +224,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.10"
+					"steg": "3.11"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -250,7 +240,7 @@
 		{
 			"stegnr": "3.11",
 			"spm": "Er det innhald i title-attributtet?",
-			"ht": "<p>Sjå i koden om title-attributtet har innhald.</p>\n<p>Eit tomt title-attributt er koda på formen <code>title=\"\"</code> eller berre <code>title</code>.</p>",
+			"ht": "<p>Sjå i koden om title-attributtet har innhald.</p><p>Eit tomt title-attributt er koda på formen <code>title=\"\"</code> eller berre <code>title</code>.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F65"
@@ -262,14 +252,19 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.13"
+					"steg": "3.13",
+					"delutfall": {
+						"nr": 0,
+						"fasit": "Nei",
+						"tekst": "Bilde-CAPTCHA har ikkje tekstalternativ."
+					}
 				}
 			}
 		},
 		{
 			"stegnr": "3.12",
 			"spm": "Gir innhaldet i attributtet, saman med konteksten, ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
-			"ht": "<p>Gjer ei skjønnsmessig vurdering</p>\n<ul>\n<li>Innhaldet i attributtet skal identifisere at det er ein test for å verifisere at brukaren er eit menneske.</li>\n<li>Konteksten er for eksempel tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</li>\n<li>Viss <code>aria-labelledby</code> visar til dupliserte ID-ar, skal du vurdere innhaldet til ID-en som står først i koden.</li>\n</ul>\n<p><strong>Merk:</strong> Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p>\n<p><strong>Merk:</strong> Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
+			"ht": "<p>Gjer ei skjønnsmessig vurdering</p><ul><li>Innhaldet i attributtet skal identifisere at det er ein test for å verifisere at brukaren er eit menneske.</li><li>Konteksten er for eksempel tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</li><li>Viss <code>aria-labelledby</code> visar til dupliserte ID-ar, skal du vurdere innhaldet til ID-en som står først i koden.</li></ul><p><strong>Merk:</strong> Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p><p><strong>Merk:</strong> Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F30",
@@ -278,12 +273,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.13",
-					"delutfall": {
-						"nr": 0,
-						"fasit": "Ja",
-						"tekst": ""
-					}
+					"steg": "3.13"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -311,12 +301,7 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.15",
-					"delutfall": {
-						"nr": 1,
-						"fasit": "Ikkje forekomst",
-						"tekst": ""
-					}
+					"steg": "3.15"
 				}
 			}
 		},
@@ -413,7 +398,7 @@
 							"handling": {
 								"type": "avslutt",
 								"fasit": "Nei",
-								"utfall": "CAPTCHA har alternativt format."
+								"utfall": "CAPTCHA har ikkje alternativt format."
 							}
 						},
 						"3": {

@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Dersom det er brukt CAPTCHA med ikkje-tekstleg innhald, er følgande oppfylt:</p>\r\n<ul>\r\n<li>Det finst minst to former for CAPTCHA, for eksempel i form av bilde, lyd eller tekst.</li>\r\n<li>Ikkje-tekstleg innhald har eit tekstalternativ som identifiserer og beskriv formålet.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Dersom det er brukt CAPTCHA med ikkje-tekstleg innhald, er følgande oppfylt:</p><ul><li>Det finst minst to former for CAPTCHA, for eksempel i form av bilde, lyd eller tekst.</li><li>Ikkje-tekstleg innhald har eit tekstalternativ som identifiserer og beskriv formålet.</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -198,12 +198,7 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.13",
-					"delutfall": {
-						"nr": 0,
-						"fasit": "Nei",
-						"tekst": "CAPTCHA i form av bilde, manglar alt-attributt."
-					}
+					"steg": "3.10"
 				}
 			}
 		},
@@ -218,18 +213,18 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.11"
+					"steg": "3.12"
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.13"
+					"steg": "3.10"
 				}
 			}
 		},
 		{
 			"stegnr": "3.10",
 			"spm": "Har bilde eit title-attributt?",
-			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+			"ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F65"
@@ -237,7 +232,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.10"
+					"steg": "3.11"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -281,12 +276,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.13",
-					"delutfall": {
-						"nr": 0,
-						"fasit": "Ja",
-						"tekst": ""
-					}
+					"steg": "3.13"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -314,12 +304,7 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.15",
-					"delutfall": {
-						"nr": 1,
-						"fasit": "Ikkje forekomst",
-						"tekst": ""
-					}
+					"steg": "3.15"
 				}
 			}
 		},

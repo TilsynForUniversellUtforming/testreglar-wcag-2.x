@@ -67,7 +67,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.8"
+					"steg": "3.5"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -87,7 +87,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.8"
+					"steg": "3.5"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -107,7 +107,7 @@
 			"ruting": {
 				"ja": {
 					"type": "ikkjeForekomst",
-					"utfall":"Visuelle overskrift er kodet med en annen gyldig måten som ivaretar den visuelle presentasjonen."
+					"utfall": "Visuelle overskrift er kodet med en annen gyldig måten som ivaretar den visuelle presentasjonen."
 				},
 				"nei": {
 					"type": "avslutt",
@@ -118,13 +118,33 @@
 		},
 		{
 			"stegnr": "3.5",
+			"spm": "Er overskriften kodet slik at den ignoreres av hjelpemiddelteknologi?",
+			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser overskriften i nettleseren</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Checker</li>\n<li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om overskriften er kodet med et av følgende attributter:</p>\n<ul>\n<li>role=\"presentation\"</li>\n<li>role=\"none\"</li>\n<li>aria-hidden=\"true\"</li>\n</ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Overskrift er kodet slik at den ignoreres av hjelpemiddelteknologi."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				}
+			},
+			"kilde": [
+				"F92"
+			]
+		},
+		{
+			"stegnr": "3.6",
 			"spm": "Inngår den visuelle overskriften i et tydelig overskriftshierarki?",
 			"ht": "<p>Hvis det er tydelig at deler av innholdet er presentert med et hierarki av visuelle overskrifter, skal dette også ivaretas i koden. Eksempel på dette er hovedinnholdet i en artikkel.</p>\n<p><strong>Merk:</strong> Du skal ikke vurdere hierarkiet på overskriftene for hele nettsiden samlet, men bare de delene av nettsidene som er delt opp med et visuelt overskriftshierarki.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.6"
+					"steg": "3.7"
 				},
 				"nei": {
 					"type": "avslutt",
@@ -134,7 +154,7 @@
 			}
 		},
 		{
-			"stegnr": "3.6",
+			"stegnr": "3.7",
 			"spm": "Hva er nivået på overskriften, visuelt sett?",
 			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Sammenlign nivået på den visuelle overskriften med de forrige overskriftene.</li>\n<li>Start på toppen av overskriftshierarkiet og tell deg nedover.</li>\n<li>Husk at det kan være flere overskrifter på samme nivå etter hverandre</li>\n</ul>\n<p><strong>Merk:</strong> Nivået på overskrifter bestemmes av flere ulike ting, i tillegg til størrelsen på teksten, for eksempel innholdet i teksten, plassering, tegnsetting og gruppering.</p>",
 			"type": "radio",
@@ -151,12 +171,12 @@
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
-					"steg": "3.7"
+					"steg": "3.8"
 				}
 			}
 		},
 		{
-			"stegnr": "3.7",
+			"stegnr": "3.8",
 			"spm": "Er nivået i koden det samme som det visuelle nivået?",
 			"ht": "<p>Du kan bruke kodeverktøyet i nettleseren til å sjekke dette.</p>\n<p>Overskriftene skal være kodet med rett nivå:</p>\n<ul>\n<li>I standard HTML er overskriftene er kodet med elementene<code>&lt;h1&gt;</code> til <code>&lt;h6&gt;</code>.</li>\n<li>Med WAI-ARIA er overskriftene er kodet med attributtene <code>aria-level=\"1\"</code> til <code>aria-level=\"6\"</code>.</li>\n</ul>\n<p><strong>Merk:</strong> <code>&lt;h1&gt;</code> kan brukes mer enn en gang på samme side, dersom innhold på siden er delt inn i mer enn en blokk.</p>",
 			"type": "jaNei",
@@ -175,26 +195,6 @@
 					"utfall": "Visuell overskrift er kodet som overskrift. Visuelt overskriftsnivå samsvarer med kodet overskriftsnivå."
 				}
 			}
-		},
-		{
-			"stegnr": "3.8",
-			"spm": "Er overskriften kodet slik at den ignoreres av hjelpemiddelteknologi?",
-			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser overskriften i nettleseren</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Checker</li>\n<li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om overskriften er kodet med et av følgende attributter:</p>\n<ul>\n<li>role=\"presentation\"</li>\n<li>role=\"none\"</li>\n<li>aria-hidden=\"true\"</li>\n</ul>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Overskrift er kodet slik at den ignoreres av hjelpemiddelteknologi."
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.5"
-				}
-			},
-			"kilde": [
-				"F92"
-			]
 		}
 	]
 }
