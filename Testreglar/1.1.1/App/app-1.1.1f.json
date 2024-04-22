@@ -1,0 +1,129 @@
+{
+	"namn": "App-1.1.1f Video eller lydklipp har et tilgjengelig navn med en beskrivende identifikasjon 2023",
+	"id": "app-1.1.1f",
+	"testlabId": 509,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Forhåndsinnspilte video og lydklipp har et tilgjengelig navn med en beskrivende identifikasjon.</p>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken appside tester du?",
+			"ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
+			"type": "tekst",
+			"label": "Appside:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Finnes det video eller lydklipp på appsiden?",
+			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes video eller lydklipp på appsiden.</p><p><strong>Merk:</strong> Både video med og uten lyd skal testes.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appside har ikke video eller lydklipp."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken video eller lydklipp tester du?",
+			"ht": "<p>Beskriv video eller lydklipp, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere video eller lydklipp, registrerer du et og et.</p><p><strong>Tips:</strong> Du kan bruke tittel på videoen hvis den har det.</p>",
+			"type": "tekst",
+			"label": "Video eller lydklipp:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er videoen eller lydklippet forhåndsinnspilt (opptak)?",
+			"ht": "<p>Aktuelle metoder for å sjekke dette</p><ul><li>Start videoen eller lydklippet og se om avspillingen begynner på starten og/eller at varigheten viser.</li><li>Se om du finner informasjon om når videoen eller lydklippet er publisert.</li><li>Se etter informasjon som tilsier at videoen eller lydklippet er direkte, for eksempel et rødt felt med \"Live\" eller at du ikke kan spole</li></ul><p><strong>Merk: </strong>Suksesskriteriet gjelder etter ordlyden for alle video- og lydklipp. Vi avgrenser likevel testingen mot direktesendt video- og lydklipp.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Video eller lydklipp er direkte/live."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Har videoen eller lydklippet et tilgjengelig navn, som ikke er tomt?",
+			"ht": "<p>Slik tester du:</p><ul><li>Aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Andoird: Talkback</li></ul></li><li>Åpne appsiden på nytt</li><li>Sveip og trykk på videoen eller lydklippet du tester</li><li>Sjekk at skjermleser leser opp tekstalternativ (tilgjengelig navn) når du trykker på videoen eller lydklippet</li></ul><p><strong>Merk:</strong> Dersom skjermleser leser opp preview title, så godtar vi det.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Video eller lydklipp har ikke et tilgjengelig navn."
+				}
+			},
+			"kilde": [
+				"G100"
+			]
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Hvilket tilgjengelig navn tester du?",
+			"ht": "<p>Registrer tilgjengelig navn du fant i forrige steg. Du noterer det som blir lest opp av skjermleseren.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			},
+			"label": "Tilgjengelig navn:",
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Gir det tilgjengelige navnet en beskrivende identifikasjon av videoen eller lydklippet?",
+			"ht": "<p>Gjør en skjønnsmessig vurdering av om det tilgjengelige navnet:</p><ul><li>Identifiserer innholdet i videoen eller lydklippet og<ul><li>videoen eller lydklippet tittel er vanligvis tilstrekkelig identifikasjon</li></ul></li></ul><p><strong>Merk:</strong> Dersom videoen er tekstet ved hjelp av tekstalternativ, sjekk om det tilgjengelige navnet angir plasseringen av langt tekstalternativ, det vil si hvor brukeren finner det lange tekstalternativet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Video eller lydklipp har et tilgjengelig navn med en beskrivende identifikasjon."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Video eller lydklipp har et tilgjengelig navn uten en beskrivende identifikasjon."
+				}
+			},
+			"kilde": [
+				"G74",
+				"G100"
+			]
+		}
+	]
+}
