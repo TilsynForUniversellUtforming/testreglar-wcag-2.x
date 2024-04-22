@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Lydklipp, som ikke er mediealternativ til tekst eller video uten lyd</p><ul><li>Forhåndsinnspilt lydklipp har tekstalternativ, som er visuelt plassert i nær tilknytning til lydklippet, eller kan nås via en mekanisme i direkte tilknytning til lydklippet. Tekstalternativet<br><ul><li>formidler det samme som lydklippet i rett rekkefølge og</li><li>er kodet som tekst</li></ul></li><li>Forhåndsinnspilt lydklipp, som er mediealternativ til tekst eller video uten lyd, er unntatt. For å være mediealternativ skal lydklippet<ul><li>ikke presentere mer informasjon enn det som gis via tekst eller video uten lyd og</li><li>være tydelig merket, det vil si, plassert i direkte tilknytning til teksten eller video uten lyd og gi informasjon som indikerer at det er et mediealternativ til lydklippet</li></ul></li></ul>",
+	"kravTilSamsvar": "<p>Forhåndsinnspilt lydklipp:</p><ul><li>har tekstalternativ, som er visuelt plassert i nær tilknytning til lydklippet, eller kan nås via en mekanisme i direkte tilknytning til lydklippet. Tekstalternativet<br><ul><li>formidler det samme som lydklippet i rett rekkefølge og</li><li>er kodet som tekst</li></ul></li><li>som er mediealternativ til tekst eller video uten lyd, er unntatt. For å være mediealternativ skal lydklippet<ul><li>ikke presentere mer informasjon enn det som gis via tekst eller video uten lyd og</li><li>være tydelig merket, det vil si, plassert i direkte tilknytning til teksten eller video uten lyd og gi informasjon som indikerer at det er et mediealternativ til lydklippet</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -105,7 +105,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Ligger det en mekanisme i nærheten av lydklippet, som går til et tekstalternativ for klippet?",
-			"ht": "<p>Slik tester du:</p><ul><li>Gjør en visuell inspeksjon</li><li>Sjekk om det ligger mekanisme (lenke, knapp eller lignende) i nærheten av lydklippet som går til tekstalternativet<ul><li>Eksempel på plassering: rett over eller under lydklippet</li></ul></li></ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Gjør en visuell inspeksjon</li><li>Sjekk om det ligger mekanisme (lenke, knapp eller lignende) i nærheten av lydklippet som går til tekstalternativet<ul><li>Eksempel på plassering er rett over eller under lydklippet</li></ul></li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -115,7 +115,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Lydklippet har ikke tekstalternativ, plassert nær klippet."
+					"utfall": "Lydklippet har verken tekstalternativ i nærheten av klippet, eller en mekanisme som tar brukeren til et tekstalternativ for klippet."
 				}
 			}
 		},
