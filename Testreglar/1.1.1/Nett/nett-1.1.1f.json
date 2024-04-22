@@ -1,0 +1,129 @@
+{
+	"namn": "Nett-1.1.1f Video eller lydklipp har et tilgjengelig navn med en beskrivende identifikasjon 2023",
+	"id": "nett-1.1.1f",
+	"testlabId": 508,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Forhåndsinnspilte video og lydklipp har et tilgjengelig navn med en beskrivende identifikasjon.</p>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Finnes det video eller lydklipp på testsiden?",
+			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes video eller lydklipp på testsiden. For eksempel <code>&lt;video&gt;</code> og <code>&lt;audio&gt;</code>-elementer.</p><p><strong>Merk:</strong> Både video med og uten lyd skal testes.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikke video eller lydklipp."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken video eller lydklipp tester du?",
+			"ht": "<p>Beskriv video eller lydklipp, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere video eller lydklipp, registrerer du et og et.</p><p><strong>Tips:</strong> Du kan bruke tittel på videoen hvis den har det.</p>",
+			"type": "tekst",
+			"label": "Video eller lydklipp:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er videoen eller lydklippet forhåndsinnspilt (opptak)?",
+			"ht": "<p>Aktuelle metoder for å sjekke dette</p><ul><li>Start videoen eller lydklippet og se om avspillingen begynner på starten og/eller at varigheten viser.</li><li>Se om du finner informasjon om når videoen eller lydklippet er publisert.</li><li>Se etter informasjon som tilsier at videoen eller lydklippet er direkte, for eksempel et rødt felt med \"Live\" eller at du ikke kan spole</li></ul><p><strong>Merk:</strong> Suksesskriteriet gjelder etter ordlyden for alle video- og lydklipp. Vi avgrenser likevel testingen mot direktesendt video- og lydklipp.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Video eller lydklipp er direkte/live."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Har videoen eller lydklippet et tilgjengelig navn, som ikke er tomt?",
+			"ht": "<p>Slik tester du</p><ul><li>Inspiser videoen eller lydklippet<br><ul><li>Undersøk i koden og finn det riktige elementet, det vil si <code>&lt;video&gt;</code> eller <code>&lt;audio&gt;</code>-element, før du sjekker om mediet har et tilgjengelig navn</li><li><strong>Merk:</strong> videoen eller lydklippet er ofte nøstet under et annet parent-element som gir et tilgjengelig navn til videoen eller lydklippet</li></ul></li><li>Bruk Accessibility Tree i nettleseren</li><li>Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</li></ul><p><strong>Tips:</strong> Du kan ved behov bruke skjermleser for å sjekke dette.</p><p><strong>Merk:</strong> iframe skal testes i testregel nett-4.1.2c.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Video eller lydklipp har ikke et tilgjengelig navn."
+				}
+			},
+			"kilde": [
+				"G100"
+			]
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Hvilket tilgjengelig navn tester du?",
+			"ht": "<p>Registrer det tilgjengelige navnet du har funnet i forrige steg dvs. kopier innholdet i attributtet \"Name\" under Computed Properties i Accessibility Tree.</p>",
+			"type": "tekst",
+			"label": "Tilgjengelig navn:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Gir det tilgjengelige navnet en beskrivende identifikasjon av videoen eller lydklippet?",
+			"ht": "<p>Gjør en skjønnsmessig vurdering av om det tilgjengelige navnet:</p><ul><li>Identifiserer innholdet i videoen eller lydklippet og<ul><li>videoen eller lydklippet tittel er vanligvis tilstrekkelig identifikasjon</li></ul></li></ul><p><strong>Merk:</strong> Dersom videoen er tekstet ved hjelp av tekstalternativ, sjekk om det tilgjengelige navnet angir plasseringen av langt tekstalternativ, det vil si hvor brukeren finner det lange tekstalternativet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Video eller lydklipp har et tilgjengelig navn med en beskrivende identifikasjon."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Video eller lydklipp har et tilgjengelig navn uten en beskrivende identifikasjon."
+				}
+			},
+			"kilde": [
+				"G74",
+				"G100"
+			]
+		}
+	]
+}
