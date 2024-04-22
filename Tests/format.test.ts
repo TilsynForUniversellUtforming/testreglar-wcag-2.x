@@ -76,7 +76,10 @@ files.forEach((file) => {
 
   testregel.steg.forEach((steg: Steg) => {
     test(`${file} har gyldig steg ${steg.stegnr}`, () => {
+      /** Sjekker at stegnr er lengre enn null */
       expect(steg.stegnr.length).toBeGreaterThan(0);
+      /** Sjekker at steg-nr er et gyldig tall */
+      expect(isNaN(parseFloat(steg.stegnr))).toBeFalsy();
       expect(steg.spm.length).toBeGreaterThan(0);
       expect(steg.ht).toBeDefined();
       expect(steg.ht.includes("javascript:")).toBeFalsy();
@@ -121,7 +124,10 @@ files.forEach((file) => {
         if (handling.type === "gaaTil") {
           expect(handling.steg).toBeDefined;
           if (typeof handling.steg !== "undefined") {
+            // Sjekker at steget finnes
             expect(stegFinst(handling.steg, testregel.steg)).toBe(true);
+            // Sjekker at det blir referert til et steg lengre fremme
+            expect(stegnrErStorreEnn(handling.steg, steg.stegnr)).toBeTruthy();
             if (typeof handling.delutfall !== "undefined") {
               vurderDelutfall(handling.delutfall);
             }
@@ -131,7 +137,7 @@ files.forEach((file) => {
           expect(handling.regler).toBeInstanceOf(Object);
           if (typeof handling.regler === "object") {
             expect(Object.keys(handling.regler).length).toBeGreaterThan(0);
-            vurderRegel(handling.regler, testregel.steg);
+            vurderRegel(handling.regler, testregel.steg, steg);
           }
         } else if (handling.type === "avslutt") {
           vurderRutingAvslutt(handling);
@@ -150,7 +156,8 @@ files.forEach((file) => {
  */
 function vurderRegel(
   reglar: { [regelId: string]: Regel },
-  testregelSteg: Array<Steg>
+  testregelSteg: Array<Steg>,
+  steg: Steg
 ) {
   expect(reglar).toBeDefined;
   const reglarArray: Array<Regel> = Object.values(reglar);
@@ -164,14 +171,14 @@ function vurderRegel(
       /(gaaTil|regler|avslutt|ikkjeForekomst)/i
     );
 
-    if (regel.type === "lik" || regel.type === "ulik" ) {
+    if (regel.type === "lik" || regel.type === "ulik") {
       expect(typeof regel.sjekk).toBe("string");
       expect(regel.sjekk?.length).toBeGreaterThan(0);
       expect(typeof regel.verdi).toBe("string");
       expect(regel.verdi?.length).toBeGreaterThan(0);
     }
 
-    if (regel.type === "mellom" ) {
+    if (regel.type === "mellom") {
       expect(typeof regel.sjekk).toBe("string");
       expect(regel.sjekk?.length).toBeGreaterThan(0);
       expect(typeof regel.verdi).toBe("number");
@@ -179,8 +186,8 @@ function vurderRegel(
     }
 
     if (regel.type === "talDersom") {
-      expect (Array.isArray(regel.sjekk)).toBe(true);
-      expect (regel.sjekk?.length).toBeGreaterThan(0);
+      expect(Array.isArray(regel.sjekk)).toBe(true);
+      expect(regel.sjekk?.length).toBeGreaterThan(0);
       expect(typeof regel.verdi).toBe("string");
       expect(regel.verdi?.length).toBeGreaterThan(0);
       expect(typeof regel.mellom1).toBe("number");
@@ -190,10 +197,10 @@ function vurderRegel(
     }
 
     if (regel.type === "vurderDelutfall") {
-      expect (typeof regel.id).toBe("number");
-      expect (typeof regel.verdi).toBe("string");
+      expect(typeof regel.id).toBe("number");
+      expect(typeof regel.verdi).toBe("string");
       expect(regel.verdi).toMatch(/(Ja|Nei|Ikkje testbart|Ikkje forekomst)/i);
-    
+
     }
 
     if (regel.handling.type === "gaaTil") {
@@ -201,6 +208,8 @@ function vurderRegel(
       if (typeof regel.handling.steg !== "undefined") {
         expect(regel.handling.steg.length).toBeGreaterThan(0);
         expect(stegFinst(regel.handling.steg, testregelSteg)).toBe(true);
+        // Sjekker at det blir referert til et steg lengre fremme
+        expect(stegnrErStorreEnn(regel.handling.steg, steg.stegnr)).toBeTruthy();
         if (typeof regel.handling.delutfall !== "undefined") {
           vurderDelutfall(regel.handling.delutfall);
         }
@@ -208,7 +217,7 @@ function vurderRegel(
     } else if (regel.handling.type === "regler") {
       expect(regel.handling.regler).toBeDefined();
       if (typeof regel.handling.regler === "object") {
-        vurderRegel(regel.handling.regler, testregelSteg);
+        vurderRegel(regel.handling.regler, testregelSteg, steg);
       }
     } else if (regel.handling.type === "avslutt") {
       vurderRutingAvslutt(regel.handling);
@@ -277,4 +286,26 @@ function vurderDelutfall(delutfall: Delutfall) {
     expect(delutfall.fasit).toMatch(/(Ja|Nei|Ikkje testbart|Ikkje forekomst)/i);
     expect(delutfall.tekst).toBeDefined();
   }
+}
+
+
+
+/**
+ * Sjekker om et stegnummer er større enn et annet
+ * @param stegNr1 Stegnummer som skal sjekkes
+ * @param stegNr2 Stegnummer det skal sjekkes mot
+ * @returns 
+ */
+function stegnrErStorreEnn(stegNr1: string, stegNr2: string): boolean {
+  const regex = /^(\d+)\.(\d+)$/;
+
+  if (stegNr1.match(regex) && stegNr2.match(regex)) {
+    const [helTall1, des1] = stegNr1.split('.');
+    const [helTall2, des2] = stegNr2.split('.');
+    if (helTall1 === helTall2) {
+      return parseInt(des1) > parseInt(des2);
+    } else return (parseInt(helTall1) > parseInt(helTall2))
+  }
+
+  return false;
 }
