@@ -311,9 +311,8 @@
 		{
 			"stegnr": "3.14",
 			"spm": "Er den logiske CAPTCHAen koda som tekst?",
-			"ht": "<p>Teksten kan vere løpande tekst, tabell eller lignande.</p><p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden. </li></ul>",
+			"ht": "<p>Teksten kan vere løpande tekst, tabell eller lignande.</p><p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul>",
 			"type": "jaNei",
-			"kilde": [],
 			"ruting": {
 				"ja": {
 					"type": "regler",
@@ -341,6 +340,20 @@
 									"tekst": ""
 								}
 							}
+						},
+						"3": {
+							"type": "lik",
+							"sjekk": "3.14",
+							"verdi": "Ja",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.15",
+								"delutfall": {
+									"nr": 1,
+									"fasit": "Ja",
+									"tekst": ""
+								}
+							}
 						}
 					}
 				},
@@ -350,7 +363,7 @@
 					"delutfall": {
 						"nr": 1,
 						"fasit": "Nei",
-						"tekst": "CAPTCHA i form av ei logisk oppgåve, er ikkje er koda som tekst."
+						"tekst": "CAPTCHA i form av ei logisk oppgåve, er ikkje koda som tekst."
 					}
 				}
 			}
