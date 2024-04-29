@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Dersom det er brukt CAPTCHA med ikkje-tekstleg innhald, er følgande oppfylt:</p>\r\n<ul>\r\n<li>Det finst minst to former for CAPTCHA, for eksempel i form av bilde, lyd eller tekst.</li>\r\n<li>Ikkje-tekstleg innhald har eit tekstalternativ som identifiserer og beskriv formålet.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Dersom det er brukt CAPTCHA med ikkje-tekstleg innhald, er følgande oppfylt:</p><ul><li>Det finst minst to former for CAPTCHA, for eksempel i form av bilde, lyd eller tekst.</li><li>Ikkje-tekstleg innhald har eit tekstalternativ som identifiserer og beskriv formålet.</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -198,12 +198,7 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.13",
-					"delutfall": {
-						"nr": 0,
-						"fasit": "Nei",
-						"tekst": "CAPTCHA i form av bilde, manglar alt-attributt."
-					}
+					"steg": "3.10"
 				}
 			}
 		},
@@ -218,18 +213,18 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.11"
+					"steg": "3.12"
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.13"
+					"steg": "3.10"
 				}
 			}
 		},
 		{
 			"stegnr": "3.10",
 			"spm": "Har bilde eit title-attributt?",
-			"ht": "Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.",
+			"ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F65"
@@ -237,7 +232,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.10"
+					"steg": "3.11"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -281,12 +276,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.13",
-					"delutfall": {
-						"nr": 0,
-						"fasit": "Ja",
-						"tekst": ""
-					}
+					"steg": "3.13"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -314,21 +304,15 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.15",
-					"delutfall": {
-						"nr": 1,
-						"fasit": "Ikkje forekomst",
-						"tekst": ""
-					}
+					"steg": "3.15"
 				}
 			}
 		},
 		{
 			"stegnr": "3.14",
 			"spm": "Er den logiske CAPTCHAen koda som tekst?",
-			"ht": "<p>Teksten kan vere løpande tekst, tabell eller lignande.</p><p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden. </li></ul>",
+			"ht": "<p>Teksten kan vere løpande tekst, tabell eller lignande.</p><p>Dette kan undersøkast på fleire måtar:</p><p>Alternativ 1:</p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst.</li></ul><p>Alternativ 2:</p><ul><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul>",
 			"type": "jaNei",
-			"kilde": [],
 			"ruting": {
 				"ja": {
 					"type": "regler",
@@ -356,6 +340,20 @@
 									"tekst": ""
 								}
 							}
+						},
+						"3": {
+							"type": "lik",
+							"sjekk": "3.14",
+							"verdi": "Ja",
+							"handling": {
+								"type": "gaaTil",
+								"steg": "3.15",
+								"delutfall": {
+									"nr": 1,
+									"fasit": "Ja",
+									"tekst": ""
+								}
+							}
 						}
 					}
 				},
@@ -365,7 +363,7 @@
 					"delutfall": {
 						"nr": 1,
 						"fasit": "Nei",
-						"tekst": "CAPTCHA i form av ei logisk oppgåve, er ikkje er koda som tekst."
+						"tekst": "CAPTCHA i form av ei logisk oppgåve, er ikkje koda som tekst."
 					}
 				}
 			}
