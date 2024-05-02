@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Finst det ikkje-tekstleg CAPTCHA på testsida?",
-			"ht": "<p>Gjer ein visuell inspeksjon, for å sjå om du finn CAPTCHA på nettsida.</p>\n<p>CAPTCHA står for \"Completely Automated Public Turing test to tell Computers and Humans Apart\". Brukaren blir ofte bedt om å </p>\n<ul>\n<li>legge inn tekst frå eit forvrengt bilde</li>\n<li>oppgi kva som blir sagt i eit lydklipp</li>\n<li>velge alle bilder som inneheld ein bil</li>\n</ul>",
+			"ht": "<p>Gjer ein visuell inspeksjon, for å sjå om du finn CAPTCHA på nettsida.</p><p>CAPTCHA står for \"Completely Automated Public Turing test to tell Computers and Humans Apart\". Brukaren blir ofte bedt om å </p><ul><li>legge inn tekst frå eit forvrengt bilde</li><li>oppgi kva som blir sagt i eit lydklipp</li><li>velge alle bilder som inneheld ein bil</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -42,7 +42,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Kva CAPTCHA testar du?",
-			"ht": "<p>Beskriv CAPTCHAen, slik at det er mogleg å identifisere den i ettertid. Viss det gjeld fleire CAPTCHA, registrerer du ein og ein.</p>\n<p><strong>Tips:</strong> CAPTCHA ligg ofte i tilknytning til skjema. Du kan for eksempel oppgi namn på skjema, plassering på sida, element som er i nærleiken.</p>",
+			"ht": "<p>Beskriv CAPTCHAen, slik at det er mogleg å identifisere den i ettertid. Viss det gjeld fleire CAPTCHA, registrerer du ein og ein.</p><p><strong>Tips:</strong> CAPTCHA ligg ofte i tilknytning til skjema. Du kan for eksempel oppgi namn på skjema, plassering på sida, element som er i nærleiken.</p>",
 			"type": "tekst",
 			"label": "CAPTCHA:",
 			"multilinje": true,
@@ -93,7 +93,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Har bilde attributtet \"aria-label\" ?",
-			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren til å sjekke dette.</p>\n<p>Attributtet overstyrer eventuelt alt-attributt eller title-attributt.</p>\n<p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren til å sjekke dette.</p><p>Attributtet overstyrer eventuelt alt-attributt eller title-attributt.</p><p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA6",
@@ -113,7 +113,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Har bilde attributtet \"aria-labelledby\" ?",
-			"ht": "<p><strong>Merk:</strong> ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom, for eksempel <code>aria-labelledby=\"id1 id2\"</code>.</p>\n<p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
+			"ht": "<p><strong>Merk:</strong> ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom, for eksempel <code>aria-labelledby=\"id1 id2\"</code>.</p><p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA10",
@@ -431,7 +431,7 @@
 		{
 			"stegnr": "3.16",
 			"spm": "Finst det ein mekanisme i form av tekst, for å starte lyd-CAPTCHAen?",
-			"ht": "<p>Dette kan for eksempel vere ei lenke eller tekst på ein knapp. Dette kan undersøkast på fleire måtar. </p>\n<ul>\n<li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst.</li>\n<li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li>\n</ul>",
+			"ht": "<p>Dette kan for eksempel vere ei lenke eller tekst på ein knapp. Dette kan undersøkast på fleire måtar. </p><ul><li>Sjå om du får til å markere teksten med mus eller tastatur. Dette indikerer at teksten er koda som tekst og ikkje er eit bilde av tekst.</li><li>Sjekk at tekstalternativet er koda som tekst, ved å sjå om du finn att teksten i koden.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -447,7 +447,7 @@
 		{
 			"stegnr": "3.17",
 			"spm": "Gir teksten, saman med konteksten, ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
-			"ht": "<p>Gjer ei skjønnsmessig vurdering</p>\n<ul>\n<li>Innhaldet i attributtet skal identifisere at det er ein test for å verifisere at brukaren er eit menneske.</li>\n<li>Konteksten er for eksempel tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</li>\n</ul>\n<p><strong>Merk: </strong>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p>\n<p><strong>Merk: </strong>Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
+			"ht": "<p>Gjer ei skjønnsmessig vurdering</p><ul><li>Innhaldet i attributtet skal identifisere at det er ein test for å verifisere at brukaren er eit menneske.</li><li>Konteksten er for eksempel tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</li></ul><p><strong>Merk: </strong>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p><p><strong>Merk: </strong>Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G143"
@@ -488,7 +488,7 @@
 		{
 			"stegnr": "3.19",
 			"spm": "Gir teksten, saman med konteksten, ein beskrivande identifikasjon av hensikten med CAPTCHAen?",
-			"ht": "<p>Gjer ei skjønnsmessig vurdering</p>\n<ul>\n<li>Innhaldet i attributtet skal identifisere at det er ein test for å verifisere at brukaren er eit menneske.</li>\n<li>Konteksten er for eksempel tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</li>\n</ul>\n<p> </p>\n<p><strong>Merk: </strong>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p>\n<p><strong>Merk:</strong> Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
+			"ht": "<p>Gjer ei skjønnsmessig vurdering</p><ul><li>Innhaldet i attributtet skal identifisere at det er ein test for å verifisere at brukaren er eit menneske.</li><li>Konteksten er for eksempel tekstalternativ i andre former for CAPTCHA, og nærliggande tekst.</li></ul><p> </p><p><strong>Merk: </strong>Vi vurderer at berre ordet \"CAPTCHA\" ikkje er tilstrekkeleg.</p><p><strong>Merk:</strong> Filnamn, kor tekstalternativet inneheld eit filetternamn som for eksempel .jpg eller .png, er alltid feil.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA6",

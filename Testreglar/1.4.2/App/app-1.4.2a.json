@@ -90,7 +90,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er mekanismen for å styre lyden, visuelt plassert nær starten av appsida?",
-			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om mekanismen er plassert nær starten av appsida.</p>\n<p><strong>Merk:</strong> Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen for styring av lyd.</p>",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om mekanismen er plassert nær starten av appsida.</p><p><strong>Merk:</strong> Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen for styring av lyd.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F23",

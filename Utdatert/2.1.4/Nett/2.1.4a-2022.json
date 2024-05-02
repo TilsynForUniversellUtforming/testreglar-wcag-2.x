@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For hurtigtastar som består av eit teikn er ein av følgjande er oppfylt:</p>\r\n<ul>\r\n<li>Slå av: Det finnast ein mekanisme for å slå av hurtigtasten.</li>\r\n<li>Omadressere: Det finnast ein mekanisme for å omadressere hurtigtasten til å bruke ein eller flere modifiseringstaster.</li>\r\n<li>Aktiv berre ved fokus: Hurtigtasten for ein brukergrensesnittkomponent er berre aktiv når komponenten kjem i fokus.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For hurtigtastar som består av eit teikn er ein av følgjande er oppfylt:</p><ul><li>Slå av: Det finnast ein mekanisme for å slå av hurtigtasten.</li><li>Omadressere: Det finnast ein mekanisme for å omadressere hurtigtasten til å bruke ein eller flere modifiseringstaster.</li><li>Aktiv berre ved fokus: Hurtigtasten for ein brukergrensesnittkomponent er berre aktiv når komponenten kjem i fokus.</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -60,7 +60,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Består tastatursnarvegen av berre eit teikn?",
-			"ht": "<p>Sjekk om tastatursnarvegen består av berre eit enkelt teikn.</p>\n<p><strong>Merk:</strong> Dette omfattar store bokstaver, små bokstaver, teiknsetting, siffer og symbol.</p>",
+			"ht": "<p>Sjekk om tastatursnarvegen består av berre eit enkelt teikn.</p><p><strong>Merk:</strong> Dette omfattar store bokstaver, små bokstaver, teiknsetting, siffer og symbol.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {

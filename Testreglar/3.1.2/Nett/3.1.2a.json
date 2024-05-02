@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For setningar/avsnitt som er skrivne på eit anna språk enn hovudspråket på nettsida, gjeld følgande:</p>\r\n<ul>\r\n<li>Elementet som setninga/avsnittet ligg i, har ein gyldig språkkode i HTML koden.</li>\r\n<li>Språkkoden samsvarar med språket som setninga/avsnittet er skrive på.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For setningar/avsnitt som er skrivne på eit anna språk enn hovudspråket på nettsida, gjeld følgande:</p><ul><li>Elementet som setninga/avsnittet ligg i, har ein gyldig språkkode i HTML koden.</li><li>Språkkoden samsvarar med språket som setninga/avsnittet er skrive på.</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [

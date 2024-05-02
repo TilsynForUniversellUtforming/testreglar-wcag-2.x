@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>For innhald som får fokus ved tastaturnavigasjon og må navigerast i ei bestemt rekkefølgje, er eit av følgande oppfylt:\r\n<ul>\r\n<li>tastaturrekkefølgje og visuell rekkefølgje er like, eller</li>\r\n<li>tastaturrekkefølgja og visuell rekkefølgje er ikkje like, men det er mogleg å forstå og bruke innhaldet</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p><ul><li>For innhald som får fokus ved tastaturnavigasjon og må navigerast i ei bestemt rekkefølgje, er eit av følgande oppfylt:<ul><li>tastaturrekkefølgje og visuell rekkefølgje er like, eller</li><li>tastaturrekkefølgja og visuell rekkefølgje er ikkje like, men det er mogleg å forstå og bruke innhaldet</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [

@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For innhold som får fokus ved tastaturnavigasjon og må navigeres i en bestemt rekkefølge, er ett av følgende alternativ oppfylt:</p>\r\n<ul>\r\n<li>tastaturrekkefølge og visuell rekkefølge er lik eller</li>\r\n<li>tastaturrekkefølge og visuell rekkefølge er ulik, men det er likevel mulig å forstå og bruke innholdet</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For innhold som får fokus ved tastaturnavigasjon og må navigeres i en bestemt rekkefølge, er ett av følgende alternativ oppfylt:</p><ul><li>tastaturrekkefølge og visuell rekkefølge er lik eller</li><li>tastaturrekkefølge og visuell rekkefølge er ulik, men det er likevel mulig å forstå og bruke innholdet</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Får du synleg fokusmarkering ved tastaturnavigasjon?",
-			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet.</li>\n<li>Følg nøye med på navigasjonen og informasjonen i eventuell statuslinje for å orientere deg på nettsida.</li>\n<li>Vi er avhengige av synleg fokusmarkør for å kunne gjennomføre testen. Synleg fokusmarkering blir testa på suksesskriterium 2.4.7.</li>\n</ul>",
+			"ht": "<p>Slik testar du:</p><ul><li>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet.</li><li>Følg nøye med på navigasjonen og informasjonen i eventuell statuslinje for å orientere deg på nettsida.</li><li>Vi er avhengige av synleg fokusmarkør for å kunne gjennomføre testen. Synleg fokusmarkering blir testa på suksesskriterium 2.4.7.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -43,7 +43,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Får du til å navigere på nettsida med tastaturet?",
-			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet. \n<ul>\n<li>Følg nøye med på navigasjonen og informasjonen i statuslinja i nettlesaren</li>\n<li>For å betene innhaldet kan du også bruke enter, mellomrom og pil.</li>\n<li>For å rygge med tastaturet, bruk Shift+Tab.</li>\n</ul>\n</li>\n<li>Det kan vere at du må opne menyar og modaler for å teste alt innhald.</li>\n</ul>",
+			"ht": "<p>Slik testar du:</p><ul><li>Trykk sakte på tab-tasten for å navigere på nettsida med tastaturet. <ul><li>Følg nøye med på navigasjonen og informasjonen i statuslinja i nettlesaren</li><li>For å betene innhaldet kan du også bruke enter, mellomrom og pil.</li><li>For å rygge med tastaturet, bruk Shift+Tab.</li></ul></li><li>Det kan vere at du må opne menyar og modaler for å teste alt innhald.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -59,7 +59,7 @@
 		{
 			"stegnr": "2.4",
 			"spm": "Er tastaturrekkefølgja på nettsida den same som den visuelle rekkefølgja på innhaldet?",
-			"ht": "<p>Slik testar du</p>\n<ul>\n<li>Trykk sakte på tab-tasten for å navigere med tastaturet.</li>\n<li>Naviger frå starten av nettsida.</li>\n<li>Navigasjonen skal gå gjennom kvar enkelt blokk av innhald, før den fortsetter vidare til neste blokk.</li>\n<li>Det kan vere at du må opne menyar og modaler for å teste alt innhald.</li>\n</ul>\n<p><strong>Merk:</strong> Ved opning av modaler held navigasjonen seg inne i modalen. Etter lukking fortsetter navigasjonen på elementet som opna modalen, eller første element etter.</p>\n<ul>\n<li>Du skal berre teste innhald det er mogleg å nå med tastaturet.</li>\n<li>Tastaturrekkefølgje er den rekkefølgja innhaldet får fokus i ved tastaturnavigering.</li>\n<li>For å betene innhaldet kan du også bruke enter, mellomrom og pil.</li>\n<li>For å rygge med tastaturet, bruk Shift+Tab.</li>\n</ul>",
+			"ht": "<p>Slik testar du</p><ul><li>Trykk sakte på tab-tasten for å navigere med tastaturet.</li><li>Naviger frå starten av nettsida.</li><li>Navigasjonen skal gå gjennom kvar enkelt blokk av innhald, før den fortsetter vidare til neste blokk.</li><li>Det kan vere at du må opne menyar og modaler for å teste alt innhald.</li></ul><p><strong>Merk:</strong> Ved opning av modaler held navigasjonen seg inne i modalen. Etter lukking fortsetter navigasjonen på elementet som opna modalen, eller første element etter.</p><ul><li>Du skal berre teste innhald det er mogleg å nå med tastaturet.</li><li>Tastaturrekkefølgje er den rekkefølgja innhaldet får fokus i ved tastaturnavigering.</li><li>For å betene innhaldet kan du også bruke enter, mellomrom og pil.</li><li>For å rygge med tastaturet, bruk Shift+Tab.</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"C27"
@@ -113,7 +113,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Må innhaldet ha ei bestemt tastaturrekkefølgje for at du skal kunne forstå og bruke innhaldet?",
-			"ht": "<p>Sjekk om meiningsinnhaldet blir påvirka av at rekkefølgja er ulik.</p>\n<p>Eksempel der rekkefølgja påvirker beteninga, er at fokusrekkefølgja navigerer gjennom alle skjemafelt før brukaren kjem til knappen for å sende inn.</p>\n<p><strong>Merk:</strong> Det kan vere fleire rekkefølgjer som gir same mening.</p>",
+			"ht": "<p>Sjekk om meiningsinnhaldet blir påvirka av at rekkefølgja er ulik.</p><p>Eksempel der rekkefølgja påvirker beteninga, er at fokusrekkefølgja navigerer gjennom alle skjemafelt før brukaren kjem til knappen for å sende inn.</p><p><strong>Merk:</strong> Det kan vere fleire rekkefølgjer som gir same mening.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {

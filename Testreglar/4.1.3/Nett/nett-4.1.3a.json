@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>For statusbeskjeder, som implementeres ved hjelp av oppmerkingsspråk, gjelder følgende</p>\r\n<ul>\r\n<li>Resultatet av en handling skal kodes med\r\n<ul>\r\n<li>role=\"status\" eller</li>\r\n<li>aria-live=\"polite\"</li>\r\n</ul>\r\n</li>\r\n<li>Ventetilstand skal kodes med\r\n<ul>\r\n<li>role=\"status\" eller</li>\r\n<li>aria-live=\"polite\"</li>\r\n</ul>\r\n</li>\r\n<li>Feil skal kodes med\r\n<ul>\r\n<li>role=\"alert\" eller</li>\r\n<li>aria-live=\"polite\" eller</li>\r\n<li>aria-live=\"assertive\"</li>\r\n</ul>\r\n</li>\r\n<li>Fremdriften i en prosess skal kodes med\r\n<ul>\r\n<li>role=\"progressbar\" eller</li>\r\n<li>elementet &lt;progress&gt; eller</li>\r\n<li>role=\"log\" eller</li>\r\n<li>role=\"status\" og aria-atomic=\"false\" eller</li>\r\n<li>aria-live=\"polite\" og aria-atomic=\"false\"</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For statusbeskjeder, som implementeres ved hjelp av oppmerkingsspråk, gjelder følgende</p><ul><li>Resultatet av en handling skal kodes med<ul><li>role=\"status\" eller</li><li>aria-live=\"polite\"</li></ul></li><li>Ventetilstand skal kodes med<ul><li>role=\"status\" eller</li><li>aria-live=\"polite\"</li></ul></li><li>Feil skal kodes med<ul><li>role=\"alert\" eller</li><li>aria-live=\"polite\" eller</li><li>aria-live=\"assertive\"</li></ul></li><li>Fremdriften i en prosess skal kodes med<ul><li>role=\"progressbar\" eller</li><li>elementet &lt;progress&gt; eller</li><li>role=\"log\" eller</li><li>role=\"status\" og aria-atomic=\"false\" eller</li><li>aria-live=\"polite\" og aria-atomic=\"false\"</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsiden statusbeskjeder?",
-			"ht": "<p>Slik identifiserer du mulige statusbeskjeder. Gjennomfør en handling og sjekk om du får informasjon som gjelder minst en av følgende situasjoner:</p>\n<ul>\n<li>Vellykketheten eller resultatet av en handling, for eksempel\n<ul>\n<li>etter et søk, oppdateres siden med informasjon «5 søketreff» i nærheten av søketreffene. </li>\n<li>etter at varer blir lagt i handlekurven i en nettbutikk, oppdateres siden med informasjon «5 varer» i nærheten av handlekurven. </li>\n<li>etter at skjema blir sendt inn, oppdateres siden med informasjon «Skjema sendt inn». </li>\n<li>etter at et bilde blir lagt til i et digitalt fotoalbum, oppdateres siden med informasjon «Lagret i fotoalbum». </li>\n</ul>\n</li>\n</ul>\n<ul>\n<li>Ventetilstand i en løsning, for eksempel\n<ul>\n<li>etter at brukeren setter i gang en prosess, viser et «Opptatt»-ikon</li>\n<li>Innlasting av siden med innlastingsikon</li>\n</ul>\n</li>\n</ul>\n<ul>\n<li>Fremdriften i en prosess, for eksempel\n<ul>\n<li>nye meldinger en i chat</li>\n<li>oppdatering av innholdet i en live logg</li>\n<li>framdriftsindikator med status for en oppdatering eller innlasting av siden f.eks. progressbar med intervall fra 1% til 100%.</li>\n</ul>\n</li>\n</ul>\n<ul>\n<li>Feilmeldinger, for eksempel\n<ul>\n<li>etter at brukeren skriver tekst i et i skjemafeltet for postnummer, oppdateres siden med informasjon “Feil inndata” over det aktuelle inndatafeltet. </li>\n<li>etter at brukeren skriver informasjon i feil format, oppdateres siden med informasjon «5 feil i skjemaet». </li>\n</ul>\n</li>\n</ul>\n<p>Statusbeskjeder innebærer ofte</p>\n<ul>\n<li>at det legges til/blir synlig ny tekst for å gi brukeren informasjon som nevnt over</li>\n<li>endringer i eksisterende statusbeskjed, for eksempel oppdatert antall</li>\n<li>statusbeskjed blir fjernet</li>\n<li>tekst som bare vises eller leses opp av hjelpemiddelteknologi </li>\n</ul>\n<p><strong>Merk</strong>: Ikke tekstlige statusbeskjeder skal også vurderes, for eksempel lyd eller ikoner</p>",
+			"ht": "<p>Slik identifiserer du mulige statusbeskjeder. Gjennomfør en handling og sjekk om du får informasjon som gjelder minst en av følgende situasjoner:</p><ul><li>Vellykketheten eller resultatet av en handling, for eksempel<ul><li>etter et søk, oppdateres siden med informasjon «5 søketreff» i nærheten av søketreffene. </li><li>etter at varer blir lagt i handlekurven i en nettbutikk, oppdateres siden med informasjon «5 varer» i nærheten av handlekurven. </li><li>etter at skjema blir sendt inn, oppdateres siden med informasjon «Skjema sendt inn». </li><li>etter at et bilde blir lagt til i et digitalt fotoalbum, oppdateres siden med informasjon «Lagret i fotoalbum». </li></ul></li></ul><ul><li>Ventetilstand i en løsning, for eksempel<ul><li>etter at brukeren setter i gang en prosess, viser et «Opptatt»-ikon</li><li>Innlasting av siden med innlastingsikon</li></ul></li></ul><ul><li>Fremdriften i en prosess, for eksempel<ul><li>nye meldinger en i chat</li><li>oppdatering av innholdet i en live logg</li><li>framdriftsindikator med status for en oppdatering eller innlasting av siden f.eks. progressbar med intervall fra 1% til 100%.</li></ul></li></ul><ul><li>Feilmeldinger, for eksempel<ul><li>etter at brukeren skriver tekst i et i skjemafeltet for postnummer, oppdateres siden med informasjon “Feil inndata” over det aktuelle inndatafeltet. </li><li>etter at brukeren skriver informasjon i feil format, oppdateres siden med informasjon «5 feil i skjemaet». </li></ul></li></ul><p>Statusbeskjeder innebærer ofte</p><ul><li>at det legges til/blir synlig ny tekst for å gi brukeren informasjon som nevnt over</li><li>endringer i eksisterende statusbeskjed, for eksempel oppdatert antall</li><li>statusbeskjed blir fjernet</li><li>tekst som bare vises eller leses opp av hjelpemiddelteknologi </li></ul><p><strong>Merk</strong>: Ikke tekstlige statusbeskjeder skal også vurderes, for eksempel lyd eller ikoner</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -58,7 +58,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Gir statusbeskjeden en kontekstendring?",
-			"ht": "<p>Gjenta handlingen som fører til beskjeden og sjekk om det skjer en kontekstendring, for eksempel at:</p>\n<ul>\n<li>fokus flyttes til beskjeden eller en annen brukergrensesnittkomponent</li>\n<li>åpnes et modalvindu</li>\n<li>åpnes et nytt vindu</li>\n<li>gås til en ny side</li>\n<li>skjer betydelig endring av innholdet på en side</li>\n</ul>\n<p>Kravet gjelder ikke dersom statusbeskjeden gir en kontekstendring. </p>",
+			"ht": "<p>Gjenta handlingen som fører til beskjeden og sjekk om det skjer en kontekstendring, for eksempel at:</p><ul><li>fokus flyttes til beskjeden eller en annen brukergrensesnittkomponent</li><li>åpnes et modalvindu</li><li>åpnes et nytt vindu</li><li>gås til en ny side</li><li>skjer betydelig endring av innholdet på en side</li></ul><p>Kravet gjelder ikke dersom statusbeskjeden gir en kontekstendring. </p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -75,7 +75,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Gir statusbeskjeden brukeren informasjon om vellykketheten eller resultatet av en handling?",
-			"ht": "<p>Sjekk om statusbeskjeden gir brukeren informasjon om vellykketheten eller resultatet av en handling, for eksempel:</p>\n<ul>\n<li>varer er lagt til eller fjernet fra en handlekurv</li>\n<li>søketreff etter at brukeren har gjort et søk</li>\n<li>data er lagret, skjema er oppdatert eller sendt inn</li>\n<li>ikoner med ulik farge viser status for eksempel grønn for tilgjengelig, rød for opptatt og gul for borte</li>\n<li>lydsignal om at en fil er flyttet til papirkurven</li>\n</ul>",
+			"ht": "<p>Sjekk om statusbeskjeden gir brukeren informasjon om vellykketheten eller resultatet av en handling, for eksempel:</p><ul><li>varer er lagt til eller fjernet fra en handlekurv</li><li>søketreff etter at brukeren har gjort et søk</li><li>data er lagret, skjema er oppdatert eller sendt inn</li><li>ikoner med ulik farge viser status for eksempel grønn for tilgjengelig, rød for opptatt og gul for borte</li><li>lydsignal om at en fil er flyttet til papirkurven</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -95,7 +95,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er containeren til elementet som inneholder statusbeskjeden, kodet med ARIA-attributtet role=\"status\"?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk kodeverktøyet i nettleseren for å sjekke om containeren til elementet som inneholder statusbeskjeden har ARIA-attributtet <code>role=\"status\"</code>.</li>\n</ul>\n<p><strong>Merk</strong>: Containeren kan være i <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;p&gt;</code> eller lignende elementer.</p>",
+			"ht": "<p>Slik tester du:</p><ul><li>Bruk kodeverktøyet i nettleseren for å sjekke om containeren til elementet som inneholder statusbeskjeden har ARIA-attributtet <code>role=\"status\"</code>.</li></ul><p><strong>Merk</strong>: Containeren kan være i <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;p&gt;</code> eller lignende elementer.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA22"
@@ -115,7 +115,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Er containeren til elementet som inneholder statusbeskjeden, kodet med ARIA-attributtet aria-live=\"polite\"?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder statusbeskjeden har ARIA-attributtet <code>aria-live=\"polite\"</code>.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder statusbeskjeden har ARIA-attributtet <code>aria-live=\"polite\"</code>.</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -134,7 +134,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Gir statusbeskjeden brukeren informasjon om en ventetilstand?",
-			"ht": "<p>Sjekk om statusbeskjeden gir brukeren informasjon om ventetilstand i en løsning, for eksempel at:</p>\n<ul>\n<li>En nettside er opptatt, laster eller venter</li>\n<li>Etter at brukeren har aktivert en prosess, viser et ikon om at applikasjonen er opptatt </li>\n<li>Tidligere ventetilstand endres og viser at en nettside nå er tilgjengelig</li>\n</ul>\n<p>Ventetilstander har ofte kort varighet, og kan være vanskelig å finne og teste.</p>\n<ul>\n<li>Slik justerer du varigheten av en ventetilstand\n<ul>\n<li>Velg \"Nettverk\" i kodeverktøy av nettleseren (Google Chrome)</li>\n<li>Slå av bufferen (Cache)</li>\n<li>Sett struping til \"Sakte 3G\"</li>\n<li>Last siden på nytt</li>\n<li>Når ventetilstanden viser, stopper du innlastning ved å trykke på knappen (X) ved siden av adresselinjen i nettleseren</li>\n</ul>\n</li>\n</ul>",
+			"ht": "<p>Sjekk om statusbeskjeden gir brukeren informasjon om ventetilstand i en løsning, for eksempel at:</p><ul><li>En nettside er opptatt, laster eller venter</li><li>Etter at brukeren har aktivert en prosess, viser et ikon om at applikasjonen er opptatt </li><li>Tidligere ventetilstand endres og viser at en nettside nå er tilgjengelig</li></ul><p>Ventetilstander har ofte kort varighet, og kan være vanskelig å finne og teste.</p><ul><li>Slik justerer du varigheten av en ventetilstand<ul><li>Velg \"Nettverk\" i kodeverktøy av nettleseren (Google Chrome)</li><li>Slå av bufferen (Cache)</li><li>Sett struping til \"Sakte 3G\"</li><li>Last siden på nytt</li><li>Når ventetilstanden viser, stopper du innlastning ved å trykke på knappen (X) ved siden av adresselinjen i nettleseren</li></ul></li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -151,7 +151,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Er containeren til elementet som inneholder statusbeskjeden, kodet med ARIA-attributtet role=\"status\"?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk kodeverktøyet i nettleseren for å sjekke om containeren til elementet som inneholder statusbeskjeden har ARIA-attributtet <code>role=\"status\"</code>.</li>\n</ul>\n<p><strong>Merk:</strong> Containeren kan være i <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;p&gt;</code> eller lignende elementer.</p>",
+			"ht": "<p>Slik tester du:</p><ul><li>Bruk kodeverktøyet i nettleseren for å sjekke om containeren til elementet som inneholder statusbeskjeden har ARIA-attributtet <code>role=\"status\"</code>.</li></ul><p><strong>Merk:</strong> Containeren kan være i <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;p&gt;</code> eller lignende elementer.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -169,7 +169,7 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Er containeren til elementet som inneholder statusbeskjeden, kodet med ARIA-attributtet aria-live=\"polite\"?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder statusbeskjeden har ARIA-attributtet <code>aria-live=\"polite\"</code>.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder statusbeskjeden har ARIA-attributtet <code>aria-live=\"polite\"</code>.</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -188,7 +188,7 @@
 		{
 			"stegnr": "3.9",
 			"spm": "Gir statusbeskjeden brukeren informasjon om at det har oppstått en feil?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Prøv å sende inn et tomt skjema eller legg inn informasjon med feil format.</li>\n<li>Sjekk om det blir vist informasjon om at det er feil i skjemaet, for eksempel at:</li>\n</ul>\n<ul>\n<li style=\"list-style-type: none;\">\n<ul>\n<li>Obligatoriske skjemafelter ikke er fylt ut</li>\n<li>Feil format skjemafelt for postnummer</li>\n<li>Forslag til retting av feil </li>\n</ul>\n</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Prøv å sende inn et tomt skjema eller legg inn informasjon med feil format.</li><li>Sjekk om det blir vist informasjon om at det er feil i skjemaet, for eksempel at:</li></ul><ul><li style=\"list-style-type: none;\"><ul><li>Obligatoriske skjemafelter ikke er fylt ut</li><li>Feil format skjemafelt for postnummer</li><li>Forslag til retting av feil </li></ul></li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -205,7 +205,7 @@
 		{
 			"stegnr": "3.10",
 			"spm": "Er containeren til elementet som inneholder statusbeskjeden, kodet med ARIA-attributtet role=\"alert\"?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder statusbeskjeden har ARIA-attributtet <code>role=\"alert\"</code>.</li>\n</ul>\n<p><strong>Merk:</strong> Containeren kan være i <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;p&gt;</code> eller lignende elementer.</p>",
+			"ht": "<p>Slik tester du:</p><ul><li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder statusbeskjeden har ARIA-attributtet <code>role=\"alert\"</code>.</li></ul><p><strong>Merk:</strong> Containeren kan være i <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;p&gt;</code> eller lignende elementer.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA19"
@@ -225,7 +225,7 @@
 		{
 			"stegnr": "3.11",
 			"spm": "Er containeren til elementet som inneholder statusbeskjeden, kodet med ARIA-attributtet aria-live=\"assertive\" eller aria-live=\"polite\"?",
-			"ht": "<p>Slik tester du: </p>\n<ul>\n<li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder statusbeskjeden har ARIA-attributtet <code>aria-live=\"assertive\"</code> eller <code>aria-live=\"polite\"</code>.</li>\n</ul>",
+			"ht": "<p>Slik tester du: </p><ul><li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder statusbeskjeden har ARIA-attributtet <code>aria-live=\"assertive\"</code> eller <code>aria-live=\"polite\"</code>.</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -244,7 +244,7 @@
 		{
 			"stegnr": "3.12",
 			"spm": "Gir statusbeskjeden brukeren informasjon om fremdriften i en prosess?",
-			"ht": "<p>Sjekk om statusbeskjeden gir brukeren informasjon om fremdriften i en prosess, for eksempel at:</p>\n<ul>\n<li>det er kommet ny informasjon i en live logg eller svar i en live chat</li>\n<li>en framdriftsindikator (progressbar) indikerer statusen til en oppgradering. </li>\n<li>innlasting eller oppdatering av en side</li>\n</ul>",
+			"ht": "<p>Sjekk om statusbeskjeden gir brukeren informasjon om fremdriften i en prosess, for eksempel at:</p><ul><li>det er kommet ny informasjon i en live logg eller svar i en live chat</li><li>en framdriftsindikator (progressbar) indikerer statusen til en oppgradering. </li><li>innlasting eller oppdatering av en side</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -261,7 +261,7 @@
 		{
 			"stegnr": "3.13",
 			"spm": "Tester du en framdriftsindikator (progressbar)?",
-			"ht": "<p>En framdriftsindikator (progressbar) indikerer for eksempel</p>\n<ul>\n<li>hvor langt en oppdatering er kommet</li>\n<li>lasting av bilder i et album</li>\n<li>lasting av en side</li>\n</ul>\n<p>Det blir vanligvis brukt for prosesser som tar litt tid. </p>",
+			"ht": "<p>En framdriftsindikator (progressbar) indikerer for eksempel</p><ul><li>hvor langt en oppdatering er kommet</li><li>lasting av bilder i et album</li><li>lasting av en side</li></ul><p>Det blir vanligvis brukt for prosesser som tar litt tid. </p>",
 			"type": "jaNei",
 			"kilde": [],
 			"svarArray": [
@@ -282,7 +282,7 @@
 		{
 			"stegnr": "3.14",
 			"spm": "Er containeren til elementet som inneholder statusbeskjeden om fremdriften, kodet med ARIA-attributtet role=\"progressbar\"?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder statusbeskjeden om fremdriften har ARIA-attributtet <code>role=\"progressbar\"</code>.</li>\n</ul>\n<p><strong>Merk:</strong> Containeren kan være i <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;p&gt;</code> eller lignende elementer.</p>",
+			"ht": "<p>Slik tester du:</p><ul><li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder statusbeskjeden om fremdriften har ARIA-attributtet <code>role=\"progressbar\"</code>.</li></ul><p><strong>Merk:</strong> Containeren kan være i <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;p&gt;</code> eller lignende elementer.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -300,7 +300,7 @@
 		{
 			"stegnr": "3.15",
 			"spm": "Er statusbeskjeden om fremdriften, kodet med elementet progress?",
-			"ht": "<p>Slik tester du: </p>\n<ul>\n<li>Bruk kodeverktøyet for å sjekke om statusbeskjeden om fremdriften er kodet med elementet <code>&lt;progress&gt;</code>.</li>\n</ul>",
+			"ht": "<p>Slik tester du: </p><ul><li>Bruk kodeverktøyet for å sjekke om statusbeskjeden om fremdriften er kodet med elementet <code>&lt;progress&gt;</code>.</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -319,7 +319,7 @@
 		{
 			"stegnr": "3.16",
 			"spm": "Er hovedcontaineren (parent-element) til elementet som inneholder logg, chat eller lignende data, kodet med ARIA-attributtet role=\"log\"?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk kodeverktøyet for å sjekke om hovedcontaineren (parent-elementet) til elementet som inneholder logg, chat eller lignende data har ARIA-attributtet <code>role=\"log\"</code>.</li>\n</ul>\n<p><strong>Merk:</strong> Containeren kan være i <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;p&gt;</code> eller lignende elementer.</p>",
+			"ht": "<p>Slik tester du:</p><ul><li>Bruk kodeverktøyet for å sjekke om hovedcontaineren (parent-elementet) til elementet som inneholder logg, chat eller lignende data har ARIA-attributtet <code>role=\"log\"</code>.</li></ul><p><strong>Merk:</strong> Containeren kan være i <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;p&gt;</code> eller lignende elementer.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA23"
@@ -339,7 +339,7 @@
 		{
 			"stegnr": "3.17",
 			"spm": "Er hovedcontaineren (parent-elementet) til elementet som inneholder logg, chat eller lignende data, kodet med ARIA-attributtet role=\"status\"?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk kodeverktøyet for å sjekke om hoved containeren (parent element) til elementet som inneholder logg, chat eller lignende data har ARIA-attributtet <code>role=\"status\"</code>.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Bruk kodeverktøyet for å sjekke om hoved containeren (parent element) til elementet som inneholder logg, chat eller lignende data har ARIA-attributtet <code>role=\"status\"</code>.</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA22"
@@ -358,7 +358,7 @@
 		{
 			"stegnr": "3.18",
 			"spm": "Er containeren til elementet som inneholder logg, chat eller lignende data, kodet med ARIA-attributtet aria-atomic=\"false\"?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder logg, chat eller lignende data har ARIA-attributtet <code>aria-atomic=\"false\"</code>. Du kan også bruke Accessiblity Tree for å sjekke dette.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder logg, chat eller lignende data har ARIA-attributtet <code>aria-atomic=\"false\"</code>. Du kan også bruke Accessiblity Tree for å sjekke dette.</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -377,7 +377,7 @@
 		{
 			"stegnr": "3.19",
 			"spm": "Er hovedcontaineren (parent-elementet) til elementet som inneholder logg, chat eller lignende data, kodet med ARIA-attributtet aria-live=\"polite\"?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Bruk kodeverktøyet for å sjekke om hoved containeren (parent element) til elementet som inneholder logg, chat eller lignende data har ARIA-attributtet <code>aria-live=\"polite\"</code>.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Bruk kodeverktøyet for å sjekke om hoved containeren (parent element) til elementet som inneholder logg, chat eller lignende data har ARIA-attributtet <code>aria-live=\"polite\"</code>.</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -395,7 +395,7 @@
 		{
 			"stegnr": "3.20",
 			"spm": "Er containeren til elementet som inneholder logg, chat eller lignende data, kodet med ARIA-attributtet aria-atomic=\"true\"?",
-			"ht": "<p>Slik tester du: </p>\n<ul>\n<li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder logg, chat eller lignende data har ARIA-attributtet <code>aria-atomic=\"true\"</code>. Du kan også bruke Accessiblity Tree for å sjekke dette.</li>\n</ul>",
+			"ht": "<p>Slik tester du: </p><ul><li>Bruk kodeverktøyet for å sjekke om containeren til elementet som inneholder logg, chat eller lignende data har ARIA-attributtet <code>aria-atomic=\"true\"</code>. Du kan også bruke Accessiblity Tree for å sjekke dette.</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {

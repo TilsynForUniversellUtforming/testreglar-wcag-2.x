@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Skjemaelement er kopla til ein ledetekst i koden. Dette kan gjerast på fleire måtar. Ledeteksten identifiserer skjemaelementet.</p>\r\n<p>Dersom skjemaelementet høyrer til ei gruppe, er det i tillegg kopla til ein ledetekst som gjeld for gruppa. Ledeteksten identifiserer gruppa.</p>",
+	"kravTilSamsvar": "<p>Skjemaelement er kopla til ein ledetekst i koden. Dette kan gjerast på fleire måtar. Ledeteksten identifiserer skjemaelementet.</p><p>Dersom skjemaelementet høyrer til ei gruppe, er det i tillegg kopla til ein ledetekst som gjeld for gruppa. Ledeteksten identifiserer gruppa.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [

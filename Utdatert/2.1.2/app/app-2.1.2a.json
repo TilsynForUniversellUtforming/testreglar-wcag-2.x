@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ol>\r\n<li>Det finst ikkje sveipefeller i skjermbildet, eller</li>\r\n<li>Det er mogleg å sveipe ut av sveipefella (dvs. det er ikkje ei sveipefelle)</li>\r\n</ol>",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p><ol><li>Det finst ikkje sveipefeller i skjermbildet, eller</li><li>Det er mogleg å sveipe ut av sveipefella (dvs. det er ikkje ei sveipefelle)</li></ol>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [

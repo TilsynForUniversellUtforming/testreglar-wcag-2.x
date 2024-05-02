@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Visuelle lister er korrekt kodet, basert på type liste:</p>\r\n<ul>\r\n<li>Nummererte lister er kodet som nummerert liste</li>\r\n<li>Unummererte lister er kodet som unummerert liste</li>\r\n<li>Beskrivende lister, det vil si lister som har to nivå og gir utfyllende forklaringer, er kodet som beskrivende lister</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Visuelle lister er korrekt kodet, basert på type liste:</p><ul><li>Nummererte lister er kodet som nummerert liste</li><li>Unummererte lister er kodet som unummerert liste</li><li>Beskrivende lister, det vil si lister som har to nivå og gir utfyllende forklaringer, er kodet som beskrivende lister</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har appsiden visuelle lister?",
-			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes visuelle lister på appsiden.</p>\n<p>Lister er informasjon som er gruppert og som ikke er løpende tekst.</p>\n<ul>\n<li>Lister kan være markert med for eksempel punkt eller tall</li>\n<li>Lister kan brukes til gruppere ulike termer/navn med beskrivelser eller definisjoner (beskrivende lister).</li>\n<li>Innholdsfortegnelser skal testes som liste</li>\n</ul>\n<p><strong>Merk: </strong>Du skal ikke teste</p>\n<ul>\n<li>Nedtrekkslister testes i app-4.1.2a</li>\n<li>Menyer testes i app-4.1.2a</li>\n<li><a href=\"https://developer.apple.com/tutorials/app-dev-training/displaying-data-in-a-list\" target=\"_blank\" rel=\"noopener\">List view i iOS</a> og <a href=\"https://developer.android.com/reference/android/widget/ListView\" target=\"_blank\" rel=\"noopener\">ListView Android</a></li>\n</ul>",
+			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes visuelle lister på appsiden.</p><p>Lister er informasjon som er gruppert og som ikke er løpende tekst.</p><ul><li>Lister kan være markert med for eksempel punkt eller tall</li><li>Lister kan brukes til gruppere ulike termer/navn med beskrivelser eller definisjoner (beskrivende lister).</li><li>Innholdsfortegnelser skal testes som liste</li></ul><p><strong>Merk: </strong>Du skal ikke teste</p><ul><li>Nedtrekkslister testes i app-4.1.2a</li><li>Menyer testes i app-4.1.2a</li><li><a href=\"https://developer.apple.com/tutorials/app-dev-training/displaying-data-in-a-list\" target=\"_blank\" rel=\"noopener\">List view i iOS</a> og <a href=\"https://developer.android.com/reference/android/widget/ListView\" target=\"_blank\" rel=\"noopener\">ListView Android</a></li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -58,7 +58,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Er listen korrekt kodet?",
-			"ht": "<p>Slik tester du:</p>\n<p><strong>iOS</strong></p>\n<ul>\n<li>Aktiver VoiceOver rotor\n<ul>\n<li>Innstillinger -&gt; Tilgjengelighet -&gt; VoiceOver -&gt;Rotor</li>\n<li>Velg Lister i Rotorobjekter</li>\n<li>Skru på Endre rotor etter objekt</li>\n</ul>\n</li>\n<li>Aktiver VoiceOver</li>\n<li>Åpne appsiden</li>\n<li>Bruk rotoren og sjekk om du kan velge lister</li>\n</ul>\n<p><strong>Android</strong></p>\n<ul>\n<li>Aktiver Talkback</li>\n<li>Åpne appsiden</li>\n<li>Trykk på teksten til første listeelement</li>\n<li>Sjekk om skjermleser leser\n<ul>\n<li>Første listeelement som 1 av totalt antall listeelementer </li>\n<li>Nivå 1 og antall listeelementer hvis listen også har en underliggende liste</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk: </strong>Visuell liste er ikke kodet som liste dersom</p>\n<ul>\n<li>Du ikke får  Lister som et alternativ i rotoren (iOS) </li>\n<li>Talkback ikke leser 1 av totalt antall listeelementer når du trykker på første listeelement (Android)</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><p><strong>iOS</strong></p><ul><li>Aktiver VoiceOver rotor<ul><li>Innstillinger -&gt; Tilgjengelighet -&gt; VoiceOver -&gt;Rotor</li><li>Velg Lister i Rotorobjekter</li><li>Skru på Endre rotor etter objekt</li></ul></li><li>Aktiver VoiceOver</li><li>Åpne appsiden</li><li>Bruk rotoren og sjekk om du kan velge lister</li></ul><p><strong>Android</strong></p><ul><li>Aktiver Talkback</li><li>Åpne appsiden</li><li>Trykk på teksten til første listeelement</li><li>Sjekk om skjermleser leser<ul><li>Første listeelement som 1 av totalt antall listeelementer </li><li>Nivå 1 og antall listeelementer hvis listen også har en underliggende liste</li></ul></li></ul><p><strong>Merk: </strong>Visuell liste er ikke kodet som liste dersom</p><ul><li>Du ikke får  Lister som et alternativ i rotoren (iOS) </li><li>Talkback ikke leser 1 av totalt antall listeelementer når du trykker på første listeelement (Android)</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -75,7 +75,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er listen en nummerert liste?",
-			"ht": "<p>Nummerert liste er en liste over elementer, der elementene er sortert med hensikt. Det innebærer at endring av rekkefølgen på elementene, også endrer betydningen.</p>\n<p>Listen kan være nummerert med for eksempel tall eller bokstaver.</p>\n<p><strong>Merk:</strong> Lister kan være nøstet. Dette er ok.</p>",
+			"ht": "<p>Nummerert liste er en liste over elementer, der elementene er sortert med hensikt. Det innebærer at endring av rekkefølgen på elementene, også endrer betydningen.</p><p>Listen kan være nummerert med for eksempel tall eller bokstaver.</p><p><strong>Merk:</strong> Lister kan være nøstet. Dette er ok.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -91,7 +91,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er listen korrekt kodet som nummerert liste?",
-			"ht": "<p>Merk: Du skal sveipe til høyre eller venstre for å få lest opp neste eller forrige listepunkt med innhold.</p>\n<p><strong>iOS</strong></p>\n<ul>\n<li>Bruk VoiceOver rotor og velg Lister</li>\n<li>Sveip til listen du tester og sjekk om skjermleser leser:\n<ul>\n<li>Første listeelement:\n<ul>\n<li>første listeelement med nummer eller bokstav og \"Starten på listen\"</li>\n</ul>\n</li>\n<li>Listeelementer mellom første listeelement og siste listeelement\n<ul>\n<li>nummer eller bokstav for det aktuelle listeelementet</li>\n</ul>\n</li>\n<li>Siste listeelement\n<ul>\n<li>siste listeelement med nummer eller bokstav og avslutter med \"Slutten av liste\"</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p><strong>Android</strong></p>\n<ul>\n<li>Bruk Talkback</li>\n<li>Sveip til listen du tester og sjekk om skjermleser leser:\n<ul>\n<li>Første listeelement:\n<ul>\n<li>første nummer eller bokstav i listepunkt og en av totalt antall listeelementer og totalt antall listeelementer </li>\n</ul>\n</li>\n<li>Listeelementer mellom første listeelement og siste listeelement\n<ul>\n<li>nummer eller bokstav for det aktuelle listepunktet og antall av totalt antall listeelementer </li>\n</ul>\n</li>\n<li>Siste listeelement\n<ul>\n<li>nummer eller bokstav i listepunkt og antall av totalt antall listeelementer</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>",
+			"ht": "<p>Merk: Du skal sveipe til høyre eller venstre for å få lest opp neste eller forrige listepunkt med innhold.</p><p><strong>iOS</strong></p><ul><li>Bruk VoiceOver rotor og velg Lister</li><li>Sveip til listen du tester og sjekk om skjermleser leser:<ul><li>Første listeelement:<ul><li>første listeelement med nummer eller bokstav og \"Starten på listen\"</li></ul></li><li>Listeelementer mellom første listeelement og siste listeelement<ul><li>nummer eller bokstav for det aktuelle listeelementet</li></ul></li><li>Siste listeelement<ul><li>siste listeelement med nummer eller bokstav og avslutter med \"Slutten av liste\"</li></ul></li></ul></li></ul><p><strong>Android</strong></p><ul><li>Bruk Talkback</li><li>Sveip til listen du tester og sjekk om skjermleser leser:<ul><li>Første listeelement:<ul><li>første nummer eller bokstav i listepunkt og en av totalt antall listeelementer og totalt antall listeelementer </li></ul></li><li>Listeelementer mellom første listeelement og siste listeelement<ul><li>nummer eller bokstav for det aktuelle listepunktet og antall av totalt antall listeelementer </li></ul></li><li>Siste listeelement<ul><li>nummer eller bokstav i listepunkt og antall av totalt antall listeelementer</li></ul></li></ul></li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"ListItemStyle",
@@ -113,7 +113,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Er liste en unummerert liste?",
-			"ht": "<p>Unummerert liste er en liste over elementer, der rekkefølgen på elementene ikke er viktig. Det vil si at endring av rekkefølgen på elementene, ikke endrer betydningen.</p>\n<p>Listen kan være organisert med kulepunkt, strekpunkt eller lignende.</p>\n<p><strong>Merk:</strong> Lister kan være nøsta. Dette er ok.</p>",
+			"ht": "<p>Unummerert liste er en liste over elementer, der rekkefølgen på elementene ikke er viktig. Det vil si at endring av rekkefølgen på elementene, ikke endrer betydningen.</p><p>Listen kan være organisert med kulepunkt, strekpunkt eller lignende.</p><p><strong>Merk:</strong> Lister kan være nøsta. Dette er ok.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
@@ -129,7 +129,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Er listen korrekt kodet som unummerert liste?",
-			"ht": "<p><strong>Merk</strong>: Du skal sveipe til høyre eller venstre for å få lest opp neste eller forrige listepunkt med innhold.</p>\n<p><strong>iOS</strong></p>\n<ul>\n<li>Bruk VoiceOver rotor og velg Lister</li>\n<li>Sveip til listen du tester og sjekk om skjermleser leser:\n<ul>\n<li>Første listeelement:\n<ul>\n<li>punkttegn eller lignende tegn og \"Starten på listen\"</li>\n</ul>\n</li>\n<li>Listeelementer mellom første listeelement og siste listeelement\n<ul>\n<li>kun punkttegn</li>\n</ul>\n</li>\n<li>Siste listeelement\n<ul>\n<li>avslutter med punkttegn og \"Slutten av liste\"</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p><strong>Android</strong></p>\n<ul>\n<li>Bruk Talkback</li>\n<li>Sveip til listen du tester og sjekk om skjermleser leser:\n<ul>\n<li>Første listeelement:\n<ul>\n<li>punkttegn eller lignende tegn og en av totalt antall listeelementer, samt totalt antall listeelementer </li>\n</ul>\n</li>\n<li>Listeelementer mellom første listeelement og siste listeelement\n<ul>\n<li>punkttegn og antall av totalt antall listeelementer </li>\n</ul>\n</li>\n<li>Siste listeelement\n<ul>\n<li>punkttegn og antall av totalt antall listeelementer</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>",
+			"ht": "<p><strong>Merk</strong>: Du skal sveipe til høyre eller venstre for å få lest opp neste eller forrige listepunkt med innhold.</p><p><strong>iOS</strong></p><ul><li>Bruk VoiceOver rotor og velg Lister</li><li>Sveip til listen du tester og sjekk om skjermleser leser:<ul><li>Første listeelement:<ul><li>punkttegn eller lignende tegn og \"Starten på listen\"</li></ul></li><li>Listeelementer mellom første listeelement og siste listeelement<ul><li>kun punkttegn</li></ul></li><li>Siste listeelement<ul><li>avslutter med punkttegn og \"Slutten av liste\"</li></ul></li></ul></li></ul><p><strong>Android</strong></p><ul><li>Bruk Talkback</li><li>Sveip til listen du tester og sjekk om skjermleser leser:<ul><li>Første listeelement:<ul><li>punkttegn eller lignende tegn og en av totalt antall listeelementer, samt totalt antall listeelementer </li></ul></li><li>Listeelementer mellom første listeelement og siste listeelement<ul><li>punkttegn og antall av totalt antall listeelementer </li></ul></li><li>Siste listeelement<ul><li>punkttegn og antall av totalt antall listeelementer</li></ul></li></ul></li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"ListItemStyle",

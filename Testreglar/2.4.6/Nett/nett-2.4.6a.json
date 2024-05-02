@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsida synlege overskrifter?",
-			"ht": "<p>Overskrifter er kjenneteikna av at brukaren får kort informasjon om temaet for eller formålet med teksten, avsnittet, lista, skjemaet eller anna innhald som står etter overskrifta:</p>\n<ul>\n<li>Dei har ofte større eller utheva skrift, samanlikna med brødtekst. </li>\n<li>Overskrifter kan ligge i hovudinnhald, meny, topptekst, botntekst, skjema, tabell og bilde.</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Det er ikkje eit krav om at nettsider har overskrifter, men at dei skal beskriva innhaldet der dei er brukt</li>\n<li>Du skal  ikkje vurdera om overskrifter er koda som overskrifter, det er dekka av SK 1.3.1. </li>\n</ul>",
+			"ht": "<p>Overskrifter er kjenneteikna av at brukaren får kort informasjon om temaet for eller formålet med teksten, avsnittet, lista, skjemaet eller anna innhald som står etter overskrifta:</p><ul><li>Dei har ofte større eller utheva skrift, samanlikna med brødtekst. </li><li>Overskrifter kan ligge i hovudinnhald, meny, topptekst, botntekst, skjema, tabell og bilde.</li></ul><p><strong>Merk:</strong></p><ul><li>Det er ikkje eit krav om at nettsider har overskrifter, men at dei skal beskriva innhaldet der dei er brukt</li><li>Du skal  ikkje vurdera om overskrifter er koda som overskrifter, det er dekka av SK 1.3.1. </li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -58,7 +58,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Gi ein kort beskrivelse av emne eller formål med innhaldet som høyrer til den aktuelle overskrifta.",
-			"ht": "<p>Beskriv innhaldet med få ord.</p>\n<p><strong>Merk:</strong> Du skal ikkje innspisere koden.</p>",
+			"ht": "<p>Beskriv innhaldet med få ord.</p><p><strong>Merk:</strong> Du skal ikkje innspisere koden.</p>",
 			"type": "tekst",
 			"label": "Emne eller formål med innhaldet:",
 			"multilinje": true,
@@ -73,7 +73,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Beskriv overskrifta emnet eller formålet med innhaldet?",
-			"ht": "<p>Gjer ei skjønnsmesseg vurdering av om overskrifta beskriv emnet eller formålet med innhaldet den høyrer til.</p>\n<p><strong>Merk:</strong> Overskrifta treng ikkje å vere lang, men skal beskrive/oppsummere det viktigaste med innhaldet for brukaren.</p>\n<p>Eit ord eller et enkelt teikn kan være tilstrekkeleg, for eksempel ei alfabetisk liste.</p>",
+			"ht": "<p>Gjer ei skjønnsmesseg vurdering av om overskrifta beskriv emnet eller formålet med innhaldet den høyrer til.</p><p><strong>Merk:</strong> Overskrifta treng ikkje å vere lang, men skal beskrive/oppsummere det viktigaste med innhaldet for brukaren.</p><p>Eit ord eller et enkelt teikn kan være tilstrekkeleg, for eksempel ei alfabetisk liste.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G130"

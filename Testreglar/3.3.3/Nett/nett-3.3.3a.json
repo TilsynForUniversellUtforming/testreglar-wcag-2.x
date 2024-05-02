@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>For inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting får brukeren</p>\r\n<ul>\r\n<li>et forslag med informasjon om hvordan feil kan rettes og</li>\r\n<li>forslaget er kodet som tekst og</li>\r\n<li>det er enkelt for brukeren å navigere til feilen og</li>\r\n<li>inndata blir liggende i inndataelementet, med mindre informasjonen er knyttet til sikkerhet</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For inndataelement der inndatafeil blir oppdaget automatisk, og det finnes kjente forslag til retting får brukeren</p><ul><li>et forslag med informasjon om hvordan feil kan rettes og</li><li>forslaget er kodet som tekst og</li><li>det er enkelt for brukeren å navigere til feilen og</li><li>inndata blir liggende i inndataelementet, med mindre informasjonen er knyttet til sikkerhet</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -43,7 +43,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Hvilket skjema/skjemaelement tester du?",
-			"ht": "<p>Beskriv skjema/skjemaelement, slik at det er mulig å identifisere det i ettertid. </p>\n<p><strong>Merk:</strong> Hvis skjema/skjemaelement inngår i en prosess skal du også beskrive prosessen.</p>",
+			"ht": "<p>Beskriv skjema/skjemaelement, slik at det er mulig å identifisere det i ettertid. </p><p><strong>Merk:</strong> Hvis skjema/skjemaelement inngår i en prosess skal du også beskrive prosessen.</p>",
 			"type": "tekst",
 			"label": "Skjema/prosess:",
 			"multilinje": true,
@@ -58,7 +58,7 @@
 		{
 			"stegnr": "2.4",
 			"spm": "Oppdager skjemaet automatisk at utfylt inndata har feil format eller verdi?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Legg inn feil inndata i alle skjemaelement\n<ul>\n<li>Hvis skjemaelementer er forhåndsutfylt, endre forhåndsutfylt informasjon til feil inndata format eller verdi der det er mulig.</li>\n<li>Forhåndsutfylt informasjon betyr at det allerede står inndata i skjemaet når testsiden er lastet inn.</li>\n<li>I sitasjon nettsiden krever informasjon, men som brukeren har utelatt, for eksempel du ikke har krysset av i en avkryssingsboks</li>\n</ul>\n</li>\n<li>Prøv deretter å fullføre/sende inn eller gå videre i skjemaet.</li>\n</ul>\n<p><strong>Merk:</strong> Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes.</p>\n<p>Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut informasjon rett format eller verdi, indikerer at brukeren har fylt ut inndata som faller utenfor påkrevd dataformat eller verdier, og at dette oppdages automatisk, uten at brukeren er involvert.</p>\n<p>Eksempel på feil inndata er:</p>\n<ul>\n<li>Postnummer som inneholder bokstaver.</li>\n<li>Navn som inneholder tall eller spesialtegn.</li>\n<li>Ugyldig e-postformat.</li>\n<li>Ugyldig datoformat.</li>\n<li>Ugyldig telefonnummer.</li>\n<li>Data utenfor grenseverdi, for eksempel måned 14 i en dato. </li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Legg inn feil inndata i alle skjemaelement<ul><li>Hvis skjemaelementer er forhåndsutfylt, endre forhåndsutfylt informasjon til feil inndata format eller verdi der det er mulig.</li><li>Forhåndsutfylt informasjon betyr at det allerede står inndata i skjemaet når testsiden er lastet inn.</li><li>I sitasjon nettsiden krever informasjon, men som brukeren har utelatt, for eksempel du ikke har krysset av i en avkryssingsboks</li></ul></li><li>Prøv deretter å fullføre/sende inn eller gå videre i skjemaet.</li></ul><p><strong>Merk:</strong> Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes.</p><p>Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut informasjon rett format eller verdi, indikerer at brukeren har fylt ut inndata som faller utenfor påkrevd dataformat eller verdier, og at dette oppdages automatisk, uten at brukeren er involvert.</p><p>Eksempel på feil inndata er:</p><ul><li>Postnummer som inneholder bokstaver.</li><li>Navn som inneholder tall eller spesialtegn.</li><li>Ugyldig e-postformat.</li><li>Ugyldig datoformat.</li><li>Ugyldig telefonnummer.</li><li>Data utenfor grenseverdi, for eksempel måned 14 i en dato. </li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
@@ -90,7 +90,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Blir informasjonen du har fylt ut liggende i skjemaelementet?",
-			"ht": "<p>Hovedregelen er at informasjon som er fylt ut skal bli liggende i skjemaet, selv om det blir oppdaget inndatafeil. Unntaket er dersom informasjonen er knyttet til sikkerhet.</p>\n<p><strong>Merk:</strong> Det er ok at feil inndata blir korrigert automatisk.</p>",
+			"ht": "<p>Hovedregelen er at informasjon som er fylt ut skal bli liggende i skjemaet, selv om det blir oppdaget inndatafeil. Unntaket er dersom informasjonen er knyttet til sikkerhet.</p><p><strong>Merk:</strong> Det er ok at feil inndata blir korrigert automatisk.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G83",
@@ -112,7 +112,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Får du tekstlig forslag til retting av inndatafeil?",
-			"ht": "<p>Forslag til retting av inndatafeil kan for eksempel vises</p>\n<ul>\n<li>i et modalvindu</li>\n<li>i ledeteksten til skjemaelement</li>\n<li>et annet sted i skjemaet/på siden, for eksempel på toppen</li>\n<li>når du navigerer i skjemaet</li>\n</ul>\n<p>Forslag til retting av inndatafeil kan for eksempel</p>\n<ul>\n<li>stå i direkte tilknytning til skjemaelementet, for eksempel i ledeteksten </li>\n<li>stå et annet sted på nettsiden</li>\n<li>være lenket til på en annen nettside. Slike lenker skal stå i nærheten av inndataelementet der feilen har oppstått.</li>\n</ul>\n<p><strong>Merk:</strong> Du skal ikke vurdere kvaliteten på forslaget.</p>\n<p>Det er ikke nok å identifisere feilen utelukkende med for eksempel </p>\n<ul>\n<li>et symbol i ledeteksten</li>\n<li>ved å endre farge</li>\n<li>visuell plassering av feilmeldingen</li>\n<li>deaktivert knapp for å sende inn eller gå videre i skjemaet</li>\n<li>lignende ikke-tekstlige indikatorer</li>\n</ul>",
+			"ht": "<p>Forslag til retting av inndatafeil kan for eksempel vises</p><ul><li>i et modalvindu</li><li>i ledeteksten til skjemaelement</li><li>et annet sted i skjemaet/på siden, for eksempel på toppen</li><li>når du navigerer i skjemaet</li></ul><p>Forslag til retting av inndatafeil kan for eksempel</p><ul><li>stå i direkte tilknytning til skjemaelementet, for eksempel i ledeteksten </li><li>stå et annet sted på nettsiden</li><li>være lenket til på en annen nettside. Slike lenker skal stå i nærheten av inndataelementet der feilen har oppstått.</li></ul><p><strong>Merk:</strong> Du skal ikke vurdere kvaliteten på forslaget.</p><p>Det er ikke nok å identifisere feilen utelukkende med for eksempel </p><ul><li>et symbol i ledeteksten</li><li>ved å endre farge</li><li>visuell plassering av feilmeldingen</li><li>deaktivert knapp for å sende inn eller gå videre i skjemaet</li><li>lignende ikke-tekstlige indikatorer</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G84",
@@ -132,7 +132,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er forlaget til retting kodet som tekst?",
-			"ht": "<p>Dette kan du sjekke på flere måter:</p>\n<p><strong>Alternativ 1:</strong></p>\n<ul>\n<li>Prøv å markere teksten med mus eller tastatur. Dette indikerer at testen er kodet som tekst, og ikke er et bilde av tekst.</li>\n</ul>\n<p><strong>Alternativ 2:</strong></p>\n<ul>\n<li>Åpne kodeverktøyet i nettleseren.</li>\n<li>Bruk \"select\" funksjonen i verktøyet og marker teksten.</li>\n<li>Sjekk at teksten er kodet som tekst, ved å se om du finner igjen teksten i koden.</li>\n</ul>\n<p><strong>Merk:</strong> Dersom skjemaelementet har attributtet \"required\" eller aria-required=\"true\", kommer det fram en melding i nettleseren. Denne meldingen er kodet som tekst.</p>",
+			"ht": "<p>Dette kan du sjekke på flere måter:</p><p><strong>Alternativ 1:</strong></p><ul><li>Prøv å markere teksten med mus eller tastatur. Dette indikerer at testen er kodet som tekst, og ikke er et bilde av tekst.</li></ul><p><strong>Alternativ 2:</strong></p><ul><li>Åpne kodeverktøyet i nettleseren.</li><li>Bruk \"select\" funksjonen i verktøyet og marker teksten.</li><li>Sjekk at teksten er kodet som tekst, ved å se om du finner igjen teksten i koden.</li></ul><p><strong>Merk:</strong> Dersom skjemaelementet har attributtet \"required\" eller aria-required=\"true\", kommer det fram en melding i nettleseren. Denne meldingen er kodet som tekst.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -149,7 +149,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Gir forslaget tilstrekkelig informasjon om hvordan du kan rette inndatafeilen?",
-			"ht": "<p>Hvis elementet krever inndata i et bestemt format, skal alle element som inngår i formatet, stå i forslaget. Når det gjelder for eksempel e-post, er det ikke tilstrekkelig bare å oppgi at formatet forutsetter @, når formatet er på formen a@b.no.</p>\n<p>Forslag til retting av inndatafeil kan for eksempel være</p>\n<ul>\n<li>forslag om rett stavemåte</li>\n<li>forslag om tilsvarende tekst eller begrep</li>\n<li>beskrivelse av hva som er rett inndata</li>\n<li>liste med hva som er rett inndata</li>\n<li>spørsmål på formen «mente du …?» eller tilsvarende</li>\n</ul>",
+			"ht": "<p>Hvis elementet krever inndata i et bestemt format, skal alle element som inngår i formatet, stå i forslaget. Når det gjelder for eksempel e-post, er det ikke tilstrekkelig bare å oppgi at formatet forutsetter @, når formatet er på formen a@b.no.</p><p>Forslag til retting av inndatafeil kan for eksempel være</p><ul><li>forslag om rett stavemåte</li><li>forslag om tilsvarende tekst eller begrep</li><li>beskrivelse av hva som er rett inndata</li><li>liste med hva som er rett inndata</li><li>spørsmål på formen «mente du …?» eller tilsvarende</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G177"
@@ -169,7 +169,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Finnes det kjente forslag til hvordan inndatafeilen kan rettes?",
-			"ht": "<p>Kjente forslag er for eksempel</p>\n<ul>\n<li>forslag om rett stavemåte</li>\n<li>forslag om tilsvarende tekst eller begrep</li>\n<li>beskrivelse av hva som er rett inndata</li>\n<li>liste med hva som er rett inndata</li>\n<li>spørsmål på formen «mente du …?» eller tilsvarende</li>\n</ul>\n<p>Det finnes for eksempel kjente forslag for følgende</p>\n<ul>\n<li>e-post, postnummer, fødselsdato, telefonnummer osv</li>\n</ul>\n<p>Det er ikke nødvendig å gi forslag til retting av feil dersom</p>\n<ul>\n<li>det gjelder skjemaelement knyttet til sikkerhet, for eksempel passord</li>\n<li>forslag til retting undergraver formålet, for eksempel svar i en quiz</li>\n</ul>",
+			"ht": "<p>Kjente forslag er for eksempel</p><ul><li>forslag om rett stavemåte</li><li>forslag om tilsvarende tekst eller begrep</li><li>beskrivelse av hva som er rett inndata</li><li>liste med hva som er rett inndata</li><li>spørsmål på formen «mente du …?» eller tilsvarende</li></ul><p>Det finnes for eksempel kjente forslag for følgende</p><ul><li>e-post, postnummer, fødselsdato, telefonnummer osv</li></ul><p>Det er ikke nødvendig å gi forslag til retting av feil dersom</p><ul><li>det gjelder skjemaelement knyttet til sikkerhet, for eksempel passord</li><li>forslag til retting undergraver formålet, for eksempel svar i en quiz</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {

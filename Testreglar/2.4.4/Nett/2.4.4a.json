@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>Lenker som inneheld tekst oppfyller kravet dersom:\r\n<ol>\r\n<li>lenketeksten åleine gir informasjon om formålet med lenka eller</li>\r\n<li>lenketeksten saman med programmeringsmessig bestemt kontekst, gir informasjon om formålet med lenka</li>\r\n</ol>\r\n</li>\r\n<li>Vi gjer ei skjønnsmessig vurdering av om lenketeksten gir informasjon om lenkemålet. Vi krev ikkje at lenkemålet er presist skrive.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p><ul><li>Lenker som inneheld tekst oppfyller kravet dersom:<ol><li>lenketeksten åleine gir informasjon om formålet med lenka eller</li><li>lenketeksten saman med programmeringsmessig bestemt kontekst, gir informasjon om formålet med lenka</li></ol></li><li>Vi gjer ei skjønnsmessig vurdering av om lenketeksten gir informasjon om lenkemålet. Vi krev ikkje at lenkemålet er presist skrive.</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har nettsida lenker som inneheld tekst?",
-			"ht": "<p>Sjå på sida og leit etter lenker. Lenka sin plassering er utan betydning, og kan for eksempel ligge i ein meny, liste, tabell osv.</p>\n<p><strong>Merk: </strong>Du skal ikkje teste knappar og lenker som inneheld bilde, desse blir testa i eigne testreglar.</p>",
+			"ht": "<p>Sjå på sida og leit etter lenker. Lenka sin plassering er utan betydning, og kan for eksempel ligge i ein meny, liste, tabell osv.</p><p><strong>Merk: </strong>Du skal ikkje teste knappar og lenker som inneheld bilde, desse blir testa i eigne testreglar.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {

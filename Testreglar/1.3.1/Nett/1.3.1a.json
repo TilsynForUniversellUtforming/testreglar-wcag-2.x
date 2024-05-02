@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<ul>\r\n<li>Visuelle overskrifter er koda som overskrift.</li>\r\n<li>Overskrifter som inngår i eit visuelt overskriftshierarki, er koda med rett overskriftsnivå.</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul><li>Visuelle overskrifter er koda som overskrift.</li><li>Overskrifter som inngår i eit visuelt overskriftshierarki, er koda med rett overskriftsnivå.</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -98,7 +98,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er den visuelle overskrifta koda med noko anna som ivaretek den visuelle presentasjonen?",
-			"ht": "<p>Eksempel på koding er:</p>\n<ul>\n<li>unummerert liste, koda med &lt;ul&gt; og &lt;li&gt; for kvart listepunkt</li>\n<li>nummerert liste, koda med &lt;ol&gt; og &lt;li&gt; for kvart listepunkt</li>\n<li>deskriptiv liste, koda med &lt;dl&gt;, &lt;dd&gt; og &lt;dt&gt;</li>\n<li>Ledetekst koda som &lt;label&gt;</li>\n</ul>",
+			"ht": "<p>Eksempel på koding er:</p><ul><li>unummerert liste, koda med &lt;ul&gt; og &lt;li&gt; for kvart listepunkt</li><li>nummerert liste, koda med &lt;ol&gt; og &lt;li&gt; for kvart listepunkt</li><li>deskriptiv liste, koda med &lt;dl&gt;, &lt;dd&gt; og &lt;dt&gt;</li><li>Ledetekst koda som &lt;label&gt;</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"F2",

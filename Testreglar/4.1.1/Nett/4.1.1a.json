@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Nettsida får ikkje \"Fatal Error\" ved validering, og inneheld ikkje syntaksfeil av følgande type:</p>\r\n<ul>\r\n<li>feil nøsting av element</li>\r\n<li>element som ikkje er avslutta korrekt</li>\r\n<li>element som har same attributt fleire gonger</li>\r\n<li>element som har ID-ar som ikkje er unike</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Nettsida får ikkje \"Fatal Error\" ved validering, og inneheld ikkje syntaksfeil av følgande type:</p><ul><li>feil nøsting av element</li><li>element som ikkje er avslutta korrekt</li><li>element som har same attributt fleire gonger</li><li>element som har ID-ar som ikkje er unike</li></ul>",
 	"side": "2.1",
 	"element": "Side",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Har nettsida valideringsfeil?",
-			"ht": "<p>For å sjekke sida for valideringsfeil kan du bruke <a href=\"https://validator.w3.org/\" target=\"_blank\" rel=\"noopener\">W3C sin kodevalidator</a>.</p>\n<p>Sjekk om validatoren gir feil av type \"Errors\".</p>",
+			"ht": "<p>For å sjekke sida for valideringsfeil kan du bruke <a href=\"https://validator.w3.org/\" target=\"_blank\" rel=\"noopener\">W3C sin kodevalidator</a>.</p><p>Sjekk om validatoren gir feil av type \"Errors\".</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G134"
@@ -47,7 +47,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Kor mange tilfelle er det av feil nøsting av element?",
-			"ht": "<p>Feilbeskrivinga vil innehalde noko av det følgjande:</p>\n<ul>\n<li>\"Element [navn på element] not allowed…\"</li>\n<li>\"The element [navn på element] must not appear as a descendant of the [navn på element] element\"</li>\n</ul>",
+			"ht": "<p>Feilbeskrivinga vil innehalde noko av det følgjande:</p><ul><li>\"Element [navn på element] not allowed…\"</li><li>\"The element [navn på element] must not appear as a descendant of the [navn på element] element\"</li></ul>",
 			"kilde": [
 				"H74"
 			],

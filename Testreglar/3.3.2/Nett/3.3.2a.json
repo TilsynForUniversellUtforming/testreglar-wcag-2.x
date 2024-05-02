@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Alle skjemaelement har ledetekstar eller instruksjonar som set brukaren i stand til å betene skjemaet. Følgande skal vere oppfylt:</p>\r\n<ul>\r\n<li>Skjemaelementa har ein visuell identifikasjon i form av ledetekst, instruksjon eller ikon/symbol/bilde.</li>\r\n<li>Identifikasjonen er visuelt plassert i eller rett ved skjemaelementa.</li>\r\n<li>Identifikasjonen er alltid synleg når skjemaelementa er i fokus.</li>\r\n<li>Ikon/symbol/bilde er identifisert i koden.</li>\r\n<li>Det er opplyst om skjemaelementa er obligatoriske, eventuell merking med symbol skal vere forklart før det blir teke i bruk.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Alle skjemaelement har ledetekstar eller instruksjonar som set brukaren i stand til å betene skjemaet. Følgande skal vere oppfylt:</p><ul><li>Skjemaelementa har ein visuell identifikasjon i form av ledetekst, instruksjon eller ikon/symbol/bilde.</li><li>Identifikasjonen er visuelt plassert i eller rett ved skjemaelementa.</li><li>Identifikasjonen er alltid synleg når skjemaelementa er i fokus.</li><li>Ikon/symbol/bilde er identifisert i koden.</li><li>Det er opplyst om skjemaelementa er obligatoriske, eventuell merking med symbol skal vere forklart før det blir teke i bruk.</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -69,8 +69,8 @@
 		},
 		{
 			"stegnr": "2.5",
-			"spm": "Inneheld skjemaet ein av følgjande:\n<ul>\n<li>berre eitt enkelt felt?</li>\n<li>tekstleg informasjon om at ALLE felt er obligatoriske?</li>\n</ul>",
-			"ht": "<p>I eit skjema som berre består av eitt enkelt skjemaelt, er feltet rekna som obligatorisk utan at det er behov for å merke det.</p>\n<p>Merk at dette gjeld ein situasjon der ALLE skjemafelt er obligatoriske. Informasjonen om obligatoriske felt skal vere plassert innleiingsvis i skjemaet. Situasjonen med at enkelte felt er obligatoriske, vert behandla seinare.</p>\n<p>Du kan for eksempel bruke Ctrl+F for å søke etter ord som obligatorisk og påkrevd.</p>",
+			"spm": "Inneheld skjemaet ein av følgjande:<ul><li>berre eitt enkelt felt?</li><li>tekstleg informasjon om at ALLE felt er obligatoriske?</li></ul>",
+			"ht": "<p>I eit skjema som berre består av eitt enkelt skjemaelt, er feltet rekna som obligatorisk utan at det er behov for å merke det.</p><p>Merk at dette gjeld ein situasjon der ALLE skjemafelt er obligatoriske. Informasjonen om obligatoriske felt skal vere plassert innleiingsvis i skjemaet. Situasjonen med at enkelte felt er obligatoriske, vert behandla seinare.</p><p>Du kan for eksempel bruke Ctrl+F for å søke etter ord som obligatorisk og påkrevd.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"alle": {

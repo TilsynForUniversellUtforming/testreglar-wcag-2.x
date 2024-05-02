@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Lyd som startar automatisk og ikkje stoppar innan 3 sekund har ein mekanisme for styring av lyd som: </p>\r\n<ul>\r\n<li>er visuelt plassert nær starten av sida</li>\r\n<li>kan brukast med tastatur</li>\r\n<li>er tidleg i tab-rekkefølga (maksimalt 5 tabsteg)</li>\r\n<li>har visuell markering i form av tekst eller symbol</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Lyd som startar automatisk og ikkje stoppar innan 3 sekund har ein mekanisme for styring av lyd som: </p><ul><li>er visuelt plassert nær starten av sida</li><li>kan brukast med tastatur</li><li>er tidleg i tab-rekkefølga (maksimalt 5 tabsteg)</li><li>har visuell markering i form av tekst eller symbol</li></ul>",
 	"side": "2.1",
 	"element": "Side",
 	"steg": [

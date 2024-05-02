@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>For nettsider med innhald som bevegar seg, blinkar eller rullar i meir enn 5 sekundar, og som blir vist saman med anna innhald og ikkje er ein nødvendig del av ei handling, er ein av følgande oppfylt:\r\n<ul>\r\n<li>Det finst ein mekanisme for å pause, stoppe eller skjule innhaldet. Mekanismen ligg anten i direkte tilknyting til innhaldet, eller på starten på sida.</li>\r\n<li>Det finst ein dokumentert tastatursnarveg for å pause, stoppe eller skjule innhaldet.</li>\r\n<li>Det finst ein mekanisme nær starten av nettsida for å laste sida på nytt utan denne type innhald.</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p><ul><li>For nettsider med innhald som bevegar seg, blinkar eller rullar i meir enn 5 sekundar, og som blir vist saman med anna innhald og ikkje er ein nødvendig del av ei handling, er ein av følgande oppfylt:<ul><li>Det finst ein mekanisme for å pause, stoppe eller skjule innhaldet. Mekanismen ligg anten i direkte tilknyting til innhaldet, eller på starten på sida.</li><li>Det finst ein dokumentert tastatursnarveg for å pause, stoppe eller skjule innhaldet.</li><li>Det finst ein mekanisme nær starten av nettsida for å laste sida på nytt utan denne type innhald.</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [

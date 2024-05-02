@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<ul>\r\n<li>Sidetittelen er korrekt koda</li>\r\n<li>Sidetittel gir relevant beskriving av emne eller formål med sida, også når den blir lest ut av kontekst.</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul><li>Sidetittelen er korrekt koda</li><li>Sidetittel gir relevant beskriving av emne eller formål med sida, også når den blir lest ut av kontekst.</li></ul>",
 	"side": "2.1",
 	"element": "Side",
 	"steg": [

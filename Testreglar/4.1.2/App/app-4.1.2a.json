@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Navn og rolle:</p>\r\n<ul>\r\n<li>Alle brukergrensesnittkomponenter har et tilgjengelig navn, som beskriver formålet med den aktuelle komponenten og</li>\r\n<li>Alle brukergrensesnittkomponenter har riktig rolle, som identifiserer funksjonen til den aktuelle komponenten og</li>\r\n<li>Brukergrensesnittkomponenter som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen</li>\r\n</ul>\r\n<p>Tilstander, egenskaper og verdier:</p>\r\n<ul>\r\n<li>Når tilstander, egenskaper og verdier i brukergrensesnittkomponenter kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li>\r\n<li>Varsel om endringer i den aktuelle komponenten er tilgjengelig for brukeragenter </li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Navn og rolle:</p><ul><li>Alle brukergrensesnittkomponenter har et tilgjengelig navn, som beskriver formålet med den aktuelle komponenten og</li><li>Alle brukergrensesnittkomponenter har riktig rolle, som identifiserer funksjonen til den aktuelle komponenten og</li><li>Brukergrensesnittkomponenter som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen</li></ul><p>Tilstander, egenskaper og verdier:</p><ul><li>Når tilstander, egenskaper og verdier i brukergrensesnittkomponenter kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li><li>Varsel om endringer i den aktuelle komponenten er tilgjengelig for brukeragenter </li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har appsiden brukergrensesnittkomponenter?",
-			"ht": "<p>Gjør en visuell inspeksjon. Sjekk om minst én av disse komponentene finnes på appsiden:</p>\n<ul>\n<li>knapper</li>\n<li>avkryssingsbokser</li>\n<li>lenkede bilder</li>\n<li>menyer og menyelementer</li>\n<li>nedtrekkslister</li>\n<li>radioknapper</li>\n<li>slider</li>\n<li>inndatafelt</li>\n<li>søkefelt</li>\n<li>switch</li>\n</ul>\n<p><strong>Merk:</strong> Skjema i PDF, Word eller lignende, er ikke aktuelle testobjekt.</p>",
+			"ht": "<p>Gjør en visuell inspeksjon. Sjekk om minst én av disse komponentene finnes på appsiden:</p><ul><li>knapper</li><li>avkryssingsbokser</li><li>lenkede bilder</li><li>menyer og menyelementer</li><li>nedtrekkslister</li><li>radioknapper</li><li>slider</li><li>inndatafelt</li><li>søkefelt</li><li>switch</li></ul><p><strong>Merk:</strong> Skjema i PDF, Word eller lignende, er ikke aktuelle testobjekt.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -42,7 +42,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Er det mulig å sveipe til minst én brukergrensesnittkomponent?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser\n<ul>\n<li> iOS: VoiceOver</li>\n<li>Android: Talkback</li>\n</ul>\n</li>\n<li>Åpne appsiden du tester</li>\n<li>Sjekk om det er mulig å sveipe til minst én komponent</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Aktiver skjermleser<ul><li> iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>Åpne appsiden du tester</li><li>Sjekk om det er mulig å sveipe til minst én komponent</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -97,7 +97,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Har brukergrensesnittkomponenten et tilgjengelig navn, som ikke er tomt?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: Talkback </li>\n</ul>\n</li>\n<li>Sveip og trykk på brukergrensesnittkomponenten du tester</li>\n<li>Sjekk om skjermleser leser opp tilgjengelig navn\n<ul>\n<li>Merk at skjermleseren ofte leser opp tilleggsinformasjon som ikke er en del av det tilgjengelige navnet</li>\n<li>Vanligvis starter skjermleseren opplesningen med tilgjengelig navn, rolle rett etter det tilgjengelige navnet og deretter tilleggsbeskrivelse knyttet til brukergrensesnittkomponenten</li>\n<li>Du skal kun vurdere tilgjengelig navn her</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk: </strong>Noen brukergrensesnittkomponenter ligger i en gruppe, som må leses i sammenheng med et overordnet spørsmål. Dette spørsmålet er tilgjengelig navn til gruppen og du skal sjekke om skjermleser leser det opp i tillegg til tilgjengelig navn for den enkelte komponenten.</p>\n<p>Eksempel på elementer som ofte er knyttet til en gruppe: checkbox, combobox, listbox, menuitemcheckbox, menuitemradio, radio, searchbox, slider, spinbutton, switch, textbox.</p>",
+			"ht": "<p>Slik tester du:</p><ul><li>Aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Android: Talkback </li></ul></li><li>Sveip og trykk på brukergrensesnittkomponenten du tester</li><li>Sjekk om skjermleser leser opp tilgjengelig navn<ul><li>Merk at skjermleseren ofte leser opp tilleggsinformasjon som ikke er en del av det tilgjengelige navnet</li><li>Vanligvis starter skjermleseren opplesningen med tilgjengelig navn, rolle rett etter det tilgjengelige navnet og deretter tilleggsbeskrivelse knyttet til brukergrensesnittkomponenten</li><li>Du skal kun vurdere tilgjengelig navn her</li></ul></li></ul><p><strong>Merk: </strong>Noen brukergrensesnittkomponenter ligger i en gruppe, som må leses i sammenheng med et overordnet spørsmål. Dette spørsmålet er tilgjengelig navn til gruppen og du skal sjekke om skjermleser leser det opp i tillegg til tilgjengelig navn for den enkelte komponenten.</p><p>Eksempel på elementer som ofte er knyttet til en gruppe: checkbox, combobox, listbox, menuitemcheckbox, menuitemradio, radio, searchbox, slider, spinbutton, switch, textbox.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -118,7 +118,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Beskriver tilgjengelig navn formålet med brukergrensesnittkomponenten?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Ta utgangspunkt i det tilgjengelige navnet du fant i forrige steg.</li>\n<li>Sjekk om det tilgjengelige navnet beskriver formålet med skjemaelementet. Det er tilstrekkelig at det tilgjengelige navnet identifiserer skjemaelementet.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Ta utgangspunkt i det tilgjengelige navnet du fant i forrige steg.</li><li>Sjekk om det tilgjengelige navnet beskriver formålet med skjemaelementet. Det er tilstrekkelig at det tilgjengelige navnet identifiserer skjemaelementet.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -135,7 +135,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Er brukergrensesnittkomponenten kodet med riktig rolle?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Sjekk hvilken funksjonalitet komponenten har ved å trykke på den</li>\n<li>Sjekk om rollen som leses opp identifiserer den aktuelle komponentens funksjon</li>\n</ul>\n<p>Det betyr at knapp skal leses opp som knapp, og tilsvarende for andre komponenter.</p>\n<p><strong>Merk:</strong> Noen brukergrensesnittkomponenter ligger i en gruppe, som må leses i sammenheng med et overordnet spørsmål. Gruppen skal ha rolle \"group\" og du skal sjekke om skjermleser leser det opp i tillegg til rollen for den enkelte komponenten.</p>\n<p>Eksempel på elementer som ofte er knyttet til en gruppe: checkbox, combobox, listbox, menuitemcheckbox, menuitemradio, radio, searchbox, slider, spinbutton, switch, textbox.</p>",
+			"ht": "<p>Slik tester du:</p><ul><li>Sjekk hvilken funksjonalitet komponenten har ved å trykke på den</li><li>Sjekk om rollen som leses opp identifiserer den aktuelle komponentens funksjon</li></ul><p>Det betyr at knapp skal leses opp som knapp, og tilsvarende for andre komponenter.</p><p><strong>Merk:</strong> Noen brukergrensesnittkomponenter ligger i en gruppe, som må leses i sammenheng med et overordnet spørsmål. Gruppen skal ha rolle \"group\" og du skal sjekke om skjermleser leser det opp i tillegg til rollen for den enkelte komponenten.</p><p>Eksempel på elementer som ofte er knyttet til en gruppe: checkbox, combobox, listbox, menuitemcheckbox, menuitemradio, radio, searchbox, slider, spinbutton, switch, textbox.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
@@ -155,7 +155,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Har brukergrensesnittkomponenten mer enn en tilstand når brukeren samhandler med den?",
-			"ht": "<p>En tilstand er en dynamisk egenskap som endres når brukeren samhandler med komponenten. Hvilke tilstander som er aktuelle vil variere med type komponent.</p>\n<p>Trykk eller dobbelttrykk (for å endre tilstand) på komponenten, og sjekk om den har minst én av disse tilstandene: </p>\n<ul>\n<li>av eller på</li>\n<li>spill av, pause, stopp</li>\n<li>aktivert eller deaktivert</li>\n<li>utvidet eller sammensluttet</li>\n<li>avkrysset eller ikke avkrysset</li>\n<li>markert eller ikke markert</li>\n<li>valgt eller ikke valgt</li>\n<li>nåværende</li>\n<li>gyldig eller ugyldig</li>\n<li>drag and drop</li>\n</ul>",
+			"ht": "<p>En tilstand er en dynamisk egenskap som endres når brukeren samhandler med komponenten. Hvilke tilstander som er aktuelle vil variere med type komponent.</p><p>Trykk eller dobbelttrykk (for å endre tilstand) på komponenten, og sjekk om den har minst én av disse tilstandene: </p><ul><li>av eller på</li><li>spill av, pause, stopp</li><li>aktivert eller deaktivert</li><li>utvidet eller sammensluttet</li><li>avkrysset eller ikke avkrysset</li><li>markert eller ikke markert</li><li>valgt eller ikke valgt</li><li>nåværende</li><li>gyldig eller ugyldig</li><li>drag and drop</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
@@ -172,7 +172,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Hvor mange tilstander har brukergrensesnittkomponenten? ",
-			"ht": "<p>Registrer antall tilstander.</p>\n<p>Eksempel: en avkryssingsboks kan ha to tilstander avkrysset eller ikke avkrysset</p>",
+			"ht": "<p>Registrer antall tilstander.</p><p>Eksempel: en avkryssingsboks kan ha to tilstander avkrysset eller ikke avkrysset</p>",
 			"type": "tekst",
 			"ruting": {
 				"alle": {
@@ -186,7 +186,7 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Hvor mange tilstander er ikke angitt programmatisk?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: Talkback </li>\n</ul>\n</li>\n<li>Trykk på komponenten du tester</li>\n<li>Sjekk om skjermleser leser opp nåværende tilstand\n<ul>\n<li>Vanligvis starter  opplesningen med tilgjengelig navn, rolle og deretter tilstanden.</li>\n<li>Du skal kun vurdere tilstanden her</li>\n</ul>\n</li>\n<li>Endre tilstanden med dobbelttrykk</li>\n<li>Sjekk om skjermleser leser opp endret tilstand</li>\n<li>Registrer antall tilstander som ikke er lest opp av skjermleser.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Android: Talkback </li></ul></li><li>Trykk på komponenten du tester</li><li>Sjekk om skjermleser leser opp nåværende tilstand<ul><li>Vanligvis starter  opplesningen med tilgjengelig navn, rolle og deretter tilstanden.</li><li>Du skal kun vurdere tilstanden her</li></ul></li><li>Endre tilstanden med dobbelttrykk</li><li>Sjekk om skjermleser leser opp endret tilstand</li><li>Registrer antall tilstander som ikke er lest opp av skjermleser.</li></ul>",
 			"type": "tekst",
 			"ruting": {
 				"ja": {

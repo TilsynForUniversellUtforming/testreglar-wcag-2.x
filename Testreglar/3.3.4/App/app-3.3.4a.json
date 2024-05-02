@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>For appsider som medfører juridiske forpliktelser eller krever økonomiske transaksjoner fra brukeren, endrer eller sletter brukerstyrte data i datalagringssystemer, eller sender svar på tester utført av brukeren, gjelder minst ett av følgende alternativer: </p>\r\n<ul>\r\n<li>Før innsending kontrollerer appsiden om informasjon brukeren angir har inndatafeil og brukeren får korrigere eventuelle inndatafeil eller</li>\r\n<li>Før innsending har appsiden en mekanisme som lar brukeren gjennomgå, korrigere og bekrefte informasjon, mekanismen er separat fra innsending og den er et obligatorisk skjemaelement eller</li>\r\n<li>Etter innsending får brukeren informasjon om hvordan en kan angre innsendingen, og innsending blir angret</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For appsider som medfører juridiske forpliktelser eller krever økonomiske transaksjoner fra brukeren, endrer eller sletter brukerstyrte data i datalagringssystemer, eller sender svar på tester utført av brukeren, gjelder minst ett av følgende alternativer: </p><ul><li>Før innsending kontrollerer appsiden om informasjon brukeren angir har inndatafeil og brukeren får korrigere eventuelle inndatafeil eller</li><li>Før innsending har appsiden en mekanisme som lar brukeren gjennomgå, korrigere og bekrefte informasjon, mekanismen er separat fra innsending og den er et obligatorisk skjemaelement eller</li><li>Etter innsending får brukeren informasjon om hvordan en kan angre innsendingen, og innsending blir angret</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har appsiden skjema eller skjemaelement?",
-			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes minst et skjemaelement på appsiden.</p>\n<p><strong>Merk:</strong> Skjema i PDF, Word eller lignende, er ikke aktuelle testobjekt.</p>",
+			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes minst et skjemaelement på appsiden.</p><p><strong>Merk:</strong> Skjema i PDF, Word eller lignende, er ikke aktuelle testobjekt.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -42,7 +42,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Medfører skjemaet juridiske forpliktelser eller økonomiske transaksjoner for brukeren, dersom prosessen fullføres?",
-			"ht": "<p>Vurder om skjemaet medfører juridiske forpliktelser eller krever økonomiske transaksjoner fra brukeren når prosessen fullføres. Eksempel på typer skjema/situasjoner som kravet gjelder for:</p>\n<ul>\n<li>kjøp av varer, billetter og tjenester</li>\n<li>betaling av regninger, forsikring, fond</li>\n<li>andre avtaler som gir bindende rettigheter og plikter</li>\n<li>svar på tester, som for eksempel eksamen eller førerprøven</li>\n</ul>\n<p><strong>Merk:</strong> Du skal ikke teste skjema som ikke gir juridiske forpliktelser eller økonomiske transaksjoner. Eksempel er </p>\n<ul>\n<li>påmelding til nyhetsbrev</li>\n<li>påmelding til gratis arrangementer eller lignende</li>\n<li>reservere en vare (klikk og hent)</li>\n</ul>",
+			"ht": "<p>Vurder om skjemaet medfører juridiske forpliktelser eller krever økonomiske transaksjoner fra brukeren når prosessen fullføres. Eksempel på typer skjema/situasjoner som kravet gjelder for:</p><ul><li>kjøp av varer, billetter og tjenester</li><li>betaling av regninger, forsikring, fond</li><li>andre avtaler som gir bindende rettigheter og plikter</li><li>svar på tester, som for eksempel eksamen eller førerprøven</li></ul><p><strong>Merk:</strong> Du skal ikke teste skjema som ikke gir juridiske forpliktelser eller økonomiske transaksjoner. Eksempel er </p><ul><li>påmelding til nyhetsbrev</li><li>påmelding til gratis arrangementer eller lignende</li><li>reservere en vare (klikk og hent)</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -58,7 +58,7 @@
 		{
 			"stegnr": "2.4",
 			"spm": "Det tilstrekkelig at ett av alternativene i kravet er oppfylt. Hvert alternativ har sitt eget sett med krav til samsvar. ",
-			"ht": "<p>Alternativene som etter ordlyden skal vurderes er</p>\n<ul>\n<li>Kontroll før fullføring/innsending</li>\n<li>Bekreftelse før fullføring/innsending</li>\n<li>Reverserbarhet/angremulighet etter fullføring/innsending</li>\n</ul>",
+			"ht": "<p>Alternativene som etter ordlyden skal vurderes er</p><ul><li>Kontroll før fullføring/innsending</li><li>Bekreftelse før fullføring/innsending</li><li>Reverserbarhet/angremulighet etter fullføring/innsending</li></ul>",
 			"type": "instruksjon",
 			"ruting": {
 				"alle": {
@@ -85,7 +85,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Oppdager skjemaet inndatafeil fra brukeren?",
-			"ht": "<p>I tilfeller der skjemaet avdekker at brukeren ikke har fylt ut obligatoriske skjemaelement, eller har lagt inn informasjon med feil format eller verdi, skal brukeren få mulighet til å korrigere feil, før innsending.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Legg inn feil inndata i alle skjemaelement</li>\n<li>Prøv deretter å gå videre i eller fullføre skjemaet</li>\n</ul>\n<p>Eksempel på feil inndata er:</p>\n<ul>\n<li>La obligatoriske felt være tomme</li>\n<li>Postnummer som inneholder bokstaver</li>\n<li>Navn som inneholder tall eller spesialtegn</li>\n<li>Ugyldig e-postformat</li>\n<li>Ugyldig datoformat</li>\n<li>Ugyldig telefonnummer</li>\n<li>Data utenfor grenseverdi, for eksempel måned 14 i en dato</li>\n</ul>",
+			"ht": "<p>I tilfeller der skjemaet avdekker at brukeren ikke har fylt ut obligatoriske skjemaelement, eller har lagt inn informasjon med feil format eller verdi, skal brukeren få mulighet til å korrigere feil, før innsending.</p><p>Slik tester du:</p><ul><li>Legg inn feil inndata i alle skjemaelement</li><li>Prøv deretter å gå videre i eller fullføre skjemaet</li></ul><p>Eksempel på feil inndata er:</p><ul><li>La obligatoriske felt være tomme</li><li>Postnummer som inneholder bokstaver</li><li>Navn som inneholder tall eller spesialtegn</li><li>Ugyldig e-postformat</li><li>Ugyldig datoformat</li><li>Ugyldig telefonnummer</li><li>Data utenfor grenseverdi, for eksempel måned 14 i en dato</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -109,7 +109,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Får du mulighet til å korrigere alle inndatafeil i skjemaet?",
-			"ht": "<p>Slik tester du: </p>\n<ul>\n<li>Sjekk at du kan rette opp alle inndatafeil i skjemaet, enten direkte eller ved å aktivere redigering.</li>\n</ul>",
+			"ht": "<p>Slik tester du: </p><ul><li>Sjekk at du kan rette opp alle inndatafeil i skjemaet, enten direkte eller ved å aktivere redigering.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -131,7 +131,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Får du gjennomgå alle inndata i skjemaet, før innsending?",
-			"ht": "<p>Slik tester du: </p>\n<ul>\n<li>Fyll ut skjemaet, slik at det er klar for innsending\n<ul>\n<li>Legg inn feil inndata i et par skjemaelementer (for neste steg)</li>\n</ul>\n</li>\n<li>Gå videre i prosessen</li>\n<li>Sjekk om du kan se over all inndata i skjemaet, før innsending. \n<ul>\n<li>Eksempel på dette kan være at du:\n<ul>\n<li>har tilgang til all informasjon du har lagt inn i skjemaet (skjema på en side)</li>\n<li>kan bla mellom sidene i skjemaet og inndata blir liggende når du navigerer fram og tilbake (skjema over flere sider)</li>\n<li>får en samlet oppsummering av inndata i skjemaet (skjema over flere sider)</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>",
+			"ht": "<p>Slik tester du: </p><ul><li>Fyll ut skjemaet, slik at det er klar for innsending<ul><li>Legg inn feil inndata i et par skjemaelementer (for neste steg)</li></ul></li><li>Gå videre i prosessen</li><li>Sjekk om du kan se over all inndata i skjemaet, før innsending. <ul><li>Eksempel på dette kan være at du:<ul><li>har tilgang til all informasjon du har lagt inn i skjemaet (skjema på en side)</li><li>kan bla mellom sidene i skjemaet og inndata blir liggende når du navigerer fram og tilbake (skjema over flere sider)</li><li>får en samlet oppsummering av inndata i skjemaet (skjema over flere sider)</li></ul></li></ul></li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G98"
@@ -155,7 +155,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Får du korrigere/endre alle inndata i skjemaet, før innsending?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Prøv å korrigere/endre alle inndata i skjema, før innsending</li>\n<li>Gå videre i prosessen</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Prøv å korrigere/endre alle inndata i skjema, før innsending</li><li>Gå videre i prosessen</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -177,7 +177,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Har appsiden en mekanisme for å bekrefte at informasjon i skjemaet er korrekt, før innsending?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Mekanismen for å bekrefte kan være en avkryssingsboks eller lignende funksjonalitet. </li>\n</ul>\n<p>Ledeteksten kan for eksempel være:</p>\n<ul>\n<li>Jeg bekrefter at informasjonen er korrekt</li>\n<li>Jeg forstår betingelsene</li>\n<li>Bekreft eller avbryt</li>\n</ul>\n<p><strong>Merk:</strong> Du skal ikke vurdere selve ledeteksten, kun mekanismen for å bekrefte at informasjonen er korrekt. </p>",
+			"ht": "<p>Slik tester du:</p><ul><li>Mekanismen for å bekrefte kan være en avkryssingsboks eller lignende funksjonalitet. </li></ul><p>Ledeteksten kan for eksempel være:</p><ul><li>Jeg bekrefter at informasjonen er korrekt</li><li>Jeg forstår betingelsene</li><li>Bekreft eller avbryt</li></ul><p><strong>Merk:</strong> Du skal ikke vurdere selve ledeteksten, kun mekanismen for å bekrefte at informasjonen er korrekt. </p>",
 			"type": "jaNei",
 			"kilde": [
 				"G155",
@@ -202,7 +202,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Er mekanismen separat fra elementet for å sende inn skjemaet?",
-			"ht": "<p>Mekanismen og elementet for å sende inn skjemaet, skal være to separate skjemaelement.</p>\n<p>Slik tester du: </p>\n<ul>\n<li>Sjekk at mekanismen for å bekrefte at informasjonen i skjemaet er korrekt, er separat fra funksjonen for å sende inn/fullføre skjemaet. </li>\n</ul>\n<p><strong>Merk: </strong>En kombinasjon av mekanisme og send inn, er ikke godkjent. Eksempelvis er en knapp «Godkjenn og send inn» er ikke tilstrekkelig.</p>",
+			"ht": "<p>Mekanismen og elementet for å sende inn skjemaet, skal være to separate skjemaelement.</p><p>Slik tester du: </p><ul><li>Sjekk at mekanismen for å bekrefte at informasjonen i skjemaet er korrekt, er separat fra funksjonen for å sende inn/fullføre skjemaet. </li></ul><p><strong>Merk: </strong>En kombinasjon av mekanisme og send inn, er ikke godkjent. Eksempelvis er en knapp «Godkjenn og send inn» er ikke tilstrekkelig.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G155"
@@ -227,7 +227,7 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Er mekanismen for å bekrefte informasjonen i skjemaet, obligatorisk?",
-			"ht": "<p>Mekanismen for å bekrefte at informasjonen i skjemaet er korrekt, skal være et obligatorisk skjemaelement. </p>\n<p>Slik tester du: </p>\n<ul>\n<li>Prøv å sende inn skjemaet, uten å bruke mekanismen for å bekrefte. </li>\n<li><strong>Merk:</strong> Hvis du ikke får sende inn skjemaet, uten å krysse av eller tilsvarende, betyr det at mekanismen fungerer som den skal (er obligatorisk).</li>\n</ul>",
+			"ht": "<p>Mekanismen for å bekrefte at informasjonen i skjemaet er korrekt, skal være et obligatorisk skjemaelement. </p><p>Slik tester du: </p><ul><li>Prøv å sende inn skjemaet, uten å bruke mekanismen for å bekrefte. </li><li><strong>Merk:</strong> Hvis du ikke får sende inn skjemaet, uten å krysse av eller tilsvarende, betyr det at mekanismen fungerer som den skal (er obligatorisk).</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G155"
@@ -252,7 +252,7 @@
 		{
 			"stegnr": "3.9",
 			"spm": "Fullfør prosessen og send inn skjemaet.",
-			"ht": "<p>Nå skal du fullføre/sende inn skjemaet, for deretter å sjekke om det er mulig å angre (reversere). </p>\n<ul>\n<li>Fullfør prosessen og send inn skjemaet</li>\n</ul>",
+			"ht": "<p>Nå skal du fullføre/sende inn skjemaet, for deretter å sjekke om det er mulig å angre (reversere). </p><ul><li>Fullfør prosessen og send inn skjemaet</li></ul>",
 			"type": "instruksjon",
 			"ruting": {
 				"alle": {
@@ -264,7 +264,7 @@
 		{
 			"stegnr": "3.10",
 			"spm": "Kan du angre (reversere) fullføringen av skjemaet, via appen, etter innsending?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Gjør en visuell inspeksjon, og sjekk om du kan angre fullføringen digitalt, slik at du kan reversere juridiske forpliktelser eller økonomiske transaksjoner</li>\n<li>Det kan for eksempel være en knapp, lenke eller lignende med Avbestill, Kanseller, Endre bestilling, Angre osv.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Gjør en visuell inspeksjon, og sjekk om du kan angre fullføringen digitalt, slik at du kan reversere juridiske forpliktelser eller økonomiske transaksjoner</li><li>Det kan for eksempel være en knapp, lenke eller lignende med Avbestill, Kanseller, Endre bestilling, Angre osv.</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G164"
@@ -283,7 +283,7 @@
 		{
 			"stegnr": "3.11",
 			"spm": "Får du informasjon om muligheten til å angre (reversere) forpliktelsen eller transaksjonen?",
-			"ht": "<p>Suksesskriteriet krever ikke at selve prosessen for å angre (reversere) juridiske forpliktelser eller økonomiske transaksjoner er digital.</p>\n<p>Informasjon om muligheten til å angre kan for eksempel gis</p>\n<ul>\n<li>på appsiden</li>\n<li>bli tilsendt til en e-post, for eksempel som del av ordrebekreftelse</li>\n</ul>",
+			"ht": "<p>Suksesskriteriet krever ikke at selve prosessen for å angre (reversere) juridiske forpliktelser eller økonomiske transaksjoner er digital.</p><p>Informasjon om muligheten til å angre kan for eksempel gis</p><ul><li>på appsiden</li><li>bli tilsendt til en e-post, for eksempel som del av ordrebekreftelse</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -312,7 +312,7 @@
 		{
 			"stegnr": "3.13",
 			"spm": "Får du til å angre (reversere) den juridiske forpliktelsen eller økonomiske transaksjonen?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Sjekk at du faktisk får angret (reversert) den juridiske forpliktelsen eller økonomiske transaksjonen. For eksempel at: \n<ul>\n<li>vare blir avbestilt </li>\n<li>reise eller hotellopphold blir kansellert</li>\n</ul>\n</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Sjekk at du faktisk får angret (reversert) den juridiske forpliktelsen eller økonomiske transaksjonen. For eksempel at: <ul><li>vare blir avbestilt </li><li>reise eller hotellopphold blir kansellert</li></ul></li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {

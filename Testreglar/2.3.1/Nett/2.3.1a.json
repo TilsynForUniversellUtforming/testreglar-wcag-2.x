@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>Nettsida har ikkje innhald som glimtar.</li>\r\n<li>Viss nettsida har innhald som blinkar, er ein av følgande oppfylt:\r\n<ol>\r\n<li>Innhaldet som blinkar har storleik på mindre enn 21 824 kvadratpikslar.</li>\r\n<li>Det er færre enn tre blink i sekundet.</li>\r\n</ol>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p><ul><li>Nettsida har ikkje innhald som glimtar.</li><li>Viss nettsida har innhald som blinkar, er ein av følgande oppfylt:<ol><li>Innhaldet som blinkar har storleik på mindre enn 21 824 kvadratpikslar.</li><li>Det er færre enn tre blink i sekundet.</li></ol></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [

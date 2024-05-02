@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Skjemaelement, instruksjonar og feilmeldingar som brukar farge til å</p>\r\n<ul>\r\n<li>formidle informasjon</li>\r\n<li>vise ei handling</li>\r\n<li>be om respons</li>\r\n<li>eller skilje ut eit visuelt element</li>\r\n</ul>\r\n<p>er merka med meir enn berre farge. Merkinga må vere visuell.</p>",
+	"kravTilSamsvar": "<p>Skjemaelement, instruksjonar og feilmeldingar som brukar farge til å</p><ul><li>formidle informasjon</li><li>vise ei handling</li><li>be om respons</li><li>eller skilje ut eit visuelt element</li></ul><p>er merka med meir enn berre farge. Merkinga må vere visuell.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [

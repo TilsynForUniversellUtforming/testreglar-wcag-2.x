@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Innhald kan presenterast uten tap av informasjon eller funksjonalitet og uten at brukaren må rulle i to dimensjoner ved:</p>\r\n<ul>\r\n<li>innhald som rullar loddrett med ei bredde som tilsvarar 320 CSS-piksler</li>\r\n<li>innhald som rullar vassrett med ei høgde som tilsvarar 256 CSS-piksler</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Innhald kan presenterast uten tap av informasjon eller funksjonalitet og uten at brukaren må rulle i to dimensjoner ved:</p><ul><li>innhald som rullar loddrett med ei bredde som tilsvarar 320 CSS-piksler</li><li>innhald som rullar vassrett med ei høgde som tilsvarar 256 CSS-piksler</li></ul>",
 	"side": "2.1",
 	"element": "3.5",
 	"steg": [
@@ -48,7 +48,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Still inn nettlesaren til ei viewport-bredde på 320 css-pikslar.",
-			"ht": "<p>Dette kan du gjere på fleire måtar:</p>\n<p><strong>Ved hjelp av nettlesaren sin device toolbar</strong></p>\n<ul>\n<li>Opne nettlesaren sitt utviklarverktøy (I Chrome kan du opne det ved å bruke Ctrl+Shift+I).</li>\n<li>Aktiver Device toolbar.</li>\n<li>Sett breidda på viewporten til 320px. </li>\n</ul>\n<p><strong>Ved å endre oppløysinga på skjermen</strong></p>\n<ul>\n<li>Endre oppløysinga på skjermen til ei oppløysing som er 1280px brei (For eksempel 1280x720).</li>\n<li>Pass på at nettlesaren er maksimert og zoom inn til 400%.</li>\n</ul>",
+			"ht": "<p>Dette kan du gjere på fleire måtar:</p><p><strong>Ved hjelp av nettlesaren sin device toolbar</strong></p><ul><li>Opne nettlesaren sitt utviklarverktøy (I Chrome kan du opne det ved å bruke Ctrl+Shift+I).</li><li>Aktiver Device toolbar.</li><li>Sett breidda på viewporten til 320px. </li></ul><p><strong>Ved å endre oppløysinga på skjermen</strong></p><ul><li>Endre oppløysinga på skjermen til ei oppløysing som er 1280px brei (For eksempel 1280x720).</li><li>Pass på at nettlesaren er maksimert og zoom inn til 400%.</li></ul>",
 			"type": "instruksjon",
 			"kilde": [],
 			"ruting": {
@@ -61,7 +61,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Får du tilgang til same innhald og funksjonalitet som i vanleg visning utan å skrolle horisontalt?",
-			"ht": "<p>Du kan samanlikne nettsida i vanleg visning og med tilpassa viewport for å gjere det lettare å vurdere.</p>\n<p>Du skal ikkje måtte skrolle <strong>horisontalt (bortover)</strong> for å få tilgang til innhald eller funksjonalitet. </p>\n<p><strong>Merk:</strong> ei og same side kan sjå ulik ut i ordinær og forminska visning, f.eks. kan meny i forminska visning vere ein knapp, medan du i ordinær visning får sjå heile menyen.</p>\n<p><strong>Merk:</strong> Det er ikkje ok at innhald blir dekka over av anna innhald med tilpassa viewport, eller at innhald forsvinn frå sida.</p>",
+			"ht": "<p>Du kan samanlikne nettsida i vanleg visning og med tilpassa viewport for å gjere det lettare å vurdere.</p><p>Du skal ikkje måtte skrolle <strong>horisontalt (bortover)</strong> for å få tilgang til innhald eller funksjonalitet. </p><p><strong>Merk:</strong> ei og same side kan sjå ulik ut i ordinær og forminska visning, f.eks. kan meny i forminska visning vere ein knapp, medan du i ordinær visning får sjå heile menyen.</p><p><strong>Merk:</strong> Det er ikkje ok at innhald blir dekka over av anna innhald med tilpassa viewport, eller at innhald forsvinn frå sida.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -79,7 +79,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Still inn nettlesaren til ei viewport-høgde på 256 css-pikslar.",
-			"ht": "<p>Dette kan du gjere på fleire måtar:</p>\n<p><strong>Ved hjelp av nettlesaren sin device toolbar</strong></p>\n<ul>\n<li>Opne nettlesaren sitt utviklarverktøy (I Chrome kan du opne det ved å bruke Ctrl+Shift+I).</li>\n<li>Aktiver Device toolbar.</li>\n<li>Sett høgda på viewporten til 256px. </li>\n</ul>\n<p><strong>Ved å endre oppløysinga på skjermen</strong></p>\n<ul>\n<li>Endre oppløysinga på skjermen til ei oppløysing som er 1024px <strong>høg</strong> (For eksempel 1280x1024).</li>\n<li>Pass på at nettlesaren er maksimert og zoom inn til 400%.</li>\n</ul>",
+			"ht": "<p>Dette kan du gjere på fleire måtar:</p><p><strong>Ved hjelp av nettlesaren sin device toolbar</strong></p><ul><li>Opne nettlesaren sitt utviklarverktøy (I Chrome kan du opne det ved å bruke Ctrl+Shift+I).</li><li>Aktiver Device toolbar.</li><li>Sett høgda på viewporten til 256px. </li></ul><p><strong>Ved å endre oppløysinga på skjermen</strong></p><ul><li>Endre oppløysinga på skjermen til ei oppløysing som er 1024px <strong>høg</strong> (For eksempel 1280x1024).</li><li>Pass på at nettlesaren er maksimert og zoom inn til 400%.</li></ul>",
 			"type": "instruksjon",
 			"kilde": [],
 			"ruting": {
@@ -92,7 +92,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Får du tilgang til samme innhald og funksjonalitet som i vanleg visning utan å skrolle loddrett?",
-			"ht": "<p>Du kan samanlikne nettsida i vanleg visning og med tilpassa viewport for å gjere det lettare å vurdere.</p>\n<p>Du skal ikkje måtte skrolle <strong>loddrett (nedover) </strong>for å få tilgang til innhald eller funksjonalitet. </p>\n<p><strong>Merk:</strong> ei og same side kan sjå ulik ut i ordinær og forminska visning, f.eks. kan meny i forminska visning vere ein knapp, medan du i ordinær visning får sjå heile menyen.</p>\n<p><strong>Merk:</strong> Det er ikkje ok at innhald blir dekka over av anna innhald med tilpassa viewport, eller at innhald forsvinn frå sida.</p>",
+			"ht": "<p>Du kan samanlikne nettsida i vanleg visning og med tilpassa viewport for å gjere det lettare å vurdere.</p><p>Du skal ikkje måtte skrolle <strong>loddrett (nedover) </strong>for å få tilgang til innhald eller funksjonalitet. </p><p><strong>Merk:</strong> ei og same side kan sjå ulik ut i ordinær og forminska visning, f.eks. kan meny i forminska visning vere ein knapp, medan du i ordinær visning får sjå heile menyen.</p><p><strong>Merk:</strong> Det er ikkje ok at innhald blir dekka over av anna innhald med tilpassa viewport, eller at innhald forsvinn frå sida.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -143,7 +143,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Er ein todimensjonalt layout nødvendig for å ivareta bruk og betyding?",
-			"ht": "<p>Innhald som krev todimensjonalt layout for å ivareta bruk og betydning er unntatt kravet. Dette gjeld for eksempel</p>\n<ul>\n<li>grafikk og video</li>\n<li>datatabellar</li>\n<li>verktøylinjer</li>\n</ul>\n<p><strong>Merk: </strong>Suksesskriteriet gjelder ikkje for grensesnitt som har verktøylinjer.</p>",
+			"ht": "<p>Innhald som krev todimensjonalt layout for å ivareta bruk og betydning er unntatt kravet. Dette gjeld for eksempel</p><ul><li>grafikk og video</li><li>datatabellar</li><li>verktøylinjer</li></ul><p><strong>Merk: </strong>Suksesskriteriet gjelder ikkje for grensesnitt som har verktøylinjer.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {

@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Kravet kan oppfylles på flere måter.</p>\r\n<ul>\r\n<li>\r\n<p>Lenker i løpende tekst oppfyller et av alternativer under:</p>\r\n<ul>\r\n<li>\r\n<p>Lenker markerte med farge, skiller seg ut fra nærliggende ikke-lenket tekst med mer enn bare farge.</p>\r\n<ul>\r\n<li>\r\n<p>Eksempel på visuelle kjennetegn er endring i skrifttype, skriftgruppe, skriftstørrelse, understreking, uthevet skrift, ramme eller ikon.</p>\r\n</li>\r\n</ul>\r\n</li>\r\n<li>\r\n<p>Lenker markerte med bare farge har kontrast på minst 3:1, mot nærliggende ikke lenket tekst og får synlig markering i tillegg til farge ved mouseover og tastaturfokus</p>\r\n<ul>\r\n<li>\r\n<p>Endring av muspekeren og standard fokusmarkering er ikke tilstrekkelig markering</p>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Kravet kan oppfylles på flere måter.</p><ul><li><p>Lenker i løpende tekst oppfyller et av alternativer under:</p><ul><li><p>Lenker markerte med farge, skiller seg ut fra nærliggende ikke-lenket tekst med mer enn bare farge.</p><ul><li><p>Eksempel på visuelle kjennetegn er endring i skrifttype, skriftgruppe, skriftstørrelse, understreking, uthevet skrift, ramme eller ikon.</p></li></ul></li><li><p>Lenker markerte med bare farge har kontrast på minst 3:1, mot nærliggende ikke lenket tekst og får synlig markering i tillegg til farge ved mouseover og tastaturfokus</p><ul><li><p>Endring av muspekeren og standard fokusmarkering er ikke tilstrekkelig markering</p></li></ul></li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har nettsida lenker?",
-			"ht": "<p>Du kan bruke verktøyet <a href=\"https://www.ssa.gov/accessibility/andi/help/install.html\" target=\"_blank\" rel=\"noopener\">ANDI bokmerkerad</a> til å identifisere lenker:</p>\n<ul>\n<li>Vel \"Links/buttons\" frå \"Select Module\", så ser du tal lenker på sida under overskrifta \"Links Found:\". </li>\n<li>Alle lenker er no markerte av verktøyet med blå stipla linje.</li>\n</ul>",
+			"ht": "<p>Du kan bruke verktøyet <a href=\"https://www.ssa.gov/accessibility/andi/help/install.html\" target=\"_blank\" rel=\"noopener\">ANDI bokmerkerad</a> til å identifisere lenker:</p><ul><li>Vel \"Links/buttons\" frå \"Select Module\", så ser du tal lenker på sida under overskrifta \"Links Found:\". </li><li>Alle lenker er no markerte av verktøyet med blå stipla linje.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -44,7 +44,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Har nettsida lenker i løpande tekst?",
-			"ht": "<p>Lenker i løpande tekst, er lenker som visuelt og kontekstuelt, er knytt til ikkje-lenka løpande tekst, plassert før eller etter  den aktuelle lenka. Merk at dette også gjeld lenka overskrifter.</p>\n<p><strong>Vi skal ikkje skal teste følgjande:</strong></p>\n<ul>\n<li>lenker i meny</li>\n<li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka løpande tekst.</li>\n</ul>",
+			"ht": "<p>Lenker i løpande tekst, er lenker som visuelt og kontekstuelt, er knytt til ikkje-lenka løpande tekst, plassert før eller etter  den aktuelle lenka. Merk at dette også gjeld lenka overskrifter.</p><p><strong>Vi skal ikkje skal teste følgjande:</strong></p><ul><li>lenker i meny</li><li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka løpande tekst.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -61,7 +61,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Beskriv den lenka du testar",
-			"ht": "<p>Merk at du ikkje skal teste alle lenkene på testsida. Du skal berre teste dei du har identifisert som aktuelle testobjekt etter visuell inspeksjon. Dette gjeld lenker som ligg i løpande tekst og som er merka med farge.</p>\n<p>Legg inn lenketekst, plassering eller andre stikkord, slik at lenka kan identifiserast.</p>\n<p> </p>",
+			"ht": "<p>Merk at du ikkje skal teste alle lenkene på testsida. Du skal berre teste dei du har identifisert som aktuelle testobjekt etter visuell inspeksjon. Dette gjeld lenker som ligg i løpande tekst og som er merka med farge.</p><p>Legg inn lenketekst, plassering eller andre stikkord, slik at lenka kan identifiserast.</p><p> </p>",
 			"type": "tekst",
 			"label": "Lenke:",
 			"multilinje": true,
@@ -77,7 +77,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Har lenka du identifiserte i forrige steg, identisk farge som løpande tekst på testsida?",
-			"ht": "<p>Slå av verktøyet ANDI bokmerkerad.</p>\n<p>Gjer ein visuell inspeksjon av lenka.</p>\n<p>Merk at lenke som er markert med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
+			"ht": "<p>Slå av verktøyet ANDI bokmerkerad.</p><p>Gjer ein visuell inspeksjon av lenka.</p><p>Merk at lenke som er markert med farge, i kombinasjon med andre visuelle verkemiddel, også skal reknast med her.<!--#p--></p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -94,7 +94,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Skil lenka seg visuelt frå ikkje-lenka løpande tekst med andre verkemiddel enn berre farge?",
-			"ht": "<p>Føremålet er å identifisere lenker, som skil seg frå ikkje-lenka løpande tekst, med meir enn berre med farge. Dei kan for eksempel vere markerte slik</p>\n<ul>\n<li>endra skrifttype- eller gruppe</li>\n<li>endra skriftstørrelse</li>\n<li>understreking</li>\n<li>utheva/feit/kursiv skrift</li>\n<li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka</li>\n<li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst</li>\n</ul>\n<p><strong>Merk:</strong> Du skal teste all tekst som ligg visuelt og kontekstuelt knytt til lenka. Teksten kan vere plassert før eller etter lenka.</p>",
+			"ht": "<p>Føremålet er å identifisere lenker, som skil seg frå ikkje-lenka løpande tekst, med meir enn berre med farge. Dei kan for eksempel vere markerte slik</p><ul><li>endra skrifttype- eller gruppe</li><li>endra skriftstørrelse</li><li>understreking</li><li>utheva/feit/kursiv skrift</li><li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka</li><li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst</li></ul><p><strong>Merk:</strong> Du skal teste all tekst som ligg visuelt og kontekstuelt knytt til lenka. Teksten kan vere plassert før eller etter lenka.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F73",
@@ -115,7 +115,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Mål og registrer kontrast mellom farge på tekst i lenka og farge på omkringliggande ikkje-lenka løpande tekst.",
-			"ht": "<p>Kontrast skal registrerast med desimaltal (For eksempel 4.5).</p>\n<p>Tips:</p>\n<ul>\n<li>Du kan zoome eller forstørre testsida for å gjere det enklare å måle kontrasten på den identifiserte lenka og farge på omkringliggande ikkje-lenka løpande tekst. Bruk verktøyet <a href=\"https://www.tpgi.com/color-contrast-checker/\" target=\"_blank\" rel=\"noopener\">Colour Contrast Analyser</a>.</li>\n<li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li>\n<li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li>\n<li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li>\n</ul>",
+			"ht": "<p>Kontrast skal registrerast med desimaltal (For eksempel 4.5).</p><p>Tips:</p><ul><li>Du kan zoome eller forstørre testsida for å gjere det enklare å måle kontrasten på den identifiserte lenka og farge på omkringliggande ikkje-lenka løpande tekst. Bruk verktøyet <a href=\"https://www.tpgi.com/color-contrast-checker/\" target=\"_blank\" rel=\"noopener\">Colour Contrast Analyser</a>.</li><li>Dersom teksten er piksellert (får fleire fargar med zooming), skal du velje ein farge som er representativ for hovudfargen på teksten.</li><li>Dersom bakgrunnen er gradert, mønstra eller eit bilete, skal du måle på det svakaste punktet. Merk at teksten også kan vere gradert.</li><li>Bokstavane kan ha eit omriss på minst 1 piksel for å oppfylle kontrastkravet. I dette tilfellet, vil omrisset vere bakgrunnsfargen.</li></ul>",
 			"type": "tekst",
 			"kilde": [
 				"G183"
@@ -154,7 +154,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Vert lenka markert med meir enn berre farge når du navigerer med mus?",
-			"ht": "<p>Før musepeikaren over lenka og sjekk at det er ein effekt som gjer at lenka vert markerte.</p>\n<p>Eksempel på markering som er tilstrekkeleg</p>\n<ul>\n<li>endra skrifttype</li>\n<li>endra skriftstørrelse</li>\n<li>understreking.</li>\n<li>utheva/feit/bold/kursiv skrift.</li>\n<li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka.</li>\n<li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst</li>\n</ul>\n<p>Merk at endring av musepeikarikonet aleine ikkje er tilstrekkeleg. Endring av fargen på lenka er heller ikkje tilstrekkeleg.</p>",
+			"ht": "<p>Før musepeikaren over lenka og sjekk at det er ein effekt som gjer at lenka vert markerte.</p><p>Eksempel på markering som er tilstrekkeleg</p><ul><li>endra skrifttype</li><li>endra skriftstørrelse</li><li>understreking.</li><li>utheva/feit/bold/kursiv skrift.</li><li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka.</li><li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst</li></ul><p>Merk at endring av musepeikarikonet aleine ikkje er tilstrekkeleg. Endring av fargen på lenka er heller ikkje tilstrekkeleg.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G183"
@@ -174,7 +174,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Vert lenka markert med meir enn berre farge når du navigerer med tastatur?",
-			"ht": "<p>Bruk tabulatortasten og naviger til lenka ved hjelp av tastaturet. Sjekk at det er ein effekt som gjer at lenka vert markert.</p>\n<p>Eksempel på markering som er tilstrekkeleg</p>\n<ul>\n<li>endra skrifttype</li>\n<li>endra skriftstørrelse</li>\n<li>understreking.</li>\n<li>utheva/feit/bold/kursiv skrift.</li>\n<li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka.</li>\n<li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst.</li>\n</ul>\n<p>Merk at standard fokusmarkering er tilstrekkeleg. Endring av fargen på lenka er heller ikkje tilstrekkeleg.</p>",
+			"ht": "<p>Bruk tabulatortasten og naviger til lenka ved hjelp av tastaturet. Sjekk at det er ein effekt som gjer at lenka vert markert.</p><p>Eksempel på markering som er tilstrekkeleg</p><ul><li>endra skrifttype</li><li>endra skriftstørrelse</li><li>understreking.</li><li>utheva/feit/bold/kursiv skrift.</li><li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka.</li><li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst.</li></ul><p>Merk at standard fokusmarkering er tilstrekkeleg. Endring av fargen på lenka er heller ikkje tilstrekkeleg.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G183"

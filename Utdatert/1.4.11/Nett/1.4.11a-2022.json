@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Den visuelle presentasjonen av det følgjande har eit kontrastforhold på minst 3:1 mot farge(ar) som ligg ved sidan av:</p>\r\n<ul>\r\n<li>Visuell informasjon som naudsynt for å identifisere brukergrensesnittkomponentar og tilstandar, unntatt inaktive komponentar eller der utsjånaden på komponenten er bestemt av brukeragenten og ikkje endra av produsentar av webinnhald.</li>\r\n<li>Deler av grafikk som er naudsynt for å forstå innhaldet, unntatt tilfelle der ein bestemt presentasjon av grafikk er naudsynt for informasjonen som blir formidla.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Den visuelle presentasjonen av det følgjande har eit kontrastforhold på minst 3:1 mot farge(ar) som ligg ved sidan av:</p><ul><li>Visuell informasjon som naudsynt for å identifisere brukergrensesnittkomponentar og tilstandar, unntatt inaktive komponentar eller der utsjånaden på komponenten er bestemt av brukeragenten og ikkje endra av produsentar av webinnhald.</li><li>Deler av grafikk som er naudsynt for å forstå innhaldet, unntatt tilfelle der ein bestemt presentasjon av grafikk er naudsynt for informasjonen som blir formidla.</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har sida visuell informasjon som nyttast for å identifisere brukergrensnittkomponentar eller grafiske objekt?",
-			"ht": "<p><strong>Visuell informasjon:</strong> som brukast for å identifisere brukergrensesnittkomponentar og kva tilstand komponentane er i. Brukergrensesnittkomponentar er for eksempel lenker, skjemaelement og knappar. Komponentane kan ha ulike tilstandar, for eksempel fokus ved tastaturnavigasjon, som òg skal testast.</p>\n<p><strong>Grafiske objekter:</strong> Deler av grafikk som nødvendig for å forstå innhaldet, unntatt tilfelle der ein bestemt presentasjon av grafikk er nødvendig for informasjonen som blir formidla.</p>\n<p><strong>Desse innhaldstypane skal ikkje testast:</strong></p>\n<ul>\n<li>Inaktive/deaktiverte brukargrensesnittkomponentar.</li>\n<li>Grafikk som kun er til pynt.</li>\n<li>Grafiske objekt som ikkje formidlar informasjon, fordi informasjonen også er formidla i form av tekst. Det kan vere i form av synlige ledetekstar eller tekstalternativ.</li>\n<li>Grafiske presentasjonar som er nødvendige (essential). Dette omfattar mellom anna<br />\n<ul>\n<li>grafikk som er ein del av ein logo eller merkevare</li>\n<li>flagg</li>\n<li>bilde av personar eller uteområde (real life scenes, people or scenery).</li>\n<li>skjermbilde som viser korleis ei nettside såg ut tidligare</li>\n<li>fargeforandringar som representerer måleeiningar for eksempel i ei heatmap</li>\n</ul>\n</li>\n</ul>",
+			"ht": "<p><strong>Visuell informasjon:</strong> som brukast for å identifisere brukergrensesnittkomponentar og kva tilstand komponentane er i. Brukergrensesnittkomponentar er for eksempel lenker, skjemaelement og knappar. Komponentane kan ha ulike tilstandar, for eksempel fokus ved tastaturnavigasjon, som òg skal testast.</p><p><strong>Grafiske objekter:</strong> Deler av grafikk som nødvendig for å forstå innhaldet, unntatt tilfelle der ein bestemt presentasjon av grafikk er nødvendig for informasjonen som blir formidla.</p><p><strong>Desse innhaldstypane skal ikkje testast:</strong></p><ul><li>Inaktive/deaktiverte brukargrensesnittkomponentar.</li><li>Grafikk som kun er til pynt.</li><li>Grafiske objekt som ikkje formidlar informasjon, fordi informasjonen også er formidla i form av tekst. Det kan vere i form av synlige ledetekstar eller tekstalternativ.</li><li>Grafiske presentasjonar som er nødvendige (essential). Dette omfattar mellom anna<br /><ul><li>grafikk som er ein del av ein logo eller merkevare</li><li>flagg</li><li>bilde av personar eller uteområde (real life scenes, people or scenery).</li><li>skjermbilde som viser korleis ei nettside såg ut tidligare</li><li>fargeforandringar som representerer måleeiningar for eksempel i ei heatmap</li></ul></li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -97,7 +97,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er det grafiske elemente du testar nødvendig for å forstå innhaldet?",
-			"ht": "<p>Eksempler:</p>\n<ul>\n<li>ikoner og linjer i ein graf.</li>\n<li>enkel grafikk, som for eksempel et telefon-ikon</li>\n</ul>",
+			"ht": "<p>Eksempler:</p><ul><li>ikoner og linjer i ein graf.</li><li>enkel grafikk, som for eksempel et telefon-ikon</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -114,7 +114,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Mål og registrer kontrast mellom elementet du skal teste og fargane rundt element.",
-			"ht": "<p>Dersom det er fleire ulike fargar rundt elementet skal du registrere den med dårligast kontrast.</p>\n<p><strong>Tips:</strong></p>\n<ul>\n<li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten.</li>\n</ul>\n<p><strong>Retningslinjer for test:</strong></p>\n<ul>\n<li>Dersom objektet ligg på gradert bakgrunn, skal ein teste den svakaste kontrasten.</li>\n<li>Når det gjeld kva som meninast med «fargen ved siden av», er det mulig med fleire løysingar. Dersom eit skjemafelt har ei grå ramme og kvit fyllfarge, er det tilstrekkelig at kontrasten mellom ramma og bakgrunnen som ligg utanfor skjemafeltet er på minst 3:1. Dersom same skjemafelt ligg på ein bakgrunn som har for dårlig kontrast mot den grå ramma, er det tilstrekkelig at kontrasten mellom den kvite fyllfargen og bakgrunnen er på minst 3:1. Då kan ein sjå vekk frå ramma når ein måler kontrast.</li>\n<li>Tilsvarende som for skjemafelt, er det mulig å ha ei ramme rundt et grafisk objekt for å skilje det frå bakgrunnen. Då kan ein måle kontrast enten mellom fyllfargen i objektet og bakgrunnen, eller mellom ramma og bakgrunnen. Det er tilstrekkelig at ein av disse har kontrast på minst 3:1.</li>\n</ul>",
+			"ht": "<p>Dersom det er fleire ulike fargar rundt elementet skal du registrere den med dårligast kontrast.</p><p><strong>Tips:</strong></p><ul><li>Du kan zoome eller forstørre nettsida for å gjere det enklare å måle kontrasten.</li></ul><p><strong>Retningslinjer for test:</strong></p><ul><li>Dersom objektet ligg på gradert bakgrunn, skal ein teste den svakaste kontrasten.</li><li>Når det gjeld kva som meninast med «fargen ved siden av», er det mulig med fleire løysingar. Dersom eit skjemafelt har ei grå ramme og kvit fyllfarge, er det tilstrekkelig at kontrasten mellom ramma og bakgrunnen som ligg utanfor skjemafeltet er på minst 3:1. Dersom same skjemafelt ligg på ein bakgrunn som har for dårlig kontrast mot den grå ramma, er det tilstrekkelig at kontrasten mellom den kvite fyllfargen og bakgrunnen er på minst 3:1. Då kan ein sjå vekk frå ramma når ein måler kontrast.</li><li>Tilsvarende som for skjemafelt, er det mulig å ha ei ramme rundt et grafisk objekt for å skilje det frå bakgrunnen. Då kan ein måle kontrast enten mellom fyllfargen i objektet og bakgrunnen, eller mellom ramma og bakgrunnen. Det er tilstrekkelig at ein av disse har kontrast på minst 3:1.</li></ul>",
 			"type": "tekst",
 			"kilde": [
 				"G207",

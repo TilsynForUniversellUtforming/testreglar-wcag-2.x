@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>For funksjonalitet som kan brukes med å bevege enheten eller gjennom brukerbevegelser, gjelder følgende:</p>\r\n<ul>\r\n<li>Funksjonaliteten kan også brukes med vanlige brukergrensesnittkomponenter og</li>\r\n<li>Brukeren kan slå av bevegelsesaktivering av innhold via innstillinger gitt av innholdsprodusent eller i brukeragenter, på systemnivå</li>\r\n<li>Kravet gjelder med mindre\r\n<ul>\r\n<li>Støttet grensesnitt: Bevegelsen er brukt for å betjene funksjonalitet gjennom et grensesnitt som er tilgjengelighetsstøttende</li>\r\n<li>Avgjørende: Bevegelsen er avgjørende for funksjonaliteten, og det vil gjøre aktiviteten ugyldig.</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For funksjonalitet som kan brukes med å bevege enheten eller gjennom brukerbevegelser, gjelder følgende:</p><ul><li>Funksjonaliteten kan også brukes med vanlige brukergrensesnittkomponenter og</li><li>Brukeren kan slå av bevegelsesaktivering av innhold via innstillinger gitt av innholdsprodusent eller i brukeragenter, på systemnivå</li><li>Kravet gjelder med mindre<ul><li>Støttet grensesnitt: Bevegelsen er brukt for å betjene funksjonalitet gjennom et grensesnitt som er tilgjengelighetsstøttende</li><li>Avgjørende: Bevegelsen er avgjørende for funksjonaliteten, og det vil gjøre aktiviteten ugyldig.</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har appsiden funksjonalitet med bevegelsesaktivering?",
-			"ht": "<p>Kravet gjelder for følgende:</p>\n<ul>\n<li>bevegelser med selve enheten, gjennom for eksempel å vippe, rotere eller riste på den</li>\n<li>brukerbevegelser mot enheten, for eksempel ved at brukeren gjør ulike gester mot kamera</li>\n</ul>\n<p><strong>Slik tester du:</strong></p>\n<p>Du bør bruke en fysisk enhet, for eksempel smarttelefon eller nettbrett.</p>\n<ul>\n<li>se om du finner informasjon som tilsier at det finnes funksjonalitet med bevegelsesaktivering og instruksjoner</li>\n<li>alternativt kan du gjøre ulike handlinger for å sjekke det:\n<ul>\n<li>snu på enheten</li>\n<li>beveg enheten rundt</li>\n<li>riste på enheten</li>\n<li>gi tommel opp mot kamera</li>\n</ul>\n</li>\n<li>sjekk om handlingen utløser en funksjonalitet</li>\n</ul>",
+			"ht": "<p>Kravet gjelder for følgende:</p><ul><li>bevegelser med selve enheten, gjennom for eksempel å vippe, rotere eller riste på den</li><li>brukerbevegelser mot enheten, for eksempel ved at brukeren gjør ulike gester mot kamera</li></ul><p><strong>Slik tester du:</strong></p><p>Du bør bruke en fysisk enhet, for eksempel smarttelefon eller nettbrett.</p><ul><li>se om du finner informasjon som tilsier at det finnes funksjonalitet med bevegelsesaktivering og instruksjoner</li><li>alternativt kan du gjøre ulike handlinger for å sjekke det:<ul><li>snu på enheten</li><li>beveg enheten rundt</li><li>riste på enheten</li><li>gi tommel opp mot kamera</li></ul></li><li>sjekk om handlingen utløser en funksjonalitet</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -59,7 +59,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Hvilken type bevegelsesaktivering har funksjonaliteten?",
-			"ht": "<p>Kravet gjelder for følgende:</p>\n<ul>\n<li>bevegelser med selve enheten, gjennom for eksempel å vippe, rotere eller riste på den</li>\n<li>brukerbevegelser mot enheten, for eksempel ved at brukeren gjør ulike gester mot kamera </li>\n</ul>\n<p>Eksempler på bevegelsaktivering er:</p>\n<ul>\n<li>Brukeren snur på enheten for å gå til neste eller forrige side</li>\n<li>Brukeren beveger enheten rundt for å se på ulike deler av et bilde</li>\n<li>Brukeren lukker en appside ved å riste på enheten</li>\n<li>Brukeren gir tommel opp mot kamera for å godkjenne en handling</li>\n</ul>",
+			"ht": "<p>Kravet gjelder for følgende:</p><ul><li>bevegelser med selve enheten, gjennom for eksempel å vippe, rotere eller riste på den</li><li>brukerbevegelser mot enheten, for eksempel ved at brukeren gjør ulike gester mot kamera </li></ul><p>Eksempler på bevegelsaktivering er:</p><ul><li>Brukeren snur på enheten for å gå til neste eller forrige side</li><li>Brukeren beveger enheten rundt for å se på ulike deler av et bilde</li><li>Brukeren lukker en appside ved å riste på enheten</li><li>Brukeren gir tommel opp mot kamera for å godkjenne en handling</li></ul>",
 			"type": "radio",
 			"kilde": [],
 			"svarArray": [
@@ -76,7 +76,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er bevegelsesaktivering avgjørende for funksjonaliteten?",
-			"ht": "<p>Noen ganger er innhold avhengig av å bruke enhetssensordata eller bevegelsen er kontrollert av operativsystemet. Da er bevegelsen avgjørende for funksjonaliteten. </p>\n<p>Eksempler på innhold som er unntatt fordi det er avgjørende vil være når:</p>\n<ul>\n<li>operativsystemet på enheten har funksjonalitet for å \n<ul>\n<li>slette innskrevet tekst ved å riste på den</li>\n<li>slå av lyden på innkommende anrop ved å snu skjermen ned</li>\n<li>dra håndflaten over skjermen for å ta skjermbilde</li>\n</ul>\n</li>\n<li>en skritteller er avhengig av enhetens bevegelser for å registrere og telle skritt</li>\n</ul>",
+			"ht": "<p>Noen ganger er innhold avhengig av å bruke enhetssensordata eller bevegelsen er kontrollert av operativsystemet. Da er bevegelsen avgjørende for funksjonaliteten. </p><p>Eksempler på innhold som er unntatt fordi det er avgjørende vil være når:</p><ul><li>operativsystemet på enheten har funksjonalitet for å <ul><li>slette innskrevet tekst ved å riste på den</li><li>slå av lyden på innkommende anrop ved å snu skjermen ned</li><li>dra håndflaten over skjermen for å ta skjermbilde</li></ul></li><li>en skritteller er avhengig av enhetens bevegelser for å registrere og telle skritt</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -93,7 +93,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Kan funksjonaliteten også betjenes med vanlige brukergrensesnittkomponenter?",
-			"ht": "<p>Vanlige brukergrensesnittkomponenter kan være lenke, knapp eller lignende.</p>\n<p>Eksempler</p>\n<ul>\n<li>Bevegelsesaktivert glidebryter (slider): En slider kan justeres ved å vippe enheten til høyre eller venstre. I tillegg er det knapper som tilbyr samme funksjonalitet. </li>\n<li>Rist for å slette/angre: Når brukeren har skrevet tekst i et skjemafelt, og deretter rister på enheten, kommer det opp en dialogboks der brukeren kan slette teksten. Støtte for backspace eller en knapp for å slette tekst i skjemafeltet, tilbyr samme funksjonalitet. </li>\n<li>Sidenavigering i en bok: Øyesporing oppdager når brukeren har lest en side, og blar automatisk til neste side. Det finnes knapper som tilbyr samme funksjonalitet. </li>\n</ul>",
+			"ht": "<p>Vanlige brukergrensesnittkomponenter kan være lenke, knapp eller lignende.</p><p>Eksempler</p><ul><li>Bevegelsesaktivert glidebryter (slider): En slider kan justeres ved å vippe enheten til høyre eller venstre. I tillegg er det knapper som tilbyr samme funksjonalitet. </li><li>Rist for å slette/angre: Når brukeren har skrevet tekst i et skjemafelt, og deretter rister på enheten, kommer det opp en dialogboks der brukeren kan slette teksten. Støtte for backspace eller en knapp for å slette tekst i skjemafeltet, tilbyr samme funksjonalitet. </li><li>Sidenavigering i en bok: Øyesporing oppdager når brukeren har lest en side, og blar automatisk til neste side. Det finnes knapper som tilbyr samme funksjonalitet. </li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G213"
@@ -113,7 +113,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Kan brukeren slå av bevegelsesaktiveringen?",
-			"ht": "<p>I følge ordlyden skal brukeren kunne slå av bevegelsesaktivering av innhold. Dette kan gjøres på følgende måte: </p>\n<ul>\n<li>via innstillinger gitt av innholdsprodusent eller i brukeragenter, på systemnivå</li>\n</ul>\n<p>Sjekk om du får til å slå av bevegelsesaktiveringen. </p>\n<p>Eksempler på måter for å slå av bevegelsesaktivering er:</p>\n<ul>\n<li>Bevegelsesaktivert glidebryter (slider): En slider kan justeres ved å vippe enheten til høyre eller venstre. En avkryssingsboks på siden slår av bevegelsesaktiveringen. </li>\n<li>Rist for å slette/angre: Når brukeren har skrevet tekst i et skjemafelt, og deretter rister på enheten, kommer det opp en dialogboks der brukeren kan slette teksten. Rist for å slette/angre kan slås av i innstillinger i appen. </li>\n<li>Sidenavigering i en bok: Øyesporing oppdager når brukeren har lest en side og blar automatisk til neste side. Øyesporing kan slås av med en knapp på appsiden.</li>\n</ul>",
+			"ht": "<p>I følge ordlyden skal brukeren kunne slå av bevegelsesaktivering av innhold. Dette kan gjøres på følgende måte: </p><ul><li>via innstillinger gitt av innholdsprodusent eller i brukeragenter, på systemnivå</li></ul><p>Sjekk om du får til å slå av bevegelsesaktiveringen. </p><p>Eksempler på måter for å slå av bevegelsesaktivering er:</p><ul><li>Bevegelsesaktivert glidebryter (slider): En slider kan justeres ved å vippe enheten til høyre eller venstre. En avkryssingsboks på siden slår av bevegelsesaktiveringen. </li><li>Rist for å slette/angre: Når brukeren har skrevet tekst i et skjemafelt, og deretter rister på enheten, kommer det opp en dialogboks der brukeren kan slette teksten. Rist for å slette/angre kan slås av i innstillinger i appen. </li><li>Sidenavigering i en bok: Øyesporing oppdager når brukeren har lest en side og blar automatisk til neste side. Øyesporing kan slås av med en knapp på appsiden.</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G213"

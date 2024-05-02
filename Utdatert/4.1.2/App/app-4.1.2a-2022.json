@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For desse typane av interaktive element gjeld følgande:</p>\r\n<ul>\r\n<li>skjemaelement skal ha ledetekst som identifiserer skjemaelementet</li>\r\n<li>knappar skal ha ledetekst som identifiserer funksjonen til knappen</li>\r\n<li>lenka bilder skal ha alternativ tekst som beskriv lenkemålet</li>\r\n</ul>\r\n<p> </p>",
+	"kravTilSamsvar": "<p>For desse typane av interaktive element gjeld følgande:</p><ul><li>skjemaelement skal ha ledetekst som identifiserer skjemaelementet</li><li>knappar skal ha ledetekst som identifiserer funksjonen til knappen</li><li>lenka bilder skal ha alternativ tekst som beskriv lenkemålet</li></ul><p> </p>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har skjermbilde interaktive element?",
-			"ht": "<p>Sjå over skjermbilde å sjå om det inneheld element du kan trykke på eller fylle inn informasjon i. Dette vil for eksempel vere:</p>\n<ul>\n<li>Inputfelt (Felt for å fylle inn tekst, tall dato osv...)</li>\n<li>Knappar</li>\n<li>Avkryssingsboksar</li>\n<li>Lenka bilde</li>\n</ul>",
+			"ht": "<p>Sjå over skjermbilde å sjå om det inneheld element du kan trykke på eller fylle inn informasjon i. Dette vil for eksempel vere:</p><ul><li>Inputfelt (Felt for å fylle inn tekst, tall dato osv...)</li><li>Knappar</li><li>Avkryssingsboksar</li><li>Lenka bilde</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -59,7 +59,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Kva type interaktivt element testar du?",
-			"ht": "<p>Vel i lista.</p>\n<p>Inputfelt er her alle felt/element du kan fylle inn informasjon i. Dette kan for eksempel vere datoveljar, tekstfelt, felt for å fylle inn dato og tal.</p>",
+			"ht": "<p>Vel i lista.</p><p>Inputfelt er her alle felt/element du kan fylle inn informasjon i. Dette kan for eksempel vere datoveljar, tekstfelt, felt for å fylle inn dato og tal.</p>",
 			"type": "radio",
 			"kilde": [],
 			"svarArray": [
@@ -93,7 +93,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Får det interaktive elementet du testar opplese ein ledetekst som identifiserer elementet?",
-			"ht": "<p>Sjekk at teksten du får opplest for:</p>\n<ul>\n<li>skjemaelement identifiserer skjemaelementet</li>\n<li>lenka bilder beskriv lenkemålet</li>\n<li>knappar identifiserer funksjonen til knappen.</li>\n</ul>",
+			"ht": "<p>Sjekk at teksten du får opplest for:</p><ul><li>skjemaelement identifiserer skjemaelementet</li><li>lenka bilder beskriv lenkemålet</li><li>knappar identifiserer funksjonen til knappen.</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G82",

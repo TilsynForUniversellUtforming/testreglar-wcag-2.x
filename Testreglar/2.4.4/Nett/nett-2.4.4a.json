@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Lenker som inneholder tekst oppfyller kravet dersom:</p>\r\n<ul>\r\n<li>Lenketeksten alene beskriver formålet med lenken eller</li>\r\n<li>Lenketeksten sammen med programmeringsmessig bestemt lenkekontekst beskriver formålet med lenken. For programmatisk bestemt lenkekontekst vurderes tekst som står i\r\n<ul>\r\n<li>samme avsnitt, liste eller celle i en tabell som lenken gjør eller tilsvarende eller</li>\r\n<li>en tabelloverskrift som er knyttet til tabellcellen som lenken står i eller tilsvarende</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Lenker som inneholder tekst oppfyller kravet dersom:</p><ul><li>Lenketeksten alene beskriver formålet med lenken eller</li><li>Lenketeksten sammen med programmeringsmessig bestemt lenkekontekst beskriver formålet med lenken. For programmatisk bestemt lenkekontekst vurderes tekst som står i<ul><li>samme avsnitt, liste eller celle i en tabell som lenken gjør eller tilsvarende eller</li><li>en tabelloverskrift som er knyttet til tabellcellen som lenken står i eller tilsvarende</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsida lenker som inneheld tekst?",
-			"ht": "<p>Gjer ein visuell inspeksjon, og sjekk om det finst lenker på testsida.</p>\n<p><strong>Merk: </strong></p>\n<ul>\n<li>Lenkas plassering er utan betydning, den kan for eksempel ligge i ein meny, liste eller tabell.</li>\n<li>Du skal ikkje teste knappar eller lenker som berre inneheld bilde. Dette blir testa i SK 4.1.2 og SK 1.1.1.</li>\n</ul>",
+			"ht": "<p>Gjer ein visuell inspeksjon, og sjekk om det finst lenker på testsida.</p><p><strong>Merk: </strong></p><ul><li>Lenkas plassering er utan betydning, den kan for eksempel ligge i ein meny, liste eller tabell.</li><li>Du skal ikkje teste knappar eller lenker som berre inneheld bilde. Dette blir testa i SK 4.1.2 og SK 1.1.1.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -43,7 +43,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Kva lenke testar du?",
-			"ht": "<p>Beskriv lenka, slik at det er mogleg å identifisere den i ettertid. Viss det gjeld fleire lenker, registrerer du ei og ei.</p>\n<p><strong>Tips:</strong> Du kan skrive lenketekst, plassering på side, element som er i nærleiken eller liknande. </p>",
+			"ht": "<p>Beskriv lenka, slik at det er mogleg å identifisere den i ettertid. Viss det gjeld fleire lenker, registrerer du ei og ei.</p><p><strong>Tips:</strong> Du kan skrive lenketekst, plassering på side, element som er i nærleiken eller liknande. </p>",
 			"type": "tekst",
 			"label": "Lenke:",
 			"multilinje": true,
@@ -58,7 +58,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Opne lenka i ein ny fane og skriv inn URL",
-			"ht": "<p>Du skal opne lenka for å finne informasjon om lenkemålet. Dette skal du seinare bruke for å vurdera om lenketeksten er god nok.</p>\n<p>Gå deretter tilbake til opprinneleg testside. </p>",
+			"ht": "<p>Du skal opne lenka for å finne informasjon om lenkemålet. Dette skal du seinare bruke for å vurdera om lenketeksten er god nok.</p><p>Gå deretter tilbake til opprinneleg testside. </p>",
 			"type": "tekst",
 			"label": "URL:",
 			"multilinje": true,
@@ -73,7 +73,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er lenketeksten aleine beskrivande for formålet med lenka?",
-			"ht": "<p>Lenketeksten skal beskrive kva informasjon du kjem til ved å klikke på lenka. Lenkemålet treng ikkje å vere heilt presist, så lenge du får informasjon som er dekkande for kor du kjem. </p>\n<p>Eksempel på lenketekstar som aldri er beskrivande åleine:</p>\n<ul>\n<li>Les mer</li>\n<li>Her</li>\n<li>Les hele saken</li>\n</ul>\n<p><strong>Merk:</strong> Du skal ikkje vurdere kva program eller funksjon lenka startar, for eksempel at lenka opnar ein ny fane, PDF-lesar eller liknande.</p>",
+			"ht": "<p>Lenketeksten skal beskrive kva informasjon du kjem til ved å klikke på lenka. Lenkemålet treng ikkje å vere heilt presist, så lenge du får informasjon som er dekkande for kor du kjem. </p><p>Eksempel på lenketekstar som aldri er beskrivande åleine:</p><ul><li>Les mer</li><li>Her</li><li>Les hele saken</li></ul><p><strong>Merk:</strong> Du skal ikkje vurdere kva program eller funksjon lenka startar, for eksempel at lenka opnar ein ny fane, PDF-lesar eller liknande.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G91",
@@ -94,7 +94,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Har lenka et tilgjengelig navn, som ikke er tomt?",
-			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Inspiser lenka, <code>&lt;a&gt;</code>-elementet</li>\n<li>Bruk Accessibility Tree i nettleseren</li>\n<li>Sjekk at informasjon under \"Name\" ikkje er tomt.</li>\n</ul>\n<p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
+			"ht": "<p>Slik testar du:</p><ul><li>Inspiser lenka, <code>&lt;a&gt;</code>-elementet</li><li>Bruk Accessibility Tree i nettleseren</li><li>Sjekk at informasjon under \"Name\" ikkje er tomt.</li></ul><p><strong>Merk:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA8"
@@ -113,7 +113,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Har lenka programmatisk bestemt lenkekontekst?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Sjekk om lenketeksten er supplert med programmatisk bestemt lenkekontekst med eit av følgjande alternativ:  \n<ul>\n<li>tekstalternativ til grafikk koblet til det same <code>&lt;a&gt;</code>-elementet (du kan bruke Accessibility Tree)</li>\n<li>teksten i det same <code>&lt;p&gt;</code>-elementet. <code>&lt;div&gt;</code>-elementet behandles som <code>&lt;p&gt;</code> her</li>\n<li>teksten i same listepunkt, <code>&lt;li&gt;</code>-elementet eller forrige listepunkt i einøsta liste</li>\n<li>i same tabell, det vil seie tekst i same datacelle <code>&lt;td&gt;</code>-elementet og/eller tekst som ligg i tilknytta overskriftsceller <code>&lt;th&gt;</code>-elementet)</li>\n<li>teksten til forrige overskrift <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>-elementet</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Vi godkjenner ikkje anna type koding, for eksempel <code>&lt;div&gt;</code> eller <code>&lt;span&gt;</code>.</li>\n<li>Du skal ikkje vurdere kvaliteten på teksten.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Sjekk om lenketeksten er supplert med programmatisk bestemt lenkekontekst med eit av følgjande alternativ:  <ul><li>tekstalternativ til grafikk koblet til det same <code>&lt;a&gt;</code>-elementet (du kan bruke Accessibility Tree)</li><li>teksten i det same <code>&lt;p&gt;</code>-elementet. <code>&lt;div&gt;</code>-elementet behandles som <code>&lt;p&gt;</code> her</li><li>teksten i same listepunkt, <code>&lt;li&gt;</code>-elementet eller forrige listepunkt i einøsta liste</li><li>i same tabell, det vil seie tekst i same datacelle <code>&lt;td&gt;</code>-elementet og/eller tekst som ligg i tilknytta overskriftsceller <code>&lt;th&gt;</code>-elementet)</li><li>teksten til forrige overskrift <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>-elementet</li></ul></li></ul><p><strong>Merk:</strong></p><ul><li>Vi godkjenner ikkje anna type koding, for eksempel <code>&lt;div&gt;</code> eller <code>&lt;span&gt;</code>.</li><li>Du skal ikkje vurdere kvaliteten på teksten.</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"F63",
@@ -138,7 +138,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Er lenketeksten, i kombinasjon med programmatisk bestemt lenkekontekst, beskrivande for formålet med lenka?",
-			"ht": "<p>Gjer ei skjønnsmessig vurdering av om innhaldet i lenka og programmatisk bestemt lenkekontekst samla, gir tilstrekkeleg informasjon om kva som er lenkemålet.</p>\n<p>Lenkemålet treng ikkje å vere heilt presist, så lenge du får informasjon som er dekkande for kor du kjem. </p>",
+			"ht": "<p>Gjer ei skjønnsmessig vurdering av om innhaldet i lenka og programmatisk bestemt lenkekontekst samla, gir tilstrekkeleg informasjon om kva som er lenkemålet.</p><p>Lenkemålet treng ikkje å vere heilt presist, så lenge du får informasjon som er dekkande for kor du kjem. </p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA7",

@@ -149,7 +149,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Ligg mekanismen på starten av testsida?",
-			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om mekanismen er plassert nær starten av testsida.</p>\n<p><strong>Merk:</strong> Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om mekanismen er plassert nær starten av testsida.</p><p><strong>Merk:</strong> Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G186"
@@ -266,7 +266,7 @@
 		{
 			"stegnr": "3.13",
 			"spm": "Finst det en mekanisme nær starten av nettsida, for å laste sida på nytt, utan innhald som automatisk bevegar seg, blinkar eller rullar?",
-			"ht": "<p>Gjer ein visuell inspeksjon, og sjekk om det finst en mekanisme nær starten av nettsida for å laste sida på nytt, utan innhald som automatisk bevegar seg, blinkar eller rullar.</p>\n<p><strong>Merk:</strong> Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
+			"ht": "<p>Gjer ein visuell inspeksjon, og sjekk om det finst en mekanisme nær starten av nettsida for å laste sida på nytt, utan innhald som automatisk bevegar seg, blinkar eller rullar.</p><p><strong>Merk:</strong> Du skal ikkje måtte scrolle vekk frå starten av sida for å nå mekanismen.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G191"
@@ -286,7 +286,7 @@
 		{
 			"stegnr": "3.14",
 			"spm": "Aktiver mekanismen og sjekk om testsida lastar på nytt uten innhald som automatisk bevegar seg, blinkar eller rullar. ",
-			"ht": "<p>Testsida skal laste på nytt, utan innhald som automatisk bevegar seg, blinkar eller rullar. </p>\n<p><strong>Merk:</strong> Du kan anten bli teke til same side eller ei anna side som har tilsvarande innhald.</p>",
+			"ht": "<p>Testsida skal laste på nytt, utan innhald som automatisk bevegar seg, blinkar eller rullar. </p><p><strong>Merk:</strong> Du kan anten bli teke til same side eller ei anna side som har tilsvarande innhald.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G191"

@@ -172,7 +172,7 @@ Steg som bare skal ha Ja og Nei som sine mulige valg.
 {
 	"stegnr": "3.6",
 	"spm": "Er det meningsbærende bildet en test eller et sanseinntrykk?",
-	"ht": "<p><strong>Test:</strong> Bilde som er en del av en test eller prøve, er bilde der innholdet vil bli ugyldig dersom det blir presentert som tekst. Hensikten med testen forsvinner dersom svaret gis av tekstalternativet </p>\n<p><strong>Merk:</strong> Hvis dette er et komplekst bilde, så testes det i steg 3.9.</p>\n<p><strong>Sanseinntrykk:</strong> Bilde som skal gi et sanseinntrykk er for eksempel et maleri eller andre typer kunst.</p>",
+	"ht": "<p><strong>Test:</strong> Bilde som er en del av en test eller prøve, er bilde der innholdet vil bli ugyldig dersom det blir presentert som tekst. Hensikten med testen forsvinner dersom svaret gis av tekstalternativet </p><p><strong>Merk:</strong> Hvis dette er et komplekst bilde, så testes det i steg 3.9.</p><p><strong>Sanseinntrykk:</strong> Bilde som skal gi et sanseinntrykk er for eksempel et maleri eller andre typer kunst.</p>",
 	"type": "jaNei",
 	"ruting": {
 		"ja": {
@@ -273,7 +273,7 @@ Steg med egendefinerte valg i form av radio-knapper.
 {
 	"stegnr": "3.1",
 	"spm": "Korleis er nettsida koda?",
-	"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette. Du finn det i <code>&lt;!DOCTYPE&gt;</code>-elementet, som er det første elementet i koden.</p>\n<ul>\n<li>HTML5 er koda som <code>&lt;!DOCTYPE html&gt;</code></li>\n<li>I HTML 4, står det \"HTML 4.01\" ein stad i <code>&lt;!DOCTYPE&gt;</code>-elementet.</li>\n<li>I XHTML 1.0, står det \"XHTML 1.0\" ein stad i <code>&lt;!DOCTYPE&gt;</code>-elementet.</li>\n<li>I XHTML 1.1, står det \"XHTML 1.1\" eller \"XHTML Basic 1.1\" ein stad i <code>&lt;!DOCTYPE&gt;</code>-elementet.</li>\n</ul>\n<p><strong>Merk:</strong> HTML-elementet kan innehalde annan tekst før avsluttande &gt; i elementet <code>&lt;!DOCTYPE&gt;</code>.</p>",
+	"ht": "<p>Du kan bruke kodeverktøyet i nettlesaren for å sjekke dette. Du finn det i <code>&lt;!DOCTYPE&gt;</code>-elementet, som er det første elementet i koden.</p><ul><li>HTML5 er koda som <code>&lt;!DOCTYPE html&gt;</code></li><li>I HTML 4, står det \"HTML 4.01\" ein stad i <code>&lt;!DOCTYPE&gt;</code>-elementet.</li><li>I XHTML 1.0, står det \"XHTML 1.0\" ein stad i <code>&lt;!DOCTYPE&gt;</code>-elementet.</li><li>I XHTML 1.1, står det \"XHTML 1.1\" eller \"XHTML Basic 1.1\" ein stad i <code>&lt;!DOCTYPE&gt;</code>-elementet.</li></ul><p><strong>Merk:</strong> HTML-elementet kan innehalde annan tekst før avsluttande &gt; i elementet <code>&lt;!DOCTYPE&gt;</code>.</p>",
 	"type": "radio",
 	"ruting": {
 		"alt0": {
@@ -415,7 +415,7 @@ Steg med input i form av tekst eller tall.
 {
 	"stegnr": "3.7",
 	"spm": "Hvor mange tilstander har brukergrensesnittkomponenten? ",
-	"ht": "<p>Registrer antall tilstander.</p>\n<p>Eksempel: en avkryssingsboks kan ha to tilstander avkrysset eller ikke avkrysset</p>",
+	"ht": "<p>Registrer antall tilstander.</p><p>Eksempel: en avkryssingsboks kan ha to tilstander avkrysset eller ikke avkrysset</p>",
 	"type": "tekst",
 	"ruting": {
 		"alle": {

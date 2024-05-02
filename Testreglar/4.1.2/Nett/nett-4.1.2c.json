@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsiden synlige &lt;iframe&gt;-element?",
-			"ht": "<p>Søk etter <code>&lt;iframe&gt;</code>-elementet i kildekoden til testsiden. </p>\n<p><strong>Merk:</strong> Du skal vurdere kun iframe som er visuell synlige og inkludert i accessibilty tree. Skjult iframe for eksempel fra Google Analytics er ikke omfattet av kravet, fordi det ikke er en brukergrensesnittkomponent.</p>",
+			"ht": "<p>Søk etter <code>&lt;iframe&gt;</code>-elementet i kildekoden til testsiden. </p><p><strong>Merk:</strong> Du skal vurdere kun iframe som er visuell synlige og inkludert i accessibilty tree. Skjult iframe for eksempel fra Google Analytics er ikke omfattet av kravet, fordi det ikke er en brukergrensesnittkomponent.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -58,7 +58,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Har &lt;iframe&gt;-elementet et tilgjengelig navn?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Inspiser <code>&lt;iframe&gt;</code>-elementet i Chrome</li>\n<li>Bruk Accessibility Tree verktøy i inspiser</li>\n<li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li>\n<li>Sjekk om informasjon under \"Name\" ikke er tomt</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Inspiser <code>&lt;iframe&gt;</code>-elementet i Chrome</li><li>Bruk Accessibility Tree verktøy i inspiser</li><li>Under Computed Properties, finner du blant annet \"Name\" og \"Role\"</li><li>Sjekk om informasjon under \"Name\" ikke er tomt</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
@@ -80,7 +80,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Hvilket attributt gir tilgjengelig navn til iframe?",
-			"ht": "<ul>\n<li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Tree</li>\n<li>Velg et alternativ.</li>\n</ul>",
+			"ht": "<ul><li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Tree</li><li>Velg et alternativ.</li></ul>",
 			"type": "radio",
 			"svarArray": [
 				"aria-labelledby",
@@ -97,7 +97,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Beskriver det tilgjengelige navnet formålet med innholdet som ligger i &lt;iframe&gt;?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Ta utgangspunkt i det tilgjengelige navnet du fant i forrige steg.</li>\n<li>Sjekk om det tilgjengelige navnet beskriver formålet med <code>&lt;iframe&gt;</code>-elementet. Det er tilstrekkelig at det tilgjengelige navnet identifiserer <code>&lt;iframe&gt;</code>-elementet.</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Ta utgangspunkt i det tilgjengelige navnet du fant i forrige steg.</li><li>Sjekk om det tilgjengelige navnet beskriver formålet med <code>&lt;iframe&gt;</code>-elementet. Det er tilstrekkelig at det tilgjengelige navnet identifiserer <code>&lt;iframe&gt;</code>-elementet.</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G108"

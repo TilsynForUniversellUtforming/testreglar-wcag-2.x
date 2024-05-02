@@ -27,7 +27,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Er det mulig å vise alt innhold på appsiden både i stående og liggende retning?",
-			"ht": "<p>Sjekk først at enhetens operativsystem ikke begrenser visningsretningen, for eksempel at enheten har autorotasjon skrudd av.</p>\n<p>Dersom autorotasjon er skrudd av, skal du slå på autorotasjon.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Åpne appsiden </li>\n<li>Roter enheten 90 grader</li>\n<li>Sammenlign innhold og sjekk om alt innhold vises i begge visningsretninger</li>\n</ul>\n<p><strong>Tips</strong>: Du kan ta skjermbilde av den aktuelle appsiden i begge visningsretninger, for så å sammenligne innholdet.</p>",
+			"ht": "<p>Sjekk først at enhetens operativsystem ikke begrenser visningsretningen, for eksempel at enheten har autorotasjon skrudd av.</p><p>Dersom autorotasjon er skrudd av, skal du slå på autorotasjon.</p><p>Slik tester du:</p><ul><li>Åpne appsiden </li><li>Roter enheten 90 grader</li><li>Sammenlign innhold og sjekk om alt innhold vises i begge visningsretninger</li></ul><p><strong>Tips</strong>: Du kan ta skjermbilde av den aktuelle appsiden i begge visningsretninger, for så å sammenligne innholdet.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F97"
@@ -46,7 +46,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Er en bestemt visningsretning av innholdet avgjørende?",
-			"ht": "<p>Avgjørende er situasjoner der det aktuelle innholdet bare kan forstås i en bestemt visningsretning, eller der teknologien begrenser valg av visningsretning.</p>\n<p>Eksempler på at en bestemt visningsretning kan være avgjørende, er blant annet i en piano-app, lysark for en projektor eller TV, eller innhold i virtuell virkelighet der endring av visningsretning ikke er aktuelt. Det må gjøres en konkret vurdering av innholdet som testes.</p>",
+			"ht": "<p>Avgjørende er situasjoner der det aktuelle innholdet bare kan forstås i en bestemt visningsretning, eller der teknologien begrenser valg av visningsretning.</p><p>Eksempler på at en bestemt visningsretning kan være avgjørende, er blant annet i en piano-app, lysark for en projektor eller TV, eller innhold i virtuell virkelighet der endring av visningsretning ikke er aktuelt. Det må gjøres en konkret vurdering av innholdet som testes.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {

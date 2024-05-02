@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<ul>\r\n<li>Dersom endring av innstillinger i brukergrensesnittkomponenter fører til automatisk kontekstendring, informeres brukeren på forhånd og</li>\r\n<li>Informasjonen er plassert i tråd med ett av følgende alternativer:\r\n<ul>\r\n<li>På starten av siden med komponenten eller</li>\r\n<li>På samme steg i prosessen som inneholder komponenten eller</li>\r\n<li>Rett før den aktuelle komponenten i leserekkefølgen</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul><li>Dersom endring av innstillinger i brukergrensesnittkomponenter fører til automatisk kontekstendring, informeres brukeren på forhånd og</li><li>Informasjonen er plassert i tråd med ett av følgende alternativer:<ul><li>På starten av siden med komponenten eller</li><li>På samme steg i prosessen som inneholder komponenten eller</li><li>Rett før den aktuelle komponenten i leserekkefølgen</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsida brukargrensesnittkomponentar?",
-			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om du finn brukargrensesnittkomponentar. </p>\n<p>Eksempel på brukergrensesnittkomponent er</p>\n<ul>\n<li>avkryssingsboks</li>\n<li>nedtrekksliste</li>\n<li>radioknapp</li>\n<li>knapp </li>\n<li>tekstfelt </li>\n</ul>\n<p>Brukergrensesnittkomponent kan ligge aleine eller som en del av for eksempel eit større skjema eller søkefunksjon.</p>\n<p><strong>Merk:</strong> Skjema i PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om du finn brukargrensesnittkomponentar. </p><p>Eksempel på brukergrensesnittkomponent er</p><ul><li>avkryssingsboks</li><li>nedtrekksliste</li><li>radioknapp</li><li>knapp </li><li>tekstfelt </li></ul><p>Brukergrensesnittkomponent kan ligge aleine eller som en del av for eksempel eit større skjema eller søkefunksjon.</p><p><strong>Merk:</strong> Skjema i PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -94,7 +94,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Fører endring av innstillingar i brukargrensesnittkomponenten til automatisk kontekstendring?",
-			"ht": "<p>Slik testar du ulilke brukargrensesnittkomponentar:</p>\n<ul>\n<li>Avkryssingsboks: Krysse av med å bruke mellomromstasten.</li>\n<li>Nedtrekksliste: Bla i lista med å bruke piltastane.</li>\n<li>Radioknapp: Velge med å bruke piltastane eller mellomromstasten.</li>\n<li>Skjemafelt: Skriv i feltet.</li>\n<li>Knapp: Flytt fokus til knappen.</li>\n</ul>\n<p>Det kan vere at testsida lastar på nytt. Du skal likevel sjekka om det har oppstått ei kontekstendring.</p>\n<p>Eksempel på kontekstendring er:</p>\n<ul>\n<li>Opning av nytt innhald, anten i same eller ny fane, vindu eller program.</li>\n<li>Tastaturfokus blir flytta til ein annan komponent på nettsida.</li>\n<li>Vesentleg endring av meiningsinnhaldet til nettsida.</li>\n<li>Innsending av skjema.</li>\n</ul>\n<p><strong>Merk:</strong> Endring av innhald fører ikkje alltid til endring av kontekst. Dynamisk endring eller utviding må skje i tillegg til nokon av punkta over for å vere ei kontekstendring.</p>",
+			"ht": "<p>Slik testar du ulilke brukargrensesnittkomponentar:</p><ul><li>Avkryssingsboks: Krysse av med å bruke mellomromstasten.</li><li>Nedtrekksliste: Bla i lista med å bruke piltastane.</li><li>Radioknapp: Velge med å bruke piltastane eller mellomromstasten.</li><li>Skjemafelt: Skriv i feltet.</li><li>Knapp: Flytt fokus til knappen.</li></ul><p>Det kan vere at testsida lastar på nytt. Du skal likevel sjekka om det har oppstått ei kontekstendring.</p><p>Eksempel på kontekstendring er:</p><ul><li>Opning av nytt innhald, anten i same eller ny fane, vindu eller program.</li><li>Tastaturfokus blir flytta til ein annan komponent på nettsida.</li><li>Vesentleg endring av meiningsinnhaldet til nettsida.</li><li>Innsending av skjema.</li></ul><p><strong>Merk:</strong> Endring av innhald fører ikkje alltid til endring av kontekst. Dynamisk endring eller utviding må skje i tillegg til nokon av punkta over for å vere ei kontekstendring.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F36",
@@ -115,7 +115,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Fekk du informasjon på forhånd om at det ville skje ei kontekstendring?",
-			"ht": "<p>Gjer ein visuell inspeksjon, og sjekk om du finn informasjon om at det vil skje kontekstendring.</p>\n<p>Informasjonen er synleg og plassert i tråd med eit av følgjande alternativ: </p>\n<ul>\n<li>På starten av sida med komponenten eller</li>\n<li>På samme steg i prosessen som inneheld komponenten eller</li>\n<li>Rett før den aktuelle komponenten i leserekkefølga</li>\n</ul>",
+			"ht": "<p>Gjer ein visuell inspeksjon, og sjekk om du finn informasjon om at det vil skje kontekstendring.</p><p>Informasjonen er synleg og plassert i tråd med eit av følgjande alternativ: </p><ul><li>På starten av sida med komponenten eller</li><li>På samme steg i prosessen som inneheld komponenten eller</li><li>Rett før den aktuelle komponenten i leserekkefølga</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G13"

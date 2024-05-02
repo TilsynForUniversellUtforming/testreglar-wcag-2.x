@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har nettsiden visuelle overskrifter?",
-			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes visuelle overskrifter på testsiden. En overskrift skiller seg visuelt fra teksten som hører til, med for eksempel større skrift, feit eller kursiv markering.</p>\n<p>Overskrifter gjør at brukeren får informasjon om temaet for eller formålet med teksten, avsnittet, listen, skjemaet eller annet innhold som kommer etter overskriften.</p>",
+			"ht": "<p>Gjør en visuell inspeksjon og sjekk om det finnes visuelle overskrifter på testsiden. En overskrift skiller seg visuelt fra teksten som hører til, med for eksempel større skrift, feit eller kursiv markering.</p><p>Overskrifter gjør at brukeren får informasjon om temaet for eller formålet med teksten, avsnittet, listen, skjemaet eller annet innhold som kommer etter overskriften.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -98,7 +98,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er den visuelle overskriften kodet på en annen måte, som ivaretar den visuelle presentasjonen?",
-			"ht": "<p>Eksempel på koding er:</p>\n<ul>\n<li>unummerert liste, kodet med <code>&lt;ul&gt;</code> og <code>&lt;li&gt;</code> for hvert listepunkt</li>\n<li>nummerert liste, kodet med <code>&lt;ol&gt;</code> og <code>&lt;li&gt;</code> for hvert listepunkt</li>\n<li>deskriptiv liste, kodet med <code>&lt;dl&gt;</code>, <code>&lt;dd&gt;</code> og <code>&lt;dt&gt;</code></li>\n<li>Ledetekst kodet som <code>&lt;label&gt;</code></li>\n</ul>",
+			"ht": "<p>Eksempel på koding er:</p><ul><li>unummerert liste, kodet med <code>&lt;ul&gt;</code> og <code>&lt;li&gt;</code> for hvert listepunkt</li><li>nummerert liste, kodet med <code>&lt;ol&gt;</code> og <code>&lt;li&gt;</code> for hvert listepunkt</li><li>deskriptiv liste, kodet med <code>&lt;dl&gt;</code>, <code>&lt;dd&gt;</code> og <code>&lt;dt&gt;</code></li><li>Ledetekst kodet som <code>&lt;label&gt;</code></li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"F2",
@@ -119,7 +119,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Er overskriften kodet slik at den ignoreres av hjelpemiddelteknologi?",
-			"ht": "<p><strong>Alternativ 1</strong></p>\n<ul>\n<li>Inspiser overskriften i nettleseren</li>\n<li>Bruk Accessibility Checker verktøy i inspiser</li>\n<li>Under Computed Properties i Accessibility Checker</li>\n<li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li>\n</ul>\n<p><strong>Alternativ 2</strong></p>\n<p>Sjekk i koden om overskriften er kodet med et av følgende attributter:</p>\n<ul>\n<li>role=\"presentation\"</li>\n<li>role=\"none\"</li>\n<li>aria-hidden=\"true\"</li>\n</ul>",
+			"ht": "<p><strong>Alternativ 1</strong></p><ul><li>Inspiser overskriften i nettleseren</li><li>Bruk Accessibility Checker verktøy i inspiser</li><li>Under Computed Properties i Accessibility Checker</li><li>Sjekk om det står informasjon \"Accessibility node not exposed\"</li></ul><p><strong>Alternativ 2</strong></p><p>Sjekk i koden om overskriften er kodet med et av følgende attributter:</p><ul><li>role=\"presentation\"</li><li>role=\"none\"</li><li>aria-hidden=\"true\"</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -139,7 +139,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Inngår den visuelle overskriften i et tydelig overskriftshierarki?",
-			"ht": "<p>Hvis det er tydelig at deler av innholdet er presentert med et hierarki av visuelle overskrifter, skal dette også ivaretas i koden. Eksempel på dette er hovedinnholdet i en artikkel.</p>\n<p><strong>Merk:</strong> Du skal ikke vurdere hierarkiet på overskriftene for hele nettsiden samlet, men bare de delene av nettsidene som er delt opp med et visuelt overskriftshierarki.</p>",
+			"ht": "<p>Hvis det er tydelig at deler av innholdet er presentert med et hierarki av visuelle overskrifter, skal dette også ivaretas i koden. Eksempel på dette er hovedinnholdet i en artikkel.</p><p><strong>Merk:</strong> Du skal ikke vurdere hierarkiet på overskriftene for hele nettsiden samlet, men bare de delene av nettsidene som er delt opp med et visuelt overskriftshierarki.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -156,7 +156,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Hva er nivået på overskriften, visuelt sett?",
-			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Sammenlign nivået på den visuelle overskriften med de forrige overskriftene.</li>\n<li>Start på toppen av overskriftshierarkiet og tell deg nedover.</li>\n<li>Husk at det kan være flere overskrifter på samme nivå etter hverandre</li>\n</ul>\n<p><strong>Merk:</strong> Nivået på overskrifter bestemmes av flere ulike ting, i tillegg til størrelsen på teksten, for eksempel innholdet i teksten, plassering, tegnsetting og gruppering.</p>",
+			"ht": "<p>Slik tester du</p><ul><li>Sammenlign nivået på den visuelle overskriften med de forrige overskriftene.</li><li>Start på toppen av overskriftshierarkiet og tell deg nedover.</li><li>Husk at det kan være flere overskrifter på samme nivå etter hverandre</li></ul><p><strong>Merk:</strong> Nivået på overskrifter bestemmes av flere ulike ting, i tillegg til størrelsen på teksten, for eksempel innholdet i teksten, plassering, tegnsetting og gruppering.</p>",
 			"type": "radio",
 			"svarArray": [
 				"Nivå 1",
@@ -178,7 +178,7 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Er nivået i koden det samme som det visuelle nivået?",
-			"ht": "<p>Du kan bruke kodeverktøyet i nettleseren til å sjekke dette.</p>\n<p>Overskriftene skal være kodet med rett nivå:</p>\n<ul>\n<li>I standard HTML er overskriftene er kodet med elementene<code>&lt;h1&gt;</code> til <code>&lt;h6&gt;</code>.</li>\n<li>Med WAI-ARIA er overskriftene er kodet med attributtene <code>aria-level=\"1\"</code> til <code>aria-level=\"6\"</code>.</li>\n</ul>\n<p><strong>Merk:</strong> <code>&lt;h1&gt;</code> kan brukes mer enn en gang på samme side, dersom innhold på siden er delt inn i mer enn en blokk.</p>",
+			"ht": "<p>Du kan bruke kodeverktøyet i nettleseren til å sjekke dette.</p><p>Overskriftene skal være kodet med rett nivå:</p><ul><li>I standard HTML er overskriftene er kodet med elementene<code>&lt;h1&gt;</code> til <code>&lt;h6&gt;</code>.</li><li>Med WAI-ARIA er overskriftene er kodet med attributtene <code>aria-level=\"1\"</code> til <code>aria-level=\"6\"</code>.</li></ul><p><strong>Merk:</strong> <code>&lt;h1&gt;</code> kan brukes mer enn en gang på samme side, dersom innhold på siden er delt inn i mer enn en blokk.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G115"

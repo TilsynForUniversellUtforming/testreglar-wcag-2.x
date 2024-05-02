@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Knappar er kopla til ein ledetekst i koden. Dette kan gjerast på fleire måtar. Ledeteksten identifiserer funksjonen til knappen.</p>\r\n<p>Knappar som ikkje er koda med standardelementa i (X)HTML , skal ha informasjon om rolle.</p>",
+	"kravTilSamsvar": "<p>Knappar er kopla til ein ledetekst i koden. Dette kan gjerast på fleire måtar. Ledeteksten identifiserer funksjonen til knappen.</p><p>Knappar som ikkje er koda med standardelementa i (X)HTML , skal ha informasjon om rolle.</p>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -341,7 +341,7 @@
 		{
 			"stegnr": "3.17",
 			"spm": "Identifiserer ledeteksten funksjonen til knappen?",
-			"ht": "<p>Ta utgangspunktet i ledeteksten du fann i førre steg.</p>\n<p>Det er tilstrekkeleg at ledeteksten identifiserer knappen eller er lik teksten på knappen. Vi krever uansett ikkje meir identifikasjon enn den synlege informasjonen på knappen.</p>\n<p>Knappar som er koda med berre eit type-element som er anten <code>type=\"submit</code>\" eller <code>type=\"reset</code>\", skal du vurdere den visuelle teksten på knappen.</p>\n<p><strong>Merk: </strong>Ledeteksten skal vere på same språk som skjemaet.</p>",
+			"ht": "<p>Ta utgangspunktet i ledeteksten du fann i førre steg.</p><p>Det er tilstrekkeleg at ledeteksten identifiserer knappen eller er lik teksten på knappen. Vi krever uansett ikkje meir identifikasjon enn den synlege informasjonen på knappen.</p><p>Knappar som er koda med berre eit type-element som er anten <code>type=\"submit</code>\" eller <code>type=\"reset</code>\", skal du vurdere den visuelle teksten på knappen.</p><p><strong>Merk: </strong>Ledeteksten skal vere på same språk som skjemaet.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G108"

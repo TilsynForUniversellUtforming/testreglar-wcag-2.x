@@ -90,7 +90,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Har &lt;area&gt;-elementet attributtet \"aria-label\" ?",
-			"ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette. Attributtet overstyrer eventuelt alt-attributt eller title-attributt.</p>\n<p><strong>Merk: </strong>Du skal ikkje vurdere kvaliteten på teksten.</p>",
+			"ht": "<p>Du kan nytte kodeverktøyet i nettlesaren til å sjekke dette. Attributtet overstyrer eventuelt alt-attributt eller title-attributt.</p><p><strong>Merk: </strong>Du skal ikkje vurdere kvaliteten på teksten.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA6"
@@ -109,7 +109,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Har &lt;aria&gt;-elementet attributtet \"aria-labelledby\"",
-			"ht": "<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. <code>(Aria-labelledby=\"id1 id2\")</code></p>\n<p><strong>Merk: </strong>Du skal ikkje vurdere kvaliteten på teksten.</p>",
+			"ht": "<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. <code>(Aria-labelledby=\"id1 id2\")</code></p><p><strong>Merk: </strong>Du skal ikkje vurdere kvaliteten på teksten.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA10"

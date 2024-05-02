@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Aktiver skjermlesar (opplesingsfunksjon).",
-			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Aktiver skjermlesar (opplesningsfunksjon)\n<ul>\n<li>iOS: <a href=\"https://support.apple.com/no-no/guide/iphone/iph3e2e415f/ios\">VoiceOver</a></li>\n<li>Android: <a href=\"https://support.google.com/accessibility/android/answer/6283677?hl=en\">Talkback</a></li>\n</ul>\n</li>\n<li>Opne appsida du testar</li>\n<li>Sjekk om det er mogleg å sveipe til minst eit element</li>\n</ul>",
+			"ht": "<p>Slik testar du:</p><ul><li>Aktiver skjermlesar (opplesningsfunksjon)<ul><li>iOS: <a href=\"https://support.apple.com/no-no/guide/iphone/iph3e2e415f/ios\">VoiceOver</a></li><li>Android: <a href=\"https://support.google.com/accessibility/android/answer/6283677?hl=en\">Talkback</a></li></ul></li><li>Opne appsida du testar</li><li>Sjekk om det er mogleg å sveipe til minst eit element</li></ul>",
 			"type": "instruksjon",
 			"oblig": true,
 			"ruting": {
@@ -56,7 +56,7 @@
 		{
 			"stegnr": "2.4",
 			"spm": "Finst det minst ei sveipefelle på appsida?",
-			"ht": "<p>Sjekk om det er sveipefeller på appsida. Sveipefelle inneber at brukaren ikkje kan sveipe frem og tilbake mellom ulike elementer på appsida, utan å bli ståande fast i eit element. </p>\n<p><strong>Slik testar du: </strong></p>\n<p>Sveip sakte for å navigere på appsida. Kontroller at du sveiper appsida heilt ned og at du kjem tilbake til starten av appsida. </p>\n<ul>\n<li>Hugs å opne menyar, modaler, og å gå inn i plugins med for eksempel mediaspelarar og kommentarfelt for å teste alt innhald. </li>\n</ul>",
+			"ht": "<p>Sjekk om det er sveipefeller på appsida. Sveipefelle inneber at brukaren ikkje kan sveipe frem og tilbake mellom ulike elementer på appsida, utan å bli ståande fast i eit element. </p><p><strong>Slik testar du: </strong></p><p>Sveip sakte for å navigere på appsida. Kontroller at du sveiper appsida heilt ned og at du kjem tilbake til starten av appsida. </p><ul><li>Hugs å opne menyar, modaler, og å gå inn i plugins med for eksempel mediaspelarar og kommentarfelt for å teste alt innhald. </li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G21"

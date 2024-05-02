@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har appsida skjema eller skjemaelement?",
-			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om det finst minst eit skjemaelement på appsida.</p>\n<p><strong>Merk:</strong> Skjema i PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
+			"ht": "<p>Gjer ein visuell inspeksjon og sjekk om det finst minst eit skjemaelement på appsida.</p><p><strong>Merk:</strong> Skjema i PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -75,7 +75,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Kva ledetekst testar du?",
-			"ht": "<p>Beskriv ledeteksten, slik at det er mogleg å identifisere den i ettertid. Om du finn fleire ledetekstar, registrerer du ein og ein.</p>\n<p><strong>Merk:</strong></p>\n<ul>\n<li>Eit og same skjemaelement kan ha fleire ledetekstar, som til saman gir informasjon om emne eller formål</li>\n<li>Vi ser vekk frå kravet om at obligatoriske skjemafelt skal vere merka. Dette blir testa i SK 3.3.2</li>\n</ul>",
+			"ht": "<p>Beskriv ledeteksten, slik at det er mogleg å identifisere den i ettertid. Om du finn fleire ledetekstar, registrerer du ein og ein.</p><p><strong>Merk:</strong></p><ul><li>Eit og same skjemaelement kan ha fleire ledetekstar, som til saman gir informasjon om emne eller formål</li><li>Vi ser vekk frå kravet om at obligatoriske skjemafelt skal vere merka. Dette blir testa i SK 3.3.2</li></ul>",
 			"type": "tekst",
 			"label": "Ledetekst:",
 			"multilinje": true,

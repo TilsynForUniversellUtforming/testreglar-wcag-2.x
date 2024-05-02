@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar. </p>\r\n<ul>\r\n<li>Bilde av tekst er ikkje i bruk med mindre:\r\n<ul>\r\n<li>bilde av tekst kan tilpassast brukaren sine krav eller</li>\r\n<li>bilde av tekst er nødvendig for å presentere informasjon</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar. </p><ul><li>Bilde av tekst er ikkje i bruk med mindre:<ul><li>bilde av tekst kan tilpassast brukaren sine krav eller</li><li>bilde av tekst er nødvendig for å presentere informasjon</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -120,7 +120,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Går informasjon/funksjonalitet i presentasjonen tapt viss bilde av tekst kodast om til tekst?",
-			"ht": "<p>Eksempel på situasjonar der bruk av bilde av tekst er nødvendig: </p>\n<ul>\n<li>Det ikkje er mogleg å formatere teksten for å oppnå same effekt. </li>\n<li>Det ikkje er mogleg å presentere effekten i dei vanlegaste nettleserane.</li>\n<li>Presentasjonen krev bruk av teknikkar/teknologi som ikkje oppfyller WCAG.</li>\n</ul>",
+			"ht": "<p>Eksempel på situasjonar der bruk av bilde av tekst er nødvendig: </p><ul><li>Det ikkje er mogleg å formatere teksten for å oppnå same effekt. </li><li>Det ikkje er mogleg å presentere effekten i dei vanlegaste nettleserane.</li><li>Presentasjonen krev bruk av teknikkar/teknologi som ikkje oppfyller WCAG.</li></ul>",
 			"kilde": [],
 			"type": "jaNei",
 			"ruting": {

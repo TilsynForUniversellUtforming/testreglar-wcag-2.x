@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Finnes det bilde med et eller flere klikkbare områder, på testsiden?",
-			"ht": "<p>Bruk kodeverktøyet i nettleseren og sjekk om det finnes et eller flere bilder som er kodet med <code>&lt;map&gt;</code>-elementet.</p>\n<p><strong>Merk:</strong> Bildets plassering har ikke betydning. Det kan for eksempel ligge i en meny, liste, tabell eller lignende. </p>",
+			"ht": "<p>Bruk kodeverktøyet i nettleseren og sjekk om det finnes et eller flere bilder som er kodet med <code>&lt;map&gt;</code>-elementet.</p><p><strong>Merk:</strong> Bildets plassering har ikke betydning. Det kan for eksempel ligge i en meny, liste, tabell eller lignende. </p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -56,7 +56,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Finnes det &lt;area&gt;-element inne i &lt;map&gt;-elementet?",
-			"ht": "<p>Fell ut <code>&lt;map&gt;</code>-elementet.</p>\n<p>Se deretter om du finner <code>&lt;area&gt;</code>-element som er nøsta under <code>&lt;map&gt;</code>-elementet i koden.</p>",
+			"ht": "<p>Fell ut <code>&lt;map&gt;</code>-elementet.</p><p>Se deretter om du finner <code>&lt;area&gt;</code>-element som er nøsta under <code>&lt;map&gt;</code>-elementet i koden.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -73,7 +73,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Hvilket klikkbart område, &lt;area&gt;-elementet, tester du?",
-			"ht": "<p>Velg eit klikkbart område,<code>&lt;area&gt;</code>-element, og beskriv det, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere klikkbare områder, registrerer du et og et.</p>\n<p><strong>Merk:</strong> Dersom du tester et nytt bilde, gå til steg 3.1 for å registrere først.</p>",
+			"ht": "<p>Velg eit klikkbart område,<code>&lt;area&gt;</code>-element, og beskriv det, slik at det er mulig å identifisere det i ettertid. Hvis det gjelder flere klikkbare områder, registrerer du et og et.</p><p><strong>Merk:</strong> Dersom du tester et nytt bilde, gå til steg 3.1 for å registrere først.</p>",
 			"type": "tekst",
 			"label": "Klikkbart område:",
 			"multilinje": true,
@@ -101,7 +101,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Har det klikkbare området, &lt;area&gt;-elementet, et tekstalternativ (tilgjengelig navn)?",
-			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Gå tilbake til testsiden</li>\n<li>Inspiser det klikkbare området, <code>&lt;area&gt;</code>-elementet, du registrerte i forrige steg.</li>\n<li>Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</li>\n</ul>",
+			"ht": "<p>Slik tester du</p><ul><li>Gå tilbake til testsiden</li><li>Inspiser det klikkbare området, <code>&lt;area&gt;</code>-elementet, du registrerte i forrige steg.</li><li>Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -118,7 +118,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Hvilket tekstalternativ tester du?",
-			"ht": "<p>Registrer det tilgjengelige navnet du fant i forrige steg.</p>\n<p>Kopier innholdet i attributtet \"Name\" under Computed Properties i Accessibility Tree.</p>",
+			"ht": "<p>Registrer det tilgjengelige navnet du fant i forrige steg.</p><p>Kopier innholdet i attributtet \"Name\" under Computed Properties i Accessibility Tree.</p>",
 			"type": "tekst",
 			"label": "Tekstalternativ:",
 			"multilinje": true,
@@ -157,7 +157,7 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Er innholdet i det tilgjengelige navnet beskrivende for lenkemålet?",
-			"ht": "<p>Gjør em skjønnsmessig vurdering av om innholdet i det tilgjengelige navnet, gir tilstrekkelig informasjon om hva som er lenkemålet. Lenkemålet er dit brukeren kommer ved å aktivere lenken. </p>\n<p><strong>Merk:</strong> Viss det ligger flere bilder i en og samme lenke, vurderer du tekstalternativene samlet.</p>",
+			"ht": "<p>Gjør em skjønnsmessig vurdering av om innholdet i det tilgjengelige navnet, gir tilstrekkelig informasjon om hva som er lenkemålet. Lenkemålet er dit brukeren kommer ved å aktivere lenken. </p><p><strong>Merk:</strong> Viss det ligger flere bilder i en og samme lenke, vurderer du tekstalternativene samlet.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {

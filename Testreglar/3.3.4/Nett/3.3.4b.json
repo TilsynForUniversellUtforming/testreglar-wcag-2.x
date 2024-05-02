@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar:</p>\r\n<p>Det skal vere mogleg å</p>\r\n<ul>\r\n<li>anten bekrefte sletting</li>\r\n<li>eller angre etter sletting av lagra informasjon frå skjema med viktige formål.</li>\r\n</ul>\r\n<p>Ein av følgande må vere oppfylt: </p>\r\n<ul>\r\n<li>Før sletting får brukaren krav om å stadfeste at ein har til formål å slette informasjonen.</li>\r\n<li>Etter innsending let det seg gjere å angre slettinga.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar:</p><p>Det skal vere mogleg å</p><ul><li>anten bekrefte sletting</li><li>eller angre etter sletting av lagra informasjon frå skjema med viktige formål.</li></ul><p>Ein av følgande må vere oppfylt: </p><ul><li>Før sletting får brukaren krav om å stadfeste at ein har til formål å slette informasjonen.</li><li>Etter innsending let det seg gjere å angre slettinga.</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [

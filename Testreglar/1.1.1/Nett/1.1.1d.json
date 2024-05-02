@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har nettsida CAPTCHA i form av innhald som ikkje er tekst?",
-			"ht": "<p>Sjå om du finn ein CAPTCHA på nettsida.</p>\n<p>CAPTCHA står for \"Completely Automated Public Turing test to tell Computers and Humans Apart\", kor brukaren ofte blir beden om å taste inn tekst frå eit forvrengt bilde eller ei lydfil.</p>",
+			"ht": "<p>Sjå om du finn ein CAPTCHA på nettsida.</p><p>CAPTCHA står for \"Completely Automated Public Turing test to tell Computers and Humans Apart\", kor brukaren ofte blir beden om å taste inn tekst frå eit forvrengt bilde eller ei lydfil.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -121,7 +121,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Har bilde attributtet \"aria-labelledby\" ?",
-			"ht": "<p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p>\n<p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (Aria-labelledby=\"id1 id2\")</p>",
+			"ht": "<p><strong>MERK:</strong> Du skal ikkje vurdere kvaliteten på teksten.</p><p>Merk at ein aria-labelledby kan innhalde fleire id-ar i same attributt. Id-ane er skilt med mellomrom. (Aria-labelledby=\"id1 id2\")</p>",
 			"type": "jaNei",
 			"kilde": [
 				"ARIA10",

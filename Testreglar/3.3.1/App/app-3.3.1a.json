@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Dersom det blir oppdaget automatisk at obligatoriske skjemaelement ikke er fylt ut, er følgende punkter oppfylt:</p>\r\n<ul>\r\n<li>Skjemaelementet der feilen oppstod identifiseres og</li>\r\n<li>Brukeren får en presis tekstlig beskrivelse av feilen og</li>\r\n<li>Feilmeldingen er kodet som tekst </li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Dersom det blir oppdaget automatisk at obligatoriske skjemaelement ikke er fylt ut, er følgende punkter oppfylt:</p><ul><li>Skjemaelementet der feilen oppstod identifiseres og</li><li>Brukeren får en presis tekstlig beskrivelse av feilen og</li><li>Feilmeldingen er kodet som tekst </li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -58,7 +58,7 @@
 		{
 			"stegnr": "2.4",
 			"spm": "Er det mulig å sveipe til skjemaelementer?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser (opplesningsfunksjon)\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: Talkback</li>\n</ul>\n</li>\n<li>Åpne appsiden du tester</li>\n<li>Sjekk om det er mulig å sveipe til minst et skjemaelement</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Aktiver skjermleser (opplesningsfunksjon)<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>Åpne appsiden du tester</li><li>Sjekk om det er mulig å sveipe til minst et skjemaelement</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
@@ -75,7 +75,7 @@
 		{
 			"stegnr": "2.5",
 			"spm": "Oppdager skjemaet automatisk at obligatoriske skjemaelement er tomme?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Ikke fyll ut informasjon i skjemaet (tomt skjema) eller la alle obligatoriske skjemaelementer stå tomme.\n<ul>\n<li>Hvis obligatoriske skjemaelementer er forhåndsutfylt, fjern forhåndsutfylt informasjon der det er mulig.\n<ul>\n<li>Forhåndsutfylt informasjon betyr at det allerede står inndata i skjemaet når testsiden er lastet inn.</li>\n<li>Eksempel på forhåndsutfylt informasjon, er informasjon hentet fra folkeregisteret som for eksempel personnummer, fornavn, etternavn og adresse.</li>\n</ul>\n</li>\n</ul>\n</li>\n<li>Prøv deretter å fullføre/sende inn eller gå videre i skjemaet.\n<ul>\n<li>Hensikten er å sjekke om tomme obligatoriske skjemaelementer blir oppdaget automatisk. </li>\n</ul>\n</li>\n</ul>\n<p>Begrepet \"oppdages automatisk\" betyr at skjemaet er satt opp slik at det selv oppdager når det mangler nødvendig informasjon i obligatoriske elementer i skjemaet.</p>\n<p><strong>Merk:</strong> Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes. Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut rett informasjon, indikerer at brukeren har utelatt inndata som appsiden krever, og at dette oppdages automatisk, uten at brukeren er involvert.</p>",
+			"ht": "<p>Slik tester du:</p><ul><li>Ikke fyll ut informasjon i skjemaet (tomt skjema) eller la alle obligatoriske skjemaelementer stå tomme.<ul><li>Hvis obligatoriske skjemaelementer er forhåndsutfylt, fjern forhåndsutfylt informasjon der det er mulig.<ul><li>Forhåndsutfylt informasjon betyr at det allerede står inndata i skjemaet når testsiden er lastet inn.</li><li>Eksempel på forhåndsutfylt informasjon, er informasjon hentet fra folkeregisteret som for eksempel personnummer, fornavn, etternavn og adresse.</li></ul></li></ul></li><li>Prøv deretter å fullføre/sende inn eller gå videre i skjemaet.<ul><li>Hensikten er å sjekke om tomme obligatoriske skjemaelementer blir oppdaget automatisk. </li></ul></li></ul><p>Begrepet \"oppdages automatisk\" betyr at skjemaet er satt opp slik at det selv oppdager når det mangler nødvendig informasjon i obligatoriske elementer i skjemaet.</p><p><strong>Merk:</strong> Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes. Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut rett informasjon, indikerer at brukeren har utelatt inndata som appsiden krever, og at dette oppdages automatisk, uten at brukeren er involvert.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
@@ -107,7 +107,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Får du en tekstlig feilmelding?",
-			"ht": "<p>Feilmeldingen kan for eksempel vises</p>\n<ul>\n<li>i et modalvindu</li>\n<li>i ledeteksten til skjemaelement</li>\n<li>et annet sted i skjemaet/på siden, for eksempel på toppen</li>\n<li>når du navigerer i skjemaet</li>\n</ul>\n<p><strong>Merk:</strong> Det er ikke nok å identifisere feilen utelukkende med for eksempel </p>\n<ul>\n<li>et symbol i ledeteksten</li>\n<li>ved å endre farge</li>\n<li>visuell plassering av feilmeldingen  </li>\n<li>deaktivert knapp for å sende inn eller gå videre i skjemaet</li>\n<li>lignende ikke-tekstlige indikatorer</li>\n</ul>",
+			"ht": "<p>Feilmeldingen kan for eksempel vises</p><ul><li>i et modalvindu</li><li>i ledeteksten til skjemaelement</li><li>et annet sted i skjemaet/på siden, for eksempel på toppen</li><li>når du navigerer i skjemaet</li></ul><p><strong>Merk:</strong> Det er ikke nok å identifisere feilen utelukkende med for eksempel </p><ul><li>et symbol i ledeteksten</li><li>ved å endre farge</li><li>visuell plassering av feilmeldingen  </li><li>deaktivert knapp for å sende inn eller gå videre i skjemaet</li><li>lignende ikke-tekstlige indikatorer</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G83"
@@ -127,7 +127,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er feilmeldingen kodet som tekst?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser (opplesingsfunksjon)\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: TalkBack</li>\n</ul>\n</li>\n<li>Trykk på feilmeldingen du tester, og sjekk om den blir lest opp</li>\n</ul>\n<p><strong>Merk:</strong> Hvis feilmeldingen ikke blir lest opp, er den ikke kodet som tekst.</p>",
+			"ht": "<p>Slik tester du:</p><ul><li>Aktiver skjermleser (opplesingsfunksjon)<ul><li>iOS: VoiceOver</li><li>Android: TalkBack</li></ul></li><li>Trykk på feilmeldingen du tester, og sjekk om den blir lest opp</li></ul><p><strong>Merk:</strong> Hvis feilmeldingen ikke blir lest opp, er den ikke kodet som tekst.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -164,7 +164,7 @@
 		{
 			"stegnr": "3.5",
 			"spm": "Inneholder feilmeldingen tekst som beskriver feilen?",
-			"ht": "<p>Feilmeldingen gir informasjon om hva feilen består i, slik at brukeren vet at hva som har gått feil, for eksempel \"Fornavn må fylles ut\".</p>\n<p><strong>Merk:</strong> Det er ikke krav om at feilmeldingen skal inneholde forslag til hvordan feil skal rettes. Dette er omfattet av suksesskriterium 3.3.3.</p>",
+			"ht": "<p>Feilmeldingen gir informasjon om hva feilen består i, slik at brukeren vet at hva som har gått feil, for eksempel \"Fornavn må fylles ut\".</p><p><strong>Merk:</strong> Det er ikke krav om at feilmeldingen skal inneholde forslag til hvordan feil skal rettes. Dette er omfattet av suksesskriterium 3.3.3.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G83"

@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<ul>\r\n<li>Sidetittelen er korrekt kodet i det oppmerkingsspråket som er brukt og</li>\r\n<li>Sidetittelen gir en relevant beskrivelse av sidens tema eller formål</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul><li>Sidetittelen er korrekt kodet i det oppmerkingsspråket som er brukt og</li><li>Sidetittelen gir en relevant beskrivelse av sidens tema eller formål</li></ul>",
 	"side": "2.1",
 	"element": "Side",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Har nettsida ein sidetittel?",
-			"ht": "<p>Slik testar du:</p>\n<ul>\n<li>Sjekk i koden (inspiser) om sidetittelen står i <code>&lt;title&gt;</code>-elementet, som er nøsta i <code>&lt;head&gt;</code>-elementet på starten av HTML-koden.</li>\n</ul>\n<p><strong>Merk:</strong> <code>&lt;title&gt;</code>-elementet ikkje er det same som title-attributt. <code>&lt;title&gt;</code>-elementet er obligatorisk og finst berre ei gong per nettside.</p>",
+			"ht": "<p>Slik testar du:</p><ul><li>Sjekk i koden (inspiser) om sidetittelen står i <code>&lt;title&gt;</code>-elementet, som er nøsta i <code>&lt;head&gt;</code>-elementet på starten av HTML-koden.</li></ul><p><strong>Merk:</strong> <code>&lt;title&gt;</code>-elementet ikkje er det same som title-attributt. <code>&lt;title&gt;</code>-elementet er obligatorisk og finst berre ei gong per nettside.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"H25"
@@ -47,7 +47,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Kva sidetittel testar du?",
-			"ht": "<p>Kopier sidetittel og registrer.</p>\n<p><strong>Merk:</strong> Sidetittel ikkje er det same som hovudoverskrift på sida.</p>",
+			"ht": "<p>Kopier sidetittel og registrer.</p><p><strong>Merk:</strong> Sidetittel ikkje er det same som hovudoverskrift på sida.</p>",
 			"type": "tekst",
 			"label": "Sidetittel:",
 			"multilinje": true,
@@ -75,7 +75,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Gir sidetittelen ein relevant beskrivelse av emnet eller formålet med nettsida?",
-			"ht": "<p>Sidetittelen skal vere relevant for emne eller formål med sida. Namnet på sida/dokumentet er nok til å gi ein beskrivande sidetittel, men det er ikkje noko krav om å bruke namnet på sida/dokumentet.</p>\n<p>Eksempel på sidetitlar som ikkje er beskrivande:</p>\n<ul>\n<li>Skriv inn navnet på HTML-dokumentet her</li>\n<li>Dokument uten tittel</li>\n<li>Ingen tittel</li>\n<li>Filnavn som ikkje er beskrivende aleine, for eksempel Rapport.html</li>\n<li>Nettsida har sidetittel Forstå suksesskriterium 2.4.3 Fokus rekkefølge, men innhaldet på sida er forstå suksesskriterium 2.4.4 Formål med lenke(i kontekst)</li>\n</ul>",
+			"ht": "<p>Sidetittelen skal vere relevant for emne eller formål med sida. Namnet på sida/dokumentet er nok til å gi ein beskrivande sidetittel, men det er ikkje noko krav om å bruke namnet på sida/dokumentet.</p><p>Eksempel på sidetitlar som ikkje er beskrivande:</p><ul><li>Skriv inn navnet på HTML-dokumentet her</li><li>Dokument uten tittel</li><li>Ingen tittel</li><li>Filnavn som ikkje er beskrivende aleine, for eksempel Rapport.html</li><li>Nettsida har sidetittel Forstå suksesskriterium 2.4.3 Fokus rekkefølge, men innhaldet på sida er forstå suksesskriterium 2.4.4 Formål med lenke(i kontekst)</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"F25",

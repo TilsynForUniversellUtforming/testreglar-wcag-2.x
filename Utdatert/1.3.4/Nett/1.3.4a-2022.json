@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Det er mogeleg å vise nettsida i både ståande og liggande visning utan tap av innhald med unntak av:</p>\r\n<ul>\r\n<li>innhald der ei bestemt visingsretning er naudsynt for at informasjon og funksjonalitet skal fungere</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Det er mogeleg å vise nettsida i både ståande og liggande visning utan tap av innhald med unntak av:</p><ul><li>innhald der ei bestemt visingsretning er naudsynt for at informasjon og funksjonalitet skal fungere</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Får du tilgang til alt innhaldet på nettsida i både portrett og landskapsvisning?",
-			"ht": "<p>Sjekk at du får tilgang til alt innhaldet på nettsida både i portrett- og landskapsvisning. Du kan bruke device-toolbaren i nettlesaren sitt utviklingsverktøy for å teste dette.</p>\n<p>Eit tips kan vere å bruke to skjermar slik at du kan lettare kan sjå forskjell mellom nettsida i vanleg pc-visning og dei ulike visningsretningane. </p>",
+			"ht": "<p>Sjekk at du får tilgang til alt innhaldet på nettsida både i portrett- og landskapsvisning. Du kan bruke device-toolbaren i nettlesaren sitt utviklingsverktøy for å teste dette.</p><p>Eit tips kan vere å bruke to skjermar slik at du kan lettare kan sjå forskjell mellom nettsida i vanleg pc-visning og dei ulike visningsretningane. </p>",
 			"type": "jaNei",
 			"kilde": [
 				"F97"

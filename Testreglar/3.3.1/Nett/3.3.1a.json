@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Dersom det blir oppdaga automatisk at obligatoriske skjemaelement ikkje er fylt ut, gjeld følgande:</p>\r\n<ul>\r\n<li>Brukaren får ei tekstleg feilmelding</li>\r\n<li>Feilmeldinga er koda som tekst</li>\r\n<li>Feilmeldinga identifiserer skjemaelementet der feilen oppstod</li>\r\n<li>Feilmeldinga beskriv feilen</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Dersom det blir oppdaga automatisk at obligatoriske skjemaelement ikkje er fylt ut, gjeld følgande:</p><ul><li>Brukaren får ei tekstleg feilmelding</li><li>Feilmeldinga er koda som tekst</li><li>Feilmeldinga identifiserer skjemaelementet der feilen oppstod</li><li>Feilmeldinga beskriv feilen</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [

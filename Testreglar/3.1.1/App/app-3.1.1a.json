@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<ul>\r\n<li>Appsiden har en gyldig språkkode og</li>\r\n<li>Språkkoden som er angitt stemmer med hovedspråket på den aktuelle appsiden</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul><li>Appsiden har en gyldig språkkode og</li><li>Språkkoden som er angitt stemmer med hovedspråket på den aktuelle appsiden</li></ul>",
 	"side": "2.1",
 	"element": "Side",
 	"steg": [
@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Er det mulig å sveipe til innhold på appsiden?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Aktiver skjermleser\n<ul>\n<li>iOS: VoiceOver</li>\n<li>Android: Talkback</li>\n</ul>\n</li>\n<li>Åpne appsiden du tester</li>\n<li>Sjekk om det er mulig å sveipe til innhold på appsiden</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>Åpne appsiden du tester</li><li>Sjekk om det er mulig å sveipe til innhold på appsiden</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -43,7 +43,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Hva er hovedspråket på appsiden?",
-			"ht": "<p>Velg det språket som alt eller størsteparten av innholdet på appsiden er har.</p>\n<ul>\n<li>Dersom det er vanskelig å vurdere hvilket språk som er mest brukt, er hovedspråket det språket som er brukt først.</li>\n<li>Dersom språket ikke finnes i listen, velger du alternativet Annet og går videre.</li>\n</ul>",
+			"ht": "<p>Velg det språket som alt eller størsteparten av innholdet på appsiden er har.</p><ul><li>Dersom det er vanskelig å vurdere hvilket språk som er mest brukt, er hovedspråket det språket som er brukt først.</li><li>Dersom språket ikke finnes i listen, velger du alternativet Annet og går videre.</li></ul>",
 			"type": "radio",
 			"ruting": {
 				"alle": {
@@ -64,7 +64,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Velg et annet språk i operativsystemet, enn hovedspråket på appsiden",
-			"ht": "<ul>\n<li>Sett språket i operativsystemet til engelsk hvis hovedspråket i appen er norsk eller omvendt</li>\n<li>Slik endrer du språk i operativsystemet\n<ul>\n<li><strong>iOS:</strong> Innstillinger &gt; Generelt &gt; Språk og område &gt; Sett språket i operativsystemet til engelsk eller omvendt\n<ul>\n<li>Legg til relevant språk: VoiceOver &gt; Tale &gt; Legg til nytt språk</li>\n<li>Slå av følgende\n<ul>\n<li>Fastlå språk: VoiceOver &gt; Tale &gt; Fastlå språk</li>\n<li>VoiceOver-gjenkjenning: VoiceOver &gt; VoiceOver-gjenkjenning &gt; Skjermgjenkjenning</li>\n</ul>\n</li>\n</ul>\n</li>\n<li><strong>Android</strong>: Innstillinger &gt; Generell styring &gt; Språk &gt; Legg til språk &gt; Sett språket i operativsystemet til engelsk eller omvendt\n<ul>\n<li>Gå til Tekst til tale &gt; Språk &gt; Velg Bruk systemspråk.</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>",
+			"ht": "<ul><li>Sett språket i operativsystemet til engelsk hvis hovedspråket i appen er norsk eller omvendt</li><li>Slik endrer du språk i operativsystemet<ul><li><strong>iOS:</strong> Innstillinger &gt; Generelt &gt; Språk og område &gt; Sett språket i operativsystemet til engelsk eller omvendt<ul><li>Legg til relevant språk: VoiceOver &gt; Tale &gt; Legg til nytt språk</li><li>Slå av følgende<ul><li>Fastlå språk: VoiceOver &gt; Tale &gt; Fastlå språk</li><li>VoiceOver-gjenkjenning: VoiceOver &gt; VoiceOver-gjenkjenning &gt; Skjermgjenkjenning</li></ul></li></ul></li><li><strong>Android</strong>: Innstillinger &gt; Generell styring &gt; Språk &gt; Legg til språk &gt; Sett språket i operativsystemet til engelsk eller omvendt<ul><li>Gå til Tekst til tale &gt; Språk &gt; Velg Bruk systemspråk.</li></ul></li></ul></li></ul>",
 			"type": "instruksjon",
 			"ruting": {
 				"alle": {
@@ -76,7 +76,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Leser skjermleser opp innhold på hovedspråket, med riktig uttale?",
-			"ht": "<p>Slik tester du:</p>\n<ul>\n<li>Sveip til innhold som er på hovedspråket på appsiden</li>\n<li>Hør etter om skjermleser leser opp innhold på appsiden med riktig uttale/aksent\n<ul>\n<li>Det må være uttale som åpenbart skyldes feil språkvalg</li>\n<li>Vi godtar at enkelt ord leses opp med feil uttale</li>\n</ul>\n</li>\n</ul>\n<p>Eksempel på brudd:</p>\n<ul>\n<li>Hvis skjermleser leser opp innhold på norsk med engelsk aksent eller omvendt, er hovedspråket ikke programmatisk bestemt </li>\n<li>Skjermleser leser opp \"Dette er umulig å uttale\" eller lignende</li>\n</ul>",
+			"ht": "<p>Slik tester du:</p><ul><li>Sveip til innhold som er på hovedspråket på appsiden</li><li>Hør etter om skjermleser leser opp innhold på appsiden med riktig uttale/aksent<ul><li>Det må være uttale som åpenbart skyldes feil språkvalg</li><li>Vi godtar at enkelt ord leses opp med feil uttale</li></ul></li></ul><p>Eksempel på brudd:</p><ul><li>Hvis skjermleser leser opp innhold på norsk med engelsk aksent eller omvendt, er hovedspråket ikke programmatisk bestemt </li><li>Skjermleser leser opp \"Dette er umulig å uttale\" eller lignende</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {

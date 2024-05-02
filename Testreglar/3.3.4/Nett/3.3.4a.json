@@ -5,7 +5,7 @@
 	"versjon": "2",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For nettsider som medfører juridiske forpliktingar eller krev økonomiske transaksjonar frå brukaren, som enten endrar brukarstyrte data i datalagringssystem eller som sender svar på testar utført av brukaren, må ein av følgjande vere oppfylt:</p>\r\n<p>For inndatafelt som er obligatoriske eller krev eit bestemt format:</p>\r\n<ul>\r\n<li>vert inndatafeil oppdaga og<br>brukaren får moglegheit til å rette opp eventuelle feil.\r\n<ul>\r\n<li>Før innsending får brukaren:<br>oppfordring om å gjennomgå informasjonen som er lagt inn<br>moglegheit til endre all informasjon før innsending og<br>brukaren får moglegheit til å rette opp eventuelle feil</li>\r\n</ul>\r\n</li>\r\n<li>Etter innsending får brukaren:\r\n<ul>\r\n<li>beskjed om korleis dei kan angre innsending av skjemaet og<br>det let seg gjere å angre innsendinga.</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For nettsider som medfører juridiske forpliktingar eller krev økonomiske transaksjonar frå brukaren, som enten endrar brukarstyrte data i datalagringssystem eller som sender svar på testar utført av brukaren, må ein av følgjande vere oppfylt:</p><p>For inndatafelt som er obligatoriske eller krev eit bestemt format:</p><ul><li>vert inndatafeil oppdaga og<br>brukaren får moglegheit til å rette opp eventuelle feil.<ul><li>Før innsending får brukaren:<br>oppfordring om å gjennomgå informasjonen som er lagt inn<br>moglegheit til endre all informasjon før innsending og<br>brukaren får moglegheit til å rette opp eventuelle feil</li></ul></li><li>Etter innsending får brukaren:<ul><li>beskjed om korleis dei kan angre innsending av skjemaet og<br>det let seg gjere å angre innsendinga.</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -42,8 +42,8 @@
 		},
 		{
 			"stegnr": "2.3",
-			"spm": "Gjeld skjemaet juridiske forpliktingar eller økonomiske transaksjonar for brukaren som enten:<br />\n<ul>\n<li>endrar brukarstyrte data i datalagringssystem</li>\n<li>eller sender svar på testar utført av brukaren?</li>\n</ul>",
-			"ht": "<p>Eksempel på typar av skjema:</p>\n<ul>\n<li>kjøp av vare eller billett</li>\n<li>inngåing av avtale som medfører plikter med meir, vilkår for å opprette brukarkonto.</li>\n<li>endringar i kontoopplysningar, sletting av brukarkonto. Brukarstyrte data er informasjon som brukaren sjølv skriv inn.</li>\n<li>testar som for eksempel førarprøven, eksamen</li>\n</ul>\n<p>Skjema som ikkje er aktuelle for test er for eksempel søkefelt, abonnement på nyheitsbrev og andre skjema som ikkje medfører juridiske eller økonomiske plikter.</p>",
+			"spm": "Gjeld skjemaet juridiske forpliktingar eller økonomiske transaksjonar for brukaren som enten:<br /><ul><li>endrar brukarstyrte data i datalagringssystem</li><li>eller sender svar på testar utført av brukaren?</li></ul>",
+			"ht": "<p>Eksempel på typar av skjema:</p><ul><li>kjøp av vare eller billett</li><li>inngåing av avtale som medfører plikter med meir, vilkår for å opprette brukarkonto.</li><li>endringar i kontoopplysningar, sletting av brukarkonto. Brukarstyrte data er informasjon som brukaren sjølv skriv inn.</li><li>testar som for eksempel førarprøven, eksamen</li></ul><p>Skjema som ikkje er aktuelle for test er for eksempel søkefelt, abonnement på nyheitsbrev og andre skjema som ikkje medfører juridiske eller økonomiske plikter.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -75,7 +75,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Har skjemaet automatisk sjekk av feil?",
-			"ht": "<p>Legg inn feil inndata skjemaet. Prøve Fullfør eller send inn skjemaet.</p>\n<p>Eksempel på datafeil er:</p>\n<ul>\n<li>La obligatoriske felt vere tomme</li>\n<li>Postnummer som inneheld bokstavar.</li>\n<li>Namn som inneheld tal eller spesialteikn.</li>\n<li>Ugyldig e-postformat.</li>\n<li>Ugyldig datoformat.</li>\n<li>Data utanfor grenseverdi, for eksempel månad 14 i ein dato.</li>\n</ul>",
+			"ht": "<p>Legg inn feil inndata skjemaet. Prøve Fullfør eller send inn skjemaet.</p><p>Eksempel på datafeil er:</p><ul><li>La obligatoriske felt vere tomme</li><li>Postnummer som inneheld bokstavar.</li><li>Namn som inneheld tal eller spesialteikn.</li><li>Ugyldig e-postformat.</li><li>Ugyldig datoformat.</li><li>Data utanfor grenseverdi, for eksempel månad 14 i ein dato.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"alle": {

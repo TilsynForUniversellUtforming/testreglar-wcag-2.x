@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Formålet med hvert skjemaelement som samler inn informasjon om brukeren, kan bestemmes programmatisk når:</p>\r\n<ul>\r\n<li>skjemaelementet tjener et formål som er en del av\r\n<ul>\r\n<li><a href=\"https://developer.android.com/reference/androidx/autofill/HintConstants\" target=\"_blank\" rel=\"noopener\">Inndataformål for brukergrensesnittkomponenter (Android)</a> eller</li>\r\n<li><a href=\"https://developer.apple.com/documentation/uikit/uitextcontenttype\" target=\"_blank\" rel=\"noopener\">inndataformål for brukergrensesnittkomponenter (iOS) </a> og</li>\r\n</ul>\r\n</li>\r\n<li>innholdet er implementert ved hjelp av teknologier med støtte til identifikasjon av det forventede meningsinnholdet til inndata i skjema.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Formålet med hvert skjemaelement som samler inn informasjon om brukeren, kan bestemmes programmatisk når:</p><ul><li>skjemaelementet tjener et formål som er en del av<ul><li><a href=\"https://developer.android.com/reference/androidx/autofill/HintConstants\" target=\"_blank\" rel=\"noopener\">Inndataformål for brukergrensesnittkomponenter (Android)</a> eller</li><li><a href=\"https://developer.apple.com/documentation/uikit/uitextcontenttype\" target=\"_blank\" rel=\"noopener\">inndataformål for brukergrensesnittkomponenter (iOS) </a> og</li></ul></li><li>innholdet er implementert ved hjelp av teknologier med støtte til identifikasjon av det forventede meningsinnholdet til inndata i skjema.</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har appsiden interaktive skjema/skjemaelement?",
-			"ht": "<p>Finn interaktive skjemaelement på appsiden ved visuell inspeksjon. Dette kan være:</p>\n<ul>\n<li>Inndatafelt (Felt for å fylle inn tekst, tall dato osv...)</li>\n</ul>\n<p><strong>Merk:</strong> PDF, Word eller lignende er ikke aktuelle testobjekt.</p>",
+			"ht": "<p>Finn interaktive skjemaelement på appsiden ved visuell inspeksjon. Dette kan være:</p><ul><li>Inndatafelt (Felt for å fylle inn tekst, tall dato osv...)</li></ul><p><strong>Merk:</strong> PDF, Word eller lignende er ikke aktuelle testobjekt.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -43,7 +43,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Samler skjemaelementet inn informasjon om brukeren?",
-			"ht": "<p><span lang=\"NO-BOK\">Inndatafeltet som samler inn informasjon om brukeren skal gjelde informasjon relatert til den personen som fyller ut skjemaet, og ikke til en annen person, som for eksempel brukerens ektefelle eller barn.</span></p>\n<p><span lang=\"NO-BOK\">Sjekk om skjemaelementet (inndatafeltet) tjener et formål som er del av listen nedenfor:</span></p>\n<ul>\n<li>fornavn</li>\n<li>etternavn</li>\n<li>kallenavn</li>\n<li>fødselsdato</li>\n<li>dag i fødselsdato</li>\n<li>måned i fødselsdato</li>\n<li>år i fødselsdato</li>\n<li>kjønnsidentitet</li>\n<li>e-post</li>\n<li>landskode</li>\n<li>telefon</li>\n<li>brukernavn</li>\n<li>nytt passord</li>\n<li>nåværende passord</li>\n<li>engangskode (fra sms)</li>\n<li>engangskode (fra e-post)</li>\n<li>adresse</li>\n<li>postnummer</li>\n<li>by eller sted</li>\n<li>land</li>\n<li>url</li>\n<li>bilde (url-en til et bilde som representerer personen)</li>\n</ul>",
+			"ht": "<p><span lang=\"NO-BOK\">Inndatafeltet som samler inn informasjon om brukeren skal gjelde informasjon relatert til den personen som fyller ut skjemaet, og ikke til en annen person, som for eksempel brukerens ektefelle eller barn.</span></p><p><span lang=\"NO-BOK\">Sjekk om skjemaelementet (inndatafeltet) tjener et formål som er del av listen nedenfor:</span></p><ul><li>fornavn</li><li>etternavn</li><li>kallenavn</li><li>fødselsdato</li><li>dag i fødselsdato</li><li>måned i fødselsdato</li><li>år i fødselsdato</li><li>kjønnsidentitet</li><li>e-post</li><li>landskode</li><li>telefon</li><li>brukernavn</li><li>nytt passord</li><li>nåværende passord</li><li>engangskode (fra sms)</li><li>engangskode (fra e-post)</li><li>adresse</li><li>postnummer</li><li>by eller sted</li><li>land</li><li>url</li><li>bilde (url-en til et bilde som representerer personen)</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"H98"
@@ -76,7 +76,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Sjekk at autoutfylling er påskrudd, på den enheten du bruker.",
-			"ht": "<p>Bruk enten en Android- eller en iOS-enhet til testing. </p>\n<p><strong>For Android enhet</strong></p>\n<p>Android autoutfylling bruker personlig informasjon, adresser osv. fra brukerens <strong>Google konto</strong>.</p>\n<p>Slik skrur du på autoutfylling på en Android enhet og legger til Google konto for testing, om det ikke er gjort fra før:</p>\n<ul>\n<li>Gå til Innstillinger &gt; Generell styring &gt; Passord og autoutfylling</li>\n<li>Trykk på tannhjulet</li>\n<li>Trykk på autoutfylling med Google</li>\n<li>Legg til Google konto for testing</li>\n</ul>\n<p><strong>For iOS enhet</strong></p>\n<p>iOS autoutfylling bruker personlig informasjon, adresser osv. fra <strong>kontakten </strong>valgt i \"Min info\" i autoutfyllinnstillinger.</p>\n<p>Slik skrur du på autoutfylling og legger til informasjon om brukeren, om det ikke er gjort fra før:</p>\n<ul>\n<li>Send <span style=\"text-decoration: underline;\">TestFornavn Testetternavn.vcf</span> til icloud e-post\n<ul>\n<li>icloud e-posten finner du i appen \"Mail\" på enheten du bruker</li>\n<li>Slik kan du få lagre vCard til \"Kontakter\": Last ned vCard og velg \"Opprett ny kontakt\" og trykk på \"Ferdig\"</li>\n<li>Gå til Innstillinger &gt; Safari &gt; Autoutfyll</li>\n<li>Aktiver \"Bruk kontaktinfo\"</li>\n<li>Trykk på \"Min info\" og velg kontakten \"TestFornavn Testetternavn\"</li>\n</ul>\n</li>\n</ul>",
+			"ht": "<p>Bruk enten en Android- eller en iOS-enhet til testing. </p><p><strong>For Android enhet</strong></p><p>Android autoutfylling bruker personlig informasjon, adresser osv. fra brukerens <strong>Google konto</strong>.</p><p>Slik skrur du på autoutfylling på en Android enhet og legger til Google konto for testing, om det ikke er gjort fra før:</p><ul><li>Gå til Innstillinger &gt; Generell styring &gt; Passord og autoutfylling</li><li>Trykk på tannhjulet</li><li>Trykk på autoutfylling med Google</li><li>Legg til Google konto for testing</li></ul><p><strong>For iOS enhet</strong></p><p>iOS autoutfylling bruker personlig informasjon, adresser osv. fra <strong>kontakten </strong>valgt i \"Min info\" i autoutfyllinnstillinger.</p><p>Slik skrur du på autoutfylling og legger til informasjon om brukeren, om det ikke er gjort fra før:</p><ul><li>Send <span style=\"text-decoration: underline;\">TestFornavn Testetternavn.vcf</span> til icloud e-post<ul><li>icloud e-posten finner du i appen \"Mail\" på enheten du bruker</li><li>Slik kan du få lagre vCard til \"Kontakter\": Last ned vCard og velg \"Opprett ny kontakt\" og trykk på \"Ferdig\"</li><li>Gå til Innstillinger &gt; Safari &gt; Autoutfyll</li><li>Aktiver \"Bruk kontaktinfo\"</li><li>Trykk på \"Min info\" og velg kontakten \"TestFornavn Testetternavn\"</li></ul></li></ul>",
 			"type": "instruksjon",
 			"kilde": [],
 			"ruting": {
@@ -89,7 +89,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Får du opp forslag til informasjon å fylle ut, når du trykker på det aktuelle inndatafeltet?",
-			"ht": "<p><strong>Google kontoen </strong>(Android) og <strong>kontakten </strong><span style=\"text-decoration: underline;\">TestFornavn Testetternavn.vcf (iOS)</span> for testing, har allerede lagret informasjonen du trenger for å teste ulike inndatafelt som støtter autoutfylling.</p>\n<p>Slik tester du:</p>\n<ul>\n<li>Trykk på inndatafeltet du skal teste</li>\n<li>Sjekk om du får forslag til informasjon som skal fylles ut</li>\n</ul>",
+			"ht": "<p><strong>Google kontoen </strong>(Android) og <strong>kontakten </strong><span style=\"text-decoration: underline;\">TestFornavn Testetternavn.vcf (iOS)</span> for testing, har allerede lagret informasjonen du trenger for å teste ulike inndatafelt som støtter autoutfylling.</p><p>Slik tester du:</p><ul><li>Trykk på inndatafeltet du skal teste</li><li>Sjekk om du får forslag til informasjon som skal fylles ut</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -107,7 +107,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Stemmer forslaget du får opp med formålet til det aktuelle inndatafeltet?",
-			"ht": "<p>Velg alternativ fra forslaget og sjekk om det stemmer med formålet til det aktuelle inndatafeltet.</p>\n<p>For eksempel:</p>\n<ul>\n<li>Hvis det skal fylles ut fornavn, sjekker du at du får et forslag til fornavn som kan velges</li>\n<li>Hvis det skal fylles ut e-post eller brukernavn, sjekker du at du får et forslag til e-post eller brukernavn som kan velges</li>\n</ul>",
+			"ht": "<p>Velg alternativ fra forslaget og sjekk om det stemmer med formålet til det aktuelle inndatafeltet.</p><p>For eksempel:</p><ul><li>Hvis det skal fylles ut fornavn, sjekker du at du får et forslag til fornavn som kan velges</li><li>Hvis det skal fylles ut e-post eller brukernavn, sjekker du at du får et forslag til e-post eller brukernavn som kan velges</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {

@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ul>\r\n<li>For nettsider som inneheld tidsavgrensing, er ein av følgande oppfylt:\r\n<ul>\r\n<li>Det er mogleg å slå av tidsavgrensing.</li>\r\n<li>Det er mogleg å justere tidsavgrensinga med minst 10 gonger standard varigheit. Mekanismen for å justere skal ligge før innhaldet som inneheld tidsavgrensingar.</li>\r\n<li>Det er mogleg å forlenge tidsavgrensinga seinast 20 sekund før den inntreff, ved å gjere ei mindre handling. Det skal vere mogleg å forlenge med minst 10 gonger standard varigheit.</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p><ul><li>For nettsider som inneheld tidsavgrensing, er ein av følgande oppfylt:<ul><li>Det er mogleg å slå av tidsavgrensing.</li><li>Det er mogleg å justere tidsavgrensinga med minst 10 gonger standard varigheit. Mekanismen for å justere skal ligge før innhaldet som inneheld tidsavgrensingar.</li><li>Det er mogleg å forlenge tidsavgrensinga seinast 20 sekund før den inntreff, ved å gjere ei mindre handling. Det skal vere mogleg å forlenge med minst 10 gonger standard varigheit.</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [

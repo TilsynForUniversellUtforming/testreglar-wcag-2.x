@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<ul>\r\n<li>All tekst kan forstørres opp til minst 200 % visning uten at innhold eller funksjonalitet går tapt</li>\r\n<li>Dersom forstørring tilbys via en mekanisme på den aktuelle nettsiden, skal den være lett å finne</li>\r\n</ul>",
+	"kravTilSamsvar": "<ul><li>All tekst kan forstørres opp til minst 200 % visning uten at innhold eller funksjonalitet går tapt</li><li>Dersom forstørring tilbys via en mekanisme på den aktuelle nettsiden, skal den være lett å finne</li></ul>",
 	"side": "2.1",
 	"element": "Side",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har testsida tekst?",
-			"ht": "<p>Tekst som i følgje kravet er unntatt:</p>\n<ul>\n<li>teksting i video</li>\n<li>bilde av tekst</li>\n</ul>\n<p><strong>Merk</strong>: Du skal ikkje teste vidare på nettsider utan tekst.</p>",
+			"ht": "<p>Tekst som i følgje kravet er unntatt:</p><ul><li>teksting i video</li><li>bilde av tekst</li></ul><p><strong>Merk</strong>: Du skal ikkje teste vidare på nettsider utan tekst.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -43,7 +43,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Sett oppløysinga på skjermen du testar med til 1920 x 1080 pikslar",
-			"ht": "<p>Viss du ikkje har dette som standard, må du endre på oppløysinga, før du startar test. </p>\n<p>Slik endrer du innstilling: System &gt;Skjerm &gt;Skjermoppløsning &gt;1920x1080 &gt;Behold Endringer</p>\n<p><strong>Merk</strong>: Oppløysinga vi testar med, byggjer på statistikk over dei mest brukte skjermoppløysingane i verda per 2022-2023.</p>",
+			"ht": "<p>Viss du ikkje har dette som standard, må du endre på oppløysinga, før du startar test. </p><p>Slik endrer du innstilling: System &gt;Skjerm &gt;Skjermoppløsning &gt;1920x1080 &gt;Behold Endringer</p><p><strong>Merk</strong>: Oppløysinga vi testar med, byggjer på statistikk over dei mest brukte skjermoppløysingane i verda per 2022-2023.</p>",
 			"type": "instruksjon",
 			"ruting": {
 				"alle": {
@@ -55,7 +55,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Zoom teksten til 200 % med zoom-funksjonen i nettlesaren.",
-			"ht": "<p>Bruk zoomfunksjonen i nettlesaren og velg eller skriv inn verdien 200 %.</p>\n<p><strong>Merk</strong>: Du kan zoome i dei fleste nettlesarar ved å trykke Ctrl og + på tastaturet.</p>",
+			"ht": "<p>Bruk zoomfunksjonen i nettlesaren og velg eller skriv inn verdien 200 %.</p><p><strong>Merk</strong>: Du kan zoome i dei fleste nettlesarar ved å trykke Ctrl og + på tastaturet.</p>",
 			"type": "instruksjon",
 			"kilde": [
 				"G142"
@@ -70,7 +70,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Har testsida same tekstleg innhald og funksjonalitet i 200 % visning, som i 100 % visning?",
-			"ht": "<p><strong>Tips: </strong>Du kan opne nettsida i to faner for å gjere det lettare å samanlikne. </p>\n<ul>\n<li>det er ok om du får tilgang til innhald/funksjonalitet ved å scrolle</li>\n<li>plassering av element på nettstaden treng ikkje vera likt</li>\n<li>trunkering er ok, så lenge du får tilgang til alt innhald eller funksjonalitet når innhaldet får fokus eller ved aktivering, for eksempel via hamburger-meny.</li>\n</ul>\n<p>Eksempel på at innhald eller funksjonalitet går tapt: </p>\n<ul>\n<li>tekst blir kutta av eller skjult</li>\n<li>tekst legg seg over annan tekst</li>\n<li>tekst ligg utanfor presentasjonsramma, og det er ikkje mogleg å scrolle for å få tak i innhaldet</li>\n<li>du får ikkje tilgang til ledetekstar, verktøytips eller skjemaelement</li>\n<li>du får ikkje tilgang til tekst eller funksjonalitet som er trunkert, når innhaldet får fokus eller blir aktivert </li>\n</ul>",
+			"ht": "<p><strong>Tips: </strong>Du kan opne nettsida i to faner for å gjere det lettare å samanlikne. </p><ul><li>det er ok om du får tilgang til innhald/funksjonalitet ved å scrolle</li><li>plassering av element på nettstaden treng ikkje vera likt</li><li>trunkering er ok, så lenge du får tilgang til alt innhald eller funksjonalitet når innhaldet får fokus eller ved aktivering, for eksempel via hamburger-meny.</li></ul><p>Eksempel på at innhald eller funksjonalitet går tapt: </p><ul><li>tekst blir kutta av eller skjult</li><li>tekst legg seg over annan tekst</li><li>tekst ligg utanfor presentasjonsramma, og det er ikkje mogleg å scrolle for å få tak i innhaldet</li><li>du får ikkje tilgang til ledetekstar, verktøytips eller skjemaelement</li><li>du får ikkje tilgang til tekst eller funksjonalitet som er trunkert, når innhaldet får fokus eller blir aktivert </li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G142",
@@ -146,7 +146,7 @@
 		{
 			"stegnr": "3.7",
 			"spm": "Blir all teksten på nettsida forstørra når du aktiverer mekanismen?",
-			"ht": "<p>Aktiver mekanismen for å forstørre teksten på nettsida.</p>\n<p><strong>Tips</strong>: Du kan opne nettsida i to faner for å gjere det lettare å samanlikne. </p>\n<p>All teksten på nettsida skal bli forstørra.</p>",
+			"ht": "<p>Aktiver mekanismen for å forstørre teksten på nettsida.</p><p><strong>Tips</strong>: Du kan opne nettsida i to faner for å gjere det lettare å samanlikne. </p><p>All teksten på nettsida skal bli forstørra.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"G178"
@@ -166,7 +166,7 @@
 		{
 			"stegnr": "3.8",
 			"spm": "Får du tilgang til alt tekstleg innhald og funksjonalitet?",
-			"ht": "<p><strong>Tips</strong>: Du kan opne nettsida i to faner for å gjere det lettare å samanlikne. </p>\n<ul>\n<li>det er ok om du får tilgang til innhald/funksjonalitet ved å scrolle</li>\n<li>plassering av element på nettstaden treng ikkje vera likt</li>\n<li>trunkering er ok, så lenge du får tilgang til alt innhald eller funksjonalitet når innhaldet får fokus eller ved aktivering, for eksempel via</li>\n<li>hamburger-meny.</li>\n</ul>\n<p>Eksempel på at innhald eller funksjonalitet går tapt: </p>\n<ul>\n<li>tekst blir kutta av eller skjult</li>\n<li>tekst legg seg over annan tekst</li>\n<li>tekst ligg utanfor presentasjonsramma, og det er ikkje mogleg å scrolle for å få tak i innhaldet</li>\n<li>du får ikkje tilgang til ledetekstar, verktøytips eller skjemaelement</li>\n<li>du får ikkje tilgang til tekst eller funksjonalitet som er trunkert, når innhaldet får fokus eller blir aktivert</li>\n</ul>",
+			"ht": "<p><strong>Tips</strong>: Du kan opne nettsida i to faner for å gjere det lettare å samanlikne. </p><ul><li>det er ok om du får tilgang til innhald/funksjonalitet ved å scrolle</li><li>plassering av element på nettstaden treng ikkje vera likt</li><li>trunkering er ok, så lenge du får tilgang til alt innhald eller funksjonalitet når innhaldet får fokus eller ved aktivering, for eksempel via</li><li>hamburger-meny.</li></ul><p>Eksempel på at innhald eller funksjonalitet går tapt: </p><ul><li>tekst blir kutta av eller skjult</li><li>tekst legg seg over annan tekst</li><li>tekst ligg utanfor presentasjonsramma, og det er ikkje mogleg å scrolle for å få tak i innhaldet</li><li>du får ikkje tilgang til ledetekstar, verktøytips eller skjemaelement</li><li>du får ikkje tilgang til tekst eller funksjonalitet som er trunkert, når innhaldet får fokus eller blir aktivert</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"G178"

@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p>\r\n<ol>\r\n<li>Bilde av tekst har kontrast på minst 3:1 mot bakgrunnen.</li>\r\n<li>Det finst ein høgkontrastversjon som tilfredsstiller følgande krav: <br>\r\n<ul>\r\n<li>Mekanismen for å aktivere er plassert nær starten av sida og er visuelt markert med tekst eller ikon.</li>\r\n<li>Mekanismen har kontrast på minst 4,5:1.</li>\r\n<li>Tekst i høgkontrastversjon tilfredsstiller krava til kontrast punkt 1 over.</li>\r\n<li>Det tekstlege elementet som vart målt med for svak kontrast i ordinær visning, er identisk med element i høgkontrastversjon.</li>\r\n</ul>\r\n</li>\r\n</ol>",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar.</p><ol><li>Bilde av tekst har kontrast på minst 3:1 mot bakgrunnen.</li><li>Det finst ein høgkontrastversjon som tilfredsstiller følgande krav: <br><ul><li>Mekanismen for å aktivere er plassert nær starten av sida og er visuelt markert med tekst eller ikon.</li><li>Mekanismen har kontrast på minst 4,5:1.</li><li>Tekst i høgkontrastversjon tilfredsstiller krava til kontrast punkt 1 over.</li><li>Det tekstlege elementet som vart målt med for svak kontrast i ordinær visning, er identisk med element i høgkontrastversjon.</li></ul></li></ol>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [

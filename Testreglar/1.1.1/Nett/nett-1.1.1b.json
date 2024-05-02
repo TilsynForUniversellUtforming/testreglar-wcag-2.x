@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Informasjon om lenkemålet for et lenket bilde går frem av ett av følgende alternativer:</p>\r\n<ul>\r\n<li>Lenketeksten til bildet</li>\r\n<li>Tekstalternativet til bildet</li>\r\n<li>Lenketeksten kombinert med tekstalternativet til bildet</li>\r\n<li>Tittel-attributtet til bildet</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Informasjon om lenkemålet for et lenket bilde går frem av ett av følgende alternativer:</p><ul><li>Lenketeksten til bildet</li><li>Tekstalternativet til bildet</li><li>Lenketeksten kombinert med tekstalternativet til bildet</li><li>Tittel-attributtet til bildet</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Finnes det lenkede bilder på testsiden?",
-			"ht": "<p>Slik finner du lenkede bilder:</p>\n<ul>\n<li>Før musepekeren over bilder på nettsiden og se om markøren viser at bilder er klikkbare (for eksempel hånd) eller</li>\n<li>Bruke Inspiser i nettleseren for å søke etter a-elementet i HTML. Du skal teste lenker, <code>&lt;a&gt;</code>-elementet, som:\n<ul>\n<li>Bare er et bilde.</li>\n<li>Inneholder både bilde og tekst.</li>\n<li>Inneholder ikon.</li>\n</ul>\n</li>\n</ul>\n<p><strong>Merk:</strong> Lenkens plassering har ikke betydning. Den kan for eksempel ligge i en meny, liste, tabell eller lignende. </p>\n<p><strong>Merk:</strong> Du skal ikke teste:</p>\n<ul>\n<li>Lenker som bare inneholder tekst.</li>\n<li>Bilder som ikke ligger inne i lenker, <code>&lt;a&gt;</code>-element.</li>\n<li>Knapper som er kodet som <code>&lt;input&gt;</code> og <code>&lt;button&gt;</code>.</li>\n<li>Lenkende bilder som er del av Captcha.</li>\n</ul>",
+			"ht": "<p>Slik finner du lenkede bilder:</p><ul><li>Før musepekeren over bilder på nettsiden og se om markøren viser at bilder er klikkbare (for eksempel hånd) eller</li><li>Bruke Inspiser i nettleseren for å søke etter a-elementet i HTML. Du skal teste lenker, <code>&lt;a&gt;</code>-elementet, som:<ul><li>Bare er et bilde.</li><li>Inneholder både bilde og tekst.</li><li>Inneholder ikon.</li></ul></li></ul><p><strong>Merk:</strong> Lenkens plassering har ikke betydning. Den kan for eksempel ligge i en meny, liste, tabell eller lignende. </p><p><strong>Merk:</strong> Du skal ikke teste:</p><ul><li>Lenker som bare inneholder tekst.</li><li>Bilder som ikke ligger inne i lenker, <code>&lt;a&gt;</code>-element.</li><li>Knapper som er kodet som <code>&lt;input&gt;</code> og <code>&lt;button&gt;</code>.</li><li>Lenkende bilder som er del av Captcha.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -73,7 +73,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Har det lenkede bildet et tilgjengelig navn?",
-			"ht": "<p>Slik tester du</p>\n<ul>\n<li>Gå tilbake til testsiden</li>\n<li>Inspiser lenken. Inspiser fører deg til bildet elementet dvs. <code>&lt;img&gt;</code>, men du skal finne og inspisere <code>&lt;a&gt;</code>-elementet som er knyttet til bildet.</li>\n<li>Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</li>\n</ul>\n<p><strong>Merk:</strong> Selv om det ligger flere bilder i en og samme lenke,  skal du sjekke at tilgjengelig navn knyttet til lenken du tester, ikke er tomt.</p>",
+			"ht": "<p>Slik tester du</p><ul><li>Gå tilbake til testsiden</li><li>Inspiser lenken. Inspiser fører deg til bildet elementet dvs. <code>&lt;img&gt;</code>, men du skal finne og inspisere <code>&lt;a&gt;</code>-elementet som er knyttet til bildet.</li><li>Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</li></ul><p><strong>Merk:</strong> Selv om det ligger flere bilder i en og samme lenke,  skal du sjekke at tilgjengelig navn knyttet til lenken du tester, ikke er tomt.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -90,7 +90,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Hva er det lenkede bildet sitt tilgjengelig navn?",
-			"ht": "<p>Registrer det tilgjengelige navnet du fant i forrige steg.</p>\n<p>Kopier innholdet i attributtet \"Name\" under Computed Properties i Accessibility Tree.</p>",
+			"ht": "<p>Registrer det tilgjengelige navnet du fant i forrige steg.</p><p>Kopier innholdet i attributtet \"Name\" under Computed Properties i Accessibility Tree.</p>",
 			"type": "tekst",
 			"label": "Tekstalternativ:",
 			"multilinje": true,
@@ -131,7 +131,7 @@
 		{
 			"stegnr": "3.6",
 			"spm": "Er innholdet i det tilgjengelige navnet, beskrivende for lenkemålet?",
-			"ht": "<p>Gjør em skjønnsmessig vurdering av om innholdet i det tilgjengelige navnet, gir tilstrekkelig informasjon om hva som er lenkemålet. Lenkemålet er dit brukeren kommer ved å aktivere lenken. </p>\n<p><strong>Merk:</strong> Hvis det ligger flere bilder i en og samme lenke, vurderer du tekstalternativene samlet.</p>",
+			"ht": "<p>Gjør em skjønnsmessig vurdering av om innholdet i det tilgjengelige navnet, gir tilstrekkelig informasjon om hva som er lenkemålet. Lenkemålet er dit brukeren kommer ved å aktivere lenken. </p><p><strong>Merk:</strong> Hvis det ligger flere bilder i en og samme lenke, vurderer du tekstalternativene samlet.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {

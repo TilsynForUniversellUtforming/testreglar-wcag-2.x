@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Der skjemaelement, instruksjoner eller feilmeldinger bruker farge for å</p>\r\n<ul>\r\n<li>formidle informasjon</li>\r\n<li>vise en handling</li>\r\n<li>be om respons eller</li>\r\n<li>skille ut et visuelt element</li>\r\n</ul>\r\n<p>er det merket med mer enn bare fagre, og markeringen er visuell. </p>",
+	"kravTilSamsvar": "<p>Der skjemaelement, instruksjoner eller feilmeldinger bruker farge for å</p><ul><li>formidle informasjon</li><li>vise en handling</li><li>be om respons eller</li><li>skille ut et visuelt element</li></ul><p>er det merket med mer enn bare fagre, og markeringen er visuell. </p>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har nettstaden interaktive skjema/skjemaelement?",
-			"ht": "<p>Sjå over sida for å sjå om det inneheld element du kan trykke på eller fylle inn informasjon i. Dette vil for eksempel vere:</p>\n<ul>\n<li>Inputfelt (Felt for å fylle inn tekst, tall dato osv...)</li>\n<li>Knappar</li>\n<li>Avkryssingsboksar</li>\n</ul>\n<p><strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
+			"ht": "<p>Sjå over sida for å sjå om det inneheld element du kan trykke på eller fylle inn informasjon i. Dette vil for eksempel vere:</p><ul><li>Inputfelt (Felt for å fylle inn tekst, tall dato osv...)</li><li>Knappar</li><li>Avkryssingsboksar</li></ul><p><strong>Merk:</strong> PDF, Word eller liknande, er ikkje aktuelle testobjekt.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -60,7 +60,7 @@
 		{
 			"stegnr": "2.4",
 			"spm": "Har skjemaet skjemaelement, instruksjonar eller feilmeldingar som er merka med farge?",
-			"ht": "<p>Gå gjennom og fyll ut skjemaet frå starten. Identifiser skjemaelement, instruksjonar eller feilmeldingar som er markert med farge. Eksempel på merking med farge kan vere</p>\n<ul>\n<li>obligatoriske felt som er markert med rødt</li>\n<li>feilmeldingar eller instruksjonar som er markert med rødt</li>\n<li>felt som er OK markert med grønt</li>\n</ul>\n<p>For å finne aktuelle element kan du gjere følgjande:</p>\n<ul>\n<li>visuell inspeksjon av skjemaet for å sjå etter felt eller tekst som er i ein annan farge</li>\n<li>still deg i første skjemafelt og naviger med tab-tast for å sjekke om noko blir merka med farge</li>\n<li>viss skjemaet går over fleire sider, prøv å bla til siste side utan å fylle ut</li>\n<li>prøv å sende inn eit tomt skjema</li>\n</ul>",
+			"ht": "<p>Gå gjennom og fyll ut skjemaet frå starten. Identifiser skjemaelement, instruksjonar eller feilmeldingar som er markert med farge. Eksempel på merking med farge kan vere</p><ul><li>obligatoriske felt som er markert med rødt</li><li>feilmeldingar eller instruksjonar som er markert med rødt</li><li>felt som er OK markert med grønt</li></ul><p>For å finne aktuelle element kan du gjere følgjande:</p><ul><li>visuell inspeksjon av skjemaet for å sjå etter felt eller tekst som er i ein annan farge</li><li>still deg i første skjemafelt og naviger med tab-tast for å sjekke om noko blir merka med farge</li><li>viss skjemaet går over fleire sider, prøv å bla til siste side utan å fylle ut</li><li>prøv å sende inn eit tomt skjema</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -78,7 +78,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Beskriv elementet som skal testast",
-			"ht": "<p>Dersom skjemaet består av fleire skjemaelement må prosedyren repeterast for kvart enkelt skjemaelement.</p>\n<p><strong>Merk:</strong> Du skal berre teste skjemaelement, instruksjonar eller feilmeldingar som er merka med farge. Du skal ikkje teste fokusmarkering ved tastaturnavigering eller deaktiverte skjemaelement.</p>",
+			"ht": "<p>Dersom skjemaet består av fleire skjemaelement må prosedyren repeterast for kvart enkelt skjemaelement.</p><p><strong>Merk:</strong> Du skal berre teste skjemaelement, instruksjonar eller feilmeldingar som er merka med farge. Du skal ikkje teste fokusmarkering ved tastaturnavigering eller deaktiverte skjemaelement.</p>",
 			"type": "tekst",
 			"label": "Element:",
 			"multilinje": true,
@@ -94,7 +94,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Blir farge brukt til å formidle informasjon, angi ei handling, be om respons eller skille elementet frå anna innhald?",
-			"ht": "<p>For eksempel</p>\n<ul>\n<li>skjemafelt som blir rødt ved feil i datavalidering</li>\n<li>ledetekst/instruksjon som skiftar farge ved feil i datavalidering</li>\n<li>ledetekst/instruksjon som brukar farge for å markere obligatoriske felt</li>\n<li>seteveljar som brukar farge til å vise valt sete/plass</li>\n</ul>",
+			"ht": "<p>For eksempel</p><ul><li>skjemafelt som blir rødt ved feil i datavalidering</li><li>ledetekst/instruksjon som skiftar farge ved feil i datavalidering</li><li>ledetekst/instruksjon som brukar farge for å markere obligatoriske felt</li><li>seteveljar som brukar farge til å vise valt sete/plass</li></ul>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
@@ -111,7 +111,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Skil skjemaelementet, instruksjonen eller feilmeldinga seg ut med meir enn berre farge?",
-			"ht": "<p>Eksempel på markering:</p>\n<ul>\n<li>Forklarande tekst\n<ul>\n<li>Som for eksempel formidlar at endring av farge i skjemaelement eller teksten i instruksjonar er ei feilmelding.</li>\n</ul>\n</li>\n<li>Ikon eller symbol, for eksempel stjerne, hake eller kryss</li>\n<li>Skrifttype</li>\n<li>Skriftstørrelse</li>\n<li>Understreking</li>\n<li>Utheva/feit/bold/kursiv skrift</li>\n<li>Ramme, eller annan tydeleg formatering som skil seg ut frå anna tekst</li>\n</ul>",
+			"ht": "<p>Eksempel på markering:</p><ul><li>Forklarande tekst<ul><li>Som for eksempel formidlar at endring av farge i skjemaelement eller teksten i instruksjonar er ei feilmelding.</li></ul></li><li>Ikon eller symbol, for eksempel stjerne, hake eller kryss</li><li>Skrifttype</li><li>Skriftstørrelse</li><li>Understreking</li><li>Utheva/feit/bold/kursiv skrift</li><li>Ramme, eller annan tydeleg formatering som skil seg ut frå anna tekst</li></ul>",
 			"type": "jaNei",
 			"kilde": [
 				"F81",

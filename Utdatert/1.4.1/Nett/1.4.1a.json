@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar. </p>\r\n<ul>\r\n<li>Lenker i løpande tekst oppfyller eitt av alternativa under:\r\n<ul>\r\n<li>Lenker som er markerte med farge, skil seg frå nærliggande ikkje-lenka tekst med meir enn berre farge, for eksempel skrifttype, skriftstørrelse, understreking, utheva skrift, ramme eller ikon.</li>\r\n<li>Lenker som er markerte med berre farge har ein kontrast på minst 3:1 mot nærliggande ikkje-lenka tekst, og får synleg markering med meir enn berre farge, både ved mouseover og tastaturnavigasjon. Endring av musepeikaren og standard fokusmarkering ved tastaturnavigasjon, er ikkje tilstrekkeleg markering.</li>\r\n</ul>\r\n</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>Kravet kan oppfyllast på fleire måtar. </p><ul><li>Lenker i løpande tekst oppfyller eitt av alternativa under:<ul><li>Lenker som er markerte med farge, skil seg frå nærliggande ikkje-lenka tekst med meir enn berre farge, for eksempel skrifttype, skriftstørrelse, understreking, utheva skrift, ramme eller ikon.</li><li>Lenker som er markerte med berre farge har ein kontrast på minst 3:1 mot nærliggande ikkje-lenka tekst, og får synleg markering med meir enn berre farge, både ved mouseover og tastaturnavigasjon. Endring av musepeikaren og standard fokusmarkering ved tastaturnavigasjon, er ikkje tilstrekkeleg markering.</li></ul></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -44,7 +44,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Har nettsida lenker i løpande tekst?",
-			"ht": "<p>Lenker i løpande tekst er lenker som visuelt og kontekstuelt er knytt til ikkje-lenka tekst, plassert før eller etter lenka. Merk at dette også kan gjelde lenka overskrifter</p>\n<p><strong>Merk at vi ikkje skal teste følgjande:</strong></p>\n<ul>\n<li>lenker i meny</li>\n<li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka løpende tekst.</li>\n</ul>",
+			"ht": "<p>Lenker i løpande tekst er lenker som visuelt og kontekstuelt er knytt til ikkje-lenka tekst, plassert før eller etter lenka. Merk at dette også kan gjelde lenka overskrifter</p><p><strong>Merk at vi ikkje skal teste følgjande:</strong></p><ul><li>lenker i meny</li><li>lenker som er grupperte saman og ikkje er visuelt plasserte i tilknyting til ikkje-lenka løpende tekst.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -92,7 +92,7 @@
 		{
 			"stegnr": "3.2",
 			"spm": "Skil lenka seg visuelt frå ikkje-lenka tekst med andre verkemiddel enn berre farge?",
-			"ht": "<p>Føremålet er å identifisere lenker som skil seg frå anna innhald berre med farge.</p>\n<p>Lenker som er markerte med meir/anna enn berre farge, kan for eksempel vere markerte slik</p>\n<p> </p>\n<ul>\n<li>endra skrifttype</li>\n<li>endra skriftstørrelse</li>\n<li>understreking</li>\n<li>utheva/feit/bold/kursiv skrift</li>\n<li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka</li>\n<li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst</li>\n</ul>\n<p><strong>Merk:</strong> Du skal teste all tekst som ligg visuelt og kontekstuelt knytt til lenka. Teksten kan vere plassert før eller etter lenka.</p>",
+			"ht": "<p>Føremålet er å identifisere lenker som skil seg frå anna innhald berre med farge.</p><p>Lenker som er markerte med meir/anna enn berre farge, kan for eksempel vere markerte slik</p><p> </p><ul><li>endra skrifttype</li><li>endra skriftstørrelse</li><li>understreking</li><li>utheva/feit/bold/kursiv skrift</li><li>ikon, for eksempel ei pil eller dokumentikon i starten eller enden av lenka</li><li>ramme, eller annan tydeleg formatering som skil seg ut frå løpande tekst</li></ul><p><strong>Merk:</strong> Du skal teste all tekst som ligg visuelt og kontekstuelt knytt til lenka. Teksten kan vere plassert før eller etter lenka.</p>",
 			"type": "jaNei",
 			"kilde": [
 				"F73",

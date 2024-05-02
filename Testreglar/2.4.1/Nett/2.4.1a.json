@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "Nett",
 	"spraak": "nn",
-	"kravTilSamsvar": "<p>For nettsider som har ei blokk med innhald som blir gjenteke på fleire sider på nettstaden, og som ligg før hovudinnhaldet, er følgande oppfylt:</p>\r\n<ul>\r\n<li>Det finst ein mekanisme for å hoppe til hovudinnhaldet.</li>\r\n<li>Mekanismen ligg blant dei tre første tabstega, og før blokka med innhald på nettsida.</li>\r\n<li>Mekanismen er synleg ved tastaturfokus.</li>\r\n<li>Mekanismen har ein beskrivande tekst.</li>\r\n<li>Ved aktivering av mekanismen, blir visuelt og funksjonelt fokus flytta til hovudinnhaldet.</li>\r\n</ul>",
+	"kravTilSamsvar": "<p>For nettsider som har ei blokk med innhald som blir gjenteke på fleire sider på nettstaden, og som ligg før hovudinnhaldet, er følgande oppfylt:</p><ul><li>Det finst ein mekanisme for å hoppe til hovudinnhaldet.</li><li>Mekanismen ligg blant dei tre første tabstega, og før blokka med innhald på nettsida.</li><li>Mekanismen er synleg ved tastaturfokus.</li><li>Mekanismen har ein beskrivande tekst.</li><li>Ved aktivering av mekanismen, blir visuelt og funksjonelt fokus flytta til hovudinnhaldet.</li></ul>",
 	"side": "2.1",
 	"element": "Side",
 	"steg": [

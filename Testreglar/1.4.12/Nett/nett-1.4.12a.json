@@ -26,7 +26,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Er innholdet på nettsiden kodet i et oppmerkingsspråk?",
-			"ht": "<p>Oppmerkingsspråk eller markeringsspråk er et språk eller regelsett for å kode formatering av tekst og dokumenter. Et markeringsspråk består av tekstelementer, kalt tagger, som legges inn i tekstfiler for å angi formatering. Disse tekstelementene vises ikke sammen med teksten, men styrer hvordan teksten skal se ut og presenteres.</p>\n<p>Eksempler på oppmerkingsspråk er HTML og XML.</p>",
+			"ht": "<p>Oppmerkingsspråk eller markeringsspråk er et språk eller regelsett for å kode formatering av tekst og dokumenter. Et markeringsspråk består av tekstelementer, kalt tagger, som legges inn i tekstfiler for å angi formatering. Disse tekstelementene vises ikke sammen med teksten, men styrer hvordan teksten skal se ut og presenteres.</p><p>Eksempler på oppmerkingsspråk er HTML og XML.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -42,7 +42,7 @@
 		{
 			"stegnr": "2.3",
 			"spm": "Har nettsiden innhold i form av tekst?",
-			"ht": "<p>Disse innholdstypene skal testes</p>\n<ul>\n<li>tekst</li>\n<li>tekst i illustrasjoner og diagram (som ikke er bilde)</li>\n<li>tekst i skjema</li>\n</ul>\n<p>Disse innholdstypene skal ikke testes<!--#p--></p>\n<ul>\n<li>bilde av tekst</li>\n<li>logoer og varemerke</li>\n<li>ikke-informativ tekst som er til pynt, dvs tekst som kan erstattes av annen tekst, uten at meningsinnholdet vært endret</li>\n<li>tekst i bilde der teksten ikke er vesentlig for å formidle meningsinnholdet</li>\n<li>deaktiverte skjemaelement</li>\n<li>tekst som ikke er synlig for noen</li>\n<li>grafiske element i for eksempel diagram og grafer, som støttelinjer, søyler m.m.</li>\n</ul>",
+			"ht": "<p>Disse innholdstypene skal testes</p><ul><li>tekst</li><li>tekst i illustrasjoner og diagram (som ikke er bilde)</li><li>tekst i skjema</li></ul><p>Disse innholdstypene skal ikke testes<!--#p--></p><ul><li>bilde av tekst</li><li>logoer og varemerke</li><li>ikke-informativ tekst som er til pynt, dvs tekst som kan erstattes av annen tekst, uten at meningsinnholdet vært endret</li><li>tekst i bilde der teksten ikke er vesentlig for å formidle meningsinnholdet</li><li>deaktiverte skjemaelement</li><li>tekst som ikke er synlig for noen</li><li>grafiske element i for eksempel diagram og grafer, som støttelinjer, søyler m.m.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -58,7 +58,7 @@
 		{
 			"stegnr": "2.4",
 			"spm": "Støtter teksten endring av tekstegenskaper?",
-			"ht": "<p>Tekstegenskaper i dette kravet omfatter linjehøyde (linjeavstand), avstand etter avsnitt, avstanden mellom bokstaver i blokker av tekst (sperring) og avstanden mellom ord.</p>\n<p><strong>Retningslinje for test:</strong></p>\n<ul>\n<li>For å teste om teksten på siden støtter endring av tekstegenskaper, bruk verktøy Text Spacing.</li>\n<li>Slik bruker du verktøyet:\n<ul>\n<li>Dra lenken med verktøyet <a>Text Spacing</a> til bokmerkeraden i nettleseren.</li>\n<li>Bruk verktøyet på teste testsiden.</li>\n</ul>\n</li>\n<li>Hvis du ser endringer i linjehøyde (linjeavstand), avstand etter avsnitt, avstanden mellom bokstaver i blokker av tekst (sperring) og avstanden mellom ord på siden, da betyr det at teksten støtter endring av tekstegenskaper.</li>\n</ul>\n<p><strong>Teknisk forklaring:</strong></p>\n<p>Dette verktøyet endrer følgende egenskaper som faktisk kreves for å teste dette kravet.</p>\n<p><code>* {</code><br><code>        line-height: 1.5em !important;</code><br><code>        letter-spacing: 0.12em !important;</code><br><code>        word-spacing: 0.16em !important;</code><br><code>        }</code><br><code>        p {</code><br><code>        margin-bottom: 2em !important;</code><br><code>   }</code></p>\n<p><strong>Unntak: </strong>Menneskelige språk eller skripter som ikke bruker en eller flere av disse tekstegenskapene i skriftspråket er et unntak i kravet. Etter ordlyden er det tilstrekkelig å kun bruke tekstegenskapene som finnes for den bestemte kombinasjonen av språk og skript. Eksempler på tekst som er unntatt, fordi den ikke støtter endring av tekstegenskaper, er</p>\n<ul>\n<li>video med innbrent (fast) teksting</li>\n<li>PDF-dokumenter</li>\n<li>bilder av tekst: i relasjon til dette suksesskriteriet er implementasjoner av canvas å regne som bilder av tekst</li>\n</ul>",
+			"ht": "<p>Tekstegenskaper i dette kravet omfatter linjehøyde (linjeavstand), avstand etter avsnitt, avstanden mellom bokstaver i blokker av tekst (sperring) og avstanden mellom ord.</p><p><strong>Retningslinje for test:</strong></p><ul><li>For å teste om teksten på siden støtter endring av tekstegenskaper, bruk verktøy Text Spacing.</li><li>Slik bruker du verktøyet:<ul><li>Dra lenken med verktøyet <a>Text Spacing</a> til bokmerkeraden i nettleseren.</li><li>Bruk verktøyet på teste testsiden.</li></ul></li><li>Hvis du ser endringer i linjehøyde (linjeavstand), avstand etter avsnitt, avstanden mellom bokstaver i blokker av tekst (sperring) og avstanden mellom ord på siden, da betyr det at teksten støtter endring av tekstegenskaper.</li></ul><p><strong>Teknisk forklaring:</strong></p><p>Dette verktøyet endrer følgende egenskaper som faktisk kreves for å teste dette kravet.</p><p><code>* {</code><br><code>        line-height: 1.5em !important;</code><br><code>        letter-spacing: 0.12em !important;</code><br><code>        word-spacing: 0.16em !important;</code><br><code>        }</code><br><code>        p {</code><br><code>        margin-bottom: 2em !important;</code><br><code>   }</code></p><p><strong>Unntak: </strong>Menneskelige språk eller skripter som ikke bruker en eller flere av disse tekstegenskapene i skriftspråket er et unntak i kravet. Etter ordlyden er det tilstrekkelig å kun bruke tekstegenskapene som finnes for den bestemte kombinasjonen av språk og skript. Eksempler på tekst som er unntatt, fordi den ikke støtter endring av tekstegenskaper, er</p><ul><li>video med innbrent (fast) teksting</li><li>PDF-dokumenter</li><li>bilder av tekst: i relasjon til dette suksesskriteriet er implementasjoner av canvas å regne som bilder av tekst</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -74,7 +74,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Beskriv elementet du tester.",
-			"ht": "<p>Elementet med tekst kan for eksempel være overskrifter, løpende tekst, lenker, tekst i illustrasjoner og diagrammer (unntatt bilde av tekst).</p>\n<p>Formålet er at en skal kunne finne igjen elementet på siden som ligger til grunn for tekstavstand. For eksempel plassering, kjennetegn, hva som i står i teksten (trenger ikke gjengi hele).</p>\n<p><strong>Merk: </strong>Dersom finnes det flere elementer eller funksjonalitet som skal vurderes, registrerer du hvert element for seg.</p>",
+			"ht": "<p>Elementet med tekst kan for eksempel være overskrifter, løpende tekst, lenker, tekst i illustrasjoner og diagrammer (unntatt bilde av tekst).</p><p>Formålet er at en skal kunne finne igjen elementet på siden som ligger til grunn for tekstavstand. For eksempel plassering, kjennetegn, hva som i står i teksten (trenger ikke gjengi hele).</p><p><strong>Merk: </strong>Dersom finnes det flere elementer eller funksjonalitet som skal vurderes, registrerer du hvert element for seg.</p>",
 			"type": "tekst",
 			"kilde": [],
 			"label": "Beskrivelse av element:",
@@ -138,7 +138,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Blir andre stilegenskaper, enn de som inngår i kravet, endret som følge av justert tekstavstand?",
-			"ht": "<p>Sjekk at andre stilegenskaper ikke blir endret som følge av justert tekstavstand.</p>\n<p>Endring i andre stilegenskaper er for eksempel endret skrifttype, farge, størrelse, plassering, avstand rundt elements innhold (padding), volum, prosodi i den syntetiske talen av innholdselementet som de er gjengitt (for eksempel på skjerm, via høyttaler, via leselist) av brukeragenter.</p>",
+			"ht": "<p>Sjekk at andre stilegenskaper ikke blir endret som følge av justert tekstavstand.</p><p>Endring i andre stilegenskaper er for eksempel endret skrifttype, farge, størrelse, plassering, avstand rundt elements innhold (padding), volum, prosodi i den syntetiske talen av innholdselementet som de er gjengitt (for eksempel på skjerm, via høyttaler, via leselist) av brukeragenter.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {

@@ -27,7 +27,7 @@
 		{
 			"stegnr": "2.2",
 			"spm": "Har nettstaden videoklipp?",
-			"ht": "<p>Aktuelle metodar kan vere:</p>\n<ul>\n<li>Sjå på sidene om det finst ein playknapp eller liknande.</li>\n<li>Bruk internt søk på nettstaden.</li>\n<li>Bruk Google (Du kan bruke \"site:urlnettstad søkeord\" for å berre søke på ein bestemt nettstad).</li>\n</ul>\n<p>Aktuelle søkeomgrep kan være: \"Video\", \"Animasjon\", \"YouTube\", \"Viemo\", \"opptak\", \"H264\", \"mpeg4\". Merk at søkeomgrepa over er best tilpassa for søk interent på ein nettstad.</p>",
+			"ht": "<p>Aktuelle metodar kan vere:</p><ul><li>Sjå på sidene om det finst ein playknapp eller liknande.</li><li>Bruk internt søk på nettstaden.</li><li>Bruk Google (Du kan bruke \"site:urlnettstad søkeord\" for å berre søke på ein bestemt nettstad).</li></ul><p>Aktuelle søkeomgrep kan være: \"Video\", \"Animasjon\", \"YouTube\", \"Viemo\", \"opptak\", \"H264\", \"mpeg4\". Merk at søkeomgrepa over er best tilpassa for søk interent på ein nettstad.</p>",
 			"type": "jaNei",
 			"kilde": [],
 			"ruting": {
