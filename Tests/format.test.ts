@@ -122,7 +122,7 @@ files.forEach((file) => {
           /(gaaTil|regler|avslutt|ikkjeForekomst)/i
         );
         if (handling.type === "gaaTil") {
-          expect(handling.steg).toBeDefined;
+          expect(handling.steg).toBeDefined();
           if (typeof handling.steg !== "undefined") {
             // Sjekker at steget finnes
             expect(stegFinst(handling.steg, testregel.steg)).toBe(true);
@@ -159,7 +159,7 @@ function vurderRegel(
   testregelSteg: Array<Steg>,
   steg: Steg
 ) {
-  expect(reglar).toBeDefined;
+  expect(reglar).toBeDefined();
   const reglarArray: Array<Regel> = Object.values(reglar);
   expect(reglarArray.length).toBeGreaterThan(0);
   reglarArray.forEach((regel: Regel) => {
