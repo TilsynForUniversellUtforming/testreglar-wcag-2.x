@@ -7,7 +7,7 @@
     "name": "Tilsynet for universell utforming"
   },
   "scripts": {
-    "build": "tsc --build",
+    "build": "tsc --build && node dist/indexer.js",
     "clean": "tsc --build --clean",
     "lint": "eslint",
     "test": "jest"
