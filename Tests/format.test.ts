@@ -28,6 +28,10 @@ files.forEach((file) => {
   test(`${file} har definert eit namn`, () => {
     expect(testregel.namn).toBeDefined();
   });
+  
+  test(`${file} har eit namn som ikkje ender med mellomrom`, () => {
+    expect(/\s+$/.test(testregel.namn)).toBeFalsy();
+  });
 
   test(`${file} har definert ein id`, () => {
     expect(testregel.id).toBeDefined();
@@ -86,25 +90,33 @@ files.forEach((file) => {
       expect(steg.type).toBeDefined();
       expect(steg.type).toMatch(/(jaNei|radio|tekst|instruksjon)/i);
 
-      if (typeof steg.kilde !== "undefined") {
+      // Sjekker om `steg.kilde` eksisterer og er av typen 'object'
+      if (steg.kilde !== undefined) {
         expect(typeof steg.kilde).toEqual("object");
       }
 
-      if (steg.type === "tekst") {
-        expect(steg.label).toBeDefined();
-        expect(steg.label?.length).toBeGreaterThan(0);
-        if (typeof steg.filter !== "undefined") {
-          expect(steg.filter).toMatch(/(tal)/i);
-        }
+      // Avhengig av `steg.type` kan vi sjekke spesifikke forventninger
+      switch (steg.type) {
+        case "tekst":
+          // Validerer `steg.label`
+          expect(steg.label).toBeDefined();
+          expect(steg.label?.length).toBeGreaterThan(0);
 
-        if (typeof steg.datalist !== "undefined") {
-          expect(steg.datalist).toMatch(/(side)/i);
-        }
-      }
+          // Sjekker `steg.filter` hvis det eksisterer, og matcher "tal"
+          steg.filter !== undefined && expect(steg.filter).toMatch(/(tal)/i);
 
-      if (steg.type === "radio") {
-        expect(steg.svarArray).toBeDefined();
-        expect(steg.svarArray?.length).toBeGreaterThan(1);
+          // Sjekker `steg.datalist` hvis det eksisterer, og matcher "side"
+          steg.datalist !== undefined && expect(steg.datalist).toMatch(/(side)/i);
+          break;
+
+        case "radio":
+          // Validerer at `svarArray` er definert og har mer enn ett element
+          expect(steg.svarArray).toBeDefined();
+          expect(steg.svarArray?.length).toBeGreaterThan(1);
+          break;
+
+        default:
+          break;
       }
     });
 
