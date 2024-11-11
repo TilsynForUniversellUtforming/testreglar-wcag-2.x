@@ -33,6 +33,10 @@ files.forEach((file) => {
     expect(/\s+$/.test(testregel.namn)).toBeFalsy();
   });
 
+  test(`${file} har eit namn som ikkje slutter på punktum`, () => {
+    expect(testregel.namn.endsWith(".")).toBeFalsy();
+  });
+
   test(`${file} har definert ein id`, () => {
     expect(testregel.id).toBeDefined();
     expect(testregel.id.length).toBeGreaterThan(0);
