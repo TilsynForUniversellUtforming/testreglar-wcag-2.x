@@ -14,20 +14,19 @@
 			"spm": "Kva side testar du på?",
 			"ht": "<p>Angi URL eller side-ID.</p>",
 			"type": "tekst",
-			"kilde": [],
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
 					"steg": "2.2"
 				}
 			},
-			"label": "",
+			"label": "URL/Side-ID:",
 			"datalist": "Sideutvalg"
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Kva veg rullar hovudinnhaldet på sida?",
-			"ht": "<p>Oppgje kva veg houvdinnhaldet på sida rullar (scrollar). </p>",
+			"spm": "Kva veg rullar hovudinnhaldet på sida?",
+			"ht": "<p>Oppgje kva veg houvdinnhaldet på sida rullar (scrollar).</p>",
 			"type": "radio",
 			"kilde": [],
 			"svarArray": [
@@ -112,8 +111,7 @@
 			"spm": "Kva innhald og funksjonalitet fikk du ikkje tilgang til?",
 			"ht": "<p>Registrer med stikkord. Dersom det er fleire, registrerer du ein og ein.</p>",
 			"type": "tekst",
-			"kilde": [],
-			"label": "",
+			"label": "Innhald og funksjonalitet du ikkje fekk tilgang til",
 			"multilinje": true,
 			"ruting": {
 				"alle": {

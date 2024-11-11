@@ -7,83 +7,84 @@ import { Regel } from "../src/interface/Regel";
 import { Handling } from "../src/interface/Handling";
 import { Delutfall } from "../src/interface/Delutfall";
 
-// Få listen over JSON-filer rekursivt i mappen
-const dataFolder = "./Testreglar";
-const excludeFolder: string = "felles/**";
-const files = glob.sync("**/*.json", {
-  cwd: dataFolder,
-  ignore: [excludeFolder],
-});
+const dataFolders = ["./Utdatert", "./Testreglar"];
+const excludeFolder = "felles/**";
+const files = dataFolders.flatMap(folder =>
+  glob.sync("**/*.json", {
+    cwd: folder,
+    ignore: [excludeFolder],
+  }).map(file => path.join(folder, file))  // Legger til full sti
+);
 
 test("Sjekker at Testregelmappe finnes", () => {
   expect(fs.existsSync("./Testreglar")).toBe(true);
 });
 
 // Iterer gjennom hver JSON-fil
-files.forEach((file) => {
-  const filePath = path.join(dataFolder, file);
+files.forEach((filePath) => {
+
   const testregel: Testregel = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
   // Lag tester for hver JSON-fil
-  test(`${file} har definert eit namn`, () => {
+  test(`${filePath} har definert eit namn`, () => {
     expect(testregel.namn).toBeDefined();
   });
-  
-  test(`${file} har eit namn som ikkje ender med mellomrom`, () => {
+
+  test(`${filePath} har eit namn som ikkje ender med mellomrom`, () => {
     expect(/\s+$/.test(testregel.namn)).toBeFalsy();
   });
 
-  test(`${file} har eit namn som ikkje slutter på punktum`, () => {
+  test(`${filePath} har eit namn som ikkje slutter på punktum`, () => {
     expect(testregel.namn.endsWith(".")).toBeFalsy();
   });
 
-  test(`${file} har definert ein id`, () => {
+  test(`${filePath} har definert ein id`, () => {
     expect(testregel.id).toBeDefined();
     expect(testregel.id.length).toBeGreaterThan(0);
   });
 
-  test(`${file} har testregel.id som filnamn`, () => {
-    expect(path.basename(file).replace(".json", "")).toEqual(testregel.id);
+  test(`${filePath} har testregel.id som filnamn`, () => {
+    expect(path.basename(filePath).replace(".json", "")).toEqual(testregel.id);
   });
 
-  test(`${file} har definert ein testlab-id`, () => {
+  test(`${filePath} har definert ein testlab-id`, () => {
     expect(testregel.testlabId).toBeDefined();
     expect(testregel.testlabId).toBeGreaterThan(0);
   });
 
-  test(`${file} har definert ein gyldig type`, () => {
+  test(`${filePath} har definert ein gyldig type`, () => {
     expect(testregel.type).toBeDefined();
     expect(testregel.type).toMatch(/(App|Automat|Nett|Dokument)/i);
   });
 
-  test(`${file} har definert eit gyldig språk`, () => {
+  test(`${filePath} har definert eit gyldig språk`, () => {
     expect(testregel.spraak).toBeDefined();
     expect(testregel.spraak).toMatch(/(nb|nn|en)/i);
   });
 
-  test(`${file} har eit krav til samsvar`, () => {
+  test(`${filePath} har eit krav til samsvar`, () => {
     expect(testregel.kravTilSamsvar.length).toBeGreaterThan(0);
   });
 
-  test(`${file} har definert gyldig steg for side`, () => {
+  test(`${filePath} har definert gyldig steg for side`, () => {
     expect(testregel.side.length).toBeGreaterThan(0);
     expect(stegFinst(testregel.side, testregel.steg)).toBe(true);
   });
 
-  test(`${file} har definert gyldig steg element`, () => {
+  test(`${filePath} har definert gyldig steg element`, () => {
     expect(testregel.element.length).toBeGreaterThan(0);
     if (testregel.element !== "Side") {
       expect(stegFinst(testregel.element, testregel.steg)).toBe(true);
     }
   });
 
-  test(`${file} har steg`, () => {
+  test(`${filePath} har steg`, () => {
     expect(testregel.steg).toBeDefined();
     expect(testregel.steg.length).toBeGreaterThan(1);
   });
 
   testregel.steg.forEach((steg: Steg) => {
-    test(`${file} har gyldig steg ${steg.stegnr}`, () => {
+    test(`${filePath} har gyldig steg ${steg.stegnr}`, () => {
       /** Sjekker at stegnr er lengre enn null */
       expect(steg.stegnr.length).toBeGreaterThan(0);
       /** Sjekker at steg-nr er et gyldig tall */
@@ -124,7 +125,7 @@ files.forEach((file) => {
       }
     });
 
-    test(`${file} har gyldig ruting på steg ${steg.stegnr}`, () => {
+    test(`${filePath} har gyldig ruting på steg ${steg.stegnr}`, () => {
       expect(Object.keys(steg.ruting).length).toBeGreaterThan(0);
 
       Object.entries(steg.ruting).forEach((ruting: [string, Handling]) => {
@@ -143,7 +144,7 @@ files.forEach((file) => {
             // Sjekker at steget finnes
             expect(stegFinst(handling.steg, testregel.steg)).toBe(true);
             // Sjekker at det blir referert til et steg lengre fremme
-            expect(stegnrErStorreEnn(handling.steg, steg.stegnr)).toBeTruthy();
+            expect(stegnrErStoerreEnn(handling.steg, steg.stegnr)).toBeTruthy();
             if (typeof handling.delutfall !== "undefined") {
               vurderDelutfall(handling.delutfall);
             }
@@ -174,7 +175,7 @@ function vurderRegel(
   reglar: { [regelId: string]: Regel },
   testregelSteg: Array<Steg>,
   steg: Steg
-) {
+): void {
   expect(reglar).toBeDefined();
   const reglarArray: Array<Regel> = Object.values(reglar);
   expect(reglarArray.length).toBeGreaterThan(0);
@@ -225,7 +226,7 @@ function vurderRegel(
         expect(regel.handling.steg.length).toBeGreaterThan(0);
         expect(stegFinst(regel.handling.steg, testregelSteg)).toBe(true);
         // Sjekker at det blir referert til et steg lengre fremme
-        expect(stegnrErStorreEnn(regel.handling.steg, steg.stegnr)).toBeTruthy();
+        expect(stegnrErStoerreEnn(regel.handling.steg, steg.stegnr)).toBeTruthy();
         if (typeof regel.handling.delutfall !== "undefined") {
           vurderDelutfall(regel.handling.delutfall);
         }
@@ -249,33 +250,31 @@ function vurderRegel(
  * @param TestregelSteg Samling med testregelsteg
  * @returns Om steget finnes
  */
-function stegFinst(stegnr: string, TestregelSteg: Array<Steg>) {
-  let stegFinst: boolean = false;
-  TestregelSteg.forEach((steg: Steg) => {
-    if (steg.stegnr === stegnr) {
-      stegFinst = true;
-    }
-  });
-  return stegFinst;
+function stegFinst(stegnr: string, TestregelSteg: Array<Steg>): boolean {
+  return TestregelSteg.some((steg: Steg) => steg.stegnr === stegnr);
 }
 
 /**
  * Sjekker ruting av typen avslutt
- * @param rutningAvslutt  Ruting av typen avslutt
+ * @param rutningAvslutt - Ruting av typen avslutt
  */
-function vurderRutingAvslutt(rutningAvslutt) {
+function vurderRutingAvslutt(rutningAvslutt):void {
+  // Sjekk at fasit er definert og har en gyldig verdi
   expect(rutningAvslutt.fasit).toBeDefined();
-  expect(rutningAvslutt.fasit).toMatch(
-    /(Ja|Nei|Ikkje testbart|sjekkDelutfall)/i
-  );
+  expect(rutningAvslutt.fasit).toMatch(/^(Ja|Nei|Ikkje testbart|sjekkDelutfall)$/i);
+
+  // Sjekk at utfall er definert og enten en streng eller objekt
   expect(rutningAvslutt.utfall).toBeDefined();
   if (typeof rutningAvslutt.utfall === "string") {
     expect(rutningAvslutt.utfall.length).toBeGreaterThan(0);
-  } else if (typeof rutningAvslutt.utfall === "object") {
+  } else if (typeof rutningAvslutt.utfall === "object" && rutningAvslutt.utfall !== null) {
+    // Sjekk at både ja og nei er definerte og har innhold
     expect(rutningAvslutt.utfall.ja).toBeDefined();
     expect(rutningAvslutt.utfall.ja.length).toBeGreaterThan(0);
     expect(rutningAvslutt.utfall.nei).toBeDefined();
     expect(rutningAvslutt.utfall.nei.length).toBeGreaterThan(0);
+  } else {
+    throw new Error("utfall må være enten en streng eller et objekt.");
   }
 }
 
@@ -292,36 +291,40 @@ function vurderRutingIkkjeForekomst(runtingIkkjeForekomst) {
  * Sjekker delutfall
  * @param delutfall
  */
-function vurderDelutfall(delutfall: Delutfall) {
+function vurderDelutfall(delutfall: Delutfall): void {
+  // Sjekk at delutfall er et objekt
   expect(delutfall).toBeInstanceOf(Object);
-  if (typeof delutfall === "object") {
-    expect(delutfall.nr).toBeDefined();
-    expect(typeof delutfall.nr).toEqual("number");
-    expect(delutfall.fasit).toBeDefined();
-    expect(typeof delutfall.fasit).toEqual("string");
-    expect(delutfall.fasit).toMatch(/(Ja|Nei|Ikkje testbart|Ikkje forekomst)/i);
-    expect(delutfall.tekst).toBeDefined();
-  }
+
+  // Valider `nr`
+  expect(delutfall.nr).toBeDefined();
+  expect(typeof delutfall.nr).toBe("number");
+
+  // Valider `fasit`
+  expect(delutfall.fasit).toBeDefined();
+  expect(typeof delutfall.fasit).toBe("string");
+  expect(delutfall.fasit).toMatch(/^(Ja|Nei|Ikkje testbart|Ikkje forekomst)$/i);
+
+  // Valider `tekst`
+  expect(delutfall.tekst).toBeDefined();
+  expect(typeof delutfall.tekst).toBe("string"); // Sikre at `tekst` er en streng
 }
-
-
 
 /**
  * Sjekker om et stegnummer er større enn et annet
  * @param stegNr1 Stegnummer som skal sjekkes
  * @param stegNr2 Stegnummer det skal sjekkes mot
- * @returns 
+ * @returns True hvis stegNr1 er større enn stegNr2, ellers false
  */
-function stegnrErStorreEnn(stegNr1: string, stegNr2: string): boolean {
+function stegnrErStoerreEnn(stegNr1: string, stegNr2: string): boolean {
   const regex = /^(\d+)\.(\d+)$/;
 
-  if (stegNr1.match(regex) && stegNr2.match(regex)) {
-    const [helTall1, des1] = stegNr1.split('.');
-    const [helTall2, des2] = stegNr2.split('.');
-    if (helTall1 === helTall2) {
-      return parseInt(des1) > parseInt(des2);
-    } else return (parseInt(helTall1) > parseInt(helTall2))
-  }
+  // Valider begge stegnummer
+  if (!regex.test(stegNr1) || !regex.test(stegNr2)) return false;
 
-  return false;
+  // Splitt og konverter til heltall
+  const [helTall1, des1] = stegNr1.split('.').map(Number);
+  const [helTall2, des2] = stegNr2.split('.').map(Number);
+
+  // Sammenlign hovednummer og eventuelt desimal
+  return helTall1 > helTall2 || (helTall1 === helTall2 && des1 > des2);
 }
