@@ -15,7 +15,7 @@
 			"ht": "<p>Oppgi URL eller side-ID.</p>",
 			"type": "tekst",
 			"kilde": [],
-			"label": "",
+			"label": "URL/Side",
 			"datalist": "Sideutvalg",
 			"ruting": {
 				"alle": {
@@ -50,7 +50,7 @@
 			"ht": "<p>Identifiser innhaldet som ikkje er tilgjengelig i begge visningsretningar. </p>",
 			"type": "tekst",
 			"kilde": [],
-			"label": "",
+			"label": "Element",
 			"multilinje": true,
 			"ruting": {
 				"alle": {
