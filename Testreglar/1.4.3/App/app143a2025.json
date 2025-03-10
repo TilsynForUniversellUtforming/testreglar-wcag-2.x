@@ -1,0 +1,97 @@
+{
+    "namn": "App-1.4.3a Det er tilstrekkelig kontrast mellom tekst og bakgrunn 2025",
+    "id": "app143a2025",
+    "testlabId": 580,
+    "versjon": "1.0",
+    "type": "App",
+    "spraak": "nb",
+    "kravTilSamsvar": "<p>Tekst i apper</p>\r\n<ul>\r\n<li>Tekst har kontrast på minst 4,5:1 mot bakgrunnen</li>\r\n</ul>",
+    "side": "2.1",
+    "element": "3.1",
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Hvilken appside tester du?",
+            "ht": "<p>Oppgi appside-ID.</p>",
+            "type": "tekst",
+            "label": "Appside:",
+            "datalist": "Sideutvalg",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har appsiden innhold i form av tekst som er omfattet av kravet?",
+            "ht": "<p><strong>Unntak:</strong></p><ul><li>tekst i logoer og varemerke</li><li>tekst som er ren dekorasjon</li><li>tekst i inaktive brukergrensesnittkomponenter, for eksempel deaktiverte knapper</li></ul><p><strong>Merk:</strong></p><ul><li>I skjema kan det hende at du må framprovosere eventuelle feilmeldinger og instruksjoner.</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Appsiden har ikke tekst som er omfattet av kravet."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Hvilket element tester du?",
+            "ht": "<p><strong>Bruk format:</strong></p><ul><li>Beskriv teksten</li><li>Beskriv plassering</li></ul><p><strong>Merk: </strong></p><ul><li>Hvis det er flere tekstelementer på siden, registrerer du ett og ett tekstelement.</li></ul>",
+            "type": "tekst",
+            "label": "Tekst:",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            },
+            "multilinje": true
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Mål og registrer kontrast mellom farge på tekst og bakgrunn",
+            "ht": "<ul><li>Ta et skjermbilde av appsiden</li><li>Bruk pipetteverktøy for å hente ut fargekode for tekst og bakgrunn<ul><li> Bruk appen ColorSlurp (iOS), Color Picker (Android) eller overfør bildet til PC</li></ul></li><li>Bruk Webaim Contrast Checker eller lignende for å vurdere kontrasten.</li><li>Registrer kontrast</li></ul><p><strong>Merk:</strong></p><ul><li>Dersom teksten er piksellert (får flere farger med zooming), skal du velge en farge som er representativ for hovedfargen på teksten.</li><li>Dersom bakgrunnen eller teksten er gradert, mønstret eller et bilde, skal du måle på det svakeste punktet.</li><li>Dersom bokstavene har et omriss på minst 1 piksel, vil omrisset være bakgrunnsfargen.</li></ul><p> </p>",
+            "type": "tekst",
+            "kilde": [
+                "F83",
+                "G18"
+            ],
+            "label": "Målt kontrast (Format 4.48):",
+            "ruting": {
+                "alle": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "3.2",
+                            "type": "mellom",
+                            "verdi": 0,
+                            "verdi2": 4.49,
+                            "handling": {
+                                "type": "avslutt",
+                                "utfall": "Tekst har kontrast mot bakgrunnen under 4,5:1.",
+                                "fasit": "Nei"
+                            }
+                        },
+                        "2": {
+                            "sjekk": "3.2",
+                            "type": "mellom",
+                            "verdi": 4.5,
+                            "verdi2": 200,
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Ja",
+                                "utfall": "Tekst har kontrast mot bakgrunnen på minst 4,5:1."
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
