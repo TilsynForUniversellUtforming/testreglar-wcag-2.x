@@ -1,0 +1,100 @@
+{
+    "namn": "Nett-1.4.3b Det er tilstrekkeleg kontrast mellom tekst og bakgrunn i bilde av tekst 2025",
+    "id": "143b2025",
+    "testlabId": 579,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nb",
+    "kravTilSamsvar": "<p>Bilder av tekst</p><ul><li>Bilde av tekst har kontrast på minst 4.5:1 mot bakgrunnen</li></ul>",
+    "side": "2.1",
+    "element": "3.1",
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Hvilken side tester du?",
+            "ht": "<p>Oppgi URL eller side-ID.</p>",
+            "type": "tekst",
+            "label": "URL/Side-ID:",
+            "datalist": "Sideutvalg",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har nettsiden bilde av tekst som er omfattet av kravene?",
+            "ht": "<p><strong>Unntak:</strong></p><ul><li>tekst i logoer og varemerke</li><li>tekst som er ren dekorasjon</li><li>tekst i inaktive brukergrensesnittkomponenter, for eksempel deaktiverte knapper</li></ul><p><strong>Merk:</strong></p><ul><li>I skjema kan det hende at du må framprovosere eventuelle feilmeldinger og instruksjoner.</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testside har ikke bilde av tekst som er omfattet av kravene."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Beskriv elementet du tester",
+            "ht": "<p><strong>Bruk format:</strong></p><ul><li>Beskriv teksten</li><li>Beskriv plassering</li></ul><p><strong>Merk: </strong></p><ul><li>Hvis det er flere tekstelementer på siden, registrerer du ett og ett tekstelement.</li></ul>",
+            "type": "tekst",
+            "multilinje": true,
+            "label": "Beskrivelse av element:",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Mål og registrer kontrast mellom farge på tekst og bakgrunn",
+            "ht": "<p><strong>Slik tester du:</strong></p><ul><li>Bruk Webaim Contrast Checker eller lignende for å vurdere kontrasten.</li><li>Registrer kontrast.</li></ul><p><strong>Merk:</strong></p><ul><li>Dersom teksten er piksellert (får flere farger med zooming), skal du velge en farge som er representativ for hovedfargen på teksten.</li><li>Dersom bakgrunnen eller teksten er gradert, mønstret eller et bilde, skal du måle på det svakeste punktet.</li><li>Dersom bokstavene har et omriss på minst 1 piksel, vil omrisset være bakgrunnsfargen.</li></ul>",
+            "type": "tekst",
+            "kilde": [
+                "F83",
+                "G18",
+                "G145"
+            ],
+            "ruting": {
+                "alle": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "sjekk": "3.2",
+                            "type": "mellom",
+                            "verdi": 0,
+                            "verdi2": 4.49,
+                            "handling": {
+                                "type": "avslutt",
+                                "utfall": "Tekst har kontrast mot bakgrunnen under 4,5:1.",
+                                "fasit": "Nei"
+                            }
+                        },
+                        "2": {
+                            "sjekk": "3.2",
+                            "type": "mellom",
+                            "verdi": 4.5,
+                            "verdi2": 200,
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Ja",
+                                "utfall": "Tekst har kontrast mot bakgrunnen på minst 4,5:1."
+                            }
+                        }
+                    }
+                }
+            },
+            "label": "Målt kontrast (Format 4.48):"
+        }
+    ]
+}
