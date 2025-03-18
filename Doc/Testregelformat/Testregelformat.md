@@ -43,7 +43,7 @@ Format for testreglar Tilsynet for universell utforming av ikt.
 		 <li>Dokument</li>
 		 <li>Nett</li>
 	 </ul>
- 	<td><pre lang="json">"type": "web"</pre></td>	 	 
+ 	<td><pre lang="json">"type": "Nett"</pre></td>	 	 
 </tr>
 <tr>
 	 <td>spraak</td>
