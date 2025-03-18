@@ -685,7 +685,7 @@ Ved å sette `"fasit": "sjekkDelutfall"` i ei ruting av typen "avslutt" kan du b
 	}
 }
 ```
-(c) 2018-2024 Tilsyn for universell utforming
+(c) 2018-2025 Tilsyn for universell utforming
 
 
 
