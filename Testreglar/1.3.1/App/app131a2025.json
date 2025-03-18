@@ -1,141 +1,141 @@
 {
-    "namn": "App-1.3.1a Visuelle overskrifter er korrekt kodet 2025",
-    "id": "app131a2025",
-    "testlabId": 566,
-    "versjon": "1.0",
-    "type": "App",
-    "spraak": "nb",
-    "kravTilSamsvar": "<ul><li>Visuelle overskrifter er korrekt kodet som overskrifter</li><li>Visuelle overskrifter som inngår i et overskriftshierarki, er kodet med rett overskriftsnivå</li></ul>",
-    "side": "2.1",
-    "element": "3.1",
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Hvilken appside tester du?",
-            "ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
-            "type": "tekst",
-            "label": "Appside:",
-            "datalist": "Sideutvalg",
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Har appsiden visuelle overskrifter?",
-            "ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.3"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Appsiden har ikke visuelle overskrifter."
-                }
-            }
-        },
-        {
-            "stegnr": "2.3",
-            "spm": "Er det mulig å sveipe til minst et element?",
-            "ht": "<ul><li>aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>åpne appsiden</li><li>forsøk å sveipe til minst et element</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Ikkje testbart",
-                    "utfall": "Det er ikke mulig å sveipe til elementer på appsiden."
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Hvilken overskrift tester du?",
-            "ht": "<p>Bruk format:</p><ul><li>Beskriv overskriften</li><li>Beskriv plassering</li></ul><p><strong>Merk: </strong>Hvis det er flere overskrifter på siden, registrerer du en og en.</p>",
-            "type": "tekst",
-            "label": "Overskrift:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            }
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Leser skjermleseren opp den visuelle overskriften som overskrift?<br><br>",
-            "ht": "<ul><li>Aktiver skjermleser</li><li>Åpne appsiden</li><li>Trykk på eller sveip til overskriften du tester</li><li>Sjekk om skjermleser leser den opp som overskrift</li></ul>",
-            "type": "jaNei",
-            "kilde": [
-                "F2",
-                "H42"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell overskrift er ikke kodet som overskrift."
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Inngår den visuelle overskriften i et tydelig overskriftshierarki?",
-            "ht": "<p><strong>Merk:</strong> Du skal ikke vurdere hierarkiet på overskriftene for hele appsiden samlet, men bare de delene av appsidene som er delt opp med et visuelt overskriftshierarki.</p>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.4"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Visuell overskrift er kodet som overskrift."
-                }
-            }
-        },
-        {
-            "stegnr": "3.4",
-            "spm": "Samsvarer det visuelle hierarkiet med overskriftsnivået i koden?",
-            "ht": "<p>Visuelt hierarki:</p><ul><li>Sammenlign nivået på den visuelle overskriften med de forrige overskriftene.</li><li>Start på toppen av overskriftshierarkiet og tell deg nedover.</li><li>Husk at det kan være flere overskrifter på samme nivå etter hverandre</li></ul><p>Nivå i koden:</p><ul><li>Lytt til overskriften med skjermleser.</li><li>Sjekk om den er kodet med tilsvarende overskriftsnivå.</li></ul><p><strong>Merk:</strong> overskriftsnivå 1 kan brukes mer enn en gang på samme side, dersom innhold på siden er delt inn i mer enn en blokk.</p>",
-            "type": "jaNei",
-            "svarArray": [
-                "Nivå 1",
-                "Nivå 2",
-                "Nivå 3",
-                "Nivå 4",
-                "Nivå 5",
-                "Nivå 6",
-                "Nivå 7",
-                "Nivå 8"
-            ],
-            "ruting": {
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell overskrift er kodet som overskrift. Visuelt overskriftsnivå samsvarer ikke med kodet overskriftsnivå."
-                },
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Visuell overskrift er kodet som overskrift. Visuelt overskriftsnivå samsvarer med kodet overskriftsnivå."
-                }
-            }
-        }
-    ]
+	"namn": "App-1.3.1a Visuelle overskrifter er korrekt kodet 2025",
+	"id": "app131a2025",
+	"testlabId": 566,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nb",
+	"kravTilSamsvar": "<ul><li>Visuelle overskrifter er korrekt kodet som overskrifter</li><li>Visuelle overskrifter som inngår i et overskriftshierarki, er kodet med rett overskriftsnivå</li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken appside tester du?",
+			"ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
+			"type": "tekst",
+			"label": "Appside:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsiden visuelle overskrifter?",
+			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appsiden har ikke visuelle overskrifter."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Er det mulig å sveipe til minst et element?",
+			"ht": "<ul><li>aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>åpne appsiden</li><li>forsøk å sveipe til minst et element</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ikkje testbart",
+					"utfall": "Det er ikke mulig å sveipe til elementer på appsiden."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken overskrift tester du?",
+			"ht": "<p>Bruk format:</p><ul><li>Beskriv overskriften</li><li>Beskriv plassering</li></ul><p><strong>Merk: </strong>Hvis det er flere overskrifter på siden, registrerer du en og en.</p>",
+			"type": "tekst",
+			"label": "Overskrift:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Leser skjermleseren opp den visuelle overskriften som overskrift?<br><br>",
+			"ht": "<ul><li>Aktiver skjermleser</li><li>Åpne appsiden</li><li>Trykk på eller sveip til overskriften du tester</li><li>Sjekk om skjermleser leser den opp som overskrift</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"F2",
+				"H42"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell overskrift er ikke kodet som overskrift."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Inngår den visuelle overskriften i et tydelig overskriftshierarki?",
+			"ht": "<p><strong>Merk:</strong> Du skal ikke vurdere hierarkiet på overskriftene for hele appsiden samlet, men bare de delene av appsidene som er delt opp med et visuelt overskriftshierarki.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell overskrift er kodet som overskrift."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Samsvarer det visuelle hierarkiet med overskriftsnivået i koden?",
+			"ht": "<p>Visuelt hierarki:</p><ul><li>Sammenlign nivået på den visuelle overskriften med de forrige overskriftene.</li><li>Start på toppen av overskriftshierarkiet og tell deg nedover.</li><li>Husk at det kan være flere overskrifter på samme nivå etter hverandre</li></ul><p>Nivå i koden:</p><ul><li>Lytt til overskriften med skjermleser.</li><li>Sjekk om den er kodet med tilsvarende overskriftsnivå.</li></ul><p><strong>Merk:</strong> overskriftsnivå 1 kan brukes mer enn en gang på samme side, dersom innhold på siden er delt inn i mer enn en blokk.</p>",
+			"type": "jaNei",
+			"svarArray": [
+				"Nivå 1",
+				"Nivå 2",
+				"Nivå 3",
+				"Nivå 4",
+				"Nivå 5",
+				"Nivå 6",
+				"Nivå 7",
+				"Nivå 8"
+			],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell overskrift er kodet som overskrift. Visuelt overskriftsnivå samsvarer ikke med kodet overskriftsnivå."
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell overskrift er kodet som overskrift. Visuelt overskriftsnivå samsvarer med kodet overskriftsnivå."
+				}
+			}
+		}
+	]
 }
