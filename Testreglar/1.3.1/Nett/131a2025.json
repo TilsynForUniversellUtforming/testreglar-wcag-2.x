@@ -43,7 +43,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Hvilken overskrift tester du?",
-			"ht": "<p><strong>Bruk format:</strong></p><ul><li>Beskriv overskriften.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere overskrifter på siden, registrerer du en og en.</p>",
+			"ht": "<ul><li>Beskriv overskriften.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere overskrifter på siden, registrerer du en og en.</p>",
 			"type": "tekst",
 			"label": "Overskrift:",
 			"multilinje": true,
