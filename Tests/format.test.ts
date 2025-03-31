@@ -82,6 +82,9 @@ files.forEach((file) => {
       expect(isNaN(parseFloat(steg.stegnr))).toBeFalsy();
       expect(steg.spm.length).toBeGreaterThan(0);
       expect(steg.ht).toBeDefined();
+      // Forventer at hjelpeteksten IKKE har tomme avsnitt på slutten (<p> </p>)
+      expect(steg.ht).not.toMatch(/<p> <\/p>$/);
+      // Forventer at hjelpetekst ikke skal ha javascript-kode
       expect(steg.ht.includes("javascript:")).toBeFalsy();
       expect(steg.type).toBeDefined();
       expect(steg.type).toMatch(/(jaNei|radio|tekst|instruksjon)/i);
