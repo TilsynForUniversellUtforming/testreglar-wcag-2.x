@@ -1,0 +1,114 @@
+{
+    "namn": "Nett-2.5.3a Synlig ledetekst er en del av tilgjengelig navn 2025",
+    "id": "253aNett2025",
+    "testlabId": 602,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nb",
+    "kravTilSamsvar": "<p>For brukergrensesnittkomponenter med ledetekster som inneholder tekst eller bilder av tekst, som støtter tilgjengelig navn, gjelder en av følgende:</p><ul><li>Synlig (visuell) ledetekst og tilgjengelig navn (accessible name) er identiske eller</li><li>Tilgjengelig navn (accessible name) inneholder samme tekst, i samme rekkefølge som synlig (visuell) ledetekst</li></ul>",
+    "side": "2.1",
+    "element": "3.1",
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Hvilken side tester du?",
+            "ht": "<p>Angi URL eller side-ID.</p>",
+            "type": "tekst",
+            "kilde": [],
+            "label": "URL/Side-ID:",
+            "datalist": "Sideutvalg",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har testsiden brukergrensesnittkomponenter med synlig ledetekst som inneholder tekst eller bilde av tekst?",
+            "ht": "<ul><li>Gjennomfør en visuell inspeksjon</li></ul><p>Eksempel på tekst brukt som symbol kan være der bokstavene F, K og U brukes i et tekstredigeringsverktøy som symbol for fet, kursiv og understreket tekst.</p><p><strong>Merk:</strong> Når synlig ledetekst mangler skal placeholdertekst i tekstfelt testes som ledetekst. Dette gjelder kun i relasjon til testregel 2.5.3.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testsiden har ikke brukergrensesnittkomponenter med synlig ledetekst som består av tekst eller bilde av tekst."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Hvilken brukergrensesnittkomponent tester du?",
+            "ht": "<ul><li>Beskriv brukergrensesnittkomponenten</li><li>Beskriv plassering</li></ul><p><strong>Merk: </strong>Hvis det er flere brukergrensesnittkomponenter på siden, registrerer du en og en.</p>",
+            "type": "tekst",
+            "label": "Brukergrensesnittkomponent:",
+            "multilinje": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Ligger synlig ledetekst i, rett ved siden av eller under brukergrensesnittkomponenten?",
+            "ht": "<p>Du skal ikke vurdere</p><ul><li>gruppeledetekst for skjemaelementer i grupper<ul><li>dvs. ledetekst brukt med legend/fieldset eller med rolle som gruppe eller radiogruppe.</li></ul></li><li>instruksjoner</li><li>overskrifter</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Brukergrensesnittkomponenten har ikke synlig ledetekst som ligger i, rett ved siden av eller under."
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Har brukergrensesnittkomponenten et tilgjengelig navn, som ikke er tomt?",
+            "ht": "<ul><li>Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Brukergrensesnittkomponenten med synlig ledetekst har ikke tilgjengelig navn."
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Inneholder tilgjengelig navn for komponenten samme eller tilsvarende tekst, i samme rekkefølge, som den synlige ledeteksten?",
+            "ht": "<p><strong>Merk: </strong></p><ul><li>Du kan se vekk fra følgende i vurderingen av tilgjengelig navn:<ul><li>Store og små bokstaver, for eksempel<ul><li>synlig ledetekst: \"Fornavn\" og tilgjengelig navn: \"fornavn\".</li></ul></li><li>Tilsvarende formuleringer, for eksempel<ul><li>Synlig ledetekst: \"Søk\" og tilgjengelig navn: \"Søkefelt\".</li></ul></li><li>Tegnsetting som kolon og punktum, for eksempel<ul><li>Synlig ledetekst: \"Epost:\" og tilgjengelig navn: \"Epost\".</li></ul></li></ul></li></ul><ul><li>Synlig visuell ledetekst og tilgjengelig navn skal være identisk for:<ul><li>Matematiske symboler og formler, for eksempel<ul><li>synlig ledetekst: \"A&gt;B, A=B, A&lt;B\" og tilgjengelig navn \"A&gt;B\", \"A=B\", \"A&lt;B\". </li></ul></li></ul></li></ul><ul><li>Det er funksjonen til det symbolske teksttegnet som skal avspeiles i tilgjengelig navn når:<ul><li>Tekst eller bilde av tekst brukes som symbol, for eksempel<ul><li>synlig ledetekst: \"bokstavene <strong>F</strong>, <em>K</em> og <span style=\"text-decoration: underline;\">U</span>\", tilgjengelig navn: \"fet\", \"kursiv\" og \"understreket\".</li><li>Synlig ledetekst: \"bokstaven X\" og tilgjengelig navn: \"Lukk\".</li></ul></li></ul></li></ul>",
+            "type": "jaNei",
+            "kilde": [
+                "F96",
+                "G208",
+                "G211"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Brukergrensesnittkomponenten med synlig ledetekst som ligger i, rett ved siden av eller under, har tilgjengelig navn i samme rekkefølge som den synlige ledeteksten."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Brukergrensesnittkomponenten med synlig ledetekst som ligger i, rett ved siden av eller under, har ikke tilgjengelig navn i samme rekkefølge som den synlige ledeteksten."
+                }
+            }
+        }
+    ]
+}
