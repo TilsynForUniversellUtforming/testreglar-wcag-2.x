@@ -83,6 +83,16 @@ files.forEach((filePath) => {
     expect(testregel.steg.length).toBeGreaterThan(1);
   });
 
+  const stegNrListe: string[] = testregel.steg.map(steg => steg.stegnr);
+
+  test(`${filePath} har steg uten hull`, () => {
+      expect(validerStegUtenHull(stegNrListe)).toBe(true);
+    });
+  
+ 
+
+
+
   testregel.steg.forEach((steg: Steg) => {
     test(`${filePath} har gyldig steg ${steg.stegnr}`, () => {
       /** Sjekker at stegnr er lengre enn null */
@@ -327,4 +337,48 @@ function stegnrErStoerreEnn(stegNr1: string, stegNr2: string): boolean {
 
   // Sammenlign hovednummer og eventuelt desimal
   return helTall1 > helTall2 || (helTall1 === helTall2 && des1 > des2);
+}
+
+function validerStegUtenHull(stegListe: string[]): boolean {
+  const grupperteSteg: Record<number, number[]> = {};
+
+  // Gruppér stegene etter kapittel (før punktum)
+  for (const steg of stegListe) {
+    const [kapittelStr, delStr] = steg.split('.');
+    const kapittel = parseInt(kapittelStr, 10);
+    const del = parseInt(delStr, 10);
+
+    if (isNaN(kapittel) || isNaN(del)) {
+      throw new Error(`Ugyldig steg-format: ${steg}`);
+    }
+
+    if (!grupperteSteg[kapittel]) {
+      grupperteSteg[kapittel] = [];
+    }
+
+    grupperteSteg[kapittel].push(del);
+  }
+
+  const kapitler = Object.keys(grupperteSteg)
+    .map(Number)
+    .sort((a, b) => a - b);
+
+  // Sjekk at kapitler ikke hoppes over
+  for (let i = 1; i < kapitler.length; i++) {
+    if (kapitler[i] !== kapitler[i - 1] + 1) {
+      return false; // Hoppet over et helt kapittel
+    }
+  }
+
+  // Sjekk for hull i delsteg
+  for (const kapittel of kapitler) {
+    const delsteg = grupperteSteg[kapittel].sort((a, b) => a - b);
+    for (let i = 1; i < delsteg.length; i++) {
+      if (delsteg[i] !== delsteg[i - 1] + 1) {
+        return false; // Hull i delsteg
+      }
+    }
+  }
+
+  return true;
 }
