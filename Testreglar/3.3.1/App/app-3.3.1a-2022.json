@@ -118,7 +118,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.5"
+					"steg": "3.4"
 				},
 				"nei": {
 					"type": "avslutt",
@@ -128,7 +128,7 @@
 			}
 		},
 		{
-			"stegnr": "3.5",
+			"stegnr": "3.4",
 			"spm": "Inneheld feilmeldinga tekst som beskriv feilen?",
 			"ht": "Feilmeldinga gir informasjon om kva feilen består i, slik at brukaren kan finne ut kva som har gått feil, for eksempel \"Fornavn må fyllast ut\". Det er ikkje krav om at feilmeldinga skal innehalde forslag til korleis feil skal rettast. Dette er omfatta av suksesskriterium 3.3.3.",
 			"type": "jaNei",

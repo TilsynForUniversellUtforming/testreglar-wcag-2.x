@@ -166,7 +166,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.11"
+					"steg": "3.8"
 				},
 				"nei": {
 					"type": "avslutt",
@@ -176,19 +176,19 @@
 			}
 		},
 		{
-			"stegnr": "3.11",
+			"stegnr": "3.8",
 			"spm": "Angre sletting.",
 			"ht": "Bruk mekanismen, eller følg ei eventuell rutine for å angre sletting.",
 			"type": "instruksjon",
 			"ruting": {
 				"alle": {
 					"type": "gaaTil",
-					"steg": "3.12"
+					"steg": "3.9"
 				}
 			}
 		},
 		{
-			"stegnr": "3.12",
+			"stegnr": "3.9",
 			"spm": "Vart informasjonen gjenoppretta?",
 			"ht": "Kontroller at du fikk gjenskapt same informasjon som du sletta i utgangspunktet.",
 			"type": "jaNei",
