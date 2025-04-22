@@ -111,13 +111,7 @@
 					"type": "gaaTil",
 					"steg": "3.5"
 				}
-			},
-			"svarArray": [
-				"alltid synlig: ledetekst eller instruksjon som alltid er synlig eller",
-				"synlig ved fokus: enkelte ledetekstar eller instruksjonar blir først synleg når inndataelementet er i fokus.",
-				"knapp i direkte tilknyting til eit inndataelement: Dersom det er ein knapp i direkte tilknyting til eit inndataelement, og knappen sender inn skjemaet, reknast teksten, ikon, symbol, bilde eller liknande på knappen som synleg ledetekst for inndataelementet. Eksempel på slike skjema eller inndataelement er: Melde på nyheitsbrev, globalt søk.",
-				"Ingen synlig identifikasjon"
-			]
+			}
 		},
 		{
 			"stegnr": "3.3",
