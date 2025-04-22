@@ -249,7 +249,7 @@
         {
             "stegnr": "3.12",
             "spm": "Gir det tilgjengelige navnet den samme informasjonen som er formidlet av bildet?",
-            "ht": "<p>Gjør en skjønnsmessig vurdering av om det tilgjengelige navnet (tekstalternativet) du fant i forrige steg gir tilstrekkelig informasjon.</p><p> </p>",
+            "ht": "<p>Gjør en skjønnsmessig vurdering av om det tilgjengelige navnet (tekstalternativet) du fant i forrige steg gir tilstrekkelig informasjon.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -345,7 +345,7 @@
         {
             "stegnr": "3.16",
             "spm": "Ligger det et langt tekstalternativ i direkte tilknytning til bildet, i leserekkefølgen?",
-            "ht": "<p><strong>Merk:</strong> For å være i direkte tilknytning, skal teksten ligge enten i, rett før eller rett etter bildet i leserekkefølgen. </p><p><strong>Tips:</strong> Du kan bruke verktøyet Web Developer for å slå av CSS og sjekke om langt tekstalternativ ligger nær bildet i leserekkefølgen.</p>",
+            "ht": "<p><strong>Merk:</strong> For å være i direkte tilknytning, skal teksten ligge enten i, rett før eller rett etter bildet i leserekkefølgen.</p><p><strong>Tips:</strong> Du kan bruke verktøyet Web Developer for å slå av CSS og sjekke om langt tekstalternativ ligger nær bildet i leserekkefølgen.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
