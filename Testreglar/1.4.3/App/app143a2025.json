@@ -56,7 +56,7 @@
         {
             "stegnr": "3.2",
             "spm": "Mål og registrer kontrast mellom farge på tekst og bakgrunn",
-            "ht": "<ul><li>Ta et skjermbilde av appsiden</li><li>Bruk pipetteverktøy for å hente ut fargekode for tekst og bakgrunn<ul><li> Bruk appen ColorSlurp (iOS), Color Picker (Android) eller overfør bildet til PC</li></ul></li><li>Bruk Webaim Contrast Checker eller lignende for å vurdere kontrasten.</li><li>Registrer kontrast</li></ul><p><strong>Merk:</strong></p><ul><li>Dersom teksten er piksellert (får flere farger med zooming), skal du velge en farge som er representativ for hovedfargen på teksten.</li><li>Dersom bakgrunnen eller teksten er gradert, mønstret eller et bilde, skal du måle på det svakeste punktet.</li><li>Dersom bokstavene har et omriss på minst 1 piksel, vil omrisset være bakgrunnsfargen.</li></ul><p> </p>",
+            "ht": "<ul><li>Ta et skjermbilde av appsiden</li><li>Bruk pipetteverktøy for å hente ut fargekode for tekst og bakgrunn<ul><li> Bruk appen ColorSlurp (iOS), Color Picker (Android) eller overfør bildet til PC</li></ul></li><li>Bruk Webaim Contrast Checker eller lignende for å vurdere kontrasten.</li><li>Registrer kontrast</li></ul><p><strong>Merk:</strong></p><ul><li>Dersom teksten er piksellert (får flere farger med zooming), skal du velge en farge som er representativ for hovedfargen på teksten.</li><li>Dersom bakgrunnen eller teksten er gradert, mønstret eller et bilde, skal du måle på det svakeste punktet.</li><li>Dersom bokstavene har et omriss på minst 1 piksel, vil omrisset være bakgrunnsfargen.</li></ul>",
             "type": "tekst",
             "kilde": [
                 "F83",
