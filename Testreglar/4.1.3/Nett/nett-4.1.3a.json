@@ -87,10 +87,7 @@
 					"type": "gaaTil",
 					"steg": "3.6"
 				}
-			},
-			"svarArray": [
-				"Vellykketheten eller resultatet av en handling "
-			]
+			}
 		},
 		{
 			"stegnr": "3.4",
@@ -264,10 +261,6 @@
 			"ht": "<p>En framdriftsindikator (progressbar) indikerer for eksempel</p><ul><li>hvor langt en oppdatering er kommet</li><li>lasting av bilder i et album</li><li>lasting av en side</li></ul><p>Det blir vanligvis brukt for prosesser som tar litt tid. </p>",
 			"type": "jaNei",
 			"kilde": [],
-			"svarArray": [
-				"Framdriftsindikator (progressbar)",
-				"Logg, chat eller lignende data"
-			],
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",

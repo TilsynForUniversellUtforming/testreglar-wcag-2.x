@@ -113,6 +113,11 @@ files.forEach((filePath) => {
         expect(typeof steg.kilde).toEqual("object");
       }
 
+      if(steg.type !=="radio") {
+        // Bare steg av typen radio har feltet svarArray
+        expect('svarArray' in steg).toBe(false);
+      }
+
       // Avhengig av `steg.type` kan vi sjekke spesifikke forventninger
       switch (steg.type) {
         case "tekst":
