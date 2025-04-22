@@ -5,7 +5,7 @@
     "versjon": "1.0",
     "type": "Nett",
     "spraak": "nb",
-    "kravTilSamsvar": "<p>For ikke-lenkede bilder er ett av følgende punkter oppfylt:</p><ul><li>Bilder som er meningsbærende, har et kort tekstalternativ som gir same informasjon som bildet eller</li><li>Komplekse, meningsbærende bilder, har både et kort og et langt tekstalternativ som gir samme informasjon som bildet og<ul><li>Korte tekstalternativ har informasjon om plasseringen av langt tekstalternativ og</li><li>Bildet er programmatisk knyttet til langt tekstalternativ og</li><li>Langt tekstalternativ er kodet som tekst eller</li></ul></li><li>Ikke-tekstlig innhold som er en test, har kort tekstalternativ med en beskrivende identifikasjon av testen eller </li><li>Bilder der formålet er å skape et spesifikt sanseinntrykk, har tekstalternativ med en beskrivende identifikasjon av bildet eller </li><li>Bilder som er ren dekorasjon, brukes utelukkende til visuell formatering eller ikke presenteres for brukerne, kodes det slik at det kan ignoreres av hjelpemiddelteknologi</li></ul>",
+    "kravTilSamsvar": "<p>For ikke-lenkede bilder er ett av følgende punkter oppfylt:</p><ul><li>Bilder som er meningsbærende, har et kort tekstalternativ som gir same informasjon som bildet eller</li><li>Komplekse, meningsbærende bilder, har både et kort og et langt tekstalternativ som gir samme informasjon som bildet og<br><ul><li>Bildet er programmatisk knyttet til langt tekstalternativ og</li><li>Langt tekstalternativ er kodet som tekst eller</li></ul></li><li>Ikke-tekstlig innhold som er en test, har kort tekstalternativ med en beskrivende identifikasjon av testen eller </li><li>Bilder der formålet er å skape et spesifikt sanseinntrykk, har tekstalternativ med en beskrivende identifikasjon av bildet eller </li><li>Bilder som er ren dekorasjon, brukes utelukkende til visuell formatering eller ikke presenteres for brukerne, kodes det slik at det kan ignoreres av hjelpemiddelteknologi</li></ul>",
     "side": "2.1",
     "element": "3.1",
     "steg": [
@@ -41,8 +41,8 @@
         },
         {
             "stegnr": "2.3",
-            "spm": "Er bildet omfattet av kravet?",
-            "ht": "<p><strong>Unntak:</strong></p><ul><li><strong>Nettbaserte kart og karttjenester</strong> er som hovedregel unntatt kravene til universell utforming. <br><strong>Merk:</strong> For kart ment for navigasjonsformål skal likevel nødvendig informasjon være tilgjengelig på en annen måte. Dette kan for eksempel være et kart som viser besøksadressen til offentlige virksomheter eller en oversikt over stoppesteder for kollektivtransport.</li><li><strong>Tegneserier</strong>, eller tegnede bilder i en bevisst rekkefølge, formidler informasjon eller skaper en opplevelse, er som hovedregel unntatt kravene til universell utforming. <br><strong>Merk:</strong> Kortere formater, som enkeltpanel og tegneseriestriper er likevel omfattet.</li></ul>",
+            "spm": "Er det ikke-lenkede bildet unntatt kravet? ",
+            "ht": "<p><strong>Nettbaserte kart og karttjenester</strong> er som hovedregel unntatt kravene til universell utforming.</p><ul><li><strong>Merk:</strong> Kart ment for navigasjonsformål skal likevel ha nødvendig informasjon tilgjengelig på en annen måte. Dette kan for eksempel være et kart som viser besøksadressen til offentlige virksomheter eller en oversikt over stoppesteder for kollektivtransport.</li></ul><p><strong>Tegneseriehefter-, bøker og tilsvarende: </strong>Per mars 2025 finnes det ikke etablerte, effektive fremgangsmåter, teknologi eller verktøy man kan bruke for å gjøre det meningsbærende visuelle innholdet tegneseriehefter- og bøker eller tilsvarende, universelt utformet på en korrekt og kostnadseffektiv måte. Uu-tilsynet har derfor kommet til at det er en uforholdsmessig stor byrde for virksomhetene å følge kravet, og slike tegneserier er inntil videre unntatt suksesskriterium 1.1.1.</p><ul><li><strong>Merk:</strong> Kortere tegneserier, som singel-panel og tegneseriestriper er likevel omfattet.</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -51,14 +51,14 @@
                 },
                 "nei": {
                     "type": "ikkjeForekomst",
-                    "utfall": "Det finnes ikke-lenkede bilder på testsiden, disse er ikke omfattet av kravet."
+                    "utfall": "Det finnes ikke-lenket bilde på testsiden, som er unntatt kravet."
                 }
             }
         },
         {
             "stegnr": "3.1",
             "spm": "Hvilket bilde tester du?",
-            "ht": "<p><strong>Bruk format:</strong></p><ul><li>Beskriv bildet</li><li>Beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det er flere bilder på siden, registrerer du ett og ett bilde.</p>",
+            "ht": "<ul><li>Beskriv bildet</li><li>Beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det er flere bilder på siden, registrerer du ett og ett bilde.</p>",
             "type": "tekst",
             "ruting": {
                 "alle": {
@@ -129,7 +129,7 @@
         {
             "stegnr": "3.5",
             "spm": "Er bildet kodet slik at det er skjult fra \"Accessibility Tree\" og ignoreres av hjelpemiddelteknologi?<br><br>",
-            "ht": "<p><strong>Tips:</strong></p><ul><li>Inspiser bildet</li><li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Accessibility node not exposed\".</li></ul>",
+            "ht": "<ul><li>Inspiser bildet</li><li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Accessibility node not exposed\".</li></ul>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
@@ -369,7 +369,7 @@
             "ruting": {
                 "ja": {
                     "type": "gaaTil",
-                    "steg": "3.19"
+                    "steg": "3.18"
                 },
                 "nei": {
                     "type": "avslutt",
@@ -382,14 +382,14 @@
             ]
         },
         {
-            "stegnr": "3.19",
+            "stegnr": "3.18",
             "spm": "Er det lange tekstalternativet kodet som tekst?",
-            "ht": "<ul><li>Sjekk om du kan markere teksten med mus eller tastatur. Dette indikerer at teksten er kodet som tekst, og ikke er bilde av tekst, eller</li><li>Sjekk om du finner igjen det aktuelle tekstalternativet i koden.<br> </li></ul><p><strong>Merk: </strong>Teksten kan være løpende tekst, tabell eller lignende. </p>",
+            "ht": "<ul><li>Sjekk om du kan markere teksten med mus eller tastatur. Dette indikerer at teksten er kodet som tekst, og ikke er bilde av tekst, eller</li><li>Sjekk om du finner igjen det aktuelle tekstalternativet i koden. </li></ul><p><strong>Merk: </strong>Teksten kan være løpende tekst, tabell eller lignende. </p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
                     "type": "gaaTil",
-                    "steg": "3.20"
+                    "steg": "3.19"
                 },
                 "nei": {
                     "type": "avslutt",
@@ -399,7 +399,7 @@
             }
         },
         {
-            "stegnr": "3.20",
+            "stegnr": "3.19",
             "spm": "Gir det lange tekstalternativet en tilstrekkelig beskrivelse av innholdet i bildet?",
             "ht": "<ul><li>Gjør en skjønnsmessig vurdering av om informasjonen i det lange tekstalternativet gir tilstrekkelig informasjon om innholdet i bildet.</li></ul><p><strong>Tips:</strong> Et godt langt tekstalternativ gjør det mulig å erstatte bildet med tekstalternativet, uten å miste funksjonalitet eller informasjon. </p>",
             "type": "jaNei",
