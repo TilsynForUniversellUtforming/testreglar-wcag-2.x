@@ -67,7 +67,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.5"
+					"steg": "3.4"
 				},
 				"nei": {
 					"type": "gaaTil",
@@ -87,38 +87,17 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.5"
+					"steg": "3.4"
 				},
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Visuell overskrift er ikke kodet som overskrift."
+					"utfall": "Visuell overskrift er ikke kodet som overskrift"
 				}
 			}
 		},
 		{
 			"stegnr": "3.4",
-			"spm": "Er den visuelle overskriften kodet på en annen måte, som ivaretar den visuelle presentasjonen?",
-			"ht": "<p>Eksempel på koding er:</p><ul><li>unummerert liste, kodet med <code>&lt;ul&gt;</code> og <code>&lt;li&gt;</code> for hvert listepunkt</li><li>nummerert liste, kodet med <code>&lt;ol&gt;</code> og <code>&lt;li&gt;</code> for hvert listepunkt</li><li>deskriptiv liste, kodet med <code>&lt;dl&gt;</code>, <code>&lt;dd&gt;</code> og <code>&lt;dt&gt;</code></li><li>Ledetekst kodet som <code>&lt;label&gt;</code></li></ul>",
-			"type": "jaNei",
-			"kilde": [
-				"F2",
-				"G115"
-			],
-			"ruting": {
-				"ja": {
-					"type": "ikkjeForekomst",
-					"utfall": "Visuell overskrift er kodet på en annen gyldig måte som ivaretar den visuelle presentasjonen."
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Visuell overskrift er ikke kodet som overskrift."
-				}
-			}
-		},
-		{
-			"stegnr": "3.5",
 			"spm": "Er overskriften kodet slik at den ignoreres av hjelpemiddelteknologi?",
 			"ht": "<ul><li>Inspiser overskriften.</li><li>Bruk Accessibility Tree, og sjekk under Computed Properties, om det står:<br><ul><li>\"Accessibility node not exposed».</li></ul></li></ul><p>Eller</p><ul><li>Sjekk om overskriften er kodet med en av følgende attributter:<ul><li><code>role=«presentation»</code>.</li><li><code>role=«none»</code>.</li><li><code>aria-hidden=«true»</code>.</li></ul></li></ul>",
 			"type": "jaNei",
@@ -130,7 +109,7 @@
 				},
 				"nei": {
 					"type": "gaaTil",
-					"steg": "3.6"
+					"steg": "3.5"
 				}
 			},
 			"kilde": [
@@ -138,14 +117,14 @@
 			]
 		},
 		{
-			"stegnr": "3.6",
+			"stegnr": "3.5",
 			"spm": "Inngår den visuelle overskriften i et tydelig overskriftshierarki?",
 			"ht": "<p><strong>Merk:</strong> Du skal ikke vurdere hierarkiet på overskriftene for hele nettsiden samlet, bare de delene av nettsidene som er delt opp med et visuelt overskriftshierarki.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.7"
+					"steg": "3.6"
 				},
 				"nei": {
 					"type": "avslutt",
@@ -155,7 +134,7 @@
 			}
 		},
 		{
-			"stegnr": "3.7",
+			"stegnr": "3.6",
 			"spm": "Samsvarer det visuelle hierarkiet med overskriftsnivået i koden?",
 			"ht": "<p>Visuelt hierarki:</p><ul><li>Sammenlign nivået på den visuelle overskriften med de forrige overskriftene.</li><li>Start på toppen av overskriftshierarkiet og tell deg nedover.</li><li>Husk at det kan være flere overskrifter på samme nivå etter hverandre</li></ul><p>Nivå i koden:</p><ul><li>Inspiser overskriften.</li><li>Sjekk om den er kodet med element <code>&lt;h1&gt;</code> til <code>&lt;h6&gt;</code>, eller <code>aria-level=\"1\"</code> til <code>aria-level=\"6\"</code>.</li></ul><p><strong>Merk:</strong> <code>&lt;h1&gt;</code> kan brukes mer enn en gang på samme side, dersom innhold på siden er delt inn i mer enn en blokk.</p>",
 			"type": "jaNei",
