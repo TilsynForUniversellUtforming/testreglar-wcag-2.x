@@ -73,7 +73,7 @@
 		},
 		{
 			"stegnr": "3.2",
-			"spm": "Leser skjermleseren opp den visuelle overskriften som overskrift?<br><br>",
+			"spm": "Leser skjermleseren opp den visuelle overskriften som overskrift?",
 			"ht": "<ul><li>Aktiver skjermleser</li><li>Åpne appsiden</li><li>Trykk på eller sveip til overskriften du tester</li><li>Sjekk om skjermleser leser den opp som overskrift</li></ul>",
 			"type": "jaNei",
 			"kilde": [
@@ -114,16 +114,6 @@
 			"spm": "Samsvarer det visuelle hierarkiet med overskriftsnivået i koden?",
 			"ht": "<p>Visuelt hierarki:</p><ul><li>Sammenlign nivået på den visuelle overskriften med de forrige overskriftene.</li><li>Start på toppen av overskriftshierarkiet og tell deg nedover.</li><li>Husk at det kan være flere overskrifter på samme nivå etter hverandre</li></ul><p>Nivå i koden:</p><ul><li>Lytt til overskriften med skjermleser.</li><li>Sjekk om den er kodet med tilsvarende overskriftsnivå.</li></ul><p><strong>Merk:</strong> overskriftsnivå 1 kan brukes mer enn en gang på samme side, dersom innhold på siden er delt inn i mer enn en blokk.</p>",
 			"type": "jaNei",
-			"svarArray": [
-				"Nivå 1",
-				"Nivå 2",
-				"Nivå 3",
-				"Nivå 4",
-				"Nivå 5",
-				"Nivå 6",
-				"Nivå 7",
-				"Nivå 8"
-			],
 			"ruting": {
 				"nei": {
 					"type": "avslutt",
