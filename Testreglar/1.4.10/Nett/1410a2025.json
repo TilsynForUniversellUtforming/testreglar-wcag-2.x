@@ -10,28 +10,28 @@
     "element": "3.3",
     "steg": [
         {
-            "stegnr": "2.0",
+            "stegnr": "2.1",
             "spm": "Hvilken side tester du?",
             "ht": "<p>Angi URL eller side-ID.</p>",
             "type": "tekst",
             "ruting": {
                 "alle": {
                     "type": "gaaTil",
-                    "steg": "2.1"
+                    "steg": "2.2"
                 }
             },
             "label": "URL/Side-ID:",
             "datalist": "Sideutvalg"
         },
         {
-            "stegnr": "2.1",
+            "stegnr": "2.2",
             "spm": "Scroller innholdet på siden loddrett?",
             "ht": "<p>Innhold som leses vannrett, for eksempel innhold på norsk og engelsk, og som vanligvis scroller loddrett (nedover), skal vurderes.</p>",
             "type": "jaNei",
             "ruting": {
                 "ja": {
                     "type": "gaaTil",
-                    "steg": "2.2"
+                    "steg": "2.3"
                 },
                 "nei": {
                     "type": "ikkjeForekomst",
@@ -40,7 +40,7 @@
             }
         },
         {
-            "stegnr": "2.2",
+            "stegnr": "2.3",
             "spm": "Er todimensjonal layout nødvendig for å ivareta bruk eller meningsinnhold?",
             "ht": "<p><strong>Unntak fra kravet:</strong></p><ul><li>Innhold som krever todimensjonal layout for å ivareta bruk eller meningsinnhold.</li></ul><p>Dette gjelder for eksempel:</p><ul><li>grafikk og video</li><li>datatabeller</li><li>presentasjoner</li><li>innhold som krever at verktøylinjer er synlige</li></ul>",
             "type": "jaNei",
