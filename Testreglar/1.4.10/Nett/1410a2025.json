@@ -130,7 +130,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Innholdet har ikke dynamisk tilpasning."
+                    "utfall": "Innholdet er ikke dynamisk tilpasset."
                 },
                 "ja": {
                     "type": "avslutt",
