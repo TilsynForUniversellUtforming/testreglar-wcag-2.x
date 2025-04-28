@@ -1,135 +1,135 @@
 {
-    "namn": "App-1.3.1c Visuelle lister er korrekt kodet 2025",
-    "id": "app131c2025",
-    "testlabId": 567,
-    "versjon": "1.0",
-    "type": "App",
-    "spraak": "nb",
-    "kravTilSamsvar": "<p>Visuelle lister er korrekt kodet, basert på type liste:</p><ul><li>Nummererte lister er kodet som nummerert liste</li><li>Unummererte lister er kodet som unummerert liste</li><li>Beskrivende lister, det vil si lister som har to nivå og gir utfyllende forklaringer, er kodet som beskrivende lister</li></ul>",
-    "side": "2.1",
-    "element": "3.1",
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Hvilken appside tester du?",
-            "ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
-            "type": "tekst",
-            "label": "Appside:",
-            "datalist": "Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Har appsiden visuelle lister?",
-            "ht": "<p><strong>Merk:</strong> Du skal ikke teste</p><ul><li>Nedtrekksliste med inputfunksjon testes i nett-4.1.2a</li><li>Menyer testes i nett-4.1.2d</li><li>Innholdsfortegnelser skal testes som liste</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Appsiden har ikke visuelle lister."
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Hvilken liste tester du?",
-            "ht": "<ul><li>Beskriv listen.</li><li>Beskriv plassering.</li></ul><p><strong>Merk</strong>: Hvis det er flere lister på siden, registrerer du en og en.</p>",
-            "type": "tekst",
-            "label": "Liste:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Er listen en nummerert liste?",
-            "ht": "<p><strong>Merk:</strong> Lister kan være nøstet.</p>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.4"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.5"
-                }
-            }
-        },
-        {
-            "stegnr": "3.4",
-            "spm": "Er listen korrekt kodet som nummerert liste?",
-            "ht": "<ul><li>Sveip til listen du tester og sjekk om skjermleser leser:</li><li style=\"list-style-type: none;\"><ul><li>Første listeelement:<ul><li>første listeelement med nummer eller bokstav og \"Starten på listen\"</li></ul></li><li>Listeelementer mellom første listeelement og siste listeelement<ul><li>nummer eller bokstav for det aktuelle listeelementet</li></ul></li><li>Siste listeelement<ul><li>Nummer eller bokstav og avslutter med \"Slutten av liste\" eller antall av totalt antall listeelementer</li></ul></li></ul></li></ul><p> </p><p> </p><p> </p>",
-            "type": "jaNei",
-            "kilde": [
-                "ListItemStyle",
-                "BulletSpan"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Visuell nummerert liste er korrekt kodet."
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell nummerert liste er ikke korrekt kodet."
-                }
-            }
-        },
-        {
-            "stegnr": "3.5",
-            "spm": "Er liste en unummerert liste?",
-            "ht": "<p><strong>Merk:</strong> Lister kan være nøsta.</p>",
-            "type": "jaNei",
-            "ruting": {
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Appsiden har ikke visuelle lister."
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.6"
-                }
-            }
-        },
-        {
-            "stegnr": "3.6",
-            "spm": "Er listen korrekt kodet som unummerert liste?",
-            "ht": "<p><strong>iOS</strong></p><ul><li>Sveip til listen du tester og sjekk om skjermleser leser:<ul><li>Første listeelement:<ul><li>punkttegn eller lignende tegn og \"Starten på listen\"</li></ul></li><li>Listeelementer mellom første listeelement og siste listeelement<ul><li>kun punkttegn</li></ul></li><li>Siste listeelement<ul><li>avslutter med punkttegn og \"Slutten av liste\"</li></ul></li></ul></li></ul><p><strong>Android</strong></p><ul><li>Sveip til listen du tester og sjekk om skjermleser leser:<ul><li>Første listeelement:<ul><li>punkttegn eller lignende tegn og en av totalt antall listeelementer, samt totalt antall listeelementer </li></ul></li><li>Listeelementer mellom første listeelement og siste listeelement<ul><li>punkttegn og antall av totalt antall listeelementer </li></ul></li><li>Siste listeelement<ul><li>punkttegn og antall av totalt antall listeelementer</li></ul></li></ul></li></ul>",
-            "type": "jaNei",
-            "kilde": [
-                "ListItemStyle",
-                "SortedList"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Visuell unummerert liste er korrekt kodet."
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell unummerert liste er ikke korrekt kodet."
-                }
-            }
-        }
-    ]
+	"namn": "App-1.3.1c Visuelle lister er korrekt kodet 2025",
+	"id": "app131c2025",
+	"testlabId": 567,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Visuelle lister er korrekt kodet, basert på type liste:</p><ul><li>Nummererte lister er kodet som nummerert liste</li><li>Unummererte lister er kodet som unummerert liste</li><li>Beskrivende lister, det vil si lister som har to nivå og gir utfyllende forklaringer, er kodet som beskrivende lister</li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken appside tester du?",
+			"ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
+			"type": "tekst",
+			"label": "Appside:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsiden visuelle lister?",
+			"ht": "<p><strong>Merk:</strong> Du skal ikke teste</p><ul><li>Nedtrekksliste med inputfunksjon testes i nett-4.1.2a</li><li>Menyer testes i nett-4.1.2d</li><li>Innholdsfortegnelser skal testes som liste</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appsiden har ikke visuelle lister."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken liste tester du?",
+			"ht": "<ul><li>Beskriv listen.</li><li>Beskriv plassering.</li></ul><p><strong>Merk</strong>: Hvis det er flere lister på siden, registrerer du en og en.</p>",
+			"type": "tekst",
+			"label": "Liste:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er listen en nummerert liste?",
+			"ht": "<p><strong>Merk:</strong> Lister kan være nøstet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er listen korrekt kodet som nummerert liste?",
+			"ht": "<ul><li>Sveip til listen du tester og sjekk om skjermleser leser:</li><li style=\"list-style-type: none;\"><ul><li>Første listeelement:<ul><li>første listeelement med nummer eller bokstav og \"Starten på listen\"</li></ul></li><li>Listeelementer mellom første listeelement og siste listeelement<ul><li>nummer eller bokstav for det aktuelle listeelementet</li></ul></li><li>Siste listeelement<ul><li>Nummer eller bokstav og avslutter med \"Slutten av liste\" eller antall av totalt antall listeelementer</li></ul></li></ul></li></ul><p> </p><p> </p><p> </p>",
+			"type": "jaNei",
+			"kilde": [
+				"ListItemStyle",
+				"BulletSpan"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell nummerert liste er korrekt kodet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell nummerert liste er ikke korrekt kodet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er liste en unummerert liste?",
+			"ht": "<p><strong>Merk:</strong> Lister kan være nøsta.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appsiden har ikke visuelle lister."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Er listen korrekt kodet som unummerert liste?",
+			"ht": "<p><strong>iOS</strong></p><ul><li>Sveip til listen du tester og sjekk om skjermleser leser:<ul><li>Første listeelement:<ul><li>punkttegn eller lignende tegn og \"Starten på listen\"</li></ul></li><li>Listeelementer mellom første listeelement og siste listeelement<ul><li>kun punkttegn</li></ul></li><li>Siste listeelement<ul><li>avslutter med punkttegn og \"Slutten av liste\"</li></ul></li></ul></li></ul><p><strong>Android</strong></p><ul><li>Sveip til listen du tester og sjekk om skjermleser leser:<ul><li>Første listeelement:<ul><li>punkttegn eller lignende tegn og en av totalt antall listeelementer, samt totalt antall listeelementer </li></ul></li><li>Listeelementer mellom første listeelement og siste listeelement<ul><li>punkttegn og antall av totalt antall listeelementer </li></ul></li><li>Siste listeelement<ul><li>punkttegn og antall av totalt antall listeelementer</li></ul></li></ul></li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"ListItemStyle",
+				"SortedList"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell unummerert liste er korrekt kodet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell unummerert liste er ikke korrekt kodet."
+				}
+			}
+		}
+	]
 }
