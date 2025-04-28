@@ -131,7 +131,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Testsiden har ikke dynamisk tilpasning av alt innhold."
+					"utfall": "Innholdet er ikke dynamisk tilpasset."
 				},
 				"ja": {
 					"type": "avslutt",
