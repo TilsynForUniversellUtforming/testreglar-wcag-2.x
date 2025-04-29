@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>Visuelle lister er korrekt kodet, basert på type liste:</p><ul><li>Nummererte lister er kodet som nummerert liste</li><li>Unummererte lister er kodet som unummerert liste</li><li>Beskrivende lister, det vil si lister som har to nivå og gir utfyllende forklaringer, er kodet som beskrivende lister</li></ul>",
+	"kravTilSamsvar": "<p>Visuelle lister er korrekt kodet, basert på type liste:</p><ul><li>Nummererte lister er kodet som nummerert liste</li><li>Unummererte lister er kodet som unummerert liste</li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
