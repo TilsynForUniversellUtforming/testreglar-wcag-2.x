@@ -1,0 +1,155 @@
+{
+	"namn": "Nett-1.3.1a Visuelle overskrifter er korrekt kodet 2025",
+	"id": "131a2025",
+	"testlabId": 560,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nb",
+	"kravTilSamsvar": "<ul><li>Visuelle overskrifter er korrekt kodet som overskrifter</li><li>Visuelle overskrifter som inngår i et overskriftshierarki, er kodet med rett overskriftsnivå</li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettsiden visuelle overskrifter?",
+			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke visuelle overskrifter."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken overskrift tester du?",
+			"ht": "<ul><li>Beskriv overskriften.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere overskrifter på siden, registrerer du en og en.</p>",
+			"type": "tekst",
+			"label": "Overskrift:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er den visuelle overskriften kodet som overskrift med &lt;h1&gt; til &lt;h6&gt;?",
+			"ht": "<ul><li>Inspiser overskriften.</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"F2",
+				"H42"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er den visuelle overskriften kodet med attributtet role=\"heading\"?",
+			"ht": "<ul><li>Inspiser overskriften,</li><li>eller bruk Accessibility Tree verktøyet under Computed Properties og sjekk om det står <code>role=\"heading\"</code>.</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"ARIA12",
+				"F2"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell overskrift er ikke kodet som overskrift"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er overskriften kodet slik at den ignoreres av hjelpemiddelteknologi?",
+			"ht": "<ul><li>Inspiser overskriften.</li><li>Bruk Accessibility Tree, og sjekk under Computed Properties, om det står:<br><ul><li>\"Accessibility node not exposed».</li></ul></li></ul><p>Eller</p><ul><li>Sjekk om overskriften er kodet med en av følgende attributter:<ul><li><code>role=«presentation»</code>.</li><li><code>role=«none»</code>.</li><li><code>aria-hidden=«true»</code>.</li></ul></li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Overskrift er kodet slik at den ignoreres av hjelpemiddelteknologi."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			},
+			"kilde": [
+				"F92"
+			]
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Inngår den visuelle overskriften i et tydelig overskriftshierarki?",
+			"ht": "<p><strong>Merk:</strong> Du skal ikke vurdere hierarkiet på overskriftene for hele nettsiden samlet, bare de delene av nettsidene som er delt opp med et visuelt overskriftshierarki.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell overskrift er kodet som overskrift."
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Samsvarer det visuelle hierarkiet med overskriftsnivået i koden?",
+			"ht": "<p>Visuelt hierarki:</p><ul><li>Sammenlign nivået på den visuelle overskriften med de forrige overskriftene.</li><li>Start på toppen av overskriftshierarkiet og tell deg nedover.</li><li>Husk at det kan være flere overskrifter på samme nivå etter hverandre</li></ul><p>Nivå i koden:</p><ul><li>Inspiser overskriften.</li><li>Sjekk om den er kodet med element <code>&lt;h1&gt;</code> til <code>&lt;h6&gt;</code>, eller <code>aria-level=\"1\"</code> til <code>aria-level=\"6\"</code>.</li></ul><p><strong>Merk:</strong> <code>&lt;h1&gt;</code> kan brukes mer enn en gang på samme side, dersom innhold på siden er delt inn i mer enn en blokk.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell overskrift er kodet som overskrift. Visuelt overskriftsnivå samsvarer ikke med kodet overskriftsnivå."
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell overskrift er kodet som overskrift. Visuelt overskriftsnivå samsvarer med kodet overskriftsnivå."
+				}
+			}
+		}
+	]
+}
