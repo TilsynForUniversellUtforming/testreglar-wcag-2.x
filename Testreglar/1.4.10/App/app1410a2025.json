@@ -1,0 +1,144 @@
+{
+	"namn": "App-1.4.10a Dynamisk tilpasning av apper 2025",
+	"id": "app1410a2025",
+	"testlabId": 586,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Kravet kan oppfylles på flere måter:</p><ul><li><p>Brukeren får tilgang til samme informasjon og funksjonalitet, uten å måtte scrolle i to dimensjoner.</p><ul><li><p>innhold som ruller loddrett med en bredde som tilsvarer 320 CSS-piksler (tilsvarer desktop nettleservindu (viewport) satt til en bredde på 1280 CSS-piksler ved 400 prosent forstørrelse) og</p></li><li><p>alt innhold og funksjonalitet kan nås og brukes</p></li></ul></li></ul><p>eller</p><ul><li style=\"list-style-type: none;\"><ul><li><p>innhold som ruller vannrett med en høyde som tilsvarer 256 CSS-piksler (tilsvarer desktop nettleservindu (viewport) satt til en høyde på 1024 CSS-piksler ved 400 prosent forstørrelse) og</p></li><li><p>alt innhold og funksjonalitet kan nås og brukes</p></li></ul></li></ul><p>eller</p><ul><li><p>Brukeren får tilgang til samme informasjon og funksjonalitet i en alternativ versjon av appsiden, via en mekanisme og</p><ul><li><p>Mekanismen for å endre visning (layout) ligger på samme appside og</p></li><li><p>Mekanismen endrer visning (layout) av appsiden og</p></li><li><p>Alternativ versjon krever ikke at brukeren scroller i to dimensjoner</p></li></ul></li></ul>",
+	"side": "2.1",
+	"element": "3.3",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken appside tester du?",
+			"ht": "<p>Oppgi appside-ID.</p>",
+			"type": "tekst",
+			"kilde": [],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			},
+			"label": "Appside:",
+			"datalist": "Sideutvalg"
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Scroller innholdet på siden loddrett?",
+			"ht": "<p>Du skal vurdere innhold som leses vannrett, for eksempel innhold på norsk og engelsk, og som vanligvis scroller loddrett (nedover).</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appsiden har ikke innhold som scroller loddrett."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Er todimensjonal scrolling nødvendig for å ivareta bruk eller meningsinnhold?",
+			"ht": "<p>Unntak fra kravet: innhold som krever todimensjonal scrolling for å ivareta bruk eller meningsinnhold.</p><p>Eksempler:</p><ul><li>grafikk og video</li><li>datatabeller</li><li>presentasjoner</li><li>grensesnitt som krever synlige verktøylinjer</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "ikkjeForekomst",
+					"utfall": "Todimensjonal scrolling er nødvendig for å ivareta innholdets bruk og betyding."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "For å teste bruker du en enhet med presentasjonsramme (viewport) bredde på 360 css-piksler. Du velger enten en iOS eller Android enhet. ",
+			"ht": "<p><strong>Operativsystem iOS</strong></p><p>Eksempel på iOS testenhet er iPhone 13 mini fra 2021 som har dimensjon 5.4 tommer og presentasjonsramme (viewport): 360 x 780 piksler.</p><p><strong>Operativsystem Android</strong></p><p>Eksempel på Android testenhet er Samsung S20 fra 2020 som har dimensjon 6.2 tommer og presentasjonsramme (viewport): 360 x 800 piksler.</p><p><strong>Merk: </strong>Tekststørrelsen i innstillingene til operativsystemet (og hvis den finnes i selve appen) skal settes til standard, 100%.</p>",
+			"type": "instruksjon",
+			"kilde": [
+				"F102"
+			],
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Får du tilgang til alt innhold og funksjonalitet uten å scrolle vannrett (bortover) i stående visning?",
+			"ht": "<p>Sammenlign siden i vanlig visning og i visning med tilpasset presentasjonsramme.<br><strong>Merk:</strong></p><ul><li>Siden kan se ulik ut i vanlig og tilpasset visning, for eksempel kan meny i tilpasset visning være en knapp, mens du i ordinær visning får se hele menyen.</li><li>Det er ikke ok at innhold blir dekket over av annet innhold i tilpasset visning, eller at innhold forsvinner fra nettsiden.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Appsiden har dynamisk tilpassing av alt innhold og funksjonalitet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Hvilket innhold og/eller funksjonalitet fikk du ikke tilgang til?",
+			"ht": "<ul><li>Beskriv funksjonaliteten</li><li>Beskriv plassering.</li></ul><p><strong>Merk: </strong>Hvis det er flere funksjonaliteter du ikke tilgang til på siden, registrerer du en og en.</p>",
+			"type": "tekst",
+			"label": "Innhold eller funksjonalitet:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Finnes det en mekanisme på appsiden for endre visning (layout)?",
+			"ht": "<ul><li>Mekanismen kan for eksempel være en knapp.</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G206"
+			],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Innhold og/eller funksjonalitet blir ikke dynamisk tilpasset, og det finnes ingen mekanisme som endrer layouten for å unngå scrolling i to dimensjoner."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Endrer mekanismen visning (layout) og får du tilgang til alt innhold uten vannrett scrolling?",
+			"ht": "<ul><li>Aktiver mekanismen og undersøk.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Innholdet og/eller funksjonalitet er ikke dynamisk tilpasset."
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Innhold og/eller funksjonalitet blir dynamisk tilpasset, ved bruk av en mekanisme som endrer layouten for å unngå scrolling i to dimensjoner."
+				}
+			}
+		}
+	]
+}
