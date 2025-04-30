@@ -114,7 +114,7 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Appsiden har ikke dynamisk tilpassing av alt innhold og funksjonalitet eller en mekanisme som endrer layout, slik at det ikke kreves scrolling i to dimensjoner."
+					"utfall": "Innhold og/eller funksjonalitet blir ikke dynamisk tilpasset, og det finnes ingen mekanisme som endrer layouten for å unngå scrolling i to dimensjoner."
 				},
 				"ja": {
 					"type": "gaaTil",
@@ -131,12 +131,12 @@
 				"nei": {
 					"type": "avslutt",
 					"fasit": "Nei",
-					"utfall": "Innholdet er ikke dynamisk tilpasset."
+					"utfall": "Innholdet og/eller funksjonalitet er ikke dynamisk tilpasset."
 				},
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Appsiden har dynamisk tilpassing av alt innhold og funksjonalitet via en mekanisme."
+					"utfall": "Innhold og/eller funksjonalitet blir dynamisk tilpasset, ved bruk av en mekanisme som endrer layouten for å unngå scrolling i to dimensjoner."
 				}
 			}
 		}
