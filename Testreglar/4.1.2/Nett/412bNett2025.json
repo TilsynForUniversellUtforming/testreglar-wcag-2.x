@@ -1,0 +1,237 @@
+{
+    "namn": "Nett-4.1.2b For knapper kan tilgjengelig navn, rolle og tilstand bestemmes programmatisk 2025",
+    "id": "412bNett2025",
+    "testlabId": 620,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nb",
+    "kravTilSamsvar": "<p>Navn og rolle:</p><ul><li>knapper har et tilgjengelig navn, som beskriver formålet med den aktuelle knappen og</li><li>knapper har riktig rolle, som identifiserer funksjonen til den aktuelle knappen</li></ul><p>Tilstander, egenskaper og verdier:</p><ul><li>når tilstander, egenskaper og verdier ved knappen kan angis av brukeren, skal denne informasjonen også angis programmatisk og</li><li>varsel om endringer i den aktuelle knappen er tilgjengelig for brukeragenter</li></ul>",
+    "side": "2.1",
+    "element": "3.1",
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Hvilken side tester du?",
+            "ht": "<p>Angi URL eller side-ID.</p>",
+            "type": "tekst",
+            "label": "URL/Side:",
+            "datalist": "Sideutvalg",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har testsiden knapper ?",
+            "ht": "<p><strong>Skal testes:</strong></p><ul><li>Knapper (Knapper tillater enkle bruker-utløste handlinger, for eksempel å lagre, gå videre til neste side uten å åpne en ny URL, sende inn et skjema eller sette i gang et søk).</li><li>Knapper som består av et bilde.</li></ul><p><strong>Skal ikke testes:</strong></p><ul><li>Lenker.</li><li>Button med <code>role=\"link\".</code></li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testsiden har ikke knapper."
+                }
+            },
+            "kilde": [
+                "F20",
+                "F59"
+            ]
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Hvilken knapp tester du?",
+            "ht": "<ul><li>beskriv knappen</li><li>beskriv elementet</li></ul><p><strong>Merk:</strong> Hvis det er flere knapper som ikke er angitt programmatisk på siden, registrerer du én og én.</p>",
+            "type": "tekst",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            },
+            "label": "Knapp:",
+            "multilinje": true
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Er knappen kodet med role button?",
+            "ht": "<ul><li>Inspiser knappen</li><li>Bruk Accessibility Tree, og sjekk under Computed Properties, om knappen har<code> role=\"button\".</code></li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Knappen er ikke kodet med role=''button''."
+                }
+            },
+            "kilde": [
+                "ARIA4",
+                "F59",
+                "G10"
+            ]
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Har knappen et tilgjengelig navn, som ikke er tomt?",
+            "ht": "<ul><li>Inspiser knappen.</li><li>Bruk Accessibility Tree, og sjekk under Computed Properties om skjemaelementet har innhold i <code>\"Name:\".</code></li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Knappen har ikke et tilgjengelig navn."
+                }
+            },
+            "kilde": [
+                "ARIA14",
+                "ARIA16",
+                "F68",
+                "F86",
+                "G108",
+                "H44",
+                "H65",
+                "H88",
+                "H91"
+            ]
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Beskriver tilgjengelig navn formålet med knappen?",
+            "ht": "<ul><li>Sjekk om det tilgjengelige navnet beskriver formålet med eller identifiserer knappen.</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Knappen har et tilgjengelig navn, som ikke beskriver formålet med, eller identifiserer knappen."
+                }
+            },
+            "kilde": [
+                "ARIA14"
+            ]
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Hvilket attributt gir tilgjengelig navn til knappen?",
+            "ht": "<ul><li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Tree.</li></ul>",
+            "type": "radio",
+            "svarArray": [
+                "aria-labelledby",
+                "aria-label",
+                "label",
+                "innhold",
+                "title",
+                "alt",
+                "value",
+                "annet"
+            ],
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }
+        },
+        {
+            "stegnr": "3.6",
+            "spm": "Har knappen mer enn én tilstand når brukeren samhandler med den?",
+            "ht": "<p>Trykk på knappen og sjekk om knappen har mer enn en av disse tilstandene:</p><ul><li>Av/på knapp (toggle button) og spill av og stopp knapp:<br><ul><li>hvis knappen er på <ul><li><code>aria-pressed=\"true\" </code>eller <code>aria-checked=\"true\"</code></li><li><code>pressed=\"true\"</code> eller <code>checked=\"true\"</code></li></ul></li><li>hvis knappen er av<ul><li><code>aria-pressed=\"false\"</code> eller <code>aria-checked=\"false\"</code></li><li><code>pressed=\"false\"</code> eller <code>checked=\"false\"</code></li></ul></li><li>hvis knappen har en mellomliggende tilstand mellom tilstander av og på <ul><li><code>aria-pressed=\"mixed\"</code></li><li><code>pressed=\"mixed\"</code></li></ul></li></ul></li><li>En knapp som utvider eller sammenslutter innhold:<ul><li>hvis innholdet er sammensluttet<ul><li><code>aria-expanded=\"false\"</code></li><li><code><span style=\"font-family: monospace;\">expanded=\"false</span></code></li></ul></li><li>hvis innholdet er utvidet<ul><li><code>aria-expanded=\"true</code>\"</li><li><code>expanded=\"true\"</code></li></ul></li></ul></li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Knappen har role=''button'', og et tilgjengelig navn som beskriver formålet med knappen."
+                },
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                }
+            }
+        },
+        {
+            "stegnr": "3.7",
+            "spm": "Hvor mange tilstander har knappen?",
+            "ht": "<ul><li>Registrer antall tilstander.</li></ul><p>Eksempel: En spill av og stopp knapp kan ha to tilstander, spill av eller stopp.</p>",
+            "type": "tekst",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                }
+            },
+            "label": "Antall tilstander:",
+            "filter": "tal"
+        },
+        {
+            "stegnr": "3.8",
+            "spm": "Hvor mange tilstander er ikke angitt programmatisk?",
+            "ht": "<ul><li>Inspiser knappen.</li><li>Bruk Accessibility Tree.</li><li>Registrer antall tilstander.</li></ul><p>Tilstandene du skal vurdere:</p><ul><li>Av/på knapp (toggle button) og spill av og stopp knapp:<br><ul><li>hvis knappen er på<ul><li><code>aria-pressed=\"true\" </code>eller<code> aria-checked=\"true\"</code></li><li><code>pressed=\"true\" </code>eller<code> checked=\"true\"</code></li></ul></li><li>hvis knappen er av <ul><li><code>aria-pressed=\"false\" </code>eller<code> aria-checked=\"false\"</code></li><li><code>pressed=\"false\" </code>eller <code>checked=\"false\"</code></li></ul></li><li>hvis knappen har en mellomliggende tilstand mellom tilstander av og på<ul><li><code>aria-pressed=\"mixed\"</code></li><li><code>pressed=\"mixed\"</code></li></ul></li></ul></li><li>En knapp som utvider eller sammenslutter innhold:<ul><li>hvis innholdet er sammensluttet<ul><li><code>aria-expanded=\"false\"</code></li><li><code>expanded=\"false\"</code></li></ul></li><li>hvis innholdet er utvidet<ul><li><code>aria-expanded=\"true\"</code></li><li><code>expanded=\"true\"</code></li></ul></li></ul></li></ul>",
+            "type": "tekst",
+            "ruting": {
+                "alle": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "type": "lik",
+                            "sjekk": "3.8",
+                            "verdi": "0",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Ja",
+                                "utfall": "Knappen har role=''button'', et tilgjengelig navn som beskriver formålet med knappen og tilstanden er angitt programmatisk."
+                            }
+                        },
+                        "2": {
+                            "type": "ulik",
+                            "sjekk": "3.8",
+                            "verdi": "0",
+                            "handling": {
+                                "type": "gaaTil",
+                                "steg": "3.9"
+                            }
+                        }
+                    }
+                }
+            },
+            "kilde": [
+                "ARIA5",
+                "G10"
+            ],
+            "label": "Antall tilstander:",
+            "filter": "tal"
+        },
+        {
+            "stegnr": "3.9",
+            "spm": "Hvilke tilstander er ikke angitt programmatisk?",
+            "ht": "<ul><li>beskriv tilstanden</li><li>beskriv elementet</li></ul><p><strong>Merk: </strong>Hvis det er flere tilstander som ikke er angitt programmatisk på knappen, registrer alle tilstandene her.</p>",
+            "type": "tekst",
+            "ruting": {
+                "alle": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Knappen har role=''button'' og et tilgjengelig navn som beskriver formålet med knappen, men tilstanden er ikke angitt programmatisk."
+                }
+            },
+            "label": "Tilstander:",
+            "multilinje": true
+        }
+    ]
+}
