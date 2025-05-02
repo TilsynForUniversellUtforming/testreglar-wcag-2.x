@@ -1,186 +1,186 @@
 {
-    "namn": "App-3.3.1a Skjema gir feilmelding hvis tomme obligatoriske skjemafelt blir oppdaget automatisk 2025",
-    "id": "331aApp2025",
-    "testlabId": 608,
-    "versjon": "1.0",
-    "type": "App",
-    "spraak": "nb",
-    "kravTilSamsvar": "<p>Dersom det blir oppdaget automatisk at obligatoriske skjemaelement ikke er fylt ut, er følgende tre punkter oppfylt:</p><ul><li>Skjemaelementet der feilen oppstod identifiseres.</li><li>Brukeren får en presis tekstlig beskrivelse av feilen.</li><li>Feilmeldingen er kodet som tekst.</li></ul>",
-    "side": "2.1",
-    "element": "3.1",
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Hvilken side tester du?",
-            "ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
-            "type": "tekst",
-            "label": "Appside:",
-            "datalist": "Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Har appsiden skjema?",
-            "ht": "",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.3"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Appsiden har ikke skjema."
-                }
-            }
-        },
-        {
-            "stegnr": "2.3",
-            "spm": "Hvilket skjema tester du?",
-            "ht": "<ul><li>beskriv skjema</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong></p><ul><li>Hvis skjema inngår i en prosess, skal du også beskrive prosessen.</li><li>Hvis det er flere skjema, registrerer du ett og ett.</li></ul>",
-            "type": "tekst",
-            "label": "Skjema/prosess:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.4"
-                }
-            }
-        },
-        {
-            "stegnr": "2.4",
-            "spm": "Er det mulig å sveipe til skjemaelementer?",
-            "ht": "<p>Aktiver skjermleser</p><ul><li>iOS: VoiceOver</li><li>Android: TalkBack<ul><li>Trykk på eller sveip til skjemaet du tester, sjekk om du får lest opp tilgjengelig navn.</li></ul></li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Ikkje testbart",
-                    "utfall": "Det er ikke mulig å sveipe til skjemaelementer på appsiden."
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.5"
-                }
-            }
-        },
-        {
-            "stegnr": "2.5",
-            "spm": "Oppdager skjemaet automatisk at obligatoriske skjemaelementer er tomme?",
-            "ht": "<ul><li>Ikke fyll ut informasjon i skjemaet (tomt skjema), eller</li><li>la alle obligatoriske skjemaelementer stå tomme, eller</li><li>fjern forhåndsutfylt informasjon (hvis mulig):<ul><li>Forhåndsutfylt informasjon betyr at det allerede står inndata i skjemaet når appsiden er lastet inn.</li><li>For eksempel informasjon hentet fra folkeregisteret som personnummer, fornavn, etternavn og adresse.</li></ul></li><li>Fullfør, send inn eller gå videre i skjemaet, for å sjekke om tomme obligatoriske skjemaelementer blir oppdaget automatisk.</li></ul><p><strong>Merk: </strong></p><ul><li>Begrepet \"oppdages automatisk\" betyr at skjemaet er satt opp slik at det selv oppdager når det mangler nødvendig informasjon i obligatoriske elementer i skjemaet. </li><li>Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes. <ul><li>Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut rett informasjon, indikerer at brukeren har utelatt inndata som nettsiden krever, og at dette oppdages automatisk, uten at brukeren er involvert.</li></ul></li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Skjema oppdager ikke automatisk at obligatoriske skjemaelementer er tomme.",
-                    "element": "2.3"
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Hvilket obligatorisk skjemaelement tester du?",
-            "ht": "<ul><li>beskriv skjemaelementet</li><li>beskriv plassering</li></ul><p><strong>Merk: </strong>Hvis det er flere skjemaelementer, registrerer du ett og ett.</p>",
-            "type": "tekst",
-            "label": "Skjemaelement:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            }
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Får du en tekstlig feilmelding?",
-            "ht": "<p>Feilmeldingen kan for eksempel vises</p><ul><li>i et modalvindu</li><li>i ledeteksten til skjemaelement</li><li>øverst på siden</li><li>når du navigerer i skjemaet</li></ul><p><strong>Merk: </strong>Feilmeldingen må være tekstlig, og det er ikke tilstrekkelig å identifisere feilen med et symbol, endret farge, visuell plassering, deaktivert innsendingsknapp eller lignende ikke-tekstlige indikatorer.</p>",
-            "type": "jaNei",
-            "kilde": [
-                "G83"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får ikke tekstlig feilmelding."
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Er feilmeldingen kodet som tekst?",
-            "ht": "<ul><li>Aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Android: TalkBack</li></ul></li><li>Trykk på feilmeldingen du tester. Hvis feilmeldingen ikke blir lest opp, er den ikke kodet som tekst.</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.4"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får feilmelding, men den er ikke er kodet som tekst."
-                }
-            }
-        },
-        {
-            "stegnr": "3.4",
-            "spm": "Inneholder feilmeldingen tekst som identifiserer hvilket skjemaelement som er tomt?",
-            "ht": "",
-            "type": "jaNei",
-            "kilde": [
-                "G83"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.5"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk får feilmelding som er kodet som tekst, men identifiserer ikke hvilket skjemaelement som er tomt."
-                }
-            }
-        },
-        {
-            "stegnr": "3.5",
-            "spm": "Inneholder feilmeldingen informasjon om hva som er feil?",
-            "ht": "<p>For eksempel:</p><ul><li>«Fornavn må fylles ut».</li></ul><p><strong>Merk:</strong> Krav om at feilmeldingen skal inneholde forslag til hvordan feil skal rettes, er omfattet av suksesskriterium 3.3.3.</p>",
-            "type": "jaNei",
-            "kilde": [
-                "G83"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får feilmelding som<br/>- er kodet som tekst<br/>- identifiserer hvilket skjemaelement som er tomt<br/>- inneholder informasjon om hva som er feil"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får feilmelding som<br/>- er kodet som tekst<br/>- identifiserer hvilket skjemaelement som er tomt<br/>- inneholder ikke informasjon om hva som er feil"
-                }
-            }
-        }
-    ]
+	"namn": "App-3.3.1a Skjema gir feilmelding hvis tomme obligatoriske skjemafelt blir oppdaget automatisk 2025",
+	"id": "331aApp2025",
+	"testlabId": 608,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Dersom det blir oppdaget automatisk at obligatoriske skjemaelement ikke er fylt ut, er følgende tre punkter oppfylt:</p><ul><li>Skjemaelementet der feilen oppstod identifiseres.</li><li>Brukeren får en presis tekstlig beskrivelse av feilen.</li><li>Feilmeldingen er kodet som tekst.</li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
+			"type": "tekst",
+			"label": "Appside:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsiden skjema?",
+			"ht": "",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appsiden har ikke skjema."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Hvilket skjema tester du?",
+			"ht": "<ul><li>beskriv skjema</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong></p><ul><li>Hvis skjema inngår i en prosess, skal du også beskrive prosessen.</li><li>Hvis det er flere skjema, registrerer du ett og ett.</li></ul>",
+			"type": "tekst",
+			"label": "Skjema/prosess:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Er det mulig å sveipe til skjemaelementer?",
+			"ht": "<p>Aktiver skjermleser</p><ul><li>iOS: VoiceOver</li><li>Android: TalkBack<ul><li>Trykk på eller sveip til skjemaet du tester, sjekk om du får lest opp tilgjengelig navn.</li></ul></li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ikkje testbart",
+					"utfall": "Det er ikke mulig å sveipe til skjemaelementer på appsiden."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.5"
+				}
+			}
+		},
+		{
+			"stegnr": "2.5",
+			"spm": "Oppdager skjemaet automatisk at obligatoriske skjemaelementer er tomme?",
+			"ht": "<ul><li>Ikke fyll ut informasjon i skjemaet (tomt skjema), eller</li><li>la alle obligatoriske skjemaelementer stå tomme, eller</li><li>fjern forhåndsutfylt informasjon (hvis mulig):<ul><li>Forhåndsutfylt informasjon betyr at det allerede står inndata i skjemaet når appsiden er lastet inn.</li><li>For eksempel informasjon hentet fra folkeregisteret som personnummer, fornavn, etternavn og adresse.</li></ul></li><li>Fullfør, send inn eller gå videre i skjemaet, for å sjekke om tomme obligatoriske skjemaelementer blir oppdaget automatisk.</li></ul><p><strong>Merk: </strong></p><ul><li>Begrepet \"oppdages automatisk\" betyr at skjemaet er satt opp slik at det selv oppdager når det mangler nødvendig informasjon i obligatoriske elementer i skjemaet. </li><li>Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes. <ul><li>Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut rett informasjon, indikerer at brukeren har utelatt inndata som nettsiden krever, og at dette oppdages automatisk, uten at brukeren er involvert.</li></ul></li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Skjema oppdager ikke automatisk at obligatoriske skjemaelementer er tomme.",
+					"element": "2.3"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilket obligatorisk skjemaelement tester du?",
+			"ht": "<ul><li>beskriv skjemaelementet</li><li>beskriv plassering</li></ul><p><strong>Merk: </strong>Hvis det er flere skjemaelementer, registrerer du ett og ett.</p>",
+			"type": "tekst",
+			"label": "Skjemaelement:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Får du en tekstlig feilmelding?",
+			"ht": "<p>Feilmeldingen kan for eksempel vises</p><ul><li>i et modalvindu</li><li>i ledeteksten til skjemaelement</li><li>øverst på siden</li><li>når du navigerer i skjemaet</li></ul><p><strong>Merk: </strong>Feilmeldingen må være tekstlig, og det er ikke tilstrekkelig å identifisere feilen med et symbol, endret farge, visuell plassering, deaktivert innsendingsknapp eller lignende ikke-tekstlige indikatorer.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G83"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får ikke tekstlig feilmelding."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er feilmeldingen kodet som tekst?",
+			"ht": "<ul><li>Aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Android: TalkBack</li></ul></li><li>Trykk på feilmeldingen du tester. Hvis feilmeldingen ikke blir lest opp, er den ikke kodet som tekst.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får feilmelding, men den er ikke er kodet som tekst."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Inneholder feilmeldingen tekst som identifiserer hvilket skjemaelement som er tomt?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"G83"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk får feilmelding som er kodet som tekst, men identifiserer ikke hvilket skjemaelement som er tomt."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Inneholder feilmeldingen informasjon om hva som er feil?",
+			"ht": "<p>For eksempel:</p><ul><li>«Fornavn må fylles ut».</li></ul><p><strong>Merk:</strong> Krav om at feilmeldingen skal inneholde forslag til hvordan feil skal rettes, er omfattet av suksesskriterium 3.3.3.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G83"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får feilmelding som<br/>- er kodet som tekst<br/>- identifiserer hvilket skjemaelement som er tomt<br/>- inneholder informasjon om hva som er feil"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Tomme obligatoriske skjemaelement, som blir oppdaget automatisk, får feilmelding som<br/>- er kodet som tekst<br/>- identifiserer hvilket skjemaelement som er tomt<br/>- ikke inneholder informasjon om hva som er feil"
+				}
+			}
+		}
+	]
 }
