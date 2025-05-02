@@ -1,0 +1,98 @@
+{
+    "namn": "Nett-2.4.7a Innhald som kan brukast med tastatur, får synleg fokusmarkering 2025",
+    "id": "247anett2025",
+    "testlabId": 599,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nb",
+    "kravTilSamsvar": "<p>Alle elementer som det er mulig å navigere til med tastaturet, får synlig fokusmarkering og markeringen er ikke tidsbegrenset</p><ul><li>Dersom det kun er mulig å navigere til ett enkelt element på nettsiden med tastaturet, er kravet oppfylt.</li></ul>",
+    "side": "2.1",
+    "element": "3.1",
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Hva side tester du?",
+            "ht": "<p>Oppgi URL eller side-ID.</p>",
+            "type": "tekst",
+            "label": "URL/Side:",
+            "datalist": "Sideutvalg",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Finnes det element det er mulig å navigere til med tastaturet?",
+            "ht": "<p>Trykk sakte på tab-tasten for å navigere på nettsiden med tastaturet.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "2.3"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Nettsiden har ikke innhold som er mulig å bruke med tastatur."
+                }
+            }
+        },
+        {
+            "stegnr": "2.3",
+            "spm": "Finnes det flere enn et element det er mulig å navigere til med tastaturet?",
+            "ht": "<p>Dersom det bare finnes et element som kan brukes med tastaturet på nettsiden, er suksesskriteriet oppfylt.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "2.4"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Nettsiden har bare et element som kan brukes med tastaturet."
+                }
+            }
+        },
+        {
+            "stegnr": "2.4",
+            "spm": "Får du synlig fokusmarkering på alle element som er mulig å bruke med tastaturet?",
+            "ht": "<ul><li>Naviger i eller betjen alt innhold på siden ved å bruke: enter, mellomrom, piltast tab, og shift+tab.</li></ul><p><strong>Merk:</strong> Brukeren skal enkelt se hvilket element som er i fokus. Hvis du ikke gjør det, skal du registrere nei i dette steget.</p><p>Eksempel på synlig fokusmarkering:</p><ul><li>ramme, linje eller understreking</li><li>endret farge på bakgrunn eller taes</li><li>skyggelegging</li><li>tekstmarkør (loddrett streker) eller markering av tekst i skjemafelt</li></ul>",
+            "type": "jaNei",
+            "kilde": [
+                "F78",
+                "G149"
+            ],
+            "ruting": {
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Alle element som er mulig å bruke med tastaturet, får synlig fokusmarkering."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Beskriv elementet uten synlig fokusmarkering.",
+            "ht": "<ul><li>Beskriv elementet.</li><li>Beskriv plassering.</li></ul><p><strong>Merk: </strong>Hvis det er flere elementer du ikke når på siden, registrerer du en og en.</p>",
+            "type": "tekst",
+            "label": "Element:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Element som er mulig å bruke med tastaturet, får ikke synlig fokusmarkering"
+                }
+            }
+        }
+    ]
+}
