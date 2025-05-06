@@ -1,111 +1,111 @@
 {
-    "namn": "App-2.1.1a Det er mogleg å nå innhald og bruke funksjonalitet med sveiping 2025",
-    "id": "211app2025",
-    "testlabId": 598,
-    "versjon": "1.0",
-    "type": "App",
-    "spraak": "nb",
-    "kravTilSamsvar": "<p>All funksjonalitet i appen kan nås og brukes med sveiping og dobbelttrykk, når skjermleser er aktivert. </p><ul><li>Funksjonalitet i appen som ikke er formålstjenlig å bruke med sveiping og dobbelttrykk er unntatt.</li><li><p>Dersom navigering krever noe annet enn sveiping eller andre standardmetoder for navigering, får brukeren informasjon om metoden som skal brukes. Informasjonen ligger i nærheten av det aktuelle elementet.</p><p> </p></li></ul>",
-    "side": "2.1",
-    "element": "3.1",
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Hvilken appside tester du?",
-            "ht": "<p>Oppgi appside-ID.</p>",
-            "type": "tekst",
-            "label": "Appside:",
-            "datalist": "Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Har appsiden innhold/funksjonalitet det er mulig å sveipe til?",
-            "ht": "",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.4"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Appsiden har ikke innhold/funksjonalitet som er mulig å nå/betjene med sveiping."
-                }
-            }
-        },
-        {
-            "stegnr": "2.4",
-            "spm": "Får du til å nå alt innhold/funksjonalitet med sveiping?",
-            "ht": "<ul><li>Aktiver skjermleser.<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>Sjekk om det er mulig å sveipe til minst et element.</li></ul><p><strong>Merk:</strong> Eventuell sveipefelle, omlasting av appsiden eller kontekstendring påvirker ikke om det mulig å betjene innholdet.</p>",
-            "type": "jaNei",
-            "kilde": [
-                "G202"
-            ],
-            "ruting": {
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.5"
-                }
-            }
-        },
-        {
-            "stegnr": "2.5",
-            "spm": "Får du til å aktivere all funksjonalitet med dobbelttrykk?",
-            "ht": "",
-            "type": "jaNei",
-            "kilde": [
-                "G202"
-            ],
-            "ruting": {
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                },
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Alt innhold og funksjonalitet på appsiden kan nås med sveiping og aktiveres med dobbelttrykk."
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Hvilket innhold/funksjonalitet fikk du ikke til å nå med sveiping eller aktivere med dobbelttrykk?",
-            "ht": "<ul><li>Beskriv elementet.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere element du ikke når på siden, registrerer du ett og ett.</p><p> </p>",
-            "type": "tekst",
-            "label": "Element:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            }
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Er elementet hensiktsmessig å betjene med sveiping/dobbelttrykk?",
-            "ht": "<p>Funksjonalitet som ikke er hensiktsmessig å betjene, er for eksempel:</p><ul><li>tegne- og maleverktøy</li><li>inndata i form av handskrift</li><li>styring av bil/helikopter eller lignende i spill.</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "alle": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Innhold/funksjonalitet er ikke mulig å nå og betjene med sveiping/dobbelttrykk."
-                }
-            }
-        }
-    ]
+	"namn": "App-2.1.1a Det er mogleg å nå innhald og bruke funksjonalitet med sveiping 2025",
+	"id": "211app2025",
+	"testlabId": 598,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>All funksjonalitet i appen kan nås og brukes med sveiping og dobbelttrykk, når skjermleser er aktivert. </p><ul><li>Funksjonalitet i appen som ikke er formålstjenlig å bruke med sveiping og dobbelttrykk er unntatt.</li><li><p>Dersom navigering krever noe annet enn sveiping eller andre standardmetoder for navigering, får brukeren informasjon om metoden som skal brukes. Informasjonen ligger i nærheten av det aktuelle elementet.</p><p> </p></li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken appside tester du?",
+			"ht": "<p>Oppgi appside-ID.</p>",
+			"type": "tekst",
+			"label": "Appside:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsiden innhold/funksjonalitet det er mulig å sveipe til?",
+			"ht": "",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appsiden har ikke innhold/funksjonalitet som er mulig å nå/betjene med sveiping."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Får du til å nå alt innhold/funksjonalitet med sveiping?",
+			"ht": "<ul><li>Aktiver skjermleser.<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>Sjekk om det er mulig å sveipe til minst et element.</li></ul><p><strong>Merk:</strong> Eventuell sveipefelle, omlasting av appsiden eller kontekstendring påvirker ikke om det mulig å betjene innholdet.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G202"
+			],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Får du til å aktivere all funksjonalitet med dobbelttrykk?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"G202"
+			],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Alt innhold og funksjonalitet på appsiden kan nås med sveiping og aktiveres med dobbelttrykk."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilket innhold/funksjonalitet fikk du ikke til å nå med sveiping eller aktivere med dobbelttrykk?",
+			"ht": "<ul><li>Beskriv elementet.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere element du ikke når på siden, registrerer du ett og ett.</p><p> </p>",
+			"type": "tekst",
+			"label": "Element:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er elementet hensiktsmessig å betjene med sveiping/dobbelttrykk?",
+			"ht": "<p>Funksjonalitet som ikke er hensiktsmessig å betjene, er for eksempel:</p><ul><li>tegne- og maleverktøy</li><li>inndata i form av handskrift</li><li>styring av bil/helikopter eller lignende i spill.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"alle": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Innhold/funksjonalitet er ikke mulig å nå og betjene med sveiping/dobbelttrykk."
+				}
+			}
+		}
+	]
 }
