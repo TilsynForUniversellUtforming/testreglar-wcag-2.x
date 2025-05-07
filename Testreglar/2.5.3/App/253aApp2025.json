@@ -62,7 +62,7 @@
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.4"
+					"steg": "3.3"
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
@@ -71,14 +71,14 @@
 			}
 		},
 		{
-			"stegnr": "3.4",
+			"stegnr": "3.3",
 			"spm": "Har brukergrensesnittkomponenten et tilgjengelig navn, som ikke er tomt?",
 			"ht": "<ul><li>Aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Android: TalkBack</li></ul></li><li>Trykk på eller sveip til brukergrensesnittkomponenten du tester, sjekk om du får lest opp tilgjengelig navn</li></ul><p><strong>Merk: </strong> Skjermleseren kan lese opp tilleggsinformasjon som ikke er en del av det tilgjengelige navnet, for eksempel rolle, men du skal kun vurdere det tilgjengelige navnet.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
 					"type": "gaaTil",
-					"steg": "3.5"
+					"steg": "3.4"
 				},
 				"nei": {
 					"type": "avslutt",
@@ -88,7 +88,7 @@
 			}
 		},
 		{
-			"stegnr": "3.5",
+			"stegnr": "3.4",
 			"spm": "Inneholder tilgjengelig navn for komponenten samme, eller starter med den synlige ledeteksten, i samme rekkefølge?",
 			"ht": "<p><strong>Merk:</strong> Du kan se vekk fra følgende i vurderingen av tilgjengelig navn </p><ul><li>store og små bokstaver</li><li>Tilsvarende formuleringer som søk i synlig ledetekst og søkefelt i programatisk bestemt ledetekst.</li><li>tegnsetting, for eksempel kolon og punktum<ul><li>Eksempel: Synlig ledetekst er Fornavn:  </li><li>Tilgjengelig navn er \"fornavn\"</li><li>Kravet er oppfylt selv om tilgjengelig navn ikke inneholder stor bokstav og kolon</li></ul></li></ul><p><strong>Merk:</strong></p><ul><li><strong>Matematiske symboler og formler:</strong> Tilgjengelig navn skal være identisk med den synlige ledeteksten.<ul><li>Eksempel: Radioknapper med synlige ledetekster A&gt;B, A=B, A&lt;B. Tilgjengelig navn til de samme radioknappene skal være \"A&gt;B\", \"A=B\", \"A&lt;B\". </li></ul></li><li><strong>Symbolske teksttegn:</strong> Når tekst eller bilde av tekst brukes som symbol, er det funksjonen til det symbolske teksttegnet, som skal avspeiles i tilgjengelig navn.<ul><li>Eksempel<ul><li>Bokstavene <strong>F</strong>, <em>K</em> og <span style=\"text-decoration: underline;\">U</span> brukes i et tekstredigeringsverktøy som symbol for fet, kursiv og understreket tekst. Tilgjengelig navn kan være \"fet\", \"kursiv\" og \"understreket\" eller tilsvarende</li><li>Bokstaven X brukes som symbol for å lukke et vindu eller en dialogboks. Tilgjengelig navn kan være \"Lukk\" eller tilsvarende.</li></ul></li></ul></li></ul>",
 			"type": "jaNei",
