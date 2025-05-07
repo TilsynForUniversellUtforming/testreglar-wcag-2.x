@@ -1,0 +1,181 @@
+{
+    "namn": "App-4.1.2a For brukergrensesnittkomponenter kan tilgjengelig navn, rolle og tilstand bestemmes programmatisk 2025",
+    "id": "412aApp2025",
+    "testlabId": 618,
+    "versjon": "1.0",
+    "type": "App",
+    "spraak": "nb",
+    "kravTilSamsvar": "<p>Navn og rolle:</p><ul><li>Alle brukergrensesnittkomponenter har et tilgjengelig navn, som beskriver formålet med den aktuelle komponenten.</li><li>Alle brukergrensesnittkomponenter har riktig rolle, som identifiserer funksjonen til den aktuelle komponenten.</li><li>Brukergrensesnittkomponenter som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen.</li></ul><p>Tilstander, egenskaper og verdier:</p><ul><li>Når tilstander, egenskaper og verdier i brukergrensesnittkomponenter kan angis av brukeren, skal denne informasjonen også angis programmatisk.</li><li>Varsel om endringer i den aktuelle komponenten er tilgjengelig for brukeragenter.</li></ul>",
+    "side": "2.1",
+    "element": "3.1",
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Hvilken appside tester du?",
+            "ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
+            "type": "tekst",
+            "label": "Appside:",
+            "datalist": "Sideutvalg",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har appsiden brukergrensesnittkomponenter?",
+            "ht": "<p>Gjør en visuell inspeksjon, og sjekk om minst én av disse komponentene finnes på appsiden</p><ul><li>knapper</li><li>avkryssingsbokser</li><li>lenkede bilder</li><li>menyer og menyelementer</li><li>nedtrekkslister</li><li>radioknapper</li><li>slider</li><li>inndatafelt</li><li>søkefelt</li><li>switch</li></ul><p><strong>Merk:</strong> Du skal teste både aktive og inaktive brukergrensesnittkomponenter.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "2.3"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Appsiden har ikke brukergrensesnittkomponenter."
+                }
+            }
+        },
+        {
+            "stegnr": "2.3",
+            "spm": "Er det mulig å sveipe til minst én brukergrensesnittkomponent?",
+            "ht": "<ul><li>Aktiver skjermleser.<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>Åpne appsiden.</li><li>Sjekk om det er mulig å sveipe til minst én komponent.</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ikkje testbart",
+                    "utfall": "Det er ikke mulig å sveipe til brukergrensesnittkomponenter på appsiden."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Hvilken brukergrensesnittkomponent tester du?",
+            "ht": "<ul><li>beskriv brukergrensesnittkomponenten</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det gjelder flere brukergrensesnittkomponenter, registrerer du én og én.</p>",
+            "type": "tekst",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            },
+            "label": "Brukergrensesnittkomponent:",
+            "multilinje": true
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Har brukergrensesnittkomponenten et tilgjengelig navn, som ikke er tomt?",
+            "ht": "<ul><li>Aktiver skjermleser.<ul><li>iOS: VoiceOver</li><li>Android: Talkback</li></ul></li><li>Sveip eller trykk på brukergrensesnittkomponenten du tester.</li><li>Sjekk om skjermleser leser opp tilgjengelig navn.</li><li>Hvis komponenten ligger i en gruppe, sjekk at skjermleser leser opp overskrift/overordnet spørsmål for gruppen i tillegg til tilgjengelig navn for den enkelte komponenten. </li></ul><p><strong>Merk: </strong></p><ul><li>Skjermleseren starter vanligvis opplesningen med tilgjengelig navn, rolle rett etter det tilgjengelige navnet og deretter tilleggsbeskrivelse knyttet til brukergrensesnittkomponenten.</li><li>Du skal kun vurdere tilgjengelig navn her, selv om skjermleseren ofte leser opp tilleggsinformasjon.</li><li>Noen brukergrensesnittkomponenter ligger i en gruppe, som må leses i sammenheng med et overordnet spørsmål. Dette spørsmålet er tilgjengelig navn til gruppen og du skal sjekke om skjermleser leser det opp i tillegg til tilgjengelig navn for den enkelte komponenten. Eksempel på elementer som ofte er knyttet til en gruppe</li></ul><ul><li style=\"list-style-type: none;\"><ul><li>checkbox</li><li>combobox</li><li>listbox</li><li>menuitemcheckbox</li><li>menuitemradio</li><li>radio</li><li>searchbox</li><li>slider</li><li>spinbutton</li><li>switch</li><li>textbox</li></ul></li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Brukergrensesnittkomponenten har ikke et tilgjengelig navn."
+                }
+            },
+            "kilde": [
+                "G10",
+                "G135"
+            ]
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Beskriver det tilgjengelig navnet formålet med brukergrensesnittkomponenten?",
+            "ht": "<p><strong>Merk: </strong>Det er tilstrekkelig at det tilgjengelige navnet identifiserer skjemaelementet.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn, som ikke beskriver formålet med komponenten."
+                }
+            }
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Er brukergrensesnittkomponenten kodet med riktig rolle?",
+            "ht": "<ul><li>Sveip til eller trykk på komponenten med skjermleser.</li><li>Sjekk om rollen som leses opp identifiserer den aktuelle komponentens funksjon.</li><li>Hvis komponenten ligger i en gruppe: sjekk at skjermleser leser opp rolle i tillegg til rollen for den enkelte komponenten.</li></ul><p>Eksempel:</p><ul><li>Knapp skal leses opp som knapp.</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, men rollen identifiserer ikke komponentens funksjon."
+                },
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                }
+            },
+            "kilde": [
+                "G10"
+            ]
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Har brukergrensesnittkomponenten mer enn én tilstand når brukeren samhandler med den?",
+            "ht": "<p>Trykk eller dobbelttrykk (for å endre tilstand) på komponenten, og sjekk om den har minst én av disse tilstandene</p><ul><li>av eller på</li><li>spill av, pause eller stopp</li><li>aktivert eller deaktivert</li><li>utvidet eller sammensluttet</li><li>avkrysset eller ikke avkrysset</li><li>markert eller ikke markert</li><li>valgt eller ikke valgt</li><li>nåværende</li><li>gyldig eller ugyldig</li><li>drag and drop</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, og rollen identifiserer komponentens funksjon."
+                },
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            }
+        },
+        {
+            "stegnr": "3.6",
+            "spm": "Er alle tilstandene til skjemaelementet angitt programmatisk?",
+            "ht": "<ul><li>Aktiver skjermleser.<ul><li>iOS: VoiceOver</li><li>Android: Talkback </li></ul></li><li>Trykk på komponenten du tester.</li><li>Sjekk om skjermleser leser opp nåværende tilstand.<ul><li>Vanligvis starter opplesningen med tilgjengelig navn, rolle og deretter tilstanden, du skal kun vurdere tilstanden her.</li><li>Endre tilstanden med dobbeltrykk.</li><li>Sjekk om skjermleser leser opp endret tilstand.</li></ul></li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, rollen identifiserer komponentens funksjon og komponentens tilstand er angitt programmatisk."
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                }
+            }
+        },
+        {
+            "stegnr": "3.7",
+            "spm": "Hvilke tilstander er ikke angitt programmatisk?",
+            "ht": "<ul><li>beskriv brukergrensesnittkomponenten</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det gjelder flere brukergrensesnittkomponenter, registrerer du én og én.</p>",
+            "type": "tekst",
+            "ruting": {
+                "alle": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Brukergrensesnittkomponenten har et tilgjengelig navn som beskriver komponentens formål, rollen identifiserer komponentens funksjon, men komponentens tilstand er ikke angitt programmatisk."
+                }
+            },
+            "label": "Tilstander:",
+            "multilinje": true
+        }
+    ]
+}
