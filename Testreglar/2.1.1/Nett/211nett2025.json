@@ -121,11 +121,10 @@
 				"ja": {
 					"type": "avslutt",
 					"fasit": "Ja",
-					"utfall": "Innhold/funksjonalitet på nettsiden er ikke hensiktsmessig å betjene med tastatur."
+					"utfall": "Innhald/funksjonalitet det ikkje er mogleg å nå og betene med tastatur."
 				},
 				"nei": {
-					"type": "avslutt",
-					"fasit": "Ja",
+					"type": "ikkjeForekomst",
 					"utfall": "Innhold/funksjonalitet på nettsiden er ikke hensiktsmessig å betjene med tastatur."
 				}
 			}
