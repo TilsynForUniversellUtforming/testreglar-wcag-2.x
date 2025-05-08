@@ -1,0 +1,105 @@
+{
+	"namn": "Doku-1.3.1c Visuelle lister er korrekt kodet 2025",
+	"id": "131cDoku2025",
+	"testlabId": 624,
+	"versjon": "1.0",
+	"type": "Dokument",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Visuelle lister er korrekt kodet, basert på type liste:</p><ul><li>Nummererte lister er kodet som nummerert liste</li><li>Unummererte lister er kodet som unummerert liste</li><li>Beskrivende lister, det vil si lister som har to nivå og gir utfyllende forklaringer, er kodet som beskrivende lister</li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>For nettsider:</p><ul><li>Angi URL eller side-ID.</li></ul><p>For apper:</p><ul><li>Beskriv appsiden med få stikkord, eller velg i listen.</li></ul>",
+			"type": "tekst",
+			"label": "",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsiden/appsiden dokumenter?",
+			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul><p><strong>Merk:</strong> Med dokumenter menes for eksempel Word-dokumenter, PDF-dokumenter, Excel-dokumenter og PowerPoint-presentasjoner. </p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke dokumenter."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Hvilket dokument tester du?",
+			"ht": "<ul><li>beskriv dokumentet/filnavnet</li><li>beskriv plassering</li></ul><p><strong>Merk: </strong>Hvis det gjelder flere dokumenter på siden, registrerer du ett og ett.</p>",
+			"type": "tekst",
+			"label": "",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Har dokumentet visuelle lister?",
+			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Dokumentet har ikke visuelle lister."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken liste tester du?",
+			"ht": "<ul><li>beskriv listen</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det er flere lister i dokumentet, registrerer du én og én.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"label": "",
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er den visuelle listen korrekt kodet som liste?",
+			"ht": "<ul><li>Sjekk at listen er kodet som riktig type liste.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell liste er korrekt kodet som riktig type liste."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell liste er ikke korrekt kodet som riktig type liste."
+				}
+			}
+		}
+	]
+}
