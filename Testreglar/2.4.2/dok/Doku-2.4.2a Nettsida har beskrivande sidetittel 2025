@@ -1,0 +1,128 @@
+{
+	"namn": "Doku-2.4.2a Nettsida har beskrivande sidetittel 2025",
+	"id": "242aDoku2025",
+	"testlabId": 625,
+	"versjon": "1.0",
+	"type": "Dokument",
+	"spraak": "nb",
+	"kravTilSamsvar": "<ul><li>Sidetittelen er korrekt kodet.</li><li>Sidetittelen gir en relevant beskrivelse av sidens tema eller formål.</li></ul>",
+	"side": "2.1",
+	"element": "Side",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>For nettsider:</p><ul><li>Angi URL eller side-ID.</li></ul><p>For apper:</p><ul><li>Beskriv appsiden med få stikkord, eller velg i listen.</li></ul>",
+			"type": "tekst",
+			"label": "",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsiden/appsiden dokumenter?",
+			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul><p><strong>Merk:</strong> Med dokumenter menes for eksempel Word-dokumenter, PDF-dokumenter, Excel-dokumenter og PowerPoint-presentasjoner. </p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke dokumenter."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Hvilket dokument tester du?",
+			"ht": "<ul><li>beskriv dokumentet/filnavnet</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det gjelder flere dokumenter på siden, registrerer du ett og ett.</p>",
+			"type": "tekst",
+			"label": "",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			},
+			"multilinje": true
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Har dokumentet en sidetittel?",
+			"ht": "<ul><li>Sjekk at dokumentet har en tittel.</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"H25"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Dokumentet har ikke sidetittel."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken sidetittel tester du?",
+			"ht": "<ul><li>Skriv sidetittel.</li></ul><p><strong>Merk:</strong> Sidetittel ikke er det samme som hovedoverskrift i dokumentet.</p>",
+			"type": "tekst",
+			"label": "Sidetittel:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Gi en kort beskrivelse av emne eller formål med innholdet i dokumentet.",
+			"ht": "",
+			"type": "tekst",
+			"label": "Emne eller formål med innhaldet:",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Gir sidetittelen en relevant beskrivelse av emnet eller formålet med dokumentet?",
+			"ht": "<p><strong>Merk: </strong></p><ul><li>Sidetittelen skal være relevant for emne eller formål med siden. Navnet på siden/dokumentet er nok til å gi en beskrivende sidetittel, men det er ikke krav om å bruke navnet på dokumentet.</li><li>Eksempel på sidetitler som ikke er beskrivende:<ul><li>Dokument uten tittel.</li><li>Ingen tittel.</li><li>Filnavn som ikke er beskrivende alene, for eksempel Rapport.pdf.</li><li>Feil/misvisende tittel.</li></ul></li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"F25",
+				"G88"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Sidetittel er beskrivende for innholdet i dokumentet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Sidetittel er ikke beskrivende for innholdet i dokumentet."
+				}
+			}
+		}
+	]
+}
