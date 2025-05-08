@@ -70,7 +70,7 @@
                 "nei": {
                     "type": "avslutt",
                     "fasit": "Nei",
-                    "utfall": "Knappen er ikke kodet med role=''button''."
+                    "utfall": "Knappen er ikke kodet med role=\"button.\""
                 }
             },
             "kilde": [
