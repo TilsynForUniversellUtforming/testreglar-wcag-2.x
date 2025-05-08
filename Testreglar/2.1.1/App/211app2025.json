@@ -102,7 +102,7 @@
 			"ruting": {
 				"ja": {
 					"type": "avslutt",
-					"fasit": "Ja",
+					"fasit": "Nei",
 					"utfall": "Innhald/funksjonalitet det ikkje er mogleg å nå og betene med sveiping."
 				},
 				"nei": {
