@@ -1,134 +1,134 @@
 {
-    "namn": "Nett-2.1.1a Det er mogleg å nå innhald og bruke funksjonalitet med tastatur 2025",
-    "id": "211nett2025",
-    "testlabId": 597,
-    "versjon": "1.0",
-    "type": "Nett",
-    "spraak": "nb",
-    "kravTilSamsvar": "<p>All funksjonalitet på nettsiden kan nås og brukes med tastatur, uten at det er behov for tidsberegning av de enkelte tastetrykkene</p><ul><li>Funksjonalitet på nettstedet som ikke er formålstjenlig å bruke med tastatur er unntatt</li><li><!--[endif]-->Dersom det er behov for noe bruk av noe annet enn standardmetoder for tastaturnavigasjon, får brukeren informasjon om hvilken metode som skal brukes. Informasjonen ligger i nærheten av det aktuelle elementet.</li></ul>",
-    "side": "2.1",
-    "element": "3.1",
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Hvilken side tester du?",
-            "ht": "<p>Oppgi URL eller side-ID.</p>",
-            "type": "tekst",
-            "label": "URL/Side:",
-            "datalist": "Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Har nettsiden innhold/funksjonalitet det er mulig å navigere til med tastatur?",
-            "ht": "<p>Bruk tab-tasten for å navigere på nettsiden.</p>",
-            "type": "jaNei",
-            "ruting": {
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Testsida har ikkje innhald/funksjonalitet det er mogleg å navigere til med tastatur."
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.3"
-                }
-            }
-        },
-        {
-            "stegnr": "2.3",
-            "spm": "Får du synlig fokusmarkering ved tastaturnavigering?",
-            "ht": "<p>Trykk sakte på tab-tasten for å navigere på nettsiden med tastaturet. Du er avhengig av synlig fokusmarkør for å kunne gjennomføre testen. Den må være såpass synlig at du kan følge med på tastaturnavigasjonen. </p><p><strong>Merk:</strong> Synlig fokusmarkering blir testet på suksesskriterium 2.4.7.</p>",
-            "type": "jaNei",
-            "kilde": [
-                "F55"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.4"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Ikkje testbart",
-                    "utfall": "Testsiden har ikke tilstrekkelig fokusmarkering ved tastaturnavigasjon til å gjennomføre testen."
-                }
-            }
-        },
-        {
-            "stegnr": "2.4",
-            "spm": "Får du til å betjene alle lenker, knapper og funksjoner med tastaturet, uten tidsberegning av de enkelte tastetrykkene?",
-            "ht": "<p>Eksempel på tidsberegning er at brukeren må: </p><ul><li>Utføre eller gjenta mange tastetrykk i løpet av en kort periode.</li><li>Holde nede en tast i en lengre periode før tastetrykket blir registret. </li></ul><p><strong>Merk</strong>:</p><ul><li>For å betjene innhold kan du også måtte bruke enter, mellomrom og pil.</li><li>Dersom det er funksjonalitet som kan betjenes på flere måter, er det tilstrekkelig at en av dem kan brukes med tastaturet. Eksempel på dette er datovelger, hvor brukeren både kan skrive inn dato, og velge dato fra en kalender.</li><li>Eventuell tastaturfelle, omlasting av siden eller kontekstendring påvirker ikke om det mulig å betjene innholdet.</li><li>Handlinger som blir utført med mus, skal og kunne bli gjort med tastaturet. Eksempel på handlinger er å klikke, velge, flytte og forstørre.</li></ul>",
-            "type": "jaNei",
-            "kilde": [
-                "G202"
-            ],
-            "ruting": {
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                },
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Det er mulig å nå og betjene alt innhold/funksjonalitet på nettsiden med tastatur."
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Beskriv elementet du ikke nådde eller fikk til å betjene med tastaturet",
-            "ht": "<ul><li>Beskriv elementet.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere elementer du ikke når på siden, registrerer du et og et.</p><p> </p>",
-            "type": "tekst",
-            "label": "Element:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            }
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Er en alternativ måte å navigere på, dokumentert i nærheten av det aktuelle elementet?",
-            "ht": "<p>Dersom det er behov for å bruke noe annet enn standard pil- eller tabulatortaster eller andre standardmetoder for tastaturnavigering, får brukeren informasjon om metoden som skal brukes for å nå elementet.</p><p> </p>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Innhold/funksjonalitet som ikke kan nås/betjenes med standard navigasjon er mulig å nå og betjene via dokumentert, alternativ tastaturnavigasjon."
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Er elementet hensiktsmessig å betjene med tastatur?",
-            "ht": "<p>Funksjonalitet som ikke er hensiktsmessig å betjene er for eksempel</p><ul><li>tegne- og maleverktøy</li><li>inndata i form av handskrift</li><li>styring av bil/helikopter eller lignende i spill</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Innhold/funksjonalitet på nettsiden er ikke hensiktsmessig å betjene med tastatur."
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Innhold/funksjonalitet på nettsiden er ikke hensiktsmessig å betjene med tastatur."
-                }
-            }
-        }
-    ]
+	"namn": "Nett-2.1.1a Det er mogleg å nå innhald og bruke funksjonalitet med tastatur 2025",
+	"id": "211nett2025",
+	"testlabId": 597,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>All funksjonalitet på nettsiden kan nås og brukes med tastatur, uten at det er behov for tidsberegning av de enkelte tastetrykkene</p><ul><li>Funksjonalitet på nettstedet som ikke er formålstjenlig å bruke med tastatur er unntatt</li><li><!--[endif]-->Dersom det er behov for noe bruk av noe annet enn standardmetoder for tastaturnavigasjon, får brukeren informasjon om hvilken metode som skal brukes. Informasjonen ligger i nærheten av det aktuelle elementet.</li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Oppgi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettsiden innhold/funksjonalitet det er mulig å navigere til med tastatur?",
+			"ht": "<p>Bruk tab-tasten for å navigere på nettsiden.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsida har ikkje innhald/funksjonalitet det er mogleg å navigere til med tastatur."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Får du synlig fokusmarkering ved tastaturnavigering?",
+			"ht": "<p>Trykk sakte på tab-tasten for å navigere på nettsiden med tastaturet. Du er avhengig av synlig fokusmarkør for å kunne gjennomføre testen. Den må være såpass synlig at du kan følge med på tastaturnavigasjonen. </p><p><strong>Merk:</strong> Synlig fokusmarkering blir testet på suksesskriterium 2.4.7.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"F55"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ikkje testbart",
+					"utfall": "Testsiden har ikke tilstrekkelig fokusmarkering ved tastaturnavigasjon til å gjennomføre testen."
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Får du til å betjene alle lenker, knapper og funksjoner med tastaturet, uten tidsberegning av de enkelte tastetrykkene?",
+			"ht": "<p>Eksempel på tidsberegning er at brukeren må: </p><ul><li>Utføre eller gjenta mange tastetrykk i løpet av en kort periode.</li><li>Holde nede en tast i en lengre periode før tastetrykket blir registret. </li></ul><p><strong>Merk</strong>:</p><ul><li>For å betjene innhold kan du også måtte bruke enter, mellomrom og pil.</li><li>Dersom det er funksjonalitet som kan betjenes på flere måter, er det tilstrekkelig at en av dem kan brukes med tastaturet. Eksempel på dette er datovelger, hvor brukeren både kan skrive inn dato, og velge dato fra en kalender.</li><li>Eventuell tastaturfelle, omlasting av siden eller kontekstendring påvirker ikke om det mulig å betjene innholdet.</li><li>Handlinger som blir utført med mus, skal og kunne bli gjort med tastaturet. Eksempel på handlinger er å klikke, velge, flytte og forstørre.</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G202"
+			],
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Det er mulig å nå og betjene alt innhold/funksjonalitet på nettsiden med tastatur."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Beskriv elementet du ikke nådde eller fikk til å betjene med tastaturet",
+			"ht": "<ul><li>Beskriv elementet.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere elementer du ikke når på siden, registrerer du et og et.</p><p> </p>",
+			"type": "tekst",
+			"label": "Element:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er en alternativ måte å navigere på, dokumentert i nærheten av det aktuelle elementet?",
+			"ht": "<p>Dersom det er behov for å bruke noe annet enn standard pil- eller tabulatortaster eller andre standardmetoder for tastaturnavigering, får brukeren informasjon om metoden som skal brukes for å nå elementet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Innhold/funksjonalitet som ikke kan nås/betjenes med standard navigasjon er mulig å nå og betjene via dokumentert, alternativ tastaturnavigasjon."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er elementet hensiktsmessig å betjene med tastatur?",
+			"ht": "<p>Funksjonalitet som ikke er hensiktsmessig å betjene er for eksempel</p><ul><li>tegne- og maleverktøy</li><li>inndata i form av handskrift</li><li>styring av bil/helikopter eller lignende i spill</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Innhold/funksjonalitet på nettsiden er ikke hensiktsmessig å betjene med tastatur."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Innhold/funksjonalitet på nettsiden er ikke hensiktsmessig å betjene med tastatur."
+				}
+			}
+		}
+	]
 }
