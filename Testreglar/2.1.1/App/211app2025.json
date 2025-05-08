@@ -100,10 +100,14 @@
 			"ht": "<p>Funksjonalitet som ikke er hensiktsmessig å betjene, er for eksempel:</p><ul><li>tegne- og maleverktøy</li><li>inndata i form av handskrift</li><li>styring av bil/helikopter eller lignende i spill.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
-				"alle": {
+				"ja": {
 					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Innhold/funksjonalitet er ikke mulig å nå og betjene med sveiping/dobbelttrykk."
+					"fasit": "Ja",
+					"utfall": "Innhald/funksjonalitet det ikkje er mogleg å nå og betene med sveiping."
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Innhold/funksjonalitet i appen er ikke hensiktsmessig å betjene med sveiping."
 				}
 			}
 		}
