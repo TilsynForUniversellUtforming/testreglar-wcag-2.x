@@ -1,209 +1,209 @@
 {
-    "namn": "App-3.3.1b Skjema gir feilmelding hvis feil inndata blir oppdaget automatisk 2025",
-    "id": "331bApp2025",
-    "testlabId": 610,
-    "versjon": "1.0",
-    "type": "App",
-    "spraak": "nb",
-    "kravTilSamsvar": "<p>For skjemaelementer der inndatafeil blir oppdaget automatisk, er følgende punkter oppfylt:</p><ul><li>Skjemaelementet der feilen oppstod identifiseres og</li><li>Brukeren får en presis tekstlig beskrivelse av feilen</li><li>Feilmeldingen er kodet som tekst og</li><li>Informasjonen blir liggende i skjemaet, med mindre informasjonen er knyttet til personvern eller sikkerhet</li></ul>",
-    "side": "2.1",
-    "element": "3.1",
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Hvilken appside tester du?",
-            "ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
-            "type": "tekst",
-            "label": "Appside:",
-            "datalist": "Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Har appsiden skjema?",
-            "ht": "",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.3"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Appsiden har ikke skjema."
-                }
-            }
-        },
-        {
-            "stegnr": "2.3",
-            "spm": "Hvilket skjema/skjemaelement tester du?",
-            "ht": "<ul><li>beskriv skjema</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong></p><ul><li>Hvis skjema inngår i en prosess, skal du også beskrive prosessen.</li><li>Hvis det er flere skjema, registrerer du ett og ett.</li></ul>",
-            "type": "tekst",
-            "label": "Skjema/prosess:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.4"
-                }
-            }
-        },
-        {
-            "stegnr": "2.4",
-            "spm": "Er det mulig å sveipe til skjemaelementer?",
-            "ht": "<p>Aktiver skjermleser</p><ul><li>iOS: VoiceOver</li><li>Android: TalkBack<ul><li>Trykk på eller sveip til skjemaet du tester, sjekk om du får lest opp tilgjengelig navn.</li></ul></li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Ikkje testbart",
-                    "utfall": "Det er ikke mulig å sveipe til skjemaelementer på appsiden."
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.5"
-                }
-            }
-        },
-        {
-            "stegnr": "2.5",
-            "spm": "Oppdager skjemaet automatisk at utfylt inndata har feil format eller verdi?",
-            "ht": "<ul><li>Legg inn feil inndata i alle skjemaelement.<ul><li>Hvis skjemaelementer er forhåndsutfylt, endre forhåndsutfylt informasjon til feil inndata format eller verdi der det er mulig.</li></ul></li><li>Prøv deretter å fullføre/sende inn eller gå videre i skjemaet.</li></ul><p><strong>Merk: </strong></p><ul><li>Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes.<ul><li>Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut rett informasjon, indikerer at brukeren har utelatt inndata som nettsiden krever, og at dette oppdages automatisk, uten at brukeren er involvert.</li></ul></li><li>Eksempler på feil inndata er postnummer med bokstaver, navn som inneholder tall eller spesialtegn, ugyldige formater for e-post, dato eller telefonnummer, samt data utenfor grenseverdier, som måned 14 i en dato.</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Skjema oppdager ikke automatisk at utfylt inndata har feil format eller verdi.",
-                    "element": "2.3"
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Hvilket skjemaelement tester du?",
-            "ht": "<ul><li>beskriv skjemaelementet</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det er flere skjemaelementer, registrerer du ett og ett.</p>",
-            "type": "tekst",
-            "label": "Skjemaelement:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            }
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Blir informasjonen du har fylt ut, som skal bli liggende, liggende i skjemaelementet?",
-            "ht": "<p><strong>Merk:</strong></p><ul><li>Det er ok at feil inndata blir korrigert automatisk.</li><li>Hovedregelen er at informasjon som er fylt ut skal bli liggende i skjemaet, selv om det blir oppdaget inndatafeil. Unntaket er dersom informasjonen er knyttet til personvern eller sikkerhet (sensitiv informasjon). </li></ul>",
-            "type": "jaNei",
-            "kilde": [
-                "G84",
-                "G85"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "I skjemaelement der inndatafeil blir oppdaget automatisk, forsvinner inndata fra skjemaelementet."
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Får du en tekstlig feilmelding?",
-            "ht": "<p>Feilmeldingen kan for eksempel vises</p><ul><li>i et modalvindu</li><li>i ledeteksten til skjemaelement</li><li>øverst på siden</li><li>når du navigerer i skjemaet</li></ul><p><strong>Merk: </strong>Feilmeldingen må være tekstlig, og det er ikke tilstrekkelig å identifisere feilen med et symbol, endret farge, visuell plassering, deaktivert innsendingsknapp eller lignende ikke-tekstlige indikatorer.</p>",
-            "type": "jaNei",
-            "kilde": [
-                "G84",
-                "G85"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.4"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får ikke tekstlig feilmelding."
-                }
-            }
-        },
-        {
-            "stegnr": "3.4",
-            "spm": "Er feilmeldingen kodet som tekst?",
-            "ht": "<ul><li>Aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Android: TalkBack</li></ul></li><li>Trykk på feilmeldingen du tester. Hvis feilmeldingen ikke blir lest opp, er den ikke kodet som tekst.</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.5"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som ikke er kodet som tekst."
-                }
-            }
-        },
-        {
-            "stegnr": "3.5",
-            "spm": "Inneholder feilmeldingen tekst som identifiserer hvilket skjemaelement som automatisk oppdager inndatafeil?",
-            "ht": "",
-            "type": "jaNei",
-            "kilde": [
-                "G83"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.6"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk,som blir oppdaget automatisk får feilmelding som er kodet som tekst, men identifiserer ikke hvilket skjemaelement som er tomt."
-                }
-            }
-        },
-        {
-            "stegnr": "3.6",
-            "spm": "Inneholder feilmeldingen tekst som beskriver feilen?",
-            "ht": "<p>For eksempel:</p><ul><li>\"Telefonnummer kan ikke inneholde bokstaver\".</li></ul><p><strong>Merk</strong>: Krav om at feilmeldingen skal inneholde forslag til hvordan feil skal rettes, er omfattet av suksesskriterium 3.3.3.</p>",
-            "type": "jaNei",
-            "kilde": [
-                "G84",
-                "G85"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som<br/>- er kodet som tekst<br/>- identifiserer hvilket skjemaelement som har feil inndata<br/>- inneholder informasjon om hva som er feil"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som<br/>- er kodet som tekst<br/>- identifiserer hvilket skjemaelement som har feil inndata<br/>- ikke inneholder informasjon om hva som er feil"
-                }
-            }
-        }
-    ]
+	"namn": "App-3.3.1b Skjema gir feilmelding hvis feil inndata blir oppdaget automatisk 2025",
+	"id": "331bApp2025",
+	"testlabId": 610,
+	"versjon": "1.0",
+	"type": "App",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>For skjemaelementer der inndatafeil blir oppdaget automatisk, er følgende punkter oppfylt:</p><ul><li>Skjemaelementet der feilen oppstod identifiseres og</li><li>Brukeren får en presis tekstlig beskrivelse av feilen</li><li>Feilmeldingen er kodet som tekst og</li><li>Informasjonen blir liggende i skjemaet, med mindre informasjonen er knyttet til personvern eller sikkerhet</li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken appside tester du?",
+			"ht": "<p>Beskriv appsiden med få stikkord, eller velg i listen.</p>",
+			"type": "tekst",
+			"label": "Appside:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har appsiden skjema?",
+			"ht": "",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Appsiden har ikke skjema."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Hvilket skjema/skjemaelement tester du?",
+			"ht": "<ul><li>beskriv skjema</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong></p><ul><li>Hvis skjema inngår i en prosess, skal du også beskrive prosessen.</li><li>Hvis det er flere skjema, registrerer du ett og ett.</li></ul>",
+			"type": "tekst",
+			"label": "Skjema/prosess:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Er det mulig å sveipe til skjemaelementer?",
+			"ht": "<p>Aktiver skjermleser</p><ul><li>iOS: VoiceOver</li><li>Android: TalkBack<ul><li>Trykk på eller sveip til skjemaet du tester, sjekk om du får lest opp tilgjengelig navn.</li></ul></li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ikkje testbart",
+					"utfall": "Det er ikke mulig å sveipe til skjemaelementer på appsiden."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.5"
+				}
+			}
+		},
+		{
+			"stegnr": "2.5",
+			"spm": "Oppdager skjemaet automatisk at utfylt inndata har feil format eller verdi?",
+			"ht": "<ul><li>Legg inn feil inndata i alle skjemaelement.<ul><li>Hvis skjemaelementer er forhåndsutfylt, endre forhåndsutfylt informasjon til feil inndata format eller verdi der det er mulig.</li></ul></li><li>Prøv deretter å fullføre/sende inn eller gå videre i skjemaet.</li></ul><p><strong>Merk: </strong></p><ul><li>Skjema der knappen for å gå videre eller fullføre er deaktivert, skal testes.<ul><li>Et deaktivert skjemaelement for å gå videre eller fullføre skjemaet, som blir aktivt når brukeren fyller ut rett informasjon, indikerer at brukeren har utelatt inndata som nettsiden krever, og at dette oppdages automatisk, uten at brukeren er involvert.</li></ul></li><li>Eksempler på feil inndata er postnummer med bokstaver, navn som inneholder tall eller spesialtegn, ugyldige formater for e-post, dato eller telefonnummer, samt data utenfor grenseverdier, som måned 14 i en dato.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Skjema oppdager ikke automatisk at utfylt inndata har feil format eller verdi.",
+					"element": "2.3"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilket skjemaelement tester du?",
+			"ht": "<ul><li>beskriv skjemaelementet</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det er flere skjemaelementer, registrerer du ett og ett.</p>",
+			"type": "tekst",
+			"label": "Skjemaelement:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Blir informasjonen du har fylt ut, som skal bli liggende, liggende i skjemaelementet?",
+			"ht": "<p><strong>Merk:</strong></p><ul><li>Det er ok at feil inndata blir korrigert automatisk.</li><li>Hovedregelen er at informasjon som er fylt ut skal bli liggende i skjemaet, selv om det blir oppdaget inndatafeil. Unntaket er dersom informasjonen er knyttet til personvern eller sikkerhet (sensitiv informasjon). </li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"G84",
+				"G85"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "I skjemaelement der inndatafeil blir oppdaget automatisk, forsvinner inndata fra skjemaelementet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Får du en tekstlig feilmelding?",
+			"ht": "<p>Feilmeldingen kan for eksempel vises</p><ul><li>i et modalvindu</li><li>i ledeteksten til skjemaelement</li><li>øverst på siden</li><li>når du navigerer i skjemaet</li></ul><p><strong>Merk: </strong>Feilmeldingen må være tekstlig, og det er ikke tilstrekkelig å identifisere feilen med et symbol, endret farge, visuell plassering, deaktivert innsendingsknapp eller lignende ikke-tekstlige indikatorer.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G84",
+				"G85"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får ikke tekstlig feilmelding."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er feilmeldingen kodet som tekst?",
+			"ht": "<ul><li>Aktiver skjermleser<ul><li>iOS: VoiceOver</li><li>Android: TalkBack</li></ul></li><li>Trykk på feilmeldingen du tester. Hvis feilmeldingen ikke blir lest opp, er den ikke kodet som tekst.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som ikke er kodet som tekst."
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Inneholder feilmeldingen tekst som identifiserer hvilket skjemaelement som automatisk oppdager inndatafeil?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"G83"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, som blir oppdaget automatisk får feilmelding som er kodet som tekst, men identifiserer ikke hvilket skjemaelement som er tomt."
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Inneholder feilmeldingen tekst som beskriver feilen?",
+			"ht": "<p>For eksempel:</p><ul><li>\"Telefonnummer kan ikke inneholde bokstaver\".</li></ul><p><strong>Merk</strong>: Krav om at feilmeldingen skal inneholde forslag til hvordan feil skal rettes, er omfattet av suksesskriterium 3.3.3.</p>",
+			"type": "jaNei",
+			"kilde": [
+				"G84",
+				"G85"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som<br/>- er kodet som tekst<br/>- identifiserer hvilket skjemaelement som har feil inndata<br/>- inneholder informasjon om hva som er feil"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelement der inndatafeil blir oppdaget automatisk, får feilmelding som<br/>- er kodet som tekst<br/>- identifiserer hvilket skjemaelement som har feil inndata<br/>- ikke inneholder informasjon om hva som er feil"
+				}
+			}
+		}
+	]
 }
