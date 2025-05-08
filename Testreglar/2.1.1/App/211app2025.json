@@ -5,7 +5,7 @@
 	"versjon": "1.0",
 	"type": "App",
 	"spraak": "nb",
-	"kravTilSamsvar": "<p>All funksjonalitet i appen kan nås og brukes med sveiping og dobbelttrykk, når skjermleser er aktivert. </p><ul><li>Funksjonalitet i appen som ikke er formålstjenlig å bruke med sveiping og dobbelttrykk er unntatt.</li><li><p>Dersom navigering krever noe annet enn sveiping eller andre standardmetoder for navigering, får brukeren informasjon om metoden som skal brukes. Informasjonen ligger i nærheten av det aktuelle elementet.</p><p> </p></li></ul>",
+	"kravTilSamsvar": "<p>All funksjonalitet i appen kan nås og brukes med sveiping og dobbelttrykk, når skjermleser er aktivert.</p><ul><li>Funksjonalitet i appen som ikke er formålstjenlig å bruke med sveiping og dobbelttrykk er unntatt.</li><li><p>Dersom navigering krever noe annet enn sveiping eller andre standardmetoder for navigering, får brukeren informasjon om metoden som skal brukes. Informasjonen ligger i nærheten av det aktuelle elementet.</p></li></ul>",
 	"side": "2.1",
 	"element": "3.1",
 	"steg": [
@@ -82,7 +82,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Hvilket innhold/funksjonalitet fikk du ikke til å nå med sveiping eller aktivere med dobbelttrykk?",
-			"ht": "<ul><li>Beskriv elementet.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere element du ikke når på siden, registrerer du ett og ett.</p><p> </p>",
+			"ht": "<ul><li>Beskriv elementet.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere element du ikke når på siden, registrerer du ett og ett.</p>",
 			"type": "tekst",
 			"label": "Element:",
 			"multilinje": true,
