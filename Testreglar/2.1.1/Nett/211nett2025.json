@@ -83,7 +83,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Beskriv elementet du ikke nådde eller fikk til å betjene med tastaturet",
-			"ht": "<ul><li>Beskriv elementet.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere elementer du ikke når på siden, registrerer du et og et.</p><p> </p>",
+			"ht": "<ul><li>Beskriv elementet.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere elementer du ikke når på siden, registrerer du et og et.</p>",
 			"type": "tekst",
 			"label": "Element:",
 			"multilinje": true,
