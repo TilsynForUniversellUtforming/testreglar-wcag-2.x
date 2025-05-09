@@ -1,0 +1,91 @@
+{
+	"namn": "Doku-3.1.1a Hovudspråket på nettsida er programmatisk bestemt 2025",
+	"id": "311aDoku2025",
+	"testlabId": 626,
+	"versjon": "1.0",
+	"type": "Dokument",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Språkkoden som er angitt stemmer med hovedspråket på i det aktuelle dokumentet.</p>",
+	"side": "2.1",
+	"element": "Side",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>For nettsider:</p><ul><li>Angi URL eller side-ID.</li></ul><p>For apper:</p><ul><li>Beskriv appsiden med få stikkord, eller velg i listen.</li></ul>",
+			"type": "tekst",
+			"label": "",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsiden/appsiden dokumenter?",
+			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul><p><strong>Merk:</strong> Med dokumenter menes for eksempel Word-dokumenter, PDF-dokumenter, Excel-dokumenter og PowerPoint-presentasjoner. </p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke dokumenter."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Hvilket dokument tester du?",
+			"ht": "<ul><li>beskriv dokumentet/filnavnet</li><li>beskriv plassering</li></ul><p><strong>Merk: </strong>Hvis det gjelder flere dokumenter på siden, registrerer du ett og ett.</p>",
+			"type": "tekst",
+			"label": "",
+			"multilinje": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Har dokumentet tekst?",
+			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Dokumentet har ikke tekst."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Samsvarer angitt språkkode med hovedspråket på siden?",
+			"ht": "<ul><li>Sjekk at språkkoden samsvarer med hovedspråket i dokumentet.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Språkkoden som er angitt stemmer med hovedspråket i det aktuelle dokumentet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Språkkoden som er angitt stemmer ikke med hovedspråket i det aktuelle dokumentet."
+				}
+			}
+		}
+	]
+}
