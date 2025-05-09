@@ -1,0 +1,58 @@
+[
+    {
+        "stegnr": 1,
+        "spm": "Kva program testar du i?",
+        "ht": "Vel i lista under",
+        "type": "radio",
+        "svarArray": ["Adobe PDF Reader", "Microsoft Excel", "Microsoft Word", "Nettlesaren", "OpenOffice", "Anna"],
+        "ruting": {
+            "alle": {
+                "type": "gaaTil",
+                "steg": 2
+            }
+        }
+    },
+    {
+        "stegnr": 2,
+        "spm": "Kva enhet testar du på?",
+        "ht": "Vel i lista under",
+        "type": "radio",
+        "svarArray": ["PC", "Mac", "Mobiltelefon", "Nettbrett", "Anna"],
+        "ruting": {
+            "alle": {
+                "type": "gaaTil",
+                "steg": 3
+            }
+        }
+    },
+    {
+        "stegnr": 3,
+        "spm": "Vel kva testgrunnlag du testar på",
+        "ht": "Vel testgrunnlag",
+        "type": "testgrunnlag",
+        "svarArray": null,
+        "verdier" : [],
+        "ruting": {
+            "alle": {
+                "type": "gaaTil",
+                "steg": 4
+            }
+        }
+    }
+    ,
+
+    {
+        "stegnr": 4,
+        "spm": "Namn på løysing",
+        "ht": "Søk opp løysinga du skal teste i lista under",
+        "type": "verksemd",
+        "label": "Løysing:",
+        "oblig": true,
+        "ruting": {
+            "alle": {
+                "type": "gaaTil",
+                "steg": "2.1"
+            }
+        }
+    }
+]
