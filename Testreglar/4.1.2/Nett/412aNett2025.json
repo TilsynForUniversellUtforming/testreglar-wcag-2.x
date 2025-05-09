@@ -1,311 +1,307 @@
 {
-    "namn": "Nett-4.1.2a For skjemaelementer kan tilgjengelig navn, rolle og tilstand bestemmes programmatisk  2025",
-    "id": "412aNett2025",
-    "testlabId": 617,
-    "versjon": "1.0",
-    "type": "Nett",
-    "spraak": "nb",
-    "kravTilSamsvar": "<p>Navn og rolle:</p><ul><li>Alle skjemaelementer har et tilgjengelig navn, som beskriver formålet med det aktuelle elementet.</li><li>Alle skjemaelementer har riktig rolle, som identifiserer funksjonen til det aktuelle elementet.</li><li>Skjemaelementer som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen.</li></ul><p>Tilstander, egenskaper og verdier:</p><ul><li>Når tilstander, egenskaper og verdier i skjemaelementer kan angis av brukeren, skal denne informasjonen også angis programmatisk.</li><li>Varsel om endringer i det aktuelle elementet er tilgjengelig for brukeragenter.</li></ul>",
-    "side": "2.1",
-    "element": "3.1",
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Hvilken side tester du?",
-            "ht": "<p>Angi URL eller side-ID.</p>",
-            "type": "tekst",
-            "label": "URL/Side:",
-            "datalist": "Sideutvalg",
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Har nettsiden skjemaelement?",
-            "ht": "<p>Eksempel på skjemaelement</p><ul><li>avkryssningsboks</li><li>nedtrekksliste</li><li>radioknapp</li><li>inndatafelt</li><li>søkefelt</li><li>switch</li><li>listeboks</li></ul><p><strong>Merk: </strong></p><ul><li>Du skal teste både aktive og inaktive skjemaelement.</li><li>Du skal ikke teste knapper. Knapper testes i 4.1.2b.</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "2.3"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Testside har ikke skjema."
-                }
-            },
-            "kilde": [
-                "F20",
-                "F59"
-            ]
-        },
-        {
-            "stegnr": "2.3",
-            "spm": "Hvilket skjemaelement tester du?",
-            "ht": "<ul><li>beskriv skjemaelementet</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det gjelder flere skjemaelementer, registrerer du ett og ett.</p>",
-            "type": "tekst",
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                }
-            },
-            "label": "Skjemaelement:",
-            "multilinje": true
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Har skjemaelementet et tilgjengelig navn, som ikke er tomt?",
-            "ht": "<ul><li>Inspiser skjemaelementet</li><li>Bruk Accessibility Tree, og sjekk under Computed Properties, om skjemaelementet har innhold i \"Name:\".</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelementet har ikke et tilgjengelig navn."
-                }
-            },
-            "kilde": [
-                "ARIA14",
-                "ARIA16",
-                "F68",
-                "F86",
-                "G108",
-                "H44",
-                "H65",
-                "H88",
-                "H91"
-            ]
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Sjekk om det tilgjengelige navnet beskriver formålet med skjemaelementet?",
-            "ht": "<p><strong>Merk: </strong>Det er tilstrekkelig at det tilgjengelige navnet identifiserer skjemaelementet.</p>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelementet har et tilgjengelig navn, som ikke beskriver formålet med elementet."
-                }
-            },
-            "kilde": [
-                "ARIA14"
-            ]
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Er skjemaelementet kodet med riktig rolle?",
-            "ht": "<ul><li>Inspiser skjemaelementet</li><li>Bruk Accessibility Tree, og sjekk under Computed Properties, om skjemaelementet har korrekt innhold i \"Role:\".</li></ul><p>Eksempler: </p><ul><li>avkryssingsboks: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#checkbox\" target=\"_blank\" rel=\"noopener\">checkbox</a></li><li>nedtrekksliste: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#combobox\" target=\"_blank\" rel=\"noopener\">combobox</a></li><li>radioknapp: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#radio\" target=\"_blank\" rel=\"noopener\">radio</a></li><li>inndatafelt: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#textbox\" target=\"_blank\" rel=\"noopener\">textbox</a></li><li>søkefelt: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#searchbox\" target=\"_blank\" rel=\"noopener\">searchbox</a></li><li>switch: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#switch\" target=\"_blank\" rel=\"noopener\">switch</a></li><li>listeboks: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#listbox\" target=\"_blank\" rel=\"noopener\">listbox</a></li><li>annet: andre relevante roller i <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Roles</a></li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.4"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelementet har tilgjengelig navn, men er ikke kodet med riktig rolle som identifiserer funksjonen til det aktuelle elementet."
-                }
-            },
-            "kilde": [
-                "ARIA4",
-                "F59",
-                "G10"
-            ]
-        },
-        {
-            "stegnr": "3.4",
-            "spm": "Må skjemaelementet være koblet til et annet skjemaelement for å gi mening?",
-            "ht": "<p>Eksempel:</p><ul><li>Grupper av radioknapper eller avkryssingsbokser må leses i sammenheng med et overordnet spørsmål eller krever en egen overskrift.</li><li>Tekstfelt for telefonnummer med et felt for landskode og et felt for telefonnummer er gruppert sammen i et element.</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.5"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.12"
-                }
-            }
-        },
-        {
-            "stegnr": "3.5",
-            "spm": "Ligger skjemaelementet inne i et &lt;fieldset&gt;-element i koden?",
-            "ht": "",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.6"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.9"
-                }
-            }
-        },
-        {
-            "stegnr": "3.6",
-            "spm": "Ligger det et &lt;legend&gt;-element inne i &lt;fieldset&gt;-elementet i koden?",
-            "ht": "",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.7"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.9"
-                }
-            }
-        },
-        {
-            "stegnr": "3.7",
-            "spm": "Er &lt;legend&gt;-elementet det første elementet som ligger inne i &lt;fieldset&gt;-elementet i koden?",
-            "ht": "",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.8"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.9"
-                }
-            }
-        },
-        {
-            "stegnr": "3.8",
-            "spm": "Blir skjemaelementet identifisert av innholdet i &lt;legend&gt;-elementet, kombinert med skjemaelementets tilgjengelig navn?",
-            "ht": "<p><strong>Merk: </strong>Du skal vurdere skjemaelementets tilgjengelige navn og innholdet i <code>&lt;legend&gt;</code> samlet.</p>",
-            "type": "jaNei",
-            "ruting": {
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.9"
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.12"
-                }
-            }
-        },
-        {
-            "stegnr": "3.9",
-            "spm": "Ligger skjemaelementet inne i et annet element med attributtet role=\"group\"?",
-            "ht": "<ul><li>Inspiser skjemaelementet</li><li>Bruk Accessibility Tree verktøyet, sjekk under Computed Properties om det står <code>role=\"group\"</code>.</li></ul><p><strong>Merk</strong>: Role-attributtet kan for eksempel ligge på en <code>&lt;div&gt; </code>eller <code>&lt;span&gt;</code>.</p>",
-            "type": "jaNei",
-            "ruting": {
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelementetet har tilgjengelig navn og er kodet med riktig rolle. Skjemaelementet er plassert i en gruppe som ikke er identifisert i koden."
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.10"
-                }
-            }
-        },
-        {
-            "stegnr": "3.10",
-            "spm": "Har elementet med role=\"group\" et tilgjengelig navn, som har innhold?",
-            "ht": "<ul><li>Bruk Accessibility Tree-verktøyet, sjekk under Computed Properties at informasjon under \"Name\" ikke er tomt.</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.11"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelementet har tilgjengelig navn og er kodet med riktig rolle. Skjemaelement er plassert i en gruppe som ikke har et tilgjengelig navn."
-                }
-            }
-        },
-        {
-            "stegnr": "3.11",
-            "spm": "Blir skjemaelementet identifisert av det tilgjengelig navnet for gruppen, kombinert med det tilgjengelige navnet for skjemaelementet?",
-            "ht": "<ul><li>Vurder det tilgjengelige navnet for skjemaelementet og gruppen samlet.</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.12"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelementetet har tilgjengelig navn og er kodet med riktig rolle. Skjemaelementet er plassert i en gruppe som har et tilgjengelig navn, men det tilgjengelige navnet for gruppen identifiserer ikke formålet med skjemaelementet."
-                }
-            }
-        },
-        {
-            "stegnr": "3.12",
-            "spm": "Er skjemaet en avkryssningsboks, radioknapp, nedtrekksliste eller bryter/switch, som er kodet med mer enn én tilstand når brukeren samhandler med den?",
-            "ht": "<ul><li>Trykk på skjemaelementet og sjekk om elementet har minst en av disse tilstandene<ul><li>avkryssingsboks: <code>checkbox</code>avhuket/ikke avhuket<ul><li><code>aria-checked=\"true\"</code> eller <code>\"false\"</code></li><li><code>checked=\"true\"</code> eller <code>\"false\"</code></li></ul></li><li>radioknapp: <code>radiobutton</code> avhuket/ikke avhuket<ul><li><code>aria-checked=\"true\"</code> eller <code>\"false\" </code></li><li><code>checked=\"true</code>\" eller <code>\"false\"</code></li></ul></li><li>nedtrekksliste: <code>combobox</code> - \"utvidet\" eller \"sammensluttet\"<ul><li><code>aria-expanded=\"true\"</code> eller <code>\"false\"</code> </li><li><code>expanded=\"true\"</code> eller <code>\"false\"</code></li></ul></li><li>bryter: <code>switch</code> - \"on\" , \"off eller \"udefinerbart\"<ul><li><code>aria-checked=\"true\"</code> eller <code>\"false\" </code></li><li><code>checked=\"true\" </code>eller<code> \"false\"</code></li><li><code>aria-pressed=\"mixed\"</code></li></ul></li></ul></li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Skjemaelementet har et tilgjengelig navn og riktig rolle, som beskriver formålet med det aktuelle elementet."
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.13"
-                }
-            }
-        },
-        {
-            "stegnr": "3.13",
-            "spm": "Er alle tilstandene til skjemaelementet angitt programatisk?",
-            "ht": "<ul><li>Inspiser skjemaelementet </li><li>Bruk Accessibility Tree</li><li>Under ARIA-attributter eller Computed Properties, sjekk om det finnes:<ul><li>avkryssingsboks<ul><li>hvis avkrysset: <code>aria-checked=\"true\"</code> eller <code>Checked=\"true\"</code></li><li>hvis ikke avkrysset: <code>aria-checked=</code> <code>\"false\"</code> eller <code>Checked=</code><code>\"false\"</code></li></ul></li><li>radioknapp<ul><li>hvis avkrysset: <code>aria-checked=\"true\" </code>eller <code>Checked=\"true\"</code><br>hvis ikke avkrysset: <code>aria-checked= \"false\"</code> eller<code> Checked=\"false\"</code></li></ul></li><li>nedtrekksliste<ul><li>hvis innholdet er sammensluttet: <code>aria-expanded=\"false\"</code> eller <code>Expanded=\"false\"</code></li><li>hvis innholdet er utvidet: <code>aria-expanded=\"true\"</code> eller <code>Expanded=\"true\"</code></li></ul></li><li>switch<ul><li>hvis bryteren er på<code>: aria-pressed=\"true\"</code> eller <code>aria-checked=\"true\"</code></li><li>hvis bryteren er av:<code> aria-pressed=\"false</code>\" eller <code>aria-checked=\"false\"</code></li><li>hvis bryteren har en mellomliggende tilstand mellom tilstander av og på: <code>aria-pressed=\"mixed\".</code></li></ul></li></ul></li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Skjemaelementet har et tilgjengelig navn og riktig rolle som beskriver formålet med det aktuelle elementet. Tilstanden er angitt programmatisk."
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.14"
-                }
-            }
-        },
-        {
-            "stegnr": "3.14",
-            "spm": "Hvilke tilstander er ikke angitt programmatisk?",
-            "ht": "<ul><li>beskriv tilstanden</li><li>beskriv elementet</li></ul><p><strong>Merk:</strong> Hvis det er flere tilstander som ikke er angitt programmatisk på siden, registrerer du én og én.</p>",
-            "type": "tekst",
-            "ruting": {
-                "alle": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Skjemaelementet har et tilgjengelig navn og riktig rolle som beskriver formålet med det aktuelle elementet. Tilstanden er ikke angitt programmatisk."
-                }
-            },
-            "label": "Tilstander:",
-            "multilinje": true
-        }
-    ]
+	"namn": "Nett-4.1.2a For skjemaelementer kan tilgjengelig navn, rolle og tilstand bestemmes programmatisk  2025",
+	"id": "412aNett2025",
+	"testlabId": 617,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Navn og rolle:</p><ul><li>Alle skjemaelementer har et tilgjengelig navn, som beskriver formålet med det aktuelle elementet.</li><li>Alle skjemaelementer har riktig rolle, som identifiserer funksjonen til det aktuelle elementet.</li><li>Skjemaelementer som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen.</li></ul><p>Tilstander, egenskaper og verdier:</p><ul><li>Når tilstander, egenskaper og verdier i skjemaelementer kan angis av brukeren, skal denne informasjonen også angis programmatisk.</li><li>Varsel om endringer i det aktuelle elementet er tilgjengelig for brukeragenter.</li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har nettsiden skjemaelement?",
+			"ht": "<p>Eksempel på skjemaelement</p><ul><li>avkryssningsboks</li><li>nedtrekksliste</li><li>radioknapp</li><li>inndatafelt</li><li>søkefelt</li><li>switch</li><li>listeboks</li></ul><p><strong>Merk: </strong></p><ul><li>Du skal teste både aktive og inaktive skjemaelement.</li><li>Du skal ikke teste knapper. Knapper testes i 4.1.2b.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikke skjema."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Hvilket skjemaelement tester du?",
+			"ht": "<ul><li>beskriv skjemaelementet</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det gjelder flere skjemaelementer, registrerer du ett og ett.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				}
+			},
+			"label": "Skjemaelement:",
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Har skjemaelementet et tilgjengelig navn, som ikke er tomt?",
+			"ht": "<ul><li>Inspiser skjemaelementet</li><li>Bruk Accessibility Tree, og sjekk under Computed Properties, om skjemaelementet har innhold i \"Name:\".</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementet har ikke et tilgjengelig navn."
+				}
+			},
+			"kilde": [
+				"ARIA14",
+				"ARIA16",
+				"F68",
+				"F86",
+				"G108",
+				"H44",
+				"H65",
+				"H88",
+				"H91"
+			]
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Sjekk om det tilgjengelige navnet beskriver formålet med skjemaelementet?",
+			"ht": "<p><strong>Merk: </strong>Det er tilstrekkelig at det tilgjengelige navnet identifiserer skjemaelementet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementet har et tilgjengelig navn, som ikke beskriver formålet med elementet."
+				}
+			},
+			"kilde": [
+				"ARIA14"
+			]
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er skjemaelementet kodet med riktig rolle?",
+			"ht": "<ul><li>Inspiser skjemaelementet</li><li>Bruk Accessibility Tree, og sjekk under Computed Properties, om skjemaelementet har korrekt innhold i \"Role:\".</li></ul><p>Eksempler: </p><ul><li>avkryssingsboks: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#checkbox\" target=\"_blank\" rel=\"noopener\">checkbox</a></li><li>nedtrekksliste: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#combobox\" target=\"_blank\" rel=\"noopener\">combobox</a></li><li>radioknapp: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#radio\" target=\"_blank\" rel=\"noopener\">radio</a></li><li>inndatafelt: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#textbox\" target=\"_blank\" rel=\"noopener\">textbox</a></li><li>søkefelt: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#searchbox\" target=\"_blank\" rel=\"noopener\">searchbox</a></li><li>switch: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#switch\" target=\"_blank\" rel=\"noopener\">switch</a></li><li>listeboks: <a href=\"https://www.w3.org/TR/wai-aria-1.2/#listbox\" target=\"_blank\" rel=\"noopener\">listbox</a></li><li>annet: andre relevante roller i <a href=\"https://www.w3.org/TR/wai-aria-1.2/#widget_roles\" target=\"_blank\" rel=\"noopener\">Widget Roles</a></li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementet har tilgjengelig navn, men er ikke kodet med riktig rolle som identifiserer funksjonen til det aktuelle elementet."
+				}
+			},
+			"kilde": [
+				"ARIA4",
+				"F59",
+				"G10"
+			]
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Må skjemaelementet være koblet til et annet skjemaelement for å gi mening?",
+			"ht": "<p>Eksempel:</p><ul><li>Grupper av radioknapper eller avkryssingsbokser må leses i sammenheng med et overordnet spørsmål eller krever en egen overskrift.</li><li>Tekstfelt for telefonnummer med et felt for landskode og et felt for telefonnummer er gruppert sammen i et element.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				}
+			}
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Ligger skjemaelementet inne i et &lt;fieldset&gt;-element i koden?",
+			"ht": "",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Ligger det et &lt;legend&gt;-element inne i &lt;fieldset&gt;-elementet i koden?",
+			"ht": "",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Er &lt;legend&gt;-elementet det første elementet som ligger inne i &lt;fieldset&gt;-elementet i koden?",
+			"ht": "",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Blir skjemaelementet identifisert av innholdet i &lt;legend&gt;-elementet, kombinert med skjemaelementets tilgjengelig navn?",
+			"ht": "<p><strong>Merk: </strong>Du skal vurdere skjemaelementets tilgjengelige navn og innholdet i <code>&lt;legend&gt;</code> samlet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				}
+			}
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Ligger skjemaelementet inne i et annet element med attributtet role=\"group\"?",
+			"ht": "<ul><li>Inspiser skjemaelementet</li><li>Bruk Accessibility Tree verktøyet, sjekk under Computed Properties om det står <code>role=\"group\"</code>.</li></ul><p><strong>Merk</strong>: Role-attributtet kan for eksempel ligge på en <code>&lt;div&gt; </code>eller <code>&lt;span&gt;</code>.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementetet har tilgjengelig navn og er kodet med riktig rolle. Skjemaelementet er plassert i en gruppe som ikke er identifisert i koden."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Har elementet med role=\"group\" et tilgjengelig navn, som har innhold?",
+			"ht": "<ul><li>Bruk Accessibility Tree-verktøyet, sjekk under Computed Properties at informasjon under \"Name\" ikke er tomt.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementet har tilgjengelig navn og er kodet med riktig rolle. Skjemaelement er plassert i en gruppe som ikke har et tilgjengelig navn."
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Blir skjemaelementet identifisert av det tilgjengelig navnet for gruppen, kombinert med det tilgjengelige navnet for skjemaelementet?",
+			"ht": "<ul><li>Vurder det tilgjengelige navnet for skjemaelementet og gruppen samlet.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementetet har tilgjengelig navn og er kodet med riktig rolle. Skjemaelementet er plassert i en gruppe som har et tilgjengelig navn, men det tilgjengelige navnet for gruppen identifiserer ikke formålet med skjemaelementet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.12",
+			"spm": "Er skjemaet en avkryssningsboks, radioknapp, nedtrekksliste eller bryter/switch, som er kodet med mer enn én tilstand når brukeren samhandler med den?",
+			"ht": "<ul><li>Trykk på skjemaelementet og sjekk om elementet har minst en av disse tilstandene<ul><li>avkryssingsboks: <code>checkbox</code>avhuket/ikke avhuket<ul><li><code>aria-checked=\"true\"</code> eller <code>\"false\"</code></li><li><code>checked=\"true\"</code> eller <code>\"false\"</code></li></ul></li><li>radioknapp: <code>radiobutton</code> avhuket/ikke avhuket<ul><li><code>aria-checked=\"true\"</code> eller <code>\"false\" </code></li><li><code>checked=\"true</code>\" eller <code>\"false\"</code></li></ul></li><li>nedtrekksliste: <code>combobox</code> - \"utvidet\" eller \"sammensluttet\"<ul><li><code>aria-expanded=\"true\"</code> eller <code>\"false\"</code> </li><li><code>expanded=\"true\"</code> eller <code>\"false\"</code></li></ul></li><li>bryter: <code>switch</code> - \"on\" , \"off eller \"udefinerbart\"<ul><li><code>aria-checked=\"true\"</code> eller <code>\"false\" </code></li><li><code>checked=\"true\" </code>eller<code> \"false\"</code></li><li><code>aria-pressed=\"mixed\"</code></li></ul></li></ul></li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Skjemaelementet har et tilgjengelig navn og riktig rolle, som beskriver formålet med det aktuelle elementet."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				}
+			}
+		},
+		{
+			"stegnr": "3.13",
+			"spm": "Er alle tilstandene til skjemaelementet angitt programatisk?",
+			"ht": "<ul><li>Inspiser skjemaelementet </li><li>Bruk Accessibility Tree</li><li>Under ARIA-attributter eller Computed Properties, sjekk om det finnes:<ul><li>avkryssingsboks<ul><li>hvis avkrysset: <code>aria-checked=\"true\"</code> eller <code>Checked=\"true\"</code></li><li>hvis ikke avkrysset: <code>aria-checked=</code> <code>\"false\"</code> eller <code>Checked=</code><code>\"false\"</code></li></ul></li><li>radioknapp<ul><li>hvis avkrysset: <code>aria-checked=\"true\" </code>eller <code>Checked=\"true\"</code><br>hvis ikke avkrysset: <code>aria-checked= \"false\"</code> eller<code> Checked=\"false\"</code></li></ul></li><li>nedtrekksliste<ul><li>hvis innholdet er sammensluttet: <code>aria-expanded=\"false\"</code> eller <code>Expanded=\"false\"</code></li><li>hvis innholdet er utvidet: <code>aria-expanded=\"true\"</code> eller <code>Expanded=\"true\"</code></li></ul></li><li>switch<ul><li>hvis bryteren er på<code>: aria-pressed=\"true\"</code> eller <code>aria-checked=\"true\"</code></li><li>hvis bryteren er av:<code> aria-pressed=\"false</code>\" eller <code>aria-checked=\"false\"</code></li><li>hvis bryteren har en mellomliggende tilstand mellom tilstander av og på: <code>aria-pressed=\"mixed\".</code></li></ul></li></ul></li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Skjemaelementet har et tilgjengelig navn og riktig rolle som beskriver formålet med det aktuelle elementet. Tilstanden er angitt programmatisk."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.14"
+				}
+			}
+		},
+		{
+			"stegnr": "3.14",
+			"spm": "Hvilke tilstander er ikke angitt programmatisk?",
+			"ht": "<ul><li>beskriv tilstanden</li><li>beskriv elementet</li></ul><p><strong>Merk:</strong> Hvis det er flere tilstander som ikke er angitt programmatisk på siden, registrerer du én og én.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Skjemaelementet har et tilgjengelig navn og riktig rolle som beskriver formålet med det aktuelle elementet. Tilstanden er ikke angitt programmatisk."
+				}
+			},
+			"label": "Tilstander:",
+			"multilinje": true
+		}
+	]
 }
