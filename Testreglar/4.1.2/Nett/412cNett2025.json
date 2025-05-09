@@ -1,0 +1,102 @@
+{
+    "namn": "Nett-4.1.2c Iframe har et tilgjengelig navn som beskriver formålet med innholdet i iframe 2025",
+    "id": "412cNett2025",
+    "testlabId": 619,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nb",
+    "kravTilSamsvar": "<p>Der det er brukt et iframe-element, har iframen et tilgjengelig navn, som beskriver formålet med innholdet.</p>",
+    "side": "2.1",
+    "element": "3.1",
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Hvilken side tester du?",
+            "ht": "<p>Angi URL eller side-ID.</p>",
+            "type": "tekst",
+            "label": "URL/Side:",
+            "datalist": "Sideutvalg",
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Har testsiden synlige &lt;iframe&gt;-elementer?",
+            "ht": "<ul><li>Søk etter <code>&lt;iframe&gt;</code>-elementet i kildekoden til siden du tester på. </li></ul><p><strong>Merk:</strong></p><ul><li>Du skal kun vurdere <code>&lt;iframe&gt;</code>-elementer som er visuelt synlige og inkludert i Accessibilty Tree. </li><li>Skjulte <code>&lt;iframe&gt;</code>-elementer fra for eksempel Google Analytics er ikke omfattet av kravet, fordi det ikke er en brukergrensesnittkomponent.</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testsiden har ikke iframe."
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Hvilket &lt;iframe&gt;-element tester du?",
+            "ht": "<ul><li>beskriv <code>&lt;iframe&gt;</code>-elementet</li><li>beskriv plasseringen</li></ul><p><strong>Merk</strong>: Hvis det gjelder flere <code>&lt;iframe&gt;</code>-elementer, registrerer du ett og ett.</p>",
+            "type": "tekst",
+            "label": "Iframe element:",
+            "multilinje": true,
+            "oblig": true,
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            }
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Har &lt;iframe&gt;-elementet et tilgjengelig navn?",
+            "ht": "<ul><li>Inspiser <code>&lt;iframe&gt;</code>-elementet</li><li>Bruk Accessibility Tree, og sjekk under Computed Properties om <code>&lt;iframe&gt;</code>-elementet har innhold i \"Name:\".</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Iframe har ikke et tilgjengelig navn."
+                },
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                }
+            },
+            "kilde": [
+                "ARIA14",
+                "ARIA16",
+                "H64"
+            ]
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Beskriver det tilgjengelige navnet formålet med innholdet som ligger i &lt;iframe&gt;?",
+            "ht": "<p><strong>Merk:</strong> Det er tilstrekkelig at det tilgjengelige navnet identifiserer <code>&lt;iframe&gt;</code>-elementet.</p>",
+            "type": "jaNei",
+            "kilde": [
+                "G108"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Iframe har et tilgjengelig navn, som beskriver formålet med innholdet i iframe."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Iframe har et tilgjengelig navn, som ikke beskriver formålet med innholdet i iframe."
+                }
+            }
+        }
+    ]
+}
