@@ -1,0 +1,105 @@
+{
+	"namn": "Doku-1.3.1a Visuelle overskrifter er korrekt kodet 2025",
+	"id": "131aDoku2025",
+	"testlabId": 622,
+	"versjon": "1.0",
+	"type": "Dokument",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Visuelle overskrifter er korrekt kodet som overskrifter.<br><br></p>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>For nettsider:</p><ul><li>Angi URL eller side-ID.</li></ul><p>For apper:</p><ul><li>Beskriv appsiden med få stikkord, eller velg i listen.</li></ul>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			},
+			"label": "",
+			"datalist": "Sideutvalg"
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsiden/appsiden dokumenter?",
+			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul><p><strong>Merk:</strong> Med dokumenter menes for eksempel Word-dokumenter, PDF-dokumenter, Excel-dokumenter og PowerPoint-presentasjoner. </p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testsiden har ikke dokumenter."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Hvilket dokument tester du?",
+			"ht": "<ul><li>beskriv dokumentet/filnavnet</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det gjelder flere dokumenter på siden, registrerer du ett og ett.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			},
+			"label": "",
+			"multilinje": true
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Har dokumentet visuelle overskrifter?",
+			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Dokumentet har ikke visuelle overskrifter."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken overskrift tester du?",
+			"ht": "<ul><li>beskriv overskriften</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det er flere overskrifter i dokumentet, registrerer du én og én.</p>",
+			"type": "tekst",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			},
+			"label": "",
+			"multilinje": true
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er den visuelle overskriften korrekt kodet som overskrift?",
+			"ht": "<ul><li>Sjekk at overskriften er kodet som en overskrift.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell overskrift er kodet som overskrift."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell overskrift er ikke kodet som overskrift."
+				}
+			}
+		}
+	]
+}
