@@ -11,8 +11,8 @@
 	"steg": [
 		{
 			"stegnr": "2.1",
-			"spm": "Hvilken side tester du?",
-			"ht": "<p>For nettsider:</p><ul><li>Angi URL eller side-ID.</li></ul><p>For apper:</p><ul><li>Beskriv appsiden med få stikkord, eller velg i listen.</li></ul>",
+			"spm": "Hvilket dokument tester du?",
+			"ht": "<ul><li>Skriv dokumenttittel, hvis tittel ikke er tilgjengelig beskriver du dokumentet med første overskrift eller første del av innholdet.</li></ul><p><strong>Merk:</strong> Med dokumenter menes for eksempel Word-dokumenter, PDF-dokumenter, Excel-dokumenter og PowerPoint-presentasjoner. </p>",
 			"type": "tekst",
 			"ruting": {
 				"alle": {
@@ -25,8 +25,8 @@
 		},
 		{
 			"stegnr": "2.2",
-			"spm": "Har testsiden/appsiden dokumenter?",
-			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul><p><strong>Merk:</strong> Med dokumenter menes for eksempel Word-dokumenter, PDF-dokumenter, Excel-dokumenter og PowerPoint-presentasjoner. </p>",
+			"spm": "Har dokumentet visuelle overskrifter?",
+			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -35,28 +35,30 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testsiden har ikke dokumenter."
+					"utfall": "Dokumentet har ikke visuelle overskrifter."
 				}
 			}
 		},
 		{
 			"stegnr": "2.3",
-			"spm": "Hvilket dokument tester du?",
-			"ht": "<ul><li>beskriv dokumentet/filnavnet</li><li>beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det gjelder flere dokumenter på siden, registrerer du ett og ett.</p>",
-			"type": "tekst",
+			"spm": "Er dokumentet publisert etter 1.februar 2022?",
+			"ht": "<p><strong>Merk:</strong> Dokument er publisert før 1.februar 2022 unntatt kravet.</p>",
+			"type": "jaNei",
 			"ruting": {
-				"alle": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
 					"type": "gaaTil",
 					"steg": "2.4"
 				}
-			},
-			"label": "",
-			"multilinje": true
+			}
 		},
 		{
 			"stegnr": "2.4",
-			"spm": "Har dokumentet visuelle overskrifter?",
-			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul>",
+			"spm": "Er dokumentet en del av en aktiv administrativ prosess?",
+			"ht": "<p><strong>Merk:</strong> En aktiv administrativ prosess er eksempelvis et søknadskjema, informasjonsbrev, timeavtale eller lignende.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
@@ -65,7 +67,7 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Dokumentet har ikke visuelle overskrifter."
+					"utfall": "Dokumentet er publisert før 1.februar 2022, og er ikke en del av en aktiv administrativ prosess."
 				}
 			}
 		},
