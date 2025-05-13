@@ -123,7 +123,7 @@ files.forEach((filePath) => {
         case "tekst":
           // Validerer `steg.label`
           expect(steg.label).toBeDefined();
-          expect(steg.label?.length).toBeGreaterThan(0);
+          expect(steg.label?.trim().length).toBeGreaterThan(0);
 
           // Sjekker `steg.filter` hvis det eksisterer, og matcher "tal"
           steg.filter !== undefined && expect(steg.filter).toMatch(/(tal)/i);
