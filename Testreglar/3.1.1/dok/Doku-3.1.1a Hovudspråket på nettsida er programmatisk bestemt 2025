@@ -1,0 +1,93 @@
+{
+	"namn": "Doku-3.1.1a Hovudspråket på nettsida er programmatisk bestemt 2025",
+	"id": "311aDoku2025",
+	"testlabId": 626,
+	"versjon": "1.0",
+	"type": "Dokument",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Språkkoden som er angitt stemmer med hovedspråket på i det aktuelle dokumentet.</p>",
+	"side": "2.1",
+	"element": "Side",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilket dokument tester du?",
+			"ht": "<ul><li>Skriv dokumenttittel, hvis tittel ikke er tilgjengelig beskriver du dokumentet med første overskrift eller første del av innholdet.</li></ul><p><strong>Merk</strong>: Med dokumenter menes for eksempel Word-dokumenter, PDF-dokumenter, Excel-dokumenter og PowerPoint-presentasjoner. </p>",
+			"type": "tekst",
+			"label": "Dokument",
+			"datalist": "Sideutvalg",
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har dokumentet tekst?",
+			"ht": "<ul><li>Gjør en visuell inspeksjon.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "2.3"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Dokumentet har ikke tekst."
+				}
+			}
+		},
+		{
+			"stegnr": "2.3",
+			"spm": "Er dokumentet publisert etter 1.februar 2022?",
+			"ht": "<p><strong>Merk</strong>: Dokument er publisert før 1.februar 2022 unntatt kravet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "2.4"
+				}
+			}
+		},
+		{
+			"stegnr": "2.4",
+			"spm": "Er dokumentet en del av en aktiv administrativ prosess?",
+			"ht": "<p><strong>Merk:</strong> En aktiv administrativ prosess er eksempelvis et søknadskjema, informasjonsbrev, timeavtale eller lignende.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Dokumentet er publisert før 1.februar 2022, og er ikke en del av en aktiv administrativ prosess."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Samsvarer angitt språkkode med hovedspråket på siden?",
+			"ht": "<ul><li>Sjekk at språkkoden samsvarer med hovedspråket i dokumentet. For eksempel vises teksten Norsk (Bokmål) / Norwegian (Bokmål) i statuslinjen nederst til venstre i et dokument som er skrevet i Norsk bokmål i Word.</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Språkkoden som er angitt stemmer med hovedspråket i det aktuelle dokumentet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Språkkoden som er angitt stemmer ikke med hovedspråket i det aktuelle dokumentet."
+				}
+			}
+		}
+	]
+}
