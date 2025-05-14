@@ -20,7 +20,7 @@
 					"steg": "2.2"
 				}
 			},
-			"label": "",
+			"label": "Dokument",
 			"datalist": "Sideutvalg"
 		},
 		{
@@ -82,7 +82,7 @@
 					"steg": "3.2"
 				}
 			},
-			"label": "",
+			"label": "Overskrift",
 			"multilinje": true
 		},
 		{
