@@ -14,7 +14,7 @@
 			"spm": "Hvilket dokument tester du?",
 			"ht": "<ul><li>Skriv dokumenttittel, hvis tittel ikke er tilgjengelig beskriver du dokumentet med første overskrift eller første del av innholdet.</li></ul><p><strong>Merk:</strong> Med dokumenter menes for eksempel Word-dokumenter, PDF-dokumenter, Excel-dokumenter og PowerPoint-presentasjoner. </p>",
 			"type": "tekst",
-			"label": "",
+			"label": "Dokument",
 			"datalist": "Sideutvalg",
 			"ruting": {
 				"alle": {
@@ -35,7 +35,7 @@
 				},
 				"nei": {
 					"type": "ikkjeForekomst",
-					"utfall": "Testsiden har ikke visuelle lister."
+					"utfall": "Dokumentet har ikke visuelle lister."
 				}
 			}
 		},
@@ -82,7 +82,7 @@
 					"steg": "3.2"
 				}
 			},
-			"label": "",
+			"label": "Liste",
 			"multilinje": true
 		},
 		{
