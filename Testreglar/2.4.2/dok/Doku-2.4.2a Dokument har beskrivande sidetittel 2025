@@ -1,5 +1,5 @@
 {
-	"namn": "Doku-2.4.2a Dokument har beskrivande sidetittel 2025",
+	"namn": "Doku-2.4.2a Dokument har beskrivende sidetittel 2025",
 	"id": "242aDoku2025",
 	"testlabId": 625,
 	"versjon": "1.0",
@@ -14,7 +14,7 @@
 			"spm": "Hvilket dokument tester du?",
 			"ht": "<ul><li>Skriv dokumenttittel, hvis tittel ikke er tilgjengelig beskriver du dokumentet med første overskrift eller første del av innholdet.</li></ul><p><strong>Merk</strong>: Med dokumenter menes for eksempel Word-dokumenter, PDF-dokumenter, Excel-dokumenter og PowerPoint-presentasjoner. </p>",
 			"type": "tekst",
-			"label": "",
+			"label": "Dokument:",
 			"datalist": "Sideutvalg",
 			"ruting": {
 				"alle": {
@@ -46,9 +46,13 @@
 			"type": "jaNei",
 			"oblig": true,
 			"ruting": {
-				"alle": {
+				"ja": {
 					"type": "gaaTil",
-					"steg": "2.4"
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Dokumentet er publisert før 1.februar 2022, og er ikke en del av en aktiv administrativ prosess."
 				}
 			}
 		},
