@@ -89,7 +89,7 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er bildet ren dekorasjon?",
-			"ht": "<p><strong>Ren dekorasjon:</strong> Der bildet ikke gir mer informasjon eller funksjonalitet enn tekst som hører til bildet, er bildet vanligvis dekorativt. Dette gjelder eksempelvis et bilde i en artikkel hvor bildet er beskrevet i tekst eller en bølge over nettsiden som skaper en visuell effekt.</p><p><strong>Merk:</strong> Portrettbilder er vanligvis dekorative.</p>",
+			"ht": "<p><strong>Ren dekorasjon:</strong> Der bildet ikke gir mer informasjon eller funksjonalitet enn tekst som hører til bildet, er bildet vanligvis dekorativt. Dette gjelder eksempelvis et bilde i en artikkel hvor bildet er beskrevet i tekst eller en bølge over appsiden som skaper en visuell effekt.</p><p><strong>Merk:</strong> Portrettbilder er vanligvis dekorative.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
