@@ -14,7 +14,7 @@
 			"spm": "Hvilket dokument tester du?",
 			"ht": "<ul><li>Skriv dokumenttittel, hvis tittel ikke er tilgjengelig beskriver du dokumentet med første overskrift eller første del av innholdet.</li></ul><p><strong>Merk</strong>: Med dokumenter menes for eksempel Word-dokumenter, PDF-dokumenter, Excel-dokumenter og PowerPoint-presentasjoner. </p>",
 			"type": "tekst",
-			"label": "",
+			"label": "Dokument",
 			"datalist": "Sideutvalg",
 			"ruting": {
 				"alle": {
@@ -74,7 +74,7 @@
 		{
 			"stegnr": "3.1",
 			"spm": "Samsvarer angitt språkkode med hovedspråket på siden?",
-			"ht": "<ul><li>Sjekk at språkkoden samsvarer med hovedspråket i dokumentet.</li></ul>",
+			"ht": "<ul><li>Sjekk at språkkoden samsvarer med hovedspråket i dokumentet. For eksempel vises teksten Norsk (Bokmål) / Norwegian (Bokmål) i statuslinjen nederst til venstre i et dokument som er skrevet i Norsk bokmål i Word.</li></ul>",
 			"type": "jaNei",
 			"ruting": {
 				"ja": {
