@@ -7,7 +7,7 @@
 	"spraak": "nb",
 	"kravTilSamsvar": "<p>Navn og rolle:</p><ul><li>Alle skjemaelementer har et tilgjengelig navn, som beskriver formålet med det aktuelle elementet.</li><li>Alle skjemaelementer har riktig rolle, som identifiserer funksjonen til det aktuelle elementet.</li><li>Skjemaelementer som tilhører en gruppe, er også koblet til et tilgjengelig navn som gjelder for gruppen.</li></ul><p>Tilstander, egenskaper og verdier:</p><ul><li>Når tilstander, egenskaper og verdier i skjemaelementer kan angis av brukeren, skal denne informasjonen også angis programmatisk.</li><li>Varsel om endringer i det aktuelle elementet er tilgjengelig for brukeragenter.</li></ul>",
 	"side": "2.1",
-	"element": "3.1",
+	"element": "2.3",
 	"steg": [
 		{
 			"stegnr": "2.1",
