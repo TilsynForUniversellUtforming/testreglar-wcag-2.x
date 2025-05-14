@@ -1,313 +1,313 @@
 {
-    "namn": "Nett-1.3.1c Visuelle lister er korrekt kodet 2025",
-    "id": "131c2025",
-    "testlabId": 562,
-    "versjon": "1.0",
-    "type": "Nett",
-    "spraak": "nb",
-    "kravTilSamsvar": "<p>Visuelle lister er korrekt kodet, basert på type liste:</p><ul><li>Nummererte lister er kodet som nummerert liste</li><li>Unummererte lister er kodet som unummerert liste</li><li>Beskrivende lister, det vil si lister som har to nivå og gir utfyllende forklaringer, er kodet som beskrivende lister</li></ul>",
-    "side": "2.1",
-    "element": "3.1",
-    "steg": [
-        {
-            "stegnr": "2.1",
-            "spm": "Hvilken side tester du?",
-            "ht": "<p>Angi URL eller side-ID.</p>",
-            "type": "tekst",
-            "label": "URL/Side:",
-            "datalist": "Sideutvalg",
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "2.2"
-                }
-            }
-        },
-        {
-            "stegnr": "2.2",
-            "spm": "Har testsiden visuelle lister?",
-            "ht": "<p><strong>Merk: </strong>Du skal ikke teste</p><ul><li>Nedtrekksliste med inputfunksjon testes i nett-4.1.2a</li><li>Menyer testes i nett-4.1.2d</li><li>Innholdsfortegnelser skal testes som liste</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.1"
-                },
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Testside har ikke visuelle lister."
-                }
-            }
-        },
-        {
-            "stegnr": "3.1",
-            "spm": "Hvilken liste tester du?",
-            "ht": "<ul><li>Beskriv listen.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere lister på siden, registrerer du en og en.</p><p> </p>",
-            "type": "tekst",
-            "label": "Liste:",
-            "multilinje": true,
-            "oblig": true,
-            "ruting": {
-                "alle": {
-                    "type": "gaaTil",
-                    "steg": "3.2"
-                }
-            }
-        },
-        {
-            "stegnr": "3.2",
-            "spm": "Er listen en nummerert liste?",
-            "ht": "<p><strong>Merk:</strong> Lister kan være nøstet.</p>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.3"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.6"
-                }
-            }
-        },
-        {
-            "stegnr": "3.3",
-            "spm": "Er listen kodet med &lt;ol&gt;-elementet i HTML?",
-            "ht": "<ul><li><code>&lt;ol&gt;</code>-element skal ligge før første punkt i listen.</li></ul>",
-            "type": "jaNei",
-            "kilde": [
-                "H48"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.4"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell nummerert liste er ikke korrekt kodet."
-                }
-            }
-        },
-        {
-            "stegnr": "3.4",
-            "spm": "Er listen slik at den ignoreres av hjelpemiddelteknologi?",
-            "ht": "<ul><li>Inspiser listen</li><li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Accessibility node not exposed\".</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell nummerert liste er kodet slik at den ignoreres av hjelpemiddelteknologi."
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.5"
-                }
-            },
-            "kilde": [
-                "F92"
-            ]
-        },
-        {
-            "stegnr": "3.5",
-            "spm": "Er hvert punkt i listen kodet med &lt;li&gt;-elementet?",
-            "ht": "",
-            "type": "jaNei",
-            "kilde": [
-                "H48"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Visuell nummerert liste er korrekt kodet."
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell nummerert liste er ikke korrekt kodet."
-                }
-            }
-        },
-        {
-            "stegnr": "3.6",
-            "spm": "Er listen en unummerert liste?",
-            "ht": "<p><strong>Merk:</strong> Lister kan være nøsta. </p>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.7"
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.10"
-                }
-            }
-        },
-        {
-            "stegnr": "3.7",
-            "spm": "Er listen kodet med &lt;ul&gt;-elementet i HTML?",
-            "ht": "<ul><li><code>&lt;ul&gt;-element</code> skal ligge før første punkt i listen.</li></ul>",
-            "type": "jaNei",
-            "kilde": [
-                "H48"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.8"
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell unummerert liste er ikke korrekt kodet."
-                }
-            }
-        },
-        {
-            "stegnr": "3.8",
-            "spm": "Er listen slik at den ignoreres av hjelpemiddelteknologi?",
-            "ht": "<ul><li>Inspiser listen</li><li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Accessibility node not exposed\".</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell unummerert liste er kodet slik at den ignoreres av hjelpemiddelteknologi."
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.9"
-                }
-            },
-            "kilde": [
-                "F92"
-            ]
-        },
-        {
-            "stegnr": "3.9",
-            "spm": "Er hvert punkt i listen kodet med &lt;li&gt;-elementet?",
-            "ht": "",
-            "type": "jaNei",
-            "kilde": [
-                "H48"
-            ],
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Visuell unummerert liste er korrekt kodet."
-                },
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell unummerert liste er ikke korrekt kodet."
-                }
-            }
-        },
-        {
-            "stegnr": "3.10",
-            "spm": "Er listen en beskrivende liste?",
-            "ht": "<ul><li>Beskrivende lister grupperer ulike termer/navn med beskrivelser, forklaringer eller definisjoner</li><li>Beskrivende lister har minst to nivå<br> </li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "nei": {
-                    "type": "ikkjeForekomst",
-                    "utfall": "Testside har ikke visuelle lister."
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.11"
-                }
-            }
-        },
-        {
-            "stegnr": "3.11",
-            "spm": "Er listen kodet med &lt;dl&gt;-elementet i HTML?",
-            "ht": "<ul><li> <code>&lt;dl&gt;</code>-element skal ligge før første punkt i listen</li></ul>",
-            "type": "jaNei",
-            "kilde": [
-                "H40",
-                "H48"
-            ],
-            "ruting": {
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell beskrivende liste er ikke korrekt kodet."
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.12"
-                }
-            }
-        },
-        {
-            "stegnr": "3.12",
-            "spm": "Er listen slik at den ignoreres av hjelpemiddelteknologi?",
-            "ht": "<ul><li>Inspiser listen</li><li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Accessibility node not exposed\".</li></ul>",
-            "type": "jaNei",
-            "ruting": {
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell beskrivende liste er kodet slik at den ignoreres av hjelpemiddelteknologi."
-                },
-                "nei": {
-                    "type": "gaaTil",
-                    "steg": "3.13"
-                }
-            },
-            "kilde": [
-                "F92"
-            ]
-        },
-        {
-            "stegnr": "3.13",
-            "spm": "Er hver term i listen kodet med &lt;dt&gt;-elementet?",
-            "ht": "",
-            "type": "jaNei",
-            "kilde": [
-                "H40",
-                "H48"
-            ],
-            "ruting": {
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell beskrivende liste er ikke korrekt kodet."
-                },
-                "ja": {
-                    "type": "gaaTil",
-                    "steg": "3.14"
-                }
-            }
-        },
-        {
-            "stegnr": "3.14",
-            "spm": "Er alle forklaringene i underlisten kodet med &lt;dd&gt;-elementet?",
-            "ht": "<p><strong>Merk:</strong></p><ul><li>Forklaringene gir en beskrivelse/definisjon på termene i listen. Forklaringene kan ligge med et innrykk under termene i listen.</li></ul>",
-            "type": "jaNei",
-            "kilde": [
-                "H40",
-                "H48"
-            ],
-            "ruting": {
-                "nei": {
-                    "type": "avslutt",
-                    "fasit": "Nei",
-                    "utfall": "Visuell beskrivende liste er ikke korrekt kodet."
-                },
-                "ja": {
-                    "type": "avslutt",
-                    "fasit": "Ja",
-                    "utfall": "Visuell beskrivende liste er korrekt kodet."
-                }
-            }
-        }
-    ]
+	"namn": "Nett-1.3.1c Visuelle lister er korrekt kodet 2025",
+	"id": "131c2025",
+	"testlabId": 562,
+	"versjon": "1.0",
+	"type": "Nett",
+	"spraak": "nb",
+	"kravTilSamsvar": "<p>Visuelle lister er korrekt kodet, basert på type liste:</p><ul><li>Nummererte lister er kodet som nummerert liste</li><li>Unummererte lister er kodet som unummerert liste</li><li>Beskrivende lister, det vil si lister som har to nivå og gir utfyllende forklaringer, er kodet som beskrivende lister</li></ul>",
+	"side": "2.1",
+	"element": "3.1",
+	"steg": [
+		{
+			"stegnr": "2.1",
+			"spm": "Hvilken side tester du?",
+			"ht": "<p>Angi URL eller side-ID.</p>",
+			"type": "tekst",
+			"label": "URL/Side:",
+			"datalist": "Sideutvalg",
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "2.2"
+				}
+			}
+		},
+		{
+			"stegnr": "2.2",
+			"spm": "Har testsiden visuelle lister?",
+			"ht": "<p><strong>Merk: </strong>Du skal ikke teste</p><ul><li>Nedtrekksliste med inputfunksjon testes i nett-4.1.2a</li><li>Menyer testes i nett-4.1.2d</li><li>Innholdsfortegnelser skal testes som liste</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.1"
+				},
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikke visuelle lister."
+				}
+			}
+		},
+		{
+			"stegnr": "3.1",
+			"spm": "Hvilken liste tester du?",
+			"ht": "<ul><li>Beskriv listen.</li><li>Beskriv plassering.</li></ul><p><strong>Merk:</strong> Hvis det er flere lister på siden, registrerer du en og en.</p>",
+			"type": "tekst",
+			"label": "Liste:",
+			"multilinje": true,
+			"oblig": true,
+			"ruting": {
+				"alle": {
+					"type": "gaaTil",
+					"steg": "3.2"
+				}
+			}
+		},
+		{
+			"stegnr": "3.2",
+			"spm": "Er listen en nummerert liste?",
+			"ht": "<p><strong>Merk:</strong> Lister kan være nøstet.</p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.3"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.6"
+				}
+			}
+		},
+		{
+			"stegnr": "3.3",
+			"spm": "Er listen kodet med &lt;ol&gt;-elementet i HTML?",
+			"ht": "<ul><li><code>&lt;ol&gt;</code>-element skal ligge før første punkt i listen.</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"H48"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.4"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell nummerert liste er ikke korrekt kodet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.4",
+			"spm": "Er listen kodet slik at den ignoreres av hjelpemiddelteknologi?",
+			"ht": "<ul><li>Inspiser listen</li><li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Accessibility node not exposed\".</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell nummerert liste er kodet slik at den ignoreres av hjelpemiddelteknologi."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.5"
+				}
+			},
+			"kilde": [
+				"F92"
+			]
+		},
+		{
+			"stegnr": "3.5",
+			"spm": "Er hvert punkt i listen kodet med &lt;li&gt;-elementet?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"H48"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell nummerert liste er korrekt kodet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell nummerert liste er ikke korrekt kodet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.6",
+			"spm": "Er listen en unummerert liste?",
+			"ht": "<p><strong>Merk:</strong> Lister kan være nøstet. </p>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.7"
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.10"
+				}
+			}
+		},
+		{
+			"stegnr": "3.7",
+			"spm": "Er listen kodet med &lt;ul&gt;-elementet i HTML?",
+			"ht": "<ul><li><code>&lt;ul&gt;-element</code> skal ligge før første punkt i listen.</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"H48"
+			],
+			"ruting": {
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.8"
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell unummerert liste er ikke korrekt kodet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.8",
+			"spm": "Er listen kodet slik at den ignoreres av hjelpemiddelteknologi?",
+			"ht": "<ul><li>Inspiser listen</li><li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Accessibility node not exposed\".</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell unummerert liste er kodet slik at den ignoreres av hjelpemiddelteknologi."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.9"
+				}
+			},
+			"kilde": [
+				"F92"
+			]
+		},
+		{
+			"stegnr": "3.9",
+			"spm": "Er hvert punkt i listen kodet med &lt;li&gt;-elementet?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"H48"
+			],
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell unummerert liste er korrekt kodet."
+				},
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell unummerert liste er ikke korrekt kodet."
+				}
+			}
+		},
+		{
+			"stegnr": "3.10",
+			"spm": "Er listen en beskrivende liste?",
+			"ht": "<ul><li>Beskrivende lister grupperer ulike termer/navn med beskrivelser, forklaringer eller definisjoner</li><li>Beskrivende lister har minst to nivå<br> </li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"nei": {
+					"type": "ikkjeForekomst",
+					"utfall": "Testside har ikke visuelle lister."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.11"
+				}
+			}
+		},
+		{
+			"stegnr": "3.11",
+			"spm": "Er listen kodet med &lt;dl&gt;-elementet i HTML?",
+			"ht": "<ul><li> <code>&lt;dl&gt;</code>-element skal ligge før første punkt i listen</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"H40",
+				"H48"
+			],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell beskrivende liste er ikke korrekt kodet."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.12"
+				}
+			}
+		},
+		{
+			"stegnr": "3.12",
+			"spm": "Er listen kodet slik at den ignoreres av hjelpemiddelteknologi?",
+			"ht": "<ul><li>Inspiser listen</li><li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Accessibility node not exposed\".</li></ul>",
+			"type": "jaNei",
+			"ruting": {
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell beskrivende liste er kodet slik at den ignoreres av hjelpemiddelteknologi."
+				},
+				"nei": {
+					"type": "gaaTil",
+					"steg": "3.13"
+				}
+			},
+			"kilde": [
+				"F92"
+			]
+		},
+		{
+			"stegnr": "3.13",
+			"spm": "Er hver term i listen kodet med &lt;dt&gt;-elementet?",
+			"ht": "",
+			"type": "jaNei",
+			"kilde": [
+				"H40",
+				"H48"
+			],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell beskrivende liste er ikke korrekt kodet."
+				},
+				"ja": {
+					"type": "gaaTil",
+					"steg": "3.14"
+				}
+			}
+		},
+		{
+			"stegnr": "3.14",
+			"spm": "Er alle forklaringene i underlisten kodet med &lt;dd&gt;-elementet?",
+			"ht": "<p><strong>Merk:</strong></p><ul><li>Forklaringene gir en beskrivelse/definisjon på termene i listen. Forklaringene kan ligge med et innrykk under termene i listen.</li></ul>",
+			"type": "jaNei",
+			"kilde": [
+				"H40",
+				"H48"
+			],
+			"ruting": {
+				"nei": {
+					"type": "avslutt",
+					"fasit": "Nei",
+					"utfall": "Visuell beskrivende liste er ikke korrekt kodet."
+				},
+				"ja": {
+					"type": "avslutt",
+					"fasit": "Ja",
+					"utfall": "Visuell beskrivende liste er korrekt kodet."
+				}
+			}
+		}
+	]
 }
