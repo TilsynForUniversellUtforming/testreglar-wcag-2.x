@@ -262,7 +262,7 @@
             "ruting": {
                 "ja": {
                     "type": "gaaTil",
-                    "steg": "3.14"
+                    "steg": "3.12"
                 },
                 "nei": {
                     "type": "avslutt",
@@ -272,7 +272,7 @@
             }
         },
         {
-            "stegnr": "3.14",
+            "stegnr": "3.12",
             "spm": "Gir det lange tekstalternativet en tilstrekkelig beskrivelse av innholdet i bildet?",
             "ht": "<ul><li>sveip og trykk på det lange tekstalternativet, som det korte tekstalternativet refererer til</li><li><p>gjør en skjønnsmessig vurdering av om informasjonen i langt tekstalternativ gir tilstrekkelig informasjon om bildet til brukeren,</p></li></ul><p><strong>Tips:</strong> Et godt langt tekstalternativ gjør det mulig å erstatte bildet med tekstalternativet, uten å miste funksjonalitet eller informasjon. </p>",
             "type": "jaNei",
