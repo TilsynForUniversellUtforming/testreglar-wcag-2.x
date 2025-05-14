@@ -65,7 +65,7 @@
                 },
                 "nei": {
                     "type": "ikkjeForekomst",
-                    "utfall": "Det finnes ikke-lenket bilde på testsiden, som er unntatt kravet."
+                    "utfall": "Det ikke-lenkede bilde er unntatt kravet."
                 }
             }
         },
