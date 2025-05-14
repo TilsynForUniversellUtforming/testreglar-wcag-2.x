@@ -74,11 +74,11 @@
 		{
 			"stegnr": "3.3",
 			"spm": "Er listen korrekt kodet som nummerert liste?",
-			"ht": "<ul><li>Sveip til listen du tester og sjekk om skjermleser leser:</li><li style=\"list-style-type: none;\"><ul><li>Første listeelement:<ul><li>første listeelement med nummer eller bokstav og \"Starten på listen\"</li></ul></li><li>Listeelementer mellom første listeelement og siste listeelement<ul><li>nummer eller bokstav for det aktuelle listeelementet</li></ul></li><li>Siste listeelement<ul><li>Nummer eller bokstav og avslutter med \"Slutten av liste\" eller antall av totalt antall listeelementer</li></ul></li></ul></li></ul><p> </p><p> </p><p> </p>",
+			"ht": "<ul><li>Sveip til listen du tester og sjekk om skjermleser leser:</li><li style=\"list-style-type: none;\"><ul><li>Første listeelement:<ul><li>første listeelement med nummer eller bokstav og \"Starten på listen\"</li></ul></li><li>Listeelementer mellom første listeelement og siste listeelement<ul><li>nummer eller bokstav for det aktuelle listeelementet</li></ul></li><li>Siste listeelement<ul><li>Nummer eller bokstav og avslutter med \"Slutten av liste\" eller antall av totalt antall listeelementer</li></ul></li></ul></li></ul>",
 			"type": "jaNei",
 			"kilde": [
-				"ListItemStyle",
-				"BulletSpan"
+				"BulletSpan",
+				"ListItemStyle"
 			],
 			"ruting": {
 				"ja": {
@@ -96,7 +96,7 @@
 		{
 			"stegnr": "3.4",
 			"spm": "Er liste en unummerert liste?",
-			"ht": "<p><strong>Merk:</strong> Lister kan være nøsta.</p>",
+			"ht": "<p><strong>Merk:</strong> Lister kan være nøstet.</p>",
 			"type": "jaNei",
 			"ruting": {
 				"nei": {
