@@ -1,72 +1,12 @@
 {
   "gjeldane": [
     {
-      "id": "app-1.1.1a",
-      "file": "/Testreglar/1.1.1/App/app-1.1.1a.json"
-    },
-    {
-      "id": "app-1.1.1f",
-      "file": "/Testreglar/1.1.1/App/app-1.1.1f.json"
-    },
-    {
-      "id": "app111a2025",
-      "file": "/Testreglar/1.1.1/App/app111a2025.json"
-    },
-    {
-      "id": "1.1.1a",
-      "file": "/Testreglar/1.1.1/Nett/1.1.1a.json"
-    },
-    {
-      "id": "1.1.1b",
-      "file": "/Testreglar/1.1.1/Nett/1.1.1b.json"
-    },
-    {
-      "id": "1.1.1c",
-      "file": "/Testreglar/1.1.1/Nett/1.1.1c.json"
-    },
-    {
-      "id": "1.1.1d",
-      "file": "/Testreglar/1.1.1/Nett/1.1.1d.json"
-    },
-    {
-      "id": "111a2025",
-      "file": "/Testreglar/1.1.1/Nett/111a2025.json"
-    },
-    {
-      "id": "111b2025",
-      "file": "/Testreglar/1.1.1/Nett/111b2025.json"
-    },
-    {
-      "id": "nett-1.1.1a",
-      "file": "/Testreglar/1.1.1/Nett/nett-1.1.1a.json"
-    },
-    {
-      "id": "nett-1.1.1b",
-      "file": "/Testreglar/1.1.1/Nett/nett-1.1.1b.json"
-    },
-    {
-      "id": "nett-1.1.1c",
-      "file": "/Testreglar/1.1.1/Nett/nett-1.1.1c.json"
-    },
-    {
-      "id": "nett-1.1.1d",
-      "file": "/Testreglar/1.1.1/Nett/nett-1.1.1d.json"
-    },
-    {
-      "id": "nett-1.1.1f",
-      "file": "/Testreglar/1.1.1/Nett/nett-1.1.1f.json"
-    },
-    {
       "id": "app-1.2.1a",
       "file": "/Testreglar/1.2.1/App/app-1.2.1a.json"
     },
     {
       "id": "app-1.2.1b",
       "file": "/Testreglar/1.2.1/App/app-1.2.1b.json"
-    },
-    {
-      "id": "app-1.2.2a",
-      "file": "/Testreglar/1.2.2/App/app-1.2.2a.json"
     },
     {
       "id": "1.2.1a",
@@ -85,20 +25,16 @@
       "file": "/Testreglar/1.2.1/Nett/nett-1.2.1b.json"
     },
     {
-      "id": "1.2.2a",
-      "file": "/Testreglar/1.2.2/Nett/1.2.2a.json"
+      "id": "app-1.1.1a",
+      "file": "/Testreglar/1.1.1/App/app-1.1.1a.json"
     },
     {
-      "id": "nett-1.2.2a",
-      "file": "/Testreglar/1.2.2/Nett/nett-1.2.2a.json"
+      "id": "app-1.1.1f",
+      "file": "/Testreglar/1.1.1/App/app-1.1.1f.json"
     },
     {
-      "id": "app-1.2.5a",
-      "file": "/Testreglar/1.2.5/App/app-1.2.5a.json"
-    },
-    {
-      "id": "nett-1.2.5a",
-      "file": "/Testreglar/1.2.5/Nett/nett-1.2.5a.json"
+      "id": "app111a2025",
+      "file": "/Testreglar/1.1.1/App/app111a2025.json"
     },
     {
       "id": "app-1.3.1a",
@@ -161,6 +97,82 @@
       "file": "/Testreglar/1.3.1/Nett/nett-1.3.1f.json"
     },
     {
+      "id": "1.1.1a",
+      "file": "/Testreglar/1.1.1/Nett/1.1.1a.json"
+    },
+    {
+      "id": "1.1.1b",
+      "file": "/Testreglar/1.1.1/Nett/1.1.1b.json"
+    },
+    {
+      "id": "1.1.1c",
+      "file": "/Testreglar/1.1.1/Nett/1.1.1c.json"
+    },
+    {
+      "id": "1.1.1d",
+      "file": "/Testreglar/1.1.1/Nett/1.1.1d.json"
+    },
+    {
+      "id": "111a2025",
+      "file": "/Testreglar/1.1.1/Nett/111a2025.json"
+    },
+    {
+      "id": "111b2025",
+      "file": "/Testreglar/1.1.1/Nett/111b2025.json"
+    },
+    {
+      "id": "nett-1.1.1a",
+      "file": "/Testreglar/1.1.1/Nett/nett-1.1.1a.json"
+    },
+    {
+      "id": "nett-1.1.1b",
+      "file": "/Testreglar/1.1.1/Nett/nett-1.1.1b.json"
+    },
+    {
+      "id": "nett-1.1.1c",
+      "file": "/Testreglar/1.1.1/Nett/nett-1.1.1c.json"
+    },
+    {
+      "id": "nett-1.1.1d",
+      "file": "/Testreglar/1.1.1/Nett/nett-1.1.1d.json"
+    },
+    {
+      "id": "nett-1.1.1f",
+      "file": "/Testreglar/1.1.1/Nett/nett-1.1.1f.json"
+    },
+    {
+      "id": "131aDoku2025",
+      "file": "/Testreglar/1.3.1/Dok/131aDoku2025.json"
+    },
+    {
+      "id": "131cDoku2025",
+      "file": "/Testreglar/1.3.1/Dok/131cDoku2025.json"
+    },
+    {
+      "id": "1.3.3a",
+      "file": "/Testreglar/1.3.3/Nett/1.3.3a.json"
+    },
+    {
+      "id": "nett-1.3.3a",
+      "file": "/Testreglar/1.3.3/Nett/nett-1.3.3a.json"
+    },
+    {
+      "id": "app-1.2.5a",
+      "file": "/Testreglar/1.2.5/App/app-1.2.5a.json"
+    },
+    {
+      "id": "nett-1.2.5a",
+      "file": "/Testreglar/1.2.5/Nett/nett-1.2.5a.json"
+    },
+    {
+      "id": "app-1.3.3a",
+      "file": "/Testreglar/1.3.3/App/app-1.3.3a.json"
+    },
+    {
+      "id": "app-1.3.4a",
+      "file": "/Testreglar/1.3.4/App/app-1.3.4a.json"
+    },
+    {
       "id": "app-1.3.2a",
       "file": "/Testreglar/1.3.2/App/app-1.3.2a.json"
     },
@@ -173,24 +185,24 @@
       "file": "/Testreglar/1.3.2/Nett/nett-1.3.2a.json"
     },
     {
-      "id": "app-1.3.3a",
-      "file": "/Testreglar/1.3.3/App/app-1.3.3a.json"
+      "id": "app-1.4.10a",
+      "file": "/Testreglar/1.4.10/App/app-1.4.10a.json"
     },
     {
-      "id": "1.3.3a",
-      "file": "/Testreglar/1.3.3/Nett/1.3.3a.json"
+      "id": "app1410a2025",
+      "file": "/Testreglar/1.4.10/App/app1410a2025.json"
     },
     {
-      "id": "nett-1.3.3a",
-      "file": "/Testreglar/1.3.3/Nett/nett-1.3.3a.json"
+      "id": "1.2.2a",
+      "file": "/Testreglar/1.2.2/Nett/1.2.2a.json"
     },
     {
-      "id": "app-1.3.4a",
-      "file": "/Testreglar/1.3.4/App/app-1.3.4a.json"
+      "id": "nett-1.2.2a",
+      "file": "/Testreglar/1.2.2/Nett/nett-1.2.2a.json"
     },
     {
-      "id": "app-1.3.5a",
-      "file": "/Testreglar/1.3.5/App/app-1.3.5a.json"
+      "id": "app-1.2.2a",
+      "file": "/Testreglar/1.2.2/App/app-1.2.2a.json"
     },
     {
       "id": "app-1.4.1a",
@@ -205,6 +217,14 @@
       "file": "/Testreglar/1.4.1/App/app-1.4.1c.json"
     },
     {
+      "id": "1410a2025",
+      "file": "/Testreglar/1.4.10/Nett/1410a2025.json"
+    },
+    {
+      "id": "nett-1.4.10a",
+      "file": "/Testreglar/1.4.10/Nett/nett-1.4.10a.json"
+    },
+    {
       "id": "nett-1.4.1a",
       "file": "/Testreglar/1.4.1/Nett/nett-1.4.1a.json"
     },
@@ -217,20 +237,8 @@
       "file": "/Testreglar/1.4.1/Nett/nett-1.4.1c.json"
     },
     {
-      "id": "app-1.4.10a",
-      "file": "/Testreglar/1.4.10/App/app-1.4.10a.json"
-    },
-    {
-      "id": "app1410a2025",
-      "file": "/Testreglar/1.4.10/App/app1410a2025.json"
-    },
-    {
-      "id": "1410a2025",
-      "file": "/Testreglar/1.4.10/Nett/1410a2025.json"
-    },
-    {
-      "id": "nett-1.4.10a",
-      "file": "/Testreglar/1.4.10/Nett/nett-1.4.10a.json"
+      "id": "app-1.3.5a",
+      "file": "/Testreglar/1.3.5/App/app-1.3.5a.json"
     },
     {
       "id": "app-1.4.11a",
@@ -257,6 +265,10 @@
       "file": "/Testreglar/1.4.11/Nett/nett-1.4.11c.json"
     },
     {
+      "id": "nett-1.4.12a",
+      "file": "/Testreglar/1.4.12/Nett/nett-1.4.12a.json"
+    },
+    {
       "id": "nett-1.4.13a",
       "file": "/Testreglar/1.4.13/Nett/nett-1.4.13a.json"
     },
@@ -265,8 +277,20 @@
       "file": "/Testreglar/1.4.13/Nett/nett-1.4.13b.json"
     },
     {
-      "id": "nett-1.4.12a",
-      "file": "/Testreglar/1.4.12/Nett/nett-1.4.12a.json"
+      "id": "1.4.2a",
+      "file": "/Testreglar/1.4.2/Nett/1.4.2a.json"
+    },
+    {
+      "id": "nett-1.4.2a",
+      "file": "/Testreglar/1.4.2/Nett/nett-1.4.2a.json"
+    },
+    {
+      "id": "app-1.4.2a",
+      "file": "/Testreglar/1.4.2/App/app-1.4.2a.json"
+    },
+    {
+      "id": "app-1.4.4a",
+      "file": "/Testreglar/1.4.4/App/app-1.4.4a.json"
     },
     {
       "id": "app-1.4.3a",
@@ -275,6 +299,18 @@
     {
       "id": "app143a2025",
       "file": "/Testreglar/1.4.3/App/app143a2025.json"
+    },
+    {
+      "id": "app-2.1.2a",
+      "file": "/Testreglar/2.1.2/App/app-2.1.2a.json"
+    },
+    {
+      "id": "nett-1.4.4a",
+      "file": "/Testreglar/1.4.4/Nett/nett-1.4.4a.json"
+    },
+    {
+      "id": "nett-2.1.2a",
+      "file": "/Testreglar/2.1.2/Nett/nett-2.1.2a.json"
     },
     {
       "id": "1.4.3a",
@@ -305,30 +341,6 @@
       "file": "/Testreglar/1.4.3/Nett/nett-1.4.3b.json"
     },
     {
-      "id": "app-1.4.2a",
-      "file": "/Testreglar/1.4.2/App/app-1.4.2a.json"
-    },
-    {
-      "id": "1.4.2a",
-      "file": "/Testreglar/1.4.2/Nett/1.4.2a.json"
-    },
-    {
-      "id": "nett-1.4.2a",
-      "file": "/Testreglar/1.4.2/Nett/nett-1.4.2a.json"
-    },
-    {
-      "id": "app-1.4.4a",
-      "file": "/Testreglar/1.4.4/App/app-1.4.4a.json"
-    },
-    {
-      "id": "nett-1.4.4a",
-      "file": "/Testreglar/1.4.4/Nett/nett-1.4.4a.json"
-    },
-    {
-      "id": "app-1.4.5a",
-      "file": "/Testreglar/1.4.5/App/app-1.4.5a.json"
-    },
-    {
       "id": "1.4.5a",
       "file": "/Testreglar/1.4.5/Nett/1.4.5a.json"
     },
@@ -337,24 +349,8 @@
       "file": "/Testreglar/1.4.5/Nett/nett-1.4.5a.json"
     },
     {
-      "id": "nett-2.1.4a",
-      "file": "/Testreglar/2.1.4/Nett/nett-2.1.4a.json"
-    },
-    {
-      "id": "app-2.1.2a",
-      "file": "/Testreglar/2.1.2/App/app-2.1.2a.json"
-    },
-    {
-      "id": "nett-2.1.2a",
-      "file": "/Testreglar/2.1.2/Nett/nett-2.1.2a.json"
-    },
-    {
-      "id": "211app2025",
-      "file": "/Testreglar/2.1.1/App/211app2025.json"
-    },
-    {
-      "id": "app-2.1.1a",
-      "file": "/Testreglar/2.1.1/App/app-2.1.1a.json"
+      "id": "app-1.4.5a",
+      "file": "/Testreglar/1.4.5/App/app-1.4.5a.json"
     },
     {
       "id": "211nett2025",
@@ -365,24 +361,32 @@
       "file": "/Testreglar/2.1.1/Nett/nett-2.1.1a.json"
     },
     {
+      "id": "2.3.1a",
+      "file": "/Testreglar/2.3.1/Nett/2.3.1a.json"
+    },
+    {
+      "id": "nett-2.3.1a",
+      "file": "/Testreglar/2.3.1/Nett/nett-2.3.1a.json"
+    },
+    {
+      "id": "211app2025",
+      "file": "/Testreglar/2.1.1/App/211app2025.json"
+    },
+    {
+      "id": "app-2.1.1a",
+      "file": "/Testreglar/2.1.1/App/app-2.1.1a.json"
+    },
+    {
+      "id": "app-2.3.1a",
+      "file": "/Testreglar/2.3.1/App/app-2.3.1a.json"
+    },
+    {
       "id": "app-2.2.1a",
       "file": "/Testreglar/2.2.1/App/app-2.2.1a.json"
     },
     {
-      "id": "2.2.1a",
-      "file": "/Testreglar/2.2.1/Nett/2.2.1a.json"
-    },
-    {
-      "id": "nett-2.2.1a",
-      "file": "/Testreglar/2.2.1/Nett/nett-2.2.1a.json"
-    },
-    {
-      "id": "app-2.2.2a",
-      "file": "/Testreglar/2.2.2/App/app-2.2.2a.json"
-    },
-    {
-      "id": "app-2.2.2b",
-      "file": "/Testreglar/2.2.2/App/app-2.2.2b.json"
+      "id": "nett-2.1.4a",
+      "file": "/Testreglar/2.1.4/Nett/nett-2.1.4a.json"
     },
     {
       "id": "2.2.2a",
@@ -401,16 +405,32 @@
       "file": "/Testreglar/2.2.2/Nett/nett-2.2.2b.json"
     },
     {
-      "id": "app-2.3.1a",
-      "file": "/Testreglar/2.3.1/App/app-2.3.1a.json"
+      "id": "2.2.1a",
+      "file": "/Testreglar/2.2.1/Nett/2.2.1a.json"
     },
     {
-      "id": "2.3.1a",
-      "file": "/Testreglar/2.3.1/Nett/2.3.1a.json"
+      "id": "nett-2.2.1a",
+      "file": "/Testreglar/2.2.1/Nett/nett-2.2.1a.json"
     },
     {
-      "id": "nett-2.3.1a",
-      "file": "/Testreglar/2.3.1/Nett/nett-2.3.1a.json"
+      "id": "app-2.2.2a",
+      "file": "/Testreglar/2.2.2/App/app-2.2.2a.json"
+    },
+    {
+      "id": "app-2.2.2b",
+      "file": "/Testreglar/2.2.2/App/app-2.2.2b.json"
+    },
+    {
+      "id": "app-2.4.4a",
+      "file": "/Testreglar/2.4.4/App/app-2.4.4a.json"
+    },
+    {
+      "id": "2.4.1a",
+      "file": "/Testreglar/2.4.1/Nett/2.4.1a.json"
+    },
+    {
+      "id": "nett-2.4.1a",
+      "file": "/Testreglar/2.4.1/Nett/nett-2.4.1a.json"
     },
     {
       "id": "2.4.2a",
@@ -421,8 +441,16 @@
       "file": "/Testreglar/2.4.2/Nett/nett-2.4.2a.json"
     },
     {
-      "id": "app-2.4.4a",
-      "file": "/Testreglar/2.4.4/App/app-2.4.4a.json"
+      "id": "242aDoku2025",
+      "file": "/Testreglar/2.4.2/Dok/242aDoku2025.json"
+    },
+    {
+      "id": "2.4.4a",
+      "file": "/Testreglar/2.4.4/Nett/2.4.4a.json"
+    },
+    {
+      "id": "nett-2.4.4a",
+      "file": "/Testreglar/2.4.4/Nett/nett-2.4.4a.json"
     },
     {
       "id": "2.4.3a",
@@ -433,12 +461,40 @@
       "file": "/Testreglar/2.4.3/Nett/nett-2.4.3a.json"
     },
     {
-      "id": "2.4.4a",
-      "file": "/Testreglar/2.4.4/Nett/2.4.4a.json"
+      "id": "2.4.5a",
+      "file": "/Testreglar/2.4.5/Nett/2.4.5a.json"
     },
     {
-      "id": "nett-2.4.4a",
-      "file": "/Testreglar/2.4.4/Nett/nett-2.4.4a.json"
+      "id": "nett-2.4.5a",
+      "file": "/Testreglar/2.4.5/Nett/nett-2.4.5a.json"
+    },
+    {
+      "id": "247aNett2025",
+      "file": "/Testreglar/2.4.7/Nett/247aNett2025.json"
+    },
+    {
+      "id": "nett-2.4.7a",
+      "file": "/Testreglar/2.4.7/Nett/nett-2.4.7a.json"
+    },
+    {
+      "id": "nett-2.5.1a",
+      "file": "/Testreglar/2.5.1/Nett/nett-2.5.1a.json"
+    },
+    {
+      "id": "app-2.5.1a",
+      "file": "/Testreglar/2.5.1/App/app-2.5.1a.json"
+    },
+    {
+      "id": "253aNett2025",
+      "file": "/Testreglar/2.5.3/Nett/253aNett2025.json"
+    },
+    {
+      "id": "nett-2.5.3a",
+      "file": "/Testreglar/2.5.3/Nett/nett-2.5.3a.json"
+    },
+    {
+      "id": "app-2.5.2a",
+      "file": "/Testreglar/2.5.2/App/app-2.5.2a.json"
     },
     {
       "id": "246bApp2025",
@@ -453,24 +509,16 @@
       "file": "/Testreglar/2.4.6/App/app-2.4.6b.json"
     },
     {
-      "id": "2.4.1a",
-      "file": "/Testreglar/2.4.1/Nett/2.4.1a.json"
-    },
-    {
-      "id": "nett-2.4.1a",
-      "file": "/Testreglar/2.4.1/Nett/nett-2.4.1a.json"
-    },
-    {
-      "id": "247aNett2025",
-      "file": "/Testreglar/2.4.7/Nett/247aNett2025.json"
-    },
-    {
-      "id": "nett-2.4.7a",
-      "file": "/Testreglar/2.4.7/Nett/nett-2.4.7a.json"
-    },
-    {
       "id": "nett-2.5.2a",
       "file": "/Testreglar/2.5.2/Nett/nett-2.5.2a.json"
+    },
+    {
+      "id": "253aApp2025",
+      "file": "/Testreglar/2.5.3/App/253aApp2025.json"
+    },
+    {
+      "id": "app-2.5.3a",
+      "file": "/Testreglar/2.5.3/App/app-2.5.3a.json"
     },
     {
       "id": "2.4.6a",
@@ -493,44 +541,12 @@
       "file": "/Testreglar/2.4.6/Nett/nett-2.4.6b.json"
     },
     {
-      "id": "2.4.5a",
-      "file": "/Testreglar/2.4.5/Nett/2.4.5a.json"
-    },
-    {
-      "id": "nett-2.4.5a",
-      "file": "/Testreglar/2.4.5/Nett/nett-2.4.5a.json"
-    },
-    {
-      "id": "app-2.5.1a",
-      "file": "/Testreglar/2.5.1/App/app-2.5.1a.json"
-    },
-    {
-      "id": "app-2.5.2a",
-      "file": "/Testreglar/2.5.2/App/app-2.5.2a.json"
-    },
-    {
-      "id": "nett-2.5.1a",
-      "file": "/Testreglar/2.5.1/Nett/nett-2.5.1a.json"
-    },
-    {
-      "id": "253aApp2025",
-      "file": "/Testreglar/2.5.3/App/253aApp2025.json"
-    },
-    {
-      "id": "app-2.5.3a",
-      "file": "/Testreglar/2.5.3/App/app-2.5.3a.json"
-    },
-    {
       "id": "app-3.1.1a",
       "file": "/Testreglar/3.1.1/App/app-3.1.1a.json"
     },
     {
-      "id": "253aNett2025",
-      "file": "/Testreglar/2.5.3/Nett/253aNett2025.json"
-    },
-    {
-      "id": "nett-2.5.3a",
-      "file": "/Testreglar/2.5.3/Nett/nett-2.5.3a.json"
+      "id": "311aDoku2025",
+      "file": "/Testreglar/3.1.1/Dok/311aDoku2025.json"
     },
     {
       "id": "3.1.1a",
@@ -545,36 +561,12 @@
       "file": "/Testreglar/2.5.4/App/app-2.5.4a.json"
     },
     {
-      "id": "nett-2.5.4a",
-      "file": "/Testreglar/2.5.4/Nett/nett-2.5.4a.json"
-    },
-    {
-      "id": "app-3.2.2a",
-      "file": "/Testreglar/3.2.2/App/app-3.2.2a.json"
-    },
-    {
-      "id": "3.1.2a",
-      "file": "/Testreglar/3.1.2/Nett/3.1.2a.json"
-    },
-    {
-      "id": "nett-3.1.2a",
-      "file": "/Testreglar/3.1.2/Nett/nett-3.1.2a.json"
-    },
-    {
       "id": "3.2.1a",
       "file": "/Testreglar/3.2.1/Nett/3.2.1a.json"
     },
     {
       "id": "nett-3.2.1a",
       "file": "/Testreglar/3.2.1/Nett/nett-3.2.1a.json"
-    },
-    {
-      "id": "3.2.3a",
-      "file": "/Testreglar/3.2.3/Nett/3.2.3a.json"
-    },
-    {
-      "id": "nett-3.2.3a",
-      "file": "/Testreglar/3.2.3/Nett/nett-3.2.3a.json"
     },
     {
       "id": "3.2.2a",
@@ -585,12 +577,20 @@
       "file": "/Testreglar/3.2.2/Nett/nett-3.2.2a.json"
     },
     {
-      "id": "3.2.4a",
-      "file": "/Testreglar/3.2.4/Nett/3.2.4a.json"
+      "id": "nett-2.5.4a",
+      "file": "/Testreglar/2.5.4/Nett/nett-2.5.4a.json"
     },
     {
-      "id": "nett-3.2.4a",
-      "file": "/Testreglar/3.2.4/Nett/nett-3.2.4a.json"
+      "id": "3.2.3a",
+      "file": "/Testreglar/3.2.3/Nett/3.2.3a.json"
+    },
+    {
+      "id": "nett-3.2.3a",
+      "file": "/Testreglar/3.2.3/Nett/nett-3.2.3a.json"
+    },
+    {
+      "id": "app-3.2.2a",
+      "file": "/Testreglar/3.2.2/App/app-3.2.2a.json"
     },
     {
       "id": "331aApp2025",
@@ -611,6 +611,30 @@
     {
       "id": "app-3.3.1b",
       "file": "/Testreglar/3.3.1/App/app-3.3.1b.json"
+    },
+    {
+      "id": "3.1.2a",
+      "file": "/Testreglar/3.1.2/Nett/3.1.2a.json"
+    },
+    {
+      "id": "nett-3.1.2a",
+      "file": "/Testreglar/3.1.2/Nett/nett-3.1.2a.json"
+    },
+    {
+      "id": "3.2.4a",
+      "file": "/Testreglar/3.2.4/Nett/3.2.4a.json"
+    },
+    {
+      "id": "nett-3.2.4a",
+      "file": "/Testreglar/3.2.4/Nett/nett-3.2.4a.json"
+    },
+    {
+      "id": "332aApp2025",
+      "file": "/Testreglar/3.3.2/App/332aApp2025.json"
+    },
+    {
+      "id": "app-3.3.2a",
+      "file": "/Testreglar/3.3.2/App/app-3.3.2a.json"
     },
     {
       "id": "3.3.1a",
@@ -637,28 +661,8 @@
       "file": "/Testreglar/3.3.1/Nett/nett-3.3.1b.json"
     },
     {
-      "id": "332aApp2025",
-      "file": "/Testreglar/3.3.2/App/332aApp2025.json"
-    },
-    {
-      "id": "app-3.3.2a",
-      "file": "/Testreglar/3.3.2/App/app-3.3.2a.json"
-    },
-    {
-      "id": "3.3.4a",
-      "file": "/Testreglar/3.3.4/Nett/3.3.4a.json"
-    },
-    {
-      "id": "3.3.4b",
-      "file": "/Testreglar/3.3.4/Nett/3.3.4b.json"
-    },
-    {
-      "id": "nett-3.3.4a",
-      "file": "/Testreglar/3.3.4/Nett/nett-3.3.4a.json"
-    },
-    {
-      "id": "nett-3.3.4b",
-      "file": "/Testreglar/3.3.4/Nett/nett-3.3.4b.json"
+      "id": "app-3.3.3a",
+      "file": "/Testreglar/3.3.3/App/app-3.3.3a.json"
     },
     {
       "id": "3.3.2a",
@@ -671,34 +675,6 @@
     {
       "id": "nett-3.3.2a",
       "file": "/Testreglar/3.3.2/Nett/nett-3.3.2a.json"
-    },
-    {
-      "id": "app-3.3.4a",
-      "file": "/Testreglar/3.3.4/App/app-3.3.4a.json"
-    },
-    {
-      "id": "app-3.3.4b",
-      "file": "/Testreglar/3.3.4/App/app-3.3.4b.json"
-    },
-    {
-      "id": "app-3.3.3a",
-      "file": "/Testreglar/3.3.3/App/app-3.3.3a.json"
-    },
-    {
-      "id": "3.3.3a",
-      "file": "/Testreglar/3.3.3/Nett/3.3.3a.json"
-    },
-    {
-      "id": "nett-3.3.3a",
-      "file": "/Testreglar/3.3.3/Nett/nett-3.3.3a.json"
-    },
-    {
-      "id": "412aApp2025",
-      "file": "/Testreglar/4.1.2/App/412aApp2025.json"
-    },
-    {
-      "id": "app-4.1.2a",
-      "file": "/Testreglar/4.1.2/App/app-4.1.2a.json"
     },
     {
       "id": "4.1.2a",
@@ -741,8 +717,44 @@
       "file": "/Testreglar/4.1.2/Nett/nett-4.1.2d.json"
     },
     {
-      "id": "4.1.1a",
-      "file": "/Testreglar/4.1.1/Nett/4.1.1a.json"
+      "id": "3.3.3a",
+      "file": "/Testreglar/3.3.3/Nett/3.3.3a.json"
+    },
+    {
+      "id": "nett-3.3.3a",
+      "file": "/Testreglar/3.3.3/Nett/nett-3.3.3a.json"
+    },
+    {
+      "id": "412aApp2025",
+      "file": "/Testreglar/4.1.2/App/412aApp2025.json"
+    },
+    {
+      "id": "app-4.1.2a",
+      "file": "/Testreglar/4.1.2/App/app-4.1.2a.json"
+    },
+    {
+      "id": "3.3.4a",
+      "file": "/Testreglar/3.3.4/Nett/3.3.4a.json"
+    },
+    {
+      "id": "3.3.4b",
+      "file": "/Testreglar/3.3.4/Nett/3.3.4b.json"
+    },
+    {
+      "id": "nett-3.3.4a",
+      "file": "/Testreglar/3.3.4/Nett/nett-3.3.4a.json"
+    },
+    {
+      "id": "nett-3.3.4b",
+      "file": "/Testreglar/3.3.4/Nett/nett-3.3.4b.json"
+    },
+    {
+      "id": "app-3.3.4a",
+      "file": "/Testreglar/3.3.4/App/app-3.3.4a.json"
+    },
+    {
+      "id": "app-3.3.4b",
+      "file": "/Testreglar/3.3.4/App/app-3.3.4b.json"
     },
     {
       "id": "413aNett2025",
@@ -751,6 +763,10 @@
     {
       "id": "nett-4.1.3a",
       "file": "/Testreglar/4.1.3/Nett/nett-4.1.3a.json"
+    },
+    {
+      "id": "4.1.1a",
+      "file": "/Testreglar/4.1.1/Nett/4.1.1a.json"
     }
   ],
   "utdaterte": [
@@ -771,12 +787,16 @@
       "file": "/Utdatert/2.4.7/2.4.7a.json"
     },
     {
+      "id": "1.3.4a-2022",
+      "file": "/Utdatert/1.3.4/Nett/1.3.4a-2022.json"
+    },
+    {
       "id": "app-1.1.1a-2022",
       "file": "/Utdatert/1.1.1/App/app-1.1.1a-2022.json"
     },
     {
-      "id": "1.3.4a-2022",
-      "file": "/Utdatert/1.3.4/Nett/1.3.4a-2022.json"
+      "id": "1.2.5a-2022",
+      "file": "/Utdatert/1.2.5/Nett/1.2.5a-2022.json"
     },
     {
       "id": "app-android-1.3.5a",
@@ -785,6 +805,10 @@
     {
       "id": "app-ios-1.3.5a",
       "file": "/Utdatert/1.3.5/App/app-ios-1.3.5a.json"
+    },
+    {
+      "id": "1.4.10a-2022",
+      "file": "/Utdatert/1.4.10/Nett/1.4.10a-2022.json"
     },
     {
       "id": "1.4.1a",
@@ -807,14 +831,6 @@
       "file": "/Utdatert/1.4.4/Nett/1.4.4a.json"
     },
     {
-      "id": "1.4.10a-2022",
-      "file": "/Utdatert/1.4.10/Nett/1.4.10a-2022.json"
-    },
-    {
-      "id": "1.2.5a-2022",
-      "file": "/Utdatert/1.2.5/Nett/1.2.5a-2022.json"
-    },
-    {
       "id": "app-2.1.2a-2022",
       "file": "/Utdatert/2.1.2/app/app-2.1.2a-2022.json"
     },
@@ -823,20 +839,20 @@
       "file": "/Utdatert/2.1.2/nett/2.1.2a.json"
     },
     {
-      "id": "2.5.3a-2022",
-      "file": "/Utdatert/2.5.3/Nett/2.5.3a-2022.json"
+      "id": "app-4.1.2a-2022",
+      "file": "/Utdatert/4.1.2/App/app-4.1.2a-2022.json"
     },
     {
       "id": "app-3.3.2a-2022",
       "file": "/Utdatert/3.3.2/App/app-3.3.2a-2022.json"
     },
     {
-      "id": "app-4.1.2a-2022",
-      "file": "/Utdatert/4.1.2/App/app-4.1.2a-2022.json"
-    },
-    {
       "id": "2.1.4a-2022",
       "file": "/Utdatert/2.1.4/Nett/2.1.4a-2022.json"
+    },
+    {
+      "id": "2.5.3a-2022",
+      "file": "/Utdatert/2.5.3/Nett/2.5.3a-2022.json"
     }
   ]
 }
