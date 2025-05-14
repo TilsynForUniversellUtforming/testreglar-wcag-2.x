@@ -1,424 +1,424 @@
 {
-	"namn": "Nett-1.1.1a Ikke-lenkede bilder har tekstalternativ 2025",
-	"id": "111a2025",
-	"testlabId": 547,
-	"versjon": "1.0",
-	"type": "Nett",
-	"spraak": "nb",
-	"kravTilSamsvar": "<p>For ikke-lenkede bilder er ett av følgende punkter oppfylt:</p><ul><li>Bilder som er meningsbærende, har et kort tekstalternativ som gir same informasjon som bildet eller</li><li>Komplekse, meningsbærende bilder, har både et kort og et langt tekstalternativ som gir samme informasjon som bildet og<br><ul><li>Bildet er programmatisk knyttet til langt tekstalternativ og</li><li>Langt tekstalternativ er kodet som tekst eller</li></ul></li><li>Ikke-tekstlig innhold som er en test, har kort tekstalternativ med en beskrivende identifikasjon av testen eller </li><li>Bilder der formålet er å skape et spesifikt sanseinntrykk, har tekstalternativ med en beskrivende identifikasjon av bildet eller </li><li>Bilder som er ren dekorasjon, brukes utelukkende til visuell formatering eller ikke presenteres for brukerne, kodes det slik at det kan ignoreres av hjelpemiddelteknologi</li></ul>",
-	"side": "2.1",
-	"element": "3.1",
-	"steg": [
-		{
-			"stegnr": "2.1",
-			"spm": "Hvilken side tester du?",
-			"ht": "<p>Angi URL eller side-ID.</p>",
-			"type": "tekst",
-			"label": "URL/Side:",
-			"datalist": "Sideutvalg",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "2.2"
-				}
-			}
-		},
-		{
-			"stegnr": "2.2",
-			"spm": "Finnes det ikke-lenkede bilder på testsiden?",
-			"ht": "",
-			"type": "jaNei",
-			"ruting": {
-				"nei": {
-					"type": "ikkjeForekomst",
-					"utfall": "Testsiden har ingen ikke-lenkede bilder."
-				},
-				"ja": {
-					"type": "gaaTil",
-					"steg": "2.3"
-				}
-			}
-		},
-		{
-			"stegnr": "2.3",
-			"spm": "Er det ikke-lenkede bildet unntatt kravet? ",
-			"ht": "<p><strong>Nettbaserte kart og karttjenester</strong> er som hovedregel unntatt kravene til universell utforming.</p><ul><li><strong>Merk:</strong> Kart ment for navigasjonsformål skal likevel ha nødvendig informasjon tilgjengelig på en annen måte. Dette kan for eksempel være et kart som viser besøksadressen til offentlige virksomheter eller en oversikt over stoppesteder for kollektivtransport.</li></ul><p><strong>Tegneseriehefter-, bøker og tilsvarende: </strong>Per mars 2025 finnes det ikke etablerte, effektive fremgangsmåter, teknologi eller verktøy man kan bruke for å gjøre det meningsbærende visuelle innholdet tegneseriehefter- og bøker eller tilsvarende, universelt utformet på en korrekt og kostnadseffektiv måte. Uu-tilsynet har derfor kommet til at det er en uforholdsmessig stor byrde for virksomhetene å følge kravet, og slike tegneserier er inntil videre unntatt suksesskriterium 1.1.1.</p><ul><li><strong>Merk:</strong> Kortere tegneserier, som singel-panel og tegneseriestriper er likevel omfattet.</li></ul>",
-			"type": "jaNei",
-			"ruting": {
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.1"
-				},
-				"ja": {
-					"type": "ikkjeForekomst",
-					"utfall": "Det finnes ikke-lenket bilde på testsiden, som er unntatt kravet."
-				}
-			}
-		},
-		{
-			"stegnr": "3.1",
-			"spm": "Hvilket bilde tester du?",
-			"ht": "<ul><li>Beskriv bildet</li><li>Beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det er flere bilder på siden, registrerer du ett og ett bilde.</p>",
-			"type": "tekst",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.2"
-				}
-			},
-			"label": "Bilde:",
-			"multilinje": true
-		},
-		{
-			"stegnr": "3.2",
-			"spm": "Er bildet ren dekorasjon?",
-			"ht": "<p><strong>Ren dekorasjon</strong>: Der bildet ikke gir mer informasjon eller funksjonalitet enn tekst som hører til bildet, er bildet vanligvis dekorativt. Dette gjelder eksempelvis et bilde i en artikkel hvor bildet er beskrevet i tekst eller en bølge over nettsiden som skaper en visuell effekt.</p><p><strong>Merk:</strong> Portrettbilder er vanligvis dekorative.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.3"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.5"
-				}
-			},
-			"kilde": [
-				"wcag:ordliste"
-			]
-		},
-		{
-			"stegnr": "3.3",
-			"spm": "Er bildet kodet slik at det er skjult fra \"Accessibility Tree\" og ignoreres av hjelpemiddelteknologi?",
-			"ht": "<p>Sjekk om det står informasjon \"Accessibility node not exposed\" eller en variasjon av dette under \"Computed Properties\".</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.4"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Bilde som er ren dekorasjon, brukes utelukkende til visuell formattering eller presenteres ikke for brukerne, er kodet slik at det ikke ignoreres av hjelpemiddelteknologi."
-				}
-			}
-		},
-		{
-			"stegnr": "3.4",
-			"spm": "Hvordan er bildet kodet?",
-			"ht": "<ul><li>Under Computed Properties i \"Accessibility Tree\", sjekk om det står informasjon \"Element has/is \":</li></ul>",
-			"type": "radio",
-			"ruting": {
-				"alle": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Bilde som er ren dekorasjon, brukes utelukkende til visuell formatering eller presenteres ikke for brukerne, er kodet slik at det ignoreres av hjelpemiddelteknologi."
-				}
-			},
-			"svarArray": [
-				"empty alt text",
-				"role=none",
-				"role=presentation",
-				"aria-hidden",
-				"empty alt text og empty title",
-				"annet"
-			]
-		},
-		{
-			"stegnr": "3.5",
-			"spm": "Er bildet kodet slik at det er skjult fra \"Accessibility Tree\" og ignoreres av hjelpemiddelteknologi?<br><br>",
-			"ht": "<ul><li>Inspiser bildet</li><li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Accessibility node not exposed\".</li></ul>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.6"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.7"
-				}
-			}
-		},
-		{
-			"stegnr": "3.6",
-			"spm": "Hvordan er bildet kodet?",
-			"ht": "<ul><li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Element has/is \":</li></ul>",
-			"type": "radio",
-			"ruting": {
-				"alle": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Meningsbærende bilde er kodet slik at det ignoreres av hjelpemiddelteknologi."
-				}
-			},
-			"svarArray": [
-				"empty alt text",
-				"role=none",
-				"role=presentation",
-				"aria-hidden",
-				"empty alt text and empty title",
-				"annet"
-			]
-		},
-		{
-			"stegnr": "3.7",
-			"spm": "Har bildet et tilgjengelig navn?",
-			"ht": "<ul><li>Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</li></ul>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.8"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Meningsbærende bilde har ikke et tilgjengelig navn."
-				}
-			}
-		},
-		{
-			"stegnr": "3.8",
-			"spm": "Hva er det tilgjengelige navnet til bildet?",
-			"ht": "<p>Registrer det tilgjengelige navnet du har funnet i forrige steg. Kopier innholdet i attributtet \"Name\" under Computed Properties i Accessibility Tree.</p>",
-			"type": "tekst",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.9"
-				}
-			},
-			"label": "Tekstalternativ:",
-			"multilinje": true
-		},
-		{
-			"stegnr": "3.9",
-			"spm": "Hvilket attributt gir tilgjengelig navn til bildet?",
-			"ht": "<ul><li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Tree.</li></ul>",
-			"type": "radio",
-			"ruting": {
-				"alle": {
-					"type": "gaaTil",
-					"steg": "3.10"
-				}
-			},
-			"svarArray": [
-				"aria-labelledby",
-				"aria-label",
-				"alt",
-				"title"
-			]
-		},
-		{
-			"stegnr": "3.10",
-			"spm": "Er bildet en test eller et sanseinntrykk?",
-			"ht": "<p><strong>Test:</strong> Bilde som er en del av en test eller prøve, er bilde der innholdet vil bli ugyldig dersom det blir presentert som tekst. Hensikten med testen forsvinner dersom svaret gis av tekstalternativet.</p><p><strong>Sanseinntrykk:</strong> Ikke-tekstlig innhold der formålet er å skape et spesifikt sanseinntrykk.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.11"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.12"
-				}
-			}
-		},
-		{
-			"stegnr": "3.11",
-			"spm": "Gir det tilgjengelige navnet beskrivende identifikasjon av bildet?",
-			"ht": "<ul><li>Tekstalternativet skal gi en beskrivende identifikasjon av det ikke-tekstlige innholdet,</li><li>Gjør en skjønnsmessig vurdering av om det tilgjengelige navnet identifiserer bildet.</li></ul><p><strong>Test:</strong></p><ul><li>For eksempel: En oppgave som viser et bilde av analog klokke med tidspunkt kl. 14.30 som skal brukes til å svare spørsmål \"Hvor mye er klokken?\"</li><li>Tekstalternativ kan være: \"En klokke viser at den korte timeviseren er halvveis mellom 2 og 3. Den lange minuttviseren peker på 6.\"</li></ul><p><strong>Sanseinntrykk:</strong></p><ul><li>For eksempel: Bilde av en solnedgang over havet, dette bildet kan formidle en visuell opplevelse av varme farger, et mykt lys og en rolig atmosfære</li><li>Tekstalternativ kan være: \"En fredelig skogsti om høsten under solnedgangen, dekket av gyllent løv og omgitt av trær i varme farger, som skaper en rolig og harmonisk stemning\"</li></ul><p> </p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Meningsbærende bilde, som er en test eller et sanseinntrykk, har tekstalternativ som identifiserer at bildet er en test eller et sanseinntrykk."
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Meningsbærende bilde, som er en test eller et sanseinntrykk, har tekstalternativ som ikke identifiserer at bildet er en test eller et sanseinntrykk."
-				}
-			}
-		},
-		{
-			"stegnr": "3.12",
-			"spm": "Gir det tilgjengelige navnet den samme informasjonen som er formidlet av bildet?",
-			"ht": "<p>Gjør en skjønnsmessig vurdering av om det tilgjengelige navnet (tekstalternativet) du fant i forrige steg gir tilstrekkelig informasjon.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.13"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.13"
-				}
-			}
-		},
-		{
-			"stegnr": "3.13",
-			"spm": "Er bildet komplekst?",
-			"ht": "<p>Komplekse bilder inneholder mye informasjon til brukeren, for eksempel:</p><ul><li>Prosess-diagram</li><li>Fysikk-diagram som viser kinetisk energi</li><li>Illustrasjon av hvordan en bilmotor fungerer</li><li>Diagram over cellestruktur</li></ul>",
-			"type": "jaNei",
-			"kilde": [
-				"G95"
-			],
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.14"
-				},
-				"nei": {
-					"type": "regler",
-					"regler": {
-						"1": {
-							"type": "lik",
-							"sjekk": "3.12",
-							"verdi": "Nei",
-							"handling": {
-								"type": "avslutt",
-								"fasit": "Nei",
-								"utfall": "Meningsbærende bilde har tekstalternativ som ikke er beskrivende."
-							}
-						},
-						"2": {
-							"type": "lik",
-							"sjekk": "3.12",
-							"verdi": "Ja",
-							"handling": {
-								"type": "avslutt",
-								"fasit": "Ja",
-								"utfall": "Meningsbærende bilde har beskrivende tekstalternativ."
-							}
-						}
-					}
-				}
-			}
-		},
-		{
-			"stegnr": "3.14",
-			"spm": "Gir det tilgjengelige navnet (kort tekstalternativ) en beskrivende identifikasjon av bildet?",
-			"ht": "<p>Gjør en skjønnsmessig vurdering av om det korte tekstalternativet identifiserer innholdet i bildet.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.15"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Komplekst bilde har kort tekstalternativ som ikke er beskrivende."
-				}
-			},
-			"kilde": [
-				"G74",
-				"G95"
-			]
-		},
-		{
-			"stegnr": "3.15",
-			"spm": "Har bildet attributtet \"aria-describedby\", som ikke er tomt?",
-			"ht": "<p>Slik tester du:</p><ul><li>Inspiser bildet i Chrome</li><li>Bruk Accessibility Tree verktøy i inspiser</li><li>Under Computed Properties, sjekk at attributtet Description ikke er tomt.</li></ul><p><strong>Merk: </strong>Du skal ikke vurdere kvaliteten på teksten i attributtet Description (aria-describedby).</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.19"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.16"
-				}
-			},
-			"kilde": [
-				"ARIA15"
-			]
-		},
-		{
-			"stegnr": "3.16",
-			"spm": "Ligger det et langt tekstalternativ i direkte tilknytning til bildet, i leserekkefølgen?",
-			"ht": "<p><strong>Merk:</strong> For å være i direkte tilknytning, skal teksten ligge enten i, rett før eller rett etter bildet i leserekkefølgen.</p><p><strong>Tips:</strong> Du kan bruke verktøyet Web Developer for å slå av CSS og sjekke om langt tekstalternativ ligger nær bildet i leserekkefølgen.</p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.19"
-				},
-				"nei": {
-					"type": "gaaTil",
-					"steg": "3.17"
-				}
-			},
-			"kilde": [
-				"G74"
-			]
-		},
-		{
-			"stegnr": "3.17",
-			"spm": "Ligger det en mekanisme, i direkte tilknytning til bildet, som fører brukeren til langt tekstalternativ?",
-			"ht": "",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.18"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Komplekst bilde har ikke direkte kobling til langt tekstalternativ."
-				}
-			},
-			"kilde": [
-				"G73"
-			]
-		},
-		{
-			"stegnr": "3.18",
-			"spm": "Er det lange tekstalternativet kodet som tekst?",
-			"ht": "<ul><li>Sjekk om du kan markere teksten med mus eller tastatur. Dette indikerer at teksten er kodet som tekst, og ikke er bilde av tekst, eller</li><li>Sjekk om du finner igjen det aktuelle tekstalternativet i koden. </li></ul><p><strong>Merk: </strong>Teksten kan være løpende tekst, tabell eller lignende. </p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "gaaTil",
-					"steg": "3.19"
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Komplekst bilde har langt tekstalternativ som ikke er kodet som tekst."
-				}
-			}
-		},
-		{
-			"stegnr": "3.19",
-			"spm": "Gir det lange tekstalternativet en tilstrekkelig beskrivelse av innholdet i bildet?",
-			"ht": "<ul><li>Gjør en skjønnsmessig vurdering av om informasjonen i det lange tekstalternativet gir tilstrekkelig informasjon om innholdet i bildet.</li></ul><p><strong>Tips:</strong> Et godt langt tekstalternativ gjør det mulig å erstatte bildet med tekstalternativet, uten å miste funksjonalitet eller informasjon. </p>",
-			"type": "jaNei",
-			"ruting": {
-				"ja": {
-					"type": "avslutt",
-					"fasit": "Ja",
-					"utfall": "Komplekst bilde har beskrivende, langt tekstalternativ."
-				},
-				"nei": {
-					"type": "avslutt",
-					"fasit": "Nei",
-					"utfall": "Komplekst bilde har et langt tekstalternativ, som ikke gir en tilstrekkelig beskrivelse av innholdet i bildet."
-				}
-			},
-			"kilde": [
-				"F67",
-				"G92"
-			]
-		}
-	]
+    "namn": "Nett-1.1.1a Ikke-lenkede bilder har tekstalternativ 2025",
+    "id": "111a2025",
+    "testlabId": 547,
+    "versjon": "1.0",
+    "type": "Nett",
+    "spraak": "nb",
+    "kravTilSamsvar": "<p>For ikke-lenkede bilder er ett av følgende punkter oppfylt:</p><ul><li>Bilder som er meningsbærende, har et kort tekstalternativ som gir same informasjon som bildet eller</li><li>Komplekse, meningsbærende bilder, har både et kort og et langt tekstalternativ som gir samme informasjon som bildet og<br><ul><li>Bildet er programmatisk knyttet til langt tekstalternativ og</li><li>Langt tekstalternativ er kodet som tekst eller</li></ul></li><li>Ikke-tekstlig innhold som er en test, har kort tekstalternativ med en beskrivende identifikasjon av testen eller </li><li>Bilder der formålet er å skape et spesifikt sanseinntrykk, har tekstalternativ med en beskrivende identifikasjon av bildet eller </li><li>Bilder som er ren dekorasjon, brukes utelukkende til visuell formatering eller ikke presenteres for brukerne, kodes det slik at det kan ignoreres av hjelpemiddelteknologi</li></ul>",
+    "side": "2.1",
+    "element": "3.1",
+    "steg": [
+        {
+            "stegnr": "2.1",
+            "spm": "Hvilken side tester du?",
+            "ht": "<p>Angi URL eller side-ID.</p>",
+            "type": "tekst",
+            "label": "URL/Side:",
+            "datalist": "Sideutvalg",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "2.2"
+                }
+            }
+        },
+        {
+            "stegnr": "2.2",
+            "spm": "Finnes det ikke-lenkede bilder på testsiden?",
+            "ht": "",
+            "type": "jaNei",
+            "ruting": {
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Testsiden har ingen ikke-lenkede bilder."
+                },
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.1"
+                }
+            }
+        },
+        {
+            "stegnr": "3.1",
+            "spm": "Hvilket bilde tester du?",
+            "ht": "<ul><li>Beskriv bildet</li><li>Beskriv plassering</li></ul><p><strong>Merk:</strong> Hvis det er flere bilder på siden, registrerer du ett og ett bilde.</p>",
+            "type": "tekst",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.2"
+                }
+            },
+            "label": "Bilde:",
+            "multilinje": true
+        },
+        {
+            "stegnr": "3.2",
+            "spm": "Er det ikke-lenkede bildet unntatt kravet? ",
+            "ht": "<p><strong>Nettbaserte kart og karttjenester</strong> er som hovedregel unntatt kravene til universell utforming.</p><ul><li><strong>Merk:</strong> Kart ment for navigasjonsformål skal likevel ha nødvendig informasjon tilgjengelig på en annen måte. Dette kan for eksempel være et kart som viser besøksadressen til offentlige virksomheter eller en oversikt over stoppesteder for kollektivtransport.</li></ul><p><strong>Tegneseriehefter-, bøker og tilsvarende: </strong>Per mars 2025 finnes det ikke etablerte, effektive fremgangsmåter, teknologi eller verktøy man kan bruke for å gjøre det meningsbærende visuelle innholdet tegneseriehefter- og bøker eller tilsvarende, universelt utformet på en korrekt og kostnadseffektiv måte. Uu-tilsynet har derfor kommet til at det er en uforholdsmessig stor byrde for virksomhetene å følge kravet, og slike tegneserier er inntil videre unntatt suksesskriterium 1.1.1.</p><ul><li><strong>Merk:</strong> Kortere tegneserier, som singel-panel og tegneseriestriper er likevel omfattet.</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.3"
+                },
+                "nei": {
+                    "type": "ikkjeForekomst",
+                    "utfall": "Det ikke-lenkede bilde er unntatt kravet."
+                }
+            }
+        },
+        {
+            "stegnr": "3.3",
+            "spm": "Er bildet ren dekorasjon?",
+            "ht": "<p><strong>Ren dekorasjon</strong>: Der bildet ikke gir mer informasjon eller funksjonalitet enn tekst som hører til bildet, er bildet vanligvis dekorativt. Dette gjelder eksempelvis et bilde i en artikkel hvor bildet er beskrevet i tekst eller en bølge over nettsiden som skaper en visuell effekt.</p><p><strong>Merk:</strong> Portrettbilder er vanligvis dekorative.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.4"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.6"
+                }
+            },
+            "kilde": [
+                "wcag:ordliste"
+            ]
+        },
+        {
+            "stegnr": "3.4",
+            "spm": "Er bildet kodet slik at det er skjult fra \"Accessibility Tree\" og ignoreres av hjelpemiddelteknologi?",
+            "ht": "<p>Sjekk om det står informasjon \"Accessibility node not exposed\" eller en variasjon av dette under \"Computed Properties\".</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.5"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Bilde som er ren dekorasjon, brukes utelukkende til visuell formattering eller presenteres ikke for brukerne, er kodet slik at det ikke ignoreres av hjelpemiddelteknologi."
+                }
+            }
+        },
+        {
+            "stegnr": "3.5",
+            "spm": "Hvordan er bildet kodet?",
+            "ht": "<ul><li>Under Computed Properties i \"Accessibility Tree\", sjekk om det står informasjon \"Element has/is \":</li></ul>",
+            "type": "radio",
+            "ruting": {
+                "alle": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Bilde som er ren dekorasjon, brukes utelukkende til visuell formatering eller presenteres ikke for brukerne, er kodet slik at det ignoreres av hjelpemiddelteknologi."
+                }
+            },
+            "svarArray": [
+                "empty alt text",
+                "role=none",
+                "role=presentation",
+                "aria-hidden",
+                "empty alt text og empty title",
+                "annet"
+            ]
+        },
+        {
+            "stegnr": "3.6",
+            "spm": "Er bildet kodet slik at det er skjult fra \"Accessibility Tree\" og ignoreres av hjelpemiddelteknologi?<br><br>",
+            "ht": "<ul><li>Inspiser bildet</li><li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Accessibility node not exposed\".</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.7"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.8"
+                }
+            }
+        },
+        {
+            "stegnr": "3.7",
+            "spm": "Hvordan er bildet kodet?",
+            "ht": "<ul><li>Under Computed Properties i Accessibility Tree, sjekk om det står informasjon \"Element has/is \":</li></ul>",
+            "type": "radio",
+            "ruting": {
+                "alle": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Meningsbærende bilde er kodet slik at det ignoreres av hjelpemiddelteknologi."
+                }
+            },
+            "svarArray": [
+                "empty alt text",
+                "role=none",
+                "role=presentation",
+                "aria-hidden",
+                "empty alt text and empty title",
+                "annet"
+            ]
+        },
+        {
+            "stegnr": "3.8",
+            "spm": "Har bildet et tilgjengelig navn?",
+            "ht": "<ul><li>Under Computed Properties i Accessibility Tree, sjekk at \"Name\" ikke er tomt.</li></ul>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.9"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Meningsbærende bilde har ikke et tilgjengelig navn."
+                }
+            }
+        },
+        {
+            "stegnr": "3.9",
+            "spm": "Hva er det tilgjengelige navnet til bildet?",
+            "ht": "<p>Registrer det tilgjengelige navnet du har funnet i forrige steg. Kopier innholdet i attributtet \"Name\" under Computed Properties i Accessibility Tree.</p>",
+            "type": "tekst",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.10"
+                }
+            },
+            "label": "Tekstalternativ:",
+            "multilinje": true
+        },
+        {
+            "stegnr": "3.10",
+            "spm": "Hvilket attributt gir tilgjengelig navn til bildet?",
+            "ht": "<ul><li>Sjekk dette under \"Name\" under Computed Properties i Accessibility Tree.</li></ul>",
+            "type": "radio",
+            "ruting": {
+                "alle": {
+                    "type": "gaaTil",
+                    "steg": "3.11"
+                }
+            },
+            "svarArray": [
+                "aria-labelledby",
+                "aria-label",
+                "alt",
+                "title"
+            ]
+        },
+        {
+            "stegnr": "3.11",
+            "spm": "Er bildet en test eller et sanseinntrykk?",
+            "ht": "<p><strong>Test:</strong> Bilde som er en del av en test eller prøve, er bilde der innholdet vil bli ugyldig dersom det blir presentert som tekst. Hensikten med testen forsvinner dersom svaret gis av tekstalternativet.</p><p><strong>Sanseinntrykk:</strong> Ikke-tekstlig innhold der formålet er å skape et spesifikt sanseinntrykk.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.12"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.13"
+                }
+            }
+        },
+        {
+            "stegnr": "3.12",
+            "spm": "Gir det tilgjengelige navnet beskrivende identifikasjon av bildet?",
+            "ht": "<ul><li>Tekstalternativet skal gi en beskrivende identifikasjon av det ikke-tekstlige innholdet,</li><li>Gjør en skjønnsmessig vurdering av om det tilgjengelige navnet identifiserer bildet.</li></ul><p><strong>Test:</strong></p><ul><li>For eksempel: En oppgave som viser et bilde av analog klokke med tidspunkt kl. 14.30 som skal brukes til å svare spørsmål \"Hvor mye er klokken?\"</li><li>Tekstalternativ kan være: \"En klokke viser at den korte timeviseren er halvveis mellom 2 og 3. Den lange minuttviseren peker på 6.\"</li></ul><p><strong>Sanseinntrykk:</strong></p><ul><li>For eksempel: Bilde av en solnedgang over havet, dette bildet kan formidle en visuell opplevelse av varme farger, et mykt lys og en rolig atmosfære</li><li>Tekstalternativ kan være: \"En fredelig skogsti om høsten under solnedgangen, dekket av gyllent løv og omgitt av trær i varme farger, som skaper en rolig og harmonisk stemning\"</li></ul><p> </p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Meningsbærende bilde, som er en test eller et sanseinntrykk, har tekstalternativ som identifiserer at bildet er en test eller et sanseinntrykk."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Meningsbærende bilde, som er en test eller et sanseinntrykk, har tekstalternativ som ikke identifiserer at bildet er en test eller et sanseinntrykk."
+                }
+            }
+        },
+        {
+            "stegnr": "3.13",
+            "spm": "Gir det tilgjengelige navnet den samme informasjonen som er formidlet av bildet?",
+            "ht": "<p>Gjør en skjønnsmessig vurdering av om det tilgjengelige navnet (tekstalternativet) du fant i forrige steg gir tilstrekkelig informasjon.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.14"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.14"
+                }
+            }
+        },
+        {
+            "stegnr": "3.14",
+            "spm": "Er bildet komplekst?",
+            "ht": "<p>Komplekse bilder inneholder mye informasjon til brukeren, for eksempel:</p><ul><li>Prosess-diagram</li><li>Fysikk-diagram som viser kinetisk energi</li><li>Illustrasjon av hvordan en bilmotor fungerer</li><li>Diagram over cellestruktur</li></ul>",
+            "type": "jaNei",
+            "kilde": [
+                "G95"
+            ],
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.15"
+                },
+                "nei": {
+                    "type": "regler",
+                    "regler": {
+                        "1": {
+                            "type": "lik",
+                            "sjekk": "3.13",
+                            "verdi": "Nei",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Nei",
+                                "utfall": "Meningsbærende bilde har tekstalternativ som ikke er beskrivende."
+                            }
+                        },
+                        "2": {
+                            "type": "lik",
+                            "sjekk": "3.13",
+                            "verdi": "Ja",
+                            "handling": {
+                                "type": "avslutt",
+                                "fasit": "Ja",
+                                "utfall": "Meningsbærende bilde har beskrivende tekstalternativ."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "stegnr": "3.15",
+            "spm": "Gir det tilgjengelige navnet (kort tekstalternativ) en beskrivende identifikasjon av bildet?",
+            "ht": "<p>Gjør en skjønnsmessig vurdering av om det korte tekstalternativet identifiserer innholdet i bildet.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.16"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Komplekst bilde har kort tekstalternativ som ikke er beskrivende."
+                }
+            },
+            "kilde": [
+                "G74",
+                "G95"
+            ]
+        },
+        {
+            "stegnr": "3.16",
+            "spm": "Har bildet attributtet \"aria-describedby\", som ikke er tomt?",
+            "ht": "<p>Slik tester du:</p><ul><li>Inspiser bildet i Chrome</li><li>Bruk Accessibility Tree verktøy i inspiser</li><li>Under Computed Properties, sjekk at attributtet Description ikke er tomt.</li></ul><p><strong>Merk: </strong>Du skal ikke vurdere kvaliteten på teksten i attributtet Description (aria-describedby).</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.20"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.17"
+                }
+            },
+            "kilde": [
+                "ARIA15"
+            ]
+        },
+        {
+            "stegnr": "3.17",
+            "spm": "Ligger det et langt tekstalternativ i direkte tilknytning til bildet, i leserekkefølgen?",
+            "ht": "<p><strong>Merk:</strong> For å være i direkte tilknytning, skal teksten ligge enten i, rett før eller rett etter bildet i leserekkefølgen.</p><p><strong>Tips:</strong> Du kan bruke verktøyet Web Developer for å slå av CSS og sjekke om langt tekstalternativ ligger nær bildet i leserekkefølgen.</p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.20"
+                },
+                "nei": {
+                    "type": "gaaTil",
+                    "steg": "3.18"
+                }
+            },
+            "kilde": [
+                "G74"
+            ]
+        },
+        {
+            "stegnr": "3.18",
+            "spm": "Ligger det en mekanisme, i direkte tilknytning til bildet, som fører brukeren til langt tekstalternativ?",
+            "ht": "",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.19"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Komplekst bilde har ikke direkte kobling til langt tekstalternativ."
+                }
+            },
+            "kilde": [
+                "G73"
+            ]
+        },
+        {
+            "stegnr": "3.19",
+            "spm": "Er det lange tekstalternativet kodet som tekst?",
+            "ht": "<ul><li>Sjekk om du kan markere teksten med mus eller tastatur. Dette indikerer at teksten er kodet som tekst, og ikke er bilde av tekst, eller</li><li>Sjekk om du finner igjen det aktuelle tekstalternativet i koden. </li></ul><p><strong>Merk: </strong>Teksten kan være løpende tekst, tabell eller lignende. </p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "gaaTil",
+                    "steg": "3.20"
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Komplekst bilde har langt tekstalternativ som ikke er kodet som tekst."
+                }
+            }
+        },
+        {
+            "stegnr": "3.20",
+            "spm": "Gir det lange tekstalternativet en tilstrekkelig beskrivelse av innholdet i bildet?",
+            "ht": "<ul><li>Gjør en skjønnsmessig vurdering av om informasjonen i det lange tekstalternativet gir tilstrekkelig informasjon om innholdet i bildet.</li></ul><p><strong>Tips:</strong> Et godt langt tekstalternativ gjør det mulig å erstatte bildet med tekstalternativet, uten å miste funksjonalitet eller informasjon. </p>",
+            "type": "jaNei",
+            "ruting": {
+                "ja": {
+                    "type": "avslutt",
+                    "fasit": "Ja",
+                    "utfall": "Komplekst bilde har beskrivende, langt tekstalternativ."
+                },
+                "nei": {
+                    "type": "avslutt",
+                    "fasit": "Nei",
+                    "utfall": "Komplekst bilde har et langt tekstalternativ, som ikke gir en tilstrekkelig beskrivelse av innholdet i bildet."
+                }
+            },
+            "kilde": [
+                "F67",
+                "G92"
+            ]
+        }
+    ]
 }
